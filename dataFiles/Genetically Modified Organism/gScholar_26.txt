@@ -1,0 +1,589 @@
+Biological containment of genetically modified : Lactococcus
+lactis:
+for intestinal delivery of human interleukin 10 : Article : Nature Biotechnology
+We use cookies to improve your experience with our site.
+Accept and close | More info.
+Jumptomaincontent
+Jumptonavigation
+nature.com homepage
+PublicationsA-ZindexBrowsebysubject
+My accountSubmit manuscript RegisterSubscribe
+Full text access provided to Arizona State University by Collection Dev
+Cart
+Search
+Advancedsearch
+Journal home >
+Archive > Research > Article > Full TextResearchArticle
+Nature Biotechnology 21, 785 - 789 (2003) Published online: 15 June 2003 | doi:10.1038/nbt840Biological containment of genetically modified Lactococcus
+lactis for intestinal delivery of human interleukin 10Lothar Steidler1,
+Sabine Neirynck1,
+Nathalie Huyghebaert2,
+Veerle Snoeck3,
+An Vermeire2,
+Bruno Goddeeris3,
+Eric Cox3,
+Jean Paul Remon2
+&
+Erik Remaut1
+AbstractGenetically modified Lactococcus lactis secreting
+interleukin 10 provides a therapeutic approach for inflammatory bowel disease.
+However, the release of such genetically modified organisms through clinical
+use raises safety concerns. In an effort to address this problem, we replaced
+the thymidylate synthase gene thyA of L. lactis with a synthetic
+human IL10 gene. This thyA-hIL10+L. lactis strain produced human IL-10
+(hIL-10), and when deprived of thymidine or thymine, its viability dropped by
+several orders of magnitude, essentially preventing its accumulation in the
+environment. The biological containment system and the bacterium's capacity to
+secrete hIL-10 were validated in vivo in pigs. Our approach is a
+promising one for transgene containment because, in the unlikely event that the
+engineered L. lactis strain acquired an intact thyA gene from a
+donor such as L. lactis subsp. cremoris, the transgene would be
+eliminated from the genome.
+IntroductionGenetically modified food-grade microorganisms provide a possible means
+for targeting therapeutic proteins to the mucosa. By in situ synthesis,
+genetically modified Lactococcus lactis can deliver mouse interleukin 2
+(mIL-2) and mIL-6 to the upper airways1 and mIL-10 to the
+intestine2. Streptococcus gordonii3 and
+Lactobacillus zeae4 have been used in this way to deliver
+single-chain antibodies. However, the use of genetically modified organisms in
+medicine raises legitimate concerns about their survival and propagation in the
+environment and about the dissemination of antibiotic selection markers or
+other genetic modifications to other microorganisms.Delivery of the anti-inflammatory cytokine mIL-10 to the intestine by
+genetically modified L. lactis cures or prevents experimental
+enterocolitis in mice2. The mouse experimental colitis model
+mimics the severe, chronic intestinal inflammation in humans known as
+inflammatory bowel disease (IBD). IBD requires lifelong medication, so the
+development of inexpensive, easily administered therapeutics with minimal side
+effects is highly desirable. Although IL-10 is a good candidate for IBD
+therapy5, the administration of IL-10 by injection induces side
+effects6, 7, 8 that prohibit its long-term use at high
+concentrations. This problem cannot be solved by delivery to the intestine, as
+IL-10 is acid sensitive9, 10. Localized IL-10 synthesis by
+genetically modified L. lactis may address these shortcomings.In this study we investigated a strategy for preventing escape into the
+environment of the transgene and the genetically modified organism. The
+thymidylate synthase gene, thyA, which is essential for the growth of
+L. lactis, was replaced with the expression cassette for hIL10.
+As expected, the resulting strain was dependent on thymidine or thymine for
+growth and survival. We assessed the resulting genetically modified strains
+in vitro and in pigs, animals whose digestive systems are very similar
+to those of humans in both physiology and size. Transgene escape through
+acquisition of an intact thyA gene is very unlikely and, in the event it
+did occur, would recombine the transgene out of the genome, resulting in
+reversion of the genetically modified organism to the unmodified state.Top of page
+ResultsGene exchange between thyA and hIL10The sequence of the thyA gene in L. lactis MG1363 is
+published11. We expected, from the literature on bacterial
+recombination12, that the known flanking fragments were too short
+to allow efficient crossover using our genetic modification protocol. We
+therefore cloned the thyA locus with longer flanking sequences.
+Comparison with the thyA locus of L. lactis IL1403 (ref.
+13) showed that the two thyA sequences are
+88% identical. The sequences upstream of thyA are completely unrelated
+and a 1,276-bp sequence downstream from MG1363 thyA is absent in IL1403.
+The putative rma1 genes further downstream from thyA is 86%
+identical. We confirmed the structure of the MG1363 thyA locus by
+Southern blot analysis (data not shown).We used conditionally nonreplicative plasmids14, in
+which 1 kb of the regions upstream and downstream of MG1363 thyA flank a
+series of hIL10 expression cassettes, for targeted gene exchange by
+double homologous crossover (Fig. 1a). The structure of
+the resulting L. lactis strains was confirmed by PCR (Fig. 1b), Southern blotting (Fig. 1c) and
+DNA sequencing. The recombinant strains were called Thy11, Thy12, Thy15 and
+Thy16 (Fig. 2a) and are here referred to collectively as
+Thy1116. Growth of these strains was dependent on the addition of
+thymidine or thymine to the growth medium, with a strong preference for
+thymidine. Supplementation with 20 M thymidine allowed the cultures to grow
+to full saturation, whereas thymine was 1,000-fold less effective (data
+not shown).
+Figure 1:Exchange between thyA and hIL10 genes.(a) Overview of the strategy used. Gray lines
+represent target areas for recombination, thick black lines represent nontarget
+MG1363 chromosome fragments and thin black lines represent the exchange vector.
+1, 2 and 3 represent PCR primer pairs (F and R), designed in such a way that
+PCR using primer pair 1 shows collinearity between chromosomal DNA located
+5' of the target area and hIL10 (PCR1), that PCR using primer pair
+2 shows collinearity between chromosomal DNA located 3' of the target
+area and hIL10 (PCR2), and that PCR using primer pair 3 shows the
+presence of thyA (PCR3). Stages include (1) introduction of the
+nonreplicative vector; (2) 5' crossover, forced by erythromycin selection
+and identified by PCR1; (3) second crossover in the absence of Em, identified
+through screening by PCR2; and (4) acquisition of desired transgenic chromosome
+organization. (b) PCR identification of Thy1116 by three rounds
+of PCR, 1, 2 and 3, as in a (see Fig. 2a for
+strain differences). (c) Southern blot analysis of chromosomal DNA of
+the indicated strains, cut with SpeI and NdeI and revealed with
+digoxygenin-labeled probes for identifying thyA (thyA probe) or
+hIL10 (hIL10 probe). The fragments detected by the hIL10
+probe differ in size because of differences in the promoter region.Full size image
+(32 KB)
+Figure 2:hIL-10 production by Thy1116.(a) Schematic representation of the structure of
+Thy1116. White, nonforeign DNA fragments, including the thyA
+promoter (PthyA) and the thyA ATG start codon; gray, lactococcal
+P1 promoter; black, usp45-hIL10 fusion gene. (b) Western
+blot of crude culture supernatant showing higher hIL-10 secretion after
+replacement of proline by alanine at position 2 of the mature hIL-10 (lane
+P2A). The two expression strains are otherwise identical. (c) hIL-10
+secreted in the culture supernatant of 109 bacteria of the
+indicated L. lactis strains as determined by ELISA. Bars, average amount
+of hIL-10 produced; error bars, standard deviation of one experiment
+representative of at least three independent experiments. (d) Western
+blot of hIL-10 secreted in the culture supernatant of 109
+bacteria of the indicated L. lactis strains.Full size image
+(21 KB)
+Top of page
+Expression of hIL10Thy1116 contain different promoter regions. Thy15 contains
+the P1 promoter15 from hIL10. Thy12 contains the
+thyA promoter (PthyA). Thy 11 and Thy16 contain regions of both
+promoters; Thy11 includes the thyA ATG start codon and Thy16 does not
+(Fig. 2a). In all strains hIL10 replaces
+thyA exactly down to its stop codon, which was expected to prevent polar
+effects on downstream genes. The hIL10 gene is
+syntheticcodon-optimized for L. lactis (see ref.
+16) and fused to the usp45 secretion
+leader17. As replacing proline with alanine at the N terminus of
+a heterologous protein has been shown to increase secretion18, we
+constructed a P2A mutant hIL-10, which indeed displayed markedly greater
+secretion (Fig. 2b). N-terminal protein sequencing of the
+secreted protein indicated that it was correctly processed, and an hIL-10
+bioassay19 showed that the recombinant protein had full
+biological activity. Thus, Thy11Thy16 had acquired the capacity to
+produce functional hIL-10 (Fig. 2c,d; analysis done as in
+ref. 2).In vivo production of hIL-10We tested in vivo production of hIL-10 using strain Thy12,
+which contained the least amount of foreign DNA and showed the highest hIL-10
+expression in vitro (14 ng/ml, Fig. 2c). After
+1.44
+1011
+1.72
+1010
+Thy12 bacteria were injected into an ileal loop of a pig and incubated for 4 h,
+the loop of the pig's intestine contained 4.44
+109
+colony-forming units (cfu)/ml
+1.98
+108 cfu/ml
+(mean
+standard deviation (s.d.)) Thy12 and 470.62 pg/ml (
+13.98 pg/ml) hIL-10. The intestinal tissue of the loop contained 4.17
+108 cfu/ml ( 1.84
+108 cfu/ml)
+Thy12 and 58.27 pg/ml ( 1.42 pg/ml) hIL-10. Thus, the Thy12 strain
+produced hIL-10 in vivo in pigs and was able to acquire the necessary
+nutrients from the pig host.In vitro viability of thyA-deficient
+strainsThe survival of thyA-deficient strains depends on the
+presence of thymidine or thymine in the growth medium. To assess Thy12 growth
+under thymidine limitation, we inoculated 15 single, purified Thy12 colonies in
+rich thymidine-free medium containing 0.5% (wt/vol) glucose. The suspension was
+divided in three, and 0 M, 0.4 M (low concentration) and 10 M (high
+concentration) thymidine were added, respectively. In the absence of thymidine
+(Fig. 3a), the cfu of Thy12 decreased over 6 orders of
+magnitude in 60 h. Beyond 72 h of incubation, no viable cells could be
+detected. At low thymidine concentration (Fig. 3b), a
+slight increase in cfu was immediately followed by a rapid decrease, similar to
+that seen in the absence of thymidine. The high concentration of thymidine
+(Fig. 3c) supported growth of the culture until
+saturation, which was immediately followed by a steep decrease in viable
+bacteria. No viable bacteria could be detected in cultures initiated with low
+or high concentrations of thymidine after 175 and 250 h, respectively. This
+decrease was not associated with substantial lysis of bacterial cells, as the
+culture turbidity remained unchanged. The thymidine dependence of Thy11, Thy15
+and Thy16 was identical to that of Thy12.
+Figure 3:Growth and survival of Thy12 and MG1363.(ac) Lactococcus growth and
+survival in the absence (a) of an essential component for growth of
+Thy12 (thymidine, T) or MG1363 (glucose, G, % w/v) and in the presence of low
+(b) or high (b) concentrations of these components. (d)
+Survival of Thy12 and MG1363 after passage through the porcine colon. The
+respective strains were released in the ileum and recovered from the feces at
+the indicated cfu counts.Full size image
+(28 KB)
+Thymidine auxotrophs are self-limiting because depletion of the
+essential component immediately induces cell death. Thymidine auxotrophy is
+thus different in nature from any auxotrophy that does not affect DNA
+metabolism. For example, growth of L. lactis MG1363 is dependent on the
+addition of glucose. In contrast to other bacteria, L. lactis manages
+glucose starvation stressmuch as it does stress caused by such varied
+agents as heat, ethanol, osmotic pressure and CdCl2by
+induction of the central stress response and survival factor YtgH20. To assess the glucose stress response of strain MG1363, we
+inoculated 15 individual colonies in glucose-free rich growth medium. The
+suspension was split and 0%, 0.1% (low concentration) or 0.5% (high
+concentration, wt/vol%) glucose was added, respectively (Fig.
+3). In contrast to the results of thymidine limitation described above,
+in the absence of glucose, no change in MG1363 cfu was detected until after 72
+h (whereas in the absence of thymidine, all 3.2
+106
+Thy12 had died by that time point) (Fig. 3a). Addition of
+low or high concentrations of glucose to MG1363 led to increased cfu and
+stagnation over the course of 28 h, followed by a slow decrease in cfu (Fig. 3b,c). The low-glucose culture did not reach the same
+plateau as the high-glucose culture, demonstrating glucose depletion (Fig.
+3b). This is in marked contrast with the viability profiles of Thy12
+under thymidine limitation, which showed a rapid decrease in cfu. The cfu of
+strain MG1363 under glucose limitation never decreased by more than 4 orders of
+magnitude from the highest level reached during growth, markedly different from
+the decrease of 9 orders of magnitude seen for Thy12 at thymidine
+concentrations as high as 10 M (Fig. 3c).In vivo viability of strain Thy12Even in low-thymidine conditions, Thy12 showed a substantial
+reduction in viability after in vivo passage through porcine intestine.
+HPLC analysis showed 1 M thymidine in total extracts of porcine ileum.
+Thymidine could also be detected, albeit at (as expected) a lower concentration
+(up to 0.075 M), in ileal lavages from human patients. To protect L.
+lactis from nonspecific lysis by bile in the duodenum and jejunum, we used
+gelatin capsules filled with equal amounts of either lyophilized Thy12 or
+MG1363 and coated with an enteric coating designed for pig ileal release.
+Because pigs chew their food and would thereby destroy the coating, we created
+a fistula to access the proximal duodenum. A second fistula was created to
+sample the ileal content (method adapted from ref. 21). The capsules were inserted through the duodenal
+fistula and time samples were taken from both the ileal content and the feces.
+Lactococci were detected by capturing them from suspensions of ileal or fecal
+material with anti- lactococcal IgG bound to the surface of a plastic Petri
+dish. We then determined bacterial cfu by washing, overlaying the Petri dishes
+with low-melting agar and incubating the agar at 30 C. Before the
+administration of L. lactis, none of the pigs showed any signal in this
+assay. From the pig that was given MG1363, we detected 3.64
+108L. lactis in the ileal samples and 2.94
+108 in the feces (ratio 0.80). From the pig that was given
+Thy12, we detected 2.69
+108L. lactis in the
+ileum and 0.125
+108 in the feces (ratio 0.04) (Fig.
+3d). The viability of Thy12 therefore decreased 20-fold more
+rapidly after intestinal passage than did the viability of MG1363.Acquisition of foreign thyA genesTo examine whether Thy12 can spontaneously acquire a thyA
+gene from an exogenous source, we produced mixed colonies of Thy12 and
+potential thyA 'donor' bacteria by superposed inoculation on solid agar
+plates. In these mixed colonies, very high bacterial densities of up to 5
+1011 cfu/ml were obtained. The colonies were plated on
+solid agar plates containing thymidine-free medium, thereby possibly selecting
+for thyA gene transfer to Thy12. Potential donor bacteria tested were
+L. lactis MG1363, L. lactis subsp. lactis and subsp.
+cremoris, Lactobacillus casei, Escherichia coli DH5 and
+O157, and Salmonella choleraesuis. Thy12 was transformed with an
+erythromycin (Em) resistance plasmid and donor strains were transformed with a
+chloramphenicol (Cm) resistance marker. We were unable to isolate any
+EmRL. lactis strain that showed thymidine-independent
+growth. In contrast, mixed colonies on thymidine-free-medium solid agar plates
+supplemented with thymidine were composed of comparable numbers of
+EmR and CmR bacteria.Top of page
+DiscussionHere we describe a system for the containment of live genetically
+modifed bacteria intended for therapeutic use in humans. The L. lactisthyA gene was replaced with expression constructs driving a synthetic
+hIL10 gene, resulting in strains that produce hIL-10 and are strictly
+dependent on thymidine or thymine for growth and survival. These strains are
+self-limiting because they die rapidly in the absence of their essential growth
+component.Biological containment systems can be subdivided into active and
+passive forms. Active containment provides control through the conditional
+production of a toxic compound whose expression is tightly controlled by an
+environmentally responsive element or suppressed by an immunity factor22.
+Some well-integrated active systems of this type have been developed. Homologs
+of the Hok plasmid maintenance factor, Gef and RelF were used for the
+control of Pseudomonas putida23 and E. coli24, respectively. Other active containment systems for E. coli
+include the phage T7 lysozyme25, the type II EcoRI
+restriction-modification system26 and colicin E3 (ref.
+27). Although active containment systems provide
+actual killing of the host, they have notable drawbacks. First, these systems
+often involve the introduction of a large amount of foreign DNA, which impedes
+their use in humans. Second, many are plasmid borne, and it remains to be
+demonstrated that function is maintained when the plasmids become integrated in
+the bacterial chromosome to reduce lateral dissemination.In passive systems, which circumvent these limitations, growth is
+dependent on complementation of an auxotrophy or other gene defect by
+supplementation with either the intact gene or the essential metabolite. For
+example, plasmids carrying a heterologous alanine racemase (alr) are
+stably inherited in a alr background28, and
+experiments are presently ongoing using an alr deletion mutant for
+containment of a genetically modifed strain of Streptococcus mutans
+designed for anti-carie therapy (J. Hillman, personal communication). The
+lacF gene can be used as a selection marker in lacFL.
+lactis29. An amber suppressor, supD, has been used as a
+selectable marker for plasmid maintenance to complement suppressible pyrimidine
+auxotrophs30. However, passive systems have the drawback that
+they are often bacteriostatic rather than bactericidal.The choice of thyA as a target gene combines the advantages of
+passive and active containment systems. 'Thymine-less death'31,
+which was described as early as 1954 (ref. 32),
+involves activation of the SOS repair system and DNA fragmentation, thereby
+constituting an indigenous suicide system. Thymine and thymidine growth
+dependence differs from most other auxotrophies31 in that absence
+of the essential component is bactericidal in the former and bacteriostatic in
+the latter. Thus, thyA-deficient bacteria cannot accumulate in the
+environment. thyA from L. casei has been used as a selective
+marker for plasmid maintenance in thyA-deficient Lactobacillus
+acidophilus33. Researchers isolated the thyA gene of
+L. lactis MG1363 (ref. 11) but were unable
+to isolate thyA-deficient strains by use of conventional selection
+methods (P. Ross, personal communication). Such a strain was recently generated
+by targeted gene deletion34.Thy12 provides a satisfactory solution to concerns about biosafety for
+several reasons. First, only the absolute minimal amount of foreign
+DNAthe gene of interestis present in the genetically modified
+organism. No resistance marker is required to guarantee stable inheritance of
+the transgene. Second, accumulation of the genetically modified organism in the
+environment is very unlikely, as rapid death occurs upon thymidine starvation.
+We observed a 107-fold decrease in cfu after 72 h in the absence
+of thymidine. Even after prolonged incubation in rich growth medium devoid of
+thymidine, we failed to isolate revertants or suppressors. In addition, we did
+not observe acquisition of thyA from other microorganisms. Owing to high
+sequence diversity at thyA loci, successful acquisition would probably
+be possible only from the homologous L. lactis subsp. Cremoris
+cremoris. Third, were the intact thyA acquired by homologous
+recombination, the transgene would be removed. Fourth, the risk of
+disseminating the genetic modification through lateral gene transfer is
+minimized because the hIL10 gene is integrated in the L. lactis
+chromosome. Several mechanisms for lateral gene transfer do not function in
+Thy1116: L. lactis MG1363 is deficient for Tn916 and Tn919
+conjugative transposition35 and phage replication is severely
+impaired in thyA-deficient L. lactis, thereby disabling
+phage-mediated transduction of host genetic material34.Our approach thus provides a simple and robust system for biological
+containment. One of the strains reported here, Thy12, has been approved by the
+Dutch authorities as an experimental therapy for humans with IBD. This clinical
+trial will be the first to use a live genetically modified bacterial
+therapeutic.Top of page
+MethodsThymidine-free medium.Thymidine-free medium was obtained by growing L. lactis Thy12 to
+saturation in M17 broth (Difco) containing 0.5% (wt/vol) glucose. Bacteria were
+then removed by centrifugation, filtration and sterilization.Genetically modified strains of L. lactis
+MG1363.Strains were constructed as described in the Results section and as
+shown in Figure 1. Further details are available upon
+request.Animal experiments.Eight-week-old Pitrain/Landrace crossbred pigs were fasted
+overnight and anesthetized with zoletil 100 (Virbac, France) (2% (wt/vol)
+xylazine; 0.22 ml per kg body weight) administered intramuscularly (i.m.)).Ileal loop incubations were performed as described36.
+Care was taken to minimize surgical trauma and to maintain an adequate blood
+supply to the ligated segments. Lyophilized Thy12 culture (3.0751 g, 1.44
+1011
+1.72
+1010) was
+resuspended in 11.3 ml M9 buffer2 without nutrients, thymidine or
+thymine, and 5 ml was injected with a 26-G needle into an ileal loop of 5
+cm length. The volume of loop contents before injection could not be
+determined. The small intestine was returned to the abdominal cavity and the
+abdomen was closed. During the 4-h incubation period, the pig was conscious and
+received finadyne as analgesic (1 ml per 45 kg body weight, i.m.).The sample was left to incubate in the conscious pig for 4 h. The
+contents of the loop were isolated with a syringe and the tissue was washed and
+homogenized.Duodenal and ileal fistulae were created as described21. After laparotomy, a duodenal fistula and an ileal fistula were
+created. After a 10-d recovery, the capsules were inserted in the duodenal
+fistula. Euthanasia was performed by intravenous injection of pentobarbital (24
+mg per kg body weight). All animal experimentation was carried out in
+accordance with Belgian law (KB 14/11/1993; approval was obtained from the
+ethical committee of the Faculty of Veterinary Medicine, Ghent University, file
+no. EC 2002/06).Counting of L. lactis in ileal and fecal
+material.Ileal or fecal material was resuspended in M9N (M9, as in ref.
+2, containing 0.05% (wt/vol) NaN3; at 4
+C, this solution did not affect lactococcal viability over a period of 2
+weeks) at a ratio of 1 g per 9 ml. Large particles were removed by filtering
+through a 80-m cell strainer (Becton Dickinson). All particulate material
+was collected from the suspension by centrifugation, resuspended in 1:10 vol of
+M9N and further diluted, as appropriate, in M9N. Bacterial Petri dishes (Bibby
+Sterilin) were coated with 3 ml of 10 g/ml rabbit anti-MG1363 IgG in M9N
+and incubated overnight at 4 C. The non bound antiserum was removed and
+the plates were blocked overnight at 4 C with 10 ml 0.1% (wt/vol) casein
+in M9N. The blocking solution was removed and the plates were overlaid with 3
+ml of the suspensions of fecal or ileal material and incubated for 3 h at 22
+C. Plates were washed three times with water, overlaid with M17 containing
+0.5% (wt/vol) glucose, 50 g/ml thymidine and 0.8% (wt/vol) agar, incubated
+for 24 h at 30 C and counted.Accession number.The GenBank accession number for the thyA locus is
+AF462070.Top of pageAcknowledgmentsThe authors thank Inge Bruggeman, Hilde Devlies Koen Van Laer and
+Elena Yancheva for expert technical assistance, Karen Madsen, Claude Cuvelier
+and Frans Van Roy for critically reviewing the manuscript, and Jan Kok and
+Emmanuelle Maguin for providing genetic tools. This study was financed by the
+Vlaams Interuniversitair instituut voor Biotechnologie, Ghent University (GOA
+project nos. 12050700 and 12051501) and the commission of the European
+Communities, specific research, technological development and training
+activities program "Quality of Life and Management of Living
+Resources," QLK1-2000-00146 "Probiotic strains with designed health
+properties."Competing interests statement: The authors declare
+no competing financial interests.Received 10 December 2002; Accepted 17 April 2003; Published online 15 June 2003.Top of pageReferencesSteidler, 			 L. et al.
+Mucosal delivery of murine interleukin-2 (IL-2) and IL-6 by
+recombinant strains of Lactococcus lactis coexpressing antigen and
+cytokine. 			 Infect. Immun. 66,			 31833189 (1998).|PubMed|ISI|ChemPort|Steidler, 			 L. et al.
+Treatment of murine colitis by Lactococcus lactis
+secreting interleukin-10. 			 Science 289,			 13521355 (2000).|Article|PubMed|ISI|ChemPort|Beninati, 			 C. et al.
+Therapy of mucosal candidiasis by expression of an anti-idiotype
+in human commensal bacteria. 			 Nat. Biotechnol. 18,			 10601064 (2000).|Article|PubMed|ISI|ChemPort|Kruger, 			 C. et al.
+In situ delivery of passive immunity by lactobacilli producing
+single- chain antibodies. 			 Nat. Biotechnol. 20,			 702706 (2002).|Article|van Deventer, 			 S.J., Elson, 			 C.O. & Fedorak, 			 R.N.
+Multiple doses of intravenous interleukin 10 in
+steroid-refractory Crohn's disease. Crohn's Disease Study Group. 			 Gastroenterology 113,			 383389 (1997).|PubMed|ChemPort|Fedorak, 			 R.N. et al.
+Recombinant human interleukin 10 in the treatment of patients
+with mild to moderately active Crohn's disease. The Interleukin 10 Inflammatory
+Bowel Disease Cooperative Study Group. 			 Gastroenterology 119,			 14731482 (2000).|Article|PubMed|ISI|ChemPort|Schreiber, 			 S. et al.
+Safety and efficacy of recombinant human interleukin 10 in
+chronic active Crohn's disease. Crohn's Disease IL-10 Cooperative Study
+Group. 			 Gastroenterology 119,			 14611472 (2000).|Article|PubMed|ISI|ChemPort|Tilg, 			 H., Ulmer, 			 H., Kaser, 			 A. & Weiss, 			 G.
+Role of IL-10 for induction of anemia during inflammation.			 			 J. Immunol. 169,			 22042209 (2002).|PubMed|ISI|ChemPort|Schotte, 			 L., Steidler, 			 L., Vandekerckhove, 			 J. & Remaut, 			 E.
+Secretion of biologically active murine interleukin-10 by
+Lactococcus lactis. 			 Enzyme Microb. Technol. 27,			 761765 (2000).|Article|PubMed|ISI|ChemPort|Masood, 			 R. et al.
+Interleukin-10 is an autocrine growth factor for acquired
+immuno-deficiency syndrome-related B-cell lymphoma. 			 Blood 85, 34233430			 (1995).|PubMed|ISI|ChemPort|Ross, 			 P., O'Gara, 			 F. & Condon, 			 S.
+Cloning and characterization of the thymidylate synthase gene
+from Lactococcus lactis subsp. lactis. 			 Appl. Environ. Microbiol. 56,			 21562163 (1990).|PubMed|ISI|ChemPort|Biswas, 			 I., Gruss, 			 A., Ehrlich, 			 S.D. & Maguin, 			 E.
+High-efficiency gene inactivation and replacement system for
+gram-positive bacteria. 			 J. Bacteriol. 175,			 36283635 (1993).|PubMed|ISI|ChemPort|Bolotin, 			 A. et al.
+The complete genome sequence of the lactic acid bacterium
+Lactococcus lactis ssp. lactis IL1403. 			 Genome Res. 11,			 731753 (2001).|Article|PubMed|ISI|ChemPort|Law, 			 J. et al.
+A system to generate chromosomal mutations in Lactococcus
+lactis which allows fast analysis of targeted genes. 			 J. Bacteriol. 177,			 70117018 (1995).|PubMed|ISI|ChemPort|Waterfield, 			 N.R., Le Page, 			 R.W., Wilson, 			 P.W. & Wells, 			 J.M.
+The isolation of lactococcal promoters and their use in
+investigating bacterial luciferase synthesis in Lactococcus
+lactis. 			 Gene 165, 915 (1995).|Article|PubMed|ISI|ChemPort|Stemmer, 			 W.P., Crameri, 			 A., Ha, 			 K.D., Brennan, 			 T.M. & Heyneker, 			 H.L.
+Single-step assembly of a gene and entire plasmid from large
+numbers of oligodeoxyribonucleotides. 			 Gene 164, 4953			 (1995).|Article|PubMed|ISI|ChemPort|van Asseldonk, 			 M. et al.
+Cloning of usp45, a gene encoding a secreted protein from
+Lactococcus lactis subsp. lactis MG1363. 			 Gene 95, 155160			 (1990).|Article|PubMed|ChemPort|Barthelemy, 			 I. et al.
+Production and secretion of human interleukin 6 into the
+periplasm of Escherichia coli: efficient processing of N-terminal variants of
+hIL6 by the E. coli signal peptidase. 			 J. Biotechnol. 27,			 307316 (1993).|Article|PubMed|ISI|ChemPort|Thompson-Snipes, 			 L. et al.
+Interleukin 10: a novel stimulatory factor for mast cells and
+their progenitors. 			 J. Exp. Med. 173,			 507510 (1991).|Article|PubMed|ChemPort|Giard, 			 J.C., Verneuil, 			 N., Auffray, 			 Y. & Hartke, 			 A.
+Characterization of genes homologous to the general
+stress-inducible gene gls24 in Enterococcus faecalis and Lactococcus
+lactis. 			 FEMS Microbiol. Lett. 206,			 235239 (2002).|Article|PubMed|ISI|ChemPort|Decuypere, 			 J.A., Vervaeke, 			 I.J., Henderickx, 			 H.K. & Dierick, 			 N.A.
+Gastro-intestinal cannulation in pigs: a simple technique
+allowing multiple replacements. 			 J. Anim. Sci. 45,			 463468 (1977).|PubMed|ISI|ChemPort|Molin, 			 S. et al.
+Suicidal genetic elements and their use in biological
+containment of bacteria. 			 Annu. Rev. Microbiol. 47,			 139166 (1993).|Article|PubMed|ISI|ChemPort|Molina, 			 L., Ramos, 			 C., Ronchel, 			 M.C., Molin, 			 S. & Ramos, 			 J.L.
+Construction of an efficient biologically contained
+Pseudomonas putida strain and its survival in outdoor assays. 			 Appl. Environ. Microbiol. 64,			 20722078 (1998).|PubMed|ISI|ChemPort|Knudsen, 			 S. et al.
+Development and testing of improved suicide functions for
+biological containment of bacteria. 			 Appl. Environ. Microbiol. 61,			 985991 (1995).|PubMed|ISI|ChemPort|Schweder, 			 T., Hofmann, 			 K. & Hecker, 			 M.
+Escherichia coli K12 relA strains as safe hosts for
+expression of recombinant DNA. 			 Appl. Microbiol. Biotechnol 42,			 718723 (1995).|Article|PubMed|ISI|ChemPort|Torres, 			 B., Jaenecke, 			 S., Timmis, 			 K.N., Garcia, 			 J.L. & Diaz, 			 E.
+A gene containment strategy based on a restriction-modification
+system. 			 Environ. Microbiol. 2,			 555563 (2000).|Article|PubMed|ISI|ChemPort|Diaz, 			 E., Munthali, 			 M., de Lorenzo, 			 V. & Timmis, 			 K.N.
+Universal barrier to lateral spread of specific genes among
+microorganisms. 			 Mol. Microbiol. 13,			 855861 (1994).|PubMed|ISI|ChemPort|Bron, 			 P.A. et al.
+Use of the alr gene as a food-grade selection marker in lactic
+acid bacteria. 			 Appl. Environ. Microbiol. 68,			 56635670 (2002).|PubMed|ISI|ChemPort|MacCormick, 			 C.A., Griffin, 			 H.G. & Gasson, 			 M.J.
+Construction of a food-grade host/vector system for
+Lactococcus lactis based on the lactose operon. 			 FEMS Microbiol. Lett. 127,			 105109 (1995).|Article|PubMed|ISI|ChemPort|Sorensen, 			 K.I., Larsen, 			 R., Kibenich, 			 A., Junge, 			 M.P. & Johansen, 			 E.
+A food-grade cloning system for industrial strains of
+Lactococcus lactis. 			 Appl. Environ. Microbiol. 66,			 12531258 (2000).|Article|PubMed|ISI|ChemPort|Ahmad, 			 S.I., Kirk, 			 S.H. & Eisenstark, 			 A.
+Thymine metabolism and thymineless death in prokaryotes and
+eukaryotes. 			 Ann. Rev. Microbiol. 52,			 591625 (1998).|Article|ISI|ChemPort|Cohen, 			 S.S. & Barner, 			 H.D.
+Studies on unbalanced growth in Escherichia coli. 			 Proc. Natl. Acad. Sci. USA 40,			 885893 (1954).|ChemPort|Fu, 			 X. & Xu, 			 J.G.
+Development of a chromosome-plasmid balanced lethal system for
+Lactobacillus acidophilus with thyA gene as selective marker. 			 Microbiol. Immunol. 44,			 551556 (2000).|PubMed|ISI|ChemPort|Pedersen, 			 M.B., Jensen, 			 P.R., Janzen, 			 T. & Nilsson, 			 D.
+Bacteriophage resistance of a thyA mutant of
+Lactococcus lactis blocked in DNA replication. 			 Appl. Environ. Microbiol. 68,			 30103023 (2002).|Article|PubMed|ISI|ChemPort|Bringel, 			 F., Van Alstine, 			 G.L. & Scott, 			 J.R.
+A host factor absent from Lactococcus lactis subspecies
+lactis MG1363 is required for conjugative transposition. 			 Mol. Microbiol. 5,			 29832993 (1991).|PubMed|ISI|ChemPort|Moon, 			 H.W., Sorensen, 			 D.K. & Sautter, 			 J.H.
+Escherichia coli infection of the ligated intestinal loop
+of the newborn pig. 			 Am. J. Vet. Res. 27,			 1131711325 (1966).
+Department of Molecular Biomedical Research,
+Vlaams Interuniversitair instituut voor Biotechnologie, Ghent University, KL.
+Ledeganckstraat 35, B-9000 Ghent,
+Belgium.Laboratory of Pharmaceutical Technology, Ghent
+University, Harelbekestraat 72, B-9000 Ghent,
+Belgium.Laboratory of Veterinary Immunology, Faculty of
+Veterinary Medicine, Ghent University, Salisburylaan 133,
+B-9820 Merelbeke, Belgium.Correspondence to: Lothar Steidler1 e-mail:l.steidler@ucc.ie
+MORE ARTICLES LIKE THIS
+These links to content published by NPG are automatically generated
+NEWS AND VIEWS
+Churning out safer microbes for drug delivery
+Nature Biotechnology News and Views (01 Jul 2003)
+RESEARCH
+Conversion of Lactococcus lactis from homolactic to homoalanine fermentation through metabolic engineering
+Nature Biotechnology Research Articles (01 Jun 1999)
+The homodimeric ATP-binding cassette transporter LmrA mediates multidrug transport by an alternating two-site (two-cylinder engine) mechanism
+The EMBO Journal Article (01 Jun 2000)
+Main navigation
+Journal content
+Journal homeAdvance online publication
+Current issue
+ArchiveConferencesFocuses and SupplementsPress releasesNature Biotechnology podcastMultimedia
+Journal information
+Guide to authors
+Online submission
+Permissions
+For referees
+Contact the journal
+Subscribe
+About this site
+NPG services
+Authors & Referees
+Advertising
+work@npg
+nature reprints
+For librarians
+NPG resources
+Protocol Exchange
+Bioentrepreneur
+Nature Biopharma Dealmakers
+Nature
+Nature Chemical Biology
+Nature Communications
+Nature Conferences
+Nature Genetics
+Nature Medicine
+Nature Methods
+Nature News
+Nature Reviews Drug Discovery
+Nature Reviews Genetics
+Polymer Journal
+Scientific Data
+Scitable by Nature Education
+NPG Journals
+by Subject Area
+Chemistry
+Chemistry
+Drug discovery
+Biotechnology
+Materials
+Methods & Protocols
+Clinical Practice & Research
+Cancer
+Cardiovascular medicine
+Endocrinology
+Gastroenterology & Hepatology
+Methods & Protocols
+Pathology & Pathobiology
+Urology
+Earth & Environment
+Earth sciences
+Evolution & Ecology
+Life sciences
+Biotechnology
+Cancer
+Development
+Drug discovery
+Evolution & Ecology
+Genetics
+Immunology
+Medical research
+Methods & Protocols
+Microbiology
+Molecular cell biology
+Neuroscience
+Pharmacology
+Systems biology
+Physical sciences
+Physics
+Materials
+by A - Z Index
+Extra navigation
+ARTICLE NAVIGATION - This issueTable of contents for this issuePrevious articleNext article
+Article tools
+Download PDFSend to a friend
+CrossRef lists 157 articles citing this articleScopus lists 253 articles citing this articleExport citationExport referencesRights and permissions Order commercial reprints
+Article navigationSend to a friendAbstractResultsExpression of hIL10DiscussionMethodsFigures, schemes & tablesAcknowledgmentsReferencesMore articles like thisSee alsoNews and Views by SyvanenSearch PubMed forLothar SteidlerSabine NeirynckNathalie HuyghebaertVeerle SnoeckAn VermeireBruno Goddeerismore authors of this article
+nature jobs
+Associate or Senior Editor,Nature Geoscience (SF Application #:12145)
+Springer Nature
+Associate or Senior Editor,Nature Medicine (SF Application #:12144)
+Springer Nature
+More science jobs
+Post a job
+nature events
+Biopharma Innovation Cup 2017
+18 June 2017  23 June 2017
+Germany
+Neuroscience in Intensive Care International Symposium: Precision Medicine for Neurocritical Care and Stroke
+02 March 2017  03 March 2017
+10 Thomas Circle N.W., Washington, DC, United States
+More science events
+ADVERTISEMENT
+Top
+Nature Biotechnology ISSN: 1087-0156 EISSN: 1546-1696
+About us
+Contact us
+Accessibility statement
+Help
+Privacy policy
+Use of cookies
+Legal notice
+Terms
+Nature jobs
+Nature Asia
+Nature Education
+RSS web feeds
+Search:
+ 2016 Macmillan Publishers Limited, part of Springer Nature. All Rights Reserved.
+partner of AGORA, HINARI, OARE, INASP, ORCID, CrossRef, COUNTER and COPE

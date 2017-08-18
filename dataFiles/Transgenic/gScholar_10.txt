@@ -1,0 +1,74 @@
+Tolerance induction in double specific T-cell receptor transgenic mice varies with antigen
+nature.com
+about npg
+news@nature.com
+naturejobs
+natureevents
+help
+site index
+my
+account
+e-alerts
+subscribe
+register
+SEARCH JOURNAL
+Friday 28 October 2016
+Journal HomeCurrent IssueAOPArchiveTHIS ARTICLE Download PDFReferencesExport citationExport referencesSend to a friendMore articles like thisTable of Contents
+< Previous |
+Next >Nature 342, 559 - 561
+(30 November 1989); doi:10.1038/342559a0Tolerance induction in double specific T-cell receptor transgenic mice varies with antigenHanspeterPircher, KurtBrki*, RosemarieLang, HansHengartner&Rolf M.ZinkernagelDepartment of Experimental Pathology, University Hospital, 8091 Zurich, Switzerland
+*Preclinical Research, Sandoz Ltd, 4002 Basel, SwitzerlandTHE crucial role of the thymus in immunological tolerance15 has been demonstrated by establishing that T cells are positively selected to express a specificity for self major histocompatibility complex (MHC)68, and that those T cells bearing receptors potentially reactive to self antigen fragments, presumably presented by thymic MHC, are selected against911. The precise mechanism by which tolerance is induced and the stage of T-cell development at which it occurs are not known. We have now studied T-cell tolerance in transgenic mice expressing a T-cell receptor with double specificities for lymphocytic choriomeningitis virus (LCMV)-H-2Db and for the mixed-lymphocyte stimulatory (Mlsa) antigen. We report that TCR transgenic mice tolerant to LCMV have drastically reduced numbers of CD4+CD8+ thymocytes and of peripheral T cells carrying the CD8 antigen. By contrast, tolerance to Mlsa antigen in the same TCR transgenic Mlsa mice leads to deletion of only mature thymocytes and peripheral T cells and does not affect CD4+CD8+ thymocytes. Thus the same transgenic TCR-expressing T cells may be tolerized at different stages of their maturation and at different locations in the thymus depending on the antigen involved.
+References
+1.
+Hotchin, J. Cold Spring Harb. Symp. quant. Biol. 27, 479499 (1962).|PubMed|ISI|ChemPort|
+2.
+Lehmann-Grube, F. Virol. Monogr. 10, 1173 (1971).
+3.
+Murphy, D. B., Okumura, K., Herzenberg, L. A. & McDevitt, H. O. Cold Spring Harb. Symp. quant. Biol. 41, 497504 (1976).
+4.
+Burnet, F. M. & Fenner, F. J. Production of Antibodies (Macmillan, Melbourne, 1949).
+5.
+Langman, R. E. The Immune System (Harcourt Brace Jovanovich, San Diego, 1989).
+6.
+Zinkernagel, R. M. et al. J. exp. Med. 147, 882896 (1978).|Article|PubMed|ISI|ChemPort|
+7.
+Teh, H. S. et al. Nature 335, 229233 (1988).|Article|PubMed|ISI|ChemPort|
+8.
+Sha, W. C. et al. Nature 336, 7376 (1988).|Article|PubMed|ISI|ChemPort|
+9.
+Kappler, J. W., Roehm, N. & Marrack, P. Cell 49, 273280 (1987).|Article|PubMed|ISI|ChemPort|
+10.
+Kappler, J. W., Staerz, U. D., White, J. & Marrack, P. Nature 332, 3540 (1988).|Article|PubMed|ISI|ChemPort|
+11.
+MacDonald, H. R. et al. Nature 332, 4045 (1988).|Article|PubMed|ChemPort|
+12.
+Pircher, H. P. et al. Eur. J. Immun. 17, 159166 (1987).|ChemPort|
+13.
+Pircher, H. P. et al. Eur. J. Immun. 17, 18431846 (1987).|ChemPort|
+14.
+Zinkernagel, R. M. & Doherty, P. C. Adv. Immun. 27, 52142 (1979).
+15.
+Moskophidis, D., Assmann Wischer, U., Simon, M. M. & Lehmann Grube, F. Eur. J. Immun. 17, 937942 (1987).|ChemPort|
+16.
+Mims, C. A. J. Path. Bact. 91, 395402 (1966).|PubMed|ChemPort|
+17.
+Kisielow, P., Blthmann, H., Staerz, U. D., Steinmetz, M. & von Bohmer, H. Nature 333, 742746 (1988).|Article|PubMed|ISI|ChemPort|
+18.
+Kyewski, B. A., Rouse, R. V. & Kaplan, H. S. Proc. natn. Acad. Sci. U.S.A. 79, 56465650 (1982).|ChemPort|
+19.
+McCarthy, S. A., Kruisbeek, A. M., Uppenkamp, I. K., Sharrow, S. O., Singer, A. Nature 336, 7679 (1988).|Article|PubMed|ChemPort|
+20.
+Berg, L. J., Fazekas de St. Groth, B., Pullen, A. M. & Davis, M. M. Nature 340, 559562 (1989).|Article|PubMed|ISI|ChemPort|
+21.
+Haskins, K. et al. J. exp. Med. 160, 452471 (1984).|Article|PubMed|ISI|ChemPort|
+22.
+Staerz, U. D., Rammensee, H. G., Benedetto, J. D. & Bevan, M. J. J. Immun. 134, 39944000 (1985).|PubMed|ISI|ChemPort|
+23.
+Tomonari, K. Immunogenetics 28, 455458 (1988).|Article|PubMed|ISI|ChemPort|
+24.
+Taswell, C. J. Immun. 126, 16141619 (1981).|PubMed|ISI|ChemPort|
+25.
+Pircher, H. P. et al. EMBO J. 8, 719727 (1989).|PubMed|ISI|ChemPort|
+26.
+Kubo, R. T., Born, W., Kappler, J. W., Marrack, P. & Pigeon, M. J. Immun. 142, 27361742 (1989).|PubMed|ChemPort|
+ 1989 Nature Publishing GroupPrivacy Policy

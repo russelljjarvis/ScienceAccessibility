@@ -1,0 +1,184 @@
+Kickstarter bans project creators from giving away genetically-modified organisms - The Verge
+clock
+menu
+more-arrow
+Log In or Sign Up
+Log In
+Sign Up
+Tech
+Science
+Culture
+Cars
+Reviews
+Longform
+Video
+Circuit Breaker
+Forums
+TL;DR
+more
+Tech
+Apple
+Google
+Microsoft
+Apps
+Photography
+Virtual Reality
+All Tech
+Science
+Space
+Energy
+Health
+Environment
+All Science
+Culture
+Web
+TV
+Film
+Games
+Comics
+Music
+All Culture
+Cars
+Ride-Sharing
+Cars
+Mass Transit
+Aviation
+Rideables
+All Transportation
+Reviews
+Phones
+Laptops
+Cameras
+Tablets
+Headphones
+Smartwatches
+VR Headsets
+This is my Next
+All Reviews
+Longform
+Video
+Circuit Breaker
+Forums
+TL;DR
+
+Web
+Report
+Science
+Kickstarter bans project creators from giving away genetically-modified organisms
+New,
+88
+comments
+by
+Duncan Geere
+Aug 2, 2013, 5:17pm EDT
+share
+tweet
+Linkedin
+Glowing Plants on Kickstarter (credit: Glowing Plants)
+Kickstarter is clamping down on genetically-modified organisms following the success of a project to genetically engineer glowing plants for use as additional lighting in people's homes. Earlier this week and without explanation, the crowdfunding website quietly altered its guidelines for project creators, introducing a new term that bans creators from giving away genetically-modified organisms (GMOs) as rewards to their online backers. "Projects cannot offer genetically modified organisms as a reward," the new language states. The prohibition is effective July 31st, meaning that the popular glow-in-the-dark plant project is safe, but that any future projects like it can't offer GMOs to their backers.
+"Projects cannot offer genetically modified organisms as a reward."
+When asked about the change by The Verge, the company provided only the following canned statement: "we aim to be as open as possible while protecting the health and creative spirit of Kickstarter for the long term." Yet the move comes just days after a project called "Glowing Plants" successfully raised nearly half-a-million dollars.
+The project was launched by a team of trained synthetic biologists, who want to insert bioluminescence genes from bacteria and fireflies into several types of plans  arabidopsis and roses to make them glow in the dark. Project backers who pledged $40 or more were promised packets of seeds of the final glowing plant products. Similar glowing plants have been created separately by other biologists going back to the 1980s. But the Kickstarter project creators are hopeful that their effort will go further, and that future iterations of their plants can replace some electric lighting altogether.
+"For us, [Kickstarters move] doesnt change anything," said Omri Amirav-Drory, one of the projects creators, a biochemist who is also CEO of a biotech company Genome Compiler. "We already have the money, and were working on the project as we speak, transforming plants using DNA. But for me, Im very sorry to see this, because it puts synthetic biology in the same category on Kickstarter as hate crimes and tobacco." Amirav-Drory said he had not been in touch with Kickstarter about the change in policy, but expressed puzzlement about it, because his glowing plant project had been featured repeatedly on Kickstaters editor-curated project sections.
+"it puts synthetic biology in the same category on Kickstarter as hate crimes and tobacco."
+The creators maintain their project is legal under US law, and that the risk of cross-pollination is low because the main plant theyre engineering, arabidopsis, is not native to the US. However, they also say they wont be able to send the seeds to countries in the European Union and other areas where GMO crops are widely curtailed. Meanwhile, Environmental advocates and some scientists outside of the project have expressed concerns that it may lead to a negative perception of synthetic biology, or set a worrisome precedent for unsupervised release of GMOs. One researcher recently told Nature that the plants were "frivolous."
+As for Kickstarter, the website seems to be trying to insulate itself against critics of the glowing plants project and GMOs more generally. But as Amirav-Drory noted to The Verge, Kickstarters new stance may lead scientists like himself to choose other crowdfunding platforms for their projects going forward.
+Carl Franzen contributed to this report.
+Source: Glowing Plants (Kickstarter), Kickstarter
+Image: Glowing Plants (Facebook)
+Next Up In
+Science
+US secretary of energy: to stop nuclear tests abroad, the US should ban them at home
+Hubbles space-themed holiday cards are perfect for the relatives you hate
+Stimulating the brain can bring back forgotten short-term memories
+Russian supply ship headed for the Space Station burns up in the atmosphere
+After evacuation from South Pole, Buzz Aldrin
+in stable condition in New Zealand hospital
+SpaceX eyes December 16th for first Falcon 9 launch since September explosion
+Now Trending
+Everything coming to Netflix, Amazon Prime, and HBO Now in December
+Why YouTubes biggest stars keep quitting
+The best calendar app for Android
+This Article has a component height of 12. The sidebar size is medium.
+Loading comments...
+The Latest
+Apps
+Mobile
+Business
+Twitter has a new head of product who barely uses the product
+by
+Nick Statt@nickstatt
+Twitters ceaseless search for someone to tell the social network where to go and how to get there has come to a momentary pause. The company announced today, on Twitter of course, that it has hired startup founder Keith Coleman as vice president...
+New,
+7
+comments
+Science
+Energy
+Environment
+US secretary of energy: to stop nuclear tests abroad, the US should ban them at home
+by
+Rachel Becker
+The United States needs to keep its nukes but put an end to nuclear weapons tests worldwide. Thats the advice that Ernest Moniz, the outgoing US secretary of energy, has for the upcoming administration of President-elect Donald Trump.
+Its...
+New,
+1
+comment
+Circuit Breaker
+Tech
+Gadgets
+Ixoost's $21,000 speaker is the sickest Lambo I've ever seen
+by
+Chaim Gartenberg@cgartenberg
+As anyone knows, the pinnacle achievement for any vehicle is to be a sick Lambo. Whether a motorized arm chair, or an amphibious faux-Lamborghini Countach, any car can be a "sick Lambo" if it has enough spirit, drive, and confidence.
+But did you...
+New,
+2
+comments
+Gaming
+Tech
+Virtual Reality
+Here are the 53 launch titles that will be available for the Oculus Touch controllers
+by
+Chaim Gartenberg@cgartenberg
+The Oculus Rifts motion controllers come out on December 6th, and Oculus just announced the list of over 50 Touch-compatible games and apps that will be available on the Oculus Store at launch.
+There are 53 launch titles in all, ranging from...
+New,
+0
+comments
+Circuit Breaker
+Google
+Mobile
+Googles Daydream View VR headset is now available in crimson red and white
+by
+Chris Welch
+Starting today, Googles Daydream View VR headset comes in two new colors: crimson (dark red) and snow (white). Both are available for immediate purchase from the companys online store, are scheduled to ship by December 8th, and are priced at $79...
+New,
+3
+comments
+Circuit Breaker
+Tech
+Gadgets
+Korg stuffed all the features of its Wavestation synth into an app
+by
+Ashley Carman@ashleyrcarman
+The Wavestation synth was released in 1990 for around $2,000. Its a classic device, but one that was never exactly affordable. Now Korg, the company behind Wavestation, is packing everything the synth offers into an iOS app called iWavestation....
+New,
+1
+comment
+Chorus
+Terms of Use
+Privacy Policy
+Communications Preferences
+Contact
+Tip Us
+Community Guidelines
+About
+Ethics Statement
+All Systems Operational
+Check out our status page for more details.
+Vox Media
+Advertise with us
+Jobs @ Vox Media
+ 2016 Vox Media, Inc. All Rights Reserved
+tweet
+share

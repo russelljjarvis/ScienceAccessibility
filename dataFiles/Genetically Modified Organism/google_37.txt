@@ -1,0 +1,118 @@
+Science in Context - Document
+For the best user experience on this site, you should have JavaScript enabled in your browser.
+My Library:
+Roosevelt High School
+Gale Databases
+Roosevelt High School
+Skip to Content
+Logout
+My Library Links
+Sign in with Google
+Save documents, citations, and highlights to Google Drive
+Sign in with Microsoft
+Save documents, citations, and highlights to Microsoft OneDrive
+Your search information has been cleared.
+Items in My Folder and/or Highlights & Notes may not have been saved to Google Drive or Microsoft OneDrive.
+Are you sure you want to logout?
+Science in Context
+Please enter a search term
+Search Suggestions
+Close Search Assist
+Advanced
+Bookmark
+More
+Help
+Bookmark
+Advanced
+Dictionary
+Search History
+My Folder
+Highlights and Notes
+Browse Topics
+Maps
+Curriculum Standards
+Tools
+Smaller
+Larger
+Disclaimer: You have requested a machine translation of selected content from our databases. This functionality is provided solely for your convenience and is in no way intended to replace human translation. Neither Gale nor its licensors make any representations or warranties with respect to the translations.
+Overview - Genetically Modified Organisms
+Genetically Modified Organisms
+Biotechnology: Changing Life Through Science,
+2012
+Updated: June 02, 2014
+Please close ReadSpeaker to use Highlighting or select other text to read.
+Listen
+Larger documents may require additional load time.
+Genetically Modified Organisms
+Description
+Genetically modified organisms (GMOs) are living things whose DNA has been changed in the laboratory. Many kinds of genetically modified organisms have been created, including bacteria, viruses, yeasts, plants, and animals. Genetically modified organisms also are known as genetically engineered organisms or transgenic organisms.
+Some GMOs have been made to study how heredity works and to test the tools of genetic engineering. One early GMO was a tobacco plant, made in 1986, that was given DNA from a firefly. The plant glowed in the dark. Scientists also have produced glow-in-the-dark mice.
+Many genetically modified (GM) crop plants have been made, including corn, cotton, wheat, rice, and others. These plants tolerate more pesticides, make their own pesticides, grow in dry or salty places, or make medicines or extra vitamins. Some farmers, especially in the United States, Argentina, China, India, and a few other countries, buy GM seed hoping to make more money from their crops.
+Some GMO animals have also been created. Salmon have been genetically modified to grow more quickly than usual and be sterile so that they can be released into streams and lakes but not breed with their wild relatives. Cows have been engineered to produce human growth hormone in their milk, for medical use. Goats have been engineered to produce spider silk in their milk; the goal is to harvest the silk (which is stronger, ounce for ounce, than steel) in large amounts and make useful new materials from it. GM sheep and pigs have been made that make human blood-clotting factor in their milk. This is the substance that stops bleeding from cuts. The factor can be purified and given to human hemophiliacs (people who lack the factor and so cannot easily stop bleeding).
+GMOs have also been created to use in treating medical problems. In the method called "gene therapy," for example, a GM virus is created that invades the cells of a person who is sick with some disorder of their DNA. The virus carries new DNA into the cells of the patient. Sometimes this new DNA cures the patient's disease. In November 2012, the European Commission approved Glybera, a gene therapy treatment for lipoprotein lipase deficiency (LPLD, which can cause severe pancreatitis), for commercial use. Several more gene therapies are in clinical trials (closely monitored medical studies conducted with limited numbers of patients and used to investigate new drugs or treatments).
+Although nobody is known to have yet done such a thing, there is also a possibility that viruses or bacteria could be genetically engineered to act as weapons.
+Scientific Foundations
+DNA stands for deoxyribonucleic acid, the molecule that controls heredity and the making of proteins by cells. Heredity is the passing on of traits from parents to offspring; a protein is a kind of large molecule (a group of atoms) that is found in all living things. Almost all living cells contain one or more DNA molecules. Each DNA molecule is a long, twisted group of smaller molecules that contains information written in a chemical code. Small groups of atoms arranged along the DNA molecule spell out instructions for making proteins. Cells live, grow, and reproduce by making proteins according to the instructions in their DNA. Changing the DNA of a living thing changes how it lives, grows, and reproduces.
+Development
+The scientific understanding of genetics dates to 1865, when an Austrian monk named Gregor Mendel (18221884) published his studies of inheritance in pea plants. In the twentieth century, scientists extended Mendel's laws of heredity to evolution and selective breeding.
+The nature of the DNA molecule was discovered in 1953 by James Watson (1928), Francis Crick (19162004), and Maurice Wilkins (19162004). One by one, from the 1950s through the 1970s, chemical tools were discovered that allowed scientists to cut and duplicate pieces of DNA, bringing genetic engineering closer to reality. In 1977, it was discovered that a germ called Agrobacterium tumefaciens could be used to put genes (short sections of DNA) into the DNA of plant cells. Other methods were soon invented to change DNA. One of these is the gene gun, which literally shoots tiny bullets painted with DNA into cells.
+By the late 1980s, many organisms had been genetically modified. In the 1990s, genetically modified plantsespecially corn, cotton, canola, and soybeansbecame important money-making crops in the United States and some other countries. In the early twenty-first century, more GM crops were produced and research continued into GM animals.
+In many countries, the adoption of GM crops by farmers has been rapid. For example, different varieties of GM corn were first offered for sale to American farmers in the mid 1990s. By the year 2000, 25 percent of all corn planted in the United States was genetically modified; by 2013 that proportion had risen to 90 percent of the U.S. corn crop.
+Current Issues
+Many scientists believe that the creation of genetically modified organisms is a good thing. They believe that GMOs will not only make money for the companies that sell them, such as those that sell GM cotton, corn, soybean, and other crop seed, but will help people in poor countries become healthier. Some scientists and many non-scientists disagree. They believe that GMOs generally will not help the poor and may damage human health or the environment.
+All biologists agree that altered genes from GMOs, especially plants or bacteria, might mix with wild organisms and cause harm, but there is much disagreement over how big a danger this is. In many parts of the world, especially Europe and Japan, there is strong popular opposition to the idea of eating foods made from GM plants, and in those and other countries, GM crops and foods generally are banned from being sold. In the United States, most packaged foods already contain some GM plant material.
+Genetically Modified People?
+Human beings could, in theory, be genetically modified just like other creatures. Genetic modification could, for example, be used to help people who have genetic diseasesdefects in their DNA that make them sickto have healthy children. The genetic modification of a person to cure disease is called gene therapy.
+Some people also dream of engineering children to be taller, more athletic, have certain hair or eye color, or be smarter. However, it is not yet scientifically possible to do this in a reliable and safe manner. Also, most people feel that trying to create genetically superior people would be morally wrong. Genetic engineering of peopleby genetically modifying a human embryo in a laboratory and implanting it into a woman's wombis already illegal in some parts of the world. The Convention on Human Rights and Biomedicine of the Council of Europe (1997) forbids "any modification in the genome of any descendants." (An organism's genome is the sum of its DNA.) In 2011, Congress enacted a federal law that prevents U.S. patents from being issued on human embryos, including any that have been genetically modified.
+Words to Know
+DNAA double-helix shaped molecule inside cells that carries the genetic information.
+Gene gunA device that shoots tiny metal bullets coated with DNA fragments into cells in order to alter their DNA permanently.
+Further Readings
+Food and Agriculture Organization (FAO) of the United Nations. "Genetically Modified Organisms, Consumers, Food Safety and the Environment" http://www.fao.org/docrep/003/X9602E/X9602E00.HTM (accessed May 15, 2014).
+GMO Compass. "GM Crops, the Big Four: Soybean, Maize, Rapeseed and Cotton." http://www.gmo-compass.org/eng/grocery_shopping/crops/ (accessed May 15, 2014).
+Hayes, Lynn A., Karen R. Krub, and Jill E. Krueger. Farmers' Guide to GMOs, 2nd ed. Saint Paul, Minn.: Farmers' Legal Action Group, 2008.
+Jumba, Miriam. Genetically Modified Organisms: The Mystery Unraveled. Bloomington, Ind.: Trafford Publishing, 2010.
+Full Text:
+COPYRIGHT 2007 Gale, Cengage Learning.
+Source Citation
+Gale Document Number: GALE|ZOMUAN783294943
+Tools
+Citation Tools
+Email
+Download
+Print
+Highlights and Notes (0)
+Save
+Share
+Translate
+Your email has been sent.
+Format Option:
+Save to Google Drive
+Save to OneDrive
+HTML
+PDF
+CSV
+IMAGE
+Close
+Table of Contents
+Description
+Scientific Foundations
+Development
+Current Issues
+Document Images
+Dictionary Search:
+Previous
+Next
+Please close ReadSpeaker to use Highlighting or select other text to read.
+Listen
+Larger documents may require additional load time.
+Dictionary
+Searching In: Merriam-Webster's Collegiate Dictionary
+Copyright 2003 Merriam-Webster, Incorporated
+About Science in Context
+About Gale
+Contact Us
+Terms of Use
+Privacy Policy
+Copyright
+Gale | Cengage

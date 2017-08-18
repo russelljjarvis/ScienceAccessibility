@@ -1,0 +1,78 @@
+Production of transgenic rabbits, sheep and pigs by microinjection
+nature.com
+about npg
+news@nature.com
+naturejobs
+natureevents
+help
+site index
+my
+account
+e-alerts
+subscribe
+register
+SEARCH JOURNAL
+Friday 28 October 2016
+Journal HomeCurrent IssueAOPArchiveTHIS ARTICLE Download PDFReferencesExport citationExport referencesSend to a friendMore articles like thisTable of Contents
+< Previous |
+Next >Nature 315, 680 - 683
+(20 June 1985); doi:10.1038/315680a0Production of transgenic rabbits, sheep and pigs by microinjectionRobert E.Hammer*, Vernon G.Pursel, Caird E.RexroadJr, Robert J.Wall, Douglas J.Bolt, Karl M.Ebert*, Richard D.Palmiter&Ralph L.Brinster*
+*Laboratory of Reproductive Physiology, School of Veterinary Medicine University of Pennsylvania, Philadelphia, Pennsylvania 19104, USA
+Reproduction Laboratory, Agricultural Research Service, USDA, Beltsville, Maryland 20705, USA
+Howard Hughes Medical Institute, Department of Biochemistry, University of Washington, Seattle, Washington 98195, USADirect microinjection has been used to introduce foreign DNA into a number of terminally differentiated cell types as well as embryos of several species including sea urchin1, Candida elegans
+2, Xenopus
+3, Drosophila
+4,5 and mice611. Various genes have been successfully introduced into mice including constructs consisting of the mouse metallothionein-I (MT) promoter/regulator region fused to either the rat or human growth hormone (hGH) structural genes. Transgenic mice harbouring such genes commonly exhibit high, metal-inducible levels of the fusion messenger RNA in several organs, substantial quantities of the foreign growth hormone in serum and enhanced growth12,13. In addition, the gene is stably incorporated into the germ line, making the phenotype heritable. Because of the scientific importance and potential economic value of transgenic livestock containing foreign genes, we initiated studies on large animals by microinjecting the fusion gene, MThGH
+13, into the pronuclei or nuclei of eggs from superovulated rabbits, sheep and pigs. We report here integration of the gene in all three species and expression of the gene in transgenic rabbits and pigs.
+References
+1.
+McMahon, A. P. et al. Devl Biol. 108, 420430 (1985).|ChemPort|
+2.
+Stinchcomb, D., Shaw, J., Carr, S. & Hirsh, D. in Genetic Manipulation of the Mammalian Ovum and Early Embryo (eds Costantini, F. & Jaenish, R.) (Cold Spring Harbor Laboratory, New York, in the press)
+3.
+Rusconi, S. & Shaffner, W. Proc. natn. Acad. Sci. U.S.A. 78, 50515055 (1981).|ChemPort|
+4.
+Spradling, A. C. & Rubin, G. M. Science 218, 341347 (1982).|PubMed|ISI|ChemPort|
+5.
+Rubin, G. M. & Spradling, A. C. Science 218, 348353 (1982).|PubMed|ISI|ChemPort|
+6.
+Gordon, J. W., Scangos, G. A. Plotkin, D. J. , Barbosa, J. A. & Ruddle, F. H. Proc. natn. Acad. Sci. U.S.A. 77, 73807384 (1980).|ChemPort|
+7.
+Harbers, K., Jahner, D. & Jaenisch, R. Nature 293, 540542 (1981).|PubMed|ISI|ChemPort|
+8.
+Wagner, E. F., Stewart, T. A. & Mintz, B. Proc. natn. Acad. Sci. U.S.A. 78, 50165020 (1981).|ChemPort|
+9.
+Wagner, T. E. et al. Proc. natn. Acad. Sci. U.S.A. 78, 63766380 (1981).|ChemPort|
+10.
+Brinster, R. L. et al. Cell 27, 223231 (1981).|Article|PubMed|ISI|ChemPort|
+11.
+Costantini, F. & Lacy, E. Nature 294, 9294 (1981).|PubMed|ISI|ChemPort|
+12.
+Palmiter, R. D. et al. Nature 300, 611615 (1982).|PubMed|ISI|ChemPort|
+13.
+Palmiter, R. D., Norstedt, G., Gelinas, R. E., Hammer, R. E. & Brinster, R. L. Science 222, 809814 (1983).|PubMed|ISI|ChemPort|
+14.
+Brinster, R. L., Chen, H. Y., Trumbauer, M. E., Yagle, M. & Palmiter, R. D. Proc. natn. Acad. Sci. U.S.A. (in the press).
+15.
+Wall, R. J., Pursel, V. G., Hammer, R. E. & Brinster, R. L. Biol. Reprod. 32, 645651 (1985).|PubMed|ISI|ChemPort|
+16.
+Baile, C. A., Della-Fera, M. & McLaughlin, C. L. Growth 47, 225236 (1983).|PubMed|ISI|ChemPort|
+17.
+Chung, C. S., Etherton, T. D. & Wiggins, J. P. J. anim. Sci. 60, 118130 (1985).|PubMed|ISI|ChemPort|
+18.
+Palmiter, R. D., Chen, H. Y. & Brinster, R. L. Cell 29, 701710 (1982).|Article|PubMed|ISI|ChemPort|
+19.
+Barsh, G., Seeberg, P. & Gelinas, R. Nucleic Acids Res. 11, 39393958 (1983).|PubMed|ISI|ChemPort|
+20.
+Brinster, R. L. Expl Cell Res. 51, 330334 (1969).
+21.
+Brinster, R. L. in Growth, Nutrition and Metabolism of Cells in Culture Vol. 2 (eds Rothblat, G. & Cristofalo, V.) 251286 (Academic, New York, 1972).
+22.
+Brinster, R. L. J. exp. Med. 140, 10491056 (1974).|Article|PubMed|ISI|ChemPort|
+23.
+Brinster, R. L. & Thomson Ten Broeck, J. J. reprod. Fert. 19, 417421 (1969).|ISI|ChemPort|
+24.
+Armstrong, D. T., Pfitzner, A. P., Warnes, G. M., Ralph, M. M. & Seamark, R. F. J. reprod. Fert. 67, 395401 (1983).|Article|ISI|ChemPort|
+25.
+Ornitz, D. M. et al. Nature 313, 600602 (1985).|PubMed|ISI|ChemPort|
+ 1985 Nature Publishing GroupPrivacy Policy

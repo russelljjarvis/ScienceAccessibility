@@ -1,0 +1,186 @@
+EFFECTS OF PLANTS GENETICALLY MODIFIED FOR INSECT RESISTANCE ON NONTARGET ORGANISMS - Annual Review of Entomology, 50(1):271
+Log in
+|
+Register
+|
+Mobile
+|
+Activate
+|
+Help
+|
+Item: 0
+This Journal
+Journals
+General Info
+Advanced Search
+Access provided by:
+ASU Libraries
+Analytical Chemistry
+Animal Biosciences
+Anthropology
+Astronomy and Astrophysics
+Biochemistry
+Biomedical Engineering
+Biophysics
+Cancer Biology (new in 2017)
+Cell and Developmental Biology
+Chemical and Biomolecular Engineering
+Clinical Psychology
+Computer Science
+Condensed Matter Physics
+Earth and Planetary Sciences
+Ecology, Evolution, and Systematics
+Economics
+Entomology
+Environment and Resources
+Financial Economics
+Fluid Mechanics
+Food Science and Technology
+Genetics
+Genomics and Human Genetics
+Immunology
+Law and Social Science
+Linguistics
+Marine Science
+Materials Research
+Medicine
+Microbiology
+Neuroscience
+Nuclear and Particle Science
+Nutrition
+Organizational Psychology and Organizational Behavior
+Pathology: Mechanisms of Disease
+Pharmacology and Toxicology
+Physical Chemistry
+Physiology
+Phytopathology
+Plant Biology
+Political Science
+Psychology
+Public Health
+Resource Economics
+Sociology
+Statistics and Its Application
+Virology
+Vision Science
+Publication DatesAdding to Your Course Reader Copyright & PermissionsSupplemental MaterialsAccess Metadata Impact Factor RankingsAR CONVERSATIONS: AUDIO
+& VIDEOAnnual Reviews Special Compilations
+Journals
+Subscriptions General Ordering Info
+Online Activation Instructions
+Personal Pricing
+Institutional Pricing
+Society Partnerships
+Authors General Information
+Author Instructions
+Librarians & Agents Librarian Resource Center
+Librarian Administration Tool
+Site License Information
+Terms & Conditions
+AboutOverview
+Our Mission & Our Founder
+Philanthropy
+Our Team
+Careers at Annual Reviews
+Impact Factor Rankings
+Copyright & Permissions
+Mobile
+Society Partnerships
+Access Metadata
+AR in the News
+AR Conversations: Audio & Video
+FAQ
+Annual Reviews Directory
+Contact Us
+RSS Feeds
+Privacy Policy
+Home
+/
+Journals
+/
+Entomology
+/
+List of Issues
+/
+Volume 50, 2005
+/
+O'Callaghan, pp. 271-292
+Add to Favorites
+Email Page To a Friend
+Entomology
+Volume 50, 2005
+REVIEW CONTENT
+ABSTRACT
+FULL-TEXT HTML
+FULL-TEXT PDF
+SUPPLEMENTAL MATERIALS
+CURRENT EDITORIAL COMMITTEE
+ABSTRACT
+Prev.
+|
+Next
+EFFECTS OF PLANTS GENETICALLY MODIFIED FOR INSECT RESISTANCE ON NONTARGET ORGANISMSAnnual Review of Entomology
+Vol. 50: 271-292
+(Volume publication date July 2005)
+First published online as a Review in Advance on August 18, 2004DOI: 10.1146/annurev.ento.50.071803.130352Maureen O'Callaghan,1 Travis R. Glare,1 Elisabeth P.J. Burgess,2 and Louise A. Malone2 1AgResearch, PO Box 60, Lincoln, Canterbury, New Zealand; email: maureen.ocallaghan@agresearch.co.nz; travis.glare@agresearch.co.nz2HortResearch, Private Bag 92169, Auckland, New Zealand; email: eburgess@hortresearch.co.nz; lmalone@hortresearch.co.nzFULL-TEXT| PDF
+(135 KB)| Supplemental Materials | Permissions| Reprints
+Citation:
+PubMed| Web of Science |
+Download| Email notification| Web of Science :
+|
+ABSTRACT AbstractInsect resistance, based on Bacillus thuringiensis (Bt) endotoxins, is the second most widely used trait (after herbicide resistance) in commercial genetically modified (GM) crops. Other modifications for insect resistance, such as proteinase inhibitors and lectins, are also being used in many experimental crops. The extensive testing on nontarget plant-feeding insects and beneficial species that has accompanied the long-term and wide-scale use of Bt plants has not detected significant adverse effects. GM plants expressing other insect-resistant proteins that have a broader spectrum of activity have been tested on only a limited number of nontarget species. Little is known about the persistence of transgene-derived proteins in soil, with the exception of Bt endotoxins, which can persist in soil for several months. Bt plants appear to have little impact on soil biota such as earthworms, collembolans, and general soil microflora. Further research is required on the effects of GM plants on soil processes such as decomposition. Assessment of nontarget impacts is an essential part of the risk assessment process for insect-resistant GM plants.Acronyms Terms Go to full-text...
+BROWSE RELATED REVIEWS
+USERS ALSO READ
+Genetically Engineered Plants and Foods: A Scientist's Analysis of the Issues (Part I)Peggy G. LemauxAnnual Review of Plant Biology
+Vol. 59 (2008)
+:
+771
+-812AbstractFull TextPDF (249 KB)Insect-Resistant Genetically Modified Rice in China: From Research to CommercializationMao Chen, Anthony Shelton,
+and Gong-yin YeAnnual Review of Entomology
+Vol. 56 (2011)
+:
+81
+-101AbstractFull TextPDF (449 KB)Supplemental MaterialsGenetically Engineered Plants and Foods: A Scientist's Analysis of the Issues (Part II)Peggy G. LemauxAnnual Review of Plant Biology
+Vol. 60 (2009)
+:
+511
+-559AbstractFull TextPDF (300 KB)The Sublethal Effects of Pesticides on Beneficial ArthropodsNicolas Desneux, Axel Decourtye,
+and Jean-Marie DelpuechAnnual Review of Entomology
+Vol. 52 (2007)
+:
+81
+-106AbstractFull TextPDF (172 KB)
+CHAIN OF REVIEWS
+Earlier AR review(s) cited by this review
+ECONOMIC, ECOLOGICAL, FOOD SAFETY, AND SOCIAL CONSEQUENCES OF THE DEPLOYMENT OF BT TRANSGENIC PLANTSA. M. Shelton, J.-Z. Zhao, R. T. RoushAnnual Review of Entomology.
+Volume 47,
+Page 845-881,
+2002AbstractFull TextPDF (286 KB)This reviewEFFECTS OF PLANTS GENETICALLY MODIFIED FOR INSECT RESISTANCE ON NONTARGET ORGANISMSMaureen O'Callaghan, Travis R. Glare, Elisabeth P.J. Burgess, Louise A. Malone
+Volume 50,
+Page 271-292,
+2005
+Subsequent AR reviews that cite this review
+Biotechnology in AgricultureRobert W. HerdtAnnual Review of Environment and Resources.
+Volume 31,
+Page 265-295,
+2006AbstractFull TextPDF (171 KB)
+THIS REVIEW IS CITED BY
+Plant Genetic Engineering, Ecological IssuesC.J. LeRoy: 33-39[CrossRef]Bt Cry1Ie Toxin Does Not Impact the Survival and Pollen Consumption of Chinese Honey Bees,
+Apis cerana cerana
+(Hymenoptera, Apidae)Ping-Li Dai, Hui-Ru Jia, Cameron J. Jack, Li-Li Geng, Feng Liu, Chun-Sheng Hou, Qing-Yun Diao,
+and James D. EllisJournal of Economic Entomology: tow204[CrossRef]Behavioral effects of insect-resistant genetically modified crops on phytophagous and beneficial arthropods: a reviewPeng Han, Mara Concepcin Velasco-Hernndez, Ricardo Ramirez-Romero,
+and Nicolas DesneuxJournal of Pest Science Vol. 89(4): 859-883[CrossRef]Hematotoxicity and genotoxicity evaluations in Swiss mice intraperitoneally exposed to
+B
+acillus thuringiensis
+(
+var kurstaki
+) spore crystals genetically modified to express individually Cry1Aa, Cry1Ab, Cry1Ac, or Cry2AaBlin Poletto Mezzomo, Ana Luisa Miranda-Vilela, Lilian Carla Pereira Barbosa, Vanessa Lima Albernaz,
+and Cesar Koppe GrisoliaEnvironmental Toxicology Vol. 31(8): 970-978[CrossRef]Arthropod Diversity and Abundance in Wild Rice,
+Oryza rufipogon
+, in the Mekong Delta, VietnamNgo Luc Cuong, Gail A. Langellotto, Tran Loc Thuy, Vu Quynh, Nguyen Thi Thanh Thuy, Alberto T. Barrion,
+and Yolanda H. ChenAnnals of the Entomological Society of America Vol. 109(4): 542-554[CrossRef]See more...
+FIND RELATED REVIEWS
+Search for articles by the same authors or containing the same key words. Select below.SEARCH IN:Annual Reviews BY AUTHORS:Maureen O'Callaghan,Travis R. Glare,Elisabeth P.J. Burgess,Louise A. MaloneKEYWORDS:Bacillus thuringiensisenvironmental impactrisk assessmentnatural enemiespollinatorssoil biota
+COPYRIGHT 2016 | SUPPLEMENTAL MATERIALS | ANNUAL REVIEWS DIRECTORY | PRIVACY POLICY  | CONTACT US   |
+Powered by Atypon Literatum

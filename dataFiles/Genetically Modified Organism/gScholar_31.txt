@@ -1,0 +1,42 @@
+Detection of genetically modified organisms (GMOs) by PCR: a brief review of methodologies available
+Screen reader users, click here to load entire articleThis page uses JavaScript to progressively load the article content as a user scrolls.
+Screen reader users, click the load entire article button to bypass dynamically loaded article content.
+Please note that Internet Explorer version 8.x will not be supported as of January 1, 2016. Please refer to
+this blog post for more information.
+Close
+ScienceDirectJournalsBooksRegisterSign inSign in using your ScienceDirect credentialsUsernamePasswordRemember meForgotten username or password?Sign in via your institutionOpenAthens loginOther institution loginHelpJournalsBooksRegisterSign inHelpcloseSign in using your ScienceDirect credentialsUsernamePasswordRemember meForgotten username or password?Sign in via your institutionOpenAthens loginOther institution login
+Other users also viewed these articles
+Opens document download manager
+Do not show again
+Downloading zip file containing 3 articles...
+Download PDF
+Opens in a new window.
+Article suggestions will be shown in a dialog on return to ScienceDirect.
+Help
+Direct export
+Export file
+RIS(for EndNote, Reference Manager, ProCite)
+BibTeX
+Text
+RefWorks Direct Export
+Content
+Citation Only
+Citation and Abstract
+Advanced search
+JavaScript is disabled on your browser.
+Please enable JavaScript to use all the features on this page.
+JavaScript is disabled on your browser.
+Please enable JavaScript to use all the features on this page. This page uses JavaScript to progressively load the article content as a user scrolls. Click the View full text link to bypass dynamically loaded article content. View full text
+Trends in Food Science & TechnologyVolume 9, Issues 1112, November 1998, Pages 380388
+ReviewDetection of genetically modified organisms (GMOs) by PCR: a brief review of methodologies availableE. Gacheta, G.G. Martina, F. Vigneaua, G. Meyerba Eurofins Scientific S.A., Rue Pierre Adolphe Bobierre, B.P.42301, F - 44323 Nantes Cedex 3, Franceb Hanse Analytik GmbH, Fahrenheitstrae 1, D-28359 Bremen, GermanyAvailable online 10 January 2000AbstractThe discovery of the molecules that bear the genetic information of any living organisms among which DNA (DeoxyriboNucleic Acid) plays a central role has been a revolution for life sciences. Taking the advantage of the universality of the genetic code, researchers have succeeded to associate DNA sequences coming from different organisms using molecular biology techniques and to integrate foreign DNA within plants. These genetically-modified organisms (the so called GMOs) have the ability to synthesise some additional proteins which confer new properties on them. Improving the protection of agricultural crops is one of the sought advantages by the gene transfer.According to the European regulation, the new foodstuffs made from genetically modified soya or maize, must be labelled. The control of the labelling of such foodstuffs is based on the detection of the foreign DNA sequences born by the genetically-modified organisms. One of the analytical methods used for enforcement of this regulation is the Polymerase Chain Reaction (PCR) method. The principle of the PCR method is to multiply specific sequences of DNA, making them detectable. This highly sensitive method offers the advantage of detecting DNA molecules which are more thermostable than proteins.As soon as human beings settled, they started to grow plants and breed animals. Step by step, they artificially created new species by selecting some types of plants and animals (criteria were yield, weight, strength, etc.). However, up to a few years ago, human beings were unable to control directly the biological process of this creation which is based on a random mix of genetic information through sexual reproduction. Though human beings have improved their techniques to control sexual reproduction, they have not yet acted directly at the core of the biological mechanism. They did not modify the genetic information that living organisms harbour.Life sciences have undergone enormous progress since the discovery that molecules bear genetic information. These molecules are called nucleic acids, among which DNA (deoxyribonucleic acid) plays a central role. The knowledge of the structure and the biochemistry of DNA, and mechanisms of DNA synthesis (polymerization, ligation, cutting) has allowed biologists to act directly on DNA sequences. Researchers have taken advantage of this easy manipulation of DNA and of the genetic code to associate DNA sequences coming from different organisms. They have succeeded in building new DNA molecules by recombining different DNA sequences with molecular biology techniques (Fig. 1). DNA is like a magnetic tapeit can be cut, moved and reinserted to create new or different information. Thanks to molecular biology, researchers have succeeded in integrating foreign DNA within, for example, plant genomic DNA, but also in mouse or rat DNA. Genetically modified organisms, abbreviated as GMOs, are the fruit of this research.Fig. 1.Different steps for the creation of a GM corn containing an endotoxin gene.Figure optionsDownload full-size imageDownload as PowerPoint slide1. Advantages of GMOsThe chronology of gene expression is as follows. The gene is transcribed into its messenger ribonucleic acid (or mRNA). Then, the mRNA is translated into a protein. Thus, one protein corresponds to a specific gene. Introducing a foreign gene in a plant confers this on plant the ability to synthesize a foreign protein.Based on the idea that any genetic information from any source can be expressed in any organism, genetic engineering has, for example, looked at improving the protection of agricultural crops. Other sought advantages include shortening the delay to obtain a new variety, improving the yield and quality of crops, producing high value-added molecules (like pharmaceuticals or vitamins or biopolymers for industry), and improving the nutritional quality of plants (Table 1 and Table 2).Table 1.
+GMOs on sale in 1997CropsPropertyCountryCompanyCornInsect resistenceUSA, Canada, Japan, EUCiba-Geigy, Monsanto, Mycogen, Sandoz, Northrup KingHerbicide toleranceUSA, EU, Switzerlandde Kalb, AgrEvo, Plant Genetic SystemsMale sterilityUSAPlant Genetic SystemsSoy beanHerbicide toleranceUSA, Canada, Japan, EU, Argentina, SwitzerlandAgrEvo, MonsantoTomatoRipening slowerUSA, GBAgritope, Calgene, DNA Plant Technology, Monsanto, ZenecaPotatoInsect resistanceUSA, Canada, JapanMonsantoChicoryMale sterility and herbicide toleranceEuropeBejo Zaden BVSquashVirus resistanceUSAAsgrow, UpjohnMelonVirus resistanceUSAPapayaVirus resistanceUSACornell U.Rape seedMale sterilityEUPlant Genetic SystemsHerbicide toleranceJapan, Canada, USAAgrEvo, Monsanto, Plant Genetic SystemsHigh level of lauric acidCanadaCalgeneComposition of oilUSACalgeneCottonInsect resistanceUSA, Mexico, Australia, JapanMonsantoHerbicide toleranceUSACalgene/Rhne-Poulenc, Du Pont, MonsantoTobaccoHerbicide toleranceEuropeSEITAFull-size tableTable optionsView in workspaceDownload as CSV
+ElsevierAbout ScienceDirectRemote accessShopping cartContact and supportTerms and conditionsPrivacy policyCookies are used by this site. For more information, visit the cookies page.Copyright  2016 Elsevier B.V. or its licensors or contributors. ScienceDirect  is a registered trademark of Elsevier B.V.RELX Group
+Recommended articles
+No articles found.
+Citing articles (0)
+This article has not been cited.
+Related book content
+No articles found.
+Download PDFs
+Help
+Help

@@ -1,0 +1,57 @@
+GMO: Harmful Effects
+Genetically Modified Organisms (GMO)
+Characteristics
+Fate and Transport in the Environment
+Exposure Pathway
+Routes of Exposure
+Methods for Measuring Exposure
+Strategies for Preventing Exposure
+Methods for Monitoring in the Environment
+Harmful Effects
+Dose Response
+Absorption, Distribution and Metabolism
+Sites of Toxicity
+Biomarkers of Disease
+Risk Assessment
+References
+5103/5104 Home
+Harmful Effects of the Agent
+Genetically modified organisms (GMOs) are a broad group of plants, animals, and bacteria that are engineered for a wide variety of applications ranging from agricultural production to scientific research.
+The types of potential hazards posed by GMOs vary according to the type of organism being modified and its intended application.
+Most of the concern surrounding GMOs relates to their potential for negative effects on the environment and human health.
+Because GMOs that could directly effect human health are primarily products that can enter the human food supply, this website focuses on genetically modified food.
+To date, the only types of products that have been approved for human consumption in the U.S. are genetically modified plants (FDA website).
+All genetically modified foods that have been approved are considered by the government to be as safe as their traditional counterparts and are generally unregulated (FDA website).
+However, there are several types of potential health effects that could result from the insertion of a novel gene into an organism.
+Health effects of primary concern to safety assessors are production of new allergens, increased toxicity, decreased nutrition, and antibiotic resistance (Bernstein et al., 2003).
+Food Allergy
+Food Allergy affects approximately 5% of children and 2% of adults in the U.S. and is a significant public health threat (Bakshi, 2003).
+Allergic reactions in humans occur when a normally harmless protein enters the body and stimulates an immune response (Bernstein et al., 2003).
+If the novel protein in a GM food comes from a source that is know to cause allergies in humans or a source that has never been consumed as human food, the concern that the protein could elicit an immune response in humans increases.
+Although no allergic reactions to GM food by consumers have been confirmed, in vitro evidence suggesting that some GM products could cause an allergic reaction has motivated biotechnology companies to discontinue their development (Bakshi, 2003).
+Increased Toxicity
+Most plants produce substances that are toxic to humans.
+Most of the plants that humans consume produce toxins at levels low enough that they do not produce any adverse health effects.
+There is concern that inserting an exotic gene into a plant could cause it to produce toxins at higher levels that could be dangerous to humans.
+This could happen through the process of inserting the gene into the plant.
+If other genes in the plant become damaged during the insertion process it could cause the plant to alter its production of toxins.
+Alternatively, the new gene could interfere with a metabolic pathway causing a stressed plant to produce more toxins in response.
+Although these effects have not been observed in GM plants, they have been observed through conventional breeding methods creating a safety concern for GM plants.
+For example, potatoes conventionally bred for increased diseased resistance have produced higher levels of glycoalkaloids (GEO-PIE website).
+Decreased Nutritional Value
+A genetically modified plant could theoretically have lower nutritional quality than its traditional counterpart by making nutrients unavailable or indigestible to humans.
+For example, phytate is a compound common in seeds and grains that binds with minerals and makes them unavailable to humans.
+An inserted gene could cause a plant to produce higher levels of phytate decreasing the mineral nutritional value of the plant (GEO-PIE).
+Another example comes from a study showing that a strain of genetically modified soybean produced lower levels of phytoestrogen compounds, believed to protect against heart disease and cancer, than traditional soybeans (Bakshi, 2003).
+Antibiotic resistance
+In recent years health professionals have become alarmed by the increasing number of bacterial strains that are showing resistance to antibiotics.
+Bacteria develop resistance to antibiotics by creating antibiotic resistance genes through natural mutation.
+Biotechnologists use antibiotic resistance genes as selectable markers when inserting new genes into plants.
+In the early stages of the process scientists do not know if the target plant will incorporate the new gene into its genome.
+By attaching the desired gene to an antibiotic resistance gene the new GM plant can be tested by growing it in a solution containing the corresponding antibiotic.
+If the plant survives scientists know that it has taken up the antibiotic resistance gene along with the desired gene.
+There is concern that bacteria living in the guts of humans and animals could pick up an antibiotic resistance gene from a GM plant before the DNA becomes completely digested (GEO-PIE website).
+It is not clear what sort of risk the possibility of conferring antibiotic resistance to bacteria presents.
+No one has ever observed bacteria incorporating new DNA from the digestive system under controlled laboratory conditions.
+The two types of antibiotic resistance genes used by biotechnologists are ones that already exist in bacteria in nature so the process would not introduce new antibiotic resistance to bacteria.
+Never the less it is a concern and the FDA is encouraging biotechnologists to phase out the practice of using antibiotic resistance genes (GEO-PIE website).

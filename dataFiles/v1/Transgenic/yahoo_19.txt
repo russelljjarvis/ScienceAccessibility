@@ -1,0 +1,221 @@
+ActionBioscience - promoting bioscience literacy
+biodiversity
+environment
+genomics
+biotechnology
+evolution
+public policy
+educator resources
+Transgenic Animals: Their Benefits To Human Welfare
+Endang Tri Margawati
+Transgenic mosquitoes may be a way to stem the spread of malaria and other diseases.
+Transgenic mosquitoes may also help fight Dengue fever.
+Unicellular diatoms generate as much oxygen through photosynthesis as rainforests! See how we are learning about them with transgenics.
+Click here for a history of cloning and its rationale.
+This BioBriefs article explains how transgenic zebrafish can be used to detect aquatic pollutants.
+articlehighlights
+Transgenic animals, i.e., engineered to carry genes from other species, have the potential to improve human welfare in:
+agriculture, such as larger sheep that grow more wool
+medicine, such as cows that produce insulin in their milk
+industry, such as goats that produce spider silk for materials production
+read articlelearnmoregetinvolvededucatorresources
+January 2003
+Transgenic mice, rats, rabbits, pigs, sheep, and cows have already been created.
+A natural protein produced in the milk of transgenic cows like this one kills the bacteria that cause animal mastitis. Source: USDA.
+Nowadays, breakthroughs in molecular biology are happening at an unprecedented rate. One of them is the ability to engineer transgenic animals, i.e., animals that carry genes from other species. The technology has already produced transgenic animals such as mice, rats, rabbits, pigs, sheep, and cows. Although there are many ethical issues surrounding transgenesis, this article focuses on the basics of the technology and its applications in agriculture, medicine, and industry.
+What is a transgenic animal?
+There are various definitions for the term transgenic animal. The Federation of European Laboratory Animal Associations defines the term as an animal in which there has been a deliberate modification of its genome, the genetic makeup of an organism responsible for inherited characteristics.5
+A transgenic animal is one whose genome has been changed to carry genes from other species.
+The nucleus of all cells in every living organism contains genes made up of DNA. These genes store information that regulates how our bodies form and function. Genes can be altered artificially, so that some characteristics of an animal are changed. For example, an embryo can have an extra, functioning gene from another source artificially introduced into it, or a gene introduced which can knock out the functioning of another particular gene in the embryo. Animals that have their DNA manipulated in this way are knows as transgenic animals.20
+The majority of transgenic animals produced so far are mice, the animal that pioneered the technology. The first successful transgenic animal was a mouse.6 A few years later, it was followed by rabbits, pigs, sheep, and cattle.8,14,15,16
+Why are these animals being produced? The two most common reasons are:
+Transgenic animals are useful as disease models and producers of substances for human welfare.
+Some transgenic animals are produced for specific economic traits. For example, transgenic cattle were created to produce milk containing particular human proteins, which may help in the treatment of human emphysema.
+Other transgenic animals are produced as disease models (animals genetically manipulated to exhibit disease symptoms so that effective treatment can be studied). For example, Harvard scientists made a major scientific breakthrough when they received a U.S. patent (the company DuPont holds exclusive rights to its use) for a genetically engineered mouse, called OncoMouse or the Harvard mouse, carrying a gene that promotes the development of various human cancers.22
+How are transgenic animals produced?
+Since the discovery of the molecular structure of DNA by Watson and Crick in 1953, molecular biology research has gained momentum. Molecular biology technology combines techniques and expertise from biochemistry, genetics, cell biology, developmental biology, and microbiology.2
+Scientists can now produce transgenic animals because, since Watson and Cricks discovery, there have been breakthroughs in:
+The insertion of a foreign gene (transgene) into an animal is successful only if the gene is inherited by offspring.
+The success rate for transgenesis is very low and successful transgenic animals need to be cloned or mated.
+recombinant DNA (artificially-produced DNA)
+genetic cloning
+analysis of gene expression (the process by which a gene gives rise to a protein)
+genomic mapping
+The underlying principle in the production of transgenic animals is the introduction of a foreign gene or genes into an animal (the inserted genes are called transgenes). The foreign genes must be transmitted through the germ line, so that every cell, including germ cells, of the animal contain the same modified genetic material.26 (Germ cells are cells whose function is to transmit genes to an organisms offspring.)
+To date, there are three basic methods of producing transgenic animals:
+DNA microinjection
+Retrovirus-mediated gene transfer
+Embryonic stem cell-mediated gene transfer
+Gene transfer by microinjection is the predominant method used to produce transgenic farm animals. Since the insertion of DNA results in a random process, transgenic animals are mated to ensure that their offspring acquire the desired transgene. However, the success rate of producing transgenic animals individually by these methods is very low and it may be more efficient to use cloning techniques to increase their numbers. For example, gene transfer studies revealed that only 0.6% of transgenic pigs were born with a desired gene after 7,000 eggs were injected with a specific transgene.27
+DNA microinjection is the predominant transgenesis method.
+1. DNA Microinjection
+The mouse was the first animal to undergo successful gene transfer using DNA microinjection.6 This method involves:
+transfer of a desired gene construct (of a single gene or a combination of genes that are recombined and then cloned) from another member of the same species or from a different species into the pronucleus of a reproductive cell19
+the manipulated cell, which first must be cultured in vitro (in a lab, not in a live animal) to develop to a specific embryonic phase, is then transferred to the recipient female
+2. Retrovirus-Mediated Gene Transfer
+The second method produces chimeras, altered animals with mixed DNA.
+A retrovirus is a virus that carries its genetic material in the form of RNA rather than DNA. This method involves:26
+retroviruses used as vectors to transfer genetic material into the host cell, resulting in a chimera, an organism consisting of tissues or parts of diverse genetic constitution
+chimeras are inbred for as many as 20 generations until homozygous (carrying the desired transgene in every cell) transgenic offspring are born
+The method was successfully used in 1974 when a simian virus was inserted into mice embryos, resulting in mice carrying this DNA.10
+3. Embryonic Stem Cell-Mediated Gene Transfer
+The presence of transgenes can be tested at the embryonic state in this third method.
+This method involves:7,19,26
+isolation of totipotent stem cells (stem cells that can develop into any type of specialized cell) from embryos
+the desired gene is inserted into these cells
+cells containing the desired DNA are incorporated into the hosts embryo, resulting in a chimeric animal
+Unlike the other two methods, which require live transgenic offspring to test for the presence of the desired transgene, this method allows testing for transgenes at the cell stage.
+How do transgenic animals contribute to human welfare?
+The benefits of these animals to human welfare can be grouped into areas:
+Agriculture
+Medicine
+Industry
+The examples below are not intended to be complete but only to provide a sampling of the benefits.
+1. Agricultural Applications
+Transgenesis will allow larger herds with specific traits.
+a) breeding
+Farmers have always used selective breeding to produce animals that exhibit desired traits (e.g., increased milk production, high growth rate).11,15,17 Traditional breeding is a time-consuming, difficult task. When technology using molecular biology was developed, it became possible to develop traits in animals in a shorter time and with more precision. In addition, it offers the farmer an easy way to increase yields.
+Scientists can improve the size of livestock genetically.
+b) quality
+Transgenic cows exist that produce more milk or milk with less lactose or cholesterol12, pigs and cattle that have more meat on them8,17, and sheep that grow more wool18. In the past, farmers used growth hormones to spur the development of animals but this technique was problematic, especially since residue of the hormones remained in the animal product.
+Disease-resistant livestock is not a reality just yet.
+c) disease resistance
+Scientists are attempting to produce disease-resistant animals, such as influenza-resistant pigs, but a very limited number of genes are currently known to be responsible for resistance to diseases in farm animals.19
+2. Medical Applications
+Transplant organs may soon come from transgenic animals.
+a) xenotransplantation
+Patients die every year for lack of a replacement heart, liver, or kidney. For example, about 5,000 organs are needed each year in the United Kingdom alone.25 Transgenic pigs may provide the transplant organs needed to alleviate the shortfall.9 Currently, xenotransplantation is hampered by a pig protein that can cause donor rejection but research is underway to remove the pig protein and replace it with a human protein.25
+Milk-producing transgenic animals are especially useful for medicines.
+b) nutritional supplements and pharmaceuticals
+Products such as insulin, growth hormone, and blood anti-clotting factors may soon be or have already been obtained from the milk of transgenic cows, sheep, or goats.3,12,23 Research is also underway to manufacture milk through transgenesis for treatment of debilitating diseases such as phenylketonuria (PKU), hereditary emphysema, and cystic fibrosis.3,13,23,25
+In 1997, the first transgenic cow, Rosie, produced human protein-enriched milk at 2.4 grams per litre. This transgenic milk is a more nutritionally balanced product than natural bovine milk and could be given to babies or the elderly with special nutritional or digestive needs.4,21,23 Rosies milk contains the human gene alpha-lactalbumin.
+A transgenic cow exists that produces a substance to help human red cells grow.
+c) human gene therapy
+Human gene therapy involves adding a normal copy of a gene (transgene) to the genome of a person carrying defective copies of the gene. The potential for treatments for the 5,000 named genetic diseases is huge and transgenic animals could play a role. For example, the A. I. Virtanen Institute in Finland produced a calf with a gene that makes the substance that promotes the growth of red cells in humans.24
+Uses in industry include material fabrication and safety tests of chemicals.
+3. Industrial Applications
+In 2001, two scientists at Nexia Biotechnologies in Canada spliced spider genes into the cells of lactating goats. The goats began to manufacture silk along with their milk and secrete tiny silk strands from their body by the bucketful. By extracting polymer strands from the milk and weaving them into thread, the scientists can create a light, tough, flexible material that could be used in such applications as military uniforms, medical microsutures, and tennis racket strings.1
+Toxicity-sensitive transgenic animals have been produced for chemical safety testing. Microorganisms have been engineered to produce a wide variety of proteins, which in turn can produce enzymes that can speed up industrial chemical reactions.20
+What are the ethical concerns surrounding transgenesis?
+This article focuses on the benefits of the technology; however, thoughtful ethical decision-making cannot be ignored by the biotechnology industry, scientists, policy-makers, and the public. These ethical issues, better served in their own article, include questions such as:
+Ethical concerns must be addressed as the technology grows, including the issue of lab animal welfare.
+Should there be universal protocols for transgenesis?
+Should such protocols demand that only the most promising research be permitted?
+Is human welfare the only consideration? What about the welfare of other life forms?
+Should scientists focus on in vitro (cultured in a lab) transgenic methods rather than, or before, using live animals to alleviate animal suffering?
+Will transgenic animals radically change the direction of evolution, which may result in drastic consequences for nature and humans alike?
+Should patents be allowed on transgenic animals, which may hamper the free exchange of scientific research?
+Conclusion: Transgenic technology holds great potential in agriculture, medicine, and industry.
+Conclusion
+Interestingly, the creation of transgenic animals has resulted in a shift in the use of laboratory animals  from the use of higher-order species such as dogs to lower-order species such as mice  and has decreased the number of animals used in such experimentation,26 especially in the development of disease models. This is certainly a good turn of events since transgenic technology holds great potential in many fields, including agriculture, medicine, and industry.
+Acknowledgements: The updated information in this article is based on the authors graduate student paper written for the course, Introduction to Science Philosophy (PPS 702), in 2001. The author is deeply grateful to professors Rudy C. Tarumingkeng, Ph.D. and Zahrial Coto, Ph.D. for their help.
+ 2003, American Institute of Biological Sciences. Educators have permission to reprint articles for classroom use; other users, please contact editor@actionbioscience.org for reprint permission. See reprint policy.
+Endang Tri Margawati is pursuing a doctorate in molecular genetics at the Bogor Agricultural University, Indonesia. In addition, she is a researcher at the Research Center for Biotechnology at the Indonesian Institute of Sciences (LIPI), looking for genetic resistance to fasciolosis in local sheep and recombinant protein for vaccine production. Endang completed her Masters degree in animal science at Massey University, Palmerston North, New Zealand, with a thesis on in vitro fertilization in cattle (effect of LIF growth factor on in vitro bovine embryo development). Update 3/2008: The author received a Ph. D and is now working at the Research Centre for Biotechnology, the Indonesian Institute of Sciences , Indonesia.
+http://www.biotek.lipi.go.id/index.php?option=com_content&view=article&id=157:Dr.%20Ir.%20Endang%20Tri%20Margawati,%20M.Agr.Sc&catid=45&Itemid=65
+printer friendly format
+Transgenic Animals: Their Benefits To Human Welfare
+Transgenic mosquitoes may be a way to stem the spread of malaria and other diseases.
+Transgenic mosquitoes may also help fight Dengue fever.
+Unicellular diatoms generate as much oxygen through photosynthesis as rainforests! See how we are learning about them with transgenics.
+Click here for a history of cloning and its rationale.
+This BioBriefs article explains how transgenic zebrafish can be used to detect aquatic pollutants.
+learnmore linksget involved references educator resourcestop
+Genetic Engineering & Xenotransplantation
+On our website, Shane T. Grey, a Harvard scientist, discusses how transgenesis and other technology hold a promise for human organ transplants.
+http://www.actionbioscience.org/biotech/grey.html
+Pharmaceutical production from transgenic animals
+Basic information on the topic, with easy-to-follow charts and illustrations.
+http://www.biotech.iastate.edu/biotech_info_series/bio10.html
+Biotechnology issues
+This website of the Foundation on Economic Trends addresses the many environmental, social, economic, and ethical issues raised by the biotech revolution.
+http://www.foet.org/
+Genetically Modified Animals May Pose Environmental Risks
+Summary of the National Academies of Science (USA) warning about the environmental threat from transgenic animals. The second link takes you to the full report (2002).
+http://www.mindfully.org/GE/GE4/Animals-Pose-RisksWSJ21aug02.htm
+http://www.nap.edu/books/0309084393/html/
+getinvolved linkslearn more references educator resourcestop
+Animal welfare information and campaigns
+World Animal Net is the worlds largest network of animal protection societies. Use their directory to find out about campaigns, petitions, and groups in your country that support the welfare of transgenic and other research animals.
+http://www.worldanimal.net
+Class lessons
+ Pros and cons of raising transgenic salmon
+A role-playing activity, written by educators, where townspeople and other interested parties must consider the release of transgenic salmon into their waterways. Looks at environmental values, community decision-making processes, & economic considerations vs. ethical decisions.
+http://www.wabr.org/education/articles/BiologicallyAlteredFish.doc**
+ Transgenic animals
+This unit, from the European Initiative for Biotechnology Education, helps students to consider some of the issues surrounding the uses of transgenic animals. Includes background information, role-play debates, & activities about Tracey, a sheep that produces medicinal milk.
+http://www.eibe.info/ (click on transgenic animals unit in left margin of home page)
+educatorresourceslearn more get involved article referencestop
+Teaching Resources from the Northwest Association for Biomedical Research (NWABR)
+The Northwest Association for Biomedical Research (NWABR) strengthens public trust in research through education and dialogue.
+Its diverse membership spans academic, industry, non-profit research institutes, health care, and voluntary health organizations.
+Through membership and extensive education programs, it fosters a shared commitment to the ethical conduct of research and ensures the vitality of the life sciences community.
+Stem Cell Research
+This unit, which was designed by teachers in conjunction with scientists, ethicists, and curriculum developers, explores the scientific and ethical issues involved in stem cell research. While exploring the ethics of stem cell research, students will develop an awareness of the many shades of gray that exist among positions of stakeholders in the debate.
+http://www.nwabr.org/curriculum/stem-cell-research
+Animals in Research
+Through this curriculum, students are introduced to the complex topic of Animal Research using structured discussion, stakeholder activities, case studies, and the ethical frameworks used by those in support of, and in opposition to, this work. One of the goals of the curriculum is for students to support their own position on this issue through well-reasoned, fact-driven justifications in a classroom atmosphere of respectful dialogue.
+http://www.nwabr.org/curriculum/animals-research
+For the Greater Good
+The For the Greater Good series is composed of five featured articles. Each article portrays one authors personal stories of people and animals whose lives have been improved or saved by medical breakthroughs made possible by animal research. The Curriculum Guide includes a 5-lesson unit outlining the use of models in both science and ethics, and provides resources for exploring the use of animals in research.
+http://www.nwabr.org/curriculum/greater-good
+Genetic Engineering
+Students will discover ethical issues surrounding the practice of genetic engineering in reproductive medicine; and understand key terms and concepts related to the science of genetic engineering.
+http://school.discoveryeducation.com/lessonplans/programs/geneticengineering/
+Transgenic Animals unit
+This unit, from the European Initiative for Biotechnology Education, helps students to consider some of the issues surrounding the uses of transgenic animals. Includes background, role-play, debates, and activities about Tracey, a sheep that produces medicinal milk. Click on transgenic animals unit in left margin of home page.
+http://www.eibe.info/
+articlereferenceslearn more get involved educator resourcestop
+_, 2002. The Scientific American 50: Celebrating the Years Top Technology Leaders. Scientific American, Dec. issue, p. 48.
+Boyd, A.L. and D. Samid. 1993. Review: Molecular Biology of Transgenic Animals. Journal of Animal Science 7 (suppl. 3): 1-9
+E.T.S. (Emerging Technology Series). 1997. Genetic Engineering and Biotechnology. Part E. Applications. Number 4: p. 62.
+E.T.S. (Emerging Technology Series). 1998. Genetic Engineering and Biotechnology. Part E. Applications. Number 1 & 2: p. 52-53.
+FELASA (Federation of European Laboratory Animal Science Associations September 1982, revised February 1995. Transgenic Animals  Derivation, Welfare, Use and Protection.
+Gordon, J.W., G.A. Scangos, D.J. Plotkin, A. Barbosa and F.H. Ruddle. 1980. Genetic transformation of mouse embryos by microinjection. Proceedings of National Academic Science USA 77: 7380-7384
+Gossler et al. 1986. Transgenesis by means of blastocyst-derived embryonic stem cell line. Proceedings of National Academic Science USA 83: 9065-9069
+Hammer, R.E., V.G. Pursel, C.E. Rexroad, R.J. Wall, D.J. Bolt, K.M. Ebert, R.D. Palmiter and R.L. Brinster. 1985. Production of transgenic rabbits, sheep, and pigs by microinjection. Nature 315: 680-683
+Hoagland, T.A., M. Julian, J.W. Riesen, D. Schrieber and W.L. Fodor. 1997. Transgenic pigs as animal model for xenogenic transplantation. Theriogenology 47: 224 (Abstract)
+Jaenisch, R and B. Mintz. 1974. Simian virus 40 DNA sequences in DNA of healthy adult mice derived from preimplantation blastocysts injected with viral DNA. Proceedings of National Academic Science USA 71: 1250-1254
+Lee, C.S., Y.H. Choi, K.B. Oh, Y.K. Kang and K.K. Lee. 1997. Temporal and spatial  specific expression of bovine b-casein/bovine growth hormone fusion gene in transgenic mice. Theriogenology 47: 25 (Abstract).
+Mercier, J.C. 1987. Genetic engineering applied to milk-producing animals: some expectations. Exploiting New Technologies in Animal Breeding, p. 122-131. Oxford University Press. Oxford.
+Noor, R. R. 1996. Genetika Ternak. Penebar Swadaya. Jakarta.
+Pursel V.G., C.E Rexroad, Jr., D.J. Bolt, K.F. Miller, .J. Wall, R.E. Hammer, C.A. Pinkert, .D. Palmiter and .L. Brinster. 1987. Progress on gene transfer in farm animals. Veterinary Immunology Immunopathology 17: 303-312
+Rexroad, C.E., Jr., R.E. Hamer, D.J. Bolt, K.E. Mayo, A. Frohman, R.D. Pamiter and R.L. Brinster. 1989. Production of transgenic sheep with growth-regulating genes. Molecular Reproductive Development 1: 164 (Abstract)
+Roschlau, K., P. Rommel, L. Andreewa, M. Zackel, D. Roschlau, B. Zackel, M. Schwerin, M. Huhn and K.G. Gazarjan. 1989. Gene transfer experiments in cattle. Journal of Reproduction and Fertility (Suppl.) 38: 153-160
+Vize, P.D., A. Michalska, R. Ashman, R.F. Seamark and J.R.E. Wells. 1987. Improving growth in transgenic farm animals. EMBO Workshop on Germline Manipulation of Animals. Nethybridge, Scotland, UK.
+Ward, K.A., J.D. Murray and D.D. Nancarrow. 1986. The insertion of foreign DNA into animal cells. Expert consultation on biotechnology for livestock production and health. Rome. FAO.
+http://www.fao.org/ag/aga/agap/war/warall/u1200b/u1200b04.htm (Transgenic Livestock, undated article by G. Brem and H.G. Wagner about transgenic methods, accessed June 2001)
+http://www.frame.org.uk/Transgenics.htm (Transgenic Animals, Fund for the Replacement of Animals in Medical Experiments, FRAME, fact sheet about transgenesis and issues, accessed Jan. 2003). Web page no longer available as of 10/03.
+http://gslc.genetics.utah.edu/units/newborn/infosheets/alpha.cfm (Genetic Testing of Newborn Infants, Genetic Learning Science Center, University of Utah, information about genetic testing of newborns for emphysema and treatments, accessed Jan. 2003)
+http://www.laskerfoundation.org/awards/1987_b_description.htm#leder (Philip Leder: Vignettes, Lasker Foundations bio about Leder, lead scientist for OncoMouse) Accessed Jan. 2003.
+http://www.ppl-therapeutics.com/ (PPL Therapeutics company web site, accessed Jan. 2003)
+http://www.uku.fi/aivi/ (Bringing Gene Therapy Closer, A.I. Virtanen Institutes web page about its work in gene therapy, accessed Jan. 2003)
+http://www.ri.bbsrc.ac.uk/library/research/cloning/archive/benefits.html (Benefits from Cloning/Nuclear Transfer, Roslin Institute Onlines 1997 information about their transgenesis work, accessed June 2001, no longer available online)
+http://www.ucalgary.ca/~browder/transgenic.html (Transgenic Animals from the Canadian Council on Animal Care, accessed June 2001)
+http://www.buav.org/pdfs/transgenic_animals.pdf (Transgenic Animals, article from BUAV, an animal rights organization, accessed Jan. 2003)
+Advertisement
+Navigate actionbioscience
+Menu
+home
+search
+about us
+contact us
+topic directory
+educator resources
+partners & collaborators
+Content Areas
+biodiversity
+environment
+genomics
+biotechnology
+evolution
+science policy
+Participate
+your feedback
+donate
+reprint policy
+jobs and classifieds
+advertise
+join aibs
+Feature
+actionbioscience en espaol
+ 2000-2016 American Institute of Biological Sciences. All rights reserved.

@@ -1,0 +1,222 @@
+Transgenics: A new breed : Nature News & Comment
+nature.com
+Sitemap
+Register
+Login
+Nature
+International weekly journal of science
+Search
+Go
+Advanced search
+Home
+News & Comment
+Research
+Careers & Jobs
+Current Issue
+Archive
+Audio & Video
+For Authors
+Archive
+Volume 497
+Issue 7447
+News Feature
+Article
+Nature
+|
+News Feature
+Sharing
+Translations
+
+Transgenics: A new breed
+The next wave of genetically modified crops is making its way to market  and might just ease concerns over 'Frankenfoods'.
+Daniel Cressey
+01 May 2013
+Article tools
+PDF
+Rights & Permissions
+IMAGE: SERGE BLOCH
+When the first genetically modified (GM) organisms were being developed for the farm, says Anastasia Bodnar, we were promised rocket jet packs  futuristic, ultra-nutritious crops that would bring exotic produce to the supermarket and help to feed a hungry world. Yet so far, she says, the technology has bestowed most of its benefits on agribusiness  almost always through crops modified to withstand weed-killing chemicals or resist insect pests. This has allowed farmers to increase yields and spray less pesticide than they might have otherwise.
+nature.com/gmcrops
+At best, such advances have been almost invisible to ordinary consumers, says Bodnar, a biotechnologist with Biology Fortified, a non-profit GM-organism advocacy organization in Middleton, Wisconsin. And at worst, they have helped to fuel the rage of opponents of genetic modification, who say that transgenic crops have concentrated power and profits in the hands of a few large corporations, and are a prime example of scientists meddling in nature, heedless of the dangers (see page 24). But that could soon change, thanks to a whole new generation of GM crops now making their way from laboratory to market. Some of these crops will tackle new problems, from apples that stave off discolouration to 'Golden Rice' and bright-orange bananas fortified with nutrients to improve the diets of people in the poorest countries. Other next-generation crops will be created using advanced genetic-manipulation techniques that allow high-precision editing of the plant's own genome. Such approaches could reduce the need to modify commercial crops with genes imported from other species  one of the practices that most disturbs critics of genetic modification. And that, in turn, could conceivably reduce the public disquiet over GM foods. Or maybe not. Whatever promise these crops may show in the laboratory, they will still have to demonstrate their benefits in painstaking, expensive and detailed field trials; jump through multiple regulatory hoops; and reassure an often sceptical public. That last part will not be easy, says Philip Bereano, who studies the political and social aspects of new technologies at the University of Washington, Seattle. He points out that the arguments over GM organisms run the gamut from concerns about safety and labelling to ethical issues with the patenting of life. People are concerned about what they're feeding their kids, he says, and that is not going to change. Nevertheless, most GM-organism researchers seem convinced that the worst of the technology's problems are over, and that its future is bright. If you are looking for the jet-pack era of GM organisms, says Bodnar, it is happening now. The first wave of GM crops was marketed mainly to farmers, with the goal of making their jobs easier, more productive and more profitable. In 1996, for example, biotechnology firm Monsanto of St Louis, Missouri, introduced the first of its popular 'Roundup Ready' products: a soya bean equipped with a bacterial gene that allows it to tolerate a Monsanto-made glyphosphate herbicide known as Roundup. This meant that farmers could kill off the majority of weeds with one herbicide rather than several, without damaging the crop. Other GM crops soon followed, including Monsanto's Bt cotton: a plant modified to produce a bacterial toxin that discourages destructive bollworms and cuts down on the need for pesticides. Farmers will continue to be a core market for the coming generation of GM organisms. At Rothamsted Research in Harpenden, UK, for example, scientists are working on GM plants that will need even less pesticide than Bt cotton, and maybe none at all. The key is an 'alarm pheromone' that some species of wild plant have evolved to mimic the chemical warning signals put out by aphids  a major crop pest in the temperate zones  when they are under attack. Putting the genes for this defence into wheat has created a crop that could trick the insects into thinking that they are in peril and drive them away. Unlike Bt cotton and other existing GM organisms, such a crop would need no insect-killing chemical for protection from pests. Field trials are currently under way, says Maurice Moloney, director and chief executive of the Rothamsted centre. In the greenhouse it's been very successful, he says. If we can get it to work in the field, we'll be able to optimize it to make it a robust trait suitable for large-scale deployment. From there, says Maloney, the team hopes to expand its efforts, searching for naturally evolved protections and deterrents in other crops, and working out how these might be enhanced or modified to fight particular pests. For example, you could have a volatile chemical that also is a deterrent for caterpillars, stem borers and the like, says Maloney. Potentially, if we can get this to work, the range of applications is phenomenal.
+SERGE BLOCH
+Local concerns Many GM-organism researchers are pushing work on crops sometimes neglected by the big agricultural companies. In the plant biotechnology group at the Swiss Federal Institute of Technology in Zurich, for example, Herve Vanderschuren leads a team working on cassava (Manihot esculenta), a tropical shrub with a tuber that is a staple food in the developing world. There is not major investment in breeding or improvement of this crop, he says. Vanderschuren and his team are genetically engineering cassava to be resistant to two particularly damaging viruses, by starting with a variety that is naturally resistant to cassava mosaic virus, and then inserting genes that confer resistance to cassava brown streak virus. The naturally resistant strain was already tailored to local needs and markets. That kind of local adaptation is a very important part of the research we do here, says Vanderschuren  and something that is rarely embraced by huge agribusinesses that want to sell products worldwide. Vanderschuren and his team have successfully made the plants, and are now collaborating with colleagues in Africa to arrange tests to confirm that the cassava can be grown in the field. Much of the work on crops in developing nations focuses on nutritional enhancement. The most famous example of this effort is Golden Rice, a modified version of the staple food of half the world. Its distinct yellow hue comes from the addition of -carotene, a precursor to vitamin A that is deficient in many East Asian diets. After much painstaking development and many objections from opponents of GM organisms  the original version of Golden Rice was announced in 2000  the crop is currently undergoing field trials in the Philippines (see I. Potrykus Nature 466, 561; 2010). It could clear the final regulatory hurdles and reach farmers by 2014. Others have followed in its wake. James Dale, director of the Centre for Tropical Crops and Biocommodities at Queensland University of Technology in Brisbane, Australia, for example, is trying to equip bananas with resistance to Panama disease, a fungal wilt that can devastate crops, as well as increased -carotene and a suite of other nutrients including iron. Levels of micronutrient deficiencies are really very high in Uganda and all across Africa, he explains, and bananas are a staple of the diet. Field trials have already been conducted in Australia.
+The next stage of the development of the technology is to go in and to tweak multiple genes.
+Although most next-generation GM organisms are aimed at farmers, some target the next step in the chain: industrial food processors. For example, Chris Dardick, a molecular plant biologist at the US Agricultural Research Service's Appalachian Fruit Research Station in Kearneysville, West Virginia, explains that it is difficult to get plums into processed foods, because removing their hard, woody cores leaves shards behind. But starting with genes from a mostly stoneless, conventionally bred plum, Dardick and his team are in the early stages of engineering a fruit with no stone at all. Our biggest concern was how such a thing would be embraced by industry and consumers. Most of the feedback we've gotten has been quite positive, he says. And then there are GM organisms designed to appeal directly to the final consumers. One of the first will be the Arctic Apple, which does not brown rapidly after it is cut or bitten into. This is thanks to the insertion of genes from other apple varieties that produce lower than usual levels of polyphenol oxidase, a key enzyme in the chain of biochemical events that cause browning. My wife and I are apple growers ourselves. We were concerned because apple consumption has been declining, says Neal Carter, president of Okanagan Specialty Fruits in Summerland, British Columbia, the developer of the Arctic Apple. Carter says that apples are losing ground in the supermarket to carrots and other fresh produce that is sold in bags, cleaned, sliced and ready to eat. Making apples that could be processed in such a way without browning could be a real boon for the industry. And if the apples are received well, says Carter, Arctic avocados, pears and even lettuce could be next. Advanced techniques Much of the genetic-modification work so far has been achieved with relatively crude but established techniques, such as a 'gene gun' that fires gold nanopellets coated with DNA from other organisms into the cells of the target plant, which incorporate the DNA at random sites in the genome. But new tools offer unparalleled precision in editing genes. For example, enzymes called transcription activator-like effector nucleases (TALENs) and zinc-finger nucleases (ZFNs) can cut DNA at specific points chosen by the experimenter. By controlling how this break is repaired, it is possible to introduce mutations, single-nucleotide changes or even whole genes at precise sites, says Dan Voytas, who works with such techniques at the University of Minnesota in St Paul. We can do precise insertion so we know where in the chromosome the foreign gene resides. This allows researchers to put the new gene in a spot in the genome where its expression is optimal, and reduces the risk of disrupting the plant's genome in undesirable ways. Voytas's group has already shown that tobacco plants can be modified with ZFNs to introduce herbicide resistance1. Other groups have added herbicide resistance to maize (corn) with ZFNs2 or have used TALENs to snip out the gene in rice that confers susceptibility to bacterial blight3. But Voytas says the real power of these techniques lies in the ability to confer new traits by modifying native plant genes. For example, rather than engineering plants to withstand dry conditions by incorporating genes from drought-tolerant bacteria (see Nature 466, 548551; 2010), researchers could adjust the multiple native genes that help plants to survive drought. Really, the next stage of the development of the technology is to go in and to tweak multiple genes, says Voytas. Derek Jantz, co-founder of Precision BioSciences, a biotechnology company based in Durham, North Carolina, is also excited about working with a plant's own genes. For example, all plants have an analogue of the bacterial EPSPS gene that is inserted into Monsanto's Roundup Ready crops. It should be possible to create similar herbicide resistance by editing a plant's own version, rather than bringing in an external gene4. Like other researchers in the genetic-modification industry, Jantz declines to talk about specific research projects because of commercial confidentiality. But in general terms, he says, what we're trying to do is take advantage of the wealth of functional genomics data that is becoming available. A breed apart Some researchers are using genetic modification to accelerate conventional breeding techniques. Ralph Scorza, a plant scientist at the Appalachian Fruit Research Station, leads a team that has genetically modified plum trees. The modified trees can survive only in greenhouses. But thanks to the insertion of a gene from poplar trees, they begin to flower much earlier in their lifetimes than conventional varieties do, and then continuously thereafter. This means that researchers can breed the trees throughout the year, using selection, cross-breeding and other traditional techniques to develop traits such as disease resistance in just a few years, as opposed to the decade or more that conventional breeding might require. When the desired traits have been bred in, the transgenes that drive flowering can be bred out, leaving a modified but non-GM plant. Scorza and his colleagues are using this 'FasTrack' breeding strategy in an effort to generate resistance to the plum pox virus, and to increase the sugar content of the fruit. Researchers elsewhere are applying it to crops such as citrus. US regulators have already suggested that organisms modified with the newer techniques such that they contain no DNA from other species will be treated differently from conventional GM organisms. That might also alleviate public concerns. We can overcome hopefully at least some of the opposition to the genetic modification, says Alan McHughen, a molecular geneticist at the University of California, Riverside. Besides, notes Bodnar, there may be no stopping GM organisms. She points out that genetic engineering now has a relatively low bar to entry. 'Biohackers' working with bacteria are already conducting genetic modification experiments in their garages and spare bedrooms, and there is nothing to stop them from applying their skills to plants  or animals  in the future. It's becoming easier all the time. I think people are hungry for this kind of thing, says Bodnar. The jet packs that everybody wanted  I think it's time for them to come out. If the marketplace isn't providing that from the top down, you may see it from the bottom up.
+Journal name:
+Nature
+Volume:
+497,
+Pages:
+2729
+Date published:
+(02 May 2013)
+DOI:
+doi:10.1038/497027a
+See News Feature page 21
+References
+Townsend, J. A. et al. Nature 459, 442446 (2009).
+ArticlePubMedISIChemPort
+Shukla, V. K. et al. Nature 459, 437441 (2009).
+ArticlePubMedISIChemPort
+Li, T., Liu, B., Spalding, M. H., Weeks, D. P. & Yang, B. Nature Biotechnol. 30, 390392 (2012).
+ArticlePubMedISIChemPort
+Funke, T., Han, H., Healy-Fried, M. L., Fischer, M. & Schnbrunn, E. Proc. Natl Acad. Sci. USA 103, 1301013015 (2006).
+ArticlePubMedChemPort
+Related stories and links
+From nature.com
+Hyped GM maize study faces growing scrutiny10 October 2012Food: Inside the hothouses of industry28 July 2010Nature special: GM crops
+From elsewhere
+Arctic ApplesDan VoytasAppalachian Fruit Research StationPrecision BioSciences
+Author information
+Author details
+Daniel Cressey
+Daniel joined Nature in 2007. He reports on chemistry, nanoscience, materials, business and anything else his editors need covering. Before working for Nature he worked for the general practitioners' newspaper Pulse and the UK science-policy publication Research Fortnight. He has degrees in chemistr
+Read more
+Search for this author in
+NPG journals
+PubMed
+Google Scholar
+For the best commenting experience, please login or register as a user and agree to our Community Guidelines. You will be re-directed back to this page where you will see comments updating in real-time and have the ability to recommend comments to other users.
+Comments for this thread are now closed.
+Comments
+4 comments Subscribe to comments
+Florian Fritzsche
+
+2013-05-10 07:51 AM
+A lot of the stories build treating consumers as fools. Is it really easier to introduce "Golden Rice" and "Golden Bananas" than teaching people to diversify their diets - and thereby their production systems, making them less suscepticble to pests and diseases? Is it desirable to have people buying sliced apples instead of pealing them themselves and biting a piece off?Should research promote ignorance and laziness in a changing world?The business case for the agribusiness suppliers and the researchers who want to make a living is clear, sure...
+Share to Twitter
+Share to Facebook
+Share link to this comment
+Piero Morandini
+
+2013-05-02 08:22 AM
+Andrew Planet's statement ("Any breed or variety of animal or plant that was bred prior to the advent of genetic engineering was consciously made so from existing variations intra-specifically anyway.") is not correct. Inter specific crosses (e.g.: intra-generic) have been made for years. See for instance: Goodman RM and others (1987). Gene transfer in crop improvement. Science 236:48-54.More generally see: page on the use of tissue culture in plant breeding on the academicsreview.org website.All in all, agrobacterium tumefaciens and the like do not mind about species barrier and engineer their genes in other species. Are they non-natural because of this?P. Morandini, Plant Biologist, Univ. of Milan
+Share to Twitter
+Share to Facebook
+Share link to this comment
+Otto Albrecht
+
+2013-05-02 12:23 AM
+"The key is an 'alarm pheromone' that "----"Putting the genes for this defence into wheat..." Why not simply spray this pheromone onto the plants? Why not simply lace a few strings, soaked with the pheromone, across the field?No need for genetic modification if this method is sufficient. Then there is no problem that other plants, e.g. weeds, obtain the same pheromone producing genes.
+Share to Twitter
+Share to Facebook
+Share link to this comment
+Andrew Planet
+
+2013-05-01 07:00 PM
+I reckon the Transgenic industry stands to gain from not being closeted in the new genes that the produce they breed has.
+If any effort is made to hide the fact from customers that the foods they grow has been genetically modified it will invariably create a hyped suspicion that would not have occurred had they been honest about their doings in the first place.
+Any breed or variety of animal or plant that was bred prior to the advent of genetic engineering was consciously made so from existing variations intra-specifically anyway.
+That we borrow genes from other species when these are lacking in the natural variations of a particular life form we wish to propagate is but an extension of what our species has been doing to other life forms for thousands of years.
+Share to Twitter
+Share to Facebook
+Share link to this comment
+See other News & Comment articles from Nature
+Venerable brain-cancer cell line faces identity crisis
+In retrospect: A New System of Chemical Philosophy
+Claims of Earth's oldest fossils tantalize researchers
+Alzheimers treatment appears to alleviate memory loss in small trial
+Books in brief
+Chinas Mars plans, leprosy vaccine and self-driving taxis
+Tiny pterosaur claims new perch on reptile family tree
+Preserve personal freedom in networked societies
+Most cities too hot to host 2088 summer Olympics
+How DNA could store all the worlds data
+Stop ignoring misconduct
+Dogs can tell when praise is sincere
+Vipers, mambas and taipans: the escalating health crisis over snakebites
+Tasmanian devils show signs of resistance to devastating facial cancer
+Nuclear power plants prepare for old age
+Italian scientists shocked by earthquake devastation
+Print your own 3D Lucy to work out how the famous hominin died
+Iran releases physicist after five years in jail
+Me and my drone: how automatons are changing research
+Floods, fires, Zika and a hidden portrait
+Social Media Box - AML
+E-alert RSS Facebook
+Twitter
+Close
+Follow @naturenews
+Antivenom anxiety
+Vipers, mambas and taipans: the escalating health crisis over snakebites
+Snakes kill tens of thousands of people each year. But experts can't agree on how best to overcome a desperate shortage of antivenom.
+Top Content - Article Page
+Recent
+Venerable brain-cancer cell line faces identity crisis
+Nature
+31 August 2016
+In retrospect: A New System of Chemical Philosophy
+Nature
+31 August 2016
+Claims of Earth's oldest fossils tantalize researchers
+Nature
+31 August 2016
+Read
+Majority of mathematicians hail from just 24 scientific families
+Nature 26 Aug 2016
+Earth-sized planet around nearby star is astronomy dream come true
+Nature 24 Aug 2016
+Busting the billion-dollar myth: how to slash the cost of drug development
+Nature 24 Aug 2016
+View all
+Commented
+Donald Trumps appeal should be a call to arms
+Nature 03 Aug 2016 34 comments
+Trumps border-wall pledge threatens delicate desert ecosystems
+Nature 16 Aug 2016 23 comments
+A safe place for nuclear energy?
+Nature 09 Aug 2016 16 comments
+View all
+Newsletter
+The best science news from Nature and beyond, direct to your inbox every day.
+Your browser does not support iframes.
+The search for life starts now.
+Earth-sized planet around nearby star is astronomy dream come true
+Planet orbiting Proxima Centauri is likely to be the focus of future interstellar voyages.
+Italy quake
+Deadly Italian quake strikes 40 kilometres from LAquila
+Unlike 2009 tragedy, no seismic activity was recorded prior to todays quake.
+Beyond Terminator
+Squishy 'octobot' heralds new era of soft robotics
+Ditching conventional electronics and power sources, the pliable robot operates without rigid parts.
+"It doesnt make sense"
+Giant, deadly ice slide baffles researchers
+Climate change could be to blame for Tibetan tragedy.
+Nature Podcast
+Listen
+This week, an Earth-like planet on our doorstep, dietary restriction combats ageing syndrome, and drugs for neglected diseases.
+Science jobs from nature jobs
+Research Engineer / Research Scientist in Renewable Energy
+King Fahd University of Petroleum & Minerals
+Faculty Positions at IDG / McGovern Institute for Brain Research at Peking University
+IDG/McGovern Institute for Brain Research at Peking University
+Postdoctoral research associate positions-Qingdao University
+Qingdao University School of Medicine
+Faculty Position for Research Director of the Animal BSL3 Facility at Duke-NUS
+DUKE-NUS Medical school
+Ph.D. Program and Integrated MS-Ph.D. Program of IBS School-UST
+Institute for Basic Science
+Post a JobMore Science Jobs
+Nature
+ISSN: 0028-0836
+EISSN: 1476-4687
+About NPG
+Contact NPG
+Accessibility statement
+Help
+Privacy policy
+Use of cookies
+Legal notice
+Terms
+Nature jobs
+Nature Asia
+Nature Education
+RSS web feeds
+About Nature
+Contact Nature
+About the Editors
+Nature awards
+Search
+Go
+ 2016 Macmillan Publishers Limited, part of Springer Nature. All Rights Reserved.
+partner of AGORA, HINARI, OARE, INASP, CrossRef and COUNTER

@@ -1,0 +1,498 @@
+Genetically modified fish - Wikipedia, the free encyclopedia
+Genetically modified fish
+From Wikipedia, the free encyclopedia
+Jump to:					navigation, 					search
+Zebrafish (Danio rerio) which have been genetically modified to express fluorescent colours.
+Genetically modified fish (GM fish) are organisms from the taxonomic clade which includes the classes Agnatha (jawless fish), Chondrichthyes (cartilaginous fish) and Osteichthyes (bony fish) whose genetic material (DNA) has been altered using genetic engineering techniques. In most cases, the aim is to introduce a new trait to the fish which does not occur naturally in the species, i.e. transgenesis.
+GM fish are used in scientific research and kept as pets. They are being developed as environmental pollutant sentinels and for use in aquaculture food production. In 2015, the AquAdvantage salmon was approved by the US Food and Drug Administration (FDA) for commercial production, sale and consumption,[1] making it the first genetically modified animal to be approved for human consumption. Some GM fish that have been created have promoters driving an over-production of "all fish" growth hormone. This results in dramatic growth enhancement in several species, including salmonids,[2] carps[3] and tilapias.[4][5]
+Critics have objected to GM fish on several grounds, including ecological concerns, animal welfare concerns and with respect to whether using them as food is safe and whether GM fish are needed to help address the world's food needs.
+Contents
+1 History and process
+2 Uses
+2.1 Research
+2.2 Recreation
+2.2.1 Pets
+2.3 Food
+2.3.1 AquAdvantage salmon
+2.4 Detecting aquatic pollution (potential)
+3 Regulation
+4 Controversy
+4.1 Ethical concerns
+4.2 Ecological concerns
+4.2.1 AquAdvantage salmon
+4.2.2 Escapes
+5 Notes
+6 References
+History and process[edit]
+Main article: Genetic engineering
+The first transgenic fish were produced in China in 1985.[6] As of 2013, approximately 50 species of fish have been subject to genetic modification. This has resulted in more than 400 fish/trait combinations. Most of the modifications have been conducted on food species, such as Atlantic salmon (Salmo salar), tilapia (genus) and common carp (Cyprinus carpio).[7]
+Generally, genetic modification entails manipulation of DNA. The process is known as cisgenesis when a gene is transferred between organisms that could be conventionally bred, or transgenesis when a gene from one species is added to a different species. Gene transfer into the genome of the desired organism, as for fish in this case, requires a vector like a lentivirus or mechanical/physical insertion of the altered genes into the nucleus of the host by means of a micro syringe or a gene gun.[8]
+Uses[edit]
+Research[edit]
+A zebrafish genetically modified to have long fins
+Transgenic fish are used in research covering five broad areas[6] -
+Enhancing the traits of commercially available fish
+Their use as bioreactors for the development of bio-medically important proteins
+Their use as indicators of aquatic pollutants
+Developing new non-mammalian animal models
+Functional genomics studies
+Most GM fish are used in basic research in genetics and development. Two species of fish, zebrafish and medaka, are most commonly modified because they have optically clear chorions (shells), develop rapidly, the 1-cell embryo is easy to see and micro-inject with transgenic DNA, and zebrafish have the capability of regenerating their organ tissues.[9] They are also used in drug discovery.[10] GM zebrafish are being explored for benefits of unlocking human organ tissue diseases and failure mysteries. For instance, zebrafish are used to understand heart tissue repair and regeneration in efforts to study and discover cures for cardiovascular diseases.[11]
+Transgenic rainbow trout (Oncorhynchus mykiss) have been developed to study muscle development. The introduced transgene causes green fluorescence to appear in fast twitch muscle fibres early in development which persist throughout life. It has been suggested the fish might be used as indicators of aquatic pollutants or other factors which influence development.[12]
+In intensive fish farming, the fish are kept at high stocking densities. This means they suffer from frequent transmission of contagious diseases, a problem which is being addressed by GM research. Grass carp (Ctenopharyngodon idella) have been modified with a transgene coding for human lactoferrin, which doubles their survival rate relative to control fish after exposure to Aeromonas bacteria and Grass carp hemorrhage virus. Cecropin has been used in channel catfish to enhance their protection against several pathogenic bacteria by 24 times.[13]
+Recreation[edit]
+Pets[edit]
+Main article: Glofish
+GloFish Electric Green Tetra
+GloFish is a patented[14] technology which allows GM fish (tetra, barb, zebrafish) to express jellyfish and sea coral proteins[6][15] giving the fish bright red, green or orange fluorescent colors when viewed in ultraviolet light. Although the fish were originally created and patented for scientific research at the University of Singapore, a Texas company, Yorktown Technologies, obtained rights to market the fish as pets.[15] They became the first genetically modified animal to become publicly available as a pet when introduced for sale in 2003.[16] They were quickly banned for sale in California, however they are now on shelves once again in this state.[17] As of 2013, Glofish are only sold in the US.[18]
+Other transgenic lines of pet fish include Medaka which remain transparent throughout their lives and pink body color transgenic angelfish (Pterophyllum scalare) and lionhead fish expressing the Acropora coral (Acroporo millepora) red fluorescent protein.[19]
+The ocean pout type III antifreeze protein transgene has been successfully micro-injected and expressed in goldfish. The transgenic goldfish showed higher cold tolerance compared with controls.[20]
+Food[edit]
+One area of intensive research with GM fish has aimed to increase food production by modifying the expression of growth hormone (GH). The relative increases in growth differ between species.[21](Figure 1)[22] They range from a doubling in weight, to some fish that are almost 100 times heavier than the wild-type at a comparable age.[13] This research area has resulted in dramatic growth enhancement in several species, including salmon,[23] trout[24] and tilapia.[25] Other sources indicate an 11-fold and 30-fold increase in growth of salmon and mud loach, respectively, compared to wild-type fish.[6][26] Transgenic fish development has reached the stage where several species are ready to be marketed in different countries, for example, GM tilapia in Cuba, GM carp in the Peoples Republic of China, and GM salmon in the USA and Canada.[27] In 2014, it was reported that applications for the approval of transgenic fish as food had been made in Canada, China, Cuba and the United States.[6]
+Over-production of GH from the pituitary gland increases growth rate mainly by an increase in food consumption by the fish, but also by a 10 to 15% increase in feed conversion efficiency.[28]
+Another approach to increasing meat production in GM fish is "double muscling". This results in a phenotype similar to that of Belgian Blue cattle in rainbow trout. It is achieved by using transgenes expressing follistatin, which inhibits myostatin, and the development of two muscle layers.[13]
+AquAdvantage salmon[edit]
+Main article: AquAdvantage salmon
+In November 2015, the FDA of the USA approved the GM AquAdvantage salmon created by AquaBounty for commercial production, sale and consumption.[1][29] It is the first genetically modified animal to be approved for human consumption. The fish is essentially an Atlantic salmon with a single gene complex inserted: a growth hormone regulating gene from a Chinook salmon with a promoter sequence from an ocean pout. This permits the GM salmon to produce GH year round rather than pausing for part of the year as do wild-type Atlantic salmon.[30] The wild-type salmon takes 24 to 30 months to reach market size (46kg) whereas the producers of the GM salmon claim it requires only 18 months for the GM fish to achieve this.[31][32][33] AquaBounty argue that their GM salmon can be grown nearer to end-markets with greater efficiency (they require 25% less feed to achieve market weight[34]) than the Atlantic salmon which are currently reared in remote coastal fish farms, thereby making it better for the environment, with recycled waste and lower transport costs.[35]
+It has been claimed that to prevent the genetically modified fish inadvertently breeding with wild salmon, all the fish will be female and reproductively sterile.[33] However, it has also been claimed that a small percentage of the females will remain fertile.[30] Some opponents of the GM salmon have dubbed it the "Frankenfish".[30][36] Approval of the AquAdvantage fish by the FDA was opposed by a consortium of more than 20 anti-GM organisations.[35]
+Detecting aquatic pollution (potential)[edit]
+Several research groups have been developing GM zebrafish to detect aquatic pollution.[37] The laboratory that developed the GloFish originally intended them to change color in the presence of pollutants, as environmental sentinels.[38][39] Teams at the University of Cincinnati and Tulane University have been developing GM fish for the same purpose.[40][41][42]
+Several transgenic methods have been used to introduce target DNA into zebrafish for environmental monitoring, including micro-injection, electroporation, particle gun bombardment, liposome-mediated gene transfer, and sperm-mediated gene transfer. Micro-injection is the most commonly used method to produce transgenic zebrafish as this produces the highest survival rate.[43]
+Regulation[edit]
+Main article: Regulation of the release of genetic modified organisms
+The regulation of genetic engineering concerns the approaches taken by governments to assess and manage the risks associated with the development and release of genetically modified crops. There are differences in the regulation of GMOs between countries, with some of the most marked differences occurring between the USA and Europe. Regulation varies in a given country depending on the intended use of the products of the genetic engineering. For example, a fish not intended for food use is generally not reviewed by authorities responsible for food safety.
+The US FDA guidelines for evaluating transgenic animals define transgenic constructs as "drugs" regulated under the animal drug provisions of the Federal Food and Cosmetic Act. This classification is important for several reasons, including that it places all GM food animal permits under the jurisdiction of the FDAs Center for Veterinary Medicine (CVM) and imposes limits on what information the FDA can release to the public, and furthermore, it avoids a more open food safety review process.[44]
+The US states of Washington and Maine have imposed permanent bans on the production of transgenic fish.[44]
+Controversy[edit]
+Main article: Genetically modified food controversies
+Critics have objected to use of genetic engineering per se on several grounds, including ethical concerns, ecological concerns (especially about gene flow), and economic concerns raised by the fact GM techniques and GM organisms are subject to intellectual property law. GMOs also are involved in controversies over GM food with respect to whether using GM fish as safe is safe, whether it would exacerbate or cause fish allergies, whether it should be labeled, and whether GM fish and crops are needed to address the world's food needs. These controversies have led to litigation, international trade disputes, and protests, and to restrictive regulation of commercial products in most countries.
+There is much doubt among the public about genetically modified animals in general.[45] It is believed that the acceptance of GM fish by the general public is the lowest of all GM animals used for food and pharmaceuticals.[46]
+Ethical concerns[edit]
+In transgenic fast-growing fish genetically modified for growth hormone, the mosaic founder fish vary greatly in their growth rate, reflecting the highly variable proportion and distribution of transgenic cells in their bodies. Fish with these high growth rates (and their progeny) sometimes develop a morphological abnormality similar to acromegaly in humans, exhibiting an enlarged head relative to the body and a bulging operculum. This becomes progressively worse as the fish ages. It can interfere with feeding and may ultimately cause death. According to a study commissioned by Compassion in World Farming, the abnormalities are probably a direct consequence of growth hormone over-expression and have been reported in GM coho salmon, rainbow trout, common carp, channel catfish and loach, but to a lesser extent in Nile tilapia.[47][unreliable source?]
+In GM coho salmon (Oncorhynchus kisutch) there are morphological changes and changed allometry that lead to reduced swimming abilities. They also exhibit abnormal behaviour such as increased levels of activity with respect to feed-intake and swimming.[27] Several other transgenic fish show decreased swimming ability, likely due to body shape and muscle structure.[28]
+Genetically modified triploid fish are more susceptible to temperature stress, have a higher incidence of deformities (e.g. abnormalities in the eye and lower jaw[48]), and are less aggressive than diploids.[49][50] Other welfare concerns of GM fish include increased stress under oxygen-deprived conditions caused by increased need for oxygen.[27] It has been shown that deaths due to low levels of oxygen (hypoxia) in coho salmon are most pronounced in transgenics.[51] It has been suggested the increased sensitivity to hypoxia is caused by the insertion of the extra set of chromosomes requiring a larger nucleus which thereby causes a larger cell overall and a reduction in the surface area to volume ratio of the cell.
+Ecological concerns[edit]
+An aquaculture enterprise
+Transgenic fish are usually developed in strains of near-wild origin. These have an excellent capacity for interbreeding with themselves or wild relatives and therefore possess a significant possibility for establishing themselves in nature should they escape biotic or abiotic containment measures.[21]
+A wide range of concerns about the consequences of genetically modified fish escaping have been expressed. For polyploids, these include the degree of sterility, interference with spawning, competing with resources without contributing to subsequent generations. For transgenics, the concerns include characteristics of the genotype, the function of the gene, the type of the gene, potential for causing pleiotropic effects, potential for interacting with the remainder of the genome, stability of the construct, ability of the DNA construct to transpose within or between genomes.[52]
+One study, using relevant life history data from the Japanese medaka (Oryzias latipes) predicts that a transgene introduced into a natural population by a small number of transgenic fish will spread as a result of enhanced mating advantage, but the reduced viability of offspring will cause eventual local extinction of both populations.[53] GM coho salmon show greater risk-taking behaviour and better use of limited food than wild-type fish.
+Transgenic coho salmon have enhanced feeding capacity and growth, which can result in a considerably larger body size (>7-fold) compared to non-transgenic salmon. When transgenic and non-transgenic salmon in the same enclosure compete for different levels of food, transgenic individuals consistently outgrow non-transgenic individuals. When food abundance is low, dominant individuals emerge, invariably transgenic, that show strong agonistic and cannibalistic behavior to cohorts and dominate the acquisition of limited food resources. When food availability is low, all groups containing transgenic salmon experience population crashes or complete extinctions, whereas groups containing only non-transgenic salmon have good (72%) survival rates.[54] This has led to the suggestion that these GM fish will survive better than the wild-type when conditions are very poor.[28][55]
+Successful artificial transgenic hybridization between two species of loach (genus Misgurnus) has been reported, yet these species are not known to hybridize naturally.[56]
+GloFish were not considered as an environmental threat because they were less fit than normal zebrafish which are unable to establish themselves in the wild in the US.[6]
+AquAdvantage salmon[edit]
+The FDA has said the AquAdvantage Salmon can be safely contained in land-based tanks with little risk of escape into the wild,[35] however, Joe Perry, former chair of the GM panel of the European Food Safety Authority, has been quoted as saying There remain legitimate ecological concerns over the possible consequences if these GM salmon escape to the wild and reproduce, despite FDA assurances over containment and sterility, neither of which can be guaranteed.[35]
+AquaBounty indicates their GM salmon can not interbreed with wild fish because they are triploid which makes them sterile.[32] The possibility of fertile triploids is one of the major short-falls of triploidy being used as a means of bio-containment for transgenic fish.[57] However, it is estimated that 1.1% of eggs remain diploid, and therefore capable of breeding, despite the triploidy process.[58] Others have claimed the sterility process has a failure rate of 5%.[34] Large scale trials using normal pressure, high pressure, or high pressure plus aged eggs for transgenic coho salmon, give triploidy frequencies of only 99.8%, 97.6%, and 97.0%, respectively.[59] AquaBounty also emphasizes that their GM salmon would not survive wild conditions due to the geographical locations where their research is conducted, as well as the locations of their farms.[32]
+The GH transgene can be transmitted via hybridization of GM AquAdvantage Salmon and the closely related wild brown trout (Salmo trutta). Transgenic hybrids are viable and grow more rapidly than transgenic salmon and other wild-type crosses in conditions emulating a hatchery. In stream mesocosms designed to simulate natural conditions, transgenic hybrids express competitive dominance and suppress the growth of transgenic and non-transgenic salmon by 82% and 54%, respectively.[60] Natural levels of hybidization between these two species can be as high as 41%.[60] Researchers examining this possibility concluded "Ultimately, we suggest that hybridization of transgenic fishes with closely related species represents potential ecological risks for wild populations and a possible route for introgression of a transgene, however low the likelihood, into a new species in nature."[56]
+An article in Slate Magazine in December 2012 by Jon Entine, Director of the Genetic Literacy Project, criticized the Obama Administration for preventing the publication of the environmental assessment (EA) of the AquAdvantage Salmon, which was completed in April 2012 and which concluded that "the salmon is safe to eat and poses no serious environmental hazards."[61] The Slate article said that the publication of the report was stopped "after meetings with the White House, which was debating the political implications of approving the GM salmon, a move likely to infuriate a portion of its base".[61] Within days of the article's publication and less than two months after the election, the FDA released the draft EA and opened the comment period.[62]
+Escapes[edit]
+There is a high probability that some fish will escape, even from contained aquaculture environments. For example, in Norway, escaped farmed salmon account for around 30% of the salmon in rivers. These escapees can be particularly harmful to wild populations.[20]
+Notes[edit]
+^ a b Staff (November 2015)FDA Has Determined That the AquAdvantage Salmon is as Safe to Eat as Non-GE Salmon FDA Consumer Health Information / U.S. Food and Drug Administration / November 2015 / Retrieved 20 November 2015
+^ Jun Du, Shao; Zhiyuan Gong, Garth L. Fletcher, Margaret A. Shears, Madonna J. King, David R. Idler & Choy L. Hew (1992). "Growth Enhancement in Transgenic Atlantic Salmon by the Use of an "All Fish" Chimeric Growth Hormone Gene Construct". Bio/Technology. 10 (2): 176181. doi:10.1038/nbt0292-176. Retrieved 28 May 2009. CS1 maint: Multiple names: authors list (link)
+^ Devlin, Robert; Carlo A. Biagi, Timothy Y. Yesaki, Duane E. Smailus & John C. Byatt (15 February 2001). "Growth of domesticated transgenic fish". Nature. 409 (6822): 781782. doi:10.1038/35057314. PMID11236982. Retrieved 28 May 2009. CS1 maint: Multiple names: authors list (link)
+^ Rahman, M. A.; A. Ronyai, B. Z. Engidaw, K.Jauncey, G-L. Hwang, A. Smith, E. Roderick, D.Penman, L.Varadi, N. Maclean (19 April 2005). "Growth and nutritional trials on transgenic Nile tilapia containing an exogenous fish growth hormone gene". Journal of Fish Biology. 59 (1): 6278. doi:10.1111/j.1095-8649.2001.tb02338.x. Retrieved 28 May 2009. CS1 maint: Multiple names: authors list (link)
+^ Hackett, P.B. and Alvarez, M.C. (2000) The molecular genetics of transgenic fish. Recent Adv. Mar. Biotech., 4, 77-145.
+^ a b c d e f Dunham, R.A.; Winn, R.N. (2014). "Chapter 11 - Production of transgenic fish". In Pinkert, C.A. Transgenic Animal Technology: A Laboratory Handbook. Elsevier. ISBN9780323137836.
+^ Menozzi, D., Mora, C. and Merigo, A. (2013). "Genetically modified salmon for dinner? Transgenic salmon marketing scenarios". AgBioForum. 15 (3). CS1 maint: Multiple names: authors list (link)
+^ Csiro. Genetic modification Archived 20 October 2014 at the Wayback Machine.
+^ Hackett, P.B., Ekker, S.E. and Essner, J.J. (2004) Applications of transposable elements in fish for transgenesis and functional genomics. Fish Development and Genetics (Z. Gong and V. Korzh, eds.) World Scientific, Inc., Chapter 16, 532-580.
+^ Bowman TV, Zon LI. Swimming into the future of drug discovery: in vivo chemical screens in zebrafish. ACS Chem Biol. 2010 Feb 19;5(2):159-61. doi: 10.1021/cb100029t. PMID 20166761
+^ Major R and Poss K. (2007) Zebrafish Heart Regeneration as a Model for Cardiac Tissue Repair. Drug Discov Today Dis Models. 4(4): 219225
+^ Gabillard, J.C., Rallire, C., Sabin, N. and Rescan, P.Y. (2010). "The production of fluorescent transgenic trout to study in vitro myogenic cell differentiation.". BMC Biotechnology. 10 (1): 39. doi:10.1186/1472-6750-10-39. CS1 maint: Multiple names: authors list (link)
+^ a b c Forabosco, F., Lhmus, M., Rydhmer, L. and Sundstrm, L.F. (2013). "Genetically modified farm animals and fish in agriculture: A review". Livestock Science. 153 (1): 19. doi:10.1016/j.livsci.2013.01.002. CS1 maint: Multiple names: authors list (link)
+^ Published PCT Application WO2000049150 "Chimeric Gene Constructs for Generation of Fluorescent Transgenic Ornamental Fish." National University of Singapore [1]
+^ a b Maxham, A. (2015). "The Gene Revolution" (PDF). George Mason University School of Law.
+^ Hallerman, E. (2004). "Glofish, the first GM animal commercialized: Profits amid controversy". Retrieved September 3, 2012.
+^ Schuchat S. (2003). "Why GloFish won't glow in California". San Francisco Chronicle.
+^ Anthes, E. (2013). Frankenstein's Cat: Cuddling up to Biotech's Brave New Beasts. Oneworld Publications.
+^ Chen, T.T., Lin, C.M., Chen, M.J., Lo, J.H., Chiou, P.P., Gong, H.Y., ... and Yarish, C. (2015). "Transgenic technology in marine organisms". Springer Handbook of Marine Biotechnology. Springer Berlin Heidelberg. pp.387412. CS1 maint: Multiple names: authors list (link)
+^ a b Rasmussen, R.S.; Morrissey, M. T. (2007). "Biotechnology in aquaculture: transgenics and polyploidy". Comprehensive Reviews in Food Science and Food Safety. Blackwell Publishing Inc. 6 (1): 216. doi:10.1111/j.1541-4337.2007.00013.x.
+^ a b Devlin, R.H., Sundstrm, L.F. and Leggatt, R.A. (2015). "Assessing ecological and evolutionary consequences of growth-accelerated genetically engineered fishes". BioScience. 65 (7): 685700. doi:10.1093/biosci/biv068. CS1 maint: Multiple names: authors list (link)
+^ See figures in [2].
+^ Shao Jun Du et al. (1992) Growth Enhancement in Transgenic Atlantic Salmon by the Use of an "All Fish" Chimeric Growth Hormone Gene Construct. Nature Biotechnology 10, 176 - 181 [3]
+^ Devlin, R.H., Biagi,, C.A., Yesaki, T.Y., Smailus, D.E. and Byatt, J.C (2001). "Growth of domesticated transgenic fish". Nature. 409 (6822): 781782. doi:10.1038/35057314. PMID11236982. CS1 maint: Multiple names: authors list (link)
+^ Rahman MA et al. (2001) Growth and nutritional trials on transgenic Nile tilapia containing an exogenous fish growth hormone gene. Journal of Fish Biology 59(1):6278 [4]
+^ {AquAdvantage salmon}[5] Archived 23 February 2012 at the Wayback Machine.
+^ a b c Kaiser, M. (2005). "Assessing ethics and animal welfare in animal biotechnology for farm production." (PDF). Revue Scientifique et Technique-Office International des Epizooties. 24 (1): 7587. doi:10.20506/rst.24.1.1552.
+^ a b c Sundstrm, L.F., Leggatt, R.A. and Devlin, R.H. (2015). "Chapter 13, Growth-enhanced transgenic salmon". In Vladic, T. and Petersson, E. Evolutionary Biology of the Atlantic Salmon. CRC Press. pp.261272. CS1 maint: Multiple names: authors list (link)
+^ Commissioner, Office of the. "Press Announcements - FDA takes several actions involving genetically engineered plants and animals for food". www.fda.gov. Retrieved 2015-12-03.
+^ a b c "FDA: Genetically engineered fish would not harm nature". USA Today. 2012. Retrieved November 28, 2015.
+^ Firger, J. (2014). "Controversy swims around genetically modified fish". CBS News. Retrieved November 28, 2015.
+^ a b c Environmental Assessment for AquAdvantage Salmon
+^ a b Steenhuysen, J.; Polansek, T. (November 19, 2015). "U.S. clears genetically modified salmon for human consumption". Reuters. Retrieved November 20, 2015.
+^ a b Milman, O. (November 19, 2015). "FDA approves genetically modified salmon in agency first". The Guardian. Retrieved December 29, 2015.
+^ a b c d Connor, S. (November 19, 2015). "Genetically modified salmon becomes first to be approved for human consumption - but it won't have to be labelled as GM". The Independent. Retrieved December 29, 2015.
+^ Connor S. (2012). "Ready to eat: the first GM fish for the dinner table". The Independent. Retrieved November 28, 2015.
+^ Lee, O., Green, J.M. and Tyler, C.R. (2015). "Transgenic fish systems and their application in ecotoxicology". Critical Reviews in Toxicology. 45 (2): 124141. doi:10.3109/10408444.2014.965805. PMID25394772. CS1 maint: Multiple names: authors list (link)
+^ National University of Singapore Enterprise webpage
+^ "Zebra Fish as Pollution Indicators". Archived from the original on 2001-11-09. Retrieved 2014-01-06.
+^ Carvan MJ et al (2000) Transgenic zebrafish as sentinels for aquatic pollution. Ann N Y Acad Sci. 2000;919:133-47 [6]
+^ Nebert DW et al (2002) Use of Reporter Genes and Vertebrate DNA Motifs in Transgenic Zebrafish as Sentinels for Assessing Aquatic Pollution. Environmental Health Perspectives 110(1):A15 | January 2002 [7]
+^ Mattingly CJ et al (2001) Green fluorescent protein (GFP) as a marker of aryl hydrocarbon receptor (AhR) function in developing zebrafish (Danio rerio). Environ Health Perspect. 2001 Aug;109(8):845-9 [8]
+^ Dai, Y.J., Jia, Y.F., Chen, N., Bian, W.P., Li, Q.K., Ma, Y.B., ... & Pei, D.S. (2014). "Zebrafish as a model system to study toxicology". Environmental Toxicology and Chemistry. 33 (1): 1117. doi:10.1002/etc.2406. PMID24307630. CS1 maint: Multiple names: authors list (link)
+^ a b Bailey, C. (2015). "Transgenic salmon: Science, politics, and flawed policy". Society & Natural Resources. 28 (11): 12491260. doi:10.1080/08941920.2015.1089610.
+^ Broom, D.M.; Fraser, A.F. (2015). Domestic Animal Behaviour and Welfare (5 ed.). CABI. p.330.
+^ Mora, C., Menozzi, D., Kleter, G., Aramyan, L.H., Valeeva, N. I. and Reddy, G.P. (2012). "Factors affecting the adoption of genetically modified animals in the food and pharmaceutical chains". Bio-based and Applied Economics. 1 (3): 313329. CS1 maint: Multiple names: authors list (link)
+^ Kirkden, R.; Broom, D.M. (2012). "Welfare of genetically modified and cloned animals used for food" (PDF). Retrieved November 30, 2015.
+^ Benfey, T.J. (2001). "Use of sterile triploid Atlantic salmon (Salmo salar L.) for aquaculture in New Brunswick, Canada". ICES Journal of Marine Science. 58 (2): 525529. doi:10.1006/jmsc.2000.1019.
+^ Fraser, T.W., Fjelldal, P.G., Hansen, T. and Mayer, I. (2012). "Welfare considerations of triploid fish". Reviews in Fisheries Science. 20 (4): 192211. doi:10.1080/10641262.2012.704598. CS1 maint: Multiple names: authors list (link)
+^ Piferrer, F., Beaumont, A., Falguire, J. C., Flajhans, M., Haffray, P. and Colombo, L. (2009). "Polyploid fish and shellfish: production, biology and applications to aquaculture for performance improvement and genetic containment". Aquaculture. 293 (3): 125156. doi:10.1016/j.aquaculture.2009.04.036. CS1 maint: Multiple names: authors list (link)
+^ Sundt-Hansen, L., Sundstrm, L.F., Einum, S., Hindar, K., Fleming, I. A. and Devlin, R.H. (2007). "Genetically enhanced growth causes increased mortality in hypoxic environments". Biology Letters. 3 (2): 165168. doi:10.1098/rsbl.2006.0598. PMC2375932. PMID17272234. CS1 maint: Multiple names: authors list (link)
+^ Devlin, R.H.; Donaldson, E.M. (1992). "Chapter 13 - Containment of genetically altered fish". In C.L. Hew; G.L. Fletcher. Transgenic Fish. World Scientific. pp.229266.
+^ Muir, W.M.; Howard, R.D. (1999). "Possible ecological risks of transgenic organism release when transgenes affect mating success: Sexual selection and the Trojan gene hypothesis". Proceedings of the National Academy of Sciences of the United States of America. 96 (24): 1385313856. doi:10.1073/pnas.96.24.13853. PMC24154. PMID10570162.
+^ Devlin, R.H., D'Andrade, M., Uh, M. and Biagi, C.A. (2004). "Population effects of growth hormone transgenic coho salmon depend on food availability and genotype by environment interactions". Proceedings of the National Academy of Sciences of the United States of America. 101 (25): 93039308. doi:10.1073/pnas.0400023101. PMC438972. PMID15192145. CS1 maint: Multiple names: authors list (link)
+^ Benessia, A.; Barbiero, G. (2015). "The impact of genetically modified salmon: from risk assessment to quality evaluation". Visions for Sustainability. 3: 3561.
+^ a b Oke, K.B., Westley, P.A., Moreau, D.T. and Fleming, I.A. (2013). "Hybridization between genetically modified Atlantic salmon and wild brown trout reveals novel ecological interactions". Proceedings of the Royal Society of London B: Biological Sciences. 280 (1763): 20131047. doi:10.1098/rspb.2013.1047. CS1 maint: Multiple names: authors list (link)
+^ Mair, G.C., Nam, Y.K. and Solar, I.I. (2007). "Chapter 8 - Risk management: Reducing risk through confinement of transgenic fish". Environmental Risk Assessment of Genetically Modified Organisms. Volume 3. Methodologies For Transgenic Fish. CABI. p.227. CS1 maint: Multiple names: authors list (link)
+^ Bodnar, A. (2010). "Risk assessment and mitigation of AquAdvantage salmon" (PDF). Information Systems for Biotechnology News Report: 17.
+^ Devlin, R.H., Sakhrani, D., Biagi, C.A. and Eom, K.W. (2010). "Occurrence of incomplete paternal-chromosome retention in GH-transgenic coho salmon being assessed for reproductive containment by pressure-shock-induced triploidy". Aquaculture. 304 (1): 6678. doi:10.1016/j.aquaculture.2010.03.023. CS1 maint: Multiple names: authors list (link)
+^ a b Carrington, D. (May 29, 2013). "GM 'hybrid' fish pose threat to natural populations, scientists warn". The Guardian. Retrieved December 29, 2015.
+^ a b Jon Entine for Slate Magazine. Wednesday, Dec. 19, 2012 Is the White House Interfering With a Scientific Review?
+^ Brady Dennis for the Washington Post. December 21, 2012. Genetically altered salmon are safe, FDA says. Retrieved 2012-12-22.
+References[edit]
+Greenberg, Paul (2011). Four Fish: The Future of the Last Wild Food. Penguin. ISBN0-14-311946-X.
+v
+t
+e
+Fish
+About fish
+Diversity
+Ethnoichthyology
+Evolution
+Diseases and parasites
+Fisheries
+Fishing
+Fish as food
+Fear of fish
+FishBase
+Fish kill
+Hypoxia in fish
+Ichthyology
+Anatomy and
+physiology
+Fish anatomy
+Fish physiology
+Estimating age
+Anguilliformity
+Bone
+dermal
+intramembranous ossification
+Cleithrum
+Chromatophore
+Fins
+dorsal fin
+Gill
+branchial arch
+gill raker
+gill slit
+pharyngeal arch
+pharyngeal slit
+pseudobranch
+Glossohyal
+Jaw
+hyomandibula
+pharyngeal jaw
+Leydig's organ
+Mauthner cell
+Meristics
+Operculum
+papillare
+Papilla
+Photophore
+Root effect
+Shark cartilage
+Scales
+ganoine
+Spiral valve
+Suckermouth
+Swim bladder
+physoclisti
+physostome
+Teeth
+pharyngeal teeth
+shark teeth
+Teleost leptins
+Digital Library
+Sensory
+systems
+Sensory systems in fish
+Ampullae of Lorenzini
+Barbel
+Hydrodynamic reception
+Electrocommunication
+Electroreception
+Jamming avoidance response
+Lateral line
+Otolith
+Passive electrolocation
+Capacity for pain
+Schreckstoff
+Surface wave detection
+Vision
+Weberian apparatus
+Reproduction
+Fish reproduction
+Bubble nest
+Clasper
+Egg case
+Fish development
+Ichthyoplankton
+Juvenile fish
+Life history theory
+Milt
+Mouthbrooder
+Polyandry in fish
+Pregnancy
+Roe
+Sequential hermaphroditism
+Spawning
+triggers
+Locomotion
+Fish locomotion
+Fin and flipper locomotion
+Amphibious fish
+Walking fish
+Flying fish
+Undulatory locomotion
+Tradeoffs for locomotion in air and water
+RoboTuna
+Other
+behaviour
+Aquatic predation
+Aquatic respiration
+Bait ball
+Bottom feeders
+Cleaner fish
+Diel vertical migration
+Electric fish
+Filter feeders
+Forage fish
+Migrating fish
+Paedophagy
+Predatory fish
+Salmon run
+Sardine run
+Scale eaters
+Schooling fish
+Sleep in fish
+Venomous fish
+Fish intelligence
+By habitat
+Cave
+Coastal
+Coldwater
+Coral reef
+Deep sea
+Demersal
+Euryhaline
+Freshwater
+Groundfish
+Pelagic
+Tropical
+Other types
+Bait
+Coarse
+Diversity
+Game
+Genetically modified
+Hallucinogenic
+Oily
+Poisonous
+Rough
+Whitefish
+Commercial
+Fish farming
+Carp
+Salmonids
+Tilapia
+Wild fisheries
+Predatory fish
+billfish
+mackerel
+salmon
+tuna
+Forage fish
+anchovy
+herring
+sardine
+sprats
+Demersal fish
+cod
+flatfish
+pollock
+Major groups
+Jawless fish
+hagfish
+lampreys
+Cartilaginous fish
+chimaeras
+sharks
+rays
+Bony fish
+spiny-finned
+fleshy-finned
+Lists
+Aquarium life
+Blind fish
+Fish common names
+Fish families
+Fish on stamps
+Glossary of ichthyology
+Large fish
+Threatened
+rays
+sharks
+Prehistoric fish
+more lists...
+Category
+Portal
+WikiProject
+v
+t
+e
+Genetic engineering
+Genetically
+modified
+organisms
+Crops
+Maize
+MON 810
+MON 863
+StarLink
+List of varieties of genetically modified maize
+Potato
+Amflora
+Rice
+Golden rice
+Soybean
+Roundup ready soybean
+Vistive Gold
+Tomato
+Flavr Savr
+Cotton
+Bt cotton
+Other
+Apple
+Arabidopsis
+Brinjal
+Canola
+Papaya
+Rose
+SmartStax
+Sugar beet
+Tobacco
+Trees
+Wheat
+Mammals
+Mouse
+Knockout mouse
+Oncomouse
+Enviropig
+Herman the Bull
+Knockout rat
+Other animals
+Insects
+Fish
+Glofish
+Salmon
+Bacteria
+and viruses
+Ice-minus bacteria
+Hepatitis B vaccine
+Oncolytic virus
+Processes
+Inserting DNA
+Agrobacteria
+Biolistics
+Electroporation
+Genetic transduction
+Lipofection
+Microinjection
+Transfection
+Types
+Recombinant DNA
+Transgenesis
+Cisgenesis
+Uses
+In agriculture
+Genetically modified food
+Controversies
+Pharming
+Companies
+BASF
+Bayer
+Dow AgroSciences
+DuPont Pioneer
+Monsanto
+Syngenta
+In humans and
+diagnostics
+Gene therapy
+Genetic enhancement
+In research
+Gene knockout
+Gene knockdown
+Gene targeting
+Related
+articles
+Transgene
+Detection of genetically modified organisms
+Genetic pollution
+Genetic engineering in fiction
+Human enhancement
+Reverse transfection
+Transhumanism
+Regulation
+Regulation of the release of GMOs
+Regulation of GMOs in the European Union
+Regulation of GMOs in Switzerland
+Cartagena Protocol on Biosafety
+Geography
+US
+Hawaii
+New Zealand
+Europe
+Similar fields
+Synthetic biology
+Cloning
+Stem cell research
+Biology
+Genetics
+Biotechnology
+Bioethics
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Genetically_modified_fish&oldid=732559190"
+Categories: Genetically modified organismsHidden categories: CS1 maint: Multiple names: authors listUse dmy dates from January 2014All articles lacking reliable referencesArticles lacking reliable references from December 2015
+Navigation menu
+Personal tools
+Not logged inTalkContributionsCreate accountLog in
+Namespaces
+Article
+Talk
+Variants
+Views
+Read
+Edit
+View history
+More
+Search
+Navigation
+Main pageContentsFeatured contentCurrent eventsRandom articleDonate to WikipediaWikipedia store
+Interaction
+HelpAbout WikipediaCommunity portalRecent changesContact page
+Tools
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationWikidata itemCite this page
+Print/export
+Create a bookDownload as PDFPrintable version
+Languages
+Franais
+Edit links
+This page was last modified on 1 August 2016, at 19:23.
+Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.
+By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Developers
+Cookie statement
+Mobile view

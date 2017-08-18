@@ -1,0 +1,1148 @@
+Influence of genetically modified organisms on agro-ecosystem processes
+
+Anna-Karin Kolsetha, Tina DHertefeldtb, Maren Emmerichc, Flavio Foraboscod, Stefan Marklunde, Tanya E. Cheekef, g, Sara Hallinc, Martin Weiha, 
+ Show more
+http://dx.doi.org/10.1016/j.agee.2015.08.021
+Get rights and content
+Highlights
+
+Increased understanding on trait effects on ecosystem functioning is needed.
+
+Most effects of GMOs on ecosystem processes are indirect.
+
+Field studies at landscape scale or longer than five years are rare.
+
+Temporal replicates and mechanistic approaches should be implemented in experiments.
+
+Sustainable use of GMOs requires knowledge of organism and management interaction.
+Abstract
+Biotechnology offers extensive possibilities to incorporate new traits into organisms. Genetically modified (GM) traits relevant for agro-ecosystems include traits such as pest resistance and herbicide tolerance in crop plants, increased growth rate in fish and livestock, and enhanced nitrogen-fixation capabilities of soil microbes. In this review, we evaluated the direct and indirect trait-specific effects of GM plants, microbes, and animals on ecosystem processes and found that most of the effects of genetically modified organisms (GMOs) on ecosystem processes are indirect and are the result of associated changes in management strategy rather than a direct effect of the GMOs. Conflicting results on the performance and effects of GMOs are frequently reported, especially regarding crop yield and impacts on soil organisms. This is partly because methods with different levels of resolution have been used in different ecological contexts. Overall, there is little evidence that the effects of GM traits on ecosystem processes act with different mechanisms from those of traits modified using conventional methods. However, little is known about trait-specific effects of GMOs on ecosystem processes even though GMOs have been used for more than three decades. In particular, studies linking genetically modified traits to ecosystem processes at longer time scales are rare, but needed for evaluating trait effects, especially in an evolutionary context. In addition, biotechnology may provide a unique tool for gaining insights into the links between traits and ecosystem processes when integrated into basic ecological research.
+
+Keywords
+Agriculture; Biotechnology; Bacillus thuringiensis (Bt); Ecosystem processes; Ecosystem services; Herbicide-tolerant (HT)
+1. Introduction
+Biotechnology can be used to modify traits in crops and animals much faster and more accurately than conventional breeding. Examples of genetically modified organisms (GMOs) include crop plants genetically engineered to express insect resistance genes or contain herbicide tolerance genes, bacteria engineered for enhanced nitrogen-fixing capabilities, and animals genetically modified for increased growth rate (Table 1). GMOs were first introduced into commercial agriculture in the USA in 1996, and have often led to more flexible and efficient management strategies (Zilberman et al., 2010). Trait manipulation of target organisms and production system components (Fig. 1) also creates opportunities for improved products obtained with more effective resource utilisation and reduced negative environmental impact. Nevertheless, manipulated traits may introduce unforeseen effects on ecological processes, and there is a possibility of trade-offs at the genetic, physiological or ecological level that constrain the opportunities for improving resource-use management using modern biotechnology (Weih, 2003). The functional traits of dominant species in an ecosystem are known to have strong effects on ecosystem processes and services (de Bello et al., 2010 and Grime, 1998). Thus, the adoption of novel transgenic plants, animals, and microbes in agricultural systems globally may have potentially large impacts at ecosystem level.
+
+1. Introduction
+Biotechnology can be used to modify traits in crops and animals much faster and more accurately than conventional breeding. Examples of genetically modified organisms (GMOs) include crop plants genetically engineered to express insect resistance genes or contain herbicide tolerance genes, bacteria engineered for enhanced nitrogen-fixing capabilities, and animals genetically modified for increased growth rate (Table 1). GMOs were first introduced into commercial agriculture in the USA in 1996, and have often led to more flexible and efficient management strategies (Zilberman et al., 2010). Trait manipulation of target organisms and production system components (Fig. 1) also creates opportunities for improved products obtained with more effective resource utilisation and reduced negative environmental impact. Nevertheless, manipulated traits may introduce unforeseen effects on ecological processes, and there is a possibility of trade-offs at the genetic, physiological or ecological level that constrain the opportunities for improving resource-use management using modern biotechnology (Weih, 2003). The functional traits of dominant species in an ecosystem are known to have strong effects on ecosystem processes and services (de Bello et al., 2010 and Grime, 1998). Thus, the adoption of novel transgenic plants, animals, and microbes in agricultural systems globally may have potentially large impacts at ecosystem level.
+
+In this review, we give a comprehensive overview of the direct and indirect effects of GMOs, including plants, microorganisms and animals, on agro-ecosystem functioning in terms of: net production; nutrient cycling; greenhouse gas fluxes; biodiversity; and crop-weed and trophic interactions (Fig. 1). First, we summarize the current knowledge of effects of GMOs on the above listed ecosystem processes and then we discuss knowledge gaps and provide suggestions on how to integrate GM traits into basic ecological research. The examples of GM plants, microorganisms and animals discussed here are either currently in use or most likely to be of practical use for land-based food, feed, fibre and bioenergy production in the near future. GMOs used for medical purposes were not considered, since they are not currently produced in natural or open ecosystems.
+
+2. Documented direct and indirect effects of GMOs
+2.1. Net production
+
+Yield of maize, wheat, rice and soybean has stagnated or collapsed over the last 50 years in several areas of the world, causing yield gaps compared with expected production (Ray et al., 2012). Agricultural management strategies that increase net crop production are therefore needed (Mueller et al., 2012 and Ray et al., 2012), especially as climate change is expected to alter growing conditions worldwide changing the prerequisites for agriculture. Plant production can be enhanced directly by improving intrinsic yield, or indirectly through the reduction of pest, pathogen and weed pressure. GM crops engineered for herbicide tolerance (HT), pest resistance and/or improved stress tolerance are expected to meet part of the demand of increased production (Areal et al., 2013). In climate chamber experiments, rice engineered for improved nitrate uptake performed better than non-modified rice under both optimal and low nitrogen availability (Ranathunge et al., 2014) although results remain to be replicated in the field. Both field and mesocosm experiments have demonstrated that the interaction between the environment and the trade-off between traits is of importance for evaluating effects on net production. For example, trade-offs between pest resistance and drought tolerance (Naik et al., 2005 and Yanni et al., 2010), pest resistance and nitrogen use efficiency (Haegele and Below, 2013), and stacked traits and fitness (Londo et al., 2011a and Shi et al., 2013) have been studied in different environmental settings, making results difficult to generalize. Hence, environmental factors such as temperature and precipitation (Naik et al., 2005, Shi et al., 2013 and Xu et al., 2013), in combination with crop varieties and traits, cause significant differences in estimates of expected yield between studies (Alston et al., 2009, Edgerton, 2009 and Xu et al., 2013). In a 20-year field experiment, Shi et al. (2013) documented increased yields in maize cultivars producing toxins from Bacillus thuringiensis (Bt) targeting the European corn borer (Ostrinia nubilalis) or conferring glufosinate-tolerance, but not Bt cultivars targeting corn rootworm (Diabrotica sp.) or conferring glyphosate-tolerance. Yearly variation in yield was lower in the transgenic cultivars than in the conventional cultivars highlighting the importance of long-term studies.
+
+GM microorganisms can be tailored to increase plant production. For example, a strain of the nitrogen fixing bacterium Sinorhizobium meliloti, engineered to overexpress genes involved in establishment of symbiosis with lucerne (Medicago sativa) was shown to have a transient advantage, both in microcosm and field experiments, when compared with non-modified strains (van Dillewijn et al., 2001). When this GM strain was evaluated in the field, S. meliloti rapidly colonized the rhizosphere of its host plant and impeded growth of Pseudomonas (Schwieger and Tebbe, 2000), demonstrating that the microbial community in the rhizosphere can respond quickly to the introduction of microbial strains. However, the influence of the plant species itself was greater than the effect of inoculation of GM S. meliloti on the microbial community composition (Schwieger and Tebbe, 2000). Overall, the limited knowledge that exists on use of GM microorganisms in the field makes it difficult to draw any firm conclusions regarding their ecological consequences and effects on net production.
+
+GM farm animals and fish for food and feed include species genetically modified to improve traits of economic importance (Table 1; Forabosco et al., 2013), such as growth rate (Devlin et al., 2001), milk composition (Reh et al., 2004), disease resistance (Wall et al., 2005) and survival (Konishi et al., 2011). Biotechnological modifications of non-domesticated animals have been made primarily in fish to increase growth rate. The body weight of GM salmonids, carps and tilapias can be up to 100 times that of the wild type at the same age (Nam et al., 2008). The AquAdvantage salmon developed by AquaBounty Technologies is an Atlantic salmon (Salmo salar) with a gene from Chinook salmon (Oncorhynchus tshawytscha) and a promoter from ocean pout (Zoarces americanus), which allowed the GM fish to grow 510 times faster than their non-GM counterparts during the pre-smolt stage. Hence, these GM fish reach market size one year earlier than non-GM salmon (Butler and Fletcher, 2009 and Fletcher et al., 2004). Another strategy to increase production is through manipulating the muscles to produce two muscle layers instead of one and this has been accomplished in rainbow trout (Oncorhynchus mykiss) (Medeiros et al., 2009).
+
+2.2. Nutrient cycling
+
+Nutrient cycling is directly affected by modification of genes involved in plant nutrient use and indirectly by affecting the decomposition of organic matter, e.g. by modifications of metabolites or plant tissue composition. In terrestrial ecosystems, no differences in decomposition rates of residues have been found for Bt maize (Yanni et al., 2010), Bt rice ( Fang et al., 2012 and Lu et al., 2010a) or wheat with antifungal properties (Duc et al., 2011) when compared to their non-GM counterparts in field experiments. There were also no differences in decomposition rate between transgenic and non-transgenic Populus leaf litter (Axelsson et al., 2011) or Bt and non- Bt maize plant material in aquatic ecosystems (Chambers et al., 2010 and Swan et al., 2009). Agricultural practice (Londono-R et al., 2013 and Mungai et al., 2005) and type of plant tissue (Londono-R et al., 2013) have been identified as being more important for decomposition rate than GM or non-GM cultivar in field studies. However, a field experiment using a transgenic birch line with antifungal properties showed a slight increase in nematodes feeding on bacteria rather than on fungi, although there were no effects on the rate or quality of the decomposition process (Vauramo et al., 2006). This can be interpreted as a reduced amount of fungi on the leaves because of the antifungal properties of the birch, and hence less food for fungivorous nematodes. Changes in the microbial community composition in the rhizosphere of GM and non-GM maize grown in the field have been reported, although differences were not greater than those between conventional varieties (Dohrmann et al., 2013).
+
+Indirect effects on nutrient cycling mediated by microorganisms can also be caused by the use of glyphosate on HT crops, since this herbicide contains both carbon and nitrogen. In a laboratory study using nine different soils, the addition of glyphosate exerted a strong effect on nitrogen cycling, both in terms of increased amount of nitrogen stored in microbial biomass and long-term enhancement of nitrogen mineralisation (Haney et al., 2002). Indirect effects on nutrient cycling can also occur as a result of alterations to nutrient stoichiometry in the rhizosphere. In a pot experiment with Bt cotton, availability of ammonium and nitrate in the rhizosphere was reduced and phosphorus availability was enhanced compared with the isogenic line (Sarkar et al., 2008). Leaves of Bt cotton plants have been found to harbour higher amounts of nitrogen in the form of amino acids and free proteins than leaves of non- Bt plants (Chen et al., 2005). This suggests that Bt cotton reduces the amount of available nitrogen in the rhizosphere by increased uptake and incorporation of nitrogen from ammonia and nitrate in the leaves compared with the isogenic line. Alternatively, a modified plant with exudates enriched in organic acids may decrease pH in the rhizosphere, reducing the rate of nitrification (Motavalli et al., 2004), which can impact the cycling of soil N.
+
+Livestock is the single most significant contributor to nitrogen and phosphorus pollution worldwide (Sutton et al., 2011) and efficient feed utilisation in GM animals has the potential to enhance nutrient cycling by reducing losses of nutrients from the animal to the manure. The GM pig Enviropig utilise all phosphate in grain and soybean and excrete 60% less phosphate than conventional pigs (Golovan et al., 2001). This is because Enviropigs, in contrast to conventional pigs, express the enzyme phytase in saliva and can thereby digest and extract much more of the phosphorus from plant feed. Therefore, supplementary phosphorus in the feed can be avoided, which reduces direct feed costs, as well as the environmental footprint of feed production. Phillips et al. (2006) showed that 33% less land would be required to spread manure from Enviropigs compared with conventional pigs. One criticism of the Enviropig is that it allows pig farmers to store more manure on farm, due to decreased phosphorus concentration in the manure. This can lead to environmental problems through increasing the concentration of other substances, such as nitrogen and ammonium (Food & Water Watch, 2010).
+
+2.3. Greenhouse gas fluxes
+
+GMOs can affect greenhouse gas (GHG) emissions directly by altering emissions that occur from plants, soil organisms and farm animals or indirectly as a result of management changes within the production system. Within forestry, poplar trees with low isoprene emissions have been developed to reduce GHG production (Behnke et al., 2012), but for arable crops, the reduction of GHGs is more indirect. The reduced spraying of insecticides associated with insect-resistant crops and the no-till practices associated with HT crops are estimated to have led to fuel savings of over 8000 tons of CO2 between 1996 and 2008 (Brookes and Barfoot, 2010). However, increase in herbicide application has undermined the benefits of no-till practices regarding weed control (Mortensen et al., 2012), selecting for herbicide resistant weeds. A combination of farming practices using mechanical weeding and use of herbicides with different mode of action has been proposed as a way to reduce weed problems (Gilbert, 2013 and Harker et al., 2012), but increased tillage counteracts the previous reduction in CO2 achieved by the reduced use of fuels in the no-till system.
+
+Reducing N2O rather than CO2 emissions from soil has been the focus of recent microbial research aimed at addressing options for GHG mitigation. Two microbial processes, nitrification (the oxidation of ammonia to nitrate) and denitrification (the reduction of nitrate to N2O or nitrogen gas), are of particular importance for N2O emissions. Biotechnological tools to improve the efficiency of denitrifying microorganisms with a complete process ending with N2 rather than N2O or to express bacterial N2O reductases in plants have been discussed (Philippot and Hallin, 2011 and Richardson et al., 2009). The former approach has recently been demonstrated by Itakura et al. (2013) in microcosms, and the latter in the laboratory (Wan et al., 2012). Crop plants can also be genetically modified to produce biological nitrification inhibitors (Subbarao et al., 2007 and Subbarao et al., 2009), which can help to reduce N2O emissions originating from nitrification and denitrification, as the substrate for denitrification is not produced when the nitrifiers are inhibited. Another beneficial aspect of such genetic alteration is that nitrate leaching may be decreased. Thus, recent research has demonstrated the feasibility of several strategies to use GM microorganisms to reduce N2O emissions. The challenge will be to find ways to implement these approaches under field conditions.
+
+Livestock contributions to the total anthropogenic GHG emissions are 9% CO2, 37% CH4 and 65% N2O (Steinfeld et al., 2006). Livestock that increase productivity (i.e. with a better ratio between production and consumption per animal) can be expected to indirectly reduce GHG emissions in the animal product chain. Another strategy, directly targeting GHG emissions, is to reduce methane emissions from the rumen (Hegarty, 1999, Hook et al., 2010 and Ross et al., 2013).
+
+2.4. Increased or decreased biodiversity
+
+The effects of GMOs on biodiversity have been discussed primarily in terms of the potential risk of species losses and the impact that a GM trait could have on the genetic diversity and subsequent ecosystem functioning in a given landscape. Field studies of HT oilseed rape, Bt maize, Bt rice, GM wheat with antifungal properties and GM potato with altered starch production have demonstrated that environmental and biotic factors, in addition to agricultural practices such as type of tillage system, can have a greater impact on soil microfauna and microbial communities than the genetic properties of the crop ( Baumgarte and Tebbe, 2005, Duc et al., 2011, Dunfield and Germida, 2003, Griffiths et al., 2007, Hannula et al., 2012, Liu et al., 2008, Lupwayi et al., 2007 and Sessitsch et al., 2004). No substantial effects of Bt crops on earthworms (reviewed in Icoz and Stotzky, 2008 and Shu et al., 2011), woodlice, collembolas, mites and protozoa (reviewed in Icoz and Stotzky, 2008), or non-target Chrysomelids (reviewed in Devos et al., 2012) have been detected in field and laboratory studies, and in microcosms no effects were observed on snails and microarthropods (de Vaufleury et al., 2007). Axelsson et al. (2011) found increased population densities of some aquatic insects in stream water containing Bt Populus leaf-litter, but were unable to identify any single variable that related to this shift in the faunal community. However, possible effects at species level on soil nematodes and non-target insect larvae have been reported ( Icoz and Stotzky, 2008 reviewed in Cheeke, 2012a). The leaf-shredding invertebrate Lepidostoma lida, found in freshwater streams, showed lower growth rate in the laboratory when feeding on debris from Bt maize, but not in field situations. This was suggested to depend on additional stress factors in natural streams, such as pesticides and altered water flow ( Chambers et al., 2010). For soil fungi, there is evidence from greenhouse studies of decreased colonisation by arbuscular mycorrhizal fungi in several lines of Bt maize ( Cheeke et al., 2011 and Cheeke et al., 2012b). This effect was not observed under field conditions (Cheeke et al., 2013), although lower densities of arbuscular mycorrhizal fungi spores were detected in plots with a history of Bt maize cultivation compared to plots with non- Bt maize ( Cheeke et al., 2014). No negative effect of Bt maize has been observed with respect to microbial community-level physiological profiles in both growth chamber ( Blackwood and Buyer, 2004) and field studies (Lupwayi et al., 2007) or on nitrate reduction rate in the field (Philippot et al., 2006). Rice and cotton modified to express Bt toxins have not caused observable shifts in soil bacterial and fungal communities in the field ( Lachnicht et al., 2004, Li et al., 2011 and Lu et al., 2010a) or in laboratory experiments (Shen et al., 2006). An indirect positive effect of Bt crops on biodiversity is the reduced insecticide use ( Benbrook, 2012 and Naranjo, 2011), enhancing the density of non-target organisms (Naranjo, 2011). Although some of these non-target organisms have become pests, there are also examples were an increase in natural enemies to pest insects reduces pest pressure (Naranjo, 2011).
+
+In an extensive field study, no clear correlation was found between HT beet, HT spring oilseed rape or HT maize and the abundance and diversity of different plant and invertebrate species (Hawes et al., 2003). Rather, the weed management strategies that accompanied HT crop cultivation affected the abundance of invertebrates and caused a shift from a herbivore to a detritivore-dominated food web. Similarly, effects of altered herbicide treatments as a consequence of adopting HT maize are reported to have led to reductions in milkweed populations, reducing the population size of the monarch butterfly (Pleasants and Oberhauser, 2013). No effect on microbial community has been detected in fields with HT sugar beet (Schmalenberger and Tebbe, 2003), HT oilseed rape, or HT wheat (Lupwayi et al., 2007). However, in a mesocosm study it was shown that glyphosate has the potential to negatively affect plant species diversity by increasing the abundance and persistence of HT Brassica ( Londo et al., 2011b and Watrud et al., 2011). Since Brassica are non-mycorrhizal, ecosystem services associated with arbuscular mycorrhizal fungi (e.g. soil aggregation, carbon sequestration, nutrient cycling) may be negatively affected by the spread and/or persistence of these types of GM plants ( Watrud et al., 2011).
+
+GM microorganisms have been applied in the field to a considerably smaller extent than GM plants, but are likely to be on the market in the future, especially in pest control applications. The potential environmental hazards associated with GM microorganisms are primarily related to the spread of GM traits, since bacteria and archaea are known to exchange genetic material even across distantly related species by horizontal gene transfer. The genetic stability of biotechnologically derived microorganisms depends on whether the foreign genetic element has been introduced into the chromosome (Lilley and Bailey, 1997) or added on a plasmid (Drahos et al., 1986). When a presumably neutral marker gene cassette was introduced to a Pseudomonas strain on a plasmid, it could be retrieved from indigenous Pseudomonas, but not when integrated into the chromosome ( Lilley et al., 2003). However, when GM P. putida cells with the target genetic element on a plasmid mated with bacteria extracted from soil, less than 1% of the indigenous soil bacteria could take up the plasmid ( Shintani et al., 2014). This suggests that gene mobility through horizontal transfer may be limited in the environment. Other effects of GM microorganisms on indigenous microbial communities have been studied using Pseudomonas fluorescens engineered to produce antibiotics ( Bankhead et al., 2004) and S. meliloti with added genetic markers or, enhanced competitiveness in both microcosm and field experiments ( Andronov et al., 2009, Schwieger and Tebbe, 2000 and van Dillewijn et al., 2002). While no effects on the indigenous soil microbial community were observed in the first two studies, the latter two reported an increase in the number of gammaproteobacteria (van Dillewijn et al., 2002) and rhizobia (Schwieger and Tebbe, 2000) after inoculation of the GM S. meliloti. van Dillewijn et al. (2002) made similar observations after inoculation of wild-type S. meliloti, but in an experiment by Schwieger and Tebbe (2000) crop type had a greater effect on the microbial community composition than the inoculation of marker gene-tagged S. meliloti.
+
+Highly domesticated livestock such as cattle and pigs often have reduced fitness in natural environments, but there are examples with i.e. escaped sheep and horses having a profound impact on local environment on e.g. islands (Beltran et al., 2014 and Freedman et al., 2011). Non-domesticated GM animals with retained fitness in the wild may affect biodiversity if they escape from agroecosystems in which they are raised, if the modified genes confer a competitive advantage. An example is the transgenic salmon, with its enhanced growth rate and ability to consume more stream resources than the wild-type salmon, but the outcome is very difficult to predict (Sundstrm et al., 2010). Likewise, the release of GM insects to tackle dengue fever or malaria will most likely have effects on natural populations when releases are made at large scale (Marshall, 2010). In situations when field data is difficult to retain, modeling of different scenarios will be relevant as a complement in risk assessment (Li et al., 2015).
+
+2.5. Crop-weed and trophic interactions relevant to pest management
+
+Insect resistance to Bt crops and herbicide resistance in weeds is more likely to occur when GM plants with tolerance to a particular herbicide or insect pest are used without alternating with mechanical weeding or alternative pest-control strategies ( Harker et al., 2012). Insect resistance to Bt toxin has developed in almost half of the 13 major pest populations targeted by Bt crops ( Gassmann et al., 2014 and Tabashnik et al., 2013). Monitoring for pest resistance and utilising integrated management strategies can enhance the success of Bt crops ( Tabashnik et al., 2013) i.e. using various refugia strategies, e.g. targeting recessive resistance, releasing sterile pest insects to reduce reproduction of resistant individuals and mixed planting of Bt/non- Bt seeds within the same field ( Monsanto, 2014a, Monsanto, 2014b and Tabashnik et al., 2010). The need for such strategies is emphasised by surveys on field populations of e.g. cotton boll worm (Helicoverpa armigera) which has been found to harbour resistance genes to Bt toxin ( Zhang et al., 2012). There are also reports of shifts in pest species on cotton as a result of reduced target pest pressure ( Lu et al., 2010b and Zhao et al., 2011).
+
+Glyphosate resistance in weeds has been detected in all countries where glyphosate is applied and at present, 30 weed species with populations being glyphosate-resistant have been reported to the International Survey of Herbicides (Heap, 2014). Gliddon (1994) and Ellstrand (2003) show that gene flow from conventionally bred crops to wild relatives has always existed, and hence gene flow between transgenic crops and wild relatives would be expected, but the ecological consequences will depend on whether specific traits result in increased, neutral or decreased fitness effects in the recipient populations (Ellstrand et al., 2013). Similarly, the intrinsic biology and management of the crops will influence the amount of gene flow. In oilseed rape, hybrids between HT oilseed rape (Brassica napus) and the weed wild turnip (Brassica rapa) have been found over a short time span (four years) in field borders ( Warwick et al., 2008), despite a lack of selection pressure for HT and reduced pollen viability of the HT hybrids. Crop rotation targeting plant pathogens may provide a sufficient time span to reduce further pollen transfer from HT oilseed rape to wild turnip. However, oilseed rape is renowned for its long-term seed dormancy and volunteer GM plants, i.e. plants appearing in the following crop, can occur 10 years after GM oilseed rape cultivation (DHertefeldt et al., 2008). Effective and efficient control of volunteers is crucial in order to avoid build-up of oilseed rape seeds in the seedbank and continued occurrence of volunteer oilseed rape ( Beckie et al., 2006 and Begg et al., 2006). Volunteer GM plants can be controlled when tilled or sprayed at early growth stages, but control of glyphosate-tolerant volunteers requires spraying with more potent herbicides such as 2,4-D or phenoxy-based herbicides (Lgre et al., 2006). HT oilseed rape has also been shown to disperse along transport routes, thereby establishing viable populations far from the original fields ( Kawata et al., 2009 and Schafer et al., 2011). In this feral context, these populations can act as a pool for transgene persistence (Squire et al., 2011), and there is a potential to increase gene flow of the HT trait although oilseed rape is mainly self- and insect pollinated and to a much lesser extent pollinated by wind ( Ramsay et al., 2003 and Warwick et al., 2008). The dispersal characteristics of oilseed rape varies significantly compared to the outbreeding and wind pollinated creeping bentgrass (Agrostis stolonifera), which has abundant pollen flow over large distances. This long-distance pollen dispersal is likely to be the cause of the rapid escape of HT creeping bentgrass from a field trial into natural adjacent habitats ( Zapiola et al., 2008). Recently, spontaneous hybridisation between HT A. stolonifera and wild Polypogon monspeliensis has also been reported ( Zapiola and Mallory-Smith, 2012). By using models that identify crucial steps in the crop lifecycle, gene escape from HT crops to weeds may be mitigated ( Begg et al., 2006 and Sester et al., 2012), and simulation models can also be used to study the evolution of resistance in weeds and to evaluate different management strategies (Bagavathiannan et al., 2014).
+
+Microbial communities are continually being screened for use as biological control agents that can then be further enhanced using biotechnology. A commercial strain of GM Agrobacterium radiobacter (K1026) has been used successfully against crown gall-inducing agrobacteria ( Vicedo et al., 1993). At the laboratory scale, researchers have successfully modified different groups of bacteria to combat pests. For example, two different sugarcane-associated bacteria modified to express crystalline (Cry) protein (the active protein from B. thuringiensis) or chitinase increased sugarcane larval mortality to 92% ( Downing et al., 2000). Liu et al. (2010) engineered a Bt bacterial strain to express two different insecticides, thereby exerting high toxicity against the pests Anomala corpulenta and Holotrichia parallela. Research on the stability of these and other biotechnologically derived bacterial strains under field conditions is needed before conclusions can be drawn regarding the ecological effects of GM microorganisms.
+
+GM insects can be used to control pests of economic importance (Thomas et al., 2000 and Wimmer, 2003). For example, by releasing an excessive number of GM males from which no female offspring will survive, the populations of insect vectors of human disease and/or agricultural pests can be reduced (Thomas et al., 2000). The environmental risk assessment required for releasing such genetically modified insects can be complex, and so far no genetically engineered insect has been approved for use within the European Union (EU) (Benedict et al., 2010 and Reeves et al., 2012). However, transgenic mosquitoes are a potential tool for the control or eradication of insect-vectored diseases. To reduce the risk of malaria, one possible strategy relies on the introduction of malaria-refractory transgenes into wild mosquito populations to limit their capacity to transmit the disease, and a similar approach is being developed for dengue fever (Boete et al., 2014 and Marshall, 2010).
+
+3. Discussion
+Given the role that GMOs are expected to play in meeting future demands for food and energy (Alfred et al., 2014), knowledge of their sustainable use and environmental impact is crucial (Lau et al., 2014). For some GMOs, such as Bt and HT crops, numerous studies have been published and there is a vast amount of scientific knowledge and practical experience of these organisms. For these crops, direct effects of GM traits are rare and effects on ecosystem processes have seldom been documented. Moreover, many of the published reports on the effects of GMOs are descriptive and lack functional-mechanistic analyses aiming at the causal relationships between organismal traits and relevant ecosystem processes in agro-ecosystems or of importance for natural resource management. The focus of most investigations is on risk assessment at species level without considering an ecosystem perspective. There are also numerous conflicting results on the performance and environmental effects of GM crops, especially with regard to effects on crop yield and impacts on non-target organisms. It has previously been pointed out that this type of data is inconclusive or contradictory and that any discussion on the potential of GM crops needs to take these complex results into account ( Gilbert, 2013). Some of the conflicting results reported may be because methods with different levels of resolution and ecological context have been used in different studies. Moreover, there is a lack of large-scale studies (farm and landscape scale, e.g. Squire et al., 2003 and Squire et al., 2011) or studies conducted over longer time periods (more than five years), although more and more long-term studies are being published (see for example Lu et al., 2010b and Shi et al., 2013). Greenhouse and laboratory studies are an important first step in biotechnology risk assessments, although it is often not possible to directly apply the results to field situations ( Birch et al., 2007 and Duan et al., 2010). The short-term studies performed to date mostly show a low impact of GMOs on ecological processes, but the evaluation of the ecological sustainability of GMOs requires the use of long-term experiments investigating complex systems located within an ecological context ( Duan et al., 2010, Weih et al., 2008 and Zeller et al., 2010). The lack of temporal replicates in many of the reported studies obscures the effects of small changes in the genetic composition of a species, since that does not necessarily mean a small change in the evolutionary development of the species, and hence its effect in the ecosystem. Modelling approaches have been successfully used to predict long-term effects of life history traits and management processes on gene flow of, e.g. oilseed rape (Begg et al., 2006) and sugar beet (Beta vulgaris spp.) ( Sester et al., 2012), but model outcomes need to be validated in the real world. When doing so, models will probably be increasingly important at time scales relevant for examining the ecological effects of GMOs. Also, as spatial and temporal scales are extended, study systems become more complex, and clever experimental designs with high statistical power and good replication, to account for high background variability of potentially confounding factors, will be crucial to allow meaningful conclusions. The design of such experiments requires good understanding of molecular biology, physiology and ecology, as well as knowledge of the biology of the target organism and the associated management practices.
+
+Most of the effects of GMOs on ecosystem processes that have been reported to date are indirect, appearing to rely on complex, multi-trophic interactions, and are primarily a consequence of changes in agricultural practices associated with e.g. the use of HT and insect-resistant crops. For these HT and Bt traits, the occurrence of resistant weeds and insect pests follows conventional resistance biology. For example, glyphosate-tolerant weeds are a consequence of the dominant use of one type of herbicide over large areas and over consecutive seasons ( Harker et al., 2012). Another significant aspect is the genetic context into which a GM trait is applied. An organisms intrinsic biology, such as mode of pollination, is of particular importance, as seen in the example on gene flow from HT oilseed rape and creeping bentgrass. Even within a similar genetic context, the indirect effects of GMOs may differ, as exemplified by reported effects on mycorrhizal fungi. For example, mycorrhizal colonization was reduced in the roots of Bt maize when plants were grown with limited fertilizer applications in a greenhouse (Cheeke et al., 2012b), but there were no differences in mycorrhizal colonization detected between these same Bt maize and non- Bt maize cultivars when grown under high fertilizer conditions ( Cheeke et al., 2011) or when cultivated in the field (Cheeke et al., 2013). Thus, the effects of Bt plants on mycorrhizal fungi appear to be context dependent, highlighting the importance of performing studies under varying environmental and experimental conditions.
+
+The knowledge gaps we found highlight an urgent need for basic ecological and agronomic research on the impacts of traits (modified with conventional methods or GM) on ecosystem processes in order to evaluate the possible effects of GMOs in an appropriate setting. Thus, also baseline studies (Conner et al., 2003, Marvier, 2011 and Squire et al., 2003) on e.g. above and belowground biodiversity in different types of production systems are required to evaluate the effects of production per se, and to be used as controls for studies of effects of GMOs. With extensive knowledge and understanding of the effects of production and utilisation of natural resources on ecosystem processes, biotechnology can also be used as a powerful tool to gain important insights into how specific traits can affect biodiversity, nutrient cycling, greenhouse gas fluxes and net biomass production in different ecosystems, thereby increasing our general understanding of how single traits affect ecosystem processes. It is well known that epistatic and pleiotropic effects can occur when genes are inserted into an organism, since the insertions can be random. Evaluating how organisms with different insertion sites in the genome perform in different environments may increase our understanding of the effects of genetic and environmental interactions, and enable GMOs to be evaluated in an evolutionary context, i.e. assessing how their fitness is affected by different environments. The study of genetic interactions among genotypes and their abiotic environment in complex communities has been discussed in ecology within the context of community or ecosystem genetics ( Whitham et al., 2006). This research usually focuses on the loss of genotypes and the consequences for biodiversity and ecosystem function (Schwartz et al., 2000), but by studying the addition of genotypes to an ecosystem and evaluating them in multiple environments, a better understanding of how species and their functional traits affect ecosystem processes and services can be gained. These types of studies require a clear focus on the traits of GMOs and of conventional organisms and how they are linked to ecosystem processes and services ( Constanzo and Barberi, 2014 and Weih et al., 2014). Understanding trait effects on ecosystem level processes is even more crucial given the development of new molecular techniques such as CRISPR/cas which result in biotechnologically enhanced organisms that may or may not be classified as non-GM, but which have traits that can affect ecosystem functioning. The development of advanced technologies resulting in modified traits of organisms not classified as GMOs are, in our opinion, a strong argument to focus future research towards investigating the functional relationships between (modified) traits and ecosystem processes, instead of further evaluating the method (e.g. GM) used to achieve the trait modification. Moreover, understanding the links between traits and ecosystems processes and services is an important tool in improving cropping systems for efficient resource utilisation with low environmental impact. Studies on GM traits in natural habitats should be incorporated in basic ecological systematic research rather than being a separate research area of risk assessment. By doing so, researchers can utilize the possibility to exploit GM traits to improve the understanding of the relationship between traits and ecosystem processes. Traits will continue to be improved and added to agro-ecosystems, and need to be evaluated irrespective of the technique by which they were produced.
+
+Acknowledgements
+This review was a sub-project within the research programme Mistra Biotech funded by the Swedish Foundation for Strategic Environmental Research and the Swedish University of Agricultural Sciences. Thanks to Lotta Rydhmer, Anna Lehrman and Linnea Asplund for discussions and valuable comments on the manuscript.
+
+References
+Alfred et al., 2014
+J. Alfred, J.L. Dangl, S. Kamoun, S.R. McCouch
+New horizons for plant translational research
+PLoS Biol., 12 (2014), p. e1001880 doi:1001810.1001371/journal.pbio.1001880
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (1)
+Alston et al., 2009
+J.M. Alston, J.M. Beddow, P.G. Pardey
+Agricultural research, productivity, and food prices in the long run
+Science, 325 (2009), pp. 12091210
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (115)
+Andronov et al., 2009
+E.E. Andronov, S.N. Petrova, E.P. Chizhevskaya, E.V. Korostik, G.A. Akhtemova, A.G. Pinaev
+Influence of introducing the genetically modified strain Sinorhizobium meliloti ACH-5 on the structure of the soil microbial community
+Microbiology, 78 (2009), pp. 474482
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (4)
+Areal et al., 2013
+F.J. Areal, L. Riesgo, E. Rodriguez-Cerezo
+Economic and agronomic impact of commercialized GM crops: a meta-analysis
+J. Agric. Sci., 151 (2013), pp. 733
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (19)
+Axelsson et al., 2011
+E.P. Axelsson, J. Hjltn, C.J. LeRoy, T.G. Whitham, R. Julkunen-Tiitto, A. Wennstrm
+Leaf litter from insect-resistant transgenic trees causes changes in aquatic insect community composition
+J. Appl. Ecol., 48 (2011), pp. 14721479
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (12)
+Bagavathiannan et al., 2014
+M.V. Bagavathiannan, J.K. Norsworthy, K.L. Smith, P. Neve
+Modeling the simultaneous evolution of resistance to ALS- and ACCase-inhibiting herbicides in barnyardgrass (Echinochloa crus-galli) in Clearfield rice
+Weed Technol., 28 (2014), pp. 89103
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (4)
+Bankhead et al., 2004
+S.B. Bankhead, B.B. Landa, E. Lutton, D.M. Weller, B.B.M. Gardener
+Minimal changes in rhizobacterial population structure following root colonization by wild type and transgenic biocontrol strains
+FEMS Microbiol. Ecol., 49 (2004), pp. 307318
+
+Article |  PDF (521 K) | Full Text via CrossRef | View Record in Scopus | Citing articles (44)
+Baumgarte and Tebbe, 2005
+S. Baumgarte, C.C. Tebbe
+Field studies on the environmental fate of the Cry1Ab Bt -toxin produced by transgenic maize (MON810) and its effect on bacterial communities in the maize rhizosphere
+Mol. Ecol., 14 (2005), pp. 25392551
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (159)
+Beckie et al., 2006
+H.J. Beckie, K.N. Harker, L.M. Hall, S.I. Warwick, A. Legere, P.H. Sikkema, G.W. Clayton, A.G. Thomas, J.Y. Leeson, G. Seguin-Swartz, M.J. Simard
+A decade of herbicide-resistant crops in Canada
+Can. J. Plant Sci., 86 (2006), pp. 12431264
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (88)
+Begg et al., 2006
+G.S. Begg, S. Hockaday, J.W. McNicol, M. Askew, G.R. Squire
+Modelling the persistence of volunteer oilseed rape (Brassica napus)
+Ecol. Modell., 198 (2006), pp. 195207
+
+Article |  PDF (518 K) | View Record in Scopus | Citing articles (28)
+Behnke et al., 2012
+K. Behnke, R. Grote, N. Bruggemann, I. Zimmer, G.W. Zhou, M. Elobeid, D. Janz, A. Polle, J.P. Schnitzler
+Isoprene emission-free poplarsa chance to reduce the impact from poplar plantations on the atmosphere
+New Phyt., 194 (2012), pp. 7082
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (25)
+Beltran et al., 2014
+R.S. Beltran, N. Kreidler, D.H. Van Vuren, S.A. Morrison, E.S. Zavaleta, K. Newton, R. Tershy,B, D.A. Croll
+Passive recovery of vegetation after herbivore eradication on Santa Cruz Island, California
+Restor. Ecol., 22 (2014), pp. 790797
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (4)
+Benbrook, 2012
+C.M. Benbrook
+Impacts of genetically engineered crops on pesticide use in the USthe first sixteen years
+Environ. Sci. Eur., 24 (2012), p. 24
+
+Full Text via CrossRef
+Benedict et al., 2010
+Benedict, M., Eckerstorfer, M., Franz, G., Gaugitsch, H., Greiter, A., Heissenberger, A., Knols, B., Kumschick, S., Nentwig, W., Rabitsch, W., Defining environmental risk assessment criteria for genetically modified insects to be placed on the EU Market, 2010, European Food Safety Authority; Parma.
+Birch et al., 2007
+A.N.E. Birch, B.S. Griffiths, S. Caul, J. Thompson, L.H. Heckmann, P.H. Krogh, J. Cortet
+The role of laboratory, glasshouse and field scale experiments in understanding the interactions between genetically modified crops and soil ecosystems: a review of the ECOGEN project
+Pedobiologia, 51 (2007), pp. 251260
+
+Article |  PDF (177 K) | View Record in Scopus | Citing articles (36)
+Blackwood and Buyer, 2004
+C.B. Blackwood, J.S. Buyer
+Soil microbial communities associated with Bt and non-Bt corn in three soils
+J. Environ. Qual., 33 (2004), pp. 832836
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (101)
+Bleck et al., 1998
+G.T. Bleck, B.R. White, D.J. Miller, M.B. Wheeler
+Production of bovine alpha-lactalbumin in the milk of transgenic pigs
+J. Anim. Sci., 76 (1998), pp. 30723078
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (54)
+Boete et al., 2014
+C. Boete, F.B. Agusto, R.G. Reeves
+Impact of mating behaviour on the success of malaria control through a single inundative release of transgenic mosquitoes
+J. Theor. Biol., 347 (2014), pp. 3343
+
+Article |  PDF (1459 K)
+Bosworth et al., 1994
+A.H. Bosworth, M.K. Williams, K.A. Albrecht, R. Kwiatkowski, J. Beynon, T.R. Hankinson, C.W. Ronson, F. Cannon, T.J. Wacek, E.W. Triplett
+Alfalfa yield response to inoculation with recombinant strains of Rhizobium meliloti with an extra copy of dctABD and/or modified nifA expression
+Appl. Environ. Microbiol., 60 (1994), pp. 38153832
+
+View Record in Scopus | Citing articles (75)
+Brookes and Barfoot, 2010
+G. Brookes, P. Barfoot
+Global impact of biotech crops: environmental effects, 19962008
+AgBioForum, 13 (2010), pp. 7694
+
+View Record in Scopus | Citing articles (4)
+Brophy et al., 2003
+B. Brophy, G. Smolenski, T. Wheeler, D. Wells, P. LHuillier, G. Laible
+Cloned transgenic cattle produce milk with higher levels of beta-casein and kappa-casein
+Nat. Biotechnol., 21 (2003), pp. 157161
+
+Butler and Fletcher, 2009
+T.M. Butler, G.L. Fletcher
+Promoter analysis of a growth hormone transgene in Atlantic salmon
+Theriogenology, 72 (2009), pp. 6271
+
+Article |  PDF (463 K) | View Record in Scopus | Citing articles (9)
+Chambers et al., 2010
+C.P. Chambers, M.R. Whiles, E.J. Rosi-Marshall, J.L. Tank, T.V. Royer, N.A. Griffiths, M.A. Evans-White, A.R. Stojak
+Responses of stream macroinvertebrates to Bt maize leaf detritus
+Ecol. Appl., 20 (2010), pp. 19491960
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (30)
+Cheeke, 2012a
+T.E. Cheeke
+Effects of the cultivation of genetically modified Bt crops on nontarget soil organisms
+T.E. Cheeke, D.C. Coleman, D.H. Wall (Eds.), Microbial Ecology in Sustainable Agroecosystems, Boca Raton, CRC Press (2012), pp. 153227
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (4)
+Cheeke et al., 2013
+T.E. Cheeke, M.B. Cruzan, T.N. Rosenstiel
+A field evaluation of arbuscular mycorrhizal fungal colonization in Bacillus thuringiensis toxin-expressing (Bt) and Non- Bt Maize
+Appl. Environ. Microbiol., 79 (2013), pp. 40784086
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (11)
+Cheeke et al., 2014
+T.E. Cheeke, H. Darby, J.D. Bever, T.N. Rosenstiel, M.B. Cruzan
+Effect of Bt maize cultivation history on arbuscular mycorrhizal fungal colonization, spore abundance and diversity, and plant growth
+Agric. Ecosyst. Environ., 195 (2014), pp. 2935
+
+Article |  PDF (755 K) | View Record in Scopus | Citing articles (5)
+Cheeke et al., 2011
+T.E. Cheeke, B.A. Pace, T.N. Rosenstiel, M.B. Cruzan
+The influence of fertilizer level and spore density on arbuscular mycorrhizal colonization of transgenic Bt 11 maize (Zea mays) in experimental microcosms
+FEMS Microbiol. Ecol., 75 (2011), pp. 304312
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (11)
+Cheeke et al., 2012b
+T.E. Cheeke, T.N. Rosenstiel, M.B. Cruzan
+Evidence of reduced arbuscular mycorrhizal fungal colonization in multiple lines of Bt maize
+Am. J. Bot., 99 (2012), pp. 700707
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (16)
+Chen et al., 2005
+D.H. Chen, G.Y. Ye, C.Q. Yang, Y. Chen, Y.K. Wu
+Effect of introducing Bacillus thuringiensis gene on nitrogen metabolism in cotton
+Field Crop. Res., 92 (1) (2005), pp. 19
+
+Article |  PDF (136 K) | Full Text via CrossRef | View Record in Scopus | Citing articles (17)
+Chen et al., 1990
+W.Y. Chen, D.C. Wight, T.E. Wagner, J.J. Kopchick
+Expression of a mutated bovine growth hormone gene suppresses growth of transgenic mice
+Proc. Natl. Acad. Sci. U. S. A., 87 (1990), pp. 50615065
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (123)
+Clements et al., 1994
+J.E. Clements, R.J. Wall, O. Narayan, D. Hauer, R. Schoborg, D. Sheffer, A. Powell, L.M. Carruth, M.C. Zink, C.E. Rexroad
+Development of transgenic sheep that express the visna virus envelope gene
+Virology, 200 (1994), pp. 370380
+
+Article |  PDF (909 K) | View Record in Scopus | Citing articles (35)
+Constanzo and Barberi, 2014
+A. Constanzo, P. Barberi
+Functional agrobiodiversity and agroecosystem services in sustainable wheat production. A review
+Agron. Sustain. Dev., 34 (2014), pp. 327348
+
+Conner et al., 2003
+A.J. Conner, T.R. Glare, J.P. Nap
+The release of genetically modified crops into the environmentpart II: overview of ecological risk assessment
+Plant J., 33 (2003), pp. 1946
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (296)
+DHertefeldt et al., 2008
+T. D'Hertefeldt, R.B. Jrgensen, L.B. Pettersson
+Long-term persistence of GM oilseed rape in the seedbank
+Biol. Lett., 4 (2008), pp. 314317
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (38)
+Damak et al., 1996
+S. Damak, H. Su, N.P. Jay, D.W. Bullock, H.Y. Su
+Improved wool production in transgenic sheep expressing insulin-like growth factor 1
+Biotechnology, 14 (1996), pp. 185188
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (65)
+de Bello et al., 2010
+F. de Bello, S. Lavorel, S. Diaz, R. Harrington, J.H.C. Cornelissen, R.D. Bardgett, M.P. Berg, P. Cipriotti, C.K. Feld, D. Hering, P.M. da Silva, S.G. Potts, L. Sandin, J.P. Sousa, J. Storkey, D.A. Wardle, P.A. Harrison
+Towards an assessment of multiple ecosystem processes and services via functional traits
+Biodivers. Conserv., 19 (2010), pp. 28732893
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (199)
+de Vaufleury et al., 2007
+A. de Vaufleury, P.E. Kramarz, P. Binet, J. Cortet, S. Caul, M.N. Andersen, E. Plumey, M. Coeurdassier, P.H. Krogh
+Exposure and effects assessments of Bt -maize on non-target organisms (gastropods, microarthropods, mycorrhizal fungi) in microcosms
+Pedobiologia, 51 (2007), pp. 185194
+
+Article |  PDF (227 K) | View Record in Scopus | Citing articles (46)
+Denning et al., 2001
+C. Denning, S. Burl, A. Ainslie, J. Bracken, A. Dinnyes, J. Fletcher, T. King, M. Ritchie, W.A. Ritchie, M. Rollo, P.d. Sousa, A. Travers, I. Wilmut, A.J. Clark, P. de Sousa
+Deletion of the alpha(1,3) galactosyl transferase (GGTA1) gene and the prion protein (PrP) gene in sheep
+Nat. Biotechnol., 19 (2001), pp. 559562
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (190)
+deRuyter et al., 1997
+P. deRuyter, O.P. Kuipers, W.C. Meijer, W.M. deVos
+Food-grade controlled lysis of Lactococcus lactis for accelerated cheese ripening
+Nat. Biotechnol., 15 (1997), pp. 976979
+
+View Record in Scopus | Citing articles (99)
+Devlin et al., 2001
+R.H. Devlin, C.A. Biagi, T.Y. Yesaki, D.E. Smailus, J.C. Byatt
+Growth of domesticated transgenic fish
+Nature, 409 (2001), pp. 781782
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (131)
+Devos et al., 2012
+Y. Devos, A. De Schrijver, P. De Clercq, J. Kiss, J. Romeis
+Bt-maize event MON 88017 expressing Cry3Bb1 does not cause harm to non-target organisms
+Transgenic Res., 21 (2012), pp. 11911214
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (14)
+Dohrmann et al., 2013
+A.B. Dohrmann, M. Kuting, S. Junemann, S. Jaenicke, A. Schluter, C.C. Tebbe
+Importance of rare taxa for bacterial diversity in the rhizosphere of Bt - and conventional maize varieties
+ISME J., 7 (2013), pp. 3749
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (24)
+Downing et al., 2000
+K.J. Downing, G. Leslie, J.A. Thomson
+Biocontrol of the sugarcane borer Eldana saccharina by expression of the Bacillus thuringiensis cry1Ac7 and Serratia marcescens chiA genes in sugarcane-associated bacteria
+Appl. Environ. Microbiol., 66 (2000), pp. 28042810
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (46)
+Drahos et al., 1986
+D.J. Drahos, B.C. Hemming, S. Mcpherson
+Tracking recombinant organisms in the environmentbeta-galactosidase as a selectable non-antibiotic marker for fluorescent Pseudomonas
+Biotechnology, 4 (1986), pp. 439444
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (92)
+Du et al., 1992
+S.J. Du, Z. Gong, G.L. Fletcher, M.A. Shears, M.J. King, D.R. Idler, C.L. Hew
+Growth enhancement in transgenic Atlantic salmon by the use of an all fish chimeric growth hormone gene construct
+Nat. Biotechnol., 10 (1992), pp. 176181
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (42)
+Duan et al., 2010
+J.J. Duan, J.G. Lundgren, S. Naranjo, M. Marvier
+Extrapolating non-target risk of Bt crops from laboratory to field
+Biol. Lett., 6 (2010), pp. 7477
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (62)
+Duc et al., 2011
+C. Duc, W. Nentwig, A. Lindfeld
+No adverse effect of genetically modified antifungal wheat on decomposition dynamics and the soil fauna communitya field study
+PLoS One, 6 (2011), p. e25014 doi:25010.21371/journal.pone.0025014
+
+Full Text via CrossRef
+Dunfield and Germida, 2003
+K.E. Dunfield, J.J. Germida
+Seasonal changes in the rhizosphere microbial communities associated with field-grown genetically modified canola (Brassica napus)
+Appl. Environ. Microbiol., 69 (2003), pp. 73107318
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (110)
+Dunham et al., 2002
+R.A. Dunham, G.W. Warr, A. Nichols, P.L. Duncan, B. Argue, D. Middleton, H. Kucuktas
+Enhanced bacterial disease resistance of transgenic channel catfish Ictalurus punctatus possessing cecropin genes
+Mar. Biotechnol., 4 (2002), pp. 338344
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (62)
+Edgerton, 2009
+M.D. Edgerton
+Increasing crop productivity to meet global needs for feed, food, and fuel
+Plant Physiol., 149 (2009), pp. 713
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (142)
+Ellstrand, 2003
+N.C. Ellstrand
+Current knowledge of gene flow in plants: implications for transgene flow
+Philo. Trans. R Soc. Lond. Ser. B Biol. Sci., 358 (2003), pp. 11631170
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (179)
+Ellstrand et al., 2013
+N.C. Ellstrand, P. Meirmans, J. Rong, D. Bartsch, A. Ghosh, T.J. de Jong, P. Haccou, B.R. Lu, A.A. Snow, C.N. Stewart, J.L. Strasburg, P.H. van Tienderen, K. Vrieling, D. Hooftman
+Introgression of crop alleles into wild or weedy populations
+Annu. Rev. Ecol. Evol. Systematics, 44 (2013), pp. 325345
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (44)
+European Commission, 2014a
+EU Register of authorised GMOs, http://ec.europa.eu/food/dyna/gm_register/gm_register_auth.cfm?pr_id=18. Accessed October 6th 2014.
+European Commission, 2014b
+European Commission, 2014b. EU Register of authorised GMOs, http://ec.europa.eu/food/dyna/gm_register/gm_register_auth.cfm?pr_id=19. Accessed October 6th 2014.
+Fang et al., 2012
+H. Fang, B. Dong, H. Yan, F.F. Tang, B.C. Wang, Y.L. Yu
+Effect of vegetation of transgenic Bt rice lines and their straw amendment on soil enzymes, respiration, functional diversity and community structure of soil microorganisms under field conditions
+J. Environ. Sci., 24 (2012), p. 1259
+
+Article |  PDF (696 K) | View Record in Scopus | Citing articles (7)
+Fletcher et al., 2004
+G.L. Fletcher, M.A. Shears, E.S. Yaskowiak, M.J. King, S.V. Goddard
+Gene transfer: potential to enhance the genome of Atlantic salmon for aquaculture
+Aust. J. Exp. Agric., 44 (2004), pp. 10951100
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (33)
+Food and Water Watch, 2010
+Food & Water Watch, 2010. Enviropig or FrankenSwine? Why genetically modifying pigs could cause a load of Manure. Fact sheet, June 2010. http://documents.foodandwaterwatch.org/doc/Enviropig.pdf#_ga=1.175912866.181127406.1412596696 Accessed October 6th 2014.
+Forabosco et al., 2013
+F. Forabosco, M. Lohmus, L. Rydhmer, L.F. Sundstrm
+Genetically modified farm animals and fish in agriculture: a review
+Livest. Sci., 153 (2013), pp. 19
+
+Article |  PDF (218 K) | View Record in Scopus | Citing articles (12)
+Forsberg et al., 2009
+C.W. Forsberg, R.G. Meidinger, J.P. Phillips
+Developments on the EnviropigTM file 28th Centralia Swine Research Update, Centralia Swine Research Update (2009) http://www.centraliaswineresearch.ca/proconline.html
+
+Franchi et al., 2004
+E. Franchi, C. Tosi, G. Scolla, G. Della Penna, F. Rodriguez, P.M. Pedroni
+Metabolically engineered Rhodobacter sphaeroides RV strains for improved biohydrogen photoproduction combined with disposal of food wastes
+Mar. Biotechnol., 6 (2004), pp. 552565
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (60)
+Freedman et al., 2011
+B. Freedman, P.M. Catling, Z. Lucas
+Effects of feral horses on vegetation of Sable Island, Nova Scotia
+Can. Field-Nat., 125 (2011), pp. 200212
+
+Gassmann et al., 2014
+A.J. Gassmann, J.L. Petzold-Maxwell, E.H. Clifton, M.W. Dunbar, A.M. Hoffmann, D.A. Ingber, R.S. Keweshan
+Field-evolved resistance by western corn rootworm to multiple Bacillus thuringiensis toxins in transgenic maize
+Proc. Natl. Acad. Sci. U. S. A., 111 (2014), pp. 51415146
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (70)
+Gilbert, 2013
+N. Gilbert
+A hard look at GM crops
+Nature, 497 (2013), pp. 2426
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (27)
+Gliddon, 1994
+C. Gliddon
+The impacts of hybrids between genetically modified crop plants and their related speciesbiological models and their perspectives
+Mol. Ecol., 3 (1994), pp. 4144
+
+View Record in Scopus | Citing articles (30)
+Golovan et al., 2001
+S.P. Golovan, R.G. Meidinger, A. Ajakaiye, M. Cottrill, M.Z. Wiederkehr, D.J. Barney, C. Plante, J.W. Pollard, M.Z. Fan, M.A. Hayes, J. Laursen, J.P. Hjorth, R.R. Hacker, J.P. Phillips, C.W. Forsberg
+Pigs expressing salivary phytase produce low-phosphorus manure
+Nat. Biotechnol., 19 (2001), p. 741
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (217)
+Griffiths et al., 2007
+B.S. Griffiths, S. Caul, J. Thompson, A.N.E. Birch, J. Cortet, M.N. Andersen, P.H. Krogh
+Microbial and microfaunal community structure in cropping systems with genetically modified plants
+Pedobiologia, 51 (2007), pp. 195206
+
+Article |  PDF (183 K) | View Record in Scopus | Citing articles (35)
+Grime, 1998
+J.P. Grime
+Benefits of plant diversity to ecosystems: immediate, filter and founder effects
+J. Ecol., 86 (1998), pp. 902910
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (801)
+Haegele and Below, 2013
+J.W. Haegele, F.E. Below
+Transgenic corn rootworm protection increases grain yield and nitrogen use of maize
+Crop Sci., 53 (2013), pp. 585594
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (9)
+Haney et al., 2002
+R.L. Haney, S.A. Senseman, F.M. Hons
+Effect of roundup ultra on microbial activity and biomass from selected soils
+J. Environ. Qual., 31 (2002), pp. 730735
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (54)
+Hannula et al., 2012
+S.E. Hannula, W. de Boer, J. van Veen
+A 3-year study reveals that plant growth stage, season and field site affect soil fungal communities while cultivar and GM-trait have minor effects
+PLoS One, 7 (2012), p. e33819 33810.31371/journal.pone.0033819
+
+Full Text via CrossRef
+Harker et al., 2012
+K.N. Harker, J.T. ODonovan, R.E. Blackshaw, H.J. Beckie, C. Mallory-Smith, B.D. Maxwell
+Our view
+Weed Sci., 60 (2012), pp. 143144
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (16)
+Haro and de Lorenzo, 2001
+M.A. Haro, V. de Lorenzo
+Metabolic engineering of bacteria for environmental applications: construction of Pseudomonas strains for biodegradation of 2-chlorotoluene
+J. Biotechnol., 85 (2001), pp. 103113
+
+Article |  PDF (214 K) | View Record in Scopus | Citing articles (51)
+Hawes et al., 2003
+C. Hawes, A.J. Haughton, J.L. Osborne, D.B. Roy, S.J. Clark, J.N. Perry, P. Rothery, D.A. Bohan, D.R. Brooks, G.T. Champion, A.M. Dewar, M.S. Heard, I.P. Woiwod, R.E. Daniels, M.W. Young, A.M. Parish, R.J. Scott, L.G. Firbank, G.R. Squire
+Responses of plants and invertebrate trophic groups to contrasting herbicide regimes in the Farm Scale Evaluations of genetically modified herbicide tolerant crops
+Philo. Trans. R. Soc. Lond. Ser. B Biol. Sci., 358 (2003), pp. 18991913
+
+View Record in Scopus | Citing articles (133)
+Heap, 2014
+Heap, I., 2014. The international survey of herbicide resistant weeds, http://www.weedscience.com Accessed October 6th 2014.
+Hegarty, 1999
+R.S. Hegarty
+Reducing rumen methane emissions through elimination of rumen protozoa
+Aust. J. Agric. Res., 50 (1999), pp. 13211327
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (103)
+Herrero et al., 2008
+O. Herrero, D. Ramon, M. Orejas
+Engineering the Saccharomyces cerevisiae isoprenoid pathway for de novo production of aromatic monoterpenes in wine
+Metab. Eng., 10 (2008), pp. 7886
+
+Article |  PDF (568 K) | View Record in Scopus | Citing articles (38)
+Hew et al., 1999
+C. Hew, R. Poon, F. Xiong, S. Gauthier, M. Shears, M. King, P. Davies, G. Fletcher
+Liver-specific and seasonal expression of transgenic Atlantic salmon harboring the winter flounder antifreeze protein gene
+Transgenic Res., 8 (1999), pp. 405414
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (35)
+Hook et al., 2010
+Hook, S.E., Wright, A.D.G., McBride, B.W., Methanogens: methane producers of the rumen and mitigation strategies. Archaea, 2010, Article ID 945785, doi:10.1155/2010/945785.
+Icoz and Stotzky, 2008
+I. Icoz, G. Stotzky
+Fate and effects of insect-resistant Bt crops in soil ecosystems
+Soil Biol. Biochem., 40 (2008), pp. 559586
+
+Article |  PDF (427 K) | View Record in Scopus | Citing articles (177)
+Itakura et al., 2013
+M. Itakura, Y. Uchida, H. Akiyama, Y.T. Hoshino, Y. Shimomura, S. Morimoto, K. Tago, Y. Wang, C. Hayakawa, Y. Uetake, C. Sanchez, S. Eda, M. Hayatsu, K. Minamisawa
+Mitigation of nitrous oxide emissions from soils by Bradyrhizobium japonicum inoculation
+Nat. Clim. Change, 3 (2013), pp. 208212
+
+View Record in Scopus | Citing articles (14)
+Joutsjoki et al., 2002
+V. Joutsjoki, S. Luoma, M. Tamminen, M. Kilpi, E. Johansen, A. Palva
+Recombinant Lactococcus starters as a potential source of additional peptidolytic activity in cheese ripening
+J. Appl. Microbiol., 92 (2002), pp. 11591166
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (20)
+Kawata et al., 2009
+M. Kawata, K. Murakami, T. Ishikawa
+Dispersal and persistence of genetically modified oilseed rape around Japanese harbors
+Environ. Sci. Pollut. Res., 16 (2009), pp. 120126
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (30)
+Kerovuo and Tynkkynen, 2000
+J. Kerovuo, S. Tynkkynen
+Expression of Bacillus subtilis phytase in Lactobacillus plantarum 755
+Lett. Appl. Microbiol., 30 (2000), pp. 325329
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (40)
+Konishi et al., 2011
+K. Konishi, M. Yonai, K. Kaneyama, S. Ito, H. Matsuda, H. Yoshioka, T. Nagai, K. Imai
+Relationships of survival time, productivity and cause of death with telomere lengths of cows produced by somatic cell nuclear transfer
+J. Reprod. Dev., 57 (2011), pp. 572578
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (8)
+Lachnicht et al., 2004
+S.L. Lachnicht, P.F. Hendrix, R.L. Potter, D.C. Coleman, D.A. Crossley
+Winter decomposition of transgenic cotton residue in conventional till and no-till systems
+Appl. Soil Ecol., 27 (2004), pp. 135142
+
+Article |  PDF (290 K) | View Record in Scopus | Citing articles (33)
+Lai et al., 2006
+L. Lai, J.X. Kang, R. Li, J. Wang, W.T. Witt, H.Y. Yong, Y. Hao, D.M. Wax, C.N. Murphy, A. Rieke, M. Samuel, M.L. Linville, S.W. Korte, R.W. Evans, T.E. Starzl, R.S. Prather, Y. Dai
+Generation of cloned transgenic pigs rich in omega-3 fatty acids
+Nat. Biotechnol., 24 (2006), pp. 435436
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (204)
+Lau et al., 2014
+Lau, W., Fischbach, M.A., Osbourn, A., Sattely, E.S., Key applications of plant metabolic engineering. PLoS Biol.12, 2014, e1001879, doi:1001810.1001371/journal.pbio.1001879.
+Lgre et al., 2006
+A. Lgre, M.J. Simard, E. Johnson, F.C. Stevenson, H. Beckie, R.E. Blackshaw
+Control of volunteer canola with herbicides: effects of plant growth stage and cold acclimation
+Weed Technol., 20 (2006), pp. 485493
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (8)
+Li et al., 2015
+L. Li, T.J. Pitcher, R.H. Devlin
+Potential risks of trophic impacts by escaped transgenic salmon in marine environments
+Environ. Conserv., 42 (2015), pp. 152161
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (1)
+Li et al., 2011
+X.G. Li, B.A. Liu, J.J. Cui, D.D. Liu, S.A. Ding, B. Gilna, J.Y. Luo, Z.X. Fang, W. Cao, Z.M. Han
+No evidence of persistent effects of continuously planted transgenic insect-resistant cotton on soil microorganisms
+Plant Soil, 339 (2011), pp. 247257
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (26)
+Lilley and Bailey, 1997
+A.K. Lilley, M.J. Bailey
+The acquisition of indigenous plasmids by a genetically marked pseudomonad population colonizing the sugar beet phytosphere is related to local environmental conditions
+Appl. Environ. Microbiol., 63 (1997), pp. 15771583
+
+View Record in Scopus | Citing articles (88)
+Lilley et al., 2003
+A.K. Lilley, M.J. Bailey, M. Barr, K. Kilshaw, T.M. Timms-Wilson, M.J. Day, S.J. Norris, T.H. Jones, H.C.J. Godfray
+Population dynamics and gene transfer in genetically modified bacteria in a model microcosm
+Mol. Ecol., 12 (2003), pp. 30973107
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (15)
+Liu et al., 2010
+J. Liu, G. Yan, C. Shu, C. Zhao, C. Liu, F. Song, L. Zhou, J. Ma, J. Zhang, D. Huang
+Construction of a Bacillus thuringiensis engineered strain with high toxicity and broad pesticidal spectrum against coleopteran insects
+Appl. Microbiol. Biotechnol., 87 (2010), pp. 243249
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (12)
+Liu et al., 2008
+W. Liu, H.H. Lu, W. Wu, Q.K. Wei, Y.X. Chen, J.E. Thies
+Transgenic Bt rice does not affect enzyme activities and microbial composition in the rhizosphere during crop development
+Soil Biol. Biochem., 40 (2008), pp. 475486
+
+Article |  PDF (789 K) | View Record in Scopus | Citing articles (62)
+Lo et al., 1991
+D. Lo, V. Pursel, P.J. Linton, E. Sandgren, R. Behringer, C. Rexroad, R.D. Palmiter, R.L. Brinster
+Expression of mouse IgA by transgenic mice, pigs and sheep
+Eur. J. Immunol., 21 (1991), pp. 10011006
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (47)
+Londo et al., 2011a
+J.P. Londo, M.A. Bollman, C.L. Sagers, E.H. Lee, L.S. Watrud
+Changes in fitness-associated traits due to the stacking of transgenic glyphosate resistance and insect resistance in Brassica napus L
+Heredity, 107 (2011), pp. 328337
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (8)
+Londo et al., 2011b
+J.P. Londo, M.A. Bollman, C.L. Sagers, E.H. Lee, L.S. Watrud
+Glyphosate-drift but not herbivory alters the rate of transgene flow from single and stacked trait transgenic canola (Brassica napus) to nontransgenic B. napusandB. rapa
+New Phyt., 191 (2011), pp. 840849
+
+View Record in Scopus | Citing articles (7)
+Londono-R et al., 2013
+L.M. Londono-R, D. Tarkalson, J.E. Thies
+In field rates of decomposition and microbial communities colonizing residues vary by depth of residue placement and plant part, but not by crop genotype for residues from two Cry1Ab Bt corn hybrids and their non-transgenic isolines
+Soil Biol. Biochem., 57 (2013), pp. 349355
+
+Article |  PDF (276 K) | View Record in Scopus | Citing articles (2)
+Lu et al., 2010a
+H.H. Lu, W.X. Wu, Y.X. Chen, X.J. Zhang, M. Devare, J.E. Thies
+Decomposition of Bt transgenic rice residues and response of soil microbial community in rapeseed-rice cropping system
+Plant Soil, 336 (2010), pp. 279290
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (15)
+Lu et al., 2010b
+Y.H. Lu, K.M. Wu, Y.Y. Jiang, B. Xia, P. Li, H.Q. Feng, K.A.G. Wyckhuys, Y.Y. Guo
+Mirid bug outbreaks in multiple crops correlated with wide scale adoption of Bt cotton in China
+Science, 328 (2010), pp. 11511154
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (240)
+Lupwayi et al., 2007
+N.Z. Lupwayi, K.G. Hanson, K.N. Harker, G.W. Clayton, R.E. Blackshaw, J.T. O'Donovan, E.N. Johnson, Y. Gan, R.B. Irvine, M.A. Monreal
+Soil microbial biomass, functional diversity and enzyme activity in glyphosate-resistant wheat-canola rotations under low-disturbance direct seeding and conventional tillage
+Soil Biol. Biochem., 39 (2007), pp. 14181427
+
+Article |  PDF (290 K) | View Record in Scopus | Citing articles (42)
+Lyall et al., 2011
+J. Lyall, R.M. Irvine, A. Sherman, T.J. McKinley, A. Nunez, A. Purdie, L. Outtrim, I.H. Brown, G. Rolleston-Smith, H. Sang, L. Tiley
+Suppression of avian influenza transmission in genetically modified chickens
+Science, 331 (2011), pp. 223226
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (79)
+Marshall, 2010
+J.M. Marshall
+The cartagena protocol and genetically modified mosquitoes
+Nat. Biotechnol., 28 (2010), pp. 896897
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (22)
+Marvier, 2011
+M. Marvier
+Using meta-analysis to inform risk assessment and risk management
+J. Consum. Prot. Food Saf., 6 (Suppl. 1) (2011), pp. 113118
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (5)
+Medeiros et al., 2009
+E. Medeiros, M. Phelps, F. Fuentes, T. Bradley
+Overexpression of follistatin in trout stimulates increased muscling
+Am. J. Physiol. Regul. Integr. Comp. Physiol., 297 (2009), pp. R235R242
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (47)
+Monsanto, 2014a
+Monsanto, 2014a. http://www.monsanto.com/products/pages/refuge.aspx. Accessed October 6th 2014.
+Monsanto, 2014b
+Monsanto, 2014b. http://www.monsanto.com/products/pages/refuge-in-the-bag-corn-products.aspx. Accessed October 6th 2014.
+Mortensen et al., 2012
+D.A. Mortensen, J.F. Egan, B.D. Maxwell, M.R. Ryan, R.G. Smith
+Navigating a critical juncture for sustainable weed management
+Bioscience, 62 (2012), pp. 7584
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (84)
+Motavalli et al., 2004
+P.P. Motavalli, R.J. Kremer, M. Fang, N.E. Means
+Impact of genetically modified crops and their management on soil microbially mediated plant nutrient ransformations
+J. Environ. Qual., 33 (2004), pp. 816824
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (81)
+Mozdziak et al., 2003
+P.E. Mozdziak, S. Pophal, S. Borwornpinyo, J.N. Petitte
+Transgenic chickens expressing beta-galactosidase hydrolyze lactose in the intestine
+J. Nutr., 133 (2003), pp. 30763079
+
+View Record in Scopus | Citing articles (15)
+Mueller et al., 2012
+N.D. Mueller, J.S. Gerber, M. Johnston, D.K. Ray, N. Ramankutty, J.A. Foley
+Closing yield gaps through nutrient and water management
+Nature, 490 (2012), pp. 254257
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (330)
+Mungai et al., 2005
+N.W. Mungai, P.P. Motavalli, K.A. Nelson, R.J. Kremer
+Differences in yields, residue composition and N mineralization dynamics of Bt and non- Bt maize
+Nutr. Cycl. Agroecosyst., 73 (2005), pp. 101109
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (37)
+Naik et al., 2005
+G. Naik, M. Qaim, A. Subramanian, D. Zilberman
+Bt cotton controversy: some paradoxes explained
+Econ. Polit. Wkly., 40 (2005), pp. 15141517
+
+View Record in Scopus | Citing articles (28)
+Nam et al., 2008
+Y.K. Nam, N. Maclean, G. Hwang, D.S. Kim
+Autotransgenic and allotransgenic manipulation of growth traits in fish for aquaculture: a review
+J. Fish Biol., 72 (1) (2008), pp. 126
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (23)
+Naranjo, 2011
+S.E. Naranjo
+Impacts of Bt transgenic cotton on integrated pest management
+J. Agric. Food Chem., 59 (2011), pp. 58425851
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (50)
+Nottle et al., 1999
+M.B. Nottle, H. Nagashima, P.J. Verma, Z.T. Du, C.G. Grupen, S.M. McIlfatrick, R.J. Ashman, M.P. Harding, C. Giannakis, P.L. Wigley, I.G. Lyons, D.T. Harrison, B.G. Luxford, R.G. Campbell, R.J. Crawford, A.J. Robins
+Production and analysis of transgenic pigs containing a metallothionein porcine growth hormone gene construct
+J.D. Murray, G.B. Anderson, A.M. Oberbauer, M.M. McGloughlin (Eds.), Transgenic Animals in Agriculture, CABI, Wallingford (1999), pp. 145156
+
+View Record in Scopus | Citing articles (1)
+Oh et al., 2011
+Y.K. Oh, S.M. Raj, G.Y. Jung, S. Park
+Current status of the metabolic engineering of microorganisms for biohydrogen production
+Bioresour. Technol., 102 (2011), pp. 83578367
+
+Article |  PDF (486 K) | View Record in Scopus | Citing articles (59)
+Philippot and Hallin, 2011
+L. Philippot, S. Hallin
+Towards food, feed and energy crops mitigating climate change
+Trends Plant Sci., 16 (2011), pp. 476480
+
+Article |  PDF (310 K) | View Record in Scopus | Citing articles (16)
+Philippot et al., 2006
+L. Philippot, M. Kuffner, D. Cheneby, G. Depret, G. Laguerre, F. Martin-Laurent
+Genetic structure and activity of the nitrate-reducers community in the rhizosphere of different cultivars of maize
+Plant Soil, 287 (2006), pp. 177186
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (19)
+Phillips et al., 2006
+Phillips, J.P., Golovan, S.P., Meidinger, R.G., Forsberg, C.W., 2006. Transgenic enhancement of nutrient cycling: moving toward an environmentally sustainable animal agriculture, Proceedings of the 8th World Congress on Genetics Applied to Livestock Production, Belo Horizonte, Minas Gerais, Brazil, 1318 August, 2006. Instituto Prociencia, Minas Gerais, pp. 1920.
+Pleasants and Oberhauser, 2013
+J.M. Pleasants, K.S. Oberhauser
+Milkweed loss in agricultural fields because of herbicide use: effect on the monarch butterfly population
+Insect Conserv. Divers., 6 (2013), pp. 135144
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (52)
+Pursel et al., 1992
+V.G. Pursel, P. Sutrave, R.J. Wall, A.M. Kelly, S.H. Hughes
+Transfer of C-Ski gene into swine to enhance muscle development
+Theriogenology, 37 (1992), p. 278
+
+Article |  PDF (74 K) | View Record in Scopus | Citing articles (16)
+Ramsay et al., 2003
+Ramsay, G., Thompson, C., Squire, G., Quantifying landscape-scale gene flow in oilseed rape, 2003, Department for Environment, Food and Rural Affairs; London.
+Ranathunge et al., 2014
+K. Ranathunge, A. El-Kereamy, S. Gidda, Y.M. Bi, S.J. Rothstein
+AMT11 transgenic rice plants with enhanced NH4 permeability show superior growth and higher yield under optimal and suboptimal NH4 conditions
+J. Exp. Bot., 65 (2014), pp. 965979
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (15)
+Ray et al., 2012
+Ray, D.K., Ramankutty, N., Mueller, N.D., West, P.C., Foley, J.A., Recent patterns of crop yield growth and stagnation, Nat. Commun. 3, 2012, 1293, doi:1210.1038/ncomms2296.
+Reeves et al., 2012
+Reeves, R.G., Denton, J.A., Santucci, F., Bryk, J., Reed, F.A., Scientific standards and the regulation of genetically modified insects, PLoS Negl. Trop. Dis.6, 2012, e1502, doi:1510.1371/journal.pntd.0001502.
+Reh et al., 2004
+W.A. Reh, E.A. Maga, N.M. Collette, A. Moyer, J.S. Conrad-Brink, S.J. Taylor, E.J. DePeters, S. Oppenheim, J.D. Rowe, R.H. BonDurant, G.B. Anderson, J.D. Murray
+Hot topic: using a stearoyl-CoA desaturase transgene to alter milk fatty acid composition
+J. Dairy Sci., 87 (2004), pp. 35103514
+
+Article |  PDF (274 K) | Full Text via CrossRef | View Record in Scopus | Citing articles (49)
+Richardson et al., 2009
+D. Richardson, H. Felgate, N. Watmough, A. Thomson, E. Baggs
+Mitigating release of the potent greenhouse gas N2O from the nitrogen cyclecould enzymic regulation hold the key?
+Trends Biotechnol., 27 (2009), pp. 388397
+
+Article |  PDF (582 K) | View Record in Scopus | Citing articles (164)
+Richt et al., 2007
+J.A. Richt, P. Kasinathan, A.N. Hamir, J. Castilla, T. Sathiyaseelan, F. Vargas, J. Sathiyaseelan, H. Wu, H. Matsushita, J. Koster, S. Kato, I. Ishida, C. Soto, J.M. Robl, Y. Kuroiwa
+Production of cattle lacking prion protein
+Nat. Biotechnol., 25 (2007), pp. 132138
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (131)
+Ripp et al., 2000
+S. Ripp, D.E. Nivens, Y. Ahn, C. Werner, J. Jarrell, J.P. Easter, C.D. Cox, R.S. Burlage, G.S. Sayler
+Controlled field release of a bioluminescent genetically engineered microorganism for bioremediation process monitoring and control
+Environ. Sci. Technol., 34 (2000), pp. 846853
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (90)
+Ross et al., 2013
+E.M. Ross, P.J. Moate, L. Marett, B.G. Cocks, B.J. Hayes
+Investigating the effect of two methane-mitigating diets on the rumen microbiome using massively parallel sequencing
+J. Dairy Sci., 96 (2013) 117
+
+Saeki et al., 2004
+K. Saeki, K. Matsumoto, M. Kinoshita, I. Suzuki, Y. Tasaka, K. Kano, Y. Taguchi, K. Mikami, M. Hirabayashi, N. Kashiwazaki, Y. Hosoi, N. Murata, A. Iritani
+Functional expression of a Delta12 fatty acid desaturase gene from spinach in transgenic pigs
+Proc. Natl. Acad. Sci. U. S. A, 101 (2004), pp. 63616366
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (81)
+Salter and Crittenden, 1989
+D.W. Salter, L.B. Crittenden
+Artificial insertion of a dominant gene for resistance to avian leukosis virus into the germ line of the chicken
+Theor. Appl. Genet., 77 (1989) 457461
+
+Sarkar et al., 2008
+B. Sarkar, A.K. Patra, T.J. Purakayastha
+Transgenic Bt -cotton affects enzyme activity and nutrient availability in a sub-tropical inceptisol
+J. Agron. Crop Sci., 194 (2008), pp. 289296
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (14)
+Schafer et al., 2011
+Schafer, M.G., Ross, A.A., Londo, J.P., Burdick, C.A., Lee, E.H., Travers, S.E., Van de Water, P.K., Sagers, C.L., The establishment of genetically engineered Canola populations in the US, PLoS One6, 2011, e25736, doi:25710.21371/journal.pone.0025736.
+Scharfen et al., 2007
+E.C. Scharfen, D.A. Mills, E.A. Maga
+Use of human lysozyme transgenic goat milk in cheese making: effects on lactic acid bacteria performance
+J. Dairy Sci., 90 (2007), pp. 40844091
+
+Article |  PDF (177 K) | Full Text via CrossRef | View Record in Scopus | Citing articles (19)
+Schmalenberger and Tebbe, 2003
+A. Schmalenberger, C.C. Tebbe
+Genetic profiling of noncultivated bacteria from the rhizospheres of sugar beet (Beta vulgaris) reveal field and annual variability but no effect of a transgenic herbicide resistance
+Can. J. Microbiol., 49 (2003), pp. 18
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (28)
+Schwartz et al., 2000
+M.W. Schwartz, C.A. Brigham, J.D. Hoeksema, K.G. Lyons, M.H. Mills, P.J. van Mantgem
+Linking biodiversity to ecosystem function: implications for conservation ecology
+Oecologia, 122 (2000), pp. 297305
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (353)
+Schwieger and Tebbe, 2000
+F. Schwieger, C.C. Tebbe
+Effect of field inoculation with Sinorhizobium meliloti L33 on the composition of bacterial communities in rhizospheres of a target plant (Medicago sativa) and a non-target plant (Chenopodium album)linking of 16S rRNA gene-based single-strand conformation polymorphism community profiles to the diversity of cultivated bacteria
+Appl. Environ. Microbiol, 66 (2000), pp. 35563565
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (85)
+Sessitsch et al., 2004
+A. Sessitsch, S. Gyamfi, D. Tscherko, M.H. Gerzabek, E. Kandeler
+Activity of microorganisms in the rhizosphere of herbicide treated and untreated transgenic glufosinate-tolerant and wildtype oilseed rape grown in containment
+Plant Soil, 266 (2004), pp. 105116
+
+Sester et al., 2012
+M. Sester, H. Darmency, N. Colbach
+Contribution of groundkeepers vs. weed beet to gene escape from sugar beet (Beta vulgaris spp.). Consequences for growing genetically-modified sugar beeta modelling approach
+Field Crop. Res., 135 (2012), pp. 4657
+
+Article |  PDF (953 K) | View Record in Scopus | Citing articles (1)
+Shen et al., 2006
+R.F. Shen, H. Cai, W.H. Gong
+Transgenic Bt cotton has no apparent effect on enzymatic activities or functional diversity of microbial communities in rhizosphere soil
+Plant Soil, 285 (2006), pp. 149159
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (61)
+Shi et al., 2013
+G.M. Shi, J.P. Chavas, J. Lauer
+Commercialized transgenic traits, maize productivity and yield risk
+Nat. Biotechnol., 31 (2013), pp. 111114
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (27)
+Shintani et al., 2014
+M. Shintani, K. Matsui, J. Inoue, A. Hosoyama, S. Ohji, A. Yamazoe, H. Nojiri, K. Kimbara, M. Ohkuma
+Single-cell analyses revealed transfer ranges of IncP-1, IncP-7, and IncP-9 plasmids in a soil bacterial community
+Appl. Environ. Microbiol., 80 (2014), pp. 138145
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (15)
+Shu et al., 2011
+Y.H. Shu, H.H. Ma, Y. Du, Z.X. Li, Y.J. Feng, J.W. Wang
+The presence of Bacillus thuringiensis (Bt) protein in earthworms Eisenia fetida has no deleterious effects on their growth and reproduction
+Chemosphere, 85 (2011), pp. 16481656
+
+Article |  PDF (256 K) | View Record in Scopus | Citing articles (4)
+Skot et al., 1990
+L. Skot, S.P. Harrison, A. Nath, L.R. Mytton, B.C. Clifford
+Expression of insecticidal activity in Rhizobium containing the delta-endotoxin gene cloned from Bacillus thuringiensis subsp. tenebrionis
+Plant Soil, 127 (1990), pp. 285295
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (32)
+Squire et al., 2011
+G.R. Squire, B. Breckling, P. Dietz, A. feilstetter, R.B. Jrgensen, J. Lecomte, S. Pivard, H. Reuter, M.W. Young
+Status of feral oilseed rape in Europe: its minor role as a GM impurity and its potential as a reservoir of transgene persistence
+Environ. Sci. Pollut. Res., 18 (2011), pp. 111115
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (14)
+Squire et al., 2003
+G.R. Squire, D.R. Brooks, D.A. Bohan, G.T. Champion, R.E. Daniels, A.J. Haughton, C. Hawes, M.S. Heard, M.O. Hill, M.J. May, J.L. Osborne, J.N. Perry, D.B. Roy, I.P. Woiwod, L.G. Firbank
+On the rationale and interpretation of the farm scale evaluations of genetically modified herbicide-tolerant crops
+Philo. Trans. R. Soc. Lond. Ser. B Biol. Sci., 358 (2003), pp. 17791799
+
+View Record in Scopus | Citing articles (101)
+Steinfeld et al., 2006
+H. Steinfeld, P. Gerber, T. Wassenaar, V. Castel, M. Rosales, C. de Haan
+Livestocks long shadow
+United Nations Food and Agriculture Organization, Rome (2006)
+
+Subbarao et al., 2006
+G.V. Subbarao, T. Ishikawa, O. Ito, K. Nakahara, H.Y. Wang, W.L. Berry
+A biolumiuescence assay to detect nitrification inhibitors released from plant roots: a case study with Brachiaria humidicola
+Plant Soil, 288 (2006), pp. 101112
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (57)
+Subbarao et al., 2009
+G.V. Subbarao, K. Nakahara, M.P. Hurtado, H. Ono, D.E. Moreta, A.F. Salcedo, A.T. Yoshihashi, T. Ishikawa, M. Ishitani, M. Ohnishi-Kameyama, M. Yoshida, M. Rondon, I.M. Rao, C.E. Lascano, W.L. Berry, O. Ito
+Evidence for biological nitrification inhibition in Brachiaria pastures
+Proc. Natl. Acad. Sci. U. S. A., 106 (2009), pp. 1730217307
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (83)
+Subbarao et al., 2007
+G.V. Subbarao, B. Tomohiro, K. Masahiro, I. Osamu, H. Samejima, H.Y. Wang, S.J. Pearse, S. Gopalakrishnan, K. Nakahara, A.K.M.Z. Hossain, H. Tsujimoto, W.L. Berry
+Can biological nitrification inhibition (BNI) genes from perennial Leymus racemosus (Triticeae) combat nitrification in wheat farming?
+Plant Soil, 299 (2007), pp. 5564
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (48)
+Sundstrm et al., 2010
+L.F. Sundstrm, M. Lohmus, R.H. Devlin
+Migration and growth potential of coho salmon smolts: implications for ecological impacts from growth-enhanced fish
+Ecol. Appl., 20 (2010), pp. 13721383
+
+Full Text via CrossRef
+Sutton et al., 2011
+M.A. Sutton, O. Oenema, J.W. Erisman, A. Leip, H. van Grinsven, W. Winiwarter
+Too much of a good thing
+Nature, 472 (2011), pp. 159161
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (193)
+Swan et al., 2009
+C.M. Swan, P.D. Jensen, G.P. Dively, W.O. Lamp
+Processing of transgenic crop residues in stream ecosystems
+J. Appl. Ecol., 46 (2009), pp. 13041313
+
+View Record in Scopus | Citing articles (21)
+Sybesma et al., 2003
+W. Sybesma, E. van den Born, M. Starrenburg, I. Mierau, M. Kleerebezem, W.M. de Vos, J. Hugenholtz
+Controlled modulation of folate polyglutamyl tail length by metabolic engineering of Lactococcus lactis
+Appl. Environ. Microbiol., 69 (2003), pp. 71017107
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (25)
+Tabashnik et al., 2013
+B.E. Tabashnik, T. Brevault, Y. Carriere
+Insect resistance to Bt crops: lessons from the first billion acres
+Nat. Biotechnol., 31 (2013), pp. 510521
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (171)
+Tabashnik et al., 2010
+B.E. Tabashnik, M.S. Sisterson, P.C. Ellsworth, T.J. Dennehy, L. Antilla, L. Liesner, M. Whitlow, R.T. Staten, J.A. Fabrick, G.C. Unnithan, A.J. Yelich, C. Ellers-Kirk, V.S. Harpold, X.C. Li, Y. Carriere
+Suppressing resistance to Bt cotton with sterile insect releases
+Nat. Biotechnol., 28 (2010), pp. 13041309
+
+Thomas et al., 2000
+D.D. Thomas, C.A. Donnelly, R.J. Wood, L.S. Alphey
+Insect population control using a dominant, repressible, lethal genetic system
+Science, 287 (2000), pp. 24742476
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (283)
+Timms-Wilson et al., 2000
+T.M. Timms-Wilson, R.J. Ellis, A. Renwick, D.J. Rhodes, D.V. Mavrodi, D.M. Weller, L.S. Thomashow, M.J. Bailey
+Chromosomal insertion of phenazine-1-carboxylic acid biosynthetic pathway enhances efficacy of damping-off disease control by Pseudomonas fluorescens
+Mol. Plant Microbe Interact., 13 (2000), pp. 12931300
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (61)
+Tong et al., 2011
+J. Tong, H. Wei, X. Liu, W. Hu, M. Bi, Y. Wang, Q. Li, N. Li, J. Tong, H.X. Wei, X.F. Liu, W.P. Hu, M.J. Bi, Y.Y. Wang, Q.Y. Li, N. Li
+Production of recombinant human lysozyme in the milk of transgenic pigs
+Transgenic Res., 20 (2011), pp. 417419
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (22)
+Udayasuriyan et al., 1995
+V. Udayasuriyan, A. Nakamura, H. Masaki, T. Uozumi
+Transfer of an insecticidal protein gene of Bacillus thuringiensis into plant-colonizing Azospirillum
+World J. Microbiol. Biotechnol., 11 (1995), pp. 163167
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (17)
+Valls et al., 2000
+M. Valls, S. Atrian, V. de Lorenzo, L.A. Fernandez
+Engineering a mouse metallothionein on the cell surface of Ralstonia eutropha CH34 for immobilization of heavy metals in soil
+Nat. Biotechnol., 18 (2000), pp. 661665
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (138)
+van Dillewijn et al., 2001
+P. van Dillewijn, M.J. Soto, P.J. Villadas, N. Toro
+Construction and environmental release of a Sinorhizobium meliloti strain genetically modified to be more competitive for alfalfa nodulation
+Appl. Environ. Microbiol., 67 (2001), pp. 38603865
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (36)
+van Dillewijn et al., 2002
+P. van Dillewijn, P.J. Villadas, N. Toro
+Effect of a Sinorhizobium meliloti strain with a modified putA gene on the rhizosphere microbial community of alfalfa
+Appl. Environ. Microbiol., 68 (2002), pp. 42014208
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (29)
+Vauramo et al., 2006
+S. Vauramo, H.L. Pasonen, A. Pappinen, H. Setala
+Decomposition of leaf litter from chitinase transgenic silver birch (Betula pendula) and effects on decomposer populations in a field trial
+Appl. Soil Ecol., 32 (2006), pp. 338349
+
+Article |  PDF (334 K) | View Record in Scopus | Citing articles (20)
+Verwaal et al., 2007
+R. Verwaal, J. Wang, J.-P. Meijnen, H. Visser, G. Sandmann, J.A. van den Berg, A.J.J. van Ooyen
+High-level production of beta-carotene in Saccharomyces cerevisiae by successive transformation with carotenogenic genes from Xanthophyllomyces dendrorhous
+Appl. Environ. Microbiol., 73 (2007), pp. 43424350
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (119)
+Vicedo et al., 1993
+B. Vicedo, R. Penalver, M.J. Asins, M.M. Lopez
+Biological control of Agrobacterium tumefaciens, colonization, and pAgK48 transfer with Agrobacterium radiobacter K84 and the Tra-mutant K1060
+Appl. Environ. Microbiol., 59 (1993), pp. 309315
+
+View Record in Scopus | Citing articles (42)
+Wall et al., 2005
+R.J. Wall, A.M. Powell, M.J. Paape, D.E. Kerr, D.D. Bannerman, V.G. Pursel, K.D. Wells, N. Talbot, H.W. Hawk
+Genetically enhanced cows resist intramammary Staphylococcus aureus infection
+Nat. Biotechnol., 23 (2005), pp. 445451
+
+View Record in Scopus | Citing articles (173)
+Wan et al., 2012
+S. Wan, A.M. Johnson, I. Altosaar
+Expression of nitrous oxide reductase from Pseudomonas stutzeri in transgenic tobacco roots using the root-specific rolD promoter from Agrobacterium rhizogenes
+Ecol. Evol, 2 (2012), pp. 286297
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (4)
+Wang et al., 2000
+C.X. Wang, E. Knill, B.R. Glick, G. Defago
+Effect of transferring 1-aminocyclopropane-1-carboxylic acid (ACC) deaminase genes into Pseudomonas fluorescens strain CHA0 and its gacA derivative CHA96 on their growth-promoting and disease-suppressive capacities
+Can. J. Microbiol., 46 (2000), pp. 898907
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (176)
+Warwick et al., 2008
+S.I. Warwick, A. Legere, M.J. Simard, T. James
+Do escaped transgenes persist in nature? The case of an herbicide resistance transgene in a weedy Brassica rapa population
+Mol. Ecol., 17 (2008), pp. 13871395
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (121)
+Watrud et al., 2011
+L.S. Watrud, G. King, J.P. Londo, R. Colasanti, B.M. Smith, R.S. Waschmann, E.H. Lee
+Changes in constructed Brassica communities treated with glyphosate drift
+Ecol. Appl., 21 (2011), pp. 525538
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (12)
+Weih, 2003
+M. Weih
+Trade-offs in plants and the prospects for breeding using modern biotechnology
+New Phyt., 158 (2003), pp. 79
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (16)
+Weih et al., 2008
+M. Weih, U.M.E. Didon, A.C. Rnnberg-Wstljung, C. Bjrkman
+Integrated agricultural research and crop breeding: allelopathic weed control in cereals and long-term productivity in perennial bionmass crops
+Agric. Syst., 97 (2008), pp. 99107
+
+Article |  PDF (351 K) | View Record in Scopus | Citing articles (29)
+Weih et al., 2014
+M. Weih, S. Hoeber, F.P.F. Beyer
+Traits to ecosystems: the ecological sustainability challenge when developing future energy crops
+Front. Energy Res., 2 (2014), p. 17
+
+Whitham et al., 2006
+T.G. Whitham, J.K. Bailey, J.A. Schweitzer, S.M. Shuster, R.K. Bangert, C.J. Leroy, E.V. Lonsdorf, G.J. Allan, S.P. DiFazio, B.M. Potts, D.G. Fischer, C.A. Gehring, R.L. Lindroth, J.C. Marks, S.C. Hart, G.M. Wimp, S.C. Wooley
+A framework for community and ecosystem genetics: from genes to ecosystems
+Nat. Rev. Genet., 7 (2006), pp. 510523
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (498)
+Wimmer, 2003
+E.A. Wimmer
+Applications of insect transgenesis
+Nat. Rev. Genet., 4 (2003), pp. 225232
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (55)
+Wu et al., 2012
+X. Wu, H. Ouyang, B. Duan, D. Pang, L. Zhang, T. Yuan, L. Xue, D. Ni, L. Cheng, S. Dong, Z. Wei, L. Li, M. Yu, Q. Sun, D. Chen, L. Lai, Y. Dai, G. Li, X. Wu, H.S. Ouyang, B. Duan, D.X. Pang, L. Zhang, T. Yuan, L. Xue, D.B. Ni, L. Cheng, S.H. Dong, Z.Y. Wei, L. Li, M. Yu, Q.Y. Sun, D.Y. Chen, L.X. Lai, Y.F. Dai, G.P. Li
+Production of cloned transgenic cow expressing omega-3 fatty acids
+Transgenic Res., 21 (2012), pp. 537543
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (34)
+Xu et al., 2013
+Z. Xu, D.A. Hennessy, K. Sardana, G. Moschini
+The realized yield effect of genetically engineered crops: US maize and soybean
+Crop Sci., 53 (2013), pp. 735745
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (8)
+Yang et al., 2011
+B. Yang, J. Wang, B. Tang, Y. Liu, C. Guo, P. Yang, T. Yu, R. Li, J. Zhao, L. Zhang, Y. Dai, N. Li, B. Yang, J.W. Wang, B. Tang, Y.F. Liu, C.D. Guo, P.H. Yang, T. Yu, R. Li, J.M. Zhao, L. Zhang, Y.P. Dai, N. Li
+Characterization of bioactive recombinant human lysozyme expressed in milk of cloned transgenic cattle
+PLoS One, 6 (2011), p. e17593 http://dx.doi.org/10.1371/journal.pone.0017593
+
+Full Text via CrossRef
+Yanni et al., 2010
+S.F. Yanni, J.K. Whalen, B.L. Ma
+Crop residue chemistry, decomposition rates, and CO2 evolution in Bt and non- Bt corn agroecosystems in North America: a review
+Nutr. Cycl. Agroecosyst., 87 (2010), pp. 277293
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (7)
+Zapiola et al., 2008
+M.L. Zapiola, C.K. Campbell, M.D. Butler, C.A. Mallory-Smith
+Escape and establishment of transgenic glyphosate-resistant creeping bentgrass Agrostis stolonifera in Oregon, USA: a 4-year study
+J. Appl. Ecol., 45 (2008), pp. 486494
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (58)
+Zapiola and Mallory-Smith, 2012
+M.L. Zapiola, C.A. Mallory-Smith
+Crossing the divide: gene flow produces intergeneric hybrid in feral transgenic creeping bentgrass population
+Mol. Ecol., 21 (2012), pp. 46724680
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (14)
+Zeller et al., 2010
+Zeller, S.L., Kalinina, O., Brunner, S., Keller, B., Schmid, B., Transgene x environment interactions in genetically modified wheat. PLoS One5, 2010, e11405, doi:11410.11371/journal.pone.0011405.
+Zhang et al., 2012
+H.N. Zhang, W. Tian, J. Zhao, L. Jin, J. Yang, C.H. Liu, Y.H. Yang, S.W. Wu, K.M. Wu, J.J. Cui, B.E. Tabashnik, Y.D. Wu
+Diverse genetic basis of field-evolved resistance to Bt cotton in cotton bollworm from China
+Proc. Natl. Acad. Sci. U. S. A., 109 (2012), pp. 1027510280
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (67)
+Zhao et al., 2011
+J.H. Zhao, P. Ho, H. Azadi
+Benefits of Bt cotton counterbalanced by secondary pests? Perceptions of ecological change in China
+Environ. Monit. Assess., 173 (2011), pp. 985994
+
+Full Text via CrossRef | View Record in Scopus | Citing articles (34)
+Zilberman et al., 2010
+D. Zilberman, S.E. Sexton, M. Marra, F. Fernandez-Cornejo
+The economic impact of genetically engineered crops
+Choices Mag. Food Farm Resour. (2) (2010) Issues 25
+
+Corresponding author. Fax: +46 18 672890.
+Copyright  2015 Elsevier B.V. All rights reserved.
+
+About ScienceDirectRemote accessShopping cartContact and supportTerms and conditionsPrivacy policy
+Cookies are used by this site. For more information, visit the cookies page.
+Copyright  2016 Elsevier B.V. or its licensors or contributors. ScienceDirect  is a registered trademark of Elsevier B.V.

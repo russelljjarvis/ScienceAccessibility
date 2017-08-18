@@ -1,0 +1,757 @@
+Restrictions on Genetically Modified Organisms: United States | Law Library of Congress
+skip navigation
+Library of Congress
+Law Library of Congress
+Ask a Librarian
+Digital Collections
+Library Catalogs
+Search
+GO
+The Library of Congress > Law Library >
+Research & Reports
+> Legal Reports > Restrictions on Genetically Modified Organisms: United States
+Law Library of Congress Logo
+Law Library Home
+About the Law Library
+Research & Reports
+Find Legal Resources
+Educational & Research Opportunities
+Visiting the Law Library
+News & Events
+Contact
+In Custodia Legis
+Official blog from the Law Library of Congress
+Find the Law Library on:
+Facebook (external link)
+Twitter (Law Library) (external link)
+Twitter (Congress.gov)(external link)
+YouTube (external link)
+iTunes U (external link)
+Restrictions on Genetically Modified Organisms: United States
+Research & Reports
+|
+Guide to Law Online|Legal Research Guides | Legal Reports|Guides to Our Collections
+Back to Restrictions on Genetically Modified Organisms
+Introduction
+Public and Scholarly Opinion
+Structure of
+Pertinent Legislation
+Restrictions on Research, Production, and Marketing
+Restrictions on Releasing Organisms into the Environment
+Restrictions on GMOs in Foodstuffs
+Liability Regime
+Prominent Judicial Decisions
+GMOs
+are regulated in the United States under the Coordinated Framework for
+Regulation of Biotechnology, published in 1986, pursuant to previously existing
+statutory authority regulating conventional products, with a focus on the
+nature of the products rather than the process in which they are produced.
+Plant
+GMOs are regulated by the US Department of Agricultures Animal and Plant
+Health Inspection Service under the Plant Protection Act. GMOs in food, drugs,
+and biological products are regulated by the Food and Drug Administration under
+the Federal Food, Drug, and Cosmetic Act and the Public Health Service Act.
+GMO pesticides and microorganisms are regulated by the Environmental Protection
+Agency pursuant to the Federal Insecticide, Fungicide and Rodenticide Act and
+the Toxic Substances Control Act. The form of regulation varies depending on
+the type of GMO involved.
+I. Introduction
+The United
+States does not have any federal legislation that is specific to genetically
+modified organisms (GMOs). Rather, GMOs are regulated pursuant to health,
+safety, and environmental legislation governing conventional products. The US
+approach to regulating GMOs is premised on the assumption that regulation
+should focus on the nature of the products, rather than the process in which
+they were produced.[1]
+Compared to
+other countries, regulation of GMOs in the US is relatively favorable to their
+development. GMOs are an economically important component of the biotechnology
+industry, which now plays a significant role in the US economy.[2]
+For example, the US is the worlds leading producer of genetically modified
+(GM) crops. In 2012, of the 170.3 million hectares of biotech crops globally,
+the United States accounted for 69.5 million, over 40% of the total.[3]
+For several crops grown in the US, genetically engineered varieties now make up
+the vast majority of the crop. In 2013, 93% of the soybeans, 90% of the
+cotton, and 90% of the corn grown in the US were genetically engineered for
+either herbicide tolerance or insect resistance.[4]
+The US is not a
+party to the Cartagena Protocol on Biosafety.[5]
+As a signatory but a nonparty to the parent Convention on Biological Diversity,
+it cannot become a party to the Protocol.[6]
+It has participated in meetings as a nonparty observer, however.[7]
+Back to Top
+II. Public and Scholarly
+Opinion
+A. Public Opinion
+Public opinion on GMOs in the US is mixed. A series of
+polls conducted over five years, from 2001 to 2006, found that public
+understanding of biotechnology was relatively low, and that consumers were
+relatively unaware of the extent to which their foods included genetically
+modified ingredients.[8]
+Support for the introduction of genetically modified foods into the food supply
+held steady at 26 to 27% of respondents in favor over that time period, while
+opposition to the introduction of such foods fell from 58 to 46% over the
+period.[9]
+Polls indicate strong support for labeling of GMO foods;
+one recent poll found 93% of respondents supporting mandatory labeling.[10] The same poll found three-fourths
+of Americans expressing concern regarding GMOs in food; nearly half indicating
+they were aware that many processed or packaged foods contain genetically
+modified ingredients; around half saying they would not eat genetically
+modified vegetables, fruits, and grains; three-quarters stating they would not
+eat genetically modified fish; and two-thirds saying they would not eat
+genetically modified meat.[11]
+B. Scholarly Opinion
+Several
+scientific organizations in the US have issued studies or statements
+regarding the safety of GMOs indicating that there is
+no evidence that GMOs present unique safety risks compared to
+conventionally
+bred products. These include the National Research Council,[12] the American Association for the
+Advancement of Science,[13] and the American Medical Association.[14]
+Groups in the US opposed to GMOs include some environmental
+organizations,[15] organic farming organizations,[16] and consumer organizations.[17]
+A substantial number of legal academics have criticized the USs approach to regulating GMOs.[18]
+Back to Top
+III. Structure of
+Pertinent Legislation
+There is no
+comprehensive federal legislation specifically addressing GMOs. GMOs are
+regulated under the general statutory authority of environmental, health, and
+safety laws.
+A policy
+statement published in 1986 by the Executive Office of the President, Office of
+Science and Technology Policy (OSTP) entitled the Coordinated Framework for
+Regulation of Biotechnology (Coordinated Framework)[19] sets forth the basic approach to the regulation of GMOs in the US. The
+Coordinated Framework was the outgrowth of efforts by an interagency
+working group formed in 1984 to address whether the regulatory framework that
+pertained to conventional products was adequate for products derived from
+biotechnology. The working group concluded that existing laws as then
+implemented, supplemented with new regulations, were adequate to address
+regulatory needs.[20]
+A proposed notice was published and comments were requested.[21] The final Coordinated Framework
+policy notice confirmed that the regulatory jurisdiction over biotechnology
+products would be allocated in the same manner as conventional products, using
+existing laws governing conventional products.[22]
+The
+three main agencies involved in regulating GMOs are the US Department of
+Agricultures Animal and Plant Health Inspection Service (APHIS), the Food and
+Drug Administration (FDA), and the Environmental Protection Agency (EPA).
+A. Animal and Plant Health
+Inspection Service
+APHIS
+regulates the planting, importation, or transportation of GM plants pursuant to
+its authority under the Plant Protection Act (PPA),[23] which authorizes the Secretary of
+Agriculture to prohibit or restrict the importation, entry, exportation, or
+movement in interstate commerce of any plant, plant product [etc.] if the
+Secretary determines [it] is necessary to prevent the introduction . . . of a
+plant pest or noxious weed within the United States.[24] By regulation, APHIS classifies most
+GM plants as plant pests or potential plant pests and as regulated articles.[25] Under the PPA, a regulated article
+must receive prior approval from APHIS before it is introduced.[26]
+APHIS
+grants authorization to use GM plants in three ways: through a notification
+process, a permitting process, or a determination of nonregulated status.
+1. Notification Procedure
+The
+notification procedure is available to plants that are not classified as
+noxious weeds, or weeds in the release area, if certain criteria and
+performance standards are met.[27] The criteria include that the plant must be a species that APHIS has
+determined may be safely introduced; the genetic material must be stably
+integrated; the expression of the genetic material must not result in plant
+disease; etc.[28]
+The performance standards govern shipment, storage, planting, and testing, and
+are intended to prevent the plant from being released from containment.[29] When the applicant sends a
+notification to APHIS, APHIS will respond within a prescribed time with an
+acknowledgement or a denial.[30]
+If the notification is denied, the applicant may apply for apermit.[31]
+2. Permit Procedure
+The
+permit procedure requires an applicant to submit information concerning, among other
+things, the donor organism, the recipient organism, the composition of the
+regulated article; the expression of altered genetic material in the regulated
+article and the molecular biology of the system used to produce the article;
+the locality where the donor and recipient organisms and the regulated article
+were developed; the purpose of the regulated article; the quantity to be
+introduced; processes to prevent release; the intended destination, use, and
+distribution; and the final disposition of the regulated article.[32]
+If APHIS grants the permit, it is subject to conditions designed to ensure both
+that the regulated article remains contained and that APHIS can maintain
+regulatory oversight.[33]
+Failure to comply with the conditions can result in withdrawal of
+thepermit.[34]
+3. Determination of Nonregulated Status
+GM plants that have been tested and have been shown not to pose
+a risk may be eligible for a determination of nonregulated status.[35] A petition for determination of
+nonregulated status must include detailed biological information on the
+regulated article and the recipient organism, published and unpublished
+scientific studies, data from field tests, and other information designed to
+assist APHIS in determining whether the plant constitutes a pest.[36] Upon receipt of a petition, APHIS
+publishes a notice in the Federal Register and allows sixty days for
+public comment.[37]
+APHIS has 180 days to approve in whole or part or deny the petition.[38]
+B. Food and Drug Administration
+The
+FDA regulates the safety of all human and animal food products in the US (other
+than meat, poultry, and eggs), as well as drugs and biological products.
+1. Food
+The
+FDAs primary statutory authority is the Federal Food, Drug, and Cosmetic Act
+(FFDCA),[39] which authorizes the agency to regulate, among other things, adulterated food,[40] defined as food that contains any
+poisonous or deleterious substance that may render it deleterious to health,[41] and food additives,[42] which include any substance [that
+may] becom[e] a component or otherwise affect[] the characteristics of any
+food.[43]
+The FFDCA prohibits the sale of adulterated or misbranded food.[44]
+Under
+the FFDCA, substances added to food can be classified either as food
+additives, which require approval from the FDA that they are safe before they
+can be marketed,[45] and substances added to food classified as generally recognized as safe
+(GRAS), as to which preapproval is not needed.[46]
+In a
+1992 policy statement, the FDA reaffirmed that in most cases it would treat
+foods derived from GMOs like those derived from conventionally bred plants, and
+that most foods derived from GM plants would be presumptively GRAS. However,
+with respect to a GMO product that differs significantly in structure,
+function, or composition from substances found currently in food, premarket
+approval of the substance as a food additive would be required.[47]
+The
+FDA encourages developers of new plant varieties intended for food use,
+including GMOs, to engage in a consultation procedure with the FDA, in order
+to ensure that human food and animal feed safety issues or other regulatory
+issues (e.g. labeling) are resolved prior to commercial distribution.[48] The consultation procedure is meant
+to enable the FDA to determine if regulatory action is needed with respect to
+food derived from the new variety such as significantly increased levels of
+plant toxicants or anti-nutrients, reduction of important nutrients, new
+allergens, or the presence in the food of an unapproved food additive.[49] Among the issues subject to
+consultation is the food safety of new proteins in new plant varieties,
+including those developed through genetic engineering.[50] The FDA makes detailed information
+regarding completed consultations publicly available.[51]
+2. Animals
+The
+FDA also asserts jurisdiction over genetically engineered animals, pursuant to
+its authority to regulate new animal drugs (NADs) under the FFDCA.[52] Under the FFDCA, NADs are deemed
+generally unsafe unless the FDA has approved a New Animal Drug Application
+(NADA) for the particular use of the drug.[53]
+Except in cases in which the FDA exercises discretion to decline to require
+compliance,[54] or where the drug is only for investigational use and thus need only conform to
+specified exemptions,[55] the FDA requires a genetically engineered (GE) animal to be the subject of an approved
+NADA based on a demonstration that it is safe and effective for its intended
+use.[56]
+A NADA for a GE animal must include information on the animals identification;
+chemistry; clinical purpose; labeling; components and composition;
+manufacturing methods, facilities, and controls; safety and effectiveness;
+environmental impact; and other information.[57]
+3. Drugs
+The
+FDA also has regulatory authority over drugs generally. Companies interested
+in introducing a new drug into the US market in most cases must submit a New
+Drug Application (NDA) to the FDA, which must include extensive information and
+data on the drugs safety and effectiveness, such as the drugs chemistry,
+manufacture, animal and in vitro studies, clinical data, and the like.[58] Drugs developed through genetic
+engineering must go through the same NDA process as other types of drugs.
+4. Biological Products
+The
+FDA also regulates medical products classified as biological products, which
+includes vaccines, serums, blood products, and the like, under relevant
+provisions of the Public Health Service Act (PHSA).[59] Biological products, whether
+involving genetic modification or not, must be licensed by the FDA before they
+can be introduced. The licensing procedure for biological products requires
+submission to the FDA of detailed information on laboratory and clinical
+studies, manufacturing methods, and other information relevant to whether they
+are safe and effective for their intended purpose.[60]
+C. Environmental Protection Agency
+The
+EPA regulates pesticides and microorganisms developed through genetic
+engineering.
+1. Pesticides
+The
+EPA regulates the manufacture, sale and use of pesticides under the Federal
+Insecticide, Fungicide and Rodenticide Act (FIFRA).[61] Under FIFRA, pesticides must not
+cause unreasonable adverse effects on the environment,[62] which is defined to include both
+safety to the environment and safety in food for consumption.[63] FIFRA requires all pesticides to be
+registered with the EPA before they can be distributed commercially.[64] Pesticides must be tested and shown
+to be safe before they can be registered.[65]
+A registration application must include information regarding testing, identity
+of the product, draft labeling, information on tolerance of residues, and other
+safety-related information.[66]
+Pursuant
+to its authority under FIFRA, the EPA regulates plants that are genetically
+modified to produce substances intended to control pests as to both their
+environmental safety and their safety in food, termed plant-incorporated
+protectants (PIPs).[67]
+The standard registration procedures for pesticides apply to PIPs, unless they
+are made exempt by regulation.[68]
+PIPs are exempt from FIFRA registration if the PIP is used in a crop used in
+food and its residues are exempt from regulation under the FFDCA,[69] if the PIP is an inert ingredient
+listed as exempt by the EPA,[70] or if the PIP is from a plant that is sexually compatible with the recipient
+plant.[71]
+With respect to those PIPs that are exempt, if the producer of the PIP obtains
+information regarding adverse effects from the PIP on human health or the
+environment, it must share it with theEPA.[72]
+2. Microorganisms
+The
+EPA also has authority to regulate GMOs under the Toxic Substances Control Act
+(TSCA).[73]
+The TSCA authorizes the EPA to regulate chemical substances that may present an
+unreasonable risk of injury to health or the environment.[74] Manufacturers of covered substances
+must submit a premanufacture notification to the EPA.[75] The EPA has determined that GMO
+microorganisms are chemical substances subject to regulation under the TSCA.[76] The EPA has established regulations
+specifically for microorganisms that require submission of a Microbial
+Commercial Activity Notice (MCAN) before they are used for commercial purposes.[77] The Notice must include information
+describing the microorganisms characteristics and genetic construction;
+byproducts of its manufacture, use, and disposal; health and environmental
+effects data; and other information.[78]
+D. National
+Environmental Policy Act
+The
+National Environmental Policy Act (NEPA)[79] requires federal agencies in some cases to prepare Environmental Assessments
+(EAs) of federal actions, such as adopting a policy or approving a permit, to
+determine if they are likely to significantly impact the environment.[80] If a federal action is likely to
+have a significant impact, the agency must prepare a more detailed evaluation
+called an Environmental Impact Statement (EIS).[81] Federal agency approvals of GMOs
+may require an EA or an EIS in some circumstances.[82]
+E. State Law
+State
+law generally plays little role in the regulation of GMOs in the US. The federal
+preemption doctrine, which bars conflicting state regulation when Congress
+intends federal regulation to occupy a particular field, precludes many aspects
+of state regulation of GMOs.[83]
+A
+rare example in which one states law is more stringent than federal law on
+GMOs involves a bioengineered tropical aquarium fish known as the GloFish,
+which is unregulated at the federal level,[84] but has been banned by the California Fish and Game Commission.[85]
+Some
+municipal governments in the US have banned GMO crops. For example, in
+California, the counties of Marin and Mendocino have enacted ordinances
+forbidding the cultivation of GMOs.[86]
+In Hawaii, Kauai County and Hawaii County similarly have banned the cultivation
+of most GMO crops.[87]
+Back to Top
+IV. Restrictions on Research,
+Production, and Marketing
+The nature of restrictions on
+GMOs with respect to research, production and marketing in the US vary with the
+different regulatory regimes that cover various aspects of genetic
+modification.
+A. Animal and Plant Health
+Inspection Service
+The introduction of GM plants
+requires prior approval from APHIS, by means of a notification, permitting, or
+a determination of nonregulated status procedure. (See Part III(A), above.)
+B. Food and Drug Administration
+1. Foods
+The
+FDA regards most GMO foods as presumptively falling within the category of
+generally regarded as safe, thus not needing premarket approval, but a GMO
+product that differs significantly in structure, function, or composition from
+substances found currently in food requires premarket approval as a food
+additive. (See Part III(B)(1), above.)
+2. Animals
+In most cases, the FDA requires a genetically engineered animal to be
+approved by means of a New Animal Drug Application based on a demonstration
+that it is safe and effective for its intended use. (See Part III(B)(2),
+above.)
+3. Drugs
+FDA requires those wishing to
+introduce a new drug into
+the US market, whether it involves genetic modification or not, to submit a New
+Drug Application (NDA) to the FDA, with detailed information on the drugs
+safety and effectiveness. (See Part III(B)(3), above.)
+4. Biological Products
+The FDA requires all biological products, regardless of whether or not they are
+developed by genetic modification, to be licensed by FDA before they can be
+introduced, with detailed information on whether they are safe and effective
+for their intended purpose. (See Part III(B)(4), above.)
+C. Environmental Protection Agency
+Under FIFRA, the EPA requires all pesticides to be registered
+prior to commercial distribution, and the registration must include information
+on their safety. The EPA also requires PIPs to comply with the pesticide
+registration procedures, unless they meet the criteria for exemption from these
+procedures. (See Part III(C)(1), above.)
+Under TSCA, the EPA requires
+those wishing to use microorganisms
+for commercial purposes to submit a Microbial Commercial Activity Notice
+(MCAN). (See Part III(C)(2), above.)
+D. Labeling of GMOs
+There is no law in the US
+requiring that GMO foods or foods with GMO ingredients be labeled to so
+indicate. Proposed federal legislation, the Genetically Engineered Food
+Right-to-Know Act,[88] which would mandate labeling of any GMO food or food with a genetically
+modified ingredient, has been introduced in the last several Congresses, but
+has never advanced beyond the committee stage in either chamber. At the state
+level, a 2012 California initiative mandating labeling of GMO foods, and a
+similar 2013 Washington State initiative, both failed.[89]
+The FDA has regulatory
+authority to prevent false and misleading labeling of foods and drugs. With
+respect to genetically engineered foods, the FDA has stated in policy documents
+that if a GM food product is not materially different from its traditional
+counterpart, there is no need to label or change the name of the product, but
+name changes are appropriate when a food from a GM plant is so different from
+its traditional counterpart that the usual name no longer adequately describes
+the new food, or if there is a safety issue to which consumers should be
+alerted, such as the presence of allergens.[90]
+Back to Top
+V. Restrictions on Releasing
+Organisms into the Environment
+Because US regulation of GMOs
+focuses on the nature of the products, rather than the process in which they
+were produced, the extent to which there are restrictions on releases of GMOs
+into the environment depends on the GMOs in question. (See the discussion of
+the different regulatory regimes for different types of GMOs, Part III, above.)
+Back to Top
+VI. Restrictions on GMOs in
+Foodstuffs
+GMOs
+are not restricted categorically from the US food supply. As discussed above,
+the FDA treats foods derived from GMOs like those
+derived from conventionally bred plants, and therefore most foods derived from
+GM plants are classified as presumptively generally recognized as safe.
+However, with respect to a GMO product that differs significantly in
+structure, function, or composition from substances found currently in food,
+premarket approval of the product is required. (See Part III(B)(1), above.)
+Back to Top
+VII. Liability Regime
+All of the various statutory
+schemes under which GMOs are regulated in the US provide for civil and criminal
+penalties. For example, violations of the PPA are subject to substantial civil
+or criminal penalties;[91] knowingly importing or moving any regulated article for sale or distribution in
+violation of the PPA is punishable by a fine, imprisonment up to five years, or
+both.[92]
+The liability provisions of the FFDCA list several practices that can lead to
+significant civil or criminal penalties, including imprisonment.[93]
+Violations of FIFRA and TSCA similarly are subject to civil or criminal
+penalties.[94]
+Back to Top
+VIII. Judicial Decisions /
+Prominent Cases
+A landmark case
+of significance in the early development of the US biotechnology industry was
+the US Supreme Courts 1980 decision in Diamond v. Chakrabarty,[95] holding that genetically engineered microorganisms can be patented. This
+decision contributed to a revolution in
+biotechnology that has resulted in the issuance of thousands of patents, the
+formation of hundreds of new companies, and the development of thousands of
+bioengineered plants and foodproducts.[96]
+Outside of
+patent law, however, the role of the US courts in shaping regulatory policy
+with respect to GMOs has been limited. A common theme among many court
+decisions on GMOs has been the judiciarys deference to agency expertise in
+determining how to regulatethem.
+The Supreme
+Courts decision in Monsanto Co. v. Geertson Seed Farms[97] involved a challenge under NEPA to APHISs decision to issue a determination of
+nonregulated status to Monsantos Roundup Ready Alfalfa (RRA), a genetically
+engineered variety of alfalfa, after making a finding of no significant
+impact determination instead of preparing an environmental impact statement
+(EIS). The district court ruled that an EIS was required, and as a remedy
+enjoined APHIS from deregulating RRA, in whole or in part, pending completion
+of the EIS, and also enjoining almost all planting of RRA nationwide.[98]
+The Supreme Court reversed, ruling that the district court exceeded its
+authority in enjoining APHIS from partially deregulating RRA and enjoining the
+planting of RRA. It concluded that APHIS should be allowed to structure a
+partial deregulation order while completing the EIS.[99]
+In Alliance
+for Bio-Integrity v. Shalala,[100] the plaintiffs challenged the FDAs 1992 policy statement that GMO foods that are similar to conventional varieties would
+be presumptively deemed generally recognized as safe (GRAS)[101] and that they need not be labeled.[102] The district court declined to
+rule that the FDAs decision that genetic modification does not materially
+alter foods and to presume GMO foods are GRAS was arbitrary and capricious,
+stating that the rational for [court] deference [to agency decision making] is
+particularly strong when the [agency] is evaluating scientific data within its
+technical expertise.[103]
+As to labeling, it said that given FDAs decision on the GRAS issue, it would
+also find that the FDAs interpretation of the FFDCAs labeling requirement was
+reasonable.[104]
+Other GMO cases have
+similarly displayed the tendency of US courts to defer to agency
+decisionmaking.[105]
+Back to Top
+Luis Acosta
+Senior Legal
+Information Analyst
+March 2014
+[1] Pew Initiative on Food and
+Biotechnology, Guide to U.S. Regulation of Genetically Modified Food and
+Agricultural Biotechnology Products 6 (Sept. 2001), http://www.pewtrusts.org/uploadedFiles/www
+pewtrustsorg/Reports/Food_and_Biotechnology/hhs_biotech_0901.pdf.
+[2] The Biotechnology Industry in the United States, Select USA, http://selectusa.commerce.gov/print/industry-snapshots/biotechnology-industry-united-states (last visited Nov. 5, 2013) (stating there are 1300 firms and 1.3 million
+employees in biosciences in the US, and 5.8 million employees in related
+industry sectors).
+[3] Intl Serv. for the Acquisition of Agri-Biotech
+Applications, ISAAA Brief No.
+44-2012, Global Status of Commercial Biotech/GM Crops, Executive
+Summary, http://www.isaaa.org/resources/publications/briefs/44/
+executivesummary/default.asp (last visited Nov. 5, 2013).
+[4] Economic Research Service, Adoption of Genetically Engineered Crops in the
+US, Recent Trends in GE Adoption, United
+States Department of Agriculture, http://www.ers.usda.gov/data-products/adoption-of-genetically-engineered-crops-in-the-us/recent-trends-in-ge-adoption.aspx#.UobvBXL92Dk (July 9, 2013).
+[5] Cartagena Protocol on Biosafety to the Convention on Biological Diversity, Jan.
+29, 2000, 39 I.L.M. 1027, http://bch.cbd.int/protocol/text/; Parties to the Protocol and Signature and Ratification of the Supplementary
+Protocol, Convention on Biological
+Diversity, http://bch.cbd.int/protocol/parties/ (last updated Sept. 10, 2012).
+[6] Bureau of Oceans and International Environmental and Scientific Affairs, Frequently
+Asked Questions on the Cartagena Protocol on Biosafety (CPB), U.S. Department of State (Feb. 23,
+2004), http://2001-2009.state.gov/g/
+oes/rls/or/2004/29751.htm.
+[7] See, e.g., id. (noting participation as nonparty in first Meeting of the
+Parties to the Protocol).
+[8] Memorandum from the Mellman Group to the Pew
+Initiative on Food and Biotechnology, Review of Public Opinion Research 1 (Nov.
+16, 2006), http://www.pewtrusts.org/uploadedFiles/wwwpewtrustsorg/Public_Opinion/
+Food_and_Biotechnology/2006summary.pdf.
+[9] Id. at 3.
+[10] Allison Kopicki, Strong
+Support for Labeling Modified Foods, N.Y.
+Times (July 27, 2013), http://www.nytimes.
+com/2013/07/28/science/strong-support-for-labeling-modified-foods.html; see also U.S. Polls on GE Food
+Labeling, Center for Food Safety, http://www.centerforfoodsafety.org/issues/976/ge-food-labeling/us-polls-on-ge-food-labeling# (last visited Nov. 12, 2013)(citing
+multiple polls showing support for mandatory labeling ranging from 93 to 96%
+percent).
+[11] Kopicki, Strong Support for Labeling Modified
+Foods, supra note 10.
+[12] Committee on Identifying and
+Assessing Unintended Effects of Genetically Engineered Foods on Human Health,
+National Research Council, Safety of Genetically Engineered Foods: Approaches
+to Assessing Unintended Health Effects 180
+(2004), http://www.nap.edu/openbook.php?isbn=0309092094 ([N]o adverse health effects attributed to genetic
+engineering have been documented in the human population.); Committee on Environmental Impacts Associated
+with Commercialization of Transgenic Plants, Board on Agriculture and Natural
+Resources, National Research Council, Environmental Effects of Transgenic
+Plants: The Scope and Adequacy of Regulation 49 (2002), http://www.nap.edu/openbook.
+php?isbn=0309082633 (The transgenic process
+presents no new categories of risk compared to conventional methods of crop
+improvement, but specific traits introduced by both approaches can pose unique
+risks.)
+[13] AAAS Issues Statement on Labeling of Genetically Modified Foods, California Council on Science and Technology (Nov.
+1, 2012), http://www.ccst.us/news/2012/1101aaas.php.([C]rop
+improvement by the modern molecular techniques of biotechnology is safe. . . .
+[C]onsuming foods containing ingredients derived from GM crops is no riskier
+than consuming the same foods containing ingredients from crop plants modified
+by conventional plant improvement techniques.)
+[14] American Medical Association, Policy No.
+H-480.958, Bioengineered (Genetically Engineered) Crops and Foods, http://www.
+ama-assn.org/resources/doc/PolicyFinder/policyfiles/HnE/H-480.958.HTM (last visited Nov. 10, 2013) (reaffirming prior conclusion
+that no evidence that unique hazards exist either in the use of rDNA
+techniques or in the movement of genes between unrelated organisms).
+[15] See, e.g., Support Sustainable Agriculture, Greenpeace USA, http://www.greenpeace.org/usa/en/campaigns/
+genetic-engineering/ (last visited Nov. 12, 2013); Genetic Engineering,
+Sierra Club, http://www.sierraclub. org/biotech/ (last visited Nov. 12, 2013).
+[16] See, e.g., Policy, Organic
+Seed Growers & Trade Association, http://www.osgata.org/policy/ (last
+visited Nov.12,2013).
+[17] See, e.g., Genetic Engineering and Biotechnology, Organic Consumers Association, http://www.organic consumers.
+org/gelink.cfm (last visited Nov. 12, 2013); GE Foods, Center for Food Safety, http://www.center forfoodsafety.org/issues/311/ge-foods
+(last visited Nov. 12, 2013).
+[18] See, e.g., Gregory N. Mandel, Toward Rational
+Regulation of Genetically Modified Food, 4 Santa Clara J. Intl L. 21 (2006), http://digitalcommons.law.scu.edu/cgi/viewcontent.cgi?article=1015&context=scujil; Maria R. Lee-Muramoto, Reforming the
+Uncoordinated Framework for the Regulation of Biotechnology, 17 Drake J. Agric. L. 311 (2013), available
+at http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2175622; Debra M. Strauss, Defying Nature: The
+Ethical Implications of Genetically Modified Plants, 3 J. Food L. & Poly 1 (2007), available
+at http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1302506; Sheryl Lawrence, What Would You Do With a
+Fluorescent Green Pig?: How Novel Transgenic Products Reveal Flaws in the
+Foundational Assumptions for the Regulation of Biotechnology, 34 Ecology L.Q. 201 (2007), http://www.boalt.org/elq/documents/elq34-1-05-lawrence-2007-0430.pdf.
+[19] Coordinated Framework, 51 Fed. Reg.
+23,302 (June 26, 1986), available in manuscript format at http://www.
+aphis.usda.gov/brs/fedregister/coordinated_framework.pdf.
+[20] Id. at 3 (PDF manuscript pagination).
+[21] OSTP, Proposal for a Coordinated Framework for Regulation of Biotechnology, 49 Fed. Reg. 50,856
+(Dec.31,1984).
+[22] Coordinated Framework, supra note 19, at 68.
+[23] 7 U.S.C.  77017786 (2012), http:[emailprotected]/chapter104&
+edition=prelim.
+[24] 7 U.S.C.  7712(a) (2012), http://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title7-section
+7712&num=0&edition=prelim.
+[25] 7 C.F.R.  340.1 (2013), http://www.gpo.gov/fdsys/pkg/CFR-2013-title7-vol5/pdf/CFR-2013-title7-vol5-sec340-1.pdf.
+[26] 7 U.S.C.  7711(a) (2012), http://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title7-section7711&
+num=0&edition=prelim; 7 C.F.R.  340.0
+(2013), http://www.gpo.gov/fdsys/pkg/CFR-2013-title7-vol5/pdf/CFR-2013-title7-vol5-sec340-0.pdf.
+[27] 7 C.F.R.  340.3 (2013), http://www.gpo.gov/fdsys/pkg/CFR-2013-title7-vol5/pdf/CFR-2013-title7-vol5-sec340-3.pdf.
+[28] 7 C.F.R.  340.3(b).
+[29] 7 C.F.R.  340.3(c).
+[30] 7 C.F.R.  340.3(e).
+[31] 7 C.F.R.  340.3(e)(5).
+[32] 7 C.F.R.  340.4(b) (2013), http://www.gpo.gov/fdsys/pkg/CFR-2013-title7-vol5/pdf/CFR-2013-title7-vol5-sec340-4.pdf.
+[33] 7 C.F.R.  340.4(f).
+[34] 7 C.F.R.  340.4(g).
+[35] 7 C.F.R.  340.6 (2013), http://www.gpo.gov/fdsys/pkg/CFR-2013-title7-vol5/pdf/CFR-2013-title7-vol5-sec340-6.pdf.
+[36] 7 C.F.R.  340.6(c).
+[37] 7 C.F.R.  340.6(d).
+[38] Id.
+[39] 21 U.S.C.  301399f (2012), http:[emailprotected]/chapter9&
+edition=prelim.
+[40] 21 U.S.C.  342 (2012), http://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title21-section342&
+num=0&edition=prelim.
+[41] 21 U.S.C.  342(a).
+[42] 21 U.S.C.  348 (2012), http://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title21-section348&
+num=0&edition=prelim.
+[43] 21 U.S.C.  321(s) (2012), http://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title21-section321&
+num=0&edition=prelim.
+[44] 21 U.S.C.  331 (2012), http://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title21-section331&
+num=0&edition=prelim.
+[45] 21 U.S.C.  348 (2012), http://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title21-section348&
+num=0&edition=prelim.
+[46] 21 U.S.C.  321(s) (excluding substances from definition of food additive
+that are generally recognized . . . to be safe.).
+[47] FDA, Statement of Policy: Foods Derived from New Plant Varieties, 57 Fed. Reg.
+22,984 (May 29, 1992), available at http://www.fda.gov/Food/GuidanceRegulation/GuidanceDocumentsRegulatoryInformation/
+Biotechnology/ucm096095.htm.
+[48] FDA, Guidance on Consultation Procedures: Foods Derived from New Plant
+Varieties (rev. Oct. 1997), http://www.fda.gov/Food/GuidanceRegulation/GuidanceDocumentsRegulatoryInformation/Biotechnology/ucm096126.htm.
+[49] Id.
+[50] FDA, Guidance for Industry: Recommendations for the
+Early Food Safety Evaluation of New Non-Pesticidal Proteins Produced by New
+Plant Varieties Intended for Food Use (June 2006), http://www.fda.gov/Food/Guidance
+Regulation/GuidanceDocumentsRegulatoryInformation/Biotechnology/ucm096156.htm.
+[51] FDA, Completed Consultations on Bioengineered Foods, http://www.accessdata.fda.gov/scripts/fcn/fcn
+Navigation.cfm?rpt=bioListing (last updated May 31, 2013).
+[52] FDA, Guidance for Industry: Regulation of Genetically
+Engineered Animals Containing Heritable rDNA Constructs (rev. May 17, 2011), http://www.fda.gov/downloads/AnimalVeterinary/GuidanceCompliance
+Enforcement/GuidanceforIndustry/UCM113903.pdf (hereinafter GE
+Animals Guidance). The FFDCA definition of new animal drug includes
+articles intended to affect the structure or function of the body of . . .
+animals. 21 U.S.C.  321(v). The FDA reasons that the rDNA construct in a
+GE animal that is intended to affect the structure or function of the body of
+the GE animal, regardless of the intended use of products that may be produced
+by the GE animal, and thus all GE animals are NADs for purposes of
+regulation. GE Animals Guidance at 6. While the FDA
+could regulate all GE animals, it has determined it will decline to regulate
+those that are under the jurisdiction of other agencies. Id. at 7.
+[53] 21 U.S.C.  360b(a) (2012), http://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title21-section360b&
+num=0&edition=prelim.
+[54] GE Animals Guidance, supra note 52, at 79.
+[55] Id. at 912.
+[56] Id. at
+1213.
+[57] Id. at 1420.
+[58] 21 C.F.R.  314.50 (2013), http://www.gpo.gov/fdsys/pkg/CFR-2013-title21-vol5/pdf/CFR-2013-title21-vol5-sec314-50.pdf.
+[59] 42 U.S.C.  262 to 263a-7 (2012), http:[emailprotected]/chapter6A/
+subchapter2/partF&edition=prelim.
+[60] 21 C.F.R.  601.2 (2013), http://www.gpo.gov/fdsys/pkg/CFR-2013-title21-vol7/pdf/CFR-2013-title21-vol7-part601-subpartA.pdf.
+[61] 7 U.S.C.  136136y
+(2012), http:[emailprotected]/chapter6/subchapter2
+&edition=prelim.
+[62] 7 U.S.C.  136a(c)(5) (2012), http://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title7-section136a
+&num=0&edition=prelim.
+[63] 7 U.S.C.  136(bb) (2012), http://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title7-section136&
+num=0&edition=prelim.
+[64] 7 U.S.C.  136a(a) (2012).
+[65] 7 U.S.C.  136a(c)(5) (2012).
+[66] 40 C.F.R.  152.50 (2013), http://www.ecfr.gov/cgi-bin/text-idx?SID=9f032ce863baf7cb8c325ee059e49510
+&node=40:25.0.1.1.3&rgn=div5#40:25.0.1.1.3.3.1.6.
+[67] 40 C.F.R. pt. 174 (2013), http://www.ecfr.gov/cgi-bin/text-idx?SID=9f032ce863baf7cb8c325ee059e49510&
+node=40:25.0.1.1.23&rgn=div5.
+[68] 40 C.F.R.  174.1 (2013), http://www.ecfr.gov/cgi-bin/text-idx?SID=c72e2a2a61e1ad7b08706bfe11c90051&
+node=40:25.0.1.1.23&rgn=div5#40:25.0.1.1.23.1.19.1 (Unless otherwise
+superseded by this part, the regulations in parts 150 to 180 of this chapter
+apply to plant-incorporated protectants.).
+[69] 40 C.F.R.  174.21(b) (2013), http://www.ecfr.gov/cgi-bin/text-idx?SID=8263e366359fd60abf234c5e03b502f
+5&node=40:25.0.1.1.23&rgn=div5#40:25.0.1.1.23.2.19.1.
+[70] 40 C.F.R.  174.21(c) (2013).
+[71] 40 C.F.R.  174.25 (2013), http://www.ecfr.gov/cgi-bin/text-idx?SID=8263e366359fd60abf234c5e03b502f5&
+node=40:25.0.1.1.23&rgn=div5#40:25.0.1.1.23.2.19.2.
+[72] 40 C.F.R.  174.71 (2013), http://www.ecfr.gov/cgi-bin/text-idx?SID=8263e366359fd60abf234c5e03b502f5&
+node=40:25.0.1.1.23&rgn=div5#40:25.0.1.1.23.4.19.1.
+[73] 15 U.S.C.  26012695d (2012), http:[emailprotected]/chapter53&
+edition=prelim.
+[74] 15 U.S.C.  2605(a) (2012), http://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section
+2605&num=0&edition=prelim.
+[75] 15 U.S.C.  2604 (2012), http://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section2604&
+num=0&edition=prelim.
+[76] 40 C.F.R.  725.1(a) (2013), http://www.ecfr.gov/cgi-bin/text-idx?SID=7c33b229782bc824885546d25f6cf057&
+node=40:32.0.1.1.13&rgn=div5#40:32.0.1.1.13.1.1.1.
+[77] 40 C.F.R.  725.100 (2013), http://www.ecfr.gov/cgi-bin/text-idx?SID=7c33b229782bc824885546d25f6cf057&
+node=40:32.0.1.1.13&rgn=div5#40:32.0.1.1.13.4.1.1.
+[78] 40 C.F.R.  725.155, 725.160 (2013), http://www.ecfr.gov/cgi-bin/text-idx?SID=7c33b229782bc824885546d
+25f6cf057&node=40:32.0.1.1.13&rgn=div5#40:32.0.1.1.13.4.1.5.
+[79] 42 U.S.C.  43214370h (2012), http:[emailprotected]/chapter55&
+edition=prelim.
+[80] 40 C.F.R.  1508.9 (2013), http://www.ecfr.gov/cgi-bin/text-idx?SID=d1401a6ba0ae88ac9dc35920b0670960&
+node=40:34.0.3.3.9&rgn=div5#40:34.0.3.3.9.0.29.9.
+[81] 40 C.F.R.  1502.11502.25 (2013), http://www.ecfr.gov/cgi-bin/text-idx?SID=d1401a6ba0ae88ac9dc35920b
+0670960&node=40:34.0.3.3.3&rgn=div5.
+[82] See, e.g., GE Animals Guidance, supra note 52, at 19
+(describing EA requirement in New Animal Drug Application to enable FDA to
+either prepare an EIS or make a finding of no significant impact).
+[83] Doug Farquhar & Liz Meyer, State Authority to Regulate Biotechnology
+Under the Federal Coordinated Framework, 12 Drake J. Agric. L. 439, 46171 (2007), http://students.law.drake.edu/aglawjournal/docs/agVol12
+No3-Farquhar.pdf.
+[84] FDA Statement Regarding GloFish (Dec. 9, 2003), http://www.fda.gov/AnimalVeterinary/Development
+ApprovalProcess/GeneticEngineering/GeneticallyEngineeredAnimals/ucm161437.htm (In the absence of a clear risk to the public health, FDA finds no reason to
+regulate these particular fish.).
+[85] Kenneth R. Weiss, State Takes Dim View of GloFish, Bans Sale, L.A. Times (Dec. 4, 2003), http://articles.latimes.
+com/2003/dec/04/local/me-glofish4.
+[86] Marin County, Cal. Code ch. 6.92
+(2013), available at http://library.municode.com/index.aspx?clientID=16476 (select title 6, then select chapter 6.92); Mendocino
+County, Cal. Code ch. 10A.15 (2013), available at http://library.municode.com/index.aspx?clientId=16484 (select title 10A, then select chapter 10A.15).
+[87] Andrew Pollack, Limits Approved for Genetically Modified Crops in Kauai,
+Hawaii, N.Y. Times (Oct. 16,
+2013), http://www.nytimes.com/2013/10/17/business/limits-approved-for-genetically-modified-crops-in-kauai-hawaii.
+html?_r=0; Christopher DAngelo, Hawaiian Islands Take More Steps to
+Limit Spread of GMO Crops, Reuters
+(Dec. 6, 2013), http://www.reuters.com/article/2013/12/07/usa-gmos-hawaii-idUSL2N0JL1RL20131207.
+The Hawaii County ordinance permits GM papaya to be grown on the island. Id.
+[88] S. 809, 113th Cong. (2013), http://www.gpo.gov/fdsys/pkg/BILLS-113
+s809is/pdf/BILLS-113s809is.pdf.
+[89] Mark Lifsher, Prop. 37 Backers Vow to Continue Food Regulation Efforts, L.A. Times (Nov. 7, 2012), http://articles.latimes.com/2012/nov/07/business/la-fi-prop37-genetic-food-labeling-20121108;
+Stephanie Strom, Food Companies Claim Victory Against Labeling Initiative in
+Washington State, N.Y. Times (Nov.
+6, 2013), http://www.nytimes.com/2013/11/07/us/politics/food-companies-claim-victory-against-labeling-initiative-in-washington-state.html.
+[90] FDA, Statement of Policy: Foods Derived from New Plant Varieties, supra note
+47,  VI, Labeling.
+[91] 7 U.S.C.  7734 (2012), http://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title7-section7734&
+num=0&edition=prelim.
+[92] 7 U.S.C.  7734(a)(1)(B) (2012).
+[93] 21 U.S.C.  333 (2012), http://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title21-section333&
+num=0&edition=prelim.
+[94] 7 U.S.C.  136l (2012), http://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title7-section136l&
+num=0&edition=prelim (civil and criminal penalties for violating
+FIFRA); 15 U.S.C.  2615 (2012), http://uscode.
+house.gov/view.xhtml?req=granuleid:USC-prelim-title15-section2615&num=0&edition=prelim (civil and criminal penalties for violating TSCA).
+[95] Diamond v. Chakrabarty, 447 U.S. 303 (1980), available at http://laws.findlaw.com/us/447/303.html.
+[96] Douglas Robinson &
+Nina Medlock, Diamond v. Chakrabarty: A Retrospective on 25 Years of
+Biotech Patents, Intell. Prop. &
+Tech. L.J., Oct. 2005, at 12, available at http://www.bannerwitcoff.com/_docs/library/articles/
+Chakrabarty.pdf.
+[97] Monsanto Co. v. Geertson Seed Farms, 130 S. Ct. 2743 (2010), slip op.
+available at http://www.supremecourt.
+gov/opinions/09pdf/09-475.pdf.
+[98] Id., slip op. at 26.
+[99] Id., slip op. at 1624.
+[100] Alliance for Bio-Integrity v. Shalala, 116 F. Supp. 2d 166 (D.D.C. 2000), available
+at http://scholar.google.
+com/scholar_case?case=9837177635976803502&q=116+F.+Supp.+2d+166+&hl=en&as_sdt=20006.
+[101] See discussion supra, Part III(B)(1).
+[102] See discussion supra, Part IV(D).
+[103] Alliance for Bio-Integrity v. Shalala, 166 F. Supp. 2d at 177.
+[104] Id. at 17879.
+[105] See, e.g., Center For Food Safety v. Vilsack, 636 F.3d 1166 (9th
+Cir. 2011), slip op. available at http://cdn.ca9.us
+courts.gov/datastore/opinions/2011/03/03/10-17719.pdf (in case challenging
+APHISs deregulation of Roundup Ready sugar beets, finding absence of
+irreparable harm to justify injunction); Center For Food Safety v. Vilsack, 718
+F.3d 829 (9th Cir. 2013), slip op. available at http://cdn.ca9.uscourts.gov/datastore/opinions/2013/
+05/17/12-15052.pdf (in case challenging APHISs deregulation of Roundup
+Ready alfalfa, deferring to agency determination that RRA was not a plant
+pest).
+Back to Top
+Last Updated: 06/09/2015
+Connect with the Library
+All ways to connect
+Find Us On
+Subscribe & Comment
+RSS & E-Mail
+Blogs
+Download & Play
+Apps
+Podcasts
+Webcasts
+iTunesU (external link)
+Questions
+Ask a Librarian
+Contact Us
+About |
+Press |
+Jobs |
+Donate
+Inspector General |
+Legal |
+Accessibility |
+External Link Disclaimer |
+USA.gov
+Speech Enabled

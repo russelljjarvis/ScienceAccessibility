@@ -1,0 +1,235 @@
+Position-independent, high-level expression of the human -globin gene in transgenic mice
+Skip to content
+Journals
+Books
+Advanced search
+Shopping cart
+Remote access
+Sign in
+Help
+ScienceDirectJournalsBooksRegisterSign inSign in using your ScienceDirect credentialsUsernamePasswordRemember meForgotten username or password?Sign in via your institutionOpenAthens loginOther institution loginHelpJournalsBooksRegisterSign inHelpcloseSign in using your ScienceDirect credentialsUsernamePasswordRemember meForgotten username or password?Sign in via your institutionOpenAthens loginOther institution login
+Download full text in PDF
+Article
+Article + other articles in this issue
+Loading...
+Export
+You have selected 1 citation for export.
+Help
+Direct export
+Save to Mendeley
+Save to RefWorks
+Export file
+Format
+RIS (for EndNote, ReferenceManager, ProCite)
+BibTeX
+Text
+Content
+Citation Only
+Citation and Abstract
+Export
+Advanced search
+Close
+This document does not have an outline.
+JavaScript is disabled on your browser. Please enable JavaScript to use all the features on this page.
+Volume 51, Issue 6, 24 December 1987, Pages 975-985
+ArticlePosition-independent, high-level expression of the human -globin gene in transgenic mice
+Author links open the overlay panel. Numbers correspond to the affiliation list which can be exposed by using the show more link.
+Opens overlay
+Frank Grosveld,
+Opens overlay
+Greet Blom van Assendelft,
+Opens overlay
+David R. Greaves,
+Opens overlay
+George Kollias
+Laboratory of Gene Structure and Expression National Institute for Medical Research The Ridgeway, Mill Hill London NW7 1AA, England
+Received 10 August 1987, Revised 21 September 1987, Available online 14 April 2004
+Show more
+doi:10.1016/0092-8674(87)90584-8
+Get rights and content
+AbstractWe have constructed a minilocus that contains the 5 and 3 flanking regions of the human -globin locus and the -globin gene. These regions are characterized by erythroid-specific DNAase I-superhypersensitive sites and are normally located approximately 50 kb 5 and 20 kb 3 of the -globin gene. This minilocus is expressed tissue-specifically in transgenic mice at a level directly related to its copy number yet independent of its position of integration in the genome. Moreover, the expression per gene copy is the same in each mouse and as high as that of the endogenous mouse -globin gene. These results indicate that the DNA regions flanking the human -globin locus contain dominant regulatory sequences that specify position-independent expression and normally activate the complete human multigene -globin locus.
+Download full text in PDF
+References
+Alter et al., 1980
+B. Alter, S. Goff, G. Efremor, M. Gravley, T. Huisman
+Globin chain electrophoresis: a new approach to the determination of the GA ratio in foetal haemoglobin and to the studies of globin synthesis
+Br. J. Haematol., 44 (1980), pp. 527534
+Angel et al., 1987
+P. Angel, M. Imagawa, R. Chin, B. Stein, R. Imbra, M. Rahmsdorf, A. Jonat, P. Herrlich, M. Karin
+Phorbol ester-inducible genes contain a common cis element recognized by a TPA-modulated trans-acting factor
+Cell, 49 (1987), pp. 729739
+Behringer et al., 1987
+R.R. Behringer, R.E. Hammer, R.L. Brinster, R.D. Palmiter, T.M. Townes
+Two 3 sequences direct erythroid-specific expression of human -globin genes in transgenic mice
+Proc. Natl. Acad. Sci. USA, 84 (1987), pp. 70567060
+Brinster et al., 1985
+R.L. Brinster, H.Y. Chan, M.E. Trumbauer, M.K. Yagle, R.D. Palmiter
+Factors affecting the efficiency of introducing foreign DNA into mice by microinjecting eggs
+Proc. Natl. Acad. Sci. USA, 82 (1985), pp. 44384442
+Chada et al., 1985
+K. Chada, J. Magram, K. Raphael, G. Radice, E. Lacy, F. Costantini
+Specific expression of a foreign -globin gene in erythroid cells of transgenic mice
+Nature, 314 (1985), pp. 377380
+Charnay et al., 1984
+P. Charnay, R. Treisman, P. Mellon, M. Chao, R. Axel, T. Maniatis
+Differences in human - and -globin gene expression in mouse erythroleukemia cells: the role of intragenic sequences
+Cell, 38 (1984), pp. 251263
+Choi and Engel, 1986
+O.-R. Choi, J.D. Engel
+A 3 enhancer is required for temporal and tissue-specific transcriptional activation of the chicken adult -globin gene
+Nature, 323 (1986), pp. 731734
+Cockerhill and Garrard, 1986
+P.N. Cockerhill, W.T. Garrard
+Chromosomal loop anchorage of the kappa Ig gene locus next to the enhancer in a region containing topoisomerase II sites
+Cell, 44 (1986), pp. 273282
+Collins and Weissman, 1984
+F.S. Collins, S.M. Weissman
+The molecular genetics of human hemoglobin
+Prog. Nucl. Acid Res. Mol. Biol., 31 (1984), pp. 315462
+Cone et al., 1987
+R.D. Cone, W.W. Benarous, D. Baorto, R.C. Mulligan
+Regulated expression of a complete human -globin gene encoded by a transmissible retrovirus vector
+Mol. Cell. Biol., 7 (1987), pp. 887897
+Curtin and Kan, 1987
+P. Curtin, Y.W. Kan
+A normal -globin gene is inactivated by a large distant deletion
+G. Stamatoyannopoulos (Ed.), Hemoglobin Switching, Fifth Conference on Hemoglobin Switching, Alan R. Liss, Inc, New York (1987) in press
+Enver et al., 1985
+T. Enver, A.C. Brewer, R.K. Patient
+Simian virus 40-mediated cis induction of the Xenopus -globin DNasel hypersensitive site
+Nature, 318 (1985), pp. 680683
+Forrester et al., 1986
+W.C. Forrester, C. Thompson, J.T. Elder, M. Groudine
+A developmentally stable chromatin structure in the human -globin gene cluster
+Proc. Natl. Acad. Sci. USA, 83 (1986), pp. 13591363
+Gasser and Laemmli, 1986
+S.M. Gasser, U.K. Laemmli
+Cohabitation of scaffold binding regions with upstream/enhancer elements of three developmentally regulated genes of D. melanogaster
+Cell, 46 (1986), pp. 521530
+Gillis and Watson, 1981
+S. Gillis, J. Watson
+Interleukin-2 dependent culture of cytolytic T cell lines
+Immunol. Rev., 54 (1981), pp. 81109
+Grosschedl et al., 1984
+R. Grosschedl, D. Weaver, D. Baltimore, F. Costantini
+Introduction of a  immunoglobulin gene into the mouse germ line: specific expression in lymphoid cells and synthesis of functional antibody
+Cell, 38 (1984), pp. 647658
+Grosveld et al., 1982
+F.G. Grosveld, T. Lund, E.J. Murray, A.L. Mellor, H.H.M. Dahl, R.A. Flavell
+The construction of cosmid libraries which can be used to transform eukaryotic cells
+Nucl. Acids Res., 10 (1982), pp. 67156732
+Grosveld et al., 1987
+F.G. Grosveld, M. Antoniou, E. deBoer, G. Habets, J. Hurst, G. Kollias, F. MacFarlane, N. Wrighton
+The regulation of expression of human -globin genes
+R.A. Firtel, E.H. Davidson (Eds.), Molecular Approaches to Developmental Biology, Alan R. Liss. Inc, New York (1987), pp. 483500
+Groudine et al., 1983
+M. Groudine, T. Kohwi-Shigematsu, R. Gelinas, G. Stamatayannopoulos, T. Papayannopoulou
+Human fetal to adult hemoglobin switching: changes in chromatin structure of the -globin locus
+Proc. Natl. Acad. Sci. USA, 80 (1983), pp. 75517555
+Hammer et al., 1987
+R. Hammer, R. Krumlauf, S. Campen, R. Brinster, S. Tilghman
+Diversity of -fetoprotein gene expression in mice is generated by a combination of separate enhancer elements
+Science, 235 (1987), pp. 5358
+Hesse et al., 1986
+J.E. Hesse, J.M. Nickol, M.R. Lieber, G. Felsenfeld
+Regulated gene expression in transfected primary chicken erythrocytes
+Proc. Natl. Acad. Sci. USA, 83 (1986), pp. 43124316
+Hock and Miller, 1986
+R.A. Hock, A.D. Miller
+Retrovirus-mediated transfer and expression of drug resistance genes in human haematopoietic progenitor cells
+Nature, 320 (1986), pp. 275277
+Kioussis et al., 1983
+D. Kioussis, E. Vanin, T. deLange, R.A. Flavell, F. Grosveld
+-Globin gene inactivation by DNA translocation in -thalassaemia
+Nature, 306 (1983), pp. 662666
+Klein et al., 1980
+G. Klein, J. Zeuthen, I. Eriksson, P. Tekasaki, M. Bernoco, A. Rosen, G. Masucci, S. Povey, R. Ber
+Hybridization of myeloid leukaemia derived human cell line (k562) with a Burkitt's lymphoma line
+J. Natl. Cancer Inst., 64 (1980), pp. 725738
+Kollias et al., 1986
+G. Kollias, N. Wrighton, J. Hurst, F. Grosveld
+Regulated expression of human A-, -, and hybrid -globin in transgenic mice: manipulation of the developmental expression patterns
+Cell, 46 (1986), pp. 8994
+Kollias et al., 1987
+G. Kollias, J. Hurst, E. deBoer, F. Grosveld
+A tissue and developmental specific enhancer is located downstream from the human -globin gene
+Nucl. Acids Res., 15 (1987), pp. 57395747
+Lawson et al., 1982
+G. Lawson, B. Knoll, C. March, S. Woo, M. Tsai, B. O'Malley
+Definition of 5 and 3 structural boundaries of the chromatin domain containing the ovalbumin multigene family
+J. Biol. Chem., 257 (1982), pp. 15011507
+Lee et al., 1987
+W. Lee, P. Mitchell, R. Tjian
+Purified transcription factor AP-1 interacts with TPA-inducible enhancer elements
+Cell, 49 (1987), pp. 741752
+Magram et al., 1985
+J. Magram, K. Chada, F. Costantini
+Developmental regulation of a cloned adult -globin gene in transgenic mice
+Nature, 315 (1985), pp. 338340
+Maniatis et al., 1981
+T. Maniatis, E.F. Fritsch, J. Lauer, R.M. Lawn
+Molecular genetics of human hemoglobins
+Ann. Rev. Genet., 14 (1981), pp. 145178
+Martin and Papayannopoulou, 1982
+P. Martin, T. Papayannopoulou
+HEL cells: a new human erythroleukemia cell line with spontaneous and induced globin expression
+Science, 216 (1982), pp. 12331235
+Nicholls et al., 1987
+R.D. Nicholls, N. Fischel-Ghodsian, D.R. Higgs
+Recombination at the human -globin gene cluster: sequence features and topological constraint
+Cell, 49 (1987), pp. 369378
+Palmiter and Brinster, 1986
+R.D. Palmiter, R.L. Brinster
+Germ-line transformation of mice
+Ann. Rev. Genet., 20 (1986), pp. 465499
+Pinkert et al., 1987
+C. Pinkert, D. Ornitz, R.L. Brinster, R.D. Palmiter
+An enhancer located 10kb upstream functions along with its promoter to direct efficient liver-specific expression in transgenic mice
+Genes Dev., 1 (1987), pp. 268278
+Southern, 1975
+E.M. Southern
+Detection of specific sequences among DNA fragments separated by gel electrophoresis
+J. Mol. Biol., 98 (1975), pp. 503517
+Taramelli et al., 1986
+R. Taramelli, D. Kioussis, E. Vanin, K. Bartram, J. Groffen, J. Hurst, F. Grosveld
+-Thalassaemias 1 and 2 are the result of a 100kbp deletion in the human -globin cluster
+Nucl. Acids Res., 14 (1986), pp. 70177029
+Townes et al., 1985
+T.M. Townes, J.B. Lingrel, H.Y. Chen, R.L. Brinster, R.D. Palmiter
+Erythroid-specific expression of human -globin genes in transgenic mice
+EMBO J., 4 (1985), pp. 17151723
+Tuan et al., 1985
+D. Tuan, W. Solomon, L.S. Qiliang, M.L. Irving
+The -like-globin gene domain in human erythroid cells
+Proc. Natl. Acad. Sci. USA, 32 (1985), pp. 63846388
+Van der Ploeg et al., 1980
+L.H.T. Van der Ploeg, A. Konings, M. Oort, D. Roos, L. Bernini, R.A. Flavell
+-Thalassaemia: deletion of the - and -genes influences -globin gene expression in man
+Nature, 283 (1980), pp. 637642
+Wright et al., 1984
+S. Wright, A. Rosenthal, R.A. Flavell, F. Grosveld
+DNA sequences required for regulated expression of -globin genes in murine erythroleukemia cells
+Cell, 38 (1984), pp. 265273
+Zavodny et al., 1983
+P. Zavodny, R. Roginsky, A. Skoultchi
+Regulated expression of human globin genes and flanking DNA in mouse erythroleukemia-human cell hybrids
+G. Stamatoyannopoulos, A. Nienhuis (Eds.), Globin Gene Expression and Hematopoietic Differentiation, Alan R. Liss, Inc, New York (1983), pp. 5362
+open in overlay
+Copyright  1987
+ElsevierAbout ScienceDirectRemote accessShopping cartContact and supportTerms and conditionsPrivacy policyCookies are used by this site. For more information, visit the cookies page.Copyright  2016 Elsevier B.V. or its licensors or contributors. ScienceDirect  is a registered trademark of Elsevier B.V.RELX Group
+Close overlay
+Close
+Sign in using your ScienceDirect credentials
+Username:
+Password:
+Remember me
+Not Registered?
+Forgotten username or
+password?
+OpenAthens login
+Login via your institution
+Other institution login
+Remote access activation
+Click here to activate
+Other users also viewed these articles
+Do not show again

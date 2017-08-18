@@ -1,0 +1,101 @@
+Transgenic Mouse Service > Yale Genome Editing Center | Comparative Medicine | Yale School of Medicine
+Information For
+Prospective Students
+Current Students & Trainees
+Faculty & Staff
+Patients & Physicians
+Researchers
+Postdocs
+Alumni & Friends
+Other Visitors
+Search
+Yale School of Medicine
+Comparative Medicine
+Yale Genome Editing Center
+Our Services
+Transgenic Mouse Service
+Gene Targeting Service
+Embryo Cryopreservation Service
+Sperm Cryopreservation
+Custom Services
+Protocols
+Gene Targeting
+Transgenic Constructs
+Fees
+Resources
+Order Forms
+Transgenic Mouse Service Order Form
+Gene Targeting Service Order Form
+Blastocyst Injection
+Mouse Embryo Cryopreservation
+Sperm Cryopreservation
+Yale GEC Introduction Presentation Sign-up
+Contacts
+Home
+Our Services
+Transgenic Mouse Service
+Gene Targeting Service
+Embryo Cryopreservation Service
+Sperm Cryopreservation
+Custom Services
+Protocols
+Gene Targeting
+Transgenic Constructs
+Method 1
+Method 2
+Fees
+Resources
+Order Forms
+Transgenic Mouse Service Order Form
+Gene Targeting Service Order Form
+Blastocyst Injection
+Mouse Embryo Cryopreservation
+Sperm Cryopreservation
+Yale GEC Introduction Presentation Sign-up
+Contacts
+share
+tweet
+email
+print
+Decrease font size
+Reset font size
+Increase font size
+Transgenic Mouse Service
+The Transgenic Mouse Service (TMS) creates transgenic mice by pronuclear injection of transgenic expression cassettes prepared by investigators. Our standard strain for injection is (C57BL/6J X SJL/J) F2, but other strains (e.g. C57Bl/6, FVB) are available.
+Creating a transgenic mouse requires several critical steps:Designing an effective transgenic expression cassettePurifying high quality DNA for pronuclear microinjectionSuccessful pronuclear microinjection and embryo transferGenotyping of mouse tail biopsies to identify potential founder miceBreeding of founders to establish the transgenic lineEach of these steps requires coordination between investigators and the TMS. Please read the following information before submitting your construct.
+Submitting Your Construct
+DNA SubmissionTransgenic constructs (1.5 g minimum) should be purified and resuspended at 5 ng/l (minimum 300 l at 5 ng/l) in injection buffer. BAC constructs should be submitted at 0.5 ng/l, 500 l minimum, preferably in polyamine buffer. For BAC constructs, please refer to the protocols on the website of the University of Michigan Transgenic Animal Model Core, especially for the composition of polyamine microinjection buffer.
+Transgenic Expression CassettesTransgenic expression cassettes that use genomic DNA rather than cDNA are generally more efficiently expressed in mice. Transgenes generally should contain at least oneintron(can be synthetic) and a polyA site for proper processing. Select promoter sequences with proven tissue specific expression in transgenic mice where possible.Proper Purification of Transgenic Expression CassettesProper purification of transgenic expression cassettes is crucial for successful transgenic mouse production. We cannot emphasize this enough! Mouse embryos are highly susceptible to trace contaminants such as phenol, ethanol, endotoxin, and enzymes. In addition, particulates and agarose obstruct microinjection pipettes. The number of live births from microinjected embryos is a direct function of the purity of the DNA being microinjected. Transgenic expression cassettes must be excised from highly purified plasmids (we recommend preparation methods that yield endotoxin-free DNA), isolated by sucrose gradient centrifugation or electrophoresis followed by electroelution, and the linearized isolated fragments further purified using one of several protocols. The TMS can provide protocols for purification of isolated transgenic expression cassettes.NOTE: Column purification (i.e. commercial kits) of transgene fragments can be used successfully. HOWEVER, if not performed carefully, particulates or agarose will remain in the sample and prevent effective microinjection. This wastes time and mice.If DNA submitted is deemed to be inferior based on results of pronuclear injection and embryo transfer, or attempts to dilute and /or filter that still yield uninjectable DNA, the investigator will be charged to cover the cost of time and mice and will beasked to submit a new sample.BAC TransgenicsThe TMS will microinject BAC DNA to create the desired transgenic mice. However, due to the size of such constructs, the time between submission and microinjection of the DNA presents a potential problem for stability of the BAC DNA during storage. In addition, high purity of the DNA is absolutely critical but tricky to achieve; extra care must be exercised in order to prepare BAC DNA that can be microinjected. With these factors in mind, the TMS recommends that prior to construct preparation, users refer to the website of the University of Michigan Transgenic Animal Model Core for protocols for DNA preparation and storage. In particular, note the use of polyamine buffer for long-term storage of purified BAC DNA that may obviate the need to submit DNA that is prepared within 24 hrs. of microinjection. In addition, if a gel is used to purify the BAC, we recommend that the molten agar be filtered through a 0.22uM filter prior to casting to remove impurities that may block microinjection needles and prevent the DNA from being microinjected.The problem of DNA stability causes problems with scheduling of BAC microinjection. Due to the need to schedule microinjection dates in advance (as opposed to adding the construct to the queue of traditional constructs), and the corresponding need to order the appropriate mice, carefully prepared DNA must be submitted to TMS as scheduled. If such a scheduled arrangement is necessary, and the investigator is unable to submit the DNA as planned, the investigator will be charged for the mice ordered and used for that date.Scheduling
+Constructs will be microinjected in the order they are submitted. The appropriate on-line form, including charging information, shall be sent prior to or at the time of submission. Non-Yale investigators may email with billing arrangements for a PO or call for credit card purchasing.Animal Use ApprovalInvestigators must have an IACUC approved protocol for use of mice prior to initiation of the experiment.Pronuclear MicroinjectionPronuclear microinjection of approximately 250 embryos of (C57BL/6J X SJL/J) F2 mice is performed typically over four days; 200 to 250 are transferred to the uteri of six pseudopregnant foster mothers. Litters are maintained by the TMS pending results of tail genotyping.Alternate Mouse StrainsThe necessity of expressing a transgene in a congenic background of the appropriate strain is understood. Pronuclear injection into alternate strains is available, for an additional fee to cover purchase of mice and/or increased number of mice necessary to generate sufficient embryo yield. The rate of success can vary by strain (Auerbach et al., Transgenic res. 12 (2003), 59-69) so consider carefully the choice between injection into the desired strain vs. backcrossing from a more efficient strain.Genotyping MiceInvestigators are provided tail biopsies from individually identified weanling mice six weeks after embryo microinjections are completed. Investigators extract DNA from tail biopsies using established protocols and identify individuals with integrated sequences by polymerase chain reaction (PCR) analysis or Southern blot analysis. After positive mice are identified, an animal relocation request form is completed so that mice can be transferred to the investigators animal room(s).Breeding Transgenic MicePotential founder mice become the property of the investigator who may wish to obtain additional advice and services related to breeding from the YARC Rodent Service. Animals that test positive for integration of transgenes may have copies in all somatic and germ cells or may be mosaic. It is important to note that integration into the genome is random so that each transgenic animal is uniquely hemizygous. The genome of each potential founder must be reiterated by mating with non-transgenic mice to demonstrate germline transmission and to select hemizygous individuals for intercrossing to produce homozygous transgenic lines.Success of ExperimentsGEC does not guaranteea specific number of transgenic founders.However, we do guarantee that every effort will be made to provide the investigator with sufficient founders for the project. If reinjection is necessary, charges will be assessed based on our judgement of relevant factors (e.g. microinjection problems, strain difference, DNA purity).
+Our Services
+Transgenic Mouse Service
+Gene Targeting Service
+Embryo Cryopreservation Service
+Sperm Cryopreservation
+Custom Services
+Close
+Close
+Modal Title
+Close
+How will my information be used?
+When you express interest in a specific study, the information from your profile will be sent to the doctor conducting that study. If you're eligible to participate, you may be contacted by a nurse or study coordinator.
+If you select a health category rather than a specific study, doctors who have active studies in that area may contact you to ask if you would like to participate.
+In both cases, you will be contacted by the preferred method (email or phone) that you specified in your profile.
+Education
+Patient Care
+Research
+Yale School of Medicine
+333 Cedar Street
+New Haven
+CT
+06510
+Contact Us
+Maps & directions
+Find a Physician
+Calendar
+Yale Phonebook
+Intranet
+Site Editor
+Terms & Privacy Policies
+Yale University
+ 2016 Yale School of Medicine. Updated 8/6/2015

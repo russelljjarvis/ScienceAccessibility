@@ -1,0 +1,274 @@
+Genetically Modified Organisms
+| European Food Safety Authority
+Skip to main content
+Search form
+Search
+Deutsch (de)
+English (en)
+Franais (fr)
+Italiano (it)
+Calendar
+AboutAbout EFSA
+About EFSAHow we work
+Key Values
+Governance
+Partners
+People
+Documents
+NewsAll News
+News by subjectAnimal feed
+Animal health and welfare
+Biological hazards
+Chemical contaminants
+Corporate
+Cross-cutting science
+Data
+Food ingredients and packaging
+GMO
+Methodology
+Nutrition
+Pesticides
+Plant health
+Stakeholders
+DiscoverDiscover EFSA topics
+FeaturedAcrylamide
+Antimicrobial Resistance
+Bee health
+Chemicals in food
+GMO
+Pesticides
+Xylella
+ResourcesGlossary
+Factsheets
+Infographics
+Videos
+A-Z listDiscover all topics
+ScienceScientific work
+Subject areasAnimal feed
+Animal health and welfare
+Biological hazards
+Chemical contaminants
+Cross-cutting science
+Food ingredients and packaging
+GMO
+Nutrition
+Pesticides
+Plant Health
+SupportData
+Methodology
+ExpertiseScientific Committee and Panels
+Working groups and scientific networks
+PublicationsAll Scientific Publications
+EFSA JournalAbout the Journal
+EFSA Journal on Wiley
+ApplicationsApplications Helpdesk
+Regulated products, claims, processesOverview
+Submitting an application
+Services for applicants
+Food sector areaBiological hazards
+Feed additives
+Food contact materials
+Food ingredients
+GMO
+Nutrition
+Pesticides
+ToolboxTrack your application
+Event calendar
+Ask a question
+EngageEngage with EFSA
+How to contributeStakeholders
+Calls for data
+Consultations
+Colloquia
+Observers
+Careers
+Innovation prizes
+Tenders
+Grants
+Fellowship programme
+You are hereHomeTopics A-ZGenetically Modified Organisms
+Genetically Modified Organisms
+Ever since humans have grown plants and raised animals for food, they have selected plants and animals with beneficial traits for further breeding. Such traits reflected naturally occurring genetic variations and resulted, for example, in an increased yield or resistance to diseases or environmental pressures.
+Modern technology now makes it possible to alter genetic material to create novel traits in plants, animals, bacteria and fungi. This technology has so far primarily been used in crops to increase insect resistance and herbicide tolerance, and in micro-organisms to produce enzymes.
+Organisms that have had their genetic material altered this way are called genetically modified organisms (GMOs). Food and feed containing or consisting of GMOs or produced from GMOs are called genetically modified (GM) food and feed.
+Topics: Completed work
+Latest
+Activities
+Role
+EU framework
+Completed work
+FAQ
+Stacks
+EFSA is carrying out an increasing number of assessments on the safety of plants containing more than one genetic modification. The combination of two or more modifications within one plant is called a stack. Such a plant does not represent a new genetic modification. Theplant contains several existing genetic modifications that have been combined through conventional breeding techniques. The aim is to benefit from the combination in one single plant of several properties created by the individual genetic modifications, such as insect resistance and herbicide tolerance.
+In the international context, the European Union applies some of the most rigorous standards in the world when assessing the safety of plants containing multiple genetic modifications.
+EFSA adopted its first opinion on a GM plant containing stacked properties in June 2005. As of August 2016, EFSA has adopted 28 opinions involving stacks. While most initial applications involved lower stacks with two or three genetic modifications, EFSA now assesses the safety also of higher stacks with four, five or six modifications combined in one plant.
+Risk assessment of stacks
+When assessing the safety of a stack for humans, animals and the environment, EFSA considers the quality and quantity of all available information and draws on the existing risk assessments of each of the individual genetic modifications that form the stack. EFSA also takes into account the data for the stack, focusing on the levels of newly expressed proteins, the stability of the modifications and on potential interactions between individual modifications combined in the stack.
+Sub-combinations
+The safety assessment of the GM stack plant includes all possible sub-combinations of the individual modifications. Some may have been assessed previously as separate stacks; others do not exist and data are therefore not available. In such cases, EFSA performs its assessment on a weight-of-evidence approach, using available information from risk assessments of the high stack, the single genetic modifications and existing sub-combinations to conclude on its safety.
+EFSA clearly identifies any uncertainties stemming from the lack of data and, if relevant, recommends mitigation measures. For example, such measures could require applicants to provide relevant data for a risk assessment of the respective sub-combination should they produce plants with previously non-existent sub-combinations through conventional breeding.
+Allergenicity guidance
+EFSA is currently updating guidance on allergenicity to reflect scientific advances in the field. The update is based in part on extensive literature reviews, which revealed new methodologies that could be applied in allergenicity assessment. It also reflects recent EU legislation on GM food and feed by addressing new requirements for the authorisation of GM plants for the European market.
+The draft guidance on allergenicity assessment of GM plants is a milestone in EFSAs efforts to engage stakeholders in its scientific processes. An eight-member stakeholder focus group acted as a consultative body and contributed to the development of the document from the start. The involvement of stakeholders allowed EFSA to benefit from relevant expertise throughout the development of the guidance.
+Guidance clarifying data requirements for GM plant risk assessment
+In June 2015, EFSA published new guidance clarifying the data needs for the agronomic and phenotypic characterisation of GM plants. The document complements existing guidance on data requirements for the risk assessment of GM plants. It gives applicants seeking market approval for a GM plant in the European Union recommendations on how to generate, analyse and interpret agronomic and phenotypic data of the GM plant.
+Guidance for renewal application of GMOs
+In June 2015, EFSA issued a new guidance document on the information that companies need to provide when applying for renewed authorisation to import GM plants for food and feed into the European Union. The European Commission grants authorisations to place GM food and feed on the European market for a period of ten years.
+Interview with Working Group Chair on guidance for renewal of authorisations
+New plant breeding techniques
+Following a request from the Commission, EFSA launched a project in 2011 to evaluate eight new plant breeding techniques. The GMO Panel was asked to assess whether the current guidance documents would still be applicable to plants developed using these novel methods. The techniques earmarked for evaluation included intragenesis, cisgenesis and zinc finger nuclease technique (ZFN).
+EFSA delivered the first of these opinions on cisgenesis and intragenesis in January 2012 followed by a second opinion on zinc finger nuclease 3 (ZFN-3) in October 2012. The GMO Panel concluded in both opinions that current risk assessment guidance (including environmental risk assessment guidance) was applicable to evaluate food and feed derived from these new techniques. In 2013, the European Commission requested that EFSA put further assessments of new plant breeding techniques on hold to allow the GMO Panel to focus on the evaluation of GMO applications and the development of guidance documents.
+A large part of EFSAs work in the area of GMOs relates to the safety assessment of GMOs before they are considered for market approval. The majority of assessments relate to GM plants: as of August 2016, EFSA had carried out six for cultivation and 68 for import and processing mostly as feed.
+EFSA also responds to urgent requests by the European Commission or the European Parliament on issues related to GMOs and their safety.
+Assessment of GMO applications
+EFSA evaluates the safety of new GMO products before a market authorisation decision is taken by risk managers. This evaluation encompasses the assessment of the potential impact of GMOs on human health, animal health and the environment. EFSAs assessments are based on scientific dossiers presented by applicants and any other relevant scientific information.
+EFSA applies the principles of GMO risk assessment considering the following aspects:
+Molecular characterisation: assessment of the molecular structure of the newly created proteins, their functioning and their potential interactions.
+Comparative analysis: comparison of the GM plant with its conventional counterpart. The aim is to detect differences in the plants observable appearance such as height and colour  phenotypic characteristics  and its agronomic characteristics such as yield. The analysis also compares the nutritional values of the GM plant and its conventional counterpart.
+Evaluation of potential toxicity and allergenicity.
+Evaluation of potential environmental impact.
+Once a GMO has been authorised by risk managers, it normally receives a 10-year licence for the EU market. After 10 years, it must be re-assessed by EFSA before any re-authorisation decision is taken.
+Guidance documents
+EFSA has prepared several guidance documents for the risk assessment of GMOs and their derived food and feed. These documents detail how to compile GMO application dossiers and the type of scientific data and other information to be included. All guidance documents are publicly available on EFSAs website.
+GMO guidance documents
+Post-authorisation monitoring
+Under EU legislation, applications for import and processing as well as for cultivation of GM plants must contain a plan for detailed post-market environmental monitoring (PMEM). This plan should describe how the GM plant will be monitored for possible adverse effects on the environment. EFSA assesses the results of PMEM for cultivated GM plants annually. It makes recommendations to the European Commission when necessary.
+Taken together, environmental risk assessment and PMEM are an important part of the range of measures in place to protect the environment.
+Environmental risk assessment
+In some cases, EFSA recommends the post-market monitoring of GM plants for possible adverse effects on animal or human health. This is usually done when the GM food or feed has an altered nutritional composition, when the nutritional value of the GM food or feed differs from the conventional varieties, or when there is a likelihood of increased allergenicity due to the genetic modification. The aim of post-market monitoring is to ensure the continued safety of the new GMO.
+EFSA assesses any possible risks from GMOs to human and animal health, and the environment in Europe. EFSAs role is to give scientific advice on the safety of GMOs to Europes risk managers, i.e. the European Commission and EU Member States. It is their responsibility as risk managers to decide on the authorisation of GMOs for the European market.
+EFSA applies the strict criteria laid down in the European Union regulatory framework when evaluating the safety of GMOs before they can be authorised for use as food or feed or for cultivation in the EU. The GMO Panel has developed guidance documents describing application procedures and the data applicants must include in their application dossiers. The required information includes all necessary studies on human and animal safety, as well as on environmental impact. This approach ensures that the Panels evaluations meet the highest scientific standards.
+Technical information for applicants submitting GMO dossiers for evaluation by EFSA can be found in the Applications section on EFSAs website:
+GMO applications
+Cooperation with Member States
+EFSA works closely with Member States during the GMO assessment process through a network of over 100 organisations and authorities across Europe including over 250 experts. Member States are able to give input to EFSA on its GMO assessments during a commenting period. To ensure transparency, EFSA provides a summary of how comments and input from Member States are followed up in each of its GMO opinions.
+The Member State network on GMO risk assessment also makes an important contribution through the development of joint projects with EFSA, as well as promoting the exchange of information, expertise and best practice.
+GMO network
+The European Union has established a legal framework for the application of genetic modification technology to ensure a high level of protection of human and animal health and the environment. This framework strictly regulates the production of GM food and feed, GMO imports as well as the release of GMOs into the environment.
+GM foods and feeds can be authorised in the EU only if they have passed a rigorous safety assessment. The procedures for evaluation and authorisation of GM foods and feeds are laid down in the following documents:
+Directive 2001/18/EC on the deliberate release into the environment of genetically modified organisms
+Regulation (EC) 1829/2003 on genetically modified food and feed
+Implementing Regulation 503/2013 on applications for authorisation of genetically modified food and feed
+For more information see here:
+EU regulatory framework on GMOs European Commission, DG Health and Consumers
+Member States and GMO cultivation
+Under EU legislation, a Member State has the right to decide on the cultivation of GM crops on its territory. During the authorisation procedure of an application, a Member State can request to have the geographical scope amended so that its territory will not be covered by that authorisation. In case of already authorised GMOs, a Member State can prohibit or restrict the cultivation of GM crops on its territory.
+EFSA and stakeholders discuss draft allergenicity guidance
+29 November 2016
+News: News
+Scientific opinion on GM cotton GHB119
+21 October 2016
+Scientific Opinion
+Relevance of new scientific evidence for former EFSA GMO Panel scientific outputs on GM maize
+29 September 2016
+Technical report
+Draft GM plant allergenicity guidance to be presented to stakeholders
+29 September 2016
+News: News
+Genetically modified organisms: EFSAs work explained
+23 August 2016
+News: News in brief
+Scientific opinion on GM soybean 305423  40-3-2
+18 August 2016
+Scientific Opinion
+Public consultation on the draft Guidance Document on allergenicity assessment of genetically modified plants
+26 July 2016
+Consultation
+GM oilseed rape MS8  RF3  GT73 and specific subcombinations
+20 May 2016
+Scientific Opinion
+Environmental risk: harmonising assessment, protecting biodiversity
+3 February 2016
+News: News
+Info session on applications - GMO - Technical meeting with applicants
+26 November 2015
+Parma
+Pages1
+2
+3
+4
+5
+
+Next >
+1. What is EFSAs role in the risk assessment of GMOs?
+EFSAs Panel on Genetically Modified Organisms (GMO) carries out risk assessments of GMO applications. The Panel consists of up to 21 independent scientific experts who assess all GMO applications received by EFSA. The Panel assesses each GMO application to ensure that it poses no risk to human and animal health, and the environment. The Panel operates within a strict EU regulatory framework.
+The GMO Panel has developed guidance documents explaining how to compile an application and what kind of data to include. The required information includes studies relevant for human and animal safety, as well as on the environment.
+Overview of applicable EU legislation and EFSA guidance documents
+2. How does EFSA carry out its risk assessments?
+EFSA evaluates the safety of new GMO products before risk managers take a market authorisation decision. (This infographic explains the different roles of risk assessment and risk management.)
+EFSA evaluates the potential impact of GMOs on human health, animal health and the environment. Its assessments are based on scientific dossiers presented by applicants and any other available relevant scientific information.
+EFSA applies the principles of GMO risk assessment considering the following aspects:
+Molecular characterisation: assessment of the molecular structure of the newly created proteins, their functioning and their potential interactions.
+Comparative analysis: comparison of the GM plant with its conventional counterpart. The aim is to detect differences in the plants observable appearance such as height and colour  phenotypic characteristics  and its agronomic characteristics such as yield. The analysis also compares the nutritional value of the GM plant and its conventional counterpart.
+Evaluation of potential toxicity and allergenicity.
+Evaluation of potential environmental impact.
+Once a GMO is authorised by risk managers, it receives a 10-year licence for the EU market. After 10 years, it must be re-assessed by EFSA before a re-authorisation decision can be taken by risk managers.
+3. What type of applications does EFSA examine?
+GMO applications can cover the import and processing of GM plant materials in the EU for food and/or feed uses, and their import for cultivation. EFSAs GMO Panel takes into account the scope of the GMO application and the intended uses of the GM product when performing the risk assessment.
+The majority of assessments carried out by EFSA so far relate to GM plants including maize, soybean, oilseed rape, cotton, potato, rice and sugar beet.
+4. What type of data is involved?
+Depending on the scope and the submission date of an application, different criteria apply. EFSAs guidance documents set out what the GMO Panel requires in terms of information and tests to be carried out in the area of molecular characterisation, toxicity, allergenicity, nutrition and environmental risk assessment.
+Overview of all regulations and guidance documents
+5. Do the same tests have to be carried out on each GMO?
+GMO guidance documents provide the scientific requirements for GMO applications and explain the risk assessment strategy according to which studies should be designed and conducted. Since each GMO may call for specific studies or protocol adaptations, these guidance documents cannot describe in full detail all study types and protocols that may be needed. The EFSA GMO Panel applies a case-by-case approach, treating each application as unique. When necessary, the EFSA GMO Panel asks for additional data, studies or tests to complete the evaluation of an application.
+In several cases, test protocols recommended in the EFSA GMO guidance documents follow internationally recognised and harmonised methods. When applicants propose deviations from these methods, they must provide a scientific rationale to justify the derogation.
+6. What happens if the data provided are insufficient or incomplete?
+When the information provided by an applicant is insufficient for EFSAs GMO Panel to complete the risk assessment or incomplete, the applicant is required to submit the missing information. To date, this has happened in 95% of cases. If applicants do not provide the requested information within established deadlines, EFSA reserves the right to proceed with the risk assessment using the information available.
+7. How long does it take for EFSA to carry out a GMO risk assessment?
+EFSA aims to deliver its overall opinion within six months of an application having passed the completeness check. The overall opinion of the GMO Panel includes the risk assessment of the GMO, as well as other information such as a post-market environmental monitoring plan and comments from Member States.
+Whenever EFSA seeks supplementary information from the applicant (see previous question), the clock is stopped until the requested information is supplied. The total time taken to carry out the risk assessment therefore varies. It can range from 2 to 24 months, depending on the type of additional information the applicant is requested to submit.
+More information on indicative timelines for the submission of additional information
+8. Why does EFSA not carry out its own studies?
+Under present EU legislation, the GMO applicant is responsible to demonstrate the safety of the GMO in question. Applicants are obliged to present a full application dossier containing all the information EFSA needs to carry out the risk assessment. The cost of these studies is borne by the applicant.
+9. What is EFSAs role in the renewal of GMO authorisations?
+Authorisations for the import of genetically modified (GM) food and feed into the European Union are granted by the European Commission and Member States for a period of 10 years. Applicants wishing to extend this period can apply for a renewal. EFSA then evaluates whether or not the original risk assessment remains valid.
+In June 2015, EFSA published new guidance detailing the data that applicants need to submit when applying for re-authorisation. These data allow EFSA to evaluate whether there is any new evidence that would have an impact on the conclusions of the original risk assessment: for example, are there any new hazards, modified exposure scenarios or new scientific uncertainties? To be able to answer these questions, EFSA requires applicants to provide all available information on the GM food or feed including new scientific publications, unpublished information available to the applicant and post-market monitoring reports including environmental monitoring.
+Guidance document for the renewal of authorisations of existing GMO products
+Interview with GMO Panel Chair on renewal guidance
+10. Can the public access GMO applications?
+All EFSA opinions and the summaries of GMO applications are published on the EFSA website. The public may also request access to the full documentation submitted to EFSA by applicants and third parties. Access is usually allowed to such documentation except where information is claimed to be confidential by the applicant. It is up to the European Commission or a Member State to decide whether or not the claim for confidentiality is justified.
+There is also an opportunity to monitor the status and progress of EFSAs ongoing scientific work including its evaluation of applications. For more details consult the status tracker in the Applications section.
+11. Who is involved in assessing GMOs?
+EFSAs GMO risk assessment work is carried out by the GMO Panel of up to 21 scientific experts, supported by a team of EFSA scientists, with experience in a wide range of scientific disciplines: biochemistry, food and environmental food microbiology, soil microbiology, molecular biology, genetics, toxicology, animal pathology, immunology, biotechnology, food sciences, ecology, plant biology, agronomy, entomology and statistics. In addition, over 40 external scientific experts with additional expertise contribute to the work of the Panel as members of its working groups, which are created to deal with specific areas of GMO risk assessment.
+Members of the GMO Panel and its working groups, as well as other external experts contributing to the work of EFSA, are selected based on their scientific competence and expertise, and according to objective and transparent criteria. All scientific experts selected to contribute to the work of the Panel or any of the working groups have to make Declarations of Interests (DoIs) which are published on the EFSA website. This policy helps EFSA to ensure the independence of its scientific advice.
+EFSA also benefits from the contribution of EU Member States to its GMO risk assessment work through a network of over 100 institutions and authorities across Europe as well as through the dedicated GMO network.
+12. Does the European Food Safety Authority assess environmental issues when assessing GMOs?
+Assessing the impact of a GMO on the environment is an intrinsic part of EFSAs safety assessment of GMOs. The inclusion of an environmental risk assessment (ERA) stems from the legal framework regulating the risk assessment of GMOs.
+When carrying out an ERA, the GMO Panel evaluates the overall impact of a GMO on the environment including biodiversity, ecosystem services and endangered species. Is a GM plant, for example, more persistent and/or invasive than its conventional counterpart? Does it have any adverse effects on organisms that are not meant to be affected by the GMO, the so-called non-target organisms?
+The guidance document for the environmental risk assessment of GM plants assists applicants in the preparation of the environmental aspects of an application. Applicants must include a plan for detailed post-market environmental monitoring (PMEM) irrespective of whether they apply for authorisation to import and/or process, or for cultivation. This plan should describe how the GM plant will be monitored for possible adverse effects on the environment. EFSA assesses the results of PMEM for cultivated GM plants annually. It makes recommendations to the European Commission when necessary.
+For more information see the topic on environmental risk assessment.
+13. How does EFSA take account of the long-term effects of GMOs on human health and the environment?
+GMO applications must contain adequate information to enable assessment of the potential long-term adverse effects of the GMO on human health, animal health and the environment.
+Depending on the outcome of the risk assessment, applicants may be required to carry out additional long-term studies. In other cases, post-market monitoring (PMM) of GM food or feed may be considered. Post-market environmental monitoring (PMEM) activities are obligatory for all GMOs that are put on the EU market. These mechanisms help in identifying and managing potential long-term adverse effects of GMOs on the environment.
+14. How does EFSA keep its risk assessments of GMOs at the forefront of science?
+In addition to evaluating new products before market authorisation, EFSA also initiates its own work (self-tasking activities), in order to stay at the forefront of new scientific developments and to further develop GMO risk assessment approaches. This may range from the development or updating of guidance documents to scientific opinions on particular areas of science relevant to GMOs, such as animal feeding trials, non-target organisms or allergenicity.
+15. What about uncertainties in the risk assessment of GMOs?
+Uncertainties are part of the reality of scientific risk assessment. At EFSA uncertainties are understood as all types of limitations in the knowledge available to assessors at the time an assessment is conducted and within the time and resources available for the assessment. Identifying and describing uncertainties and explaining their implications for assessment conclusions, are crucial parts of providing transparent scientific advice. It is up to risk managers to consider such uncertainties in their decision-making.
+EFSAs work on uncertainty
+Discover All EFSA topics
+view more
+Subject area
+GMO
+About
+Executive Director
+Management Board
+Corporate Documents
+Engage
+Careers
+Consultations
+Procurement
+Fellowship programme
+Connect
+Newsletters & email alerts
+Press Centre
+Calendar
+Contact us
+Follow us on:
+TOOLSRegister of questions EFSA extranet (DMS)Declarations of interest
+Committed to ensuring that Europe's food is safe
+Feedback
+The EFSA Web Team would like to hear your views.
+We value your feedback and would appreciate a few minutes of your time to complete this questionnaire.
+EFSA is an agency of the European Union
+Contact us
+Legal notice

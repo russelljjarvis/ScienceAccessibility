@@ -1,0 +1,570 @@
+Generation of Transgenic Mice
+Andrew Cho,1 Naoto Haruyama,1 and Ashok B. Kulkarni1
+Author information  Copyright and License information
+
+Abstract
+This unit describes detailed step-by-step protocols, reagents, and equipment required for successful generation of transgenic mice using pronuclear injection. The experimental methods and practical tips given here will help guide beginners in understanding what is required and what to avoid in these standard protocols for efficiently generating transgenic mice.
+
+Keywords: DNA purification, genotyping, embryo harvesting, embryo implantation, transgenic mice, zygote
+Go to:
+Introduction
+The technology for gene transfer into the early developing embryos has enabled researchers to make animal models to study human development, diseases, and disorders. We can now generate transgenic, knockout, conditional-knockout, or knock-in mice to elucidate the precise functions of candidate genes implicated in development, disease, and disorders. Transgenic mouse models are now considered ideal tools to delineate the molecular mechanisms of the gene products and their interactions with one another that influence all cellular processes that form the basis of physiological systems. The technique for generating the genetically altered animal models has been perfected over the years, and it is now used widely in many laboratories.
+
+This unit describes the pronuclear-microinjection technique in detail to successfully generate transgenic mice, which represents a gain-of-function approach. In short, generating transgenic mice involves five basic steps: purification of transgenic construct (Basic Protocol 1), harvesting donor zygotes (Basic Protocol 2), microinjection of transgenic construct (Basic Protocol 3), implantation of microinjected zygotes into the pseudo-pregnant recipient mice (Basic Protocol 4), and genotyping and analysis of transgene expression in founder mice (Basic Protocol 5). The timeline for generating transgenic mice is shown in Table 19.10.1.
+
+NOTE: Mice to be used for generating transgenic mice should be purchased from approved animal vendors that provide healthy and pathogen-free mice suitable for research. The number of mice and methods for housing, breeding, and manipulating the mice for the purpose of generating transgenic mice must be approved by the appropriate Institutional Animal Care and Use Committee (IACUC) and conform to governmental regulations.
+
+Go to:
+Purification of Transgenic Construct Using a Sucrose Gradient
+To generate transgenic mice successfully, every step is critical, from designing the transgenic construct to embryo transfer. Preparing a clean DNA sample is a vital step because it affects the health of the embryo and the DNA integration efficiency. Only a DNA fragment without any trace of vector sequence should be microinjected. The vector sequence, as well as any chemical residues remaining in the final DNA solution are generally toxic to mouse zygotes and will result in death of the embryo or poor efficiency in generating transgenic mice. The final purified DNA should be dissolved in a microinjection buffer and should be centrifuged to remove any impure particles in the solution just before performing microinjection. In the case of a larger DNA construct such as bacterial artificial chromosomes (BAC) DNA, it should be dissolved in a specialized buffer. We routinely use a sucrose gradient or a gel-purification method (Alternate Protocol) to purify the DNA.
+
+Materials
+
+Plasmid DNA of interest, digested to remove plasmid backbone
+TE buffer, pH 7.4 (KD medical)
+10% (w/v) and 40% (w/v) sucrose solutions (see recipes)
+1.2% agarose gel
+Microinjection buffer or BAC DNA buffer (see recipes)
+Sucrose gradient DNA purification apparatus (Fig. 19.11.1) containing:
+Figure 19.11.1
+Figure 19.11.1
+Purification of a transgenic construct using the sucrose gradient method. (A) Sucrose mixer with dimensions of 3-in. (W) × 2-in. (H) × 1 7/8-in. (D) is made by making two chambers of 5/8-in. (D) × 2-in. (H), which are connected ...
+Custom-made sucrose mixer
+Stirrer/hot plate
+Glass microcapillary (Kimble Glass)
+Rubber tubing
+Magnetic bar
+14 × 95–mm centrifuge tubes (Beckman)
+Ultracentrifuge (e.g., Beckman Coulter, model L-70)
+Swinging-bucket rotors (e.g., Beckman Coulter, model SW 40 Ti)
+1.7-ml microcentrifuge tubes
+Microcapillary pipet (Kimble Glass, 20-μl)
+Dialysis cassette (Pierce, 10,000 MWCO)
+Additional reagents and equipment for checking the DNA concentration using a spectrophotometer (appendix 3d)
+Prepare the gradients
+
+1
+Start out with the plasmid digest containing the transgene fragment and the vector backbone at a concentration of ∼50 μg in 500 μl TE buffer.
+2
+Prepare 10% (w/v) and 40% (w/v) sucrose solutions. Dispense 6.5 ml of 10% sucrose into chamber 1 (containing a small magnetic stirring bar) and 6.5 ml of 40% sucrose into chamber 2 of the custom-made sucrose gradient mixer shown in Figure 19.11.1.
+3
+Prepare a 10% to 40% sucrose gradient from top to bottom of the 14 × 95–mm ultracentrifuge tube by gently mixing the two sucrose concentrations by opening two pigots, and gently spinning a small magnetic bar in chamber 1 using a stirring plate.
+Separate transgene and vector
+
+4
+After the ultracentrifuge tube is filled up to the top with the gradient, slowly discard 500 μl of the sucrose gradient from the top, and load 250 μl of the digested plasmid DNA to the top of the gradient.
+5
+Separate the transgene fragment from the vector backbone by ultracentrifuging at 16 hr at ∼160,000 × g (30,000 rpm in a Beckman Coulter, SW 40 Ti rotor), 4°C in the swinging-bucket rotor.
+6
+Serially elute the gradient by collecting ∼200 μl fractions in 1.7-ml microcentrifuge tubes through a hole in the bottom of the centrifuge tube.
+7
+Load 20 μl of the eluted fractions onto a 1.2% agarose gel in 1× TE buffer to determine which fractions contain only the transgene fragment (and not the vector DNA).
+The size of the transgene should be sufficiently different from the vector for better separation by ultracentrifugation and subsequent check by gel electrophoresis. Pooled fractions to be used for the next step should contain only the transgene DNA fragment.
+
+Dialyze the transgene DNA
+
+8
+Pool the transgene-containing fractions from the microcentrifuge tubes containing the transgene fragments and dialyze against the microinjection buffer according to the manufacturer's instruction. Dialyze three more times against the fresh microinjection buffer to purify the DNA.
+9
+Centrifuge the dialyzed solution 2 min at 16,000 × g, room temperature, to remove any particulate impurities. Check the DNA concentration using a spectrophotometer (appendix 3d).
+10
+Based on the accurate DNA concentration, carefully dilute the DNA to 2 ng/μl with the microinjection buffer.
+The dialyzed DNA can be stored up to 1 week at 4°C or in −20° C freezer for a longer period.
+
+Go to:
+Purification of Transgenic Construct Using a Gel-Based DNA Purification Method
+We routinely use either of two methods to purify DNA (sucrose gradient or a gel-purification method). Both methods have merits of their own in that the sucrose gradient method yields the purest DNA for microinjection, whereas the gel purification method is a quick and easy method to yield adequately clean DNA for microinjection.
+
+Additional Materials (also see Basic Protocol 1)
+
+Transgene DNA of interest, digested to remove plasmid backbone (see Basic Protocol 1)
+QIAEX II Gel Extraction Kit (QIAGEN, cat. no. 20051) including the following components:
+Buffer QX1
+QIAEX II DNA binding particles
+Buffer PE
+Razor blade
+50°C water bath
+Vortex
+Gel-purify the construct
+
+1
+Run the digested plasmid DNA transgenic construct (see Basic Protocol 1) on a 1.2% agarose gel in 1× TE buffer.
+2
+Excise the transgene DNA band from the agarose gel with a clean razor blade.
+You can visualize the DNA bands under low-intensity UV light to minimize the damage to the DNA.
+
+Extract the DNA
+
+3
+Weigh the gel slice and add 3 vol of buffer QX1 to 1 vol of gel for a DNA fragment between 100-bp and 4-kb in size. If the DNA fragment is >4 kb add 3 vol of buffer QX1 plus 2 vol of dH2O to 1 vol of gel.
+Purify the DNA
+
+4
+Resuspend the QIAEX II DNA binding particles, add the binding particles to the sample in step 3, and mix gently. If the amount of DNA is <2 μg add 10 μl of QIAEX II or add 30 μl if the DNA amount is between 2 and 10 μg. Add an additional 30 μl for each additional 10 μg of DNA.
+5
+Incubate 10 min at 50°C in a water bath to solubilize the agarose gel and allow QIAEX II particles to bind to the DNA. Mix the tubes by vortexing every 2 min to maintain QIAEX II in suspension.
+6
+Centrifuge the sample 30 sec at 16,000 × g, room temperature and carefully discard the supernatant.
+Wash the construct-containing pellet
+
+7
+Wash the pellet by adding 500 μl of Buffer QX1, vortexing, centrifuging 30 sec at 16,000 × g, room temperature and discarding the supernatant.
+8
+Wash the pellet twice, each time by adding 500 μl of Buffer PE, vortexing, centrifuging 30 sec at 16,000 × g, room temperature, and discarding the supernatant.
+9
+Air dry the pellet for 10 to 15 min.
+Elute the DNA
+
+10
+Elute the DNA from the pellet by adding 20 μl of microinjection buffer followed by vortexing. Incubate the mixture 5 min at room temperature for a DNA amount of <4 kb size, or incubate 5 min at 50°C for DNA size between 4 and 10 kb, or 10 min at 50°C if >10 kb.
+11
+Centrifuge the mixture 30 sec at 16,000 × g, room temperature and carefully pipet out the supernatant containing the purified DNA into a 1.7-ml clean tube.
+12
+With the remaining material, repeat steps 10 and 11 to increase the DNA yield and combine the eluted fractions.
+13
+Dissolve the DNA pellet in 100 μl of microinjection buffer.
+14
+Centrifuge the purified DNA solution 2 min at 16,000 × g, room temperature to remove all the traces of impurities that might still be present in the final DNA solution. Carefully pipet out the supernatant into another clean tube.
+Prepare construct DNA for microinjection
+
+15
+Measure the DNA concentration (appendix 3d) and dilute the DNA to 2 ng/μl in microinjection buffer or to 1 ng/μl in a BAC buffer if transgene is BAC DNA.
+The methods for preparing BAC DNA suitable for microinjection are detailed in Conner (2004).
+
+Go to:
+Harvesting Donor Zygotes (Fertilized Eggs) for Microinjection
+To obtain the maximum number of donor zygotes to use for microinjection to generate a large number of transgenic founders with minimal effort and cost, all egg-donor female mice need to be superovulated by injecting PMSG (pregnant mare's serum gonadotropin) and HCG (human chorionic gonadotropin) prior to mating them with the stud mice. We routinely harvest ∼250 zygotes from 15 superovulated and plugged female mice. The donor mouse strain we typically use is FVB/N, which is one of the most widely used inbred mouse strains because its embryos have a relatively large pronucleus and are robust enough to withstand the microinjection procedure.
+
+Materials
+
+PMSG (pregnant mare's serum gonadotropin; Sigma Chemical Inc., cat.no. G4877-2000IU)
+20 donor female mice (4- to 5-week-old FVB/N mice)
+HCG (human chorionic gonadotropin; Sigma Chemical Inc., cat. no. CG10-1VL)
+20 stud male mice (sexually mature male, 2- to 12-month-old, FVB/N mice)
+M16 medium (Sigma Chemical, cat. no. M7292)
+M2 medium (Sigma Chemical, cat. no. M7167)
+Hyaluronidase (Sigma Chemical, cat. no. H3884-1G)
+35 × 10–mm tissue culture dish (Falcon, cat. no. 353001)
+60 × 10–mm tissue culture dish (Falcon, cat. no. 353002)
+Dissecting microscope for handling zygotes (Zeiss, Stemi SV II Apo)
+Light source for dissecting microscope (Zeiss, KL 1500 LCD)
+Surgical scissors (Roboz, RS-5840)
+Microdissection forceps (Roboz, RS-5055)
+Mouth-controlled pipet assembly (Fig. 19.11.2) including the following items:
+Figure 19.11.2
+Figure 19.11.2
+Schematic diagram of the components necessary for preparing a mouth-controlled pipet device for handling zygotes. Rubber tubing with 1/8-in. i.d. and 1/32-in. wall is cut in three pieces, and the mouth piece, 0.2-μm syringe filter unit, 1-ml pipet ...
+Plastic mouth piece
+Portion of a 1-ml pipet that includes cotton piece
+Rubber tubing, 1/8-in. i.d., 1/32-in. wall thickness (Thomas Scientific, cat. no. 9521R67)
+Glass tubing to make embryo-handling pipets (Drummond Scientific, cat. no. 9-000-1181)
+Glass tubing with a rubber cap (Drummond Scientific, cat. no. 1-000-0300)
+Bunsen burner
+CO2 incubator (Thermo Electron Corporation, Model 370)
+Additional reagents and equipment for peritoneal injections (Donovan and Brown, 2006a) and euthanasia of mice (Donovan and Brown, 2006b)
+Prepare donor females
+
+1
+To obtain the maximum number of zygotes for microinjection, superovulate the donor mice by administering an intraperitoneal (i.p.) injection (Donovan and Brown, 2006a) of 5 U of PMSG per mouse at 2:00 PM 2 days prior to HCG injections and mice matings.
+2
+Inject each mouse intraperitoneally (Donovan and Brown, 2006a) with 5 U of HCG at 1:00 PM 2 days after PMSG injections.
+3
+Following the HCG injection, set up mating pairs consisting of one superovulated female and one stud male per cage.
+Mating one female to one male mouse will enhance the plugging performance.
+
+Set up mating at late afternoon so that the mice will mate during the dark cycle.
+
+4
+Check the donor female mice to see if mice have mated overnight by checking for the presence of vaginal plugs the next morning, preferably before 9 AM.
+To get fresh fertilized eggs, harvest them from the plugged female mice before noon as described below.
+
+Isolate the ovary and oviduct
+
+5
+Prepare two 35 × 10–mm dishes of M16 medium, by transferring 200 μl to the center of the dish and cover the medium with 5 ml of mineral oil. Then, prepare three 35 × 10–mm dishes with 5 ml of M2 medium and one 35 × 10–mm dish of M2 medium containing 1.5 mg of hyaluronidase in 5 ml of M2 medium, as shown in Figure 19.11.3A.
+Figure 19.11.3
+Figure 19.11.3
+Sequence of embryo harvesting: (A) Two M16, three M2, and one M2 medium with hyaluronidase plates are prepared for handling or culturing embryos throughout the whole process of transgenic mice generation. (B, C) The reproductive organs: uterus, ovary, ...
+Carry two M16 dishes in a 60 × 10–mm dish for easy transportation and incubate both dishes containing M16 medium at 37°C in the 5% CO2 incubator.
+
+6
+Kill the plugged female mouse by cervical dislocation (Donovan and Brown, 2006b), put it on its back, and using a pair of surgical scissors and microdissection forceps open the body cavity (as shown in Fig. 19.11.3B).
+7
+Locate and harvest the entire ovary and the oviduct by cutting between the upper part of the uterus and the fat body. Transfer the oviduct and ovary to one of the 35 × 10–mm dishes containing M2 medium, as shown in Figure 19.11.3 panels C and D.
+Free and wash the zygotes
+
+8
+To release the zygotes from each oviduct, transfer one dissected tissue at a time to the dish containing M2 medium with hyaluronidase. Locate the ampulla (swollen area of the oviduct) and carefully tear open the corner of the ampulla using microdissection forceps to release the eggs into the medium, as shown in Figure 19.11.3 panels E and F.
+9
+Let the eggs separate from the surrounding cumulus cells in the M2/hyaluronidase solution, as shown in Figure 19.11.3G.
+By the time all ampullas are torn open, the zygotes will be separated from the cumulous cells and should be ready for transfer to the next petri dish.
+
+10
+Pick up each zygote that is separated from cumulus cells using the mouth-controlled pipet assembly and transfer it to fresh M2 medium for washing.
+To make good embryo handling pipets, flame the middle part of the glass tubing over the Bunsen burner to melt it, and when it gets red hot, pull from each end to make a pipet with a long, thin shaft. Then, cut the stretched middle part with a diamond pencil to make two embryo handling pipets with blunt ends.
+
+11
+Wash embryos at least four times by picking them up and transferring them to different drops of M2 medium. At this stage, remove any unfertilized or abnormal eggs.
+12
+Transfer washed eggs into one of the two M16 culture medium dishes that have been pre-incubated at 37°C in the 5% CO2 incubator. Put the dish back into the incubator until ready for the microinjection procedure.
+The second M16 culture medium dish will be used later for eggs after they are microinjected with DNA.
+
+Go to:
+Microinjection of the Transgene DNA Construct into Mouse Zygote
+To ensure a successful transfer of foreign DNA into mouse zygotes, and to increase the chance of integration into the host genome, a number of parameters have to be carefully evaluated and applied when performing microinjection. First, the purified DNA should be diluted to obtain an optimal DNA concentration. We use a DNA concentration of 2 ng/μl for the microinjection. A DNA concentration that is too high may cause zygotes to lyse, and a DNA concentration that is too low may yield poor or no integration of DNA. In our experience, a DNA concentration of 2 ng/μl gives the best transgenic efficiency. Second, the injection pressure with which the DNA solution is injected into the pronucleus should be low enough not to damage the DNA. We use a constant flow rate of 50 hPa (hectopascal) to deliver the DNA using an automated microinjector. There are many advantages in using the constant-flow function. It ensures that every zygote gets the same amount of DNA solution as long as the injection time is equal for each zygote. It also helps the operator because there is no need to push the injecting button every single time for each zygote. Third, the manner in which the injection is performed is very important. Gentle yet swift injections of DNA minimize the trauma to the zygotes. This is done first by carefully breaking the tip of the needle against the holding pipet in order to create ideal DNA flow out of the injection needle. Puncture the zygote and pronucleus membranes as quickly as possible to avoid injecting DNA into the cytoplasm. Lastly, the timing of the microinjection should be strictly followed since the optimal window for DNA integration into the mouse genome is narrow and easy to miss if you start the procedure late. Our injection time window is between 11:00 AM and 2:00 PM (about 11 to 13 hr post-conception) to give the pronuclei of microinjected zygotes plenty of time to prepare to fuse together to initiate the first round of cell division. Injections done later than 2:00 PM may yield no integration, or may result in the generation of mosaic mice, in which only certain cell populations will carry the transgene.
+
+Materials
+
+M2 medium (Sigma Chemical, cat. no. M7167)
+Mineral oil (Sigma Chemical, cat. no. M3516-1L)
+Washed, ready-to-inject zygotes (Basic Protocol 2)
+M16 medium (Sigma Chemical, cat. no. M7292)
+Microforge (Technical Products International Corporation, MF-1)
+Microinjection system including the following components (Fig. 19.11.6 A):
+Figure 19.11.6
+Figure 19.11.6
+Microinjection setup. (A) A microinjection system. (B) Schematic diagram of the microinjection setup. A holding pipet is attached to the oil-pressured controller on the left side of the microscope whereas the injection pipet (needle) is attached to the ...
+Inverted microscope (Zeiss, Axiovert 135M)
+Anti-vibration table (Kinetic systems)
+Automated DNA injector (Eppendorf, Femptojet)
+Capillary holder for holding pipet (Mitutoyo)
+Micromanipulator (Narishige, model MO-202U)
+Compressed Nitrogen gas cylinder
+Needle/pipet puller (Kopf Instruments, model 720)
+Glass tubing for microinjection needles (Sutter Instrument, cat. no. BF100-78-10)
+Microloaders (Eppendorf, cat. no. 930001007)
+One-chambered plastic slide to be used for the microinjection platform (Nalge Nunc International, cat. no. 177372)
+Mouth-controlled pipet assembly for handling zygotes (Fig.19.11.2)
+CO2 incubator (Thermo Electron Corporation, model 370)
+Prepare for microinjection
+
+1
+Make a holding pipet using the microforge as shown and described in Figure 19.11.4. Insert a holding pipet into the capillary holder on the left side of the microscope. Connect this holder to the oil-based hydraulic system.
+Figure 19.11.4
+Figure 19.11.4
+Making of a holding pipet. (A) Microforge. (B) The schematic diagram of preparing holding pipets. The hand-pulled and diamond pencil-cut straight-edged pipet is selected and is brought closer to the heated glass ball to melt evenly to give a polished ...
+To make good holding pipets, bring the hand-pulled pipet close to the heated glass ball until you get a diameter on the open end that is ∼1/3 of the diameter of an embryo. The opening should have a smooth edge.
+
+2
+Make injection needles using a vertical pipet puller (as shown in Figure 19.11.5) at a setting of 16 (heating filament intensity) × 2.5 (force of pulling down), and insert it into the capillary holder on the right side of the microscope. Connect this holder to the automatic microinjector.
+Figure 19.11.5
+Figure 19.11.5
+A schematic diagram for preparing injection needles. A glass tubing of 1.0-mm o.d. × 0.78-mm i.d. is inserted between two rubber pads and is pulled downward with the setting of 2.5 (downward force) × 16 (heat intensity) to prepare excellent ...
+Making successful injection needles can be achieved using the pipet puller. The setting mentioned above gives us good sharp needles with long shafts to minimize the damage to the embryo during the microinjection process.
+
+3
+Load the DNA solution in the back of the injection needle using a microloader pipet.
+To ensure a clean DNA solution free of debris for microinjection, first microcentrifuge the tube containing the DNA solution 2 min at maximum speed, room temperature to settle any suspended debris that might clog the injection needle. After that, check the DNA concentration (appendix 3d) and dilute it to 2 ng/μl for the plasmid DNA constructs or 1 ng/μl for BAC DNA constructs.
+
+When handling BAC DNA, do not vortex at any time for it may shear the DNA.
+
+Prepare the microinjection platform
+
+4
+Prepare the microinjection platform by putting a few drops of M2 medium in the middle of the one-chambered slide followed by overlaying the medium with mineral oil, as shown in Figure 19.11.6B.
+5
+Transfer forty zygotes to the upper portion of the M2 medium to be prepared for microinjection.
+6
+Transfer the slide carefully onto the microscope stage.
+Microinject zygotes
+
+7
+Test the holding needle by holding and releasing one zygote.
+Make sure that not too much oil is flowing out of the holding pipet onto M2 medium. When lowering the holding pipet onto the glass slide, first go to the mineral oil field and control the oil flow, then go into M2 medium. Once the holding pipet is inside the M2 medium, draw up a little bit of the medium into the pipet before attempting to hold the zygote.
+
+8
+Set the automatic microinjector to continuous flow mode at a pressure of 50 hPa, and lower the injection needle into the M2 medium on the slide. Inject the DNA into the male pronuclei inside the zygote, as shown in Figures 19.11.7 and 19.11.8.
+Figure 19.11.7
+Figure 19.11.7
+A schematic diagram depicting microinjection of transgenic DNA into the pronucleus. The size of the microinjected male pronucleus expands as the DNA is injected. A quick horizontal injection maneuver while minimizing damage to the zygote is critical for ...
+Figure 19.11.8
+Figure 19.11.8
+A sequence of events for the microinjection technique. (A) Injection platform for microinjection. Note the rectangular M2 medium in the center that is overlaid with mineral oil. (B) A polished holding pipet is lowered onto the injection platform and a ...
+Prior to microinjection, carefully break the tip of the injection needle against the holding pipet to obtain a good DNA flow. Inject the first egg and watch how fast the pronucleus expands to determine the condition of the injection needle. The pronucleus should expand noticeably if the needle is good. If the pronucleus swells too fast and bursts open, the injection needle is too big and it should be changed to a new one immediately. Also, when microinjecting, be sure to puncture the pronucleus as quickly as possible to avoid injecting DNA into the cytoplasm.
+
+Inject one batch of eggs (∼40 eggs) at a time to avoid keeping zygotes outside the incubator for too long.
+
+9
+To differentiate microinjected zygotes from uninjected ones during microinjection, after injecting each egg, move the microscope stage down and release the zygote on the bottom of the M2 medium.
+10
+Transfer all the microinjected zygotes into the one remaining, pre-incubated, fresh M16 culture medium dish. (See Basic Protocol 2, step 12.) Maintain the zygotes at 37°C in a 5% CO2 incubator until ready for implantation into recipient mice.
+Go to:
+Implantation of Microinjected Zygotes into Pseudo-Pregnant Recipient Mice
+The surgical steps required for embryo transfer need to be mastered first if one wants to be proficient in generating transgenic mice. The technique requires much patience and practice to become a skillful and efficient generator of the transgenic mice. Locating the infundibulum, the opening of an oviduct into which the microinjected zygotes need to be transferred, is hard for beginners, and inexperienced hands can cause massive bleeding problems around the surgical site. Steady hands are critical to avoid rupturing blood vessels and for successful embryo transfers. The embryo transfer can be performed on the same day that the embryos are harvested and injected or the next day after culturing zygotes to the two-cell stage overnight. In our experience, we found no difference between either the timing of the embryo transfer on the development of embryos or on the litter size.
+
+Materials
+
+Forty wild-type female mice (CB6F1, 6- to 8-weeks-old) to be mated with vasectomized mice to generate pseudo-pregnant recipient mice
+Twenty vasectomized BALB/c mice (housed in separate cages)
+M16 dish containing microinjected zygotes (see Basic Protocol 3)
+70% ethanol
+0.25% (v/v) Avertin for anesthesia
+Alcohol swabs
+Betadine antibiotic swabs
+0.5% (v/v) Marcaine for analgesia
+Animal cages
+CO2 incubator (Thermo Electron Corporation, model 370)
+Glass bead sterilizer for the surgical instruments (Fine Science Tools, type 250)
+Dissecting microscope for transferring zygotes (Zeiss, Zeiss Stemi SV II Apo)
+Electric clippers
+Surgical instruments (Sigma Surgical Instrument) including:
+Forceps
+Scissors
+Clamp skin closer with wound clips
+Sutures
+Curved forceps
+Mouth-controlled pipet assembly (Fig. 19.11.2)
+Inverted microscope to perform surgery (Zeiss, Stemi 2000)
+Light source to illuminate the surgical area (Zeiss, KL 1500 LCD)
+Slide warmer preheated to 37°C (Lab-line Instruments, model 26005)
+Additional reagents and equipment for anesthetizing the mouse (Donovan and Brown, 2006c) and intraperitoneal injections (Donovan and Brown, 2006a)
+Prepare pseudo-pregnant recipient mice
+
+1
+Set up twenty mating cages by putting two wild-type female mice to one vasectomized male mouse per cage 1 day before embryo surgery is to be performed.
+2
+On the day of the embryo transfer, check each female mouse for the presence of a vaginal plug.
+3
+Pool all the vaginal-plugged female mice to be used as pseudo-pregnant mice for embryo transfer surgery.
+Collect materials for surgery
+
+4
+Transport the dish containing the microinjected zygotes (see Basic Protocol 3) to the embryo transfer room, if applicable.
+5
+Place the dish containing microinjected zygotes at 37°C, in a 5% CO2 incubator of the embryo transfer room.
+6
+Sterilize the surgical area with 70% ethanol and sterilize all surgical tools using a glass bead sterilizer.
+7
+Anesthetize a recipient mouse (Donovan and Brown, 2006c) with a dose of 0.25% (v/v) Avertin (0.015 to 0.017 ml/g) into the peritoneal cavity (Donovan and Brown, 2006a; e.g., 0.3 ml for a 20-g mouse).
+Load embryos
+
+8
+Take out the dish containing the microinjected eggs from the CO2 incubator, and load the transfer needle with the following items using the sequence as shown in Figure 19.11.9: small amount of M16 medium, small air bubble, medium, air bubble, medium, air bubble, medium, air bubble, fifteen to twenty tightly packed zygotes (transferred using the mouth-controlled pipet). Place the mouth-controlled pipet around the neck of the microscope until ready to transfer.
+Figure 19.11.9
+Figure 19.11.9
+A schematic diagram of preparing transfer pipets for zygote transfers. A hand-pulled and diamond pencil-cut straight-edged pipet with ∼100-μm opening size is first loaded with the five alternate sequence of M16 medium and small bubbles ...
+Transferring fifteen to twenty microinjected zygotes on each side of the mouse will allow for the optimum number of pups to be born.
+
+Prepare the recipient mouse
+
+9
+Put the anesthetized recipient female mouse on its belly, and shave the mouse back from the hump to just above the legs on both sides with an electric clipper as shown in Figure 19.11.10A.
+Figure 19.11.10
+Figure 19.11.10
+A sequence of events for zygote transfer into oviduct. (A) A surgical site is located and shaved. (B) A small skin incision is made and the ovary and fat pad are located before the muscle membrane incision is made. (C) The ovary and an oviduct are pulled ...
+10
+Clean the surgical sites of the mouse with alcohol and Betadine antiseptic swabs three times alternately.
+11
+Make a small incision of ∼0.5 cm on the right side of the mouse skin above where the ovary is located, as shown in Figure 19.11.10B.
+12
+Locate the ovary beneath the transparent muscle membrane, make a small incision of ∼0.2 cm on the muscle membrane, and pull out the ovary by grabbing the fat pad using a small surgical metal clip, as shown in Figure 19.11.10C.
+Make sure not to cut the big blood vessel that runs across the muscle membrane when making an incision.
+
+13
+Carefully tear open the thin, transparent membrane called bursa covering the ovary with fine forceps, and tuck it behind the ovary as, shown in Figure 19.11.10D.
+Again, when tearing open the membrane, avoid tearing the blood vessels.
+
+14
+Carefully open the space between the oviduct and the ovary using forceps, and locate the opening of the oviduct (infundibulum), as shown in Figure 19.11.10E.
+After locating the infundibulum, check it with the tip of the forceps to make sure it is the opening before inserting the transfer needles to transfer the zygotes.
+
+Deposit the embryos
+
+15
+Using a mouth-controlled pipet, slowly blow in the fifteen to twenty microinjected zygotes into the infundibulum along with a few air bubbles to make sure the eggs are blown into the swollen area of the oviduct (ampulla), as shown in Figures 19.11.11 and 19.11.10F.
+Figure 19.11.11
+Figure 19.11.11
+A schematic diagram depicting zygote transfer into the infundibulum, which is often hidden within coils of oviduct. The infundibulum can be made visible by peeling off the bursa membrane that covers the ovary and by separating the space between the ovary ...
+After blowing in the zygotes, push two air bubbles trapped in the oviduct to the ampulla using the forceps to ensure all the eggs are pushed into the ampulla (as shown in Fig. 19.11.10G).
+
+Complete the surgery
+
+16
+After the transfer is complete, carefully tuck the oviduct and ovary back into the body cavity.
+17
+Suture the muscle membrane and administer one drop of 0.5% (v/v) Marcaine on the sutured surgical site to relieve pain during recovery (as shown in Fig. 19.11.10H).
+18
+Staple the skin together using a wound clip.
+19
+Repeat the procedure for the other side (steps 11 to 18).
+20
+Place the animal on a slide warmer that has been preheated to 37°C for recovery, and wait for the mouse to move, which takes ∼1 hr, before putting the mice into the new cage, as shown in Figure 19.11.10I.
+21
+Repeat this procedure for other recipient mice until you finish transferring all zygotes.
+22
+Put the cages into the mice rack in the animal room.
+Go to:
+Preparation of Tissue Samples for Genotyping Founder Mice
+After microinjection and embryo transfers, most recipient mice should be pregnant and deliver the pups after 20 days. Before pups are born, sometime around embryonic day 17, each pregnant mouse should be housed separately to avoid having multiple litters in the same cage. After delivery of pups, the pups should be monitored every day to see if they develop normally. Any pups that have retarded or abnormal growth should be noted. After 10 days from birth, a tissue biopsy, either a small piece of tail or a piece of ear, should be obtained for the purpose of genotyping to determine the transgenic founders. We snip ∼0.50 cm from the tail to isolate DNA as described below, and we tattoo the mouse finger for identification by piercing it with a 30-G needle stained with tattoo paste.
+
+Materials
+
+Potential founder mice
+Tail lysis buffer (see recipe)
+Proteinase K
+Phenol
+Chloroform
+100% and 70% ethanol
+1× TE buffer
+Microtattoo system (Fine Science Tools, cat. no. 24201-00)
+Green tattoo paste (Fine Science Tools, cat. no. 24201-01)
+30-G needle (Becton Dickinson, cat. no. 305106)
+Labeled microcentrifuge tubes
+Hybridization oven (Boekel, Little Shot II, Model 230501)
+Additional reagents and equipment for tail DNA isolation for Southern blotting (Brown, 1993) and PCR (appendix 3f)
+Prepare the DNA
+
+1
+Snip from the potential founder mouse tail 0.5-cm length, tattoo the mouse finger for identification by piercing it with a 30-G needle stained with tattoo paste, and transfer it to labeled microcentrifuge tubes corresponding to the tattooed mouse finger number.
+2
+Add 0.5 ml of tail lysis buffer (excluding proteinase K) to each tube.
+3
+Add 10 μl of 10 mg/ml proteinase K to each tube.
+Extract the DNA
+
+4
+Rotate the tubes in a hybridization oven overnight at 55°C.
+5
+Add 500 μl of phenol and 500 μl of chloroform to each tube.
+6
+Rotate the tubes in the rotating rack for 1 hr at room temperature.
+7
+Centrifuge the tubes 5 min at 16,000 × g, in the microcentrifuge at room temperature.
+8
+Carefully take out the supernatant and transfer it to the newly labeled tubes.
+Take out ∼250 μl of the supernatant to avoid taking cell debris.
+
+9
+Add 700 μl of chloroform to each tube.
+10
+Rotate the tubes in the rotating rack for 1 hr at room temperature.
+11
+Centrifuge the tubes 5 min at 16,000 × g, in the microcentrifuge at room temperature.
+12
+Carefully take out the supernatant and transfer it to the newly labeled tubes.
+13
+Add 100% ethanol at 2.2× the amount of the supernatant in step 12 and mix tubes gently by hand to precipitate the DNA.
+14
+Centrifuge the tubes 30 sec at 16,000 × g, in the microcentrifuge at room temperature to pellet the DNA.
+Wash the DNA
+
+15
+Add 600 ml 70% ethanol to wash the DNA.
+16
+Centrifuge the tubes 30 sec at 16,000 × g, in the microcentrifuge at room temperature to pellet the DNA.
+17
+Decant the 70% ethanol and air dry the DNA pellet for 1 hr.
+18
+Add 200 μl of 1× TE buffer to the DNA pellet to dissolve the DNA.
+19
+Check the DNA concentration for genotyping the mice by PCR (appendix 3f) or Southern blot analysis (Brown, 1993).
+Go to:
+Reagents and Solutions
+Use deionized, distilled water in all recipes and protocol steps. For common stock solutions, see appendix 2a; for suppliers, see suppliers appendix.
+
+BAC DNA buffer
+
+10 mM Tris·Cl, pH 7.4
+0.1 mM EDTA, pH 8.0 (appendix 2a)
+100 mM NaCl
+30 μM spermine
+70 μM spermidine
+For preparing the buffer, use ultrapure water.
+
+Microinjection buffer
+
+5 mM Tris·Cl, pH 7.4
+0.1 mM EDTA, pH 8.0 (appendix 2a)
+For preparing the buffer, use ultrapure water.
+
+Sucrose solutions, 10% (w/v) and 40% (w/v)
+
+10% (w/v) sucrose solution
+For 100 ml:
+10 g sucrose
+5 ml 1M Tris·Cl, pH 7.4
+20 ml 5M NaCl
+2 ml 0.5M EDTA, pH 8.0 (appendix 2a)
+Adjust volume to 100 ml using 1× phosphate-buffered saline (PBS)
+40% (w/v) sucrose solution
+For 100 ml:
+40 g sucrose
+5 ml 1M Tris·Cl, pH 7.4
+20 ml 5M NaCl
+2 ml 0.5M EDTA, pH 8.0 (appendix 2a)
+Adjust volume to 100 ml using 1× phosphate-buffered saline (PBS)
+Tail lysis buffer
+
+100 mM Tris·Cl, pH 7.4 (appendix 2a)
+5 mM disodium EDTA pH 8.0
+0.2% (v/v) SDS
+200 mM NaCl
+100 μg/ml proteinase K (due to differing storage conditions, add separately after the other buffer components have been added)
+Store up to 6 months at room temperature (6 months at 4°C for proteinase K)
+Go to:
+Commentary
+Background Information
+
+In 1981, Gordon and colleagues reported the generation of the first transgenic mouse using the pronuclear injection technique with a foreign gene sequence of a pBR322-based plasmid containing the herpes simplex virus and simian virus 40 DNA sequence that could be integrated into the mouse genome. Shortly thereafter, several other groups reported similar success (Brinster et al., 1981; Wagner et al., 1981). Since then, thousands of transgenic mice have been generated to unravel the functions of many genes implicated in human development, diseases, and disorders. There are other methods to deliver transgenes into the genome of the mouse. The use of the retrovirus carrying the transgene to infect the pre-implanted embryos and its successful germline transmission has been reported (Jahner et al., 1985; Van der Putten et al., 1985; Lois et al., 2002). However, this method did not gain much popularity because of cloning limitations of the retroviral vectors.
+
+Recently, the discovery of new vectors such as YACs, PACs, and BACs have enabled the cloning of larger transgenes, which are more advantageous in transgene expression than plasmid vector–based cloning technology. (Sternberg et al., 1992; Schedl et al., 1993; Giraldo et al., 2001). Sometimes, minitransgenes (10 kb or less) that are introduced into the genome can cause mouse lethality by complicating normal mouse development. This might be due to the positional effect of the genes surrounding the transgene integration site or the true effect of the transgene. BACs, however, do not suffer from such positional effect because of its representation of the full gene with all the regulatory elements of the endogenous genes. Therefore, BACs play an important tool in functional genomics due to their large cloning capacity (around 150 kb), and due to their greater convenience in handling over other large cloning vectors like YACs and PACs (Testa et al., 2004). Moreover, the availability of high-quality, arrayed BAC libraries encompassing the mouse or human genome makes identification and isolation of specific clones relatively trivial (Conner, 2004). The newly developed Red/ET recombination method that allows BAC-based cloning is relatively easy (Zhang et al., 1998, 2000; Muyrers et al., 1999). There are variations of the method that can be used to make a large transgene for microinjection into oocytes from the BACs (Testa et al., 2004) that make pronuclear injections more attractive than ever in functional genomics.
+
+Critical Parameters
+
+Every step involved in creating transgenic mice requires tremendous focus and attention. To generate transgenic mice at the expected efficiency on a regular basis, all the parameters have to be examined and evaluated. For example, the stud males and the vasectomized male mice have to be replaced every 10 months, the hormone stock should be fresh at all times, and techniques to handle the embryos and the mice throughout the transgenic mice production have to be consistent. Other factors that cannot be controlled such as variations in the mouse responses to the hormone treatment, anesthetic agent, and environment have to be identified immediately and should be addressed as soon as possible. All the procedures should be evaluated from time to time to ensure that they are being performed at an optimal level and that there is no deviation from the best practices. The learn this technology, one should master the implantation surgery skill before learning injections and zygote harvesting. An experienced transgenic generator should focus her/his efforts on making transgenic mice before any other duties to maintain the highest efficiency. Good animal husbandry practices are a must to maintain mice at their best, including mating performance, response to hormone or anesthetics, and recovery after the surgery.
+
+Troubleshooting
+
+No transgenic founders and/or very low transgenic efficiency
+Possible solutions: (1) Check the transgene to make sure it is the right transgenic fragment. (2) Make sure the DNA is ultraclean with no trace of vector DNA. (3) Check to make sure the DNA concentration is 2 ng/μl. (4) Be sure to set the injection pressure to 50 hPa and the injection mode to continuous flow. (5) Inject the mice as early as possible and finish the injections before 2:30 PM at the latest on the injection day. (6) If all of the above are followed and there are still no positives, check to see if the transgene is causing embryonic lethality.
+
+Having a hard time injecting the DNA
+Suggestions: (1) DNA contains impure particles. Centrifuge the DNA solution for 2 min at maximum speed in the microcentrifuge, take the DNA from the upper portion of the solution and check the DNA concentration, and inject. (2) Injection needle is too thin. Break the tip of the injection needle to increase the diameter slightly and inject. (3) Injection needle is clogged with cell debris from the zygotes. Change the injection needle immediately.
+
+The founder mice are mosaic
+Recommendation: Start injecting early and finish long before the 2 pronuclei get close to fusing together, with our strain, inject between 11 AM and 2 PM.
+
+Getting very small litter size
+Possible explanations: (1) The mother does not take care of the pups or kills the pups. (2) The transgene causes embryonic lethality, especially if the pups are delivered but die soon after birth.
+
+Anticipated Results
+
+Mating of 15 to 20 mice should be set up to provide at least 200 zygotes to be microinjected. With good DNA and injection technique, at least 95% of the zygotes should survive the injection procedure and be ready for implantation. The injected zygotes should be implanted into at least 4 recipient mice per each transfer day. From 30 to 40 implanted zygotes per mouse (15 to 20 zygotes in each side of the mouse), at least 10 pups (25%) should be born. Out of the total pups born, 10% to 20% should be the founder mice. Most founder mice are expected to transmit the transgene to their offspring.
+
+Time Considerations
+
+To generate several transgenic founders for each DNA construct, a total of 4 days are needed from the injection of hormone to the implantation surgery. Although much attention has been placed on aspects of the technique, animal care and preparation are also important. The donor mice are received and housed every week, hormone has to be prepared and administered, and mice must be mated and checked for plugs, all of which takes substantial amounts of time. After the implantation, the mice need to be separated and housed individually to avoid having multiple litters; a mouse tissue sample, either a piece of tail or a piece of ear, must be obtained, and the mouse has to be tagged for identification (Table 19.10.1). The harvesting of zygotes from mice takes ∼2 hr, microinjection takes ∼2 hr, and surgery takes ∼3 hr.
+
+Go to:
+Literature Cited
+Brinster RL, Chen HY, Trumbauer M, Senear AW, Warren R, Palmiter RD. Somatic expression of herpes thymidine kinase in mice following injection of a fusion gene into eggs. Cell. 1981;27:223–231. [PMC free article] [PubMed]
+Brown T. Southern Blotting. Curr Protoc Molec Biol. 1993;21:2.9.1–2.9.20.
+Conner DA. Transgenic mouse production by zygote injection. Curr Protoc Molec Biol. 2004;68:23.9.1–23.9.23.
+Donovan J, Brown P. Parenteral injections. Curr Protoc Immunol. 2006a;73:1.6.1–1.6.10.
+Donovan J, Brown P. Euthanasia. Curr Protoc Immunol. 2006b;73:1.8.1–1.8.4.
+Donovan J, Brown P. Anesthesia. Curr Protoc Immunol. 1998;27:1.4.1–1.4.5.
+Giraldo P, Montoliu L. Size matters: Use of YACs, BACs and PACs in transgenic animals. Transgenic Res. 2001;10:83–103. [PubMed]
+Jahner D, Haase K, Mulligan R, Jaenisch R. Insertion of the bacterial gpt gene into the germ line of mice by retroviral infection. Proc Natl Acad Sci USA. 1985;82:6927–6931. [PMC free article] [PubMed]
+Lois C, Hong EJ, Pease S, Brown EJ, Baltimore D. Germline transmission and tissue-specific expression of transgenes delivered by lentiviral vectors. Science. 2002;295:868–872. [PubMed]
+Muyrers JP, Zhang Y, Testa G, Stewart AF. Rapid modification of bacterial artificial chromosomes by ET-recombination. Nucleic Acids Res. 1999;27:1555–1557. [PMC free article] [PubMed]
+Schedl A, Larin Z, Mountoliu L, Thies E, Kelsey G, Lerach H, Schutz G. A method for the generation of YAC transgenic mice by pronuclear microinjection. Nucleic Acids Res. 1993;21:4783–4787. [PMC free article] [PubMed]
+Sternberg NL. Cloning high molecular weight DNA fragments by the bacteriophage P1 system. Trends Genet. 1992;8:11–16. [PubMed]
+Testa G, Vintersten K, Zhang Y, Benes V, Muyrers JP, Stewart AF. BAC engineering for the generation of ES cell-targeting constructs and mouse transgenes. Methods Mol Biol. 2004;256:123–139. [PubMed]
+van der Putten H, Botteri FM, Miller AD, Rosenfeld MG, Fan H, Evans RM, Verma IM. Efficient insertion of genes into the mouse germ line via retroviral vectors. Proc Natl Acad Sci USA. 1985;82:6148–6152. [PMC free article] [PubMed]
+Wagner TE, Hoppe PC, Jollick JD, Scholl DR, Hodinka RL, Gault JB. Microinjection of a rabbit beta-globin gene in zygotes and its subsequent expression in adult mice and their offspring. Proc Natl Acad Sci USA. 1981;78:6376–6380. [PMC free article] [PubMed]
+Zhang Y, Buchholz F, Muyrers JP, Stewart AF. A new logic for DNA engineering using recombination in Escherichia coli. Nat Genet. 1998;20:123–128. [PubMed]
+Zhang Y, Muyrers JP, Testa G, Stewart AF. DNA cloning by homologous recombination in Escherichia coli. Nat Biotechnol. 2000;18:1314–1317. [PubMed]
+Go to:
+Key References
+Brown GAJ, Corbin TJ. Transgenesis in the Mouse: Oocyte injection. In: Clarke AR, editor. Transgenesis Techniques. Methods in Molecular Biology. Vol. 180. Humana Press; Totowa, New Jersey: 2002. pp. 39–70. This chapter contains very useful information for the production of transgenic mice, especially for setting up a new transgenic facility.
+Conner, 2004. See above.
+
+The most current information and methodologies for the generation of transgenic mice are found in this protocol.
+Nagy A, Gertsenstein M, Vintersten K, Behringer R. Manipulating the Mouse Embryo: A laboratory Manual. 3rd. Cold Spring Laboratory Press, Cold Spring Harbor; New York: 2003. A comprehensive guide for generating genetically altered mice along with excellent diagrams and illustrations.
+
+Overbeek PA. Factors Affecting Transgenic Animal Production. In: Pinkert CA, editor. Transgenic Animal Technology: A Laboratory Handbook. Academic Press; San Diego: 1994. pp. 72–109. A detailed description of different strains of mice, excellent husbandry practices, and transgenic phenomenology are discussed in this chapter.
+Pinkert CA. Introduction to Transgenic Animals. In: Pinkert CA, editor. Transgenic Animal Technology: A Laboratory Handbook. Academic Press; San Diego: 1994. pp. 3–11. A thorough and complete history of the development of transgenic technology, as well as a compendium for practical applications of transgenesis via pronuclear injections. [PubMed]
+
+Pinkert CA, Polites HG. Transgenic Animal Production Focusing on the Mouse Model. In: Pinkert CA, editor. Transgenic Animal Technology: A Laboratory Handbook. Academic Press; San Diego: 1994. pp. 15–65. Another excellent resource for the production of transgenic animals via pronuclear microinjections.
+Testa et al., 2004. See above.
+An excellent guide for designing specific BAC transgenic constructs.

@@ -1,0 +1,656 @@
+Transgenic Crops  An Introduction and Resource Guide
+Transgenic Crops  An Introduction and
+Resource Guide
+(http://www.colostate.edu/programs/lifesciences/TransgenicCrops/index.html)
+Authors:
+Pat Byrne
+Sarah Ward
+Judy Harrington
+Lacy Fuller (Web Master)
+The goal of this web site is to provide balanced information
+and links to other resources on the technology and issues surrounding
+transgenic crops (also known as genetically modified or GM crops). The site's
+authors are engaged in plant genetics research and teaching at Colorado
+State University.
+They receive no funds from companies involved in transgenic crop development,
+nor are they affiliated with groups campaigning against such crops. Funding for
+the web site currently comes from a three-year grant by the United States
+Department of Agriculture under the Initiative for Future Agriculture and Food
+Systems program.
+Transgenic
+Crops Currently on the Market
+(http://www.colostate.edu/programs/lifesciences/TransgenicCrops/current.html)
+Crops,
+Traits, and Acreage
+Herbicide
+Tolerance
+Bt
+Insect Resistant Crops
+Insect
+Resistance to Bt Toxins
+Papaya
+Global
+Status of Approved Genetically Modified Plants
+Transgenic
+Foods on the Supermarket Shelves
+Greenpeace's
+List of GM and Non-GM Foods
+Discontinued
+Transgenic Products
+Crops, Traits, and AcreageThe most important
+transgenic crop in terms of acreage planted is soybean, followed by corn,
+cotton, and canola.
+The number of acres for each crop are given in the graph below (Source: James, 2001a, 2001b, 1997). This graph is also available in hectares instead of acres.
+Adoption of transgenic crops in the United
+States has been far greater than in
+many other countries. The following graph shows the acreage of transgenic
+crops in the United States
+from 1996 to 2001.
+In 1999, the area planted to transgenic
+varieties was approximately half of the U.S.
+soybean crop and about 25% of the U.S.
+corn crop. The estimated worldwide area planted to transgenic varieties
+in 2000 increased 11% over the 1999 area (James, 2000b). Most of the transgenic crop varieties
+currently grown by farmers are either herbicide tolerant or insect
+pest-resistant. In addition to the crops listed below, minor acreages
+were planted to transgenic potato, squash, and papaya.
+Transgenic
+crop production area by country (source: James, 2000b)
+Country
+Area
+planted in 2000
+(millions of acres)
+Crops
+grown
+USA
+74.8
+soybean,
+corn, cotton, canola
+Argentina
+24.7
+soybean,
+corn, cotton
+Canada
+7.4
+soybean,
+corn, canola
+China
+1.2
+cotton
+South
+Africa
+0.5
+corn, cotton
+Australia
+0.4
+cotton
+Mexico
+minor
+cotton
+Bulgaria
+minor
+corn
+Romania
+minor
+soybean,
+potato
+Spain
+minor
+corn
+Germany
+minor
+corn
+France
+minor
+corn
+Uruguay
+minor
+soybean
+For information on transgenic crop acreage as a percentage of the
+total U.S.
+acreage in 2000, see the news update entitled Acreage
+for transgenic cotton and soybeans up, corn down.
+Worldwide
+production area of transgenic crops and traits (source: Science
+286:1663, 1999).
+Crop
+Area
+planted in 1999 (millions of acres)
+Soybean
+53.4
+Corn
+27.4
+Cotton
+9.1
+Canola
+8.4
+Potato
+0.3
+Squash
+0.3
+Papaya
+0.3
+Trait
+Herbicide
+tolerance
+69.4
+Bt insect
+resistance
+22.0
+Bt +
+herbicide tolerance
+7.2
+Virus
+resistance
+0.3
+Herbicide Tolerance
+Weed control is one of the farmer's biggest challenges in crop
+production, because poorly controlled weeds drastically reduce crop yield
+and quality. Many herbicides on the market control only certain types of
+weeds, and are approved for use only on certain crops at specific growth
+stages. Residues of some herbicides remain in the soil for a year or
+more, so that farmers must pay close attention to the herbicide history
+of a field when planning what to plant there.
+Herbicide tolerant crops resolve many of those problems because they
+include transgenes providing tolerance to the herbicides Roundup
+(chemical name: glyphosate) or Liberty (glufosinate). These
+herbicides are broad-spectrum, meaning that they kill nearly all kinds of
+plants except those that have the tolerance gene. Thus, a farmer
+can apply a single herbicide to his fields of herbicide tolerant crops,
+and he can use Roundup and Liberty
+effectively at most crop growth stages as needed. Another important
+benefit is that this class of herbicides breaks down quickly in the soil,
+eliminating residue carry-over problems and reducing environmental
+impact. Herbicide tolerant varieties are popular with farmers because
+they enable less complicated, more flexible weed control. These varieties
+are commonly marketed as Roundup Ready or Liberty Link
+varieties.
+Weed-infested
+soybean plot (left) and Roundup Ready soybeans after Roundup
+treatment. Source: Monsanto
+For more information on herbicide tolerant transgenic crops see the
+article "Herbicide Tolerant Soybeans: Why Growers Are Adopting
+Roundup Ready Varieties", J. Carpenter & L. Gianessi, AgBioForum
+online journal, Vol. 2 No. 2, http://www.agbioforum.org/
+Bt Insect-Resistant Crops
+European corn
+borer (left) and cotton bollworm (right) are two pests controlled by Bt
+corn and cotton, respectively.
+Source: USDA.
+"Bt" is short for Bacillus thuringiensis, a soil
+bacterium whose spores contain a crystalline (Cry) protein. In the insect
+gut, the protein breaks down to release a toxin, known as a
+delta-endotoxin. This toxin binds to and creates pores in the intestinal
+lining, resulting in ion imbalance, paralysis of the digestive system,
+and after a few days, insect death. Different versions of the Cry genes,
+also known as "Bt genes", have been identified. They are
+effective against different orders of insects, or affect the insect gut
+in slightly different ways. A few examples are shown in the table below.
+Cry gene
+designation
+Toxic to
+these insect orders
+CryIA(a),
+CryIA(b), CryIA(c)
+Lepidoptera
+Cry1B, Cry1C,
+Cry1D
+Lepidoptera
+CryII
+Lepidoptera,
+Diptera
+CryIII
+Coleoptera
+CryIV
+Diptera
+CryV
+Lepidoptera,
+Coleoptera
+The use of Bt to control insect pests is not new. Insecticides
+containing Bt and its toxins (e.g., Dipel, Thuricide, Vectobac) have been
+sold for many years. Bt-based insecticides are considered safe for
+mammals and birds, and safer for non-target insects than conventional
+products. What is new in Bt crops is that a modified version of the
+bacterial Cry gene has been incorporated into the plant's own DNA, so
+that the plant's cellular machinery produces the toxin. When the insect
+chomps on a leaf or bores into a stem of a Bt-containing plant, it
+ingests the toxin and will die within a few days.
+Bt insect-resistant crops currently on the market include
+
+Corn: primarily for control of European
+corn borer, but also corn earworm and Southwestern corn borer. A list of
+approved Bt hybrids is available through the National Corn Growers
+Association web site (http://www.ncga.com/biotechnology/know_where/know_grow_approved.htm).
+Click on the "event" name to see the list of hybrids.
+
+Cotton: for control of tobacco budworm and
+cotton bollworm
+
+Potato: for control of Colorado potato
+beetle. Bt potato has been discontinued as a commercial product. See our Discontinued Products page for more information.
+Corn hybrid
+with a Bt gene (left) and a hybrid susceptible to European corn borer
+(right). Source: Monsanto
+Results of
+insect infestation on Bt (right) and non-Bt (left) cotton bolls.
+Source: USDA
+Corn hybrids resistant to corn rootworm
+Corn rootworm (Diabrotica spp.) is a serious pest of corn in
+many U.S.
+growing areas. It damages roots of young corn seedlings, resulting in
+reduced growth and poor standability of the plant. This insect is
+responsible for the application of the largest amount of insecticide to
+U.S.
+corn fields. What's more, to control this pest the insecticide must be
+applied directly to the soil, where it may leave residues or leach into
+the ground water. By replacing these chemical insecticides, corn
+rootworm resistant hybrids may provide major benefits to environmental
+quality.
+Corn rootworm
+feeding on a young maize root. Source: USDA
+Range of
+damage due to corn rootworm feeding, from severe (left) to no damge
+(right). Source: USDA
+Although rootworm-protected hybrids apparently offer pest management
+and environmental benefits, there are serious concerns about development
+of resistance to Bt in this adaptable insect. More information about
+rootworm-resistant Bt hybrids is available in articles by Byrne (2001), Moellenbeck et al. (2001), and Ostlie (2001). Michigan State University has a discussion of rootworm-protected corn at
+http://www.msue.msu.edu/ipm/CAT02_fld/FC4-11-02.htm#4.
+Rootworm-resistant corn was approved in 2003.
+Have Bt crops reduced the use of chemical pesticides?
+The use of Bt varieties has dramatically reduced the amount of chemical
+pesticides applied to cotton. According to a story in Science (Ferber, 1999a), US
+farmers used 450,000 kg less pesticides on Bt-cotton than they would have
+used on conventional varieties in 1998. Yields and profits also improved
+in Bt-cotton fields. The benefits from Bt-corn, however, were not as
+clear-cut. Due to the difficulty of effectively controlling corn borers
+with insecticides, most farmers do not apply chemical controls to their
+conventional corn fields. Thus, Bt hybrids substituted for chemical
+pesticides on only about 20% of the total US
+Bt-corn area. Profitability of Bt-corn is not as certain as for cotton;
+it will vary over years and locations, depending on the intensity of the
+corn borer population. See our discussion of pesticide use on Bt crops on this site.
+Will insect pests become resistant to Bt toxins?
+Although Bt genes have proven to be quite effective in the short term for
+protecting against crop insect damage, as well as reducing fungal
+contamination of corn [Munkvold and Heimlich, 1999, http://www.apsnet.org/online/feature/BtCorn/Top.html],
+there are concerns that widespread use of Bt varieties will accelerate
+development of resistance to Bt in the target pests. This could mean the
+loss of Bt as an effective, environmentally friendly insecticide. In
+response to these concerns, the U.S. Environmental Protection Agency has
+mandated measures to reduce the risk of resistance development. These
+measures depend on a combination of high dose of the Bt toxin and a
+planting of refuges. A refuge refers to an area planted to a non-Bt
+variety that is physically close to a field planted with a Bt variety, as
+shown in the diagram below.
+Diagram of the
+BT refuge strategy, in which at least 20% of a farm's corn acreage must
+be planted to non-BT corn. R = resistant European corn borer adult; S =
+susceptible adult.
+Beginning in 2000, the EPA requires that farmers growing Bt corn must
+plant at least 20% of their total corn acreage to a non-Bt variety. The
+rationale is that the few Bt-resistant insects surviving in the Bt field
+would likely mate with susceptible individuals that have matured in the
+non-Bt refuge. Thus, the insect genes (alleles) for resistance to Bt
+would be swamped by the susceptible alleles. Whether this strategy will
+work or not remains to be seen. Some of the potential problems with the
+refuge strategy are:
+
+The frequency of Bt-resistant alleles in
+insect populations may be greater than assumed in refuge models.
+
+Resistance to Bt in European corn borer
+may be semi-dominant rather than recessive.
+
+Resistant insects surviving in the Bt
+field may mature several days later than susceptible insects in the
+refuge, thus preventing their mating.
+For information on compliance with the refuge requirements, see the
+news updates entitled 29%
+of Bt corn farmers in U.S. broke the rules last year, 13% of Bt corn farmers in U.S. still breaking the rules,
+compliance improves, and 14% of U.S. Bt corn farmers still breaking the rules.
+Ferre and Van Rie 2002 discuss the biochemistry and
+genetics of insect resistance to Bt.
+A discussion of designs for refuges is available from the University
+of Illinois Extension Office
+at http://www.ag.uiuc.edu/cespubs/pest/articles/200203e.html.
+Pioneer Hybrid explains the rules for planting a refuge at http://www.pioneer.com/usa/agronomy/insects/yg_pug.pdf.
+Additional Information
+Because there are a number of web sites with extensive information on Bt
+crops, we refer you to them for additional information on the topic.
+Managing Corn Pests with Bt Corn: Some Questions and Answers.
+F.B. Peairs, Colorado State
+University. http://www.colostate.edu/programs/lifesciences/TransgenicCrops/BtQnA.html
+Bt Corn: Health and the Environment. F.B. Peairs, Colorado
+State University.
+http://www.ext.colostate.edu/pubs/crops/00707.html
+Bt Corn & European Corn Borer: Long-Term Success Through
+Resistance Management. 1997. University
+of Minnesota Extension
+Service. http://www.extension.umn.edu/distribution/cropsystems/DC7055.html
+Genetically modified, insect resistant corn: Implications for
+disease management. G.P. Munkvold, Iowa
+State University,
+and R.L. Hellmich, USDA-ARS. http://www.scisoc.org/feature/BtCorn/Top.html
+The Environmental Protection Agency's White Paper on Bt
+Plant-Pesticide Resistance Management. 1998. http://www.epa.gov/fedrgstr/EPA-PEST/1998/January/Day-14/paper.htm
+Monarchs and Bt corn: questions and answers. 1999. Marlin
+Rice, Iowa State
+University. http://www.ipm.iastate.edu/ipm/icm/1999/6-14-1999/monarchbt.html
+Now or Never: Serious New Plans to Save a Natural Pest
+Control. Union of Concerned Scientists http://www.ucsusa.org/publications/pubs-home.html#Gene
+100 Years of Bacillus thuringiensis: A Critical
+Scientific Assessment. American
+Academy of Microbiology http://www.asmusa.org/acasrc/pdfs/Btreport.pdf
+Papaya
+Papaya is a tropical fruit rich in Vitamins A and C, but susceptible to a
+number of serious pests and diseases. The transgenic variety UH Rainbow,
+resistant to the papaya ringspot virus, is currently in production in Hawaii.
+Papaya is an important source of vitamins in tropical
+areas. Source: USDA
+For more information, refer to:
+Transgenic virus resistant papaya: New hope for controlling papaya
+ringspot virus in Hawaii.
+http://www.apsnet.org/education/feature/papaya/Top.htm
+Cornell University's page on virus resistant GM crops, including
+payapa. http://www.comm.cornell.edu/gmo/traits/virusres.html
+Global Status of Approved Genetically Modified
+Plants
+Agriculture and Biotechnology Strategies (Canada) Inc. maintains a
+database of trangenic plants that have been approved for environmental
+release, use in livestock feed, or use in human food. Information is
+organized by crop and by trait. The information can be accessed at http://www.agbios.com/_Synopsis.asp.
+Transgenic Foods on the Supermarket Shelves
+The cooperative extension office at Cornell
+University has assessed the
+likelihood that food products contain genetically engineered ingredients.
+Their assessment is available at http://www.comm.cornell.edu/gmo/crops/eating.html.
+Greenpeace's List of GM and Non-GM Foods
+Greenpeace, which campaigns against transgenic foods, maintains a list of
+food brands that they claim contain or do not contain transgenic
+ingredients. The list is available at http://www.truefoodnow.org/shopping_list.html.
+Discontinued Transgenic Products
+Several transgenic products that received approval for marketing have
+been discontinued for a variety of reasons. Some, such as the FlavrSavr
+tomato and NewLeaf potato, were available for years before they were
+discontinued. We have assembled a list
+of these products with links to more information about their history
+and the reason for their disappearance.
+Page last updated : March 31, 2003
+ Copyright Center for Life Sciences and Department of
+Soil and Crop Sciences at Colorado State University, 1999-2003. All Rights
+Reserved.
+View CSU's copyright policy
+Risks And Concerns
+(http://www.colostate.edu/programs/lifesciences/TransgenicCrops/risks.html)
+The introduction of transgenic crops and foods into the existing food
+production system has generated a number of questions about possible
+negative consequences. People with concerns about this technology have
+reacted in many ways, from participating in letter-writing campaigns to
+demonstrating in the streets to vandalizing institutions where transgenic
+research is being conducted. What are the main concerns? What scientific
+support is there for these concerns?
+The issues surrounding objections to transgenic crops can be broadly
+grouped into concerns about
+damage
+to human health
+allergenicity
+horizontal transfer and antibiotic resistance
+eating foreign DNA
+cauliflower mosaic virus promoter
+changed nutrient levels
+damage
+to the natural environment
+Monarch butterfly
+crop-to-weed gene flow
+antibiotic resistance
+leakage of GM proteins into soil
+reductions in pesticide spraying: are they real?
+disruption
+of current practices of farming and food production in developed
+countries
+crop-to-crop gene flow
+disruption
+of traditional practices and economies in less developed countries.
+These are complex issues and a thorough treatment of each one would
+occupy volumes. For each topic we provide a short discussion with a link
+to a longer discussion and outside resources.
+Concerns about human health
+Allergenicity
+The possibility that we might see an increase in the number of allergic
+reactions to food as a result of genetic engineering has a powerful
+emotional appeal because many of us experienced this problem before the
+advent of transgenic crops, or know of someone who did.
+However, there is no evidence so far that
+genetically engineered foods are more likely to cause allergic
+reactions than are conventional foods. Tests of several dozen
+transgenic foods for allergenicity have uncovered only a soybean that
+was never marketed and the now-famous StarLink corn. Although the
+preliminary finding is that StarLink corn is probably not allergenic,
+the scientific debate continues. Every year some people discover that
+they have developed an allergy to a common food such as wheat or eggs,
+and some people may develop allergies to transgenic foods in the
+future, but there is no evidence that transgenic foods pose more of a
+risk than conventional foods do.
+More on allergenicity
+Common sites for allergic reactions. Source: FDA
+Horizontal transfer and antibiotic resistance
+The use of antibiotic resistance markers in the development of transgenic
+crops has raised concerns about whether transgenic foods will play a part
+in our loss of ability to treat illnesses with antibiotic drugs. At
+several stages of the laboratory process, developers of transgenic crops
+use DNA that codes for resistance to certain antibiotics, and this DNA
+becomes a permanent feature of the final product although it serves no
+purpose beyond the laboratory stage. Will transgenic foods contribute to
+the existing problems with antibiotic resistance?
+Antibiotic pills.
+Photo: www.molbio.princeton.edu
+One aspect of this topic is the risk of horizontal
+gene transfer, that is, transfer of DNA from one organism to another
+outside of the parent-to-offspring channel. Transfer of a resistance
+gene from transgenic food to micro-organisms that normally inhabit our
+stomach and intestines, or to bacteria that we ingest along with food,
+could help those micro-organisms to survive an oral dose of antibiotic
+medicine. Although horizontal transfer of DNA does occur under natural
+circumstances and under laboratory conditions, it is probably quite
+rare in the acid environment of the human stomach.
+Another concern is that the enzyme product of the DNA might be
+produced at low levels in transgenic plant cells. While high processing
+temperatures would inactivate the enzyme in processed foods, ingestion of
+fresh or raw transgenic foods could result in the stomach containing a
+small amount of an enzyme that inactivates an orally administered dose of
+the antibiotic. This issue was raised during the approval processes for
+Calgene's FlavrSavr tomato and Ciba-Geigy's Bt corn 176. In both cases,
+tests showed that orally administered antibiotics would remain effective.
+While the risks from antibiotic resistance genes in transgenic plants
+appear to be low, steps are being taken to reduce the risk and to phase
+out their use.
+More on antibiotic resistance
+Eating foreign DNA
+When scientists make a transgenic plant, they insert pieces of DNA
+that did not originally occur in that plant. Often these pieces of DNA
+come from entirely different species, such as viruses and bacteria. Is
+there any danger from eating this "foreign" DNA?
+Diagram of DNA. Source: Foodfuture, Food and Drink
+Federation
+We eat DNA every time we eat a meal. DNA is the
+blueprint for life and all living things contain DNA in many of their
+cells. What happens to this DNA? Most of it is broken down into more
+basic molecules when we digest a meal. A small amount is not broken
+down and is either absorbed into the blood stream or excreted in the
+feces. We suspect that the body's normal defense system eventually
+destroys this DNA. Further research in this area would help to
+determine exactly how humans have managed to eat DNA for thousands of
+years without noticing any effects from the tiny bits that sneak into
+the bloodstream.
+So far there is no evidence that DNA from transgenic crops is more
+dangerous to us than DNA from the conventional crops, animals, and their
+attendant micro-organisms that we have been eating all our lives.
+More on eating DNA
+CaMV promoter
+When scientists use transgenic technology to put a new gene into a plant,
+they put in additional pieces of DNA to direct the activity of that gene.
+One of these pieces is the "promoter" that turns the gene on.
+Cauliflower mosaic virus infection in canola.
+Source: Institute National de la Recherche
+Agronomique, Versailles-Grignon
+The most widely used promoter is the cauliflower
+mosaic virus 35S promoter, often abbreviated as the CaMV promoter or
+the 35S promoter. This promoter was obtained from the virus that causes
+cauliflower mosaic disease in several vegetables, such as cauliflower,
+broccoli, cabbage, and canola. There are concerns that the CaMV
+promoter might be harmful if it were to invade our cells and turn on
+our genes.
+A multi-step chain of events would have to occur for the CaMV promoter
+to escape the normal digestive breakdown process, penetrate a cell of the
+body, and insert itself into a human chromosome. While there have been no
+tests to determine whether the CaMV promoter has invaded human tissues,
+experiments with mice indicate that normal body defenses eliminate stray
+fragments of foreign DNA that sneak into the blood stream from the
+digestive tract.
+There is some evidence that the CaMV promoter poses little threat to
+human health. People have been eating it in small quantities for hundreds
+of years when we eat vegetables that are infected with the disease.
+Although vegetables heavily infected with CaMV are unappetizing, there
+have been no documented negative effects on health from eating the virus
+or its promoter.
+More on the CaMV promoter
+Changed nutrient levels
+How do genetically engineered foods compare with conventional foods in
+nutritional quality? This is an important issue, and one for which there
+will probably be much research in the future, as crops that are
+engineered specifically for improved nutritional quality are marketed.
+However, there have been only a few studies to date comparing the
+nutritional quality of genetically modified foods to their unmodified counterparts.
+The central question for GE crops that are currently available is
+whether plant breeders have accidentally changed the nutritional
+components that we associate with conventional cultivars of a crop.
+Because isoflavones are thought to play a role in preventing heart
+disease, breast cancer, and osteoporosis, the isoflavone content of
+RoundupReady soybeans has been investigated by several researchers.
+The studies completed so far do not resolve the issue of whether
+RoundupReady soybeans have isoflavone levels comparable to conventional
+varieties, but the differences found in experiments appear to be small
+or moderate in comparison with natural variation in isoflavone levels.
+Additional evidence may clarify the arguments for and against Roundup
+applications as a risk factor in soybean cultivation.
+Industry studies submitted in support of applications for permission
+to sell transgenic crops indicate that the nutritional components that
+are commonly tested are similar in transgenic foods and conventional foods.
+More on nutrient levels
+Source: Marck L. Tucker, USDA/ARS
+Concerns about damage to the
+environment
+Monarch butterfly
+Source: www.MonarchWatch.com
+The suggestion that Bt corn pollen might kill
+Monarch butterfly larvae galvanized public interest in the effect of
+transgenic crops on the environment. We present a full discussion of
+this issue under Hot Topics: Monarch Butterfly.
+Crop-to-weed gene flow
+Hybridization of crops with nearby weeds may enable weeds to acquire
+traits we wish they didn't have, such as resistance to herbicides.
+Research results indicate that crop traits may escape from cultivation
+and persist for many years in wild populations. Genes that provide a
+competitive edge, such as resistance to viral disease, could benefit weed
+populations around a crop field.
+Many cultivated crops have sexually compatible wild
+relatives with which they hybridize under favorable circumstances. The
+likelihood that transgenes will spread can be different for each crop
+in each area of the world.
+For example, there are no wild relatives of corn in
+the United States
+or in Europe for transgenic corn to pollinate,
+but such wild relatives exist in Mexico.
+Soybeans and wheat are self-pollinating crops, so the
+risk of transgenic pollen moving to nearby weeds is small. However,
+that small risk must balanced against the fact that there are wild
+relatives of wheat in the United States.
+There are no wild relatives of soybean in the United
+States, but such wild relatives
+exist in China.
+Thus each crop must be evaluated individually for the risk of gene flow
+in the area where it will be grown.
+More on crop-to-weed gene flow
+Corn tassels shedding pollen. Source:
+www.rockandrollagronomy.com
+Antibiotic resistance
+There is also concern that transgenic plants growing in the field will
+transfer their antibiotic resistance genes to soil micro-organisms, thus
+causing a general increase in the level of antibiotic resistance in the
+environment. However, many soil organisms have naturally occurring
+resistance as a defense against other organisms that generate
+antibiotics, so genes contributed occasionally by transgenic plants are
+unlikely to cause a change in the existing level of antibiotic resistance
+in the environment.
+More on antibiotic resistance
+Leakage of GM proteins into soil
+Source: Rural Life
+Center, Kenyon
+College,
+Gambier, Ohio.
+Many plants leak chemical compounds into the soil through their
+roots. There are concerns that transgenic plants may leak different
+compounds than conventional plants do, as an unintended consequence of
+their changed DNA.
+Speculation that this may be happening leads to concern about
+whether the communities of micro-organisms living near transgenic
+plants may be affected. The interaction between plants and soil
+micro-organisms is very complex, with the micro-organisms that live
+around plant roots also leaking chemical compounds into the soil. Much
+more research must be done before we understand the relationships that
+occur between micro-organisms and conventional crops. Attempts to
+discover whether transgenic plants are changing the soil environment,
+and whether they are changing it in good ways or bad ways, are hindered
+by our lack of basic scientific knowledge.
+More on leakage of proteins into soil
+Reductions in pesticide spraying: are they real?
+One of the most appealing arguments in favor of transgenic plants is
+the potential for reducing the damage we do to our environment with
+conventional methods of farming. Pest-resistant crops such as Bt corn
+and Bt cotton have been promoted as a means to reduce the spraying of
+pesticides, while herbicide-tolerant crops such as RoundupReady
+soybeans are said to reduce the application of herbicides. Large
+reductions in chemical spraying have been claimed to result from the
+introduction of these transgenic varieties. Are the claims true?
+Bt cotton is the only crop for which claims of reduced spraying are
+clear. Analysts paint a mixed picture on the results of planting
+RoundupReady soybeans. Bt corn and herbicide-tolerant cotton and corn
+have not resulted in clear reductions in the spraying of chemicals.
+More on pesticide spraying
+Cotton boll. Source: www.mahyco.com
+Concerns about damage to
+current farming practices
+Crop-to-crop gene flow
+Hybridization of transgenic crops with nearby conventional crops raises
+concerns about separation distances to ensure purity of crops and about
+who must pay if unwanted genes move into a neighbor's crop. As
+"Identity Preservation" and segregation of GM from non-GM crops
+become factors in marketing products, it will be important to ensure that
+hybridization is not occurring in the field.
+Experimental plots of transgenic canola,
+which has been shown to hybridize with
+canola in neighboring fields.
+Many factors influence the potential for gene flow
+from crop to crop. Some crops are highly outcrossing, with pollen
+carried to other fields by wind and by insects. Other species are
+highly self-pollinating, with little potential for pollen transfer to
+neighboring plants. Because of the differences among crops species,
+every case must be evaluated individually for potential to contribute
+to gene flow from transgenic to conventional crops.
+If GM pollen pollinates plants in a neighboring field, then the issue
+of genetic trespass may arise. What level of GM presence, if any, should
+be allowed in products that are sold as organic or conventional? Should
+GM farmers and companies bear responsibility for preventing gene flow, or
+should conventional and organic farmers pay to protect their products
+from gene flow? Should GM versions of outcrossing plants be banned as too
+risky, while GM versions of self-pollinating plants are permitted? These
+issues have already prompted several lawsuits and they will continue to
+be a factor in the development and use of trangenic plants for years to
+come.
+More on crop-to-crop gene flow
+Page last updated : September 20, 2002
+ Copyright Center for Life Sciences and Department of
+Soil and Crop Sciences
+at Colorado State University, 1999-2002. All Rights Reserved.
+View CSU's copyright policy

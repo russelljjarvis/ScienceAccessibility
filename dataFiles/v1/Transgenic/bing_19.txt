@@ -1,0 +1,777 @@
+Transgenic or Knockout Mouse?
+Transgenic or Knockout Mouse?
+Home Services
+Transgenics Gene Targeting Chimeric Mice Rederivation CRISPR/Cas Embryo Cryo Sperm Cryo In Vitro Fertilization Frozen Embryo Transfer New ES Cells Transfection Homozygosis Surgeries
+Fundamentals
+Mouse Biology Breeding Mice Targeting Vector Design Transgenic or Knockout? Links & Resources
+Strategic Decisions: Gene Targeted or Transgenic Model?
+[Excerpted and modified from Conlon RA (2011) Neuromethods: Transgenic and Gene Targeted Models of Dementia. Springer Science
+Abstract
+Animal models of disease in genetically manipulated
+mice are powerful tools in medical research, including the study of dementia.
+The time and expense required to make genetically altered mice is considerable,
+and the importance of this investment is amplified by the long time course of
+most studies of dementia. Investigators need to be able to make informed
+choices about the different strategies for transgenics and gene targeting in
+order to minimize unwanted variation, and to maximize fidelity to the disease.
+In recent years, large genomic fragments stably cloned in well-characterized
+libraries, the means to manipulate their sequence, and the ability to make
+transgenic mice from these clones in inbred strains have increased greatly the
+power of the transgenic mouse. In addition, new embryonic cell lines from the
+C57BL/6 inbred strain of mice have become widely adopted for gene targeting,
+allowing knockins, knockouts and conditional alleles to be established on the
+standard C57BL/6 background much more expeditiously than in the past. These
+methods, the time required and the probability of success are reviewed with
+respect to mouse models of dementia.
+Introduction
+Gene
+targeting and transgenic technologies have different strengths and weaknesses
+with respect to fidelity to the disease, minimized variation and avoidance of
+unintended consequences. The generation of genetically manipulated mice for any
+purpose involves significant time and expense. This investment is amplified in
+the case of models of dementia because of the aging component in many dementia
+models. My goal in the following is to help the investigator make wise choices
+in selection of technologies such that unwanted variation is minimized and fidelity
+to the disease can be maximized. This is not a cookbook of how to perform gene
+targeting or transgenics aimed at transgenic or targeting cores, but is
+intended to aid the investigator in making decisions about which approaches are
+best suited for achieving their experimental goals while highlighting some of
+the pitfalls associated with the different approaches.
+Transgenics
+and Gene Targeting
+In
+transgenics, DNA is randomly inserted into the genome by injecting the swelling
+sperm nucleus shortly after fertilization (1). The injected embryos are transferred into recipient
+female mice. About 20% of the offspring will have the injected DNA inserted
+into their genome. Each of the transgene-positive offspring is used to
+establish a line of offspring carrying that insertion of the transgene by
+breeding founder animals to wild type mice of the appropriate strain.
+In
+gene targeting, changes are introduced into an endogenous gene using homologous
+recombination with manipulated DNA from that gene (2, 3). Gene targeting is performed in embryonic stem (ES)
+cells in culture. Because gene targeting is a rare event, drug selection
+minigenes are incorporated into the targeting DNA construct, and then bona fide
+gene targeted cell lines must be identified from among the cells surviving drug
+selection. The fraction of correctly targeted cells in the cells surviving
+selection can be as large as one-quarter, but can be much smaller. Cell lines
+are screened for homologous recombination on one side of the targeted
+construct, then positive cell lines are propagated and characterized in more
+detail to ensure that homologous recombination occurred on both sides, and all
+elements which should be introduced into the gene were in fact recombined in.
+Correctly targeted cell lines are analyzed to ensure that they have the correct
+number of chromosomes, since aneuploid cell lines rarely transmit through the
+germ line. Euploid, correctly targeted cell lines are combined with recipient
+embryos, and the chimeric embryos are transferred into a host female. The ES
+cells and the host embryo are typically marked by different coat color genes,
+and typically the chimeras are mated to mice of a chosen coat color such that
+offspring derived from the ES cell component can be distinguished from those
+derived from the host embryo. Half of the ES-derived offspring should carry the
+targeted gene.
+Genetic
+Mechanism of Disease and Choice of Technologies
+Consideration
+must be given to the genetic mechanism of the disease to be modeled. Typical
+genetic mechanisms of disease include mutations which eliminate gene function,
+mutations which alter gene activity, and mutations which increase gene copy
+number.
+If
+a disease results from complete loss of function (a null mutation), then the
+gene can be inactivated by gene targeting (gene knockout). Both homozygous
+recessive traits (both gene copies inactivated by mutation) and
+haploinsufficient traits (one gene copy inactivated) can be modeled by gene
+knockout.
+If
+a disease results from increased or novel activity of the gene product, then
+either transgenes which express mutant product, or targeted sequence changes
+(knockin) to the endogenous gene can be used. If the mutations lead to partial
+loss of function, then gene targeting can be used to introduce a specific
+compromising mutation into the endogenous gene (knockin).
+If
+the disease is due to increases in gene copy number, then transgenes can be
+used to increase gene copy number.
+Also,
+consider that while many disease-causing mutations are not complete
+loss-of-function mutations (null mutations), null mutations are the most
+informative mutation for the normal function of the gene, and can be used in
+conjunction with disease-causing mutations to better understand molecular
+mechanisms.
+Minimizing
+Unwanted Variation
+One
+strength of animal models is that variation can be minimized, such that experiments
+can have greater sensitivity. Minimized variation results if genetic
+background, environment and epigenetic state are uniform. Of course, variation
+in phenotype can arise directly if different mutations at the disease-causing
+locus have different effects on gene activity, but this variation is apparent
+and in the control of the investigator.
+Variation
+can arise through interaction of a disease-causing mutation with segregating
+variants elsewhere in the genome. The effects of these gene-gene interactions
+can be quite large (4), and these types of interactions affecting the
+severity of the disease phenotype have been observed for models of dementia (5-8). Many mouse strains which have no genetic variation
+at all are available--inbred strains--so variation due to variable gene-gene
+interactions can be minimized. Genetic models can be generated directly on a
+small number of inbred strains, or a genetic variant can be generated and
+crossed onto the inbred strain of choice. The characteristics of inbred
+strains, which ones are amenable to genetic manipulation and practical details
+of breeding inbred model mice are discussed below.
+Variable
+gene expression at the disease-causing locus can arise due to epigenetic
+variation. DNA methylation and chromatin structure are heritable from cell to
+cell, and even from generation to generation in some cases. The problem is that
+the epigenetic state is not completely stable and can switch stochastically,
+from one permissive for expression, to one that is not. Most genes in the
+genome probably do not have stochastic variation in epigenetic state, but it is
+quite common at foreign DNA experimentally inserted into the genome,
+particularly in intergenic regions. It is assumed that epigenetic silencing of
+introduced DNA is a protective mechanism against foreign DNA, such as might
+arise from viral genome insertion. The likelihood of silencing is influenced by
+the nature of the inserted DNA and the epigenetic state of the DNA surrounding
+the insertion (9-11). Importantly, variation in epigenetic state is
+exacerbated with small transgenes inserted in large numbers at one site. Transgenes insert in direct (tandem,
+head-to-tail) repeats at a single site. For small transgenes, the array can
+contain hundreds of copies. The repetitive nature of the transgene array
+promotes epigenetic silencing (12-14). Epigenetic silencing at a transgene array can vary
+from cell to cell, can increase with age, and can vary from animal to animal (10, 12, 15). Transgene arrays, once silenced in the germ line,
+usually remain stably silenced from generation to generation (16-18). Thus, it is important to monitor gene expression
+from generation to generation in transgenic mice with large transgene arrays.
+Modern
+mouse housing practices seek to eliminate environmental variation through the
+control of ventilation, temperature, humidity, noise, vibration, photoperiod,
+enrichment, infectious agents and diet. Although housing and veterinary care of
+the mice typically is managed by animal care staff and veterinarians of an
+animal facility, investigators should take an active interest in the housing,
+care and infectious disease state of their animals to ensure that stated
+standards are met and procedures followed.
+Environmental
+perturbations can come from unexpected sources. Mouse housing units consist in
+part of plastic which come into contact with the mice. When cages made from
+polycarbonate and polysulfone degrade, they release the estrogenic compound
+bisphenol A (19, 20). Polysulfone caging is more stable than
+polycarbonate, releasing less bisphenol A (19). Visibly degraded or hazed plastics should be
+removed from use.
+Artifacts
+of Genetic Manipulation
+Genetic
+manipulations occasionally have unintended consequences. Transgene insertions
+can physically disrupt genes at their site of insertion. The frequency of
+phenotypes arising from insertion site mutation by a transgene (almost 10%) is
+higher than might be expected from random integration into the genome. The
+higher than expected mutation rate results because transgenics generated by
+pronuclear injection can generate large deletions and complex rearrangements at
+the site of DNA integration (21-31). If a transgene cannot be made homozygous, or the
+homozygous mice have an unexpected phenotype, then this may indicate that there
+is an effect from the insertion site. Moreover, if an unexpected phenotype is
+not seen in other lines of mice from different founder mice with the same
+transgene, then the phenotype may be due to the insertion site. Thus, it is
+prudent to generate multiple lines of transgenic mice from independent founder
+animals and to compare the phenotypes of these lines.
+In
+addition to direct physical interruption of genes, integrations can also have
+effects on the expression of neighboring genes (32-35). This more indirect effect has been observed in a
+few well-characterized gene knockouts, but in principle this phenomenon could
+apply to transgenes as well. Where indirect effects on neighboring genes have
+been observed, the effect is due to a selectable marker minigene introduced
+into the endogenous, mutated gene. In most cases where this phenomenon has been
+observed, the affected neighboring genes are close to the targeted gene, and
+have been closely related to the targeted gene. In gene knockouts, effects on
+the expression of neighboring genes can be minimized by designing knockouts
+with the drug resistance gene cassette flanked by recognition sequences for a
+site-specific recombinase (such as Frt or LoxP sites for Flpe or Cre
+recombinase, respectively). The drug resistance minigenes can be removed after
+targeting by transient expression of recombinase in ES cells or by crossing the
+knockout to a mouse which expresses recombinase in the germ line.
+Individual
+transgenic lines made with characterized promoters and small transgenes are
+occasionally ectopically expressed. This aberrant expression may be due to
+influences from the site of integration, and is observed more frequently with
+weak promoters.
+Inbred
+Strains of Mice
+A
+large number of inbred strains of mice exist, but only a small number are
+commonly used to make transgenics or gene targeted mice. The C57BL/6, 129 and
+FVB inbred strains are commonly used to generate genetically altered mice.
+Inbred strains are less robust than hybrid strains in knockout and transgenic
+production, but if the experimental goals are best served with an inbred
+strain, it is wise to start on an inbred strain to avoid the almost two and a
+half years needed to cross the mice to a new background.
+The
+choice of strain depends on the characteristics of the strain including
+susceptibility to the disease and whether other genetic variants of interest are
+on that strain.
+Inbred
+strains differ in susceptibility to disease phenotype, as well as in
+neuroanatomy, sensory acuity and proficiency in behavioral tests (36). The C57BL/6 inbred strain has relatively normal
+neuroanatomy and is susceptible to dementia phenotypes (5-8, 37), and many genetic variants have been established on
+C57BL/6J. C57BL/6J has age-related hearing loss (38), and is susceptible to dermatitis (39). 129 mice typically have a small corpus callosum and
+perform poorly in learning tests (37, 40), and may have a reduced severity of dementia
+phenotype (5). The FVB strain is blind due to retinal degeneration
+and thus performs poorly in behavioral assays requiring vision (41-43). Fewer genetic variants are available on 129 and FVB
+than on C57BL/6J. Although there are only a small number of studies thus far,
+C57BL/6 and FVB mice appear to be more susceptible to both Alzheimer and
+Huntington disease pathology than 129 mice.
+In
+the past, most gene targeting was done in ES cells from 129 mice. However,
+recently, cell lines from C57Bl/6J and the closely related C57BL/6N have become
+widely used (44, 45). In addition, transgenics can be made directly on
+C57BL/6J (46).
+Transgenics
+Three
+types of transgene will be considered: small, cDNA-based transgenes; large,
+genomic DNA-based transgenes; and dual transgene (digenic) systems.
+Small
+cDNA-based transgenes consist of a promoter, a complete protein-coding sequence
+from a cDNA and a polyadenylation signal cloned into a high-copy-number
+plasmid. An intron is sometimes included in the construct to increase
+expression (47, 48). These elements are cloned into the plasmid such
+that the transgene can be liberated in one piece from the plasmid backbone by
+digestion with restriction endonuclease(s), and the backbone-free construct
+isolated from a gel. The backbone is not included in the injected DNA since the
+backbone promotes epigenetic silencing (49, 50). The injected DNA makes an array of head-to-tail
+copies, which inserts at a single site in the genome (1). The expression level of the transgene-encoded
+products typically do not correlate with the number of copies of the transgene
+which were inserted for these cDNA-based transgenes (12). Different transgenic founders can have different
+expression levels, and this variation can be used to investigate if the
+phenotype varies with transgene expression level. Expression from a transgene
+of this kind can be considerably higher than that from the endogenous gene.
+Promoters
+which drive ubiquitous or tissue-specific transgene expression have been
+developed. A list of characterized brain-specific promoters which have been
+used in dementia models is listed in the supplementary material to Gotz and
+Ittner (51).
+Briefly, promoters which have been used to create
+models of dementia include those from the Thy1 (Thy1.2), Prnp (PrP), Pdgfb
+(Pdgf-beta, PDGF), Camk2a (CAMKII), Eno2 (NSE) and GFAP genes. These genes vary
+in their spatial pattern of expression and the level of expression. The Thy1.2
+promoter drives strong expression in most or all neurons beginning at early
+postnatal stages (52, 53). The Prp promoter drives strong expression in
+neurons in the hippocampus, Purkinje cells and a few other neuronal cell types (54). The PDGF promoter drives moderate expression in
+neurons of the cortex and hippocampus (55). The CAMKII promoter drives postnatal expression in
+forebrain-derived neurons (56). The NSE promoter drives strong expression in
+post-mitotic neurons, beginning on embryonic day 9.5 (57). The GFAP promoter drives robust expression in
+astrocytes. (58)
+The
+coding sequence typically is derived from a full length cDNA. Mutations or tags
+can be incorporated into the coding sequence by many different methods.
+Polyadenylation
+signals are needed for transgene-encoded RNA to accumulate. The AAUAAA in the
+3' untranslated region of typical mRNAs are not sufficient to promote 3' end
+cleavage and polyadenylation in this context. Two different polyadenylation
+sequences are in common use: the bovine growth hormone and SV40 polyadenylation
+sequences (59, 60).
+Given
+the propensity of small transgenes to be epigenetically silenced in mice, and
+in order to fully characterize different transgenic lines for expression, plan
+to monitor expression of the transgene products. Ideally, the transgene-encoded
+protein is monitored, rather than the RNA. This can be accomplished if the
+protein is from a different species and species-specific antibodies are
+available, if antibodies detect the transgene-encoded mutant form of the
+protein, or the protein is tagged with an epitope.
+Recently,
+large genomic fragments containing entire genes have become easier to
+manipulate to generate transgenic mice (61, 62). Large fragment genomic DNA libraries in bacterial
+artificial chromosome (BAC) vectors have been made from many species, including
+humans and many strains of mice. The average size of the cloned genomic DNA
+(typically 150 kb) is such that most genes and the cis-acting sequences
+required for their expression can be contained within a single clone (63). BAC clones are stable in their bacterial hosts, and
+can be isolated with commercial large plasmid purification kits (64). Some of these libraries, both human and mouse, have
+had many clones sequenced at both ends. The paired end sequences were used to
+tile the clones on the genome assemblies (65-67). The partially sequenced clones are available for
+purchase in their bacterial hosts. Many BAC genomic clones, when injected as
+transgenes into mice, recapitulate the normal temporal and spatial pattern of
+expression of the endogenous gene at comparable expression levels (63). A technology for introducing mutations into the BAC
+clones, recombineering, is available (64, 68-70). If use of the recombineering technology will be
+limited to a small number of constructs, it may be expedient to use a
+commercial recombineering service.
+Genomic
+clones in BAC vectors are typically injected as intact circular molecules
+including the vector. The DNA concatemerizes and a small number of intact
+copies integrate at a single site (71). Unlike small, cDNA-based transgenes, the expression
+level of these large transgenes correlates with copy number (71, 72). Epigenetic silencing has not been reported to be a
+problem with these large transgenes, presumably because they resemble mouse
+genes rather than foreign DNA. Detection of expression from unmodified mouse
+BAC clones can be difficult because of similarity or identity to the endogenous
+gene, thus use of human clones, or tagging or modifying a mouse coding sequence
+by recombineering should be considered.
+Large
+genomic DNA fragments cloned in yeast artificial chromosome (YAC) vectors have
+also been used to generate transgenic mice. Although YAC vector libraries have
+larger DNA fragments on average, clones are much more prone to DNA chimerism,
+are much more difficult to isolate and use to generate transgenics than BAC
+clones (73).
+Temporal
+control of expression is possible with digenic transgene systems. The most
+prevalent of these are the variants of the tetracycline-regulated transcription
+factor (74-76). One transgene of the pair consists of a responder
+transgene with the target coding sequence under control of a minimal promoter
+and binding sites for the trans-acting factor. The activity of the trans-acting
+factor is regulated by binding the tetracycline analogue doxycycline, which is
+supplied in drinking water. The trans-acting factor is typically expressed from
+a tissue-specific promoter in a second, independently established transgene.
+The two transgenes are brought together by breeding. In this way, both timing
+and tissue of expression can be precisely controlled. A number of well-characterized
+driver genes are available.
+Most but not all components of digenic
+systems are small transgenes, and thus are susceptible to the epigenetic
+silencing that affects cDNA-based transgenes. Therefore, monitoring of the
+expression of both transgenes of the digenic system may need to be factored
+into the research plan.
+For
+the creation of models of dementia, BAC transgenes have the advantages of
+expression which better mimics the endogenous gene and relative resistance to
+epigenetic silencing. For experiments which require high level expression of a
+transgene product, the plasmid-based transgene approach works well. If control
+over the timing of expression of the transgene product is desired, the
+tetracycline-regulated system would be most suitable. The genetic background of
+choice is the C57BL/6J inbred strain.
+Gene
+Targeting Strategies
+In
+gene targeting, an endogenous gene can be altered in a wide variety of ways: it
+can be rendered nonfunctional by deleting essential sequences (gene knockout),
+have sequences replaced or added (gene knockin) or made into a conditional
+mutant (e.g. a floxed allele).
+Because
+the genomic DNA used to construct the targeting vector needs to be from the
+same strain as the cell line (77), first a decision must be made about which ES cell
+line to use. Historically, most gene targeting was done in lines derived from
+the 129 inbred strain. Cell lines derived from 129 were better able to retain
+their chromosomes in culture, and thus were more likely to transmit the
+mutations through the germ line of mice (78). Recently, a number of excellent cell lines have
+become available from C57BL/6N mice (45, 78-80). C57BL/6N and C57BL/6J diverged in 1951. There are a
+handful of known genetic differences between the two strains, including a null
+mutation in nicotinamide nucleotide transhydrogenase (Nnt) in C57BL/6J not
+present in C57BL/6N (81). After targeting in C57BL/6N, the chimeras can be
+bred to C57BL6/J directly. If the known genetic differences are a concern, they
+can be eliminated in two crosses to C57BL6/J by monitoring for the variants in
+the offspring.
+End-sequenced
+genomic clones in BAC vectors, which can be used for the construction of
+targeting vectors, are available for both 129 and C57BL/6J (65, 66).
+Gene
+targeting has great fidelity to the genetics of the disease since the
+endogenous gene is targeted. However, there are disadvantages to gene
+targeting. Production of a mouse model by gene targeting takes more time than
+by transgenics. Importantly, success is less assured with gene targeting that
+with transgenics. Occasionally a gene targeting vector will not produce gene
+targeted cell lines at all. It is not clear why targeting fails in these
+instances, and the usual resolution involves increasing the extent of
+homologous DNA or choosing a different part of the gene to target. In our
+experience, about 80% of gene targeting vectors target successfully. In
+addition, only about 80% of ES cell lines with a normal number of chromosomes
+will transmit through the germ line. If multiple correctly targeted cell lines
+were generated, then this second issue can be overcome by making chimeras with
+two or more cell lines for each targeting experiment.
+Time
+Line for Transgenics and Gene Targeting
+Moving
+a mutation or transgene to an inbred strain requires nine consecutive crosses
+to mice of the target strain, including at least one cross through each sex.
+This process takes a minimum of slightly more than two years. DNA closely
+linked to the gene variant will remain from the original strain on which the
+variant was generated.
+In
+transgenics, it is 3 weeks from DNA injection to birth of offspring, 3 weeks to
+weaning when the mice containing the injected DNA can be identified, and
+another 3 to 5 weeks for females and males, respectively, to reach sexual
+maturity. Transmission of the transgene into offspring requires 6 weeks to
+weaned offspring. Thus a minimum of 15 to 17 weeks is required from DNA
+injection until a transgene from a founder mouse is established in multiple
+mice, the start of a line of transgenic mice.
+In
+gene targeting, it takes a minimum of 8 weeks to electroporate the DNA
+construct and do an initial characterization of cell lines to identify
+potential targeted clones, then a minimum of another 6 weeks to fully
+characterize targeted cell lines for the construction of chimeras. From
+injection of targeted embryonic stem cells into host embryos, it takes 12 weeks
+for chimeras to reach sexual maturity, and another 6 weeks for weaned offspring
+which will be tested for germ line transmission. Thus a minimum of 32 weeks is
+required after the targeting vector is constructed to reach heterozygous, gene
+targeted mice.
+These
+timelines do not include the time required to build DNA constructs or develop
+assays to identify founder mice or targeted ES cells. The DNA constructs for
+gene targeting are more complicated to construct, and the verification of gene
+targeting is more involved than identifying transgenic mice.
+Sources
+of Services, Materials and Information
+Some
+academic transgenic and targeting services will take orders from clients from
+outside their institution. Their prices are typically substantially lower than
+commercial services.
+The
+UCSC genome browser <http://genome.ucsc.edu> displays end-sequenced BAC
+genomic clones tiled across the genome for mice and humans. These clones can be
+purchased from The BACPAC Resources Center <http://bacpac.chori.org/>.
+The mouse genomic clones are from either C57BL6/J, or Mus musculus molossinus,
+so be certain to select the correct library. The Ensembl genome browser <http://www.ensembl.org/Mus_musculus/index.html>
+displays end-sequenced 129 genomic clones which can be purchased from the
+Wellcome Trust.
+Transgenic
+cores can help you to identify sources of promoters, polyadenylation signals
+and selectable markers and their material transfer agreements.
+The
+Jackson Laboratory maintains the Mouse Genome Informatics (MGI) web site and
+database, which is an invaluable source of information about nomenclature,
+existing mouse mutants, strains of mice and public repositories of mice. The
+MGI email discussion group is a good way to get input from mouse geneticists at
+other institutions. A number of transgenic cores, including our own, maintain
+web sites with a good deal of basic information about mouse genetics,
+reproduction and biology (UC Irvine
+<http://www.research.uci.edu/tmf/index.htm>, U of Michigan
+<http://www.med.umich.edu/tamc/> and CWRU <http://ko.cwru.edu/>).
+Summary
+The
+advent of BAC genomic libraries and recombineering, combined with the ability
+to make transgenics directly on the C57BL/6J inbred strain, have led to great
+improvements in the generation of animal models of disease. In many cases, a
+dementia model can be quickly established which has low variation and high
+fidelity to the genetics of the disease. On the other hand, the recent
+development of stable C57BL/6 ES lines has facilitated gene targeting. However,
+gene targeting requires more time, and is less certain to succeed. The
+strengths and weakness of different approaches are summarized in Table 1.
+References
+1. Brinster
+RL, Chen HY, Trumbauer M, Senear AW, Warren R, Palmiter RD. Somatic expression
+of herpes thymidine kinase in mice following injection of a fusion gene into
+eggs. Cell 1981;27(1 Pt 2):223-31.
+2. Thomas
+KR, Capecchi MR. Site-directed mutagenesis by gene targeting in mouse
+embryo-derived stem cells. Cell 1987;51(3):503-12.
+3. Doetschman
+T, Gregg RG, Maeda N, et al. Targetted correction of a mutant HPRT gene in
+mouse embryonic stem cells. Nature 1987;330(6148):576-8.
+4. Threadgill
+DW, Dlugosz AA, Hansen LA, et al. Targeted disruption of mouse EGF receptor:
+effect of genetic background on mutant phenotype. Science 1995;269(5221):230-4.
+5. Lehman
+EJ, Kulnane LS, Gao Y, et al. Genetic background regulates beta-amyloid
+precursor protein processing and beta-amyloid deposition in the mouse. Hum Mol
+Genet 2003;12(22):2949-56.
+6. Lloret
+A, Dragileva E, Teed A, et al. Genetic background modifies nuclear mutant
+huntingtin accumulation and HD CAG repeat instability in Huntington's disease
+knock-in mice. Hum Mol Genet 2006;15(12):2015-24.
+7. Ryman
+D, Lamb BT. Genetic and environmental modifiers of Alzheimer's disease
+phenotypes in the mouse. Curr Alzheimer Res 2006;3(5):465-73.
+8. Van
+Raamsdonk JM, Metzler M, Slow E, et al. Phenotypic abnormalities in the YAC128
+mouse model of Huntington disease are penetrant on multiple genetic backgrounds
+and modulated by strain. Neurobiol Dis 2007;26(1):189-200.
+9. Montoliu
+L, Chavez S, Vidal M. Variegation associated with lacZ in transgenic animals: a
+warning note. Transgenic Res 2000;9(3):237-9.
+10. Robertson
+G, Garrick D, Wu W, Kearns M, Martin D, Whitelaw E. Position-dependent
+variegation of globin transgene expression in mice. Proc Natl Acad Sci U S A
+1995;92(12):5371-5.
+11. Chevalier-Mariette
+C, Henry I, Montfort L, et al. CpG content affects gene silencing in mice:
+evidence from novel transgenes. Genome Biol 2003;4(9):R53.
+12. Garrick D,
+Fiering S, Martin DI, Whitelaw E. Repeat-induced gene silencing in mammals. Nat
+Genet 1998;18(1):56-9.
+13. McBurney
+MW, Mai T, Yang X, Jardine K. Evidence for repeat-induced gene silencing in
+cultured Mammalian cells: inactivation of tandem repeats of transfected genes.
+Exp Cell Res 2002;274(1):1-8.
+14. Mehtali M,
+LeMeur M, Lathe R. The methylation-free status of a housekeeping transgene is
+lost at high copy number. Gene 1990;91(2):179-84.
+15. Robertson
+G, Garrick D, Wilson M, Martin DI, Whitelaw E. Age-dependent silencing of
+globin transgenes in the mouse. Nucleic Acids Res 1996;24(8):1465-71.
+16. Sutherland
+HG, Kearns M, Morgan HD, et al. Reactivation of heritably silenced gene
+expression in mice. Mamm Genome 2000;11(5):347-55.
+17. Hadchouel
+M, Farza H, Simon D, Tiollais P, Pourcel C. Maternal inhibition of hepatitis B
+surface antigen gene expression in transgenic mice correlates with de novo
+methylation. Nature 1987;329(6138):454-6.
+18. Allen ND,
+Norris ML, Surani MA. Epigenetic control of transgene expression and imprinting
+by genotype-specific modifiers. Cell 1990;61(5):853-61.
+19. Howdeshell
+KL, Peterman PH, Judy BM, et al. Bisphenol A is released from used
+polycarbonate animal cages into water at room temperature. Environ Health
+Perspect 2003;111(9):1180-7.
+20. Hunt PA,
+Koehler KE, Susiarjo M, et al. Bisphenol a exposure causes meiotic aneuploidy
+in the female mouse. Curr Biol 2003;13(7):546-53.
+21. McNeish JD,
+Scott WJ, Jr., Potter SS. Legless, a novel mutation found in PHT1-1 transgenic
+mice. Science 1988;241(4867):837-9.
+22. Mahon KA,
+Overbeek PA, Westphal H. Prenatal lethality in a transgenic mouse line is the
+result of a chromosomal translocation. Proc Natl Acad Sci U S A
+1988;85(4):1165-8.
+23. Covarrubias
+L, Nishida Y, Terao M, D'Eustachio P, Mintz B. Cellular DNA rearrangements and
+early developmental arrest caused by DNA insertion in transgenic mouse embryos.
+Mol Cell Biol 1987;7(6):2243-7.
+24. Covarrubias
+L, Nishida Y, Mintz B. Early postimplantation embryo lethality due to DNA
+rearrangements in a transgenic mouse strain. Proc Natl Acad Sci U S A
+1986;83(16):6020-4.
+25. Brown A,
+Copeland NG, Gilbert DJ, Jenkins NA, Rossant J, Kothary R. The genomic
+structure of an insertional mutation in the dystonia musculorum locus. Genomics
+1994;20(3):371-6.
+26. Shawlot W,
+Siciliano MJ, Stallings RL, Overbeek PA. Insertional inactivation of the
+downless gene in a family of transgenic mice. Mol Biol Med 1989;6(4):299-307.
+27. Woychik RP,
+Stewart TA, Davis LG, D'Eustachio P, Leder P. An inherited limb deformity
+created by insertional mutagenesis in a transgenic mouse. Nature
+1985;318(6041):36-40.
+28. Vogt TF,
+Jackson-Grusby L, Wynshaw-Boris AJ, Chan DC, Leder P. The same genomic region
+is disrupted in two transgene-induced limb deformity alleles. Mamm Genome
+1992;3(8):431-7.
+29. Perry WL,
+3rd, Vasicek TJ, Lee JJ, et al. Phenotypic and molecular analysis of a
+transgenic insertional allele of the mouse Fused locus. Genetics
+1995;141(1):321-32.
+30. Moyer JH,
+Lee-Tischler MJ, Kwon HY, et al. Candidate gene associated with a mutation
+causing recessive polycystic kidney disease in mice. Science
+1994;264(5163):1329-33.
+31. Pohl TM, Mattei
+MG, Ruther U. Evidence for allelism of the recessive insertional mutation add
+and the dominant mouse mutation extra-toes (Xt). Development
+1990;110(4):1153-7.
+32. Yoon JK,
+Olson EN, Arnold HH, Wold BJ. Different MRF4 knockout alleles differentially disrupt
+Myf-5 expression: cis-regulatory interactions at the MRF4/Myf-5 locus. Dev Biol
+1997;188(2):349-62.
+33. Olson EN,
+Arnold HH, Rigby PW, Wold BJ. Know your neighbors: three phenotypes in null
+mutants of the myogenic bHLH gene MRF4. Cell 1996;85(1):1-4.
+34. Ren SY,
+Angrand PO, Rijli FM. Targeted insertion results in a rhombomere 2-specific
+Hoxa2 knockdown and ectopic activation of Hoxa1 expression. Dev Dyn
+2002;225(3):305-15.
+35. Taveau M,
+Stockholm D, Marchand S, Roudaut C, Le Bert M, Richard I. Bidirectional
+transcriptional activity of the Pgk1 promoter and transmission ratio distortion
+in Capn3-deficient mice. Genomics 2004;84(3):592-5.
+36. Crawley JN,
+Belknap JK, Collins A, et al. Behavioral phenotypes of inbred mouse strains:
+implications and recommendations for molecular studies. Psychopharmacology
+(Berl) 1997;132(2):107-24.
+37. Chen XJ,
+Kovacevic N, Lobaugh NJ, Sled JG, Henkelman RM, Henderson JT. Neuroanatomical
+differences between mouse strains as shown by high-resolution 3D MRI.
+Neuroimage 2006;29(1):99-105.
+38. Jones SM,
+Jones TA, Johnson KR, Yu H, Erway LC, Zheng QY. A comparison of vestibular and
+auditory phenotypes in inbred mouse strains. Brain Res 2006;1091(1):40-6.
+39. Csiza CK,
+McMartin DN. Apparent acaridal dermatitis in a C57BL/6 Nya mouse colony. Lab
+Anim Sci 1976;26(5):781-7.
+40. Balogh SA,
+McDowell CS, Stavnezer AJ, Denenberg VH. A behavioral and neuroanatomical
+assessment of an inbred substrain of 129 mice with behavioral comparisons to
+C57BL/6J mice. Brain Res 1999;836(1-2):38-48.
+41. Gimenez E,
+Montoliu L. A simple polymerase chain reaction assay for genotyping the retinal
+degeneration mutation (Pdeb(rd1)) in FVB/N-derived transgenic mice. Lab Anim
+2001;35(2):153-6.
+42. Wahlsten D,
+Cooper SF, Crabbe JC. Different rankings of inbred mouse strains on the Morris
+maze and a refined 4-arm water escape task. Behav Brain Res 2005;165(1):36-51.
+43. Wong AA,
+Brown RE. Visual detection, pattern discrimination and visual acuity in 14
+strains of mice. Genes Brain Behav 2006;5(5):389-403.
+44. Seong E,
+Saunders TL, Stewart CL, Burmeister M. To knockout in 129 or in C57BL/6: that
+is the question. Trends Genet 2004;20(2):59-62.
+45. Hughes ED,
+Qu YY, Genik SJ, et al. Genetic variation in C57BL/6 ES cell lines and genetic
+instability in the Bruce4 C57BL/6 ES cell line. Mamm Genome 2007;18(8):549-58.
+46. Auerbach
+AB, Norinsky R, Ho W, et al. Strain-dependent differences in the efficiency of
+transgenic mouse production. Transgenic Res 2003;12(1):59-69.
+47. Brinster
+RL, Allen JM, Behringer RR, Gelinas RE, Palmiter RD. Introns increase
+transcriptional efficiency in transgenic mice. Proc Natl Acad Sci U S A
+1988;85(3):836-40.
+48. Palmiter
+RD, Sandgren EP, Avarbock MR, Allen DD, Brinster RL. Heterologous introns can
+enhance expression of transgenes in mice. Proc Natl Acad Sci U S A
+1991;88(2):478-82.
+49. Townes TM,
+Lingrel JB, Chen HY, Brinster RL, Palmiter RD. Erythroid-specific expression of
+human beta-globin genes in transgenic mice. Embo J 1985;4(7):1715-23.
+50. Clark AJ,
+Harold G, Yull FE. Mammalian cDNA and prokaryotic reporter sequences silence
+adjacent transgenes in transgenic mice. Nucleic Acids Res 1997;25(5):1009-14.
+51. Gotz J,
+Ittner LM. Animal models of Alzheimer's disease and frontotemporal dementia.
+Nat Rev Neurosci 2008;9(7):532-44.
+52. Caroni P.
+Overexpression of growth-associated proteins in the neurons of adult transgenic
+mice. J Neurosci Methods 1997;71(1):3-9.
+53. Gordon JW,
+Chesa PG, Nishimura H, et al. Regulation of Thy-1 gene expression in transgenic
+mice. Cell 1987;50(3):445-52.
+54. Scott M,
+Foster D, Mirenda C, et al. Transgenic mice expressing hamster prion protein
+produce species-specific scrapie infectivity and amyloid plaques. Cell
+1989;59(5):847-57.
+55. Sasahara M,
+Fries JW, Raines EW, et al. PDGF B-chain in neurons of the central nervous
+system, posterior pituitary, and in a transgenic model. Cell 1991;64(1):217-27.
+56. Mayford M,
+Wang J, Kandel ER, O'Dell TJ. CaMKII regulates the frequency-response function
+of hippocampal synapses for the production of both LTD and LTP. Cell 1995;81(6):891-904.
+57. Forss-Petter
+S, Danielson PE, Catsicas S, et al. Transgenic mice expressing
+beta-galactosidase in mature neurons under neuron-specific enolase promoter
+control. Neuron 1990;5(2):187-97.
+58. Mucke L,
+Oldstone MB, Morris JC, Nerenberg MI. Rapid activation of astrocyte-specific
+expression of GFAP-lacZ transgene by focal injury. New Biol 1991;3(5):465-74.
+59. Woychik RP,
+Lyons RH, Post L, Rottman FM. Requirement for the 3' flanking region of the
+bovine growth hormone gene for accurate polyadenylylation. Proc Natl Acad Sci U
+S A 1984;81(13):3944-8.
+60. Pfarr DS,
+Rieser LA, Woychik RP, Rottman FM, Rosenberg M, Reff ME. Differential effects
+of polyadenylation regions on gene expression in mammalian cells. DNA
+1986;5(2):115-22.
+61. Vintersten
+K, Testa G, Naumann R, Anastassiadis K, Stewart AF. Bacterial artificial
+chromosome transgenesis through pronuclear injection of fertilized mouse
+oocytes. Methods Mol Biol 2008;415:83-100.
+62. Scott MM,
+Wylie CJ, Lerch JK, et al. A genetic approach to access serotonin neurons for
+in vivo and in vitro studies. Proc Natl Acad Sci U S A 2005;102(45):16472-7.
+63. Gong S,
+Zheng C, Doughty ML, et al. A gene expression atlas of the central nervous
+system based on bacterial artificial chromosomes. Nature 2003;425(6961):917-25.
+64. Gong S,
+Yang XW. Modification of bacterial artificial chromosomes (BACs) and
+preparation of intact BAC DNA for generation of transgenic mice. Curr Protoc
+Neurosci 2005;Chapter 5:Unit 5 21.
+65. Gregory SG,
+Sekhon M, Schein J, et al. A physical map of the mouse genome. Nature
+2002;418(6899):743-50.
+66. Adams DJ,
+Quail MA, Cox T, et al. A genome-wide, end-sequenced 129Sv BAC library resource
+for targeting vector construction. Genomics 2005;86(6):753-8.
+67. McPherson
+JD, Marra M, Hillier L, et al. A physical map of the human genome. Nature
+2001;409(6822):934-41.
+68. Warming S,
+Costantino N, Court DL, Jenkins NA, Copeland NG. Simple and highly efficient
+BAC recombineering using galK selection. Nucleic Acids Res 2005;33(4):e36.
+69. Lee EC, Yu
+D, Martinez de Velasco J, et al. A highly efficient Escherichia coli-based
+chromosome engineering system adapted for recombinogenic targeting and
+subcloning of BAC DNA. Genomics 2001;73(1):56-65.
+70. Yu D, Ellis
+HM, Lee EC, Jenkins NA, Copeland NG, Court DL. An efficient recombination
+system for chromosome engineering in Escherichia coli. Proc Natl Acad Sci U S A
+2000;97(11):5978-83.
+71. Chandler
+KJ, Chandler RL, Broeckelmann EM, Hou Y, Southard-Smith EM, Mortlock DP.
+Relevance of BAC transgene copy number in mice: transgene copy number variation
+across multiple transgenic lines and correlations with transgene integrity and
+expression. Mamm Genome 2007;18(10):693-708.
+72. Vadolas J,
+Wardan H, Bosmans M, et al. Transgene copy number-dependent rescue of murine
+beta-globin knockout mice carrying a 183 kb human beta-globin BAC genomic
+fragment. Biochim Biophys Acta 2005;1728(3):150-62.
+73. Giraldo P,
+Montoliu L. Size matters: use of YACs, BACs and PACs in transgenic animals.
+Transgenic Res 2001;10(2):83-103.
+74. Urlinger S,
+Baron U, Thellmann M, Hasan MT, Bujard H, Hillen W. Exploring the sequence
+space for tetracycline-dependent transcriptional activators: novel mutations
+yield expanded range and sensitivity. Proc Natl Acad Sci U S A
+2000;97(14):7963-8.
+75. Gossen M,
+Bujard H. Tight control of gene expression in mammalian cells by
+tetracycline-responsive promoters. Proc Natl Acad Sci U S A
+1992;89(12):5547-51.
+76. Gossen M,
+Freundlieb S, Bender G, Muller G, Hillen W, Bujard H. Transcriptional
+activation by tetracyclines in mammalian cells. Science 1995;268(5218):1766-9.
+77. te Riele H,
+Maandag ER, Berns A. Highly efficient gene targeting in embryonic stem cells
+through homologous recombination with isogenic DNA constructs. Proc Natl Acad
+Sci U S A 1992;89(11):5128-32.
+78. Auerbach W,
+Dunmore JH, Fairchild-Huntress V, et al. Establishment and chimera analysis of
+129/SvEv- and C57BL/6-derived mouse embryonic stem cell lines. Biotechniques
+2000;29(5):1024-8, 30, 32.
+79. Hansen GM,
+Markesich DC, Burnett MB, et al. Large-scale gene trapping in C57BL/6N mouse
+embryonic stem cells. Genome Res 2008;18(10):1670-9.
+80. Tanimoto Y,
+Iijima S, Hasegawa Y, et al. Embryonic stem cells derived from C57BL/6J and
+C57BL/6N mice. Comp Med 2008;58(4):347-52.
+81. Freeman HC,
+Hugill A, Dear NT, Ashcroft FM, Cox RD. Deletion of nicotinamide nucleotide
+transhydrogenase: a new quantitive trait locus accounting for glucose
+intolerance in C57BL/6J mice. Diabetes 2006;55(7):2153-6.
+Table 1 Strengths and Weaknesses of Transgenics and Gene
+Targeting
+Small
+Insert Transgene
+Genomic
+Fragment Transgene
+Gene
+Targeting
+Time
+>17 weeks
+>17 weeks
+>32 weeks
+Vector
+Construction
+standard
+special
+technology
+most
+involved
+Epigenetic
+State
+can be
+unstable
+stable
+stable
+Off
+Target Genetic Effects
+~1 in 10
+~1 in 10?
+rare
+Spatial
+Expression
+many
+available promoters
+similar to
+endogenous
+endogenous
+Expression
+Level
+low to very
+high
+endogenous
+to ~5x endogenous
+endogenous
+Inbred
+Strains
+FVB &
+C57BL/6
+FVB &
+C57BL/6
+129 &
+C57BL/6
+Likelihood
+of Success
+<=100%
+<=100%
+~80%

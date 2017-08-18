@@ -1,0 +1,978 @@
+Genetic engineering - Wikipedia
+Genetic engineering
+From Wikipedia, the free encyclopedia
+This is the latest accepted revision, reviewed on 1 December 2016.
+Jump to:					navigation, 					search
+For a non-technical introduction to the topic, see Introduction to genetics. For the song by Orchestral Manoeuvres in the Dark, see Genetic Engineering (song).
+Part of a series on
+Genetics
+Key components
+Chromosome
+DNA
+RNA
+Genome
+Heredity
+Mutation
+Nucleotide
+Variation
+Outline
+Index
+Glossary
+History and topics
+Introduction
+History
+Evolution (molecular)
+Population genetics
+Mendelian inheritance
+Quantitative genetics
+Molecular genetics
+Research
+DNA sequencing
+Genetic engineering
+Genomics ( template)
+Medical genetics
+Branches of genetics
+Personalized medicine
+Personalized medicine
+Biology portal
+Molecular and cellular biology portal
+v
+t
+e
+Genetic engineering, also called genetic modification, is the direct manipulation of an organism's genome using biotechnology. It is a set of technologies used to change the genetic makeup of cells, including the transfer of genes within and across species boundaries to produce improved or novel organisms. New DNA may be inserted in the host genome by first isolating and copying the genetic material of interest using molecular cloning methods to generate a DNA sequence, or by synthesizing the DNA, and then inserting this construct into the host organism. Genes may be removed, or "knocked out", using a nuclease. Gene targeting is a different technique that uses homologous recombination to change an endogenous gene, and can be used to delete a gene, remove exons, add a gene, or introduce point mutations.
+An organism that is generated through genetic engineering is considered to be a genetically modified organism (GMO). The first GMOs were bacteria generated in 1973 and GM mice in 1974. Insulin-producing bacteria were commercialized in 1982 and genetically modified food has been sold since 1994. GloFish, the first GMO designed as a pet, was first sold in the United States in December 2003.[1]
+Genetic engineering techniques have been applied in numerous fields including research, agriculture, industrial biotechnology, and medicine. Enzymes used in laundry detergent and medicines such as insulin and human growth hormone are now manufactured in GM cells, experimental GM cell lines and GM animals such as mice or zebrafish are being used for research purposes, and genetically modified crops have been commercialized.
+IUPAC definition
+Process of inserting new genetic information into existing cells in order to
+modify a specific organism for the purpose of changing its characteristics.
+Note: Adapted from ref.[2][3]
+Contents
+1 Definition
+2 Genetically modified organisms
+3 History
+4 Process
+4.1 Transformation
+4.2 Genome editing
+5 Applications
+5.1 Medicine
+5.1.1 Manufacturing
+5.1.2 Research
+5.1.3 Gene therapy
+5.2 Research
+5.3 Industrial
+5.3.1 Experimental, lab scale industrial applications
+5.4 Agriculture
+5.5 Conservation
+5.6 BioArt and entertainment
+6 Regulation
+7 Controversy
+8 See also
+9 References
+10 Further reading
+11 External links
+Definition[edit]
+Comparison of conventional plant breeding with transgenic and cisgenic genetic modification.
+Genetic engineering alters the genetic make-up of an organism using techniques that remove heritable material or that introduce DNA prepared outside the organism either directly into the host or into a cell that is then fused or hybridized with the host.[4] This involves using recombinant nucleic acid (DNA or RNA) techniques to form new combinations of heritable genetic material followed by the incorporation of that material either indirectly through a vector system or directly through micro-injection, macro-injection and micro-encapsulation techniques.
+Genetic engineering does not normally include traditional animal and plant breeding, in vitro fertilisation, induction of polyploidy, mutagenesis and cell fusion techniques that do not use recombinant nucleic acids or a genetically modified organism in the process.[4] However the European Commission has also defined genetic engineering broadly as including selective breeding and other means of artificial selection.[5] Cloning and stem cell research, although not considered genetic engineering,[6] are closely related and genetic engineering can be used within them.[7] Synthetic biology is an emerging discipline that takes genetic engineering a step further by introducing artificially synthesized material from raw materials into an organism.[8]
+If genetic material from another species is added to the host, the resulting organism is called transgenic. If genetic material from the same species or a species that can naturally breed with the host is used the resulting organism is called cisgenic.[9] Genetic engineering can also be used to remove genetic material from the target organism, creating a gene knockout organism.[10] In Europe genetic modification is synonymous with genetic engineering while within the United States of America it can also refer to conventional breeding methods.[11][12] The Canadian regulatory system is based on whether a product has novel features regardless of method of origin. In other words, a product is regulated as genetically modified if it carries some trait not previously found in the species whether it was generated using traditional breeding methods (e.g., selective breeding, cell fusion, mutation breeding) or genetic engineering.[13][14][15] Within the scientific community, the term genetic engineering is not commonly used; more specific terms such as transgenic are preferred.
+Genetically modified organisms[edit]
+Main article: Genetically modified organism
+Plants, animals or micro organisms that have changed through genetic engineering are termed genetically modified organisms or GMOs.[16] Bacteria were the first organisms to be genetically modified. Plasmid DNA containing new genes can be inserted into the bacterial cell and the bacteria will then express those genes. These genes can code for medicines or enzymes that process food and other substrates.[17][18] Plants have been modified for insect protection, herbicide resistance, virus resistance, enhanced nutrition, tolerance to environmental pressures and the production of edible vaccines.[19] Most commercialised GMO's are insect resistant and/or herbicide tolerant crop plants.[20] Genetically modified animals have been used for research, model animals and the production of agricultural or pharmaceutical products.
+The genetically modified animals include animals with genes knocked out, increased susceptibility to disease, hormones for extra growth and the ability to express proteins in their milk.[21]
+History[edit]
+Main article: History of genetic engineering
+Humans have altered the genomes of species for thousands of years through selective breeding, or artificial selection[22]:1[23]:1 as contrasted with natural selection, and more recently through mutagenesis. Genetic engineering as the direct manipulation of DNA by humans outside breeding and mutations has only existed since the 1970s. The term "genetic engineering" was first coined by Jack Williamson in his science fiction novel Dragon's Island, published in 1951[24]  one year before DNA's role in heredity was confirmed by Alfred Hershey and Martha Chase,[25] and two years before James Watson and Francis Crick showed that the DNA molecule has a double-helix structure  though the general concept of direct genetic manipulation was explored in rudimentary form in Stanley G. Weinbaum's 1936 science fiction story Proteus Island.[26][27]
+In 1974 Rudolf Jaenisch created the first GM animal.
+In 1972, Paul Berg created the first recombinant DNA molecules by combining DNA from the monkey virus SV40 with that of the lambda virus.[28] In 1973 Herbert Boyer and Stanley Cohen created the first transgenic organism by inserting antibiotic resistance genes into the plasmid of an E. coli bacterium.[29][30] A year later Rudolf Jaenisch created a transgenic mouse by introducing foreign DNA into its embryo, making it the worlds first transgenic animal.[31] These achievements led to concerns in the scientific community about potential risks from genetic engineering, which were first discussed in depth at the Asilomar Conference in 1975. One of the main recommendations from this meeting was that government oversight of recombinant DNA research should be established until the technology was deemed safe.[32][33]
+In 1976 Genentech, the first genetic engineering company, was founded by Herbert Boyer and Robert Swanson and a year later the company produced a human protein (somatostatin) in E.coli. Genentech announced the production of genetically engineered human insulin in 1978.[34] In 1980, the U.S. Supreme Court in the Diamond v. Chakrabarty case ruled that genetically altered life could be patented.[35] The insulin produced by bacteria, branded humulin, was approved for release by the Food and Drug Administration in 1982.[36]
+In the 1970s graduate student Steven Lindow of the University of WisconsinMadison with D.C. Arny and C. Upper found a bacterium he identified as P. syringae that played a role in ice nucleation, and in 1977 he discovered a mutant ice-minus strain. Dr. Lindow (who is now a plant pathologist at the University of California-Berkeley) later successfully created a recombinant ice-minus strain.[37] In 1983, a biotech company, Advanced Genetic Sciences (AGS) applied for U.S. government authorization to perform field tests with the ice-minus strain of P. syringae to protect crops from frost, but environmental groups and protestors delayed the field tests for four years with legal challenges.[38] In 1987, the ice-minus strain of P. syringae became the first genetically modified organism (GMO) to be released into the environment[39] when a strawberry field and a potato field in California were sprayed with it.[40] Both test fields were attacked by activist groups the night before the tests occurred: "The world's first trial site attracted the world's first field trasher".[39]
+The first field trials of genetically engineered plants occurred in France and the USA in 1986, tobacco plants were engineered to be resistant to herbicides.[41] The Peoples Republic of China was the first country to commercialize transgenic plants, introducing a virus-resistant tobacco in 1992.[42] In 1994 Calgene attained approval to commercially release the Flavr Savr tomato, a tomato engineered to have a longer shelf life.[43] In 1994, the European Union approved tobacco engineered to be resistant to the herbicide bromoxynil, making it the first genetically engineered crop commercialized in Europe.[44] In 1995, Bt Potato was approved safe by the Environmental Protection Agency, after having been approved by the FDA, making it the first pesticide producing crop to be approved in the USA.[45] In 2009 11 transgenic crops were grown commercially in 25 countries, the largest of which by area grown were the USA, Brazil, Argentina, India, Canada, China, Paraguay and South Africa.[46]
+In 2010, scientists at the J. Craig Venter Institute created the first synthetic genome and inserted it into an empty bacterial cell. The resulting bacterium, named Synthia, could replicate and produce proteins.[47][48] In 2014, a bacterium was developed that replicated a plasmid containing a unique base pair, creating the first organism engineered to use an expanded genetic alphabet.[49][50]
+Process[edit]
+Main article: Genetic engineering techniques
+The first step is to choose and isolate the gene that will be inserted into the genetically modified organism. The gene can be isolated using restriction enzymes to cut DNA into fragments and gel electrophoresis to separate them out according to length.[51] Polymerase chain reaction (PCR) can also be used to amplify up a gene segment, which can then be isolated through gel electrophoresis.[52] If the chosen gene or the donor organism's genome has been well studied it may be present in a genetic library. If the DNA sequence is known, but no copies of the gene are available, it can be artificially synthesized.[53]
+The gene to be inserted into the genetically modified organism must be combined with other genetic elements in order for it to work properly. The gene can also be modified at this stage for better expression or effectiveness. As well as the gene to be inserted most constructs contain a promoter and terminator region as well as a selectable marker gene. The promoter region initiates transcription of the gene and can be used to control the location and level of gene expression, while the terminator region ends transcription. The selectable marker, which in most cases confers antibiotic resistance to the organism it is expressed in, is needed to determine which cells are transformed with the new gene. The constructs are made using recombinant DNA techniques, such as restriction digests, ligations and molecular cloning.[54] The manipulation of the DNA generally occurs within a plasmid.
+The most common form of genetic engineering involves inserting new genetic material randomly within the host genome.[citation needed] Other techniques allow new genetic material to be inserted at a specific location in the host genome or generate mutations at desired genomic loci capable of knocking out endogenous genes. The technique of gene targeting uses homologous recombination to target desired changes to a specific endogenous gene. This tends to occur at a relatively low frequency in plants and animals and generally requires the use of selectable markers. The frequency of gene targeting can be greatly enhanced with the use of engineered nucleases such as zinc finger nucleases,[55][56] engineered homing endonucleases,[57][58] or nucleases created from TAL effectors.[59][60]
+In addition to enhancing gene targeting, engineered nucleases can also be used to introduce mutations at endogenous genes that generate a gene knockout.[61][62]
+Transformation[edit]
+Main article: Transformation (genetics)
+A. tumefaciens attaching itself to a carrot cell
+Only about 1% of bacteria are naturally capable of taking up foreign DNA. However, this ability can be induced in other bacteria via stress (e.g. thermal or electric shock), thereby increasing the cell membrane's permeability to DNA; up-taken DNA can either integrate with the genome or exist as extrachromosomal DNA. DNA is generally inserted into animal cells using microinjection, where it can be injected through the cell's nuclear envelope directly into the nucleus or through the use of viral vectors.[63] In plants the DNA is generally inserted using Agrobacterium-mediated recombination or biolistics.[64]
+In Agrobacterium-mediated recombination, the plasmid construct contains T-DNA, DNA which is responsible for insertion of the DNA into the host plants genome. This plasmid is transformed into Agrobacterium containing no plasmids prior to infecting the plant cells. The Agrobacterium will then naturally insert the genetic material into the plant cells.[65] In biolistics transformation particles of gold or tungsten are coated with DNA and then shot into young plant cells or plant embryos. Some genetic material will enter the cells and transform them. This method can be used on plants that are not susceptible to Agrobacterium infection and also allows transformation of plant plastids. Another transformation method for plant and animal cells is electroporation. Electroporation involves subjecting the plant or animal cell to an electric shock, which can make the cell membrane permeable to plasmid DNA. In some cases the electroporated cells will incorporate the DNA into their genome. Due to the damage caused to the cells and DNA the transformation efficiency of biolistics and electroporation is lower than agrobacterial mediated transformation and microinjection.[66]
+As often only a single cell is transformed with genetic material the organism must be regenerated from that single cell. As bacteria consist of a single cell and reproduce clonally regeneration is not necessary. In plants this is accomplished through the use of tissue culture. Each plant species has different requirements for successful regeneration through tissue culture. If successful an adult plant is produced that contains the transgene in every cell. In animals it is necessary to ensure that the inserted DNA is present in the embryonic stem cells. Selectable markers are used to easily differentiate transformed from untransformed cells. These markers are usually present in the transgenic organism, although a number of strategies have been developed that can remove the selectable marker from the mature transgenic plant.[67] When the offspring is produced they can be screened for the presence of the gene. All offspring from the first generation will be heterozygous for the inserted gene and must be mated together to produce a homozygous animal.
+Further testing uses PCR, Southern hybridization, and DNA sequencing is conducted to confirm that an organism contains the new gene. These tests can also confirm the chromosomal location and copy number of the inserted gene. The presence of the gene does not guarantee it will be expressed at appropriate levels in the target tissue so methods that look for and measure the gene products (RNA and protein) are also used. These include northern hybridization, quantitative RT-PCR, Western blot, immunofluorescence, ELISA and phenotypic analysis. For stable transformation the gene should be passed to the offspring in a Mendelian inheritance pattern, so the organism's offspring are also studied.
+Genome editing[edit]
+Main article: Genome editing
+Genome editing is a type of genetic engineering in which DNA is inserted, replaced, or removed from a genome using artificially engineered nucleases, or "molecular scissors." The nucleases create specific double-stranded breaks (DSBs) at desired locations in the genome, and harness the cells endogenous mechanisms to repair the induced break by natural processes of homologous recombination (HR) and nonhomologous end-joining (NHEJ). There are currently four families of engineered nucleases: meganucleases, zinc finger nucleases (ZFNs), transcription activator-like effector nucleases (TALENs), and the Cas9-guideRNA system (adapted from the CRISPR prokarotic immune system).[68][69] In contrast to artificial genome editing natural genome editing occurs through viral and sub-viral agents competent in identification of genetic syntax structures for insertion/deletion processes with the result of conserved selection processes.[70]
+Applications[edit]
+Genetic engineering has applications in medicine, research, industry and agriculture and can be used on a wide range of plants, animals and micro organisms.
+Medicine[edit]
+In medicine, genetic engineering has been used in manufacturing drugs, to create model animals and do laboratory research, and in gene therapy.
+Manufacturing[edit]
+Main article: Industrial fermentation
+Genetic engineering is used to mass-produce insulin, human growth hormones, follistim (for treating infertility), human albumin, monoclonal antibodies, antihemophilic factors, vaccines and many other drugs.[71][72] Mouse hybridomas, cells fused together to create monoclonal antibodies, have been humanised through genetic engineering to create human monoclonal antibodies.[73] Genetically engineered viruses are being developed that can still confer immunity, but lack the infectious sequences.[74]
+Research[edit]
+Main article: Genetically modified organism
+Genetic engineering is used to create animal models of human diseases. Genetically modified mice are the most common genetically engineered animal model.[75] They have been used to study and model cancer (the oncomouse), obesity, heart disease, diabetes, arthritis, substance abuse, anxiety, aging and Parkinson disease.[76] Potential cures can be tested against these mouse models. Also genetically modified pigs have been bred with the aim of increasing the success of pig to human organ transplantation.[77]
+Gene therapy[edit]
+Main article: Gene therapy
+Gene therapy is the genetic engineering of humans, generally by replacing defective genes with effective ones. This can occur in somatic tissue or germline tissue.
+Somatic gene therapy has been studied in clinical research in several diseases, including X-linked SCID,[78] chronic lymphocytic leukemia (CLL),[79] and Parkinson's disease.[80] In 2012, Glybera became the first gene therapy treatment to be approved for clinical use in either Europe or the United States after its endorsement by the European Commission.[81][82]
+With regard to germline gene therapy, the scientific community has been opposed to attempts to alter genes in humans in inheritable ways using biotechnology since the technology was first introduced,[83] and the caution has continued as the technology has progressed.[84] With the advent of new techniques like CRISPR, in March 2015 scientists urged a worldwide ban on clinical use of gene editing technologies to edit the human genome in a way that can be inherited.[85][86][87][88] In April 2015, Chinese researchers sparked controversy when they reported results of basic research experiments in which they edited the DNA of non-viable human embryos using CRISPR.[89][90] In December 2015, scientists of major world academies called for a moratorium on inheritable human genome edits, including those related to CRISPR-Cas9 technologies.[91]
+There are also ethical concerns should the technology be used not just for treatment, but for enhancement, modification or alteration of a human beings' appearance, adaptability, intelligence, character or behavior.[92] The distinction between cure and enhancement can also be difficult to establish.[93] Transhumanists consider the enhancement of humans desirable.
+Research[edit]
+Knockout mice
+Human cells in which some proteins are fused with green fluorescent protein to allow them to be visualised
+Genetic engineering is an important tool for natural scientists. Genes and other genetic information from a wide range of organisms are transformed into bacteria for storage and modification, creating genetically modified bacteria in the process. Bacteria are cheap, easy to grow, clonal, multiply quickly, relatively easy to transform and can be stored at -80C almost indefinitely. Once a gene is isolated it can be stored inside the bacteria providing an unlimited supply for research.
+Organisms are genetically engineered to discover the functions of certain genes. This could be the effect on the phenotype of the organism, where the gene is expressed or what other genes it interacts with. These experiments generally involve loss of function, gain of function, tracking and expression.
+Loss of function experiments, such as in a gene knockout experiment, in which an organism is engineered to lack the activity of one or more genes. A knockout experiment involves the creation and manipulation of a DNA construct in vitro, which, in a simple knockout, consists of a copy of the desired gene, which has been altered such that it is non-functional. Embryonic stem cells incorporate the altered gene, which replaces the already present functional copy. These stem cells are injected into blastocysts, which are implanted into surrogate mothers. This allows the experimenter to analyze the defects caused by this mutation and thereby determine the role of particular genes. It is used especially frequently in developmental biology. Another method, useful in organisms such as Drosophila (fruit fly), is to induce mutations in a large population and then screen the progeny for the desired mutation. A similar process can be used in both plants and prokaryotes. Loss of function tells whether or not a protein is required for a function, but it does not always mean it's sufficient, especially if a function requires multiple proteins and lose the said function if one protein is missing.
+Gain of function experiments, the logical counterpart of knockouts. These are sometimes performed in conjunction with knockout experiments to more finely establish the function of the desired gene. The process is much the same as that in knockout engineering, except that the construct is designed to increase the function of the gene, usually by providing extra copies of the gene or inducing synthesis of the protein more frequently. Gain of function is used to tell whether or not a protein is sufficient for a function, but it does not always mean it's required. Especially when dealing with genetic/functional redundancy.
+Tracking experiments, which seek to gain information about the localization and interaction of the desired protein. One way to do this is to replace the wild-type gene with a 'fusion' gene, which is a juxtaposition of the wild-type gene with a reporting element such as green fluorescent protein (GFP) that will allow easy visualization of the products of the genetic modification. While this is a useful technique, the manipulation can destroy the function of the gene, creating secondary effects and possibly calling into question the results of the experiment. More sophisticated techniques are now in development that can track protein products without mitigating their function, such as the addition of small sequences that will serve as binding motifs to monoclonal antibodies.
+Expression studies aim to discover where and when specific proteins are produced. In these experiments, the DNA sequence before the DNA that codes for a protein, known as a gene's promoter, is reintroduced into an organism with the protein coding region replaced by a reporter gene such as GFP or an enzyme that catalyzes the production of a dye. Thus the time and place where a particular protein is produced can be observed. Expression studies can be taken a step further by altering the promoter to find which pieces are crucial for the proper expression of the gene and are actually bound by transcription factor proteins; this process is known as promoter bashing.
+Industrial[edit]
+Using genetic engineering techniques one can transform microorganisms such as bacteria or yeast, or transform cells from multicellular organisms such as insects or mammals, with a gene coding for a useful protein, such as an enzyme, so that the transformed organism will overexpress the desired protein. One can manufacture mass quantities of the protein by growing the transformed organism in bioreactor equipment using techniques of industrial fermentation, and then purifying the protein.[94] Some genes do not work well in bacteria, so yeast, insect cells, or mammalians cells, each a eukaryote, can also be used.[95] These techniques are used to produce medicines such as insulin, human growth hormone, and vaccines, supplements such as tryptophan, aid in the production of food (chymosin in cheese making) and fuels.[96] Other applications involving genetically engineered bacteria being investigated involve making the bacteria perform tasks outside their natural cycle, such as making biofuels,[97] cleaning up oil spills, carbon and other toxic waste[98] and detecting arsenic in drinking water.[99] Certain genetically modified microbes can also be used in biomining and bioremediation, due to their ability to extract heavy metals from their environment and incorporate them into compounds that are more easily recoverable.[100]
+Experimental, lab scale industrial applications[edit]
+In materials science, a genetically modified virus has been used in an academic lab as a scaffold for assembling a more environmentally friendly lithium-ion battery.[101][102]
+Bacteria have been engineered to function as sensors by expressing a fluorescent protein under certain environmental conditions.[103]
+Agriculture[edit]
+Main article: Genetically modified crops
+Bt-toxins present in peanut leaves (bottom image) protect it from extensive damage caused by European corn borer larvae (top image).[104]
+One of the best-known and controversial applications of genetic engineering is the creation and use of genetically modified crops or genetically modified organisms, such as genetically modified fish, which are used to produce genetically modified food and materials with diverse uses. There are four main goals in generating genetically modified crops.[105]
+One goal, and the first to be realized commercially, is to provide protection from environmental threats, such as cold (in the case of Ice-minus bacteria), or pathogens, such as insects or viruses, and/or resistance to herbicides. There are also fungal and virus resistant crops developed or in development.[106][107] They have been developed to make the insect and weed management of crops easier and can indirectly increase crop yield.[108]
+Another goal in generating GMOs is to modify the quality of produce by, for instance, increasing the nutritional value or providing more industrially useful qualities or quantities.[109] The Amflora potato, for example, produces a more industrially useful blend of starches. Cows have been engineered to produce more protein in their milk to facilitate cheese production.[110] Soybeans and canola have been genetically modified to produce more healthy oils.[111][112]
+Another goal consists of driving the GMO to produce materials that it does not normally make. One example is "pharming", which uses crops as bioreactors to produce vaccines, drug intermediates, or drug themselves; the useful product is purified from the harvest and then used in the standard pharmaceutical production process.[113] Cows and goats have been engineered to express drugs and other proteins in their milk, and in 2009 the FDA approved a drug produced in goat milk.[114][115]
+Another goal in generating GMOs, is to directly improve yield by accelerating growth, or making the organism more hardy (for plants, by improving salt, cold or drought tolerance).[109] Salmon have been genetically modified with growth hormones to increase their size.[116][117]
+The genetic engineering of agricultural crops can increase the growth rates and resistance to different diseases caused by pathogens and parasites.[118] This is beneficial as it can greatly increase the production of food sources with the usage of fewer resources that would be required to host the world's growing populations. These modified crops would also reduce the usage of chemicals, such as fertilizers and pesticides, and therefore decrease the severity and frequency of the damages produced by these chemical pollution.[118][119]
+There is a scientific consensus[120][121][122][123] that currently available food derived from GM crops poses no greater risk to human health than conventional food,[124][125][126][127][128] but that each GM food needs to be tested on a case-by-case basis before introduction.[129][130][131] Nonetheless, members of the public are much less likely than scientists to perceive GM foods as safe.[132][133][134][135] The legal and regulatory status of GM foods varies by country, with some nations banning or restricting them, and others permitting them with widely differing degrees of regulation.[136][137][138][139] Gene flow into related non-transgenic crops, off target effects on beneficial organisms and the impact on biodiversity are important environmental issues.[140] Ethical concerns involve religious issues, corporate control of the food supply, intellectual property rights and the level of labeling needed on genetically modified products.
+Conservation[edit]
+Genetic engineering has potential applications in conservation and natural areas management. For example, gene transfer through viral vectors has been proposed as a means of controlling invasive species as well as vaccinating threatened fauna from disease.[141] Transgenic trees have also been suggested as a way to confer resistance to pathogens in wild populations.[142] With the increasing risks of maladaptation in organisms as a result of climate change and other perturbations, facilitated adaptation through gene tweaking could be one solution to reducing extinction risks.[143] Applications of genetic engineering in conservation are thus far mostly theoretical and have yet to be put into practice. Further experimentation will be necessary to gauge the benefits and costs of such practices.
+BioArt and entertainment[edit]
+Genetic engineering is also being used to create BioArt.[144] Some bacteria have been genetically engineered to create black and white photographs.[145]
+Genetic engineering has also been used to create novelty items such as lavender-colored carnations,[146] blue roses,[147] and glowing fish.[148][149]
+Regulation[edit]
+Main articles: Regulation of genetic engineering and Regulation of the release of genetically modified organisms
+The regulation of genetic engineering concerns the approaches taken by governments to assess and manage the risks associated with the development and release of genetically modified crops. There are differences in the regulation of GM crops between countries, with some of the most marked differences occurring between the USA and Europe. Regulation varies in a given country depending on the intended use of the products of the genetic engineering. For example, a crop not intended for food use is generally not reviewed by authorities responsible for food safety. Starting in the late 1980s, guidance on assessing the safety of genetically engineered plants and food emerged from organizations including the FAO and WHO.[150][151][152][153]
+Controversy[edit]
+Main articles: Genetically modified food controversies and Human genetic engineering
+Critics have objected to use of genetic engineering per se on several grounds, including ethical concerns, ecological concerns, and economic concerns raised by the fact GM techniques and GM organisms are subject to intellectual property law. GMOs also are involved in controversies over GM food with respect to whether food produced from GM crops is safe, whether it should be labeled, and whether GM crops are needed to address the world's food needs. See the genetically modified food controversies article for discussion of issues about GM crops and GM food. These controversies have led to litigation, international trade disputes, and protests, and to restrictive regulation of commercial products in some countries.
+See also[edit]
+Biological engineering
+EHA101
+Gene patent
+Gene drive
+Genetic engineering in the United States
+Genetically modified crops
+Genetically modified fish
+Genetically modified food
+Genetically modified food controversies
+Genetically modified livestock
+Genetically modified organisms
+Induced stem cells
+Marker assisted selection
+Paratransgenesis
+Regulation of the release of genetic modified organisms
+References[edit]
+^ "First transgenic pet, 'GloFish', sold to US public". PHG Foundation. 9 January 2004.
+^ "Terms and Acronyms". U.S. Environmental Protection Agency online. Retrieved 16 July 2015.
+^ Vert, Michel; Doi, Yoshiharu; Hellwich, Karl-Heinz; Hess, Michael; Hodge, Philip; Kubisa, Przemyslaw; Rinaudo, Marguerite; Schu, Franois (2012). "Terminology for biorelated polymers and applications (IUPAC Recommendations 2012)" (PDF). Pure and Applied Chemistry. 84 (2): 377410. doi:10.1351/PAC-REC-10-12-04.
+^ a b The European Parliament and the council of the European Union (12 March 2001). "Directive on the release of genetically modified organisms (GMOs) Directive 2001/18/EC ANNEX I A". Official Journal of the European Communities: 17.[dead link]
+^ Staff Economic Impacts of Genetically Modified Crops on the Agri-Food Sector; P. 42 Glossary - Term and Definitions The European Commission Directorate-General for Agriculture, "Genetic engineering: The manipulation of an organism's genetic endowment by introducing or eliminating specific genes through modern molecular biology techniques. A broad definition of genetic engineering also includes selective breeding and other means of artificial selection.", Retrieved 5 November 2012
+^ Van Eenennaam, Alison. "Is Livestock Cloning Another Form of Genetic Engineering?" (PDF). agbiotech. Archived from the original (PDF) on 11 May 2011.
+^ Suter, David M.; Dubois-Dauphin, Michel; Krause, Karl-Heinz (2006). "Genetic engineering of embryonic stem cells" (PDF). Swiss Med Wkly. 136 (2728): 413415. PMID16897894.
+^ Andrianantoandro, Ernesto; Basu, Subhayu; Kariga, David K.; Weiss, Ron (16 May 2006). "Synthetic biology: new engineering rules for an emerging discipline". Molecular Systems Biology. 2 (2006.0028): 2006.0028. doi:10.1038/msb4100073. PMC1681505. PMID16738572.
+^ Jacobsen, E.; Schouten, H. J. (2008). "Cisgenesis, a New Tool for Traditional Plant Breeding, Should be Exempted from the Regulation on Genetically Modified Organisms in a Step by Step Approach". Potato Research. 51: 7588. doi:10.1007/s11540-008-9097-y.
+^ Capecchi, Mario R. (2001). "Generating mice with targeted mutations". Nature Medicine. 7 (10): 108690. doi:10.1038/nm1001-1086. PMID11590420.
+^ Staff Biotechnology - Glossary of Agricultural Biotechnology Terms United States Department of Agriculture, "Genetic modification: The production of heritable improvements in plants or animals for specific uses, via either genetic engineering or other more traditional methods. Some countries other than the United States use this term to refer specifically to genetic engineering.", Retrieved 5 November 2012
+^ Maryanski, James H. (19 October 1999). "Genetically Engineered Foods". Center for Food Safety and Applied Nutrition at the Food and Drug Administration.
+^ Evans, Brent and Lupescu, Mihai (15 July 2012) Canada - Agricultural Biotechnology Annual  2012 GAIN (Global Agricultural Information Network) report CA12029, United States Department of Agriculture, Foreifn Agricultural Service, Retrieved 5 November 2012
+^ McHugen, Alan (14 September 2000). "Chapter 1: Hors-d'oeuvres and entrees/What is genetic modification? What are GMOs?". Pandora's Picnic Basket. Oxford University Press. ISBN978-0198506744.
+^ Staff (28 November 2005) Health Canada - The Regulation of Genetically Modified Food Glossary definition of Genetically Modified: "An organism, such as a plant, animal or bacterium, is considered genetically modified if its genetic material has been altered through any method, including conventional breeding. A 'GMO' is a genetically modified organism.", Retrieved 5 November 2012
+^ "What is genetic modification (GM)?". CSIRO.
+^ "Genetic Modification of Bacteria". Annenberg Foundation.
+^ Panesar, Pamit et al (2010) "Enzymes in Food Processing: Fundamentals and Potential Applications", Chapter 10, I K International Publishing House, ISBN 978-9380026336
+^ "GM traits list". International Service for the Acquisition of Agri-Biotech Applications.
+^ "ISAAA Brief 43-2011: Executive Summary". International Service for the Acquisition of Agri-Biotech Applications.
+^ Connor, Steve (2 November 2007). "The mouse that shook the world". The Independent.
+^ Root, Clive (2007). Domestication. Greenwood Publishing Groups.
+^ Zohary, Daniel; Hopf, Maria; Weiss, Ehud (2012). Domestication of Plants in the Old World: The origin and spread of plants in the old world. Oxford University Press.
+^ Stableford, Brian M. (2004). Historical dictionary of science fiction literature. p.133. ISBN9780810849389.
+^ A, Hershey; Chase, M. (1952). "Independent functions of viral protein and nucleic acid in growth of bacteriophage" (PDF). J Gen Physiol. 36 (1): 3956. doi:10.1085/jgp.36.1.39. PMC2147348. PMID12981234.
+^ "Genetic Engineering". Encyclopedia of Science Fiction. April 2, 2015.
+^ Shiv Kant Prasad, Ajay Dash (2008). Modern Concepts in Nanotechnology, Volume 5. Discovery Publishing House. ISBN9788183562966. CS1 maint: Uses authors parameter (link)
+^ Jackson, DA; Symons, RH; Berg, P (1 October 1972). "Biochemical Method for Inserting New Genetic Information into DNA of Simian Virus 40: Circular SV40 DNA Molecules Containing Lambda Phage Genes and the Galactose Operon of Escherichia coli". PNAS. 69 (10): 29042909. Bibcode:1972PNAS...69.2904J. doi:10.1073/pnas.69.10.2904. PMC389671. PMID4342968.
+^ Arnold, Paul (2009). "History of Genetics: Genetic Engineering Timeline".
+^ Cohen, Stanley N.; Chang, Annie C. Y. (1 May 1973). "Recircularization and Autonomous Replication of a Sheared R-Factor DNA Segment in Escherichia coli Transformants  PNAS". Pnas.org. Retrieved 17 July 2010.
+^ Jaenisch, R. and Mintz, B. (1974 ) Simian virus 40 DNA sequences in DNA of healthy adult mice derived from preimplantation blastocysts injected with viral DNA. Proc. Natl. Acad. 71(4) 12501254 [1]
+^ Berg P; Baltimore, D; Brenner, S; Roblin, RO; Singer, MF; et al. (1975). "Summary statement of the Asilomar Conference on recombinant DNA molecules" (PDF). Proc. Natl. Acad. Sci. U.S.A. 72 (6): 19814. Bibcode:1975PNAS...72.1981B. doi:10.1073/pnas.72.6.1981. PMC432675. PMID806076.
+^ NIH Guidelines for research involving recombinant DNA molecules Archived 10 September 2012 at the Wayback Machine.
+^ Goeddel, David; Kleid, Dennis G.; Bolivar, Francisco; Heyneker, Herbert L.; Yansura, Daniel G.; Crea, Roberto; Hirose, Tadaaki; Kraszewski, Adam; Itakura, Keiichi; Riggs, Arthur D. (January 1979). "Expression in Escherichia coli of chemically synthesized genes for human insulin" (PDF). PNAS. 76 (1): 106110. Bibcode:1979PNAS...76..106G. doi:10.1073/pnas.76.1.106. PMC382885. PMID85300.
+^ US Supreme Court Cases from Justia & Oyez (16 June 1980). "Diamond V Chakrabarty". 447 (303). Supreme.justia.com. Retrieved 17 July 2010.
+^ "Artificial Genes". TIME. 15 November 1982. Retrieved 17 July 2010.
+^ H. Patricia Hynes. (1989) Biotechnology in agriculture: an analysis of selected technologies and policy in the United States. Reproductive and Genetic Engineering (2)1:3949 [2]
+^ Bratspies, Rebecca (2007). "Some Thoughts on the American Approach to Regulating Genetically Modified Organisms" (PDF). Kansas Journal of Law & Public Policy. 16 (3): 101131.
+^ a b BBC News 14 June 2002 GM crops: A bitter harvest?
+^ Thomas H. Maugh II for the Los Angeles Times. 9 June 1987. Altered Bacterium Does Its Job: Frost Failed to Damage Sprayed Test Crop, Company Says
+^ James, Clive (1996). "Global Review of the Field Testing and Commercialization of Transgenic Plants: 1986 to 1995" (PDF). The International Service for the Acquisition of Agri-biotech Applications. Retrieved 17 July 2010.
+^ James, Clive (1997). "Global Status of Transgenic Crops in 1997" (PDF). ISAAA Briefs No. 5.: 31.
+^ Bruening, G.; Lyons, J.M. (2000). "The case of the FLAVR SAVR tomato". California Agriculture. 54 (4): 67. doi:10.3733/ca.v054n04p6.
+^ MacKenzie, Debora (18 June 1994). "Transgenic tobacco is European first". New Scientist.
+^ Genetically Altered Potato Ok'd For Crops Lawrence Journal-World - 6 May 1995
+^ Global Status of Commercialized Biotech/GM Crops: 2009 ISAAA Brief 41-2009, 23 February 2010. Retrieved 10 August 2010
+^ Pennisi, Elizabeth (2010-05-21). "Synthetic Genome Brings New Life to Bacterium". Science. 328 (5981): 958959. doi:10.1126/science.328.5981.958. ISSN0036-8075. PMID20488994.
+^ Gibson, D. G.; Glass, J. I.; Lartigue, C.; Noskov, V. N.; Chuang, R.-Y.; Algire, M. A.; Benders, G. A.; Montague, M. G.; Ma, L.; Moodie, M. M.; Merryman, C.; Vashee, S.; Krishnakumar, R.; Assad-Garcia, N.; Andrews-Pfannkoch, C.; Denisova, E. A.; Young, L.; Qi, Z.-Q.; Segall-Shapiro, T. H.; Calvey, C. H.; Parmar, P. P.; Hutchison Ca, C. A.; Smith, H. O.; Venter, J. C. (2010). "Creation of a Bacterial Cell Controlled by a Chemically Synthesized Genome". Science. 329 (5987): 526. doi:10.1126/science.1190719. PMID20488990.
+^ Malyshev, Denis A.; Dhami, Kirandeep; Lavergne, Thomas; Chen, Tingjian; Dai, Nan; Foster, Jeremy M.; Corra, Ivan R.; Romesberg, Floyd E. (2014-05-15). "A semi-synthetic organism with an expanded genetic alphabet". Nature. 509 (7500): 385388. doi:10.1038/nature13314. ISSN0028-0836. PMC4058825. PMID24805238.
+^ Thyer, Ross; Ellefson, Jared (2014-05-15). "Synthetic biology: New letters for life's alphabet". Nature. 509 (7500): 291292. doi:10.1038/nature13335. ISSN0028-0836.
+^ Alberts B, Johnson A, Lewis J, et al. (2002). "8". Isolating, Cloning, and Sequencing DNA. (4th ed.). New York: Garland Science.
+^ Kaufman, R I; Nixon, B T (1996). "Use of PCR to isolate genes encoding sigma54-dependent activators from diverse bacteria". J Bacteriol. 178 (13): 39673970. PMC232662. PMID8682806.
+^ Liang, Jing; Luo, Yunzi; Zhao, Huimin (2011). "Synthetic biology: Putting synthesis into biology". Wiley Interdisciplinary Reviews: Systems Biology and Medicine. 3: 720. doi:10.1002/wsbm.104.
+^ Berg, P.; Mertz, J. E. (2010). "Personal Reflections on the Origins and Emergence of Recombinant DNA Technology". Genetics. 184 (1): 917. doi:10.1534/genetics.109.112144. PMC2815933. PMID20061565.
+^ Townsend JA, Wright DA, Winfrey RJ, et al. (May 2009). "High-frequency modification of plant genes using engineered zinc-finger nucleases". Nature. 459 (7245): 4425. Bibcode:2009Natur.459..442T. doi:10.1038/nature07845. PMC2743854. PMID19404258.
+^ Shukla VK, Doyon Y, Miller JC, et al. (May 2009). "Precise genome modification in the crop species Zea mays using zinc-finger nucleases". Nature. 459 (7245): 43741. Bibcode:2009Natur.459..437S. doi:10.1038/nature07992. PMID19404259.
+^ Grizot S, Smith J, Daboussi F, et al. (September 2009). "Efficient targeting of a SCID gene by an engineered single-chain homing endonuclease". Nucleic Acids Res. 37 (16): 540519. doi:10.1093/nar/gkp548. PMC2760784. PMID19584299.
+^ Gao H, Smith J, Yang M, et al. (January 2010). "Heritable targeted mutagenesis in maize using a designed endonuclease". Plant J. 61 (1): 17687. doi:10.1111/j.1365-313X.2009.04041.x. PMID19811621.
+^ Christian M, Cermak T, Doyle EL, et al. (July 2010). "TAL Effector Nucleases Create Targeted DNA Double-strand Breaks". Genetics. 186 (2): 75761. doi:10.1534/genetics.110.120717. PMC2942870. PMID20660643.
+^ Li T, Huang S, Jiang WZ, et al. (August 2010). "TAL nucleases (TALNs): hybrid proteins composed of TAL effectors and FokI DNA-cleavage domain". Nucleic Acids Res. 39 (1): 35972. doi:10.1093/nar/gkq704. PMC3017587. PMID20699274.
+^ Ekker, S.C. (2008). "Zinc finger-based knockout punches for zebrafish genes". Zebrafish. 5 (2): 11213. doi:10.1089/zeb.2008.9988. PMC2849655. PMID18554175.
+^ Geurts AM, Cost GJ, Freyvert Y, et al. (July 2009). "Knockout rats via embryo microinjection of zinc-finger nucleases". Science. 325 (5939): 433. Bibcode:2009Sci...325..433G. doi:10.1126/science.1172447. PMC2831805. PMID19628861.
+^ Chen, I; Dubnau, D (2004). "DNA uptake during bacterial transformation". Nat. Rev. Microbiol. 2 (3): 2419. doi:10.1038/nrmicro844. PMID15083159.
+^ Head, Graham; Hull, Roger H; Tzotzos, George T. (2009). Genetically Modified Plants: Assessing Safety and Managing Risk. London: Academic Pr. p.244. ISBN0-12-374106-8.
+^ Gelvin, S. B. (2003). "Agrobacterium-Mediated Plant Transformation: The Biology behind the "Gene-Jockeying" Tool". Microbiology and Molecular Biology Reviews. 67 (1): 1637, table of contents. doi:10.1128/MMBR.67.1.16-37.2003. PMC150518. PMID12626681.
+^ Darbani, Behrooz; Farajnia, Safar; Toorchi, Mahmoud; Zakerbostanabad, Saeed; Noeparvar, Shahin; Stewart, Jr., C. Neal (2010). "DNA-Delivery Methods to Produce Transgenic Plants". Science Alert.
+^ Hohn, Barbara; Levy, Avraham A; Puchta, Holger (2001). "Elimination of selection markers from transgenic plants". Current Opinion in Biotechnology. 12 (2): 13943. doi:10.1016/S0958-1669(00)00188-9. PMID11287227.
+^ Esvelt, KM.; Wang, HH. (2013). "Genome-scale engineering for systems and synthetic biology". Mol Syst Biol. 9: 641. doi:10.1038/msb.2012.66. PMC3564264. PMID23340847.
+^ Tan, WS.; Carlson, DF.; Walton, MW.; Fahrenkrug, SC.; Hackett, PB. (2012). "Precision editing of large animal genomes". Adv Genet. Advances in Genetics. 80: 3797. doi:10.1016/B978-0-12-404742-6.00002-8. ISBN9780124047426. PMC3683964. PMID23084873.
+^ "Natural Genetic Engineering and Natural Genome Editing". Annals of the New York Academy of Sciences. 1178. 2009.
+^ Avise, John C. (2004). The hope, hype & reality of genetic engineering: remarkable stories from agriculture, industry, medicine, and the environment. Oxford University Press US. p.22. ISBN978-0-19-516950-8.
+^ "Engineering algae to make complex anti-cancer 'designer' drug". PhysOrg. 10 December 2012. Retrieved 15 April 2013.
+^ =Roque, AC; Lowe, CR; Taipa, MA. (2004). "Antibodies and genetically engineered related molecules: production and purification". Biotechnol Proress. 20 (3): 63954. doi:10.1021/bp030070k. PMID15176864.
+^ Rodriguez, Luis L.; Grubman, Marvin J. (2009). "Foot and mouth disease virus vaccines". Vaccine. 27: D904. doi:10.1016/j.vaccine.2009.08.039. PMID19837296.
+^ "Background: Cloned and Genetically Modified Animals". Center for Genetics and Society. 14 April 2005.
+^ "Knockout Mice". Nation Human Genome Research Institute. 2009.
+^ "GM pigs best bet for organ transplant". Medical News Today. 21 September 2003.
+^ Fischer, Alain; Hacein-Bey-Abina, Salima; Cavazzana-Calvo, Marina (2010). "20 years of gene therapy for SCID". Nature Immunology. 11 (6): 45760. doi:10.1038/ni0610-457. PMID20485269.
+^ Ledford, Heidi (2011). "Cell therapy fights leukaemia". Nature. doi:10.1038/news.2011.472.
+^ Lewitt, Peter A; Rezai, Ali R; Leehey, Maureen A; Ojemann, Steven G; Flaherty, Alice W; Eskandar, Emad N; Kostyk, Sandra K; Thomas, Karen; Sarkar, Atom; Siddiqui, Mustafa S; Tatter, Stephen B; Schwalb, Jason M; Poston, Kathleen L; Henderson, Jaimie M; Kurlan, Roger M; Richard, Irene H; Van Meter, Lori; Sapan, Christine V; During, Matthew J; Kaplitt, Michael G; Feigin, Andrew (2011). "AAV2-GAD gene therapy for advanced Parkinson's disease: A double-blind, sham-surgery controlled, randomised trial". The Lancet Neurology. 10 (4): 30919. doi:10.1016/S1474-4422(11)70039-4. PMID21419704.
+^ Gallagher, James. (2 November 2012) BBC News  Gene therapy: Glybera approved by European Commission. Bbc.co.uk. Retrieved on 15 December 2012.
+^ Richards, Sabrina. "Gene Therapy Arrives in Europe". The Scientist. Retrieved 16 November 2012.
+^ "1990 The Declaration of Inuyama". 5 August 2001.
+^ Smith KR, Chan S, Harris J. Human germline genetic modification: scientific and bioethical perspectives. Arch Med Res. 2012 Oct;43(7):491-513. doi: 10.1016/j.arcmed.2012.09.003. PMID 23072719
+^ Wade, Nicholas (19 March 2015). "Scientists Seek Ban on Method of Editing the Human Genome". New York Times. Retrieved 20 March 2015.
+^ Pollack, Andrew (3 March 2015). "A Powerful New Way to Edit DNA". New York Times. Retrieved 20 March 2015.
+^ Baltimore, David; Berg, Paul; Botchan, Dana; Charo, R. Alta; Church, George; Corn, Jacob E.; Daley, George Q.; Doudna, Jennifer A.; Fenner, Marsha; Greely, Henry T.; Jinek, Martin; Martin, G. Steven; Penhoet, Edward; Puck, Jennifer; Sternberg, Samuel H.; Weissman, Jonathan S.; Yamamoto, Keith R. (19 March 2015). "A prudent path forward for genomic engineering and germline gene modification". Science. 348: 368. doi:10.1126/science.aab1028. PMC4394183. PMID25791083. Retrieved 20 March 2015.
+^ Lanphier, Edward; Urnov, Fyodor; Haecker, Sarah Ehlen; Werner, Michael; Smolenski, Joanna (26 March 2015). "Don't edit the human germ line". Nature. 519: 410411. doi:10.1038/519410a. PMID25810189. Retrieved 20 March 2015.
+^ Kolata, Gina (23 April 2015). "Chinese Scientists Edit Genes of Human Embryos, Raising Concerns". New York Times. Retrieved 24 April 2015.
+^ Liang, Puping; et al. (18 April 2015). "CRISPR/Cas9-mediated gene editing in human tripronuclear zygotes". Protein & Cell. 6: 36372. doi:10.1007/s13238-015-0153-5. PMC4417674. PMID25894090. Retrieved 24 April 2015.
+^ Wade, Nicholas (3 December 2015). "Scientists Place Moratorium on Edits to Human Genome That Could Be Inherited". New York Times. Retrieved 3 December 2015.
+^ Bergeson, Emilie R. (1997). "The Ethics of Gene Therapy".
+^ Hanna, Kathi E. "Genetic Enhancement". National Human Genome Research Institute.
+^ "Applications of Genetic Engineering". Microbiologyprocedure. Retrieved 9 July 2010.
+^ "Biotech: What are transgenic organisms?". Easyscience. 2002. Retrieved 9 July 2010.
+^ Savage, Neil (1 August 2007). "Making Gasoline from Bacteria: A biotech startup wants to coax fuels from engineered microbes". Technology Review. Retrieved 16 July 2015.
+^ Summers, Rebecca (24 April 2013) Bacteria churn out first ever petrol-like biofuel New Scientist, Retrieved 27 April 2013
+^ "Applications of Some Genetically Engineered Bacteria". Retrieved 9 July 2010.
+^ Sanderson, Katherine (24 February 2012) New Portable Kit Detects Arsenic In Wells Chemical and Engineering News, Retrieved 23 January 2013
+^ Reece, Jane B.; Urry, Lisa A.; Cain, Michael L.; Wasserman, Steven A.; Minorsky, Peter V.; Jackson, Robert B. (2011). Campbell Biology Ninth Edition. San Francisco: Pearson Benjamin Cummings. p.421. ISBN0-321-55823-5.
+^ "New virus-built battery could power cars, electronic devices". Web.mit.edu. 2 April 2009. Retrieved 17 July 2010.
+^ "Hidden Ingredient In New, Greener Battery: A Virus". Npr.org. Retrieved 17 July 2010.
+^ "Researchers Synchronize Blinking 'Genetic Clocks' -- Genetically Engineered Bacteria That Keep Track of Time". ScienceDaily. 24 January 2010.
+^ Suszkiw, Jan (November 1999). "Tifton, Georgia: A Peanut Pest Showdown". Agricultural Research magazine. Retrieved 23 November 2008.
+^ Magaa-Gmez, JA; de la Barca, A.M. (2009). "Risk assessment of genetically modified crops for nutrition and health". Nutr. Rev. 67 (1): 116. doi:10.1111/j.1753-4887.2008.00130.x. PMID19146501.
+^ Islam, Aparna (2008). "Fungus Resistant Transgenic Plants: Strategies, Progress and Lessons Learnt". Plant Tissue Culture and Biotechnology. 16 (2): 11738. doi:10.3329/ptcb.v16i2.1113.
+^ "Disease resistant crops". GMO Compass.
+^ Demont, M; Tollens, E (2004). "First impact of biotechnology in the EU: Bt maize adoption in Spain". Annals of Applied Biology. 145 (2): 197207. doi:10.1111/j.1744-7348.2004.tb00376.x.
+^ a b Whitman, Deborah B. (2000). "Genetically Modified Foods: Harmful or Helpful?".
+^ Young, Emma (2003). "GM cows to please cheese-makers". New Scientist.
+^ Rapeseed (canola) has been genetically engineered to modify its oil content with a gene encoding a "12:0 thioesterase" (TE) enzyme from the California bay plant (Umbellularia californica) to increase medium length fatty acids, see: Geo-pie.cornell.edu
+^ Bomgardner Melody M (2012). "Replacing Trans Fat: New crops from Dow Chemical and DuPont target food makers looking for stable, heart-healthy oils". Chemical and Engineering News. 90 (11): 3032.
+^ Marvier, Michelle (2008). "Pharmaceutical crops in California, benefits and risks. A review". Agronomy for Sustainable Development. 28 (1): 19. doi:10.1051/agro:2007050.
+^ "FDA Approves First Human Biologic Produced by GE Animals". US Food and Drug Administration.
+^ Reblo, Paulo (15 July 2004). "GM cow milk 'could provide treatment for blood disease'". SciDev.
+^ Pollack, Andrew (19 November 2015). "Genetically Engineered Salmon Approved for Consumption". The New York Times. Retrieved 21 April 2016.
+^ "Giant GM salmon on the way". BBC News. 11 April 2000.
+^ a b Chivian, Eric; Bernstein, Aaron (2008). Sustaining Life. Oxford University Press, Inc. ISBN978-0-19-517509-7.
+^ Carrington, Damien (13 June 2012) GM crops good for environment, study finds The Guardian. Retrieved 16 June 2012
+^ Nicolia, Alessandro; Manzo, Alberto; Veronesi, Fabio; Rosellini, Daniele (2013). "An overview of the last 10 years of genetically engineered crop safety research" (PDF). Critical Reviews in Biotechnology: 112. doi:10.3109/07388551.2013.823595. We have reviewed the scientific literature on GE crop safety for the last 10 years that catches the scientific consensus matured since GE plants became widely cultivated worldwide, and we can conclude that the scientific research conducted so far has not detected any significant hazard directly connected with the use of GM crops.
+The literature about Biodiversity and the GE food/feed consumption has sometimes resulted in animated debate regarding the suitability of the experimental designs, the choice of the statistical methods or the public accessibility of data. Such debate, even if positive and part of the natural process of review by the scientific community, has frequently been distorted by the media and often used politically and inappropriately in anti-GE crops campaigns.
+^ "State of Food and Agriculture 20032004. Agricultural Biotechnology: Meeting the Needs of the Poor. Health and environmental impacts of transgenic crops". Food and Agriculture Organization of the United Nations. Retrieved February 8, 2016. Currently available transgenic crops and foods derived from them have been judged safe to eat and the methods used to test their safety have been deemed appropriate. These conclusions represent the consensus of the scientific evidence surveyed by the ICSU (2003) and they are consistent with the views of the World Health Organization (WHO, 2002). These foods have been assessed for increased risks to human health by several national regulatory authorities (inter alia, Argentina, Brazil, Canada, China, the United Kingdom and the United States) using their national food safety procedures (ICSU). To date no verifiable untoward toxic or nutritionally deleterious effects resulting from the consumption of foods derived from genetically modified crops have been discovered anywhere in the world (GM Science Review Panel). Many millions of people have consumed foods derived from GM plants - mainly maize, soybean and oilseed rape - without any observed adverse effects (ICSU).
+^ Ronald, Pamela (May 5, 2011). "Plant Genetics, Sustainable Agriculture and Global Food Security". Genetics. 188: 1120. doi:10.1534/genetics.111.128553. There is broad scientific consensus that genetically engineered crops currently on the market are safe to eat. After 14 years of cultivation and a cumulative total of 2 billion acres planted, no adverse health or environmental effects have resulted from commercialization of genetically engineered crops (Board on Agriculture and Natural Resources, Committee on Environmental Impacts Associated with Commercialization of Transgenic Plants, National Research Council and Division on Earth and Life Studies 2002). Both the U.S. National Research Council and the Joint Research Centre (the European Union's scientific and technical research laboratory and an integral part of the European Commission) have concluded that there is a comprehensive body of knowledge that adequately addresses the food safety issue of genetically engineered crops (Committee on Identifying and Assessing Unintended Effects of Genetically Engineered Foods on Human Health and National Research Council 2004; European Commission Joint Research Centre 2008). These and other recent reports conclude that the processes of genetic engineering and conventional breeding are no different in terms of unintended consequences to human health and the environment (European Commission Directorate-General for Research and Innovation 2010).
+^ But see also:
+Domingo, Jos L.; Bordonaba, Jordi Gin (2011). "A literature review on the safety assessment of genetically modified plants" (PDF). Environment International. 37: 734742. doi:10.1016/j.envint.2011.01.003. In spite of this, the number of studies specifically focused on safety assessment of GM plants is still limited. However, it is important to remark that for the first time, a certain equilibrium in the number of research groups suggesting, on the basis of their studies, that a number of varieties of GM products (mainly maize and soybeans) are as safe and nutritious as the respective conventional non-GM plant, and those raising still serious concerns, was observed. Moreover, it is worth mentioning that most of the studies demonstrating that GM foods are as nutritional and safe as those obtained by conventional breeding, have been performed by biotechnology companies or associates, which are also responsible of commercializing these GM plants. Anyhow, this represents a notable advance in comparison with the lack of studies published in recent years in scientific journals by those companies.
+Krimsky, Sheldon (2015). "An Illusory Consensus behind GMO Health Assessment" (PDF). Science, Technology, & Human Values: 132. doi:10.1177/0162243915598381. I began this article with the testimonials from respected scientists that there is literally no scientific controversy over the health effects of GMOs. My investigation into the scientific literature tells another story.
+And contrast:
+Panchin, Alexander Y.; Tuzhikov, Alexander I. (January 14, 2016). "Published GMO studies find no evidence of harm when corrected for multiple comparisons". Critical Reviews in Biotechnology. doi:10.3109/07388551.2015.1130684. ISSN0738-8551. Here, we show that a number of articles some of which have strongly and negatively influenced the public opinion on GM crops and even provoked political actions, such as GMO embargo, share common flaws in the statistical evaluation of the data. Having accounted for these flaws, we conclude that the data presented in these articles does not provide any substantial evidence of GMO harm.
+The presented articles suggesting possible harm of GMOs received high public attention. However, despite their claims, they actually weaken the evidence for the harm and lack of substantial equivalency of studied GMOs. We emphasize that with over 1783 published articles on GMOs over the last 10 years it is expected that some of them should have reported undesired differences between GMOs and conventional crops even if no such differences exist in reality.
+and
+Yang, Y.T.; Chen, B. (2016). "Governing GMOs in the USA: science, law and public health". Journal of the Science of Food and Agriculture. 96: 18511855. doi:10.1002/jsfa.7523. It is therefore not surprising that efforts to require labeling and to ban GMOs have been a growing political issue in the USA (citing Domingo and Bordonaba, 2011).
+Overall, a broad scientific consensus holds that currently marketed GM food poses no greater risk than conventional food... Major national and international science and medical associations have stated that no adverse human health effects related to GMO food have been reported or substantiated in peer-reviewed literature to date.
+Despite various concerns, today, the American Association for the Advancement of Science, the World Health Organization, and many independent international science organizations agree that GMOs are just as safe as other foods. Compared with conventional breeding techniques, genetic engineering is far more precise and, in most cases, less likely to create an unexpected outcome.
+^ "Statement by the AAAS Board of Directors On Labeling of Genetically Modified Foods" (PDF). American Association for the Advancement of Science. October 20, 2012. Retrieved February 8, 2016. The EU, for example, has invested more than 300 million in research on the biosafety of GMOs. Its recent report states: "The main conclusion to be drawn from the efforts of more than 130 research projects, covering a period of more than 25 years of research and involving more than 500 independent research groups, is that biotechnology, and in particular GMOs, are not per se more risky than e.g. conventional plant breeding technologies." The World Health Organization, the American Medical Association, the U.S. National Academy of Sciences, the British Royal Society, and every other respected organization that has examined the evidence has come to the same conclusion: consuming foods containing ingredients derived from GM crops is no riskier than consuming the same foods containing ingredients from crop plants modified by conventional plant improvement techniques.
+Pinholster, Ginger (October 25, 2012). "AAAS Board of Directors: Legally Mandating GM Food Labels Could "Mislead and Falsely Alarm Consumers"". American Association for the Advancement of Science. Retrieved February 8, 2016.
+^ "A decade of EU-funded GMO research (20012010)" (PDF). Directorate-General for Research and Innovation. Biotechnologies, Agriculture, Food. European Commission, European Union. 2010. doi:10.2777/97784. ISBN978-92-79-16344-9. Retrieved February 8, 2016.
+^ "AMA Report on Genetically Modified Crops and Foods (online summary)". American Medical Association. January 2001. Retrieved March 19, 2016. A report issued by the scientific council of the American Medical Association (AMA) says that no long-term health effects have been detected from the use of transgenic crops and genetically modified foods, and that these foods are substantially equivalent to their conventional counterparts. (from online summary prepared by ISAAA)" "Crops and foods produced using recombinant DNA techniques have been available for fewer than 10 years and no long-term effects have been detected to date. These foods are substantially equivalent to their conventional counterparts. (from original report by AMA: [3])
+"REPORT 2 OF THE COUNCIL ON SCIENCE AND PUBLIC HEALTH (A-12): Labeling of Bioengineered Foods" (PDF). American Medical Association. 2012. Retrieved March 19, 2016. Bioengineered foods have been consumed for close to 20 years, and during that time, no overt consequences on human health have been reported and/or substantiated in the peer-reviewed literature.
+^ "Restrictions on Genetically Modified Organisms: United States. Public and Scholarly Opinion". Library of Congress. June 9, 2015. Retrieved February 8, 2016. Several scientific organizations in the US have issued studies or statements regarding the safety of GMOs indicating that there is no evidence that GMOs present unique safety risks compared to conventionally bred products. These include the National Research Council, the American Association for the Advancement of Science, and the American Medical Association. Groups in the US opposed to GMOs include some environmental organizations, organic farming organizations, and consumer organizations. A substantial number of legal academics have criticized the US's approach to regulating GMOs.
+^ "Genetically Engineered Crops: Experiences and Prospects". The National Academies of Sciences, Engineering, and Medicine (US). 2016. p.149. Retrieved May 19, 2016. Overall finding on purported adverse effects on human health of foods derived from GE crops: On the basis of detailed examination of comparisons of currently commercialized GE with non-GE foods in compositional analysis, acute and chronic animal toxicity tests, long-term data on health of livestock fed GE foods, and human epidemiological data, the committee found no differences that implicate a higher risk to human health from GE foods than from their non-GE counterparts.
+^ "Frequently asked questions on genetically modified foods". World Health Organization. Retrieved February 8, 2016. Different GM organisms include different genes inserted in different ways. This means that individual GM foods and their safety should be assessed on a case-by-case basis and that it is not possible to make general statements on the safety of all GM foods.
+GM foods currently available on the international market have passed safety assessments and are not likely to present risks for human health. In addition, no effects on human health have been shown as a result of the consumption of such foods by the general population in the countries where they have been approved. Continuous application of safety assessments based on the Codex Alimentarius principles and, where appropriate, adequate post market monitoring, should form the basis for ensuring the safety of GM foods.
+^ Haslberger, Alexander G. (2003). "Codex guidelines for GM foods include the analysis of unintended effects". Nature Biotechnolgy. 21: 739741. doi:10.1038/nbt0703-739. These principles dictate a case-by-case premarket assessment that includes an evaluation of both direct and unintended effects.
+^ Some medical organizations, including the British Medical Association, advocate further caution based upon the precautionary principle:
+"Genetically modified foods and health: a second interim statement" (PDF). British Medical Association. March 2004. Retrieved March 21, 2016. In our view, the potential for GM foods to cause harmful health effects is very small and many of the concerns expressed apply with equal vigour to conventionally derived foods. However, safety concerns cannot, as yet, be dismissed completely on the basis of information currently available.
+When seeking to optimise the balance between benefits and risks, it is prudent to err on the side of caution and, above all, learn from accumulating knowledge and experience. Any new technology such as genetic modification must be examined for possible benefits and risks to human health and the environment. As with all novel foods, safety assessments in relation to GM foods must be made on a case-by-case basis.
+Members of the GM jury project were briefed on various aspects of genetic modification by a diverse group of acknowledged experts in the relevant subjects. The GM jury reached the conclusion that the sale of GM foods currently available should be halted and the moratorium on commercial growth of GM crops should be continued. These conclusions were based on the precautionary principle and lack of evidence of any benefit. The Jury expressed concern over the impact of GM crops on farming, the environment, food safety and other potential health effects.
+The Royal Society review (2002) concluded that the risks to human health associated with the use of specific viral DNA sequences in GM plants are negligible, and while calling for caution in the introduction of potential allergens into food crops, stressed the absence of evidence that commercially available GM foods cause clinical allergic manifestations. The BMA shares the view that that there is no robust evidence to prove that GM foods are unsafe but we endorse the call for further research and surveillance to provide convincing evidence of safety and benefit.
+^ Funk, Cary; Rainie, Lee (January 29, 2015). "Public and Scientists' Views on Science and Society". Pew Research Center. Retrieved February 24, 2016. The largest differences between the public and the AAAS scientists are found in beliefs about the safety of eating genetically modified (GM) foods. Nearly nine-in-ten (88%) scientists say it is generally safe to eat GM foods compared with 37% of the general public, a difference of 51 percentage points.
+^ Marris, Claire (2001). "Public views on GMOs: deconstructing the myths" (PDF). EMBO Reports. 2: 545548. doi:10.1093/embo-reports/kve142.
+^ Final Report of the PABE research project (December 2001). "Public Perceptions of Agricultural Biotechnologies in Europe". Commission of European Communities. Retrieved February 24, 2016.
+^ Scott, Sydney E.; Inbar, Yoel; Rozin, Paul (2016). "Evidence for Absolute Moral Opposition to Genetically Modified Food in the United States" (PDF). Perspectives on Psychological Science. 11 (3): 315324. doi:10.1177/1745691615621275.
+^ "Restrictions on Genetically Modified Organisms". Library of Congress. June 9, 2015. Retrieved February 24, 2016.
+^ Bashshur, Ramona (February 2013). "FDA and Regulation of GMOs". American Bar Association. Retrieved February 24, 2016.
+^ Sifferlin, Alexandra (October 3, 2015). "Over Half of E.U. Countries Are Opting Out of GMOs". Time.
+^ Lynch, Diahanna; Vogel, David (April 5, 2001). "The Regulation of GMOs in Europe and the United States: A Case-Study of Contemporary European Regulatory Politics". Council on Foreign Relations. Retrieved February 24, 2016.
+^ "Can GM crops harm the environment?". National Environment Research Council (NERC).
+^ Angulo, E.; Cooke, B. (2002). "First synthesize new viruses then regulate their release? The case of the wild rabbit". Molecular Ecology. 11: 27039. doi:10.1046/j.1365-294X.2002.01635.x. PMID12453252.
+^ Adams; et al. (2 August 2002). "The Case for Genetic Engineering of Native and Landscape Trees against Introduced Pests and Diseases". Conservation Biology. 16: 874879. doi:10.1046/j.1523-1739.2002.00523.x. Retrieved 16 May 2016.
+^ Thomas; et al. (25 September 2013). "Ecology: Gene tweaking for conservation". Nature. 501: 4856. doi:10.1038/501485a. PMID24073449. Retrieved 16 May 2016.
+^ Pasko, Jessica M. (2007-03-04). "Bio-artists bridge gap between arts, sciences: Use of living organisms is attracting attention and controversy". msnbc.
+^ Jackson, Joab (6 December 2005). "Genetically Modified Bacteria Produce Living Photographs". National Geographic News.
+^ Phys.Org website. 4 April 2005 "Plant gene replacement results in the world's only blue rose".
+^ Katsumoto, Yukihisa; Fukuchi-Mizutani, Masako; Fukui, Yuko; Brugliera, Filippa; Holton, Timothy A.; Karan, Mirko; Nakamura, Noriko; Yonekura-Sakakibara, Keiko; Togami, Junichi; Pigeaire, Alix; Tao, Guo-Qing; Nehra, Narender S.; Lu, Chin-Yi; Dyson, Barry K.; Tsuda, Shinzo; Ashikari, Toshihiko; Kusumi, Takaaki; Mason, John G.; Tanaka, Yoshikazu (2007). "Engineering of the Rose Flavonoid Biosynthetic Pathway Successfully Generated Blue-Hued Flowers Accumulating Delphinidin". Plant and Cell Physiology. 48 (11): 1589600. doi:10.1093/pcp/pcm131. PMID17925311.
+^ Published PCT Application WO2000049150 "Chimeric Gene Constructs for Generation of Fluorescent Transgenic Ornamental Fish." National University of Singapore [4]
+^ Stewart, C. Neal (2006). "Go with the glow: Fluorescent proteins to light transgenic organisms". Trends in Biotechnology. 24 (4): 15562. doi:10.1016/j.tibtech.2006.02.002. PMID16488034.
+^ WHO (1987): Principles for the Safety Assessment of Food Additives and Contaminants in Food, Environmental Health Criteria 70. World Health Organization, Geneva
+^ WHO (1991): Strategies for assessing the safety of foods produced by biotechnology, Report of a Joint FAO/WHO Consultation. World Health Organization, Geneva ISBN 9789241561457. PDF download library.health.go.ug/download/file/fid/790 here]
+^ WHO (1993): Health aspects of marker genes in genetically modified plants, Report of a WHO Workshop. World Health Organization, Geneva
+^ WHO (1995): Application of the principle of substantial equivalence to the safety evaluation of foods or food components from plants derived by modern biotechnology, Report of a WHO Workshop. World Health Organization, Geneva
+Further reading[edit]
+British Medical Association (1999). The Impact of Genetic Modification on Agriculture, Food and Health. BMJ Books. ISBN0-7279-1431-6.
+Donnellan, Craig (2004). Genetic Modification (Issues). Independence Educational Publishers. ISBN1-86168-288-3.
+Morgan, Sally (1 January 2009). Superfoods: Genetic Modification of Foods. Heinemann Library. ISBN978-1-4329-2455-3.
+Smiley, Sophie (2005). Genetic Modification: Study Guide (Exploring the Issues). Independence Educational Publishers. ISBN1-86168-307-3.
+James D., Watson (2007). Recombinant DNA: Genes and Genomes: A Short Course. San Francisco: W.H. Freeman. ISBN0-7167-2866-4.
+Weaver, Sean; Michael, Morris (2003). "An Annotated Bibliography of Scientific Publications on the Risks Associated with Genetic Modification". Wellington, N.Z.: Victoria University
+Zaid, A; Hughes, H.G.; Porceddu, E.; Nicholas, F. (2001). Glossary of Biotechnology for Food and Agriculture - A Revised and Augmented Edition of the Glossary of Biotechnology and Genetic Engineering. Rome, Italy: FAO. ISBN92-5-104683-2.
+External links[edit]
+Library resources about
+Genetic engineering
+Resources in your library
+Resources in other libraries
+Wikimedia Commons has media related to Genetic engineering.
+At Wikiversity, you can learn more and teach others about Genetic engineering at the Department of Genetic engineering
+GMO Safety - Information about research projects on the biological safety of genetically modified plants.
+GMO-compass, news on GMO en EU
+Biotechnology portal
+Molecular and cellular biology portal
+v
+t
+e
+Genetic engineering
+Genetically
+modified
+organisms
+Crops
+Maize
+MON 810
+MON 863
+StarLink
+List of varieties of genetically modified maize
+Potato
+Amflora
+Rice
+Golden rice
+Soybean
+Roundup ready soybean
+Vistive Gold
+Tomato
+Flavr Savr
+Cotton
+Bt cotton
+Other
+Apple
+Arabidopsis
+Brinjal
+Canola
+Papaya
+Rose
+SmartStax
+Sugar beet
+Tobacco
+Trees
+Wheat
+Mammals
+Mouse
+Knockout mouse
+Oncomouse
+Enviropig
+Herman the Bull
+Knockout rat
+Other animals
+Insects
+Fish
+Glofish
+Salmon
+Bacteria
+and viruses
+Ice-minus bacteria
+Hepatitis B vaccine
+Oncolytic virus
+Processes
+Inserting DNA
+Agrobacteria
+Biolistics
+Electroporation
+Genetic transduction
+Lipofection
+Microinjection
+Transfection
+Types
+Recombinant DNA
+Transgenesis
+Cisgenesis
+Uses
+In agriculture
+Genetically modified food
+Controversies
+Pharming
+Companies
+BASF
+Bayer
+Dow AgroSciences
+DuPont Pioneer
+Monsanto
+Syngenta
+In humans and
+diagnostics
+Gene therapy
+Genetic enhancement
+In research
+Gene knockout
+Gene knockdown
+Gene targeting
+Related
+articles
+Transgene
+Detection of genetically modified organisms
+Genetic pollution
+Genetic engineering in fiction
+Human enhancement
+Reverse transfection
+Transhumanism
+Regulation
+Regulation of the release of GMOs
+Regulation of GMOs in the European Union
+Regulation of GMOs in Switzerland
+Cartagena Protocol on Biosafety
+Geography
+US
+Hawaii
+New Zealand
+Europe
+Similar fields
+Synthetic biology
+Cloning
+Stem cell research
+Biology
+Genetics
+Biotechnology
+Bioethics
+v
+t
+e
+Engineering
+Civil
+Architectural
+Construction
+Earthquake
+Hydraulic
+Mining
+Structural
+Geotechnical
+Transportation
+Environmental
+Mechanical
+Aerospace
+Acoustical
+Automotive
+Marine
+Mechatronics
+Railway
+Electrical
+Computer
+Control
+Electronics
+Electromechanics
+Optical
+Power
+Photonics
+Telecommunications
+Radio Frequency
+Chemical
+Biochemical
+Biological
+Molecular
+Nanotechnology
+Process
+Reaction
+Thermodynamics
+Transport phenomena
+Interdisciplinarity
+Audio
+Engineering mathematics
+Biomedical
+Fire
+Industrial
+Materials science
+Robotics
+Military
+Nuclear
+Security
+Systems
+Privacy
+List of engineering branches
+Category:Engineering
+Engineering portal
+v
+t
+e
+Biotechnology
+History
+History of biotechnology
+Timeline of biotechnology
+Competitions and prizes in biotechnology
+Branches
+Blue Biotechnology
+Green Biotechnology
+Red Biotechnology
+White Biotechnology
+Biological concepts
+Allele
+Artificial selection
+Cell
+DNA/RNA
+Fermentation
+Gene
+Plasmid
+Protein
+General concepts
+Biotechnology companies
+Biotechnology industrial park
+Biotechnology products
+Biotechnology law
+Green Revolution
+Human Genome Project
+Pharmaceutical company
+Basic techniques
+and tools
+Biology field
+Bioreactor
+Cell culture
+Flow cytometry
+Hybridoma technology
+HPLC
+NMR
+Spectroscopy
+Chemical field
+Centrifugation
+CSTR
+DSTR
+Crystallization
+Chromatography
+Dialysis
+Electrophoresis
+Extraction
+Fed Batch
+Filtration
+PFR
+Sedimentation
+Applications
+Animal cell culture
+Bioinformatics
+Biosynthesis
+Bionic architecture
+Cell immunity
+Cloning
+Reproductive cloning
+Therapeutic cloning
+Embryology
+Environmental biotechnology
+Genetic engineering
+Genetically modified organisms
+Molecular genetics
+Gene therapy
+Microbial biodegradation
+Omics
+Pharmacogenomics
+Stem cells
+Telomere
+Tissue culture
+Interdisciplinary fields
+Bioeconomy
+Bioelectronics
+Bioengineering
+Biology
+Biopharmacology
+Biomedical engineering
+Biomedicine
+Biomimetics
+Biochemicals
+Biorobotics
+Chemical engineering
+Microbiology
+Mining
+Molecular biology
+Nanobiotechnology
+Virology
+Lists
+Index of biotechnology articles
+List of biotechnology articles
+List of biotechnology companies
+Category
+Commons
+Portal
+v
+t
+e
+Emerging technologies
+Technology
+Fields
+Agriculture
+Agricultural robot
+Closed ecological systems
+Cultured meat
+Genetically modified food
+Precision agriculture
+Vertical farming
+Architecture
+Arcology
+Building printing
+Contour crafting
+D-Shape
+Domed city
+Biomedical
+Artificial uterus
+Ampakine
+Brain transplant
+Cryonics
+Cryoprotectant
+Cryopreservation
+Vitrification
+Suspended animation
+De-extinction
+Genetic engineering
+Gene therapy
+Head transplant
+Isolated brain
+Life extension
+Strategies for Engineered Negligible Senescence
+Nanomedicine
+Nanosensors
+Personalized medicine
+Regenerative medicine
+Stem-cell therapy
+Tissue engineering
+Robot-assisted surgery
+Synthetic biology
+Synthetic genomics
+Virotherapy
+Oncolytic virus
+Tricorder
+Whole genome sequencing
+Displays
+Next generation
+FED
+FLCD
+iMoD
+Laser
+LPD
+OLED
+OLET
+QD-LED
+SED
+TPD
+TDEL
+TMOS
+Screenless
+Bionic contact lens
+Head-mounted display
+Head-up display
+Optical head-mounted display
+Virtual retinal display
+Other
+Autostereoscopy
+Flexible display
+Holographic display
+Computer-generated holography
+Multi-primary color display
+Ultra HD
+Volumetric display
+Electronics
+Electronic nose
+E-textiles
+Flexible electronics
+Molecular electronics
+Nanoelectromechanical systems
+Memristor
+Spintronics
+Thermal copper pillar bump
+Energy
+Production
+Airborne wind turbine
+Artificial photosynthesis
+Biofuels
+Carbon-neutral fuel
+Concentrated solar power
+Fusion power
+Home fuel cell
+Hydrogen economy
+Methanol economy
+Molten salt reactor
+Nantenna
+Photovoltaic pavement
+Space-based solar power
+Vortex engine
+Storage
+Beltway battery
+Compressed air energy storage
+Flywheel energy storage
+Grid energy storage
+Lithiumair battery
+Molten salt battery
+Nanowire battery
+Research in lithium-ion batteries
+Siliconair battery
+Thermal energy storage
+Ultracapacitor
+Other
+Smart grid
+Wireless power
+IT and
+communications
+Ambient intelligence
+Internet of Things
+Artificial intelligence
+Applications of artificial intelligence
+Progress in artificial intelligence
+Machine translation
+Machine vision
+Semantic Web
+Speech recognition
+Atomtronics
+Carbon nanotube field-effect transistor
+Cybermethodology
+Fourth-generation optical discs
+3D optical data storage
+Holographic data storage
+GPGPU
+Memory
+CBRAM
+FRAM
+Millipede
+MRAM
+NRAM
+PRAM
+Racetrack memory
+RRAM
+SONOS
+Optical computing
+Quantum computing
+Quantum cryptography
+RFID
+Chipless RFID
+Software-defined radio
+Three-dimensional integrated circuit
+Manufacturing
+3D printing
+Claytronics
+Molecular assembler
+Utility fog
+Materials science
+Aerogel
+Amorphous metal
+Artificial muscle
+Conductive polymer
+Femtotechnology
+Fullerene
+Graphene
+High-temperature superconductivity
+High-temperature superfluidity
+Linear acetylenic carbon
+Metamaterials
+Metamaterial cloaking
+Metal foam
+Multi-function structures
+Nanotechnology
+Carbon nanotubes
+Molecular nanotechnology
+Nanomaterials
+Picotechnology
+Programmable matter
+Quantum dots
+Silicene
+Superalloy
+Synthetic diamond
+Military
+Antimatter weapon
+Caseless ammunition
+Directed-energy weapon
+Laser
+Maser
+Particle-beam weapon
+Sonic weapon
+Coilgun
+Railgun
+Plasma weapon
+Pure fusion weapon
+Stealth technology
+Vortex ring gun
+Neuroscience
+Artificial brain
+Blue Brain Project
+Braincomputer interface
+Electroencephalography
+Mind uploading
+Brain-reading
+Neuroinformatics
+Neuroprosthetics
+Bionic eye
+Brain implant
+Exocortex
+Retinal implant
+Robotics
+Domotics
+Nanorobotics
+Powered exoskeleton
+Self-reconfiguring modular robot
+Swarm robotics
+Uncrewed vehicle
+Space science
+Launch
+Fusion rocket
+Non-rocket spacelaunch
+Mass driver
+Orbital ring
+Space elevator
+Space fountain
+Space tether
+Reusable launch system
+Propulsion
+Beam-powered propulsion
+Ion thruster
+Laser propulsion
+Plasma propulsion engine
+Helicon thruster
+VASIMR
+Project Orion
+Nuclear pulse propulsion
+Solar sail
+Other
+Interstellar travel
+Propellant depot
+Transport
+Aerial
+Adaptive compliant wing
+Aeroscraft
+Backpack helicopter
+Delivery drone
+Flying car
+High-altitude platform
+Jet pack
+Pulse detonation engine
+Scramjet
+Spaceplane
+Skylon
+Supersonic transport
+Land
+Airless tire
+Tweel
+Alternative fuel vehicle
+Hydrogen vehicle
+Driverless car
+Ground effect train
+Maglev train
+Personal rapid transit
+Vactrain
+ET3 Global Alliance
+Hyperloop
+Vehicular communication systems
+Pipeline
+Pneumatic transport
+Automated vacuum collection
+Foodtubes
+Other
+Anti-gravity
+Cloak of invisibility
+Digital scent technology
+Force field
+Plasma window
+Immersive virtual reality
+VirtuSphere
+Magnetic refrigeration
+Phased-array optics
+Quantum technology
+Quantum teleportation
+Topics
+Collingridge dilemma
+Differential technological development
+Ephemeralization
+Exploratory engineering
+Fictional technology
+Proactionary principle
+Technological change
+Technological unemployment
+Technological convergence
+Technological evolution
+Technological paradigm
+Technology forecasting
+Accelerating change
+Moore's law
+Technological singularity
+Technology scouting
+Technology readiness level
+Technology roadmap
+Transhumanism
+Category
+List
+Authority control
+LCCN: sh85053855
+GND: 4071722-7
+BNF: cb119581948 (data)
+NDL: 00575253
+BNE: XX528379
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Genetic_engineering&oldid=752473277"
+Categories: Genetic engineeringEmerging technologiesBiological engineeringBiotechnologyMolecular biologyEngineering disciplinesHidden categories: All articles with dead external linksArticles with dead external links from November 2015CS1 maint: Uses authors parameterWebarchive template wayback linksPages using ISBN magic linksPages using PMID magic linksWikipedia pending changes protected pages (level 1)Wikipedia indefinitely move-protected pagesUse dmy dates from July 2012All articles with unsourced statementsArticles with unsourced statements from September 2013Articles with inconsistent citation formatsCommons category with page title same as on WikidataWikipedia articles with LCCN identifiersWikipedia articles with GND identifiersWikipedia articles with BNF identifiers
+Navigation menu
+Personal tools
+Not logged inTalkContributionsCreate accountLog in
+Namespaces
+Article
+Talk
+Variants
+Views
+Read
+Edit
+View history
+More
+Search
+Navigation
+Main pageContentsFeatured contentCurrent eventsRandom articleDonate to WikipediaWikipedia store
+Interaction
+HelpAbout WikipediaCommunity portalRecent changesContact page
+Tools
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationWikidata itemCite this page
+Print/export
+Create a bookDownload as PDFPrintable version
+In other projects
+Wikimedia CommonsWikiquote
+Languages
+AfrikaansAzrbaycancaBosanskiBrezhonegCataletinaDanskDeutschEestiEspaolEsperantoEuskaraFranaisGaeilgeGalegoHrvatskiBahasa IndonesiaslenskaItalianoKreyl ayisyenKurdLatinaLatvieuLietuviBahasa MelayuNederlandsNorsk bokmlNorsk nynorskOzbekcha/PatoisPolskiPortugusRomnShqipSicilianuSimple EnglishSlovenina  / srpskiSrpskohrvatski / Basa SundaSuomiSvenskaTagalogTrkeTrkmeneTing VitWinaray
+Edit links
+This page was last modified on 1 December 2016, at 13:04.
+Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.
+By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Developers
+Cookie statement
+Mobile view

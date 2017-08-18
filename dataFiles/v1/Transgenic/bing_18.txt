@@ -1,0 +1,939 @@
+Transgenic Crops: An Introduction and Resource Guide
+FAQs
+What exactly is a transgenic plant?
+A transgenic plant is one that contains a gene or genes which have
+been introduced artificially into the plant's genetic makeup using
+a set of several biotechnology techniques collectively known as
+recombinant DNA (rDNA) technology. DNA spliced to the coding portion
+of the genes that serves to regulate how they function is also transferred
+into the host plant. The inserted genes, called transgenes when
+they are inserted into the new host plant, may come from another
+plant of the same or a different species, or a completely unrelated
+kind of organism like bacteria or animals. Bt corn varieties, for
+example, contain a gene from a bacterium (Bacillus thuringiensis)
+found in the soil that causes the transgenic corn to produce an
+insecticidal protein. The gene being transferred may have its genetic
+code altered to modify its function, in addition to having different
+regulatory sequences spliced on to control how it is expressed (switched
+on or off) in the plant. The process of moving genes from one species
+to another is called transformation.
+Once a transgenic plant is created, the transgenes can be inherited
+along with the rest of the plant's genes through normal mating by
+pollination. The offspring are also transgenic when they acquire
+the transgenes this way. Because of this, plant breeders can take
+a transgenic plant made in the laboratory and use conventional breeding
+methods to develop different transgenic varieties of the crop that
+are adapted for specific uses, all with the new trait provided by
+the introduced genes.
+Transgenic plants are often referred to as genetically engineered
+(GE) plants, or genetically modified (GM) plants, although the latter
+term is not preferred by some who point out that all crop plants
+have been genetically modified from their original wild state by
+domestication, selection and controlled breeding over long periods
+of time. The U.S. Food and Drug Administration uses the term bioengineered
+to describe transgenic crops. The term genetic engineering is sometimes
+used more broadly to describe genetic modifications accomplished
+by more conventional methods, without using recombinant DNA techniques.
+For more information, see our
+page on how transgenic plants are made.
+Why do we want to make transgenic crops?
+Very simply, the primary benefit derived from the ability to use
+genes from other organisms is to increase the amount of genetic
+variability available for breeders to use beyond that accessible
+by conventional breeding methods.
+The goal is to allow plant breeders to produce more useful and
+productive crop varieties by exploiting genes from a wide range
+of living sources, not just those that can be found within the crop
+species itself. Progress in traditional plant breeding is limited
+by the genetic diversity within each crop species, the diversity
+sometimes available from closely related species, or occasionally
+useful diversity created within the crop itself by inducing mutations.
+Often, genes for traits that could be of benefit are not found in
+a particular crop species, so the ability to make plants with new,
+desirable traits borrowed from other species represents a major
+technological advance over conventional breeding methods. The transgenic
+crop varieties made by borrowing genes from other organisms could,
+potentially, be as seemingly ordinary as tomato plants that can
+produce good fruit when grown with saltier irrigation water (a trait
+that might someday be added with much effort using conventional
+methods) or as exotic as banana plants that produce vaccines to
+protect against human illness (novel traits that would be impossible
+to incorporate using traditional methods).
+The methods used to make transgenic plants also allow scientists
+to change crop traits by altering the crop's own genetic code, changing
+the function of the products coded for by genes or changing the
+way genes are expressed (switched on or off). This strategy has
+been used, for example, to modify the way tomato fruits ripen to
+preserve quality.
+In addition to the ability to produce crops with novel traits,
+genetic engineering also offers the promise of making plant breeding
+more efficient or for reducing the time required to make new varieties.
+The ability to insert just one or a few specific genes into varieties
+without also introducing many other genes that might negatively
+affect the quality of crop varieties is often cited as a major benefit
+of using technology to produce transgenic plants. Given the enormous
+investment of time and money spent identifying useful genes, applying
+cloning and transformation techniques, and testing and evaluating
+newly transformed plants, all before conventional crossing to incorporate
+the genetically engineered traits into adapted crop varieties, some
+would argue that we are far from realizing this potential benefit.
+Research using transgenic plants is an extremely valuable and
+powerful tool to help scientists learn about how plants function.
+The knowledge gained from this kind of research can be applied in
+many areas of plant science, not just in the creation of new crop
+varieties with novel traits.
+What genetically engineered crops
+are actually being grown now?
+The most common genetically engineered (GE) crops now being grown
+are transgenic varieties of soybean, canola, cotton, and corn. Varieties
+of each of these crops have been engineered to have either herbicide
+tolerance or insect resistance (or in a few cases, both).
+All of the genetically engineered insect-resistant crop varieties
+produced so far use specific genes taken from Bacillus thuringiensis,
+a common soil bacterium, to produce proteins that are toxic to certain
+groups of insects that feed on them. Currently, only Bt corn and
+Bt cotton varieties are being grown in the U.S., but Bt potatoes
+were on the market for several years until being discontinued in
+2001.
+Several different genetic modifications have been used to engineer
+tolerance to herbicides, the most widely adopted GE trait overall.
+Genetically engineered herbicide tolerant varieties of each of the
+four major crops listed above have been developed for use with glyphosate
+(Roundup) or glufosinate (Liberty) herbicides, and some cotton
+varieties grown in the U.S. have genetically engineered tolerance
+to bromoxynil or sulfonylurea herbicides. Monsanto's Roundup Ready
+soybean varieties are the most widely grown type of genetically
+engineered plant.
+About half of the papaya crop produced in Hawaii is now from genetically
+engineered virus-resistant varieties, but most of the world-wide
+papaya crop is not genetically engineered. There is currently some
+limited production of squash genetically engineered for virus resistance
+in the U.S.
+All together, about 50 different kinds of genetically engineered
+plants (each developed from a unique "transformation event") have
+been approved for commercial production in the U.S. These include
+12 different crops modified to have six general kinds of traits:
+Transgenic trait
+Crops
+Insect resistance
+Corn, Cotton, Potato, Tomato
+Herbicide tolerance
+Corn, Soybean, Cotton, Canola, Sugarbeet, Rice,
+Flax
+Virus resistance
+Papaya, Squash, Potato
+Altered oil composition
+Canola, Soybean
+Delayed fruit ripening
+Tomato
+Male sterility and restorer system (used to facilitate
+plant breeding)
+Chicory, Corn
+Not all of the genetically engineered varieties that have received
+regulatory approval are currently being grown. Some have not yet
+been marketed (herbicide tolerant sugarbeets and most kinds of GE
+tomatoes, for example), and some have been commercially grown but
+were later withdrawn from the market (see Discontinued
+Transgenic Products). More details on the transgenic crops listed
+in the table above and short descriptions of how each of the transgenic
+traits works are available at http://www.comm.cornell.edu/gmo/traits/traits.html.
+The AgBios GMO Database at http://www.agbios.com/dbase.php?action=ShowForm
+is a useful source of information about genetically engineered crops
+that have received or are undergoing regulatory approval in the
+United States and other countries. You can find detailed information
+on how each variety was produced, background information on why
+it was done, and what concerns were addressed during the risk assessments
+for environmental and food safety. Summary statistics and more information
+about world-wide production of genetically engineered crops can
+be found on our Current
+Transgenic Products page.
+Are there really economic benefits for
+farmers growing transgenic crops? I've read they haven't improved
+yields and cost more to plant.
+Many conflicting news stories and reports have appeared concerning
+the economic benefits realized by farmers adopting the major transgenic
+crops. It is true that farmers pay a premium for genetically engineered
+(GE) corn, soybean, and cotton varieties, and these varieties do
+not have increased yield potential per se over the best available
+conventional varieties. The potential economic benefits of the major
+GE crops currently available could result from enhanced protection
+from yield loss due to pests, increased efficiency in the production
+system, or both. Actual benefits appear to vary with a number of
+factors including the particular crop grown, the transgenic trait
+in the crop (herbicide tolerance or Bt-derived insect resistance),
+the region where the crops are grown, the type of farm operation
+adopting the technology, production factors (particularly actual
+pest pressures) that can vary from year to year and from farm to
+farm, and the current premium paid for the transgenic seed.
+Different methods used to analyze or summarize the limited data
+available for these diverse situations can lead to very different
+interpretations. The Economic Research Service of the USDA has issued
+reports attempting to take these factors into consideration, but
+their analyses do not yet include data for the most recent production
+years. While particular cases may vary, some of the general conclusions
+of the studies are:
+GE herbicide-tolerant cotton and GE herbicide-tolerant corn
+both have had positive economic impacts on farms overall.
+GE herbicide-tolerant soybeans have not had a positive economic
+impact overall, but adoption was "quite" profitable for some farms.
+Bt cotton had a positive economic impact on farms overall.
+Bt corn had a negative economic impact on farms overall.
+While these generalizations may provide a reasonably unbiased "simple
+answer" to the question, please refer to the original reports listed
+below for a discussion of the factors influencing the calculated impacts,
+and for an analysis of how these findings relate to the adoption of
+GE crops by U.S. farmers. For example, even though the analysis showed
+GE soybeans increased net returns only for some farmers, but not GE
+soybean growers overall, GE soybean plantings have increased each
+year from their introduction to an estimated 75% of the U.S. crop
+in 2002. It has been suggested that other benefits recognized by farmers
+that are more difficult to measure, such as simplified management
+options, may be important in the adoption of GE-herbicide tolerant
+soybeans. The AES report Adoption of Bioengineered Crops is available
+at http://www.ers.usda.gov/publications/aer810/,
+and Genetically Engineered Crops: U.S. Adoption and Impacts is available
+at http://www.ers.usda.gov/publications/agoutlook/sep/2002/ao294h.pdf.
+Has there actually been a reduction
+in pesticide use resulting from planting transgenic crops? I understand
+this is supposed to be one of the major benefits of these GE crops.
+The potential for reduction in pesticide use or the substitution
+of less environmentally hazardous pesticides for those currently
+used on conventional crops has been proposed as a benefit of certain
+genetically engineered (GE) crops. This was certainly the case for
+genetically engineered corn and cotton varieties incorporating Bt
+genes for resistance to certain classes of insects, where the insecticidal
+compounds produced by the plants were expected to negate the need
+for additional insecticide applications to control the targeted
+pests. GE herbicide-tolerant crops are designed to be used with
+specific herbicides, so reductions in pesticide use might be realized
+if switching to a new herbicide application program compatible with
+a particular GE crop requires less pesticide than the pesticide
+applications it replaces. Unfortunately, it is difficult to directly
+compare the impact of these substitutions because application rates,
+as well as toxicity and environmental hazards, vary for different
+herbicides. Pesticide use patterns also change for reasons unrelated
+to the switch to GE crops, and this can complicate comparisons made
+over time.
+Several studies have used data collected by the USDA or industry
+sources to compare the amount of insecticides or herbicides applied
+to GE crops compared to conventional crops. Different ways of expressing
+pesticide use (see Fun with Pesticide Numbers at http://www.comm.cornell.edu/gmo/issues/pestnum.html
+for a simple example) and grouping data have resulted in different
+conclusions. An aspect that is obscure in most analyses is the correlation
+of effects on production with actual changes in the amount or type
+of pesticides applied. For example, changing pesticide applications
+can affect yields based on the effectiveness of pest control, but
+yield changes could also be due to some other production factor.
+Although not indisputable, several studies have offered these
+general conclusions:
+A USDA-ERS econometric model that attempts to control for other
+variables suggests that, overall, a reduction in pesticide use
+in the U.S. was associated with the adoption of GE insecticide
+resistant and herbicide tolerant crops.
+Most comparisons of insecticide use have shown small or not
+statistically significant reductions attributable to use of Bt
+corn compared to conventional corn varieties overall. Reasons
+for this may be because many U.S. Corn Belt corn acres are not
+actually sprayed specifically for European corn borer (the primary
+pest targeted by current Bt corn varieties), since outbreaks of
+this pest are difficult to control and are extremely variable.
+Also, insecticides used against the European corn borer are also
+used to control other insect pests and generally would still be
+applied independently of European corn borer pressure. Some studies
+have attributed regional increases in yield to better control
+of European corn borer in Bt corn. In cases where this is true,
+although the total amount of pesticides released into the environment
+may not decrease, yield per unit of pesticide applied may increase.
+(Note that these estimates do not count the Bt toxin produced
+by the plants as a pesticide application.)
+When considering insecticides directed at pests targeted by
+Bt cotton (cotton bollworm, tobacco budworm, and pink bollworm),
+both the number of insecticide applications and the pounds of
+insecticide used on cotton were significantly lower in 1998 and
+1999 in six cotton growing states compared to applications in
+1995, prior to the introduction of Bt cotton. These reductions
+are substantial, representing about 10-14% of the total amount
+of pesticides used in those states. It is unclear precisely how
+much of this reduction is directly attributable to the use of
+Bt cotton. Reductions of insecticide applications (acre-treatments,
+adjusted for changes in acreage planted) for Bt-targeted pests
+and significant decreases in yield loss due to Bt-targeted pests
+were reported in twelve of sixteen cotton producing states in
+the U.S. in 1998 and 1999 compared to 1995.
+Herbicide applications to soybeans, quantified as total pounds
+of herbicide active ingredient applied, have increased slightly
+overall with the adoption of herbicide-tolerant GE varieties,
+largely because the increased number of pounds of glyphosate applied
+to Roundup-Ready soybeans (the most widely adopted type of GE
+crop in the U.S.) exceeded the reduction in the number of pounds
+of other herbicides replaced by glyphosate. It has been proposed
+that the substitution of glyphosate for other herbicides is environmentally
+beneficial since glyphosate has lower toxicity to mammals, fish,
+and birds, is less likely to leach, and is less persistent in
+the environment than the herbicides it replaces.
+References and additional resources:
+Agricultural Biotechnology: Updated Benefit Estimates, sponsored by
+the National Center for Food and Agricultural Policy; available at
+http://www.ncfap.org/reports/biotech/updatedbenefits.pdf
+Genetically Engineered Crops: U.S. Adoption and Impacts; available
+at http://www.ers.usda.gov/publications/agoutlook/sep2002/ao294h.pdf
+Genetically Engineered Crops: Has Adoption Reduced Pesticide Use?;
+available at http://www.ers.usda.gov/publications/agoutlook/aug2000/ao273f.pdf
+Genetically Engineered Crops for Pest Management in U.S. Agriculture;
+available at http://www.ers.usda.gov/publications/aer786/
+Additional discussion of this issue, including more references, is
+available in our discussion
+of the potential for reducing herbicide applications.
+What are the chances I'm eating food
+made from genetically engineered crops?
+Depending on what you eat, the chances could be fairly high
+that you are eating some genetically engineered (GE) food. About
+twelve different kinds of GE food crops have been developed for
+commercialization, but only six of these are currently being grown
+(corn, soybeans, canola, cotton, squash, and papaya) and have some
+chance of being part of the food you eat. Even though there are
+only a few different kinds of GE crops now being grown, it has been
+estimated that as much as 60 to 70% of the food now in the U.S.
+marketplace may contain at least a small amount of some ingredient
+derived from a genetically engineered crop, most commonly corn or
+soybeans. Since there are no genetically engineered varieties of
+most kinds of food crops in production, you can be sure those whole
+foods are not genetically engineered. But knowing exactly which
+processed foods may have some GE ingredient, or knowing what percentage
+of those foods might have come from a GE crop is usually difficult.
+How do the few kinds of GE crops end
+up in such a high percentage of our food?
+Almost all of the genetically engineered content in food currently
+comes from just four major crops: soybeans, corn, canola, and cotton
+(as cottonseed oil). But products made from these major crops are
+used as ingredients in a wide array of processed food. Just a few
+examples include such common corn-based ingredients as corn starch,
+corn flour, masa, corn syrup, corn oil, sweeteners, and certain
+vitamins. Common soy-based ingredients include soybean oil, flour,
+lecithin, protein extracts, and Vitamin E. Similarly, canola and
+cottonseed oils are used in many products including salad dressings,
+margarines, processed cheese, "non-dairy" products, potato and corn
+chips, cookies, and pastries.
+Since GE and conventional varieties of these crops are not usually
+kept separate as they move from the farm to the processor, foods
+made with ingredients derived from these four major crops may have
+some GE content. Many of the ingredients derived from these crops
+are so highly processed or refined that it could be difficult to
+determine whether they came from GE, non-GE, or mixtures of both
+kinds of crops.
+Certified organic food is handled differently. To be sold as "organic",
+detailed record-keeping during all phases of production and processing
+is required to assure crops or ingredients made from them are not
+mixed with non-organically grown or GE food. The Cooperative Extension
+Service at Cornell University (Genetically Engineered Organisms
+-- Public Issues Education Project) has developed an informative
+discussion of how likely you are to encounter GE food in today's
+market based on which genetically engineered crops have been approved
+for production in the U.S. For more information, visit GE Foods
+in the Market at http://www.comm.cornell.edu/gmo/crops/eating.html.
+Can I avoid GE food if I buy only organically
+grown food?
+Yes, if you buy food labeled "100% organic", "organic" (95% or more
+organic content) or "made with organic [food or food group]" (70-95%
+organic content) you have some assurance the food has not been genetically
+engineered. By law, foods with these label designations (which appear
+on the product label's principal display panel) cannot be genetically
+engineered single foods or contain genetically engineered ingredients,
+including the non-organic ingredients. Foods with a total content
+of less than 70% organic ingredients may have the organic components
+identified specifically in the list of ingredients, but the non-organic
+components are not required to be free of genetically engineered
+products. Food in this last category cannot have the word "organic"
+on the principal display panel of the label.
+Labeling requirements for food sold as organic in the U.S. are
+defined in the final rules for the National Organic Program, which
+operates under the direction of the Agricultural Marketing Service
+of the USDA. The program was authorized by the Organic Foods Production
+Act of 1990. The list of "excluded methods" pertaining to genetically
+modified organisms includes "cell fusion, microencapsulation and
+macroencapsulation, and recombinant DNA technology (including gene
+deletion, gene doubling, introducing a foreign gene, and changing
+the positions of genes when achieved by recombinant DNA technology)."
+The excluded methods do not include "the use of traditional breeding,
+conjugation, fermentation, hybridization, in vitro fertilization,
+or tissue culture."
+One concern that some people opposed to genetically engineered
+foods have expressed about the rules for the National Organic Program
+is that they do not specifically address issues that could arise
+from inadvertent cross-pollination of organically grown crops by
+genetically engineered crops.
+For more information on labeling organic food, see the National
+Organic Program's labeling fact sheet. Complete information about
+the National Organic Program is available at http://www.ams.usda.gov/nop/.
+Why do organic farming advocates object
+to transgenic crops using Bt genes while accepting the use of Bt
+sprays as an acceptable insect control measure?
+Bt (Bacillus thuringiensis) is a naturally occurring soil
+bacterium that produces proteins (called Cry proteins) toxic to
+certain insects. Various kinds of the insecticidal Cry proteins,
+with effectiveness against different groups of insects, are produced
+by different strains of Bt. Spray formulations of Bt have been used
+as insecticides for over forty years, and recently the genes that
+encode certain Bt Cry proteins have been cloned and used to genetically
+engineer several crop species to produce insect resistant varieties.
+A major concern of many people, not just organic growers, is that
+widespread use of Bt genes in genetically engineered crops will
+increase the likelihood that pest populations will develop resistance
+to the Bt toxins. If this occurs, not only will the utility of Bt
+crops be diminished, but farmers who currently rely on Bt foliar
+pesticide applications could suffer important losses as well. At
+least one case where an insect (the diamondback moth) has developed
+resistance to Bt in response to heavy use of spray applications
+in an agricultural environment has been documented, and the development
+of resistance to Bt by several species of insects has been demonstrated
+in the laboratory. Most scientists agree that the development of
+resistant insect populations is a potential hazard associated with
+the use of genetically engineered Bt crops. There is a concern that
+genetically engineered Bt crops may pose a higher risk for insects
+developing resistance than that posed by conventional spray applications
+because they place a very high selection pressure on the pests,
+and they currently lack additional insecticidal components or synergistic
+compounds found in Bt spores that might act to prevent or delay
+development of resistance.
+In response to these concerns, the EPA has imposed several requirements
+for developing and implementing resistance management strategies,
+and for monitoring insect populations for resistance. Provisions
+for remedial actions, such as prohibiting Bt crops in certain areas
+based on the results of pest monitoring, are part of these regulations.
+A major component of the resistance management strategy is a requirement
+for planting refuge areas of specified size to non-Bt varieties
+along with Bt crop varieties. The purpose of the refuge is to maintain
+an adequate breeding population of susceptible insects to intermate
+with insects that might carry a mutation for resistance, hopefully
+keeping the frequency of the resistance alleles low in the insect
+populations. Companies marketing Bt crop seed are required to inform
+growers about the proper methods of integrating non-Bt refuge areas
+with Bt crops, and growers must sign contracts agreeing to comply
+with resistance management practices. The companies also are required
+to monitor the development of insect resistance, provide annual
+reports on the efficacy of resistance management plans, and implement
+remedial action plans in the event that resistance is detected among
+pest populations. There is an ongoing debate over the requirements
+for effective refuge designs, and there is some concern about how
+well the refuge strategy will work. Additional strategies to avoid
+resistance, such as including more than one Cry gene in crop varieties,
+are being developed.
+More details about refuge requirements and resistance management
+strategies can be found at the following links:
+http://www.ext.colostate.edu/pubs/crops/00708.html
+http://www.extension.umn.edu/distribution/cropsystems/DC7055.html
+http://www.epa.gov/pesticides/biopesticides/regofbtcrops.htm
+http://www.asmusa.org/acasrc/pdfs/Btreport.pdf
+(large file).
+How do we know genetically engineered crops
+are safe to eat?
+The primary concern many people have about genetically engineered
+(GE) crops is the safety of food made from them. Although there
+continues to be quite a bit of controversy over this issue, no evidence
+has been found that foods made with the genetically engineered crops
+now on the market are any less safe to eat than foods made with
+the same kinds of conventional crops. Genetically engineered crop
+varieties are being subjected to far greater scientific scrutiny
+than that ordinarily given to conventional varieties, even though
+many scientists have argued that there is no strict distinction
+between the food safety risks posed by genetically engineered plants
+and those developed using conventional breeding practices.
+Safety assessments of foods developed using genetic engineering
+include the following considerations:
+evaluation of the methods used to develop the crop, including
+the molecular biological data which characterizes the genetic change
+the evaluation for the expected phenotype
+the general chemical composition of the novel food compared to
+conventional counterparts
+the nutritional content compared to conventional counterparts
+the potential for introducing new toxins
+the potential for causing allergic reactions.
+The goal is not to establish an absolute level of safety, but rather
+the relative safety of the new product so that there is a reasonable
+certainty that no harm will result from intended uses under the
+anticipated conditions of production, processing and consumption.
+Since conventional crops have known histories of safe use given
+certain identifiable risk factors, genetically engineered crops
+are considered to have the same relative safety as their conventional
+counterparts if they do not differ significantly from conventional
+crops for these risk factors. See http://www.agbios.com/cstudies.php?book=FSA&ev;=MON810&chapter;=Preface
+and http://www.agbios.com/cstudies.php?book=FSA&ev;=GTS&chapter;=Preface
+for examples of the food safety assessment for two genetically engineered
+crops.
+Some critics of GE crops point out that a lack of evidence for
+harmful effects does not mean they do not exist, but just as likely
+could mean that we have not done the proper studies to document
+them. Some reject the idea that we face the same kinds of risks
+from GE crops as from conventionally developed crops, believing
+the genetic engineering process itself introduces unique risks.
+A major concern often expressed about GE food safety is the risk
+for unintentional, potentially harmful changes that may escape detection
+in the evaluation process. It is true that the number of factors
+that are examined for change is small compared to the total number
+of components produced by plants. Also, more extensive comparisons
+of plant chemical compositions would be difficult because complete
+data describing the composition of conventional crop plants, including
+knowledge of variability among different cultivars or that due to
+environmental influences, is lacking. The random nature of transgene
+insertion when making GE plants, it is argued, may cause disruption
+of important genes, causing significant effects but little obvious
+change to the plant's phenotype. Additional opinions and considerations
+about the safety of genetically engineered foods can be found in
+our discussion
+of risks to human health and at http://www.comm.cornell.edu/gmo/issues/issues.html
+http://www.royalsoc.ac.uk/files/statfiles/document-165.pdf
+http://www.nap.edu/books/0309069300/html/
+Why is there so much debate about mandatory
+labeling of genetically engineered foods?
+Whether or not to require mandatory labeling of genetically engineered
+(GE) foods is a major issue in the debate over the risks and benefits
+of food crops produced using biotechnology. The issue is complex
+because (1) many arguments put forth in the debate are based on
+disagreements about the adequacy of our scientific understanding
+of the consequences of genetic engineering; and (2) significant
+changes to our current food marketing and manufacturing system,
+with potentially large economic impacts, would be required to implement
+mandatory labeling.
+Central to the arguments for mandatory labeling is that consumers
+have a right to know what is in their food. This is especially true
+for some products made with biotechnology where health and environmental
+concerns have not been satisfactorily resolved. Some people do not
+wish to use genetically engineered products for religious or ethical
+reasons. Labeling is the only way consumers can make informed choices,
+whatever their reasons may be.
+Major arguments against mandatory labeling have addressed the
+practical concerns about the expense and complex logistics that
+would be required to ensure GE and conventional foods are kept separate
+or to test all foods for GE content. It is argued that such measures
+are unnecessary since no significant differences have been found
+between today's GE foods and conventional foods.
+Enacting mandatory labeling will also require resolving certain
+other questions. Major issues include defining exactly what kinds
+of technologies would be covered, deciding on tolerance levels for
+genetically engineered content or ingredients before labeling would
+be required, and choosing a method for verifying that products are
+properly labeled. Please see the fact sheet Labeling
+of Genetically Engineered Foods for a full discussion of the
+arguments for and against mandatory labeling and the issues that
+will have to be resolved if such legislation is enacted.
+Aren't there some food labeling requirements
+for genetically engineered foods now?
+Under current policy, the U.S. Food and Drug Administration does
+not automatically require all genetically engineered food to be
+labeled. Conventional and genetically engineered (GE) foods are
+all subject to the same labeling requirements, and both may require
+special labeling if particular food products have some property
+that is significantly different than what consumers might reasonably
+expect to find in that kind of food. Therefore, particular genetically
+engineered foods are subject to special labeling requirements if
+the FDA concludes they have significantly different properties including:
+a different nutritional property from the same kind of conventional
+food
+a new allergen consumers would not expect to be in that kind of
+food (a hypothetical example would be an allergenic peanut protein
+in GE corn or some other crop)
+a toxicant in excess of acceptable limits.
+Examples of genetically engineered foods that require special labeling
+are those that contain vegetable oil made from varieties of GE soybeans
+and canola where the fatty acid composition of the oils extracted
+from the seeds of these crops was altered. Since the oils from these
+varieties have different nutritional properties than conventional
+soy and canola oils, foods made with them must be labeled to clearly
+indicate how they are different. You might see "high laurate canola"
+or "high oleic soybean" on food labels if these products were used.
+The FDA does not require them to be labeled as "genetically engineered",
+but that information could also be included on the label.
+So far, no approved, commercially grown genetically engineered
+food crops have known properties that would require foods made from
+them to be labeled because they contain a new allergen or excess
+levels of toxic substances.
+The FDA has recently proposed voluntary guidelines for labeling
+food that does or does not contain genetically engineered ingredients
+to help industry provide information to consumers in a manner the
+FDA considers to be accurate and not misleading in accordance with
+established food labeling policy. Federal legislation has been proposed
+that would require mandatory labeling of genetically engineered
+foods, and similar initiatives at the state or local level have
+been considered or are currently pending. For more information,
+see the fact sheet Labeling
+of Genetically Engineered Foods.
+Haven't people had allergic reactions
+from eating transgenic corn and soybeans?
+Some people are allergic to proteins that occur naturally in soybeans,
+and they could have a reaction if they are exposed to either conventional
+or transgenic soybeans or soy products. Soybeans are one of the
+eight most common sources of food allergies. Although less common,
+some people have food allergies associated with corn and they could
+be affected by either conventional or transgenic corn. No allergic
+reactions attributable to the proteins present as a result of genetic
+engineering have been reported in the transgenic soybeans being
+grown commercially at this time. Reports of an allergenic protein
+made as a result of genetic engineering in one particular type of
+transgenic corn could not be confirmed by subsequent testing.
+While there isn't any evidence that allergens have been introduced
+into food crops by genetic engineering, two incidents have received
+quite a bit of publicity and caused public concern about food allergies
+resulting from transgenic crops.
+The first incident involved soybean plants being developed by
+Pioneer Hi-Bred in the early 1990's. Pioneer used a gene from Brazil
+nuts to make soybeans that contained higher levels of the amino
+acid methionine. They wanted to make a more nutritious chicken feed
+that would eliminate the need for expensive feed supplements. While
+these transgenic soybeans were being tested, research funded by
+Pioneer discovered that the protein made by the Brazil nut gene
+could cause allergic reactions in humans. Pioneer stopped development
+of these soybeans in 1993, and they were never sold or grown for
+market. You can find Pioneer's account of this story at http://www.pioneer.com/biotech/brazil_nut/default.htm.
+The second incident involved reports of allergic reactions in people
+who may have eaten food containing the insecticidal protein called
+Cry9C, one of several forms of the Bt insecticide. The gene for
+this protein had been genetically engineered into Starlink corn
+by Aventis CropScience. Starlink corn had only been approved for
+use as animal feed or for industrial purposes, but not for human
+consumption, because tests made when Starlink was being developed
+showed the Cry9C protein had certain characteristics in common with
+other proteins known to be allergenic. When food from grocery shelves
+tested positive for Cry9C, demonstrating that Starlink had accidentally
+made its way into the food supply, a massive screening and recall
+effort was put into effect. During this time, the reports surfaced
+of allergic reactions in people who had eaten corn products that
+may have been contaminated by Cry9C. The Food and Drug Administration
+and Centers for Disease Control investigations that followed found
+28 cases where people had apparently suffered allergic reactions
+to something, but the special test developed by the FDA (an enzyme-linked
+immunosorbent assay, or ELISA test, to detect people's antibodies
+to the Cry9C protein) did not find any evidence that the reactions
+in the affected people were associated with hypersensitivity to
+the Cry9C protein. The test isn't 100% conclusive, though, partly
+because food allergies may sometimes occur without detectable levels
+of antibodies to allergens. The EPA ruled on July 27, 2001, to keep
+a zero tolerance policy for Cry9C in food, based on the original
+suspicions of potential allergenicity. You can review the CDC report
+at http://www.cdc.gov/nceh/ehhe/Cry9cReport/default.htm.
+More information about the Starlink corn incident can be found in
+our discussion
+on StarLink corn. A more detailed discussion of concerns about
+food allergies resulting from transgenic crops is available in our
+discussion of allergies.
+How does the government regulate genetically
+engineered crops?
+The federal government first adopted a "Coordinated Framework for
+Regulation of Biotechnology" in 1986. Under this system, three federal
+agencies have regulatory authority over genetically engineered (GE)
+crops. Each agency has a different role to ensure safety under specific
+legislation. These agencies and their regulatory responsibilities
+are:
+The U.S. Department of Agriculture (USDA), through the Animal
+and Plant Health Inspection Service (APHIS), is responsible for
+assuring that any organism, including genetically engineered organisms,
+will not become pests that can cause harm if they are released
+into the environment. APHIS has used their authority to grant
+permission and set the rules for field testing of genetically
+engineered crops. These crops cannot be commercialized until they
+are granted "non-regulated" status by APHIS upon satisfactory
+review of the field testing data. Detailed information about the
+procedures APHIS uses to regulate genetically engineered plants
+is available at http://www.aphis.usda.gov/ppq/biotech/.
+The Food and Drug Administration (FDA) is responsible for ensuring
+the safety of most food (except for meat, poultry and some egg
+products, which are regulated by the U.S. Department of Agriculture),
+including food from genetically engineered crops. If the allergen,
+nutrient and toxin content of new GE foods fall within the normal
+range found in the same kind of conventional food, the FDA does
+not regulate the GE food any differently. So far, all genetically
+modified foods in the U.S. marketplace have gone through a voluntary
+review process where the FDA determines whether they are "not
+substantially different" from the same conventional foods by consulting
+with developers of new GE foods to identify potential sources
+of differences, then reviewing a formal summary of data provided
+by the developer. Recently, the FDA has announced a new rule that
+would make pre-market consultation mandatory. The FDA has the
+authority to order foods to be pulled from the market at any time
+if are found to be unsafe, or to require labeling of any food
+that has different amounts of allergens, nutrients, or toxins
+than a consumer would expect to find in that kind of food. Information
+from the FDA about their role in regulating GE foods is available
+at http://vm.cfsan.fda.gov/~lrd/biotechm.html.
+The Environmental Protection Agency (EPA) evaluates the safety
+of any pesticides that are produced by genetically engineered
+plants. The EPA calls novel DNA and proteins genetically engineered
+into plants to protect them against pests "plant incorporated
+protectants" (PIPs) and regulates them the same way they regulate
+other pesticides. EPA documents concerning plant incorporated
+protectants can be found at http://www.epa.gov/pesticides/biopesticides/.
+Under the Coordinated Framework, some kinds of genetically engineered
+crops might not be subject to the oversight of all three agencies.
+For example, an ornamental flower like petunias engineered to have
+longer lasting blooms may only have to meet the requirements of
+APHIS, but a food crop like soybeans engineered to produce an insecticidal
+compound would be subject to the rules of all three agencies. Additional
+regulations are imposed by some states, but Colorado does not currently
+have additional requirements. Also, the National Institutes of Health
+has developed safety procedures for research with recombinant DNA.
+Most institutions developing genetically engineered crops follow
+the NIH guidelines, and they are required for federally funded research.
+A useful overview of the U.S. regulatory process, including links
+to information about the laws granting authority to the agencies
+and their primary rules and regulations, is available at http://www.aphis.usda.gov/ppq/biotech/usregs.html.
+The regulatory process is complex and changes are being proposed
+by the regulatory agencies themselves, independent scientific review
+panels, and the public. Detailed discussions of how the regulatory
+system works and some issues raised by critics of the current system
+can be found in the following links:
+our page on evaluation and regulation of crops at /TransgenicCrops/evaluation.html,
+Cornell University's page at http://www.comm.cornell.edu/gmo/regulation/reg.html,
+and the AgBios web site at http://64.26.172.90/agbios/regulate.php?action=USA
+How is "substantial equivalence" used
+to determine the safety of genetically engineered food?
+The principle of substantial equivalence is a functional part of
+the current risk assessment process used to evaluate the safety
+of new foods produced using biotechnology. Basically, the concept
+of substantial equivalence is that novel crops or foods, such as
+those made using genetic engineering, can be compared with the same
+kinds of conventional crops or foods that have established histories
+of safe use given certain known risk factors.
+A number of properties of the novel and conventional products,
+including the levels of nutrients, toxic substances, and potential
+allergens, may be compared taking into account established patterns
+of processing and consumption. If the comparison reveals that there
+are no significant differences between the two kinds of food, the
+novel food is presumed to be no less safe than the conventional
+food.
+Substantial equivalence is not an evaluation of the absolute safety
+of a novel biotech product, but rather a practical method to establish
+food safety relative to an analogous conventional product with familiar
+levels of safety and risks. In practice, if the Food and Drug Administration
+finds that bioengineered foods are "not substantially different"
+from conventional foods, they are not regulated any differently
+and are considered interchangeable with the conventional foods for
+use in the U.S. Where a product is found not to be substantially
+equivalent to an existing one, further investigations focusing on
+the identified differences would be required to establish risk factors.
+Lack of substantial equivalence does not necessarily mean the
+novel product isn't safe. For example, soybeans genetically engineered
+to produce oil with a different fatty acid composition (an identified
+nutritional difference) from conventional soybeans might have an
+advantage over conventional soybean oil when used for cooking because
+the GE soybean oil eliminates the need for industrial hydrogenation,
+which produces undesirable trans-fatty acids. Totally new foods,
+where no similar materials have ever been consumed, could not be
+evaluated using substantial equivalence and would have to be evaluated
+solely on the basis of their own unique properties.
+Critics of our current evaluation process argue that comparing
+genetically modified and conventional foods for differences in a
+few known risk factors is not adequate evidence that they are safe
+for human consumption. Concerns center on possible unexpected effects
+that may escape study and that substantial equivalence has never
+been properly defined or cannot really be fully tested.
+A more detailed discussion of how substantial equivalence is used
+to evaluate novel food safety and what some of the major limitations
+are is available at http://www.agbios.com/cstudies.php?book=FSA&ev;=MON810&chapter;=Concepts.
+A recent scientific review published by The Royal Society of the
+United Kingdom also contains a detailed critique of substantial
+equivalence. This report can be found at http://www.royalsoc.ac.uk/files/statfiles/document-165.pdf.
+Why do GE plants have antibiotic resistance
+genes? Doesn't this pose a risk for developing resistant strains
+of bacteria?
+Antibiotic resistance genes are frequently used at several stages
+in the creation of genetically engineered plants as convenient "selectable
+markers". Bacteria or plant cells without a gene for resistance
+to the antibiotics used can be killed when the antibiotic is applied
+to them. So when scientists link the gene for the desired trait
+being introduced into a plant with an antibiotic resistance gene,
+they can separate cells carrying the desired gene from those that
+don't by exposing them to the antibiotic. The antibiotic resistance
+genes end up in the genetically engineered plants as excess baggage
+whose function is no longer required after the process of making
+them is complete.
+Concern has been raised about the possibility that antibiotic
+resistance genes used to make transgenic plants could be transferred
+to microorganisms that inhabit the digestive tracts of humans or
+other animals that eat them, and therefore might contribute to the
+already serious problem of antibiotic resistant pathogens. Transfer
+of DNA from one microbe to another (horizontal gene transfer) is
+known to occur in nature and has been observed in some laboratory
+experiments under specific conditions, but the likelihood of DNA
+being transferred from plant material in the digestive system to
+microbes has not yet been experimentally determined. It is thought
+that for such a transfer to be possible, it would have to come from
+consumption of fresh food since most processing would degrade the
+plant's DNA. Also, there is evidence that most DNA is rapidly degraded
+by the digestive system. However, results of one recent experiment
+have suggested that horizontal transfer of DNA from genetically
+engineered plants can occur in the human digestive tract under some
+circumstances. But overall, the risk of antibiotic resistance genes
+from transgenic plants ending up in microorganisms appears to be
+low.
+A second concern about the use of some antibiotic resistance genes
+is that they could reduce the effectiveness of antibiotics taken
+at the same time transgenic food carrying the resistance gene for
+that antibiotic was consumed. In cases where this has been identified
+as a risk based on the mechanism of resistance, studies have suggested
+the chance of this happening was probably very low due to rapid
+digestion of the inactivating enzymes produced by the transgenic
+resistance gene. Most transgenic plants do not carry resistance
+genes for antibiotics commonly used to treat infections in humans.
+While the risk of creating additional problems of antibiotic resistance
+in microorganisms from the use of the resistance genes in transgenic
+plants appears to be low, steps are being taken to reduce the risk
+and to phase out their use. The FDA recommends that developers of
+transgenic crops use only antibiotics that are not commonly used
+for treatment of diseases in humans. Scientists are developing and
+using different selectable markers, and are also experimenting with
+methods for removing the antibiotic resistance genes before the
+plants are released for commercial use. Further discussion of concerns
+about the use of antibiotic resistance genes in genetically engineered
+plants can be found in our
+discussion of antibiotic resistance genes and in a report by
+the Royal Society at http://www.royalsoc.ac.uk/files/statfiles/document-56.pdf
+Are there health risks from eating the
+foreign DNA in transgenic plants?
+It is unlikely that eating DNA poses any significant risk to human
+or animal health, and there is no evidence to suggest that there
+is any additional risk from the transgenes present in genetically
+engineered plants.
+Normal diets for humans and other animals contain large amounts
+of DNA. This DNA comes not only from the cells of the various kinds
+of plants or animals constituting the food, but also from any contaminating
+microorganisms or viruses that may be present in or on the food.
+We have been exposed to this variety of DNA throughout our entire
+history.
+Most of the DNA we eat is degraded in the digestive system, but
+some experiments have shown that small amounts of it can be found
+in some cells in the body. It is thought to be unlikely that this
+DNA would be incorporated into the DNA of those cells, but even
+if it was, the chance of any undesirable effect on the whole organism
+is thought to be very low.
+There is evidence to suggest that certain kinds of intact genetic
+elements have been incorporated into human DNA sometime during our
+history, but there is a lack of recognized negative consequences
+to our health that can be attributed to this. It seems that we are
+well adapted to handling exposure to DNA, and there is no obvious
+reason that the DNA from other organisms introduced into crops by
+genetic engineering would have any additional effect. References
+for research in this area and further discussion can be at found
+in our discussion of
+eating DNA or in a longer review of risks posed genetically
+engineered crops published by The Royal Society of the United Kingdom.
+The report is available at http://www.royalsoc.ac.uk/files/statfiles/document-56.pdf.
+I hear the terms "genetic drift" and
+"genetic trespass" in the debate about transgenic crops. What do
+they mean?
+"Genetic drift" or "pollen drift" used in this context refers to
+the unintentional transfer of pollen from transgenic crops to nearby
+conventional crops by wind or insects. Seeds produced on the conventional
+crop resulting from pollination by the transgenic crop will also
+contain the genes of the transgenic crop. The term is meant to describe
+problems with contamination of non-genetically engineered crops
+by transgenes in the same way "pesticide drift" is used to describe
+contamination of non-target crops by errant pesticide applications.
+You might also see the phrase "crop-to-crop gene flow" used to describe
+the transfer of genes from one crop variety to another by cross-pollination.
+"Genetic drift" has a different meaning in the field of population
+genetics.
+Seed producers have long been concerned with preventing cross-pollination
+among crop varieties in order to maintain the purity (the genetic
+identity) of each of the varieties they grow. The chance of pollen
+drift from transgenic crops has raised additional issues about the
+purity or "identity" of crops entering the marketplace. For example,
+crops grown for the organic market cannot be genetically engineered.
+What happens if they are partially cross-pollinated by a genetically
+engineered crop? Can they be sold as organic? What tolerance levels,
+if any, should be established to account for small amounts of cross-pollination?
+Who is responsible for preventing cross-pollination? Is a grower
+guilty of "genetic trespass" if pollen from his crop affects the
+marketability of a neighbor's crop? Producers of conventionally
+grown crops for export are also facing these issues because some
+markets have banned genetically engineered food.
+Pollen drift is more likely with naturally cross-pollinating crops
+like corn than with highly self-pollinating crops like soybeans.
+Problems can be prevented by carefully maintaining crop-specific
+isolation distances between different varieties. Sometimes additional
+strategies are employed, such as using border strips around fields
+to trap pollen. More information about the concerns arising from
+the potential for "genetic trespass" is available in our
+discussion of crop-to-crop gene flow.
+I'm concerned by the reports of transgenic
+DNA found in Mexican corn landraces. Isn't this evidence that transgenic
+crops will cause environmental damage by reducing genetic diversity?
+Genes engineered into crops can be transmitted to other plants of
+the same species or to sexually compatible wild relatives by pollination.
+Hybridization of transgenic crops with other plants raises environmental
+concerns on several fronts, including the possible introduction
+of traits that could increase the weediness of some species, the
+potential for affecting the genetic diversity or ecological status
+of natural, non-weedy plant populations, and the potential for affecting
+the genetic diversity found in crop landraces (traditional, locally
+adapted varieties). Of course, gene flow from conventional, non-genetically
+engineered crops also occurs, and has been implicated in causing
+undesirable changes in certain natural plant populations and in
+the evolution of more aggressive weeds for several crops. Many factors
+influence the potential consequences of gene flow from crops, and
+whether transgenic crops are more or less likely to cause undesirable
+effects is unknown.
+The recent reports of transgenic DNA in corn growing in southern
+Mexico, despite a government moratorium since 1998 on planting transgenic
+corn, generated a great deal of concern, since this region is a
+center of genetic diversity for maize (corn) and the potential effects
+of transgenes introduced from genetically engineered varieties on
+the landraces or wild maize relatives growing there are unknown.
+While the study reporting the presence of transgenic DNA in Mexico
+has generated controversy over the methodology used and certain
+conclusions, the plausibility of transgenic corn growing in Mexico
+is generally not questioned. Continued monitoring and additional
+research, however, will be needed to understand the actual effect
+on genetic diversity, if any, of introducing a few, specific genes
+into the maize populations of Mexico. Concerns about the difficulty
+of controlling the spread of transgenes via crop-to-crop or crop-to-wild
+gene flow are valid. Examples from existing population genetics
+research suggest there will not be a universal answer to describe
+the risks of gene flow from any particular transgenic crop. Each
+kind of transgenic crop developed should be specifically evaluated
+for the various environmental risks related to potential gene flow.
+For an in-depth review of the reported discovery of transgenic
+DNA found in Mexican maize, the controversy surrounding the studies,
+and the possible consequences, please see our
+discussion of GM Maize in Mexico. Additional information about
+concerns of gene flow from transgenic crops:
+http://www.comm.cornell.edu/gmo/issues/hgt.html
+/TransgenicCrops/croptoweed.html
+Ellstrand, Norman C. 2001. When Transgenes Wander, Should We
+Worry? Plant Physiology, Vol. 125, pp. 1543-1545, available at http://www.biotech-info.net/wandering_transgenics.html.
+Does herbicide-tolerant Clearfield
+wheat, such as the cultivar 'Above' developed at CSU, incorporate
+a transgenic trait?
+Both transgenic and conventional crop varieties are sold under the
+Clearfield brand. Buyers should check the information provided
+for the particular variety of interest.
+'Above' wheat is not a transgenic cultivar. Researchers at American
+Cyanamid, now part of BASF Corporation, identified the trait for
+tolerance to imidazolinone (IMI) herbicides in a wheat plant after
+exposure to a chemical mutagen. The herbicide tolerance trait was
+transferred to adapted wheat cultivars by conventional crossing,
+and 'Above' was subsequently selected from breeding populations
+segregating for herbicide tolerance and other traits. The process
+of induced mutagenesis used to develop the herbicide tolerance trait
+is considered to be a conventional breeding technique, and 'Above'
+is not considered to be genetically engineered or a genetically
+modified organism.
+BASF Corporation still owns the gene for IMI herbicide tolerance
+that is used in 'Above'. More information about the 'Above' wheat
+variety and the Clearfield production system is available at http://wheat.colostate.edu/03116.html
+(html file) or http://wheat.colostate.edu/03116.pdf
+(pdf file).
+BASF Corporation also owns imidazolinone-tolerance genes used in
+varieties of corn, canola, rice, and sunflower in addition to imidazolinone
+tolerant wheat, like 'Above'. All are marketed as Clearfield varieties.
+The herbicide tolerance genes used in these crops also were individually
+derived through mutagenesis (the sunflower IMI tolerance gene was
+identified as a mutation in a natural population of sunflowers),
+and varieties incorporating these genes alone are not transgenic.
+Some confusion exists, however, because some corn varieties incorporate
+both the IMI herbicide-tolerance gene and a transgenic trait, Bt-derived
+insect resistance. These Clearfield corn varieties are genetically
+engineered, transgenic plants, but the herbicide tolerance is not
+the transgenic trait. More information can be found on the BASF
+website at http://www.clearfieldsystem.com/html/gmo.html.
+Scott Reid at Colorado State University provided the content
+for this page with funding from CSU Cooperative Extension.
+Close Window

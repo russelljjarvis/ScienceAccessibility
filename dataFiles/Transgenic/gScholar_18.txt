@@ -1,0 +1,265 @@
+Single-step induction of mammary adenocarcinoma in transgenic mice bearing the activated c-neu oncogene
+Skip to content
+Journals
+Books
+Advanced search
+Shopping cart
+Remote access
+Sign in
+Help
+ScienceDirectJournalsBooksRegisterSign inSign in using your ScienceDirect credentialsUsernamePasswordRemember meForgotten username or password?Sign in via your institutionOpenAthens loginOther institution loginHelpJournalsBooksRegisterSign inHelpcloseSign in using your ScienceDirect credentialsUsernamePasswordRemember meForgotten username or password?Sign in via your institutionOpenAthens loginOther institution login
+Download full text in PDF
+Article
+Article + other articles in this issue
+Loading...
+Export
+You have selected 1 citation for export.
+Help
+Direct export
+Save to Mendeley
+Save to RefWorks
+Export file
+Format
+RIS (for EndNote, ReferenceManager, ProCite)
+BibTeX
+Text
+Content
+Citation Only
+Citation and Abstract
+Export
+Advanced search
+Close
+This document does not have an outline.
+JavaScript is disabled on your browser. Please enable JavaScript to use all the features on this page.
+Volume 54, Issue 1, 1 July 1988, Pages 105-115
+ArticleSingle-step induction of mammary adenocarcinoma in transgenic mice bearing the activated c-neu oncogene
+Author links open the overlay panel. Numbers correspond to the affiliation list which can be exposed by using the show more link.
+Opens overlay
+William J. Muller ,
+Opens overlay
+Eric Sinn ,
+Opens overlay
+Paul K. Pattengale ,
+Opens overlay
+Racheal Wallace ,
+Opens overlay
+Philip Leder , 
+aHarvard Medical School Department of Genetics Boston, Massachusetts 02115, USAbDepartment of Pathology University of California School of Medicine Los Angeles, California 90033, USAcHoward Hughes Medical Institute 25 Shattuck Street Boston, Massachusetts 02115, USA
+Received 19 April 1988, Revised 27 May 1988, Available online 21 May 2004
+Show more
+doi:10.1016/0092-8674(88)90184-5
+Get rights and content
+AbstractWe have used transgenic mice that carry an activated c-neu oncogene driven by a mouse mammary tumor virus (MMTV) promoter to assess the stepwise progression of carcinogenesis in mammary epithelium. Unlike the stochastic occurrence of solitary mammary tumors in transgenic mice bearing the MMTV/c-myc or the MMTV/v-Ha-ras oncogenes, transgenic mice uniformly expressing the MMTV/c-neu gene develop mammary adenocarcinomas that involve the entire epithelium in each gland. Because these tumors arise synchronously and are polyclonal in origin, expression of the activated c-neu oncogene appears to be sufficient to induce malignant transformation in this tissue in a single step. In contrast, expression of the c-neu transgene in the parotid gland or epididymis leads to benign, bilateral epithelial hypertrophy and hyperplasia which does not progress to full malignant transformation during the observation period. These results indicate that the combination of activated oncogene and tissue context are major determinants of malignant progression and that expression of the activated form of c-neu in the mammary epithelium has particularly deleterious consequences.
+Download full text in PDF
+References
+Adams et al., 1985
+J.M. Adams, A.W. Harris, C.A. Pinkert, L.M. Corcoran, W.S. Alexander, S. Cory, R.D. Palmiter, R.L. Brinster
+The c-myc oncogene driven by immunoglobulin enhancers induces lymphoid malignancy in transgenic mice
+Nature, 318 (1985), pp. 533538
+Bargmann et al., 1986a
+C.I. Bargmann, M.-C. Hung, R.A. Weinberg
+The neu oncogene encodes an epidermal growth factor receptor-related protein
+Nature, 319 (1986), pp. 226230
+Bargmann et al., 1986b
+C.I. Bargmann, M.-C. Hung, R.A. Weinberg
+Multiple independent activations of the c-neu oncogene by a point mutation altering the trans-membrane domain of p185
+Cell, 45 (1986), pp. 649657
+Bautch et al., 1987
+V.L. Bautch, S. Toda, J.A. Hassell, D. Hanahan
+Endothelial cell tumors develop in transgenic mice carrying polyoma virus middle T oncogene
+Cell, 51 (1987), pp. 529538
+Bolen et al., 1984
+J.B. Bolen, C.J. Thiele, M.A. Isbar, W. Yonemoto, L.A. Lipsich, J.S. Brugge
+Enhancement of cellular src gene product associated tyrosyl kinase activity following polyoma virus infection and transformation
+Cell, 38 (1984), pp. 767777
+Brinster et al., 1984
+R.L. Brinster, H.Y. Cheu, A. Messing, T. van Dyke, A.J. Levine, R.D. Palmiter
+Transgenic mice harboring SV40 T-antigen genes develop characteristic brain tumors
+Cell, 37 (1984), pp. 367379
+Cato et al., 1987
+A.C.B. Cato, D. Henderson, H. Ponta
+The hormone response element of the mouse mammary tumor virus DNA mediates the progestin and androgen induction of transcription in the proviral long terminal region
+EMBO J., 6 (1987), pp. 363368
+Chirgwin et al., 1979
+J.M. Chirgwin, A.E. Przybyla, R.J. MacDonald, W.J. Rutter
+Isolation of biologically active ribonucleic acid from sources enriched in ribonuclease
+Biochemistry, 18 (1979), pp. 52945299
+Courtneidge and Smith, 1983
+S.A. Courtneidge, A.E. Smith
+Polyoma virus transforming protein associates with the product of the c-src cellular gene
+Nature, 303 (1983), pp. 435439
+Coussens et al., 1985
+L. Coussens, T.L. Yang-Fen, Y.-C. Liao, E. Chen, A. Gray, J. McGrath, P.H. Seeburg, T.A. Libermann, J. Schelessinger, U. Franke, A. Levinson, A. Ullrich
+Tyrosine kinase receptor with extensive homology to EGF receptor shares chromosomal location with neu oncogene
+Science, 230 (1985), pp. 11321139
+Davis et al., 1980
+R.W. Davis, M. Thomas, J. Cameron, T.P. St. John, S. Scheler, R.A. Padgett
+Rapid DNA isolations for enzymatic and hybridization analysis
+Meth. Enzymol., 65 (1980), pp. 404411
+DiFiore et al., 1987
+P.P. DiFiore, J.H. Pierce, M.H. Krens, O. Segatto, C.R. King, S.A. Aaronson
+erbB-2 is a potent oncogene when overexpressed in NIH3T3 cells
+Science, 237 (1987), pp. 178182
+Escot et al., 1986
+C. Escot, C. Theillet, R. Lidereau, F. Spuratos, J. Champeme, J. Gest, R. Callahan
+Genetic alteration of the c-myc proto-oncogene (MYC) in human primary breast carcinomas
+Proc. Natl. Acad. Sci. USA, 83 (1986), pp. 48344838
+Hafen et al., 1983
+E. Hafen, M. Levine, R.L. Garber, W.J. Gehring
+An improved in situ hybridization method for detection of cellular RNA in Drosophila tissue sections and its application for localizing transcripts of homeotic antennapedia gene complex
+EMBO J., 2 (1983), pp. 617623
+Hanahan, 1986
+D. Hanahan
+Heritable-formation of pancreatic beta cell tumors in transgenic mice expressing recombinant insulin/SV40 oncogenes
+Nature, 315 (1986), pp. 115122
+Huang et al., 1981
+A.L. Huang, M.C. Ostrowski, D. Berard, G.L. Hager
+Glucocorticoid regulation of the Ha-MuSV p21 gene conferred by sequences from mouse mammary tumor virus
+Cell, 27 (1981), pp. 245255
+Hudziak et al., 1987
+R. Hudziak, J. Schlessinger, A. Ullrich
+Increased expression of the putative growth factor receptor p185HER2 causes transformation and tumorigenesis of NIH3T3 cells
+Proc. Natl. Acad. Sci. USA, 84 (1987), pp. 71597163
+King et al., 1985
+C.R. King, M.H. Kraus, S.A. Aaronson
+Amplification of a novel v-erbB-related gene in human mammary carcinoma
+Science, 229 (1985), pp. 974976
+Kleinberg, 1987
+D.L. Kleinberg
+Prolactin and breast cancer
+N. Engl. J. Med., 316 (1987), pp. 269271
+Kokai et al., 1987
+V. Kokai, J.A. Cohen, J.A. Drebin, M.I. Green
+Stage- and tissue-specific expression of the c-neu oncogene in rat development
+Proc. Natl. Acad. Sci. USA, 84 (1987), pp. 84988501
+Kraus et al., 1987
+M.H. Kraus, N.C. Popescu, S.C. Amsbaugh, C.R. King
+Over-expression of the EGF receptor-related proto-oncogene erbB-2 in human mammary tumor cell lines by different molecular mechanisms
+EMBO J., 6 (1987), pp. 605610
+Leder et al., 1986
+A. Leder, P.K. Pattengale, A. Kuo, T.A. Stewart, P. Leder
+Consequences of widespread deregulation of the c-myc gene in transgenic mice: multiple neoplasms and normal development
+Cell, 45 (1986), pp. 485495
+Melton et al., 1984
+D.A. Melton, P.A. Kreig, M.R. Rebagliati, T. Maniatis, K. Zinn, M.R. Green
+Efficient in vitro synthesis of biologically active RNA and RNA hybridization probes from plasmids containing a bacteriphage SP6 promoter
+Nucl. Acids Res., 12 (1984), pp. 70357056
+Mulligan and Berg, 1981
+R.C. Mulligan, P. Berg
+Selection for animal cells that express the E. coli gene coding for xanthine-guanine phosphoribosyl transferase
+Proc. Natl. Acad. Sci. USA, 78 (1981), pp. 20722076
+Padhy et al., 1982
+L.C. Padhy, C. Shin, D. Cowing, R. Finkelstein, R.A. Weinberg
+Identification of a phosphoprotein specifically induced by the transforming DNA of rat neuroblastoma
+Cell, 28 (1982), pp. 865871
+Palmiter and Brinster, 1986
+R.D. Palmiter, R.L. Brinster
+Germline transformation of mice
+Annu. Rev. Genetics, 20 (1986), pp. 465499
+Pattengale and Taylor, 1983
+P.K. Pattengale, C.R. Taylor
+Experimental models of lymphoproliferative disease: the mouse as a model for human non-Hodgkins lymphomas related leukemias
+Am. J. Pathol., 113 (1983), pp. 237265
+Quiafe et al., 1987
+C.J. Quiafe, C.A. Pinkert, D.M. Ornitz, R.D. Palmiter, R. Brinster
+Pancreatic neoplasia induced by ras expression in acinar cells of transgenic mice
+Cell, 48 (1987), pp. 10231034
+Quinn et al., 1982
+P. Quinn, C. Barros, D.G. Whittingham
+Preservation of hamster oocytes to assay the fertilizing capacity of human spermatozoa
+J. Reprod. Fert., 66 (1982), pp. 161168
+Rigby et al., 1977
+P.W.J. Rigby, M. Dieckmann, C. Rhodes, P. Berg
+Labeling deoxyribonucleic acid to high, specific activity in vitro by nick-translation with DNA polymerase 1
+J. Mol. Biol., 113 (1977), pp. 237251
+Ruther et al., 1987
+U. Ruther, C. Garber, D. Komitowski, R. Muller, E.F. Wagner
+Deregulated c-fos expression interferes with normal bone development in transgenic mice
+Nature, 325 (1987), pp. 412416
+Schechter et al., 1984
+A.L. Schechter, D.F. Stern, L. Vaidyanathan, S.J. Decker, J.A. Drebin, M.I. Greene, R.A. Weinberg
+The c-neu oncogene: an erbB-related gene encoding a 185,0000-Mw tumour antigen
+Nature, 312 (1984), pp. 513516
+Schechter et al., 1985
+A.L. Schechter, M.C. Hung, L. Vaidyanathan, R.A. Weinberg, T.L. Vang-Feng, V. Francke, A. Ullrich, L. Coussens
+The c-neu gene: an erbB-homologous gene distinct from and unlinked to genes encoding the EGF receptor
+Science, 229 (1985), pp. 976978
+Schoenenberger et al., 1988
+C.A. Schoenenberger, A.C. Andres, B. Groner, M. van der Valk, M. Le Meva, P. gerlinger
+Targeted c-myc expression in mammary glands of transgenic mice induces constitutive milk protein gene transcription
+EMBO J., 7 (1988), pp. 169176
+Semba et al., 1985
+K. Semba, N. Kamata, K. Toyoshima, T. Yamanoto
+A v-erbB related proto-oncogene, c-erbB-2 is distinct from c-erbB-1/epidermal growth factor receptor gene and is amplified in a human salivary gland adenocarcinoma
+Proc. Natl. Acad. Sci. USA, 82 (1985), pp. 64976501
+Shih et al., 1981
+C. Shih, L.C. Padhy, M. Murray, R.A. Weinberg
+Transforming genes of carcinomas and neuroblastomas introduced into mouse fibroblasts
+Nature, 290 (1981), pp. 261624
+Sinn et al., 1987
+E. Sinn, W. Muller, P. Pattengale, I. Tepler, R. Wallace, P. Leder
+Coexpression of MMTV/v-Ha-ras and MMTV/c-myc genes in transgenic mice: synergistic actions of oncogenes in vivo
+Cell, 49 (1987), pp. 465475
+Slamon et al., 1987
+D.J. Slamon, G.M. Clark, S.G. Wong, W.J. Levin, A. Ullrich, W.L. McGuire
+Human breast cancer: correlation of relapse and survival with amplification of HER-2/neu oncogene
+Science, 235 (1987), pp. 177182
+Southern, 1975
+E.M. Southern
+Detection of specific sequences among DNA fragments separated by gel electrophoresis
+J. Mol. Biol., 98 (1975), pp. 503517
+Stern et al., 1986
+D.F. Stern, P.A. Heffernan, R.A. Weinberg
+p185, product of the c-neu proto-oncogene is a receptor-like protein associated with tyrosine kinase activity
+Mol. Cell. Biol., 6 (1986), pp. 17291740
+Stewart et al., 1984
+T.A. Stewart, P.K. Pattengale, P. Leder
+Spontaneous mammary adenocarcinomas in transgenic mice that carry and express MTV/mvc fusion genes
+Cell, 38 (1984), pp. 627637
+Stewart et al., 1988
+T.A. Stewart, P.G. Hollingshead, S. Pitts
+Multiple regulatory domains in the mouse mammary tumor virus long terminal repeat revealed by analysis of fusion genes in transgenic mice
+Mol. Cell. Biol., 8 (1988), pp. 473479
+Thomas, 1980
+P.S. Thomas
+Hybridization of denatured RNA and small DNA fragments transferred to nitrocellulose
+Proc. Natl. Acad. Sci. USA, 77 (1980), pp. 52015205
+van de Vijver et al., 1987
+M. van de Vijver, R. van de Bersselaar, P. Devilee, C. Cornelisse, J. Peterse, R. Nusse
+Amplification of the c-neu (c-erbB-2) oncogene in human mammary tumors is relatively frequent and is often accompanied by amplification of the linked c-erbA oncogene
+Mol. Cell. Biol., 7 (1987), pp. 20192023
+Williams et al., 1988
+R.L. Williams, S.A. Courtneidge, E.F. Wagner
+Embryonic lethalities and endothelial tumors in chimeric mice expressing polyoma virus middle T oncogene
+Cell, 22 (1988), pp. 121131
+Zarbl et al., 1985
+H.S. Zarbl, S. Sukumar, A.V. Arthur, D. Martin-Zanca, M. Barbacid
+Direct mutagenesis of Ha-ras-1 oncogenes by N-nitroso-N-methyl urea during initiation of mammary carcinogenesis in rats
+Nature, 315 (1985), pp. 382385
+Zeller et al., 1987
+R. Zeller, K.D. Bloch, B.S. Williams, R.J. Arceci, C.E. Seidman
+Localized expression of teh atrial natriuretic factor gene during cardiac embryogenesis
+Genes & Development, 1 (1987), pp. 693698
+Zeller et al., 1983
+R. Zeller, T. Nyffenegger, E. DeRobertis
+Nucleocytoplasmic distribution of snRNPs and stockpiled snRNA-binding proteins during oogenesis and early development in Xenopus leavis
+Cell, 32 (1983), pp. 425434
+open in overlay
+Copyright  1988
+ElsevierAbout ScienceDirectRemote accessShopping cartContact and supportTerms and conditionsPrivacy policyCookies are used by this site. For more information, visit the cookies page.Copyright  2016 Elsevier B.V. or its licensors or contributors. ScienceDirect  is a registered trademark of Elsevier B.V.RELX Group
+Close overlay
+Close
+Sign in using your ScienceDirect credentials
+Username:
+Password:
+Remember me
+Not Registered?
+Forgotten username or
+password?
+OpenAthens login
+Login via your institution
+Other institution login
+Remote access activation
+Click here to activate
+Other users also viewed these articles
+Do not show again

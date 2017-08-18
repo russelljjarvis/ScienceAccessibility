@@ -1,0 +1,489 @@
+Regulation of the release of genetically modified organisms - Wikipedia
+Regulation of the release of genetically modified organisms
+From Wikipedia, the free encyclopedia
+Jump to:					navigation, 					search
+For related content, see genetic engineering, genetically modified organism, genetically modified crops, and genetically modified food.
+For related content, see genetically modified food controversies.
+Regulations regarding the release of genetically modified organisms (GMOs) outside the laboratory varies widely by country. Countries such as the United States, Canada, Lebanon and Egypt use substantial equivalence as the starting point when assessing safety, while many countries such as those in the European Union, Brazil and China authorize GMO cultivation on a case-by-case basis. Many countries allow the import of GM food with authorization, but either do not allow its cultivation (Russia, Norway, Israel) or have provisions for cultivation, but no GM products are yet produced (Japan, South Korea). Most countries that do not allow for GMO cultivation do permit research.[1]
+One of the key issues concerning regulators is whether GM products should be labeled. Labeling of GMO products in the marketplace is required in 64 countries.[2] Labeling can be mandatory up to a threshold GM content level (which varies between countries) or voluntary. A study investigating voluntary labeling in South Africa found that 31% of products labeled as GMO-free had a GM content above 1.0%.[3] In Canada and the USA labeling of GM food is voluntary,[4] while in Europe all food (including processed food) or feed which contains greater than 0.9% of approved GMOs must be labelled.[5]
+There is a scientific consensus[6][7][8][9] that currently available food derived from GM crops poses no greater risk to human health than conventional food,[10][11][12][13][14] but that each GM food needs to be tested on a case-by-case basis before introduction.[15][16][17] Nonetheless, members of the public are much less likely than scientists to perceive GM foods as safe.[18][19][20][21] The legal and regulatory status of GM foods varies by country, with some nations banning or restricting them, and others permitting them with widely differing degrees of regulation.[22][23][24][25]
+There is no evidence to support the idea that the consumption of approved GM food has a detrimental effect on human health.[26][27][28] Some scientists and advocacy groups, such as Greenpeace and World Wildlife Fund, have however called for additional and more rigorous testing for GM food.[27]
+Contents
+1 History
+2 Substantial equivalence
+3 By continent
+3.1 Africa
+3.2 Asia
+3.2.1 China
+3.2.2 India
+3.2.2.1 Official Reports on GMO
+3.2.3 Japan
+3.2.4 Philippines
+3.3 Europe
+3.3.1 Labeling and traceability
+3.4 North America
+3.4.1 Canada
+3.4.2 Mexico
+3.4.3 United States
+3.4.3.1 Federal regulation
+3.4.3.2 State regulation
+3.5 South America
+3.6 Oceania
+3.6.1 Australia
+3.6.2 New Zealand
+4 See also
+5 References
+History[edit]
+The development of a regulatory framework concerning genetic engineering began in 1975, at Asilomar, California. The first use of Recombinant DNA (rDNA) technology had just been successfully accomplished by Stanley Cohen and Herbert Boyer two years previously and the scientific community recognized that as well as benefits this technology could also pose some risks.[29] The Asilomar meeting recommended a set of guidelines regarding the cautious use of recombinant technology and any products resulting from that technology.[30] The Asilomar recommendations were voluntary, but in 1976 the US National Institute of Health (NIH) formed a rDNA advisory committee.[31] This was followed by other regulatory offices (the United States Department of Agriculture (USDA), Environmental Protection Agency (EPA) and Food and Drug Administration (FDA)), effectively making all rDNA research tightly regulated in the USA.[32] In 1982 the Organization for Economic Co-operation and Development (OECD) released a report into the potential hazards of releasing genetically modified organisms into the environment as the first transgenic plants were being developed.[33] As the technology improved and genetically modified organisms moved from model organisms to potential commercial products the USA established a committee at the Office of Science and Technology (OSTP) to develop mechanisms to regulate the developing technology.[32] In 1986 the OSTP assigned regulatory approval of genetically modified plants in the US to the USDA, FDA and EPA.[34]
+The basic concepts for the safety assessment of foods derived from GMOs have been developed in close collaboration under the auspices of the Organisation for Economic Co-operation and Development (OECD) and the United Nations' World Health Organisation (WHO) and Food and Agricultural Organisation (FAO). A first joint FAO/WHO consultation in 1990 resulted in the publication of the report Strategies for Assessing the Safety of Foods Produced by Biotechnology in 1991.[35] Building on that, an international consensus was reached by the OECDs Group of National Experts on Safety in Biotechnology, for assessing biotechnology in general, including field testing GM crops.[36] That Group met again in Bergen, Norway in 1992 and reached consensus on principles for evaluating the safety of GM food; its report, The safety evaluation of foods derived by modern technology  concepts and principles was published in 1993.[37] That report recommends conducting the safety assessment of a GM food on a case-by-case basis through comparison to an existing food with a long history of safe use. This basic concept has been refined in subsequent workshops and consultations organized by the OECD, WHO, and FAO, and the OECD in particular has taken the lead in acquiring data and developing standards for conventional foods to be used in assessing substantial equivalence.[38][39] In 2003 the Codex Alimentarius Commission of the FAO/WHO adopted a set of "Principles and Guidelines on foods derived from biotechnology" to help countries coordinate and standardize regulation of GM food to help ensure public safety and facilitate international trade.[40] and updated its guidelines for import and export of food in 2004,[41]
+Substantial equivalence[edit]
+Main article: Substantial equivalence
+"Substantial equivalence" is a starting point for the safety assessment for GM foods that is widely used by national and international agencies - including the Canadian Food Inspection Agency, Japan's Ministry of Health and Welfare and the U.S. Food and Drug Administration, the United Nations Food and Agriculture Organization, the World Health Organization and the OECD.[42]
+A quote from FAO, one of the agencies that developed the concept, is useful for defining it: "Substantial equivalence embodies the concept that if a new food or food component is found to be substantially equivalent to an existing food or food component, it can be treated in the same manner with respect to safety (i.e., the food or food component can be concluded to be as safe as the conventional food or food component)".[43] The concept of substantial equivalence also recognises the fact that existing foods often contain toxic components (usually called antinutrients) and are still able to be consumed safely - in practice there is some tolerable chemical risk taken with all foods, so a comparative method for assessing safety needs to be adopted. For instance, potatoes and tomatoes can contain toxic levels of respectively, solanine and alpha-tomatine alkaloids.[44][45]
+To decide if a modified product is substantially equivalent, the product is tested by the manufacturer for unexpected changes in a limited set of components such as toxins, nutrients, or allergens that are present in the unmodified food. The manufacturer's data is then assessed by a regulatory agency, such as the U.S. Food and Drug Administration. That data, along with data on the genetic modification itself and resulting proteins (or lack of protein), is submitted to regulators. If regulators determine that the submitted data show no significant difference between the modified and unmodified products, then the regulators will generally not require further food safety testing. However, if the product has no natural equivalent, or shows significant differences from the unmodified food, or for other reasons that regulators may have (for instance, if a gene produces a protein that had not been a food component before), the regulators may require that further safety testing be carried out.[37]
+A 2003 review in Trends in Biotechnology identified seven main parts of a standard safety test:[46]
+Study of the introduced DNA and the new proteins or metabolites that it produces;
+Analysis of the chemical composition of the relevant plant parts, measuring nutrients, anti-nutrients as well as any natural toxins or known allergens;
+Assess the risk of gene transfer from the food to microorganisms in the human gut;
+Study the possibility that any new components in the food might be allergens;
+Estimate how much of a normal diet the food will make up;
+Estimate any toxicological or nutritional problems revealed by this data in light of data on equivalent foods;
+Additional animal toxicity tests if there is the possibility that the food might pose a risk.
+There has been discussion about applying new biochemical concepts and methods in evaluating substantial equivalence, such as metabolic profiling and protein profiling. These concepts refer, respectively, to the complete measured biochemical spectrum (total fingerprint) of compounds (metabolites) or of proteins present in a food or crop. The goal would be to compare overall the biochemical profile of a new food to an existing food to see if the new food's profile falls within the range of natural variation already exhibited by the profile of existing foods or crops. However, these techniques are not considered sufficiently evaluated, and standards have not yet been developed, to apply them.[47]
+There are controversies over the definition and application of substantial equivalence. See section in genetically modified food controversies.
+By continent[edit]
+Africa[edit]
+In 2010, after nine years of talks, the Common Market for Eastern and Southern Africa (COMESA) produced a draft policy on GM technology, which was sent to all 19 national governments for consultation in September 2010. Under the proposed policy, new GM crops would be scientifically assessed by COMESA. If the GM crop was deemed safe for the environmental and human health, permission would be granted for the crop to be grown in all 19 member countries, although the final decision would be left to each individual country.[48]
+In 2012, South Africa was the major commercial grower of genetically modified crops in Africa, with smaller amounts grown in Burkina Faso (maize), Egypt (cotton) and Sudan (cotton).[49][50]Kenya passed laws in 2011,[51] and Ghana[52] and Nigeria[53] passed laws in 2012 which allowed the production and importation of GM crops. By 2013 Cameroon, Malawi and Uganda had approved trials of genetically altered crops.[49] A study investigating voluntary labeling in South Africa found that 31% of products labeled GMO-free had a GM content above 1.0%.[3] 2011 studies for Uganda showed that transgenic bananas had a high potential to reduce rural poverty but that urban consumers with a relatively higher income might reject the introduction.[54][55]
+In 2002, Zambia cut off the flow of genetically modified food (mostly maize) from UN's World Food Programme on the basis of the Cartagena Protocol.[56] This left the population without food aid during a famine.[57] In December 2005 the Zambian government changed its mind in the face of further famine and allowed the importation of GM maize.[58] However, the Zambian Minister for Agriculture Mundia Sikatana insisted in 2006, that the ban on genetically modified maize remained, saying "We do not want GM (genetically modified) foods and our hope is that all of us can continue to produce non-GM foods."[59][60]
+Asia[edit]
+India and China are the two largest producers of genetically modified products in Asia.[61] India currently only grows GM cotton, while China produces GM varieties of cotton, poplar, petunia, tomato, papaya and sweet pepper. Cost of enforcement of regulations in India are generally higher, possibly due to the greater influence farmers and small seed firms have on policy makers, while the enforcement of regulations was more effective in China.[62] Other Asian countries that grew GM crops in 2011 were Pakistan, the Philippines and Myanmar.[61][63] GM crops were approved for commercialisation in Bangladesh in 2013 and in Vietnam and Indonesia in 2014.[64]
+China[edit]
+GM crops in China go through three phases of field trials (pilot field testing, environmental release testing, and preproduction testing) before they are submitted to the Office of Agricultural Genetic Engineering Biosafety Administration (OAGEBA) for assessment.[65] Producers must apply to OAGEBA at each stage of the field tests. The Chinese Ministry of Science and Technology developed the first biosafety regulations for GM products in 1993 and they were updated in 2001.[66] The 75 member National Biosafety Committee evaluates all applications, although OAGEBA has the final decision. Most of the National Biosafety Committee are involved in biotechnology leading to criticisms that they do not represent a wide enough range of public concerns.[65]
+India[edit]
+The release of transgenic crops in India is governed by the Indian Environment Protection Act, which was enacted in 1986. The Institutional Biosafety Committee (IBSC), Review Committee on Genetic Manipulation (RCGM) and Genetic Engineering Approval Committee (GEAC) all review any genetically modified organism to be released, with transgenic crops also needing permission from the Ministry of Agriculture.[67] India regulators cleared the Bt brinjal, a genetically modified eggplant, for commercialisation in October 2009. Following opposition from some scientists, farmers and environmental groups a moratorium was imposed on its release in February 2010.[68][69]
+Official Reports on GMO[edit]
+There have been four official reports on GMO in India till August 2013:
+The Jairam Ramesh Report - February 2010, imposing an indefinite moratorium on Bt Brinjal [70]
+The Sopory Committee Report - August 2012 [71]
+The Parliamentary Standing Committee (PSC) Report on GM crops - August 2012[72]
+Final Report of The Technical Expert Committee established by Supreme Court - July 2013[73]
+Japan[edit]
+Two laws regulate food safety and food quality in Japan, the Food Sanitation Law passed in 1947 and the Law Concerning Standardization and Proper Labeling of Agricultural and Forestry Products passed in 1950. The Food Sanitation Law has been amended and updated many times; an amendment dealing with pre-market approval and labeling of GMOs was passed in 2000 and came into effect in 2001. Japan passed laws to implement the Cartagena Protocol on Biosafety in September 2003 which came into effect in February 2004 - the Law Concerning the Conservation and Sustainable Use of Biological Diversity through Regulations on the Use of Living Modified Organisms (Law No. 97 of 2003).[74][75]:6
+Authority for approvals for various uses of genetically modified organisms is divided in Japan. The Ministry of the Environment has final approval for all uses of GMOs, but crops for commercial use and live vaccines for animals first go through the Ministry of Agriculture, Forestry and Fisheries; viruses for gene therapy and other medical applications first go through the Ministry of Health, Labor and Welfare; field trials of GM crops and recominant DNA used in biotechnology research first goes through the Ministry of Education, Culture, Sports, Science and Technology; and uses in the process of production of industrial enzymes, etc. goes through the Ministry of Economy, Trade and Industry.[75]:8
+Japan has not approved any commodity GM crops to be grown in Japan, but does allow import of agricultural products made from GM crops and food made of imported GM ingredients.[74] Japan does however allow cultivation of GM flowers (e.g. Blue roses).[75]:3
+GM foods must undergo a safety assessment prior to being awarded certification for distribution to the domestic market. The Food Safety Commission (FSC) performs food and feed safety risk assessments.[76]
+Certain GM food must be labeled, but this is limited to designated genetically modified agricultural products, which are soybean, corn, potato, rapeseed, cottonseed, alfalfa and beet, and is limited to 32 processed foods which contain soybean, corn and potato, alfalfa and beet, in which recombinant DNA or the resulting protein still exists even after processing. However, processed food in which recombinant DNA or protein is dissolved in or removed during processing, such as soy sauce, soybean oil, corn flakes, millet jelly, corn oil, rapeseed oil, cottonseed oil, and others, do not have to be labeled.[74]
+Japan does not require traceability, and allows negative labeling ("GMO-free" and the like).[74]
+Philippines[edit]
+The Philippines bans all GMOs recently overturning existing Department of Agriculture regulations. A petition filed on May 17, 2013 by environmental group Greenpeace Southeast Asia and farmer-scientist coalition Masipag (Magsasaka at Siyentipiko sa Pagpapaunlad ng Agrikultura) asked the appellate court to stop the planting of Bt eggplant in test fields, saying the impacts of such an undertaking to the environment, native crops and human health are still unknown. The Court of Appeals granted the petition, citing the precautionary principle stating "when human activities may lead to threats of serious and irreversible damage to the environment that is scientifically plausible but uncertain, actions shall be taken to avoid or diminish the threat." [77] Respondents filed a motion for reconsideration in June 2013 and on September 20, 2013 the Court of Appeals chose to uphold their May decision saying the bt talong field trials violate the peoples constitutional right to a "balanced and healthful ecology." [78][79] The Supreme Court on Tuesday, December 8, 2015 permanently stopped the field testing for Bt (Bacillus thuringiensis) talong (eggplant), upholding the decision of the Court of Appeals which stopped the field trials for the genetically modified eggplant.[80] The Philippines Supreme Court also took the unprecedented step and invalidated the Department of Agriculture administrative order allowing the field testing, propagation and commercialization, and importation of GMOs.[81]
+Europe[edit]
+See also: Regulation of genetically modified organisms in the European Union and Regulation of genetically modified organisms in Switzerland
+Until the 1990s, Europe's regulation was less strict than in the United States, one turning point being cited as the export of the United States' first GM-containing soy harvest in 1996. The GM soy made up about 2% of the total harvest at the time, and EuroCommerce and European food retailers required that it be separated.[82] In 1998, the use of MON810, a Bt expressing maize conferring resistance to the European corn borer, was approved for commercial cultivation in Europe. Shortly thereafter, the EU enacted a de facto moratorium on new approvals of GMOs pending new regulatory laws passed in 2003.
+Those new laws provided the European Union (EU) with possibly the most stringent GMO regulations in the world.[5] All GMOs, along with irradiated food, are considered "new food" and subject to extensive, case-by-case, science based food evaluation by the European Food Safety Authority (EFSA). The criteria for authorization fall in four broad categories: "safety," "freedom of choice," "labelling," and "traceability."[83] The EFSA reports to the European Commission who then draft a proposal for granting or refusing the authorisation. This proposal is submitted to the Section on GM Food and Feed of the Standing Committee on the Food Chain and Animal Health and if accepted it will be adopted by the EC or passed on to the Council of Agricultural Ministers. Once in the Council it has three months to reach a qualified majority for or against the proposal, if no majority is reached the proposal is passed back to the EC who will then adopt the proposal.[5][84] However, even after authorization, individual EU member states can ban individual varieties under a 'safeguard clause' if there are "justifiable reasons" that the variety may cause harm to humans or the environment. The member state must then supply sufficient evidence that this is the case.[85] The Commission is obliged to investigate these cases and either overturn the original registrations or request the country to withdraw its temporary restriction. The laws of the EU also stipulated that member nations establish coexistence regulations.[86] In many cases national coexistence regulations include minimum distances between fields of GM crops and non-GM crops. The distances for GM maize from non-GM maize for the six largest biotechnology countries are; France: 50 meters, Britain: 110 meters for grain maize and 80 for silage maize, Netherlands: 25 meters in general and 250 for organic or GM-free fields, Sweden: 1550 meters, Finland: data not available, and Germany: 150 meters and 300 from organic fields.[87] Larger minimum distance requirements discriminate against adoption of GM crops by smaller farms.[88][89][90]
+In 2006, the World Trade Organization concluded that the EU moratorium, which had been in effect from 1998 to 2004,[91] had violated international trade rules.[92][93] The moratorium had not affected previously approved crops. The only crop authorised for cultivation before the moratorium was Monsanto's MON 810. The next approval for cultivation was the Amflora potato for industrial applications in 2010[94][95] which was grown in Germany, Sweden and the Czech Republic that year.[96]
+The slow pace of approval has been criticized as endangering European food safety[97][98] although as of 2012, the EU has authorized the use of 48 genetically modified organisms. Most of these were for use in animal feed (it was reported in 2012 that the EU imports about 30 million tons a year of GM crops for animal consumption.[99]), food or food additives. 26 of these were varieties of maize.[100] In July 2012 the EU gave approval for an Irish trial cultivation of potatoes resistant to the blight that caused the Great Irish Famine.[101]
+The safeguard clause mentioned above has been applied by many member states in various circumstances, and in April 2011 there were 22 active bans in place across six member states: Austria, France, Germany, Luxembourg, Greece, and Hungary.[102] However, on review many of these have been considered scientifically unjustified.[85][103]
+In January 2005, the Hungarian government announced a ban on importing and planting of genetic modified maize seeds, which was subsequently authorized by the EU.
+In February 2008 the French government used the safeguard clause to ban the cultivation of MON810 after Senator Jean-Franois Le Grand, chairman of a committee set up to evaluate biotechnology, said there were "serious doubts" about the safety of the product[104] (although this ban was declared illegal in 2011 by the European Court of Justice and the French Conseil d'tat[105]). The French farm ministry reinstated the ban in 2012, but this was rejected by the EFSA.[106]
+In 2009 German Federal Minister Ilse Aigner announced an immediate halt to cultivation and marketing of MON810 maize under the safeguard clause.[107]
+In March 2010, Bulgaria imposed a complete ban on genetically modified crop growing either commercially or for trials.[108] The cabinet of Boyko Borisov initially imposed a 5-year moratorium, but later extended it to a permanent ban after widespread public protests against the introduction of genetically modified crops in the country. And in recent years, France and several other European countries banned cultivation of Monsanto's MON-810 corn and similar genetically modified food crops.
+Since January 2013 Poland's government placed a ban on Monsanto's GM corn, MON 810 and has launched a communication campaign with farmers', announcing they will now be strictly monitoring farms for GM corn crops. Poland is the eighth EU member to ban the production of GMOs although they have been approved by European Food Safety Authority. Europe is not against the use of GM crops when it comes to laboratory research, they are working to regulate the field.[109]
+In 2012, the European Food Safety Authority (EFSA) Panel on Genetically Modified Organisms (GMO) released a "Scientific opinion addressing the safety assessment of plants developed through cisgenesis and intragenesis" in a response to a request from the European Commission.[110] The opinion was, that while "the frequency of unintended changes may differ between breeding techniques and their occurrence cannot be predicted and needs to be assessed case by case," "similar hazards can be associated with cisgenic and conventionally bred plants, while novel hazards can be associated with intragenic and transgenic plants." In other words, cisgenic genetic engineering approaches should be considered similar in risk to conventional breeding approaches, each of which are less risky than transgenic approaches.
+In 2014 a panel of experts set up by the UK Biotechnology and Biological Sciences Research Council argued that "A regulatory system based on the characteristics of a novel crop, by whatever method it has been produced, would provide a more effective and robust regulation than current EU processes , which consider new crop varieties differently depending on the method used to produce them." They said that new forms of "genome editing" allow targeting specific sites and making precise changes in the DNA of crops. In the future it would become increasingly difficult if not impossible to tell which method has been used (conventional breeding or genetic engineering) to produce a novel crop. They proposed that existing EU regulatory system should be replaced with a more logical system like that used for new medicines.[111]
+In 2015 Germany, Poland, France, Scotland and several other member states opted out of cultivating GMO crops in their territory.[112]
+Labeling and traceability[edit]
+The regulations concerning the import and sale of GMOs for human and animal consumption grown outside the EU involve providing freedom of choice to the farmers and consumers.[113] All food (including processed food) or feed which contains greater than 0.9% of approved GMOs must be labelled. Twice GMOs unapproved by the EC have arrived in the EU and been forced to return to their port of origin.[5] The first was in 2006 when a shipment of rice from America containing an experimental GMO variety (LLRice601) not meant for commercialisation arrived at Rotterdam. The second in 2009 when trace amounts of a GMO maize approved in the US were found in a "non-GM" soy flour cargo.[5]
+The coexistence has raised significant concern in many European countries and so EU law also requires that all GM food be traceable to its origin, and that all food with GM content greater than 0.9% be labelled.[114] Due to high demand from European consumers for freedom of choice between GM and non-GM foods. EU regulations require measures to avoid mixing of foods and feed produced from GM crops and conventional or organic crops, which can be done via isolation distances or biological containment strategies.[115][116] (Unlike the US, European countries require labeling of GM food.) European research programs such as Co-Extra, Transcontainer, and SIGMEA are investigating appropriate tools and rules for traceability. The OECD has introduced a "unique identifier" which is given to any GMO when it is approved, which must be forwarded at every stage of processing.[117] Such measures are generally not used in North America because they are very costly and the industry admits of no safety-related reasons to employ them.[118] The EC has issued guidelines to allow the co-existence of GM and non-GM crops through buffer zones (where no GM crops are grown).[115] These are regulated by individual countries and vary from 15 meters in Sweden to 800 meters in Luxembourg.[5] All food (including processed food) or feed which contains greater than 0.9% of approved GMOs must be labelled.
+A 5-digit price look-up code beginning with the digit 8 indicates genetically modified food.[119] However the absence of the "8" does not necessarily indicate the food is not genetically modified since no retailer to date has elected to use the digit in voluntarily labeling genetically modified foods.[120]
+North America[edit]
+See also: Genetic engineering in the United States
+As of 2002[update] the United States, Canada, and Mexico did not require labeling of genetically modified foods.[121]
+Canada[edit]
+Mainland Canada is one of the world's largest producers of GM canola[122] and also grows GM maize, soybean and sugarbeet.[50] Health Canada, under the Food and Drugs Act, and the Canadian Food Inspection Agency[123] are responsible for evaluating the safety and nutritional value of genetically modified foods. Environmental assessments of biotechnology-derived plants are carried out by the CFIA's Plant Biosafety Office (PBO).[124] The Canadian regulatory system is based on whether a product has novel features regardless of method of origin. In other words, a product is regulated as GM if it carries some trait not previously found in the species whether it was generated using traditional breeding methods (e.g. selective breeding, cell fusion, mutation breeding) or genetic engineering.[125][126][127] Canadian law requires that manufacturers and importers submit detailed scientific data to Health Canada for safety assessments for approval. This data includes: information on how the GM plant was developed; nucleic acid data that characterizes the genetic change; composition and nutritional data of the novel food compared to the original non-modified food' potential for new toxins; and potential for being an allergen. A decision is then made whether to approve the product for release along with any restrictions or requirements. Labeling of foods as products of Genetic Engineering or not products of Genetic Engineering is voluntary.[4][128] The Canadian regulations were reviewed by the Canadian Biotechnology Advisory Committee between 1999 and 2003, with the conclusion that the current level of regulation was satisfactory. The committee was accused by environmental and citizen groups of not representing the full spectrum of public interests by only having one member of the board of 20 representing non-governmental organisations and for being too closely aligned to industry groups.[129]
+Mexico[edit]
+In February 2005, after consulting the Mexican Academy of Sciences, Mexico's senate passed a law allowing to plant and sell genetically modified cotton and soybean.[130] The law requires all genetically modified products to be labelled according to guidelines issued by the Mexican Ministry of Health. In 2009, the government enacted statutory provisions for the regulation of genetically modified maize.[131] Mexico is the center of diversity for maize and concerns had been raised about the impact genetically modified maize could have on local strains.[132][133] In 2013, a federal judge ordered Mexicos SAGARPA (Secretara de Agricultura, Ganadera, Desarrollo Rural, Pesca, y Alimentacin), which is Mexicos Secretary of Agriculture, and SEMARNAT (Secretara de Medio Ambiente y Recursos Naturales), equivalent of the EPA, to temporarily halt any new GMO corn permits, accepting a lawsuit brought by opponents of the crop.[134]
+United States[edit]
+Federal regulation[edit]
+The USA is the largest commercial grower of genetically modified crops in the world.[135]
+United States regulatory policy is governed by the Coordinated Framework for Regulation of Biotechnology[136] This regulatory policy framework that was developed under the Presidency of Ronald Reagan to ensure safety of the public and to ensure the continuing development of the fledgling biotechnology industry without overly burdensome regulation.[137] The policy as it developed had three tenets: "(1) U.S. policy would focus on the product of genetic modification (GM) techniques, not the process itself, (2) only regulation grounded in verifiable scientific risks would be tolerated, and (3) GM products are on a continuum with existing products and, therefore, existing statutes are sufficient to review the products."[137] In 2015 the Obama administration announced that it would update the way the government regulated genetically modified crops.[138]
+For a genetically modified organism to be approved for release, it must be assessed under the Plant Protection Act by the Animal and Plant Health Inspection Service (APHIS) agency within the US Department of Agriculture (USDA) and may also be assessed by the Food and Drug Administration (FDA) and the Environmental protection agency (EPA), depending on the intended use of the organism. The USDA evaluates the plant's potential to become a weed. The FDA has a voluntary consultation process with the developers of genetically engineered plants. The Federal Food, Drug, and Cosmetic Act, which outlines FDA's responsibilities, does not require pre-market clearance of food, including genetically modified food plants.[139][140] The EPA regulates genetically modified plants with pesticide properties, as well as agrochemical residues.[141] Most genetically modified plants are reviewed by at least two of the agencies, with many subject to all three.[32][142] Within the organization are departments that regulate different areas of GM food including, the Center for Food Safety and Applied Nutrition (CFSAN,) and the Center for Biologics Evaluation and Research (CBER).[141] As of 2008, all developers of genetically modified crops in the US had made use of the voluntary process.[143] Final approval can still be denied by individual counties within each state. In 2004, Mendocino County, California became the first county to impose a ban on the "Propagation, Cultivation, Raising, and Growing of Genetically Modified Organisms", the measure passing with a 57% majority.[144] In May, 2014 Jackson and Josephine Counties in Southern Oregon passed initiatives similar to that passed by Mendocino County; both passing by 2 to 1 margins.[145]
+Several laws govern the US regulatory agencies. These laws are statutes the agencies review when determining the safety of a particular GM food. These laws include:[141]
+The Federal Insecticide, Fungicide, and Rodenticide Act (FIFRA) (EPA);
+The Toxic Substances Control Act (TSCA) (EPA);
+The Federal Food, Drug, and Cosmetic Act (FFDCA) (FDA and EPA);
+The Plant Protection Act (PPA) (USDA);
+The Virus-Serum-Toxin Act (VSTA) (USDA);
+The Public Health Service Act (PHSA)(FDA);
+The Dietary Supplement Health and Education Act (DSHEA) (FDA)
+The Meat Inspection Act (MIA)(USDA);
+The Poultry Products Inspection Act (PPIA) (USDA);
+The Egg Products Inspection Act (EPIA) (USDA); and
+The National Environmental Protection Act (NEPA).
+State regulation[edit]
+Several states have passed regulations concerning labelling of GM food; Connecticut passed a GMO labeling bill in May 2013, but the bill will only be triggered after four other states enact similar legislation.[146] On January 9, 2014, Maines governor signed a bill requiring labeling for foods made with GMO's, with a similar triggering mechanism as Connecticut's bill.[147] In May 2014 Vermont passed a law requiring labeling of food containing ingredients derived from genetically modified organisms.[148][149] A federal judge ruled Maui's GMO ban invalid.[150]
+South America[edit]
+Brazil and Argentina are the 2nd and 3rd largest producers of GM food behind the USA.[50]
+The Argentine government was one of the first to accept GM food. Assessment of GM products for release is provided by the National Agricultural Biotechnology Advisory Committee (environmental impact), the National Service of Health and Agrifood Quality (food safety) and the National Agribusiness Direction (effect on trade), with the final decision made by the Secretariat of Agriculture, Livestock, Fishery and Food.[151] The government is looking to tighten the current law which allows farmers to keep seed without paying royalties in a bid to encourage more private investment.[152]
+In Brazil the National Biosafety Technical Commission is responsible for assessing environmental and food safety and prepares guidelines for transport, importation and field experiments involving GM products. The Council of Ministers evaluates the commercial and economical issues with release.[151] The National Biosafety Technical Commission has 27 members and includes 12 scientists, 9 ministerial representatives and 6 other specialists.
+Honduras,[153] Costa Rica,[154] Colombia,[155] Bolivia,[156] Paraguay,[157] Chile,[158] and Uruguay[159] also allow GM crops to be grown.
+Venezuela banned genetically modified seeds in 2004,[160] in 2008, Ecuador prohibited genetically engineered crops and seeds in its 2008 Constitution, approved by 64% of the population in a referendum[161] (although Ecuadorian President Rafael Correa said in 2012 that this was "a mistake".[162] Peru has banned transgenic crops.[162]
+Oceania[edit]
+Malaysia, New Zealand, and Australia require labeling so consumers can exercise choice between foods that have genetically modified, conventional or organic origins.[163]
+Australia[edit]
+Genetic engineering in Australia was originally (since 1987) overseen by the Genetic Manipulation Advisory Committee, before the Office of the Gene Technology Regulator (OGTR) and Food Standards Australia New Zealand took over in 2001.[164][165] The OTGR is a Commonwealth Government Authority within the Department of Health and Ageing and reports directly to Parliament through a Ministerial Council on Gene Technology and has legislative powers.[164][166] It was established as part of the Gene Technology Act 2003 and operates according to the Gene Technology Regulations 2001. The OGTR reports directly to Parliament through a Ministerial Council on Gene Technology and has legislative powers.[164][166] The OGTR decides on license applications for the release of all genetically modified organisms, while regulation is provided by the Therapeutic Goods Administration for GM medicines or Food Standards Australia New Zealand for GM food. The individual state governments are then able to assess the impact of release on markets and trade and apply further legislation to control approved genetically modified products.[165]
+Genetically modified cotton, canola, and carnations are grown in Australia.[167][168] Genetically modified cotton has been grown commercially in New South Wales and Queensland since 1996.[169] GM canola was approved in 2003[170] and was first grown in 2008[171] and was first approved in Western Australia in 2010.[172]
+In 2011 genetically modified plants were grown in all states except South Australia and Tasmania, who have extended their moratoriums until 2019 and 2014.[173] The Queensland and Northern Territory Governments have not implemented any further legislation beyond the national level, but several other states placed bans on planting certain GM crops.[165] In 2007 the New South Wales government extended a blanket moratorium on GM food crops until 2011, but allowed groups to apply for exemptions. New South Wales approved GM Canola for commercial cultivation in 2008, while the Victorian government let the moratorium on GM Canola expire in 2007.[169] Western Australia passed the Genetically Modified Crops Free Areas Act in 2003 and was declared a GM free area in 2004. In 2008 an exception was made for the commercial cultivation of GM cotton in the Ord River Irrigation Areas.[173] Trials of GM canola were carried out in 2003 and in 2010 the Western Australian government allowed the commercialisation of GM canola.[170]
+New Zealand[edit]
+As of 2004[update] no genetically modified food was grown in New Zealand, and no medicines containing live genetically modified organisms have been approved for use.[174] However, medicines manufactured using genetically modified organisms that do not contain live organisms have been approved for sale, and imported foods with genetically modified components are sold. In 2000 the Government appointed a Royal Commission to report on issues relating to genetically modified organisms (GMOs). The Report of the Royal Commission on Genetic Modification, released in July 2001, concluded that New Zealand should keep its options open with regard to genetic engineering and to proceed carefully in order to minimise and manage any risks. Field trials have been carried out with GM pine trees and brassicas.[175][176] Food Standards Australia New Zealand (FSANZ) must approve any food produced from GM crops, or made using genetically engineered enzymes, before it can be marketed in Australia or New Zealand. FSANZ makes a list of such approvals available on its website.[177]
+See also[edit]
+Genetic engineering
+Genetically modified crops
+Genetically modified food
+Genetically modified food controversies
+Genetically modified organisms
+References[edit]
+^ http://www.loc.gov/law/help/restrictions-on-gmos/
+^ Hallenbeck, Terri (2014-04-27). "How GMO labeling came to pass in Vermont". Burlington Free Press. Retrieved 2014-05-28.
+^ a b Gerda M. Botha and Christopher D. Viljoen (2009) "South Africa: A case study for voluntary GM labelling" Food Chemistry 112(4):10601064 [1]
+^ a b The Regulation of Genetically Modified Foods
+^ a b c d e f John Davison (2010)"GM plants: Science, politics and EC regulations" Plant Science 178(2):9498 [2]
+^ Nicolia, Alessandro; Manzo, Alberto; Veronesi, Fabio; Rosellini, Daniele (2013). "An overview of the last 10 years of genetically engineered crop safety research" (PDF). Critical Reviews in Biotechnology: 112. doi:10.3109/07388551.2013.823595. We have reviewed the scientific literature on GE crop safety for the last 10 years that catches the scientific consensus matured since GE plants became widely cultivated worldwide, and we can conclude that the scientific research conducted so far has not detected any significant hazard directly connected with the use of GM crops.
+The literature about Biodiversity and the GE food/feed consumption has sometimes resulted in animated debate regarding the suitability of the experimental designs, the choice of the statistical methods or the public accessibility of data. Such debate, even if positive and part of the natural process of review by the scientific community, has frequently been distorted by the media and often used politically and inappropriately in anti-GE crops campaigns.
+^ "State of Food and Agriculture 20032004. Agricultural Biotechnology: Meeting the Needs of the Poor. Health and environmental impacts of transgenic crops". Food and Agriculture Organization of the United Nations. Retrieved February 8, 2016. Currently available transgenic crops and foods derived from them have been judged safe to eat and the methods used to test their safety have been deemed appropriate. These conclusions represent the consensus of the scientific evidence surveyed by the ICSU (2003) and they are consistent with the views of the World Health Organization (WHO, 2002). These foods have been assessed for increased risks to human health by several national regulatory authorities (inter alia, Argentina, Brazil, Canada, China, the United Kingdom and the United States) using their national food safety procedures (ICSU). To date no verifiable untoward toxic or nutritionally deleterious effects resulting from the consumption of foods derived from genetically modified crops have been discovered anywhere in the world (GM Science Review Panel). Many millions of people have consumed foods derived from GM plants - mainly maize, soybean and oilseed rape - without any observed adverse effects (ICSU).
+^ Ronald, Pamela (May 5, 2011). "Plant Genetics, Sustainable Agriculture and Global Food Security". Genetics. 188: 1120. doi:10.1534/genetics.111.128553. There is broad scientific consensus that genetically engineered crops currently on the market are safe to eat. After 14 years of cultivation and a cumulative total of 2 billion acres planted, no adverse health or environmental effects have resulted from commercialization of genetically engineered crops (Board on Agriculture and Natural Resources, Committee on Environmental Impacts Associated with Commercialization of Transgenic Plants, National Research Council and Division on Earth and Life Studies 2002). Both the U.S. National Research Council and the Joint Research Centre (the European Union's scientific and technical research laboratory and an integral part of the European Commission) have concluded that there is a comprehensive body of knowledge that adequately addresses the food safety issue of genetically engineered crops (Committee on Identifying and Assessing Unintended Effects of Genetically Engineered Foods on Human Health and National Research Council 2004; European Commission Joint Research Centre 2008). These and other recent reports conclude that the processes of genetic engineering and conventional breeding are no different in terms of unintended consequences to human health and the environment (European Commission Directorate-General for Research and Innovation 2010).
+^ But see also:
+Domingo, Jos L.; Bordonaba, Jordi Gin (2011). "A literature review on the safety assessment of genetically modified plants" (PDF). Environment International. 37: 734742. doi:10.1016/j.envint.2011.01.003. In spite of this, the number of studies specifically focused on safety assessment of GM plants is still limited. However, it is important to remark that for the first time, a certain equilibrium in the number of research groups suggesting, on the basis of their studies, that a number of varieties of GM products (mainly maize and soybeans) are as safe and nutritious as the respective conventional non-GM plant, and those raising still serious concerns, was observed. Moreover, it is worth mentioning that most of the studies demonstrating that GM foods are as nutritional and safe as those obtained by conventional breeding, have been performed by biotechnology companies or associates, which are also responsible of commercializing these GM plants. Anyhow, this represents a notable advance in comparison with the lack of studies published in recent years in scientific journals by those companies.
+Krimsky, Sheldon (2015). "An Illusory Consensus behind GMO Health Assessment" (PDF). Science, Technology, & Human Values: 132. doi:10.1177/0162243915598381. I began this article with the testimonials from respected scientists that there is literally no scientific controversy over the health effects of GMOs. My investigation into the scientific literature tells another story.
+And contrast:
+Panchin, Alexander Y.; Tuzhikov, Alexander I. (January 14, 2016). "Published GMO studies find no evidence of harm when corrected for multiple comparisons". Critical Reviews in Biotechnology. doi:10.3109/07388551.2015.1130684. ISSN0738-8551. Here, we show that a number of articles some of which have strongly and negatively influenced the public opinion on GM crops and even provoked political actions, such as GMO embargo, share common flaws in the statistical evaluation of the data. Having accounted for these flaws, we conclude that the data presented in these articles does not provide any substantial evidence of GMO harm.
+The presented articles suggesting possible harm of GMOs received high public attention. However, despite their claims, they actually weaken the evidence for the harm and lack of substantial equivalency of studied GMOs. We emphasize that with over 1783 published articles on GMOs over the last 10 years it is expected that some of them should have reported undesired differences between GMOs and conventional crops even if no such differences exist in reality.
+and
+Yang, Y.T.; Chen, B. (2016). "Governing GMOs in the USA: science, law and public health". Journal of the Science of Food and Agriculture. 96: 18511855. doi:10.1002/jsfa.7523. It is therefore not surprising that efforts to require labeling and to ban GMOs have been a growing political issue in the USA (citing Domingo and Bordonaba, 2011).
+Overall, a broad scientific consensus holds that currently marketed GM food poses no greater risk than conventional food... Major national and international science and medical associations have stated that no adverse human health effects related to GMO food have been reported or substantiated in peer-reviewed literature to date.
+Despite various concerns, today, the American Association for the Advancement of Science, the World Health Organization, and many independent international science organizations agree that GMOs are just as safe as other foods. Compared with conventional breeding techniques, genetic engineering is far more precise and, in most cases, less likely to create an unexpected outcome.
+^ "Statement by the AAAS Board of Directors On Labeling of Genetically Modified Foods" (PDF). American Association for the Advancement of Science. October 20, 2012. Retrieved February 8, 2016. The EU, for example, has invested more than 300 million in research on the biosafety of GMOs. Its recent report states: "The main conclusion to be drawn from the efforts of more than 130 research projects, covering a period of more than 25 years of research and involving more than 500 independent research groups, is that biotechnology, and in particular GMOs, are not per se more risky than e.g. conventional plant breeding technologies." The World Health Organization, the American Medical Association, the U.S. National Academy of Sciences, the British Royal Society, and every other respected organization that has examined the evidence has come to the same conclusion: consuming foods containing ingredients derived from GM crops is no riskier than consuming the same foods containing ingredients from crop plants modified by conventional plant improvement techniques.
+Pinholster, Ginger (October 25, 2012). "AAAS Board of Directors: Legally Mandating GM Food Labels Could "Mislead and Falsely Alarm Consumers"". American Association for the Advancement of Science. Retrieved February 8, 2016.
+^ "A decade of EU-funded GMO research (20012010)" (PDF). Directorate-General for Research and Innovation. Biotechnologies, Agriculture, Food. European Commission, European Union. 2010. doi:10.2777/97784. ISBN978-92-79-16344-9. Retrieved February 8, 2016.
+^ "AMA Report on Genetically Modified Crops and Foods (online summary)". American Medical Association. January 2001. Retrieved March 19, 2016. A report issued by the scientific council of the American Medical Association (AMA) says that no long-term health effects have been detected from the use of transgenic crops and genetically modified foods, and that these foods are substantially equivalent to their conventional counterparts. (from online summary prepared by ISAAA)" "Crops and foods produced using recombinant DNA techniques have been available for fewer than 10 years and no long-term effects have been detected to date. These foods are substantially equivalent to their conventional counterparts. (from original report by AMA: [3])
+"REPORT 2 OF THE COUNCIL ON SCIENCE AND PUBLIC HEALTH (A-12): Labeling of Bioengineered Foods" (PDF). American Medical Association. 2012. Retrieved March 19, 2016. Bioengineered foods have been consumed for close to 20 years, and during that time, no overt consequences on human health have been reported and/or substantiated in the peer-reviewed literature.
+^ "Restrictions on Genetically Modified Organisms: United States. Public and Scholarly Opinion". Library of Congress. June 9, 2015. Retrieved February 8, 2016. Several scientific organizations in the US have issued studies or statements regarding the safety of GMOs indicating that there is no evidence that GMOs present unique safety risks compared to conventionally bred products. These include the National Research Council, the American Association for the Advancement of Science, and the American Medical Association. Groups in the US opposed to GMOs include some environmental organizations, organic farming organizations, and consumer organizations. A substantial number of legal academics have criticized the US's approach to regulating GMOs.
+^ "Genetically Engineered Crops: Experiences and Prospects". The National Academies of Sciences, Engineering, and Medicine (US). 2016. p.149. Retrieved May 19, 2016. Overall finding on purported adverse effects on human health of foods derived from GE crops: On the basis of detailed examination of comparisons of currently commercialized GE with non-GE foods in compositional analysis, acute and chronic animal toxicity tests, long-term data on health of livestock fed GE foods, and human epidemiological data, the committee found no differences that implicate a higher risk to human health from GE foods than from their non-GE counterparts.
+^ "Frequently asked questions on genetically modified foods". World Health Organization. Retrieved February 8, 2016. Different GM organisms include different genes inserted in different ways. This means that individual GM foods and their safety should be assessed on a case-by-case basis and that it is not possible to make general statements on the safety of all GM foods.
+GM foods currently available on the international market have passed safety assessments and are not likely to present risks for human health. In addition, no effects on human health have been shown as a result of the consumption of such foods by the general population in the countries where they have been approved. Continuous application of safety assessments based on the Codex Alimentarius principles and, where appropriate, adequate post market monitoring, should form the basis for ensuring the safety of GM foods.
+^ Haslberger, Alexander G. (2003). "Codex guidelines for GM foods include the analysis of unintended effects". Nature Biotechnolgy. 21: 739741. doi:10.1038/nbt0703-739. These principles dictate a case-by-case premarket assessment that includes an evaluation of both direct and unintended effects.
+^ Some medical organizations, including the British Medical Association, advocate further caution based upon the precautionary principle:
+"Genetically modified foods and health: a second interim statement" (PDF). British Medical Association. March 2004. Retrieved March 21, 2016. In our view, the potential for GM foods to cause harmful health effects is very small and many of the concerns expressed apply with equal vigour to conventionally derived foods. However, safety concerns cannot, as yet, be dismissed completely on the basis of information currently available.
+When seeking to optimise the balance between benefits and risks, it is prudent to err on the side of caution and, above all, learn from accumulating knowledge and experience. Any new technology such as genetic modification must be examined for possible benefits and risks to human health and the environment. As with all novel foods, safety assessments in relation to GM foods must be made on a case-by-case basis.
+Members of the GM jury project were briefed on various aspects of genetic modification by a diverse group of acknowledged experts in the relevant subjects. The GM jury reached the conclusion that the sale of GM foods currently available should be halted and the moratorium on commercial growth of GM crops should be continued. These conclusions were based on the precautionary principle and lack of evidence of any benefit. The Jury expressed concern over the impact of GM crops on farming, the environment, food safety and other potential health effects.
+The Royal Society review (2002) concluded that the risks to human health associated with the use of specific viral DNA sequences in GM plants are negligible, and while calling for caution in the introduction of potential allergens into food crops, stressed the absence of evidence that commercially available GM foods cause clinical allergic manifestations. The BMA shares the view that that there is no robust evidence to prove that GM foods are unsafe but we endorse the call for further research and surveillance to provide convincing evidence of safety and benefit.
+^ Funk, Cary; Rainie, Lee (January 29, 2015). "Public and Scientists' Views on Science and Society". Pew Research Center. Retrieved February 24, 2016. The largest differences between the public and the AAAS scientists are found in beliefs about the safety of eating genetically modified (GM) foods. Nearly nine-in-ten (88%) scientists say it is generally safe to eat GM foods compared with 37% of the general public, a difference of 51 percentage points.
+^ Marris, Claire (2001). "Public views on GMOs: deconstructing the myths" (PDF). EMBO Reports. 2: 545548. doi:10.1093/embo-reports/kve142.
+^ Final Report of the PABE research project (December 2001). "Public Perceptions of Agricultural Biotechnologies in Europe". Commission of European Communities. Retrieved February 24, 2016.
+^ Scott, Sydney E.; Inbar, Yoel; Rozin, Paul (2016). "Evidence for Absolute Moral Opposition to Genetically Modified Food in the United States" (PDF). Perspectives on Psychological Science. 11 (3): 315324. doi:10.1177/1745691615621275.
+^ "Restrictions on Genetically Modified Organisms". Library of Congress. June 9, 2015. Retrieved February 24, 2016.
+^ Bashshur, Ramona (February 2013). "FDA and Regulation of GMOs". American Bar Association. Retrieved February 24, 2016.
+^ Sifferlin, Alexandra (October 3, 2015). "Over Half of E.U. Countries Are Opting Out of GMOs". Time.
+^ Lynch, Diahanna; Vogel, David (April 5, 2001). "The Regulation of GMOs in Europe and the United States: A Case-Study of Contemporary European Regulatory Politics". Council on Foreign Relations. Retrieved February 24, 2016.
+^ American Medical Association (2012). Report 2 of the Council on Science and Public Health: Labeling of Bioengineered Foods
+^ a b United States Institute of Medicine and National Research Council (2004). Safety of Genetically Engineered Foods: Approaches to Assessing Unintended Health Effects. National Academies Press. Free full-text. National Academies Press. See pp11ff on need for better standards and tools to evaluate GM food.
+^ Key S, Ma JK, Drake PM (June 2008). "Genetically modified plants and human health". J R Soc Med. 101 (6): 2908. doi:10.1258/jrsm.2008.070372. PMC2408621. PMID18515776.
+^ Berg P, Baltimore D, Boyer HW, Cohen SN, Davis RW, Hogness DS, Nathans D, Roblin R, Watson JD, Weissman S, Zinder ND (1974). "Letter: Potential biohazards of recombinant DNA molecules" (PDF). Science. 185 (4148): 303. doi:10.1126/science.185.4148.303. PMID4600381.
+^ Berg, P., Baltimore, D., Brenner, S., Roblin, R. O., and Singer, M. F. (1975). "Summary Statement of the Asilomar Conference on Recombinant DNA Molecules". Proc. Natl. Acad. Sci. USA. 72 (6): 19811984. doi:10.1073/pnas.72.6.1981. PMC432675. PMID806076. CS1 maint: Multiple names: authors list (link)
+^ Hutt, P.B. (1978). "Research on recombinant DNA molecules: the regulatory issues". South Calif Law Rev. 51 (6): 143550. PMID11661661.
+^ a b c McHughen A, Smyth S (2008). "US regulatory system for genetically modified [genetically modified organism (GMO), rDNA or transgenic] crop cultivars". Plant biotechnology journal. 6 (1): 212. doi:10.1111/j.1467-7652.2007.00300.x. PMID17956539.
+^ Bull, A.T., Holt, G. and Lilly, M.D. (1982). Biotechnology: international trends and perspectives (PDF). Paris: Organisation for Economic Co-operation and Development. CS1 maint: Multiple names: authors list (link)
+^ U.S. Office of Science and Technology Policy (1986). "Coordinated framework for regulation of biotechnology" (PDF). Fed Regist. 51 (123): 2330250. PMID11655807.
+^ FAO/WHO Report 1991
+^ OECD(1992) Safety Considerations for Biotechnology
+^ a b OECD(1993) Safety Evaluation of Foods Derived by Modern Biotechnology: Concepts and Principles [4]
+^ OECD (2010) Consensus Document on Molecular Characterisation of Plants Derived from Modern Biotechnology
+^ OECD harmonization webpage
+^ Codex Alimentarius Commission, 2003 Principles and Guidelines on foods derived from biotechnology
+^ Codex Alimentarius Commission, 2004 Food Import & Export
+^ Substantial Equivalence in Food Safety Assessment, Council for Biotechnology Information, March 11, 2001[dead link]
+^ Joint FAO/WHO Expert Consultation on Biotechnology and Food Safety. Rome, Italy, 30 September to 4 October 1996 [5] p.4
+^ Organisation for Economic Co-operation and Development. Report of the Task Force for the Safety of Novel Foods and Feeds C(2000)86/ADD1. May 17, 2000 [6] Quote: "Much experience has been gained in the safety assessment of the first generation of foods derived through modern biotechnology, and those countries that have conducted assessments are confident that those GM foods they have approved are as safe as other foods."
+^ Substantial equivalence of antinutrients and inherent plant toxins in genetically modified novel foods, Novak, W. K.; Haslberger, A. G.,Food and Chemical Toxicology Volume 38 (6) p.473-483, 2000
+^ Kok EJ, Kuiper HA (October 2003). "Comparative safety assessment for biotech crops". Trends Biotechnol. 21 (10): 43944. doi:10.1016/j.tibtech.2003.08.003. PMID14512230.
+^ FAO. Safety aspects of genetically modified foods of plant origin - Consultations 4. Approaches to the Nutritional and Food Safety Evaluation of Genetically Modified Foods[www.fao.org/wairdocs/ae584e/ae584e04.htm]
+^ Transgenic harvest Editorial, Nature 467 , pages 633634, 7 October 2010, doi:10.1038/467633b. Retrieved 9 November 2010
+^ a b Dunmore, Charlie and Kumwenda, Olivia (6 June 2013) As health fears ebb, Africa looks at easing GM crop bans Reuters, 6 June 2006, Retrieved 9 August 2013
+^ a b c Slides & Tables: Global Status of Commercialized Biotech/GM Crops: 2010 - ISAAA Brief 42-2010 | ISAAA.org
+^ Denge, Mark and Gachenge, Beatrice (4 July 2011) Kenya approves law to allow GM crops Reuters Africa, 4 July 2004, Retrieved 9 November 2011
+^ "Nigeria Passes Law Allowing Genetically Modified Plants". Biotechnology Law Report. 31 (2): 153153. 2012. doi:10.1089/blr.2012.9900.
+^ "Ghana to Allow Genetically Modified Crops". Biotechnology Law Report. 31 (2): 153154. 2012. doi:10.1089/blr.2012.9901.
+^ Kikulwe, E., J. Wesseler J. Falck-Zepeda (2011): Attitudes, Perceptions, and Trust: Insights from a Consumer Survey Regarding Genetically Modified Banana in Uganda. Appetite 57(2):401-413
+^ Kikulwe, E., E. Birol, J. Wesseler, J. Falck-Zepeda (2011): A Latent Class Approach to Investigating Developing Country Consumers Demand for Genetically Modified Staple Food Crops: The Case of GM Banana in Uganda. Agricultural Economics. 42:547560
+^ Maharaj, Davan and Mukwita, Anthony (28 August 2002) Zambia Rejects Gene-Altered U.S. Corn Los Angeles Times. Retrieved 9 November 2011
+^ Zambian Leader Defends Ban On Genetically Altered Foods  New York Times. Nytimes.com (2002-09-04). Retrieved on 2011-02-08.
+^ Zambia Allows Its People To Eat. Consumerfreedom.com. Retrieved on 2011-02-08.
+^ Africans vow to resist any US pressure on GMOs, Reuters, 2/9/2006
+^ World Environment News. Planet Ark. Retrieved on 2011-02-08.
+^ a b ISAAA Brief 37-2007 - Slides & Tables > ISAAA.org
+^ Inderscience. Inderscience.metapress.com. Retrieved on 2014-01-14.
+^ James, C (2011). "ISAAA Brief 43, Global Status of Commercialized Biotech/GM Crops: 2011". ISAAA Briefs. Ithaca, New York: International Service for the Acquisition of Agri-biotech Applications (ISAAA). Retrieved 2012-08-30.
+^ James, Clive (28 January 2015). "Global Status of Commercialized Biotech/GM Crops: 2014". ISAAA Briefs. Ithaca, NY, USA: International Service for the Acquisition Of Agri-biotech Applications (ISAAA). 49. Retrieved 15 December 2015.
+^ a b Chen, Mao; Shelton, Anthony; Ye, Gong-yin (2011). "Insect-Resistant Genetically Modified Rice in China: From Research to Commercialization". Annual Review of Entomology. 56: 81101. doi:10.1146/annurev-ento-120709-144810. PMID20868281.
+^ AgBioForum 5(4): Agricultural Biotechnology Development and Policy in China
+^ TNAU Agritech Portal:: Bio Technology. Agritech.tnau.ac.in (1989-12-05). Retrieved on 2014-01-14.
+^ "India puts on hold first GM food crop on safety grounds". BBC. 9 February 2010. Retrieved 9 February 2010.
+^ "Govt says no to Bt brinjal for now". The Times of India. February 9, 2010. Retrieved February 9, 2010.
+^ Chaudhury, Shoma (March 7, 2010). "The Gene Gun At Your Head". Tehelka Magazine. Retrieved 12 August 2013.
+^ "Report of Dr S K Sopory Committee on BNLA106 event" (PDF). Indian Council of Agricultural Research. Retrieved 12 August 2013.
+^ "Committee on agriculture - Ministry of Agriculture (Department of agriculture and cooperation) "Cultivation of genetically modified food crops prospects and effects" Thirty seventh report" (PDF). Retrieved 12 August 2013.
+^ "Monthly Policy Review July 2013" (PDF). PRSIndia. p.9. Retrieved 12 August 2013.
+^ a b c d Teiji Takahashi December 2009 Laws and Regulations on Food Safety and Food Quality in Japan Accessed June 15, 2014
+^ a b c Japan's Alien species and LMO Regulation office, Wildlife Division, Nature Conservation Bureau Ministry of the Environment Biosafety Regulations in Japan Accessed June 15, 2014
+^ Australian Government, Department of Agriculture. Last reviewed July 4, 2011 Appendix A - Regulatory Arrangements for GMOs and GM products in Australia and Australia's Major Export Markets for Canola and Cottonseed Accessed June 15, 2014
+^ http://ca.judiciary.gov.ph/cardis/SP00013.pdf
+^ http://edigest.elaw.org/sites/default/files/ph.greenpeacese.pdf
+^ http://edigest.elaw.org/sites/default/files/ph.eggplantsept2014.pdf
+^ http://m.greenpeace.org/international/en/high/press/releases/Philippines-Supreme-Court-bans-development-of-genetically-engineered-products-/
+^ Supreme Court of the Philippines. December 12, 2015
+^ Lynch D, Vogel D. (2001). The Regulation of Gmos in Europe and the United States: A Case-Study of Contemporary European Regulatory Politics..
+^ GMO Compass: The European Regulatory System. Retrieved 28 July 2012.
+^ Wesseler J. and N. Kalaitzandonakes (2011): Present and Future EU GMO policy. In Arie Oskam, Gerrit Meesters and Huib Silvis (eds.), EU Policy for Agriculture, Food and Rural Areas. Second Edition, pp. 23-323  23-332. Wageningen: Wageningen Academic Publishers
+^ a b "Health and Consumers: Food and feed safety." (under "What are the National safeguard measures?") Link. Retrieved 28 July 2012.
+^ Beckmann, V., C. Soregaroli, J. Wesseler (2006): Co-Existence Rules and Regulations in the European Union. American Journal of Agricultural Economics 88(5):1193-1199
+^ Cooper, Alice. "Political Indigestion: Germany Confronts Genetically Modified Foods." German Politics 18.4 (2009): 536-558. Academic Search Premier. Web. 6 Dec. 2012.
+^ Beckmann, V., C. Soregaroli, and J. Wesseler (2010). Ex-Ante Regulation and Ex-Post Liability under Uncertainty and Irreversibility: Governing the Coexistence of GM Crops. Economics: The Open-Access, Open-Assessment E-Journal, Vol. 4, 2010-9
+^ Groeneveld, R., J. Wesseler, P. Berentsen (2013): Dominos in the dairy: An analysis of transgenic maize in Dutch dairy farming. Ecological Economics 86(2):107-116
+^ Skevas, T., P. Fevereiro, J. Wesseler (2010): Coexistence Regulations & Agriculture Production: A Case Study of Five Bt Maize Producers in Portugal. Ecological Economics. 69(12):2402-2408.
+^ Staf (19 May 2004) European Union lifts GM food ban BBC, Retrieved 7 September 2012
+^ EU GMO ban was illegal, WTO rules Published 12 May 2006, retrieved 28 July 2012.
+^ EC  Approval and Marketing of Biotech Products (Disputes DS291, 292, 293) World Trade Organisation, retrieved 28 July 2012.
+^ Potato Pro Newsletter
+^ "GM Potato Approval 'A Big Step for Germany'" Link. Published 3 March 2010, retrieved 28 July 2012.
+^ Scientific background report AMFLORA potato VIB (Flemish Institute for biotechnology), Belgium, Retrieved 20 October 2010
+^ Prof. Frantiek Sehnal, Prof. Jaroslav Drobnk, Editors, (2009) White book Genetically Modified Crops
+^ "Biotech firms warn EU over pace of GM crop approvals." Link. Published 11 Oct 2011, retrieved 28 July 2012.
+^ Hogan, Michael (5 April 2012) BASF to undertake GMO potato trials in Europe Reuters, Retrieved 7 September 2012
+^ Staff EU register of genetically modified food and feed European Commission, Health and Consumers, EU register of authorised GMOs, Retrieved 15 August 2012
+^ "The Irish Potato: Will Consumers Eat Genetically Modified Spuds?" Published 27 July 2012, retrieved 28 July 2012. Link.
+^ Nature Biotechnology. "Europe legitimizes GM crop exclusion zones." Table 1: National bans currently implemented under the 'safeguard clause.' Link. Retrieved 28 July 2012.
+^ Ricroch A, Berg JB, Kuntz M (February 2010). "Is the German suspension of MON810 maize cultivation scientifically justified?". Transgenic Res. 19 (1): 112. doi:10.1007/s11248-009-9297-5. PMC2801845. PMID19548100.
+^ (AFP)  8 February 2008 (8 February 2008). "AFP: French GM ban infuriates farmers, delights environmentalists". Afp.google.com. Retrieved 8 March 2010.
+^ French ban on biotech Monsanto corn ruled illegal Agrimony UK, 28 November 2011. Retrieved 30 December 2011
+^ "French ban of Monsanto GM maize rejected by EU." Link. Published 22 May 2012, retrieved 28 July 2012.
+^ Thorsten Severin & Michael Hogan (14 April 2009). "Germany to ban cultivation of GMO maize-Minister". Reuters. Retrieved 8 March 2010.
+^ "Bulgaria Puts Total Ban on GM Crops". Novinite. 18 March 2010. Retrieved 25 June 2012.
+^ "GMO: POLAND PROMISES STRICT CONTROL ON GM CROPS." Europe Agri 25 Mar. 2013: 332575. General OneFile. Web. 11 Oct. 2013.
+^ European Food Safety Authority, 2012. Scientific opinion addressing the safety assessment of plants developed through cisgenesis and intragenesis. EFSA Journal 2012;10(2):2561ff [7]
+^ (27 October 2014) Europe must lift GM food limits to help feed planet, say experts The Daily Telegraph, Retrieved 28 October 2014
+^ "GMO-free zone: Germany tells EU it bans genetically modified crops cultivation". RT. 2015.
+^ Directorate-general for agriculture & rural development. "Economic impact of unapproved gmos on eu feed imports and livestock production" (PDF). European Commission.
+^ Europa summaries of EU legislation: Traceability and labelling of GMOs. Link.
+^ a b GMO Safety. "New coexistence - Guidelines in the EU: Cultivation bans are now permitted".
+^ Coextra
+^ BioTrack Product Database
+^ accessed 21 January 2011
+^ Plucodes.com
+^ "Jeffrey Smith: PLU Codes Do Not Indicate Genetically Modified Produce". Huffingtonpost.com. 25 May 2011. Retrieved 2012-02-07.
+^ Trade barriers seen in EU label for bio-engineered ingredients. (Regulatory and Policy Trends). Business and the Environment 13.11 (Nov 2002): p14(1).
+^ GMO Compass Rapeseed July 27, 2010. Retrieved August 6, 2010.
+^ Canadian Food Inspection Agency - Regulating Agricultural Biotechnology
+^ Genetically Modified Food.
+^ Evans, Brent and Lupescu, Mihai (15 July 2012) Canada - Agricultural Biotechnology Annual  2012 GAIN (Global Agricultural Information Network) report CA12029, United States Department of Agriculture, Foreifn Agricultural Service, Retrieved 2 November 2012
+^ McHugen, Alan (September 14, 2000). "Chapter 1: Hors-d'oeuvres and entrees/What is genetic modification? What are GMOs?". Pandora's Picnic Basket. Oxford University Press. ISBN978-0198506744.
+^ Staff (28 November 2005) Health Canada - The Regulation of Genetically Modified Food Glossary definition of Genetically Modified: "An organism, such as a plant, animal or bacterium, is considered genetically modified if its genetic material has been altered through any method, including conventional breeding. A 'GMO' is a genetically modified organism.", Retrieved 2 November 2012
+^ Staff (20 July 2012) Voluntary Labelling and Advertising of Foods that are and are not Products of Genetic Engineering Public Works and Government Services Canada, National Standard of Canada, Retrieved 1 November 2012
+^ Making the Market "Safe" for GM Foods: The Case of the Canadian Biotechnology Advisory Committee | Prudham | Studies in Political Economy
+^ Mexico approves planting and sale of GM crops - SciDev.Net
+^ Mexico: controlled cultivation of genetically modified maize
+^ Mike Shanahan Warning issued on GM maize imported to Mexico - SciDev.Net 10 November 2004
+^ Katie Mandell GM maize found contaminating wild strains - SciDev.Net 30 November 2001
+^ David Alire Garcia (12 November 2013). "Past and future collide as Mexico fights over GMO corn". Reuters. Retrieved 9 September 2015.
+^ Clive James (2009). "ISAAA Brief 41-2009: Executive Summay: Global Status of Commercialized Biotech/GM Crops The first fourteen years, 1996 to 2009".
+^ United States Regulatory Agencies Unified Biotechnology Website
+^ a b Emily Marden, Risk and Regulation: U.S. Regulatory Policy on Genetically Modified Food and Agriculture 44 B.C.L. Rev. 733 (2003)
+^ Pollack, Andrew (2015-07-02). "White House Orders Review of Rules for Genetically Modified Crops". The New York Times. ISSN0362-4331. Retrieved 2015-07-03.
+^ FDA page for Q & A on GM Food
+^ FDA page on Regulation of GM Plants in Animal Feed
+^ a b c "Guide to U.S. Regulation of Genetically Modified Food and Agricultural Biotechnology Products" (PDF). The Pew Initiative on Food and Biotechnology. Washington, DC: The Pew Charitable Trusts. 2001. Retrieved 2012-06-02.
+^ "Consultation Procedures under FDA's 1992 Statement of Policy - Foods Derived from New Plant Varieties". FDA. October 1997 [June 1996].
+^ Peggy G. Lemaux Genetically Engineered Plants and Foods: A Scientist's Analysis of the Issues (Part I) Annual Review of Plant Biology 59: 771-812 DOI: 10.1146/annurev.arplant.58.032806.103840. Quote: "Although GE foods can be marketed without certain regulatory approvals, to date all products in the marketplace have undergone full review by regulatory agencies regarding safety and content relative to unmodified forms (searchable data on specific events available at 84). Submitting the safety data is in the developer's best interests, however, given the legal liabilities incurred should a problem with the food arise following market introduction"
+^ Marygold Walsh-Dilley (2009) "Localizing control: Mendocino County and the ban on GMOs" Agriculture and Human Values 26(1-2):95-105 [8]
+^ http://www.co.jackson.or.us/page.asp?navid=3967 , http://www.co.josephine.or.us/files/17-58ballottitlewebsite.pdf, http://www.kgw.com/news/politics/genetically-modified-foods-260011131.html. Archived May 16, 2014, at the Wayback Machine.
+^ Reilly, Genevieve (11 December 2013). "Malloy signs state GMO labeling law in Fairfield". ctpost.com. Retrieved 7 March 2014.
+^ Herling DJ, Mintz L, Cohn FG, Popeo PC (12 January 2014). "As Maine Goes, So Goes The Nation? Labeling for Foods Made with Genetically Modified Organisms (GMOs).". The National Law Review. Retrieved 8 March 2014.
+^ Terri Hallenbeck, for the Burlington Free Press. April 27, 2014 How GMO labeling came to pass in Vermont
+^ Terri Hallenbeck for The Burlington Free Press. May 8, 2014 Vermont gov signs law to require labels on GMO foods
+^ staff (June 30, 2015). "Federal judge rules Maui GMO ban invalid".
+^ a b BASF presentation
+^ Argentina poised to update seed law-Argentina, seed, GM, crop, biotech
+^ (2010) Biotech Facts and Trends Honduras 2010 ISAAA, Retrieved 9 August 2013
+^ (2013)GM Crop Events approved in Costa Rica ISAAA GM Approval database, Retrieved 9 August 2013
+^ (2012) Biotech Facts and Trends Columbia 2012 ISAAA, Retrieved 9 August 2013
+^ Herbst, Allyson (6 June 2013) Government Plans to Expand Use of GM Foods Bolivia Weekly, Retrieved 9 August 2013
+^ (2013) Biotech Facts and Trends Paraguay 2013 ISAAA, Retrieved 9 August 2013
+^ (2012) Biotech Facts and Trends Chile 2012 ISAAA, Retrieved 9 August 2013
+^ (2012) Uruguay Annual Biotechnology Report 2012 USDA Foreign Agricultural Service, Global Agricultural Information Network Retrieved 9 August 2013
+^ Venezuela: Chavez Dumps Monsanto. Globalpolicy.org (2004-05-05). Retrieved on 2011-02-08.
+^ Pena, Karla (2008) "Putting Food First in the Constitution of Ecalthough Puador," Food First Institute for Food & Development Policy, https://www.foodfirst.org/en/node/2301, (updated 31 October 2008, accessed 21 May 2008).
+^ a b (2 October 2012)Transgenic Products Gain Ground Central American Data, Retrieved 9 August 2013
+^ Northwestern.edu Northwestern Journal of Technology and Intellectual Property Paper on: "Consumer Protection" Consumer Strategies and the European Market in Genetically Modified Foods
+^ a b c "Welcome to the Office of the Gene Technology Regulator Website". Office of the Gene Technology Regulator. Retrieved 25 March 2011.
+^ a b c Agriculture - Department of Primary Industries
+^ a b Rosemary Polya (17 October 2008). "Chronology of genetic engineering regulation in Australia: 19532008". Commonwealth of Australia: Science, Technology, Environment and Resources Section. Retrieved 25 March 2011.
+^ GM Crops and Stockfeed
+^ GM Carnations in Australia
+^ a b Information Paper on Genetically Modified Canola A report by the Ministerial GMO Industry Reference Group Chaired by the Hon Kim Chance MLC. May 2009
+^ a b "GM canola gets the green light". The Sydney Morning Herald. 2003-04-01.
+^ GRDC - Australia's first GM canola crop comes off
+^ Ian Walker for the Global Mail. February 2014. Steve Marsh and the Bad Seeds Accessed July 8, 2014
+^ a b Crothers, Lindy (29 June 2011) Australia, Agricultural Biotechnology Annual, 2011 USDA Foreign Agricultural Service, Global Agricultural Information Network Report Number AS 1120, Retrieved 29 September 2011
+^ New Zealand Ministry for the EnvironmentGenetically modified medicines and food June 2004
+^ "Rotorua GE Tree Trial Remains Environment Threat". Soil and Health Association. 2008-03-17. Retrieved 2009-01-23.
+^ Williams, David (2009-01-20). "GE activists call for trials to be ended". The Press. Retrieved 2009-01-27.
+^ Food Standards Australia New Zealand FSANZ GM food approvals 8 pages, n.d. 2009?
+v
+t
+e
+Genetic engineering
+Genetically
+modified
+organisms
+Crops
+Maize
+MON 810
+MON 863
+StarLink
+List of varieties of genetically modified maize
+Potato
+Amflora
+Rice
+Golden rice
+Soybean
+Roundup ready soybean
+Vistive Gold
+Tomato
+Flavr Savr
+Cotton
+Bt cotton
+Other
+Apple
+Arabidopsis
+Brinjal
+Canola
+Papaya
+Rose
+SmartStax
+Sugar beet
+Tobacco
+Trees
+Wheat
+Mammals
+Mouse
+Knockout mouse
+Oncomouse
+Enviropig
+Herman the Bull
+Knockout rat
+Other animals
+Insects
+Fish
+Glofish
+Salmon
+Bacteria
+and viruses
+Ice-minus bacteria
+Hepatitis B vaccine
+Oncolytic virus
+Processes
+Inserting DNA
+Agrobacteria
+Biolistics
+Electroporation
+Genetic transduction
+Lipofection
+Microinjection
+Transfection
+Types
+Recombinant DNA
+Transgenesis
+Cisgenesis
+Uses
+In agriculture
+Genetically modified food
+Controversies
+Pharming
+Companies
+BASF
+Bayer
+Dow AgroSciences
+DuPont Pioneer
+Monsanto
+Syngenta
+In humans and
+diagnostics
+Gene therapy
+Genetic enhancement
+In research
+Gene knockout
+Gene knockdown
+Gene targeting
+Related
+articles
+Transgene
+Detection of genetically modified organisms
+Genetic pollution
+Genetic engineering in fiction
+Human enhancement
+Reverse transfection
+Transhumanism
+Regulation
+Regulation of the release of GMOs
+Regulation of GMOs in the European Union
+Regulation of GMOs in Switzerland
+Cartagena Protocol on Biosafety
+Geography
+US
+Hawaii
+New Zealand
+Europe
+Similar fields
+Synthetic biology
+Cloning
+Stem cell research
+Biology
+Genetics
+Biotechnology
+Bioethics
+Retrieved from "https://en.wikipedia.org/w/index.php?title=Regulation_of_the_release_of_genetically_modified_organisms&oldid=751184023"
+Categories: Regulation of genetically modified organismsRegulation of biotechnologiesHidden categories: CS1 maint: Multiple names: authors listAll articles with dead external linksArticles with dead external links from January 2016Webarchive template wayback linksArticles containing potentially dated statements from 2002All articles containing potentially dated statementsArticles containing potentially dated statements from 2004
+Navigation menu
+Personal tools
+Not logged inTalkContributionsCreate accountLog in
+Namespaces
+Article
+Talk
+Variants
+Views
+Read
+Edit
+View history
+More
+Search
+Navigation
+Main pageContentsFeatured contentCurrent eventsRandom articleDonate to WikipediaWikipedia store
+Interaction
+HelpAbout WikipediaCommunity portalRecent changesContact page
+Tools
+What links hereRelated changesUpload fileSpecial pagesPermanent linkPage informationWikidata itemCite this page
+Print/export
+Create a bookDownload as PDFPrintable version
+Languages
+FranaisSuomi
+Edit links
+This page was last modified on 23 November 2016, at 22:15.
+Text is available under the Creative Commons Attribution-ShareAlike License;
+additional terms may apply.
+By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+Privacy policy
+About Wikipedia
+Disclaimers
+Contact Wikipedia
+Developers
+Cookie statement
+Mobile view

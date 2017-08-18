@@ -1,0 +1,166 @@
+Genetically Modified Organisms
+Genetically Modified Organisms
+Introduction
+You've probably heard the term "GMO" before, but what does it mean? Genetically Modified Organisms are being created and grown across the globe. Genetic modification occurs when the DNA of one living thing is added into the DNA of another so that a 'desirable' trait becomes part of the new, modified, organism. These modifications can alter or introduce particular traits in the organism. For example, a corn plant can be bred to resist herbicides that will kill the weeds growing around it that would compete for nutrients and light. In this module, we'll discuss the most frequently modified crops in the United States, the kind of modifications that are done, and we will explore the debate around potential risks and benefits to humans and the environment as a result of GMOs.
+Learning Objectives
+By the end of this module, students will be able to:
+Explain what GMOs and GM crops are.
+Understand the historical context of GMOs.
+Have an understanding on the development of GMOs to date.
+Be able to name at least four frequently GMO crops
+Describe the way modification is used to affect agriculture
+Discuss the potential risks & benefits of GMOs on the environment
+Discuss the potential risks & benefits associated with GMO crop consumption
+Be able to make arguments for both sides of the debate
+Background
+What is a GMO?
+GMOs, or genetically modified organisms are organisms whose genetic material has been altered using genetic engineering. Genetic engineering is the modification of an organism's phenotype by altering its genetic make-up. Genetic engineering is primarily performed by simple mating or gene recombination. A latter section in this module elaborates further on how genetically modified crops are created. . GMOs range from micro-organisms like yeast and bacteria to insects, plants, fish and mammals. Genetically modified crops (GM crops) are those engineered to introduce a new trait into the species. Purposes of GM crops generally include resistance to certain pests, diseases, or environmental conditions, or resistance to chemical treatments (e.g. resistance to a herbicide). Other purposed of genetic modification of crops is to enhance its nutritional value, as seen in the case of golden rice.
+The use of GM crops is widely debated. At the moment there is no known harm in consuming genetically modified foods. GM foods are developed  and marketed  because there is some perceived advantage either to the producer or consumer of these foods. This is meant to translate into a product with a lower price, greater benefit (in terms of durability or nutritional value) or both.
+GM foods currently available on the international market have passed risk assessments and are not likely to present risks for human health. In addition, no effects on human health have been shown as a result of the consumption of such foods by the general population in the countries where they have been approved.
+History of GMOs
+Additionally, with the production of golden rice, scientists have genetically modified food to increase its nutrient value for the first time.
+GMOs and the media
+Opinions about GMOs have long being polarized by the perspective of the writer. Consequently, finding unbiased sources is challenging. As seen later in this module, there are various risks and benefits to using genetically modified crops on a large scale, and thus people on both sides of the GMO spectrum have valid points. New research is coming out regularly on new and unknown facts related to the use of GMOs.
+Some of the latest articles about GMOs in the news are provided in the table below. As with any news item, their content should be read with a healthy dose of skepticism.
+News Article
+Description
+Glowing plant project on Kickstarter sparks debate about regulation of DNA modification
+This article from the Washington Post talks about a recent project working on creating plants that glow in the dark after genetic modification.
+GMOs versus Overuse of Antibiotics: Which is the Greater Evil?
+This article in Forbes addresses the push by the anti-GMO people to label genetically modified foods as GMOs, and compares the alleged risks of using GM foods to antibiotic resistance.
+Warning labels for safe stuff: One way or another, labelling of GM food may be coming to America
+This article discusses Initiative 522, a measure currently before voters which would require most foodstuffs sold in retail outlets to bear a conspicuous label if they contain genetically modified ingredients. The rule would come into force in July 2015 for any product where GM ingredients are more than 0.9% of the total weight.
+Top Five Myths Of Genetically Modified Seeds, Busted
+This NPR blog-post addresses some myths about GM seeds specifically.
+How are organisms genetically modified?
+Genetic engineering is the modification of an organism's phenotype by manipulating its genetic material. Some genetic engineering uses the principle of recombination.
+Recombination is the process through which a new gene is inserted into a bacterial DNA "The plasmid". The DNA needs to be cut with an enzyme called a restriction enzyme. The restriction enzyme used must have a specific shape that allows it to move along the DNA that is to be cut. The restriction enzyme looks for a specific point in the DNA sequence at which to cut the DNA. When the restriction enzyme cuts, it leaves a "Sticky end" which helps a new gene to attach at that point. Another enzyme is used to attach the new DNA segment; this is called "DNA ligase". Genetically engineered bacterium is cultured and many new copies of the bacteria with the new gene are grown. Genetic modifications can be made to both plants and animals.
+The video below illustrates the mechanism of recombination.
+Agrobacterium is bacteria that uses a Horizontal gene transfer (HGT). HGT is the transfer of DNA between different genomes [Pop up: A genome is the complete set of genetic material present in an organism]. HGT can occur in bacteria through transformation, conjugation and Transduction. However, it is also possible for HGT to occur between eukaryotes and bacteria though the mechanism for this transfer is not well understood.
+Bacteria have three ways of transferring bacteria between cells:
+Transformation: The uptake and incorporation of external DNA into the cell thereby resulting in the alteration of the genome
+Conjugation: The exchange of genetic material through cell-to-cell contact of two bacterial cells. A strand of plasmid DNA is transferred to the recipient cell and the donor cell then synthesis DNA to replace the strand that was transferred to the recipient cell.
+Transduction: A segment of bacterial DNA is carried from one bacterial cell to another by a bacteriophage. The bacteriophage infects a bacterial cell and takes up bacterial DNA. When this phage infects another cell, it transfers the bacterial DNA to the new cell. The bacteria can then become a part of the new host cell.
+Agrobacterium also has the ability to transfer DNA between itself and plants and is therefore commonly used in genetic engineering. The process of using Agrobacterium for genetic engineering is illustrated in the diagram below.
+Summary of process illustrated in the diagram (above):
+The agrobacterium cell contains a bacterial chromosome and a Tumor inducing plasmid- "Ti Plasmid".
+The Ti plasmid is removed from the agrobacterium cell and a restriction enzyme cleaves the T-DNA restriction site.
+Next foreign DNA, which is also cleaved by the same enzyme, is inserted into the T DNA at the site that was cleavage site.
+The modified plasmid is then reinserted in the agrobacterium and the bacterium inserts the TDNA, which now carries a foreign gene into the plant cell.
+The plant cell is then cultured and results in a new plant that has the foreign DNA trait.
+The following video illustrates the process of using Agrobacterium for genetic engineering.
+Modifications, Main Crops & Environmental Effects
+\\Some sort of intro paragraph or blurb to this page before going into each sub-topic...something that presents some interesting, relevant information that will flow well into the sub-topics to separate header 1 from the header 2\\
+Modifications
+When it comes to genetic engineering of foods, there are different intended results by the modification. Some crops, like rice, are modified to create a potential health benefit for its consumers (especially in developing countries). Vitamin A is often added to the rice, creating vitamin-rich "Golden Rice," which adds vitamin A into the diet of populations that consume rice.
+The most common types of genetic modifications in the United States strive to improve the quantity and quality of agricultural production. These modifications are the most frequent and significant. These common and controversial modifications target a crop's tolerance to herbicides and generate pest resistance or a repellant.
+\\ I think the "Modifications" section could use more elaboration. For example, there is more that can be said about the whole "quantity and quality" purposes regarding resistance to pesticides. Also there can be more examples of potential benefitsin addition to the Golden Rice//
+Main Crops
+The interactive chart below illustrates the distribution of GMO crops around the world, the quantity of land (in hectares) that is allocated for these crops in each country, and the primary crops that are grown there. This chart is useful to help us visualize the difference in prevalence of GMO crops among certain countries. The United States clearly has the most GMOs worldwide, but what's more interesting is the prevalence throughout the rest of the Americas.
+Enviromental Effects
+The issue of GMOs is a polarizing one. Those who are pro-GMO claim that GMOs are not only safe for us and the environment, but also potentially, a very beneficial development. Those who are anti-GMO argue that the risk of negative consequences to our environment is high and very difficult to predict. It is important to determine the magnitude of potential damage to our environment due to the spread of GMO genes into wild plants and microbes. GM crops can cause short and long term effects on the environment.
+Different kinds of modifications are being bred into crops. The most common kinds of modification include: pesticide resistance, disease resistance, and drought tolerance. Other, more superficial, changes can be made to crops we encounter regularly.
+Some Potential Consequences to the Environment Include:
+Unintended selection
+Unwanted change in gene expression
+Unintended effect on non GM weeds, pests, or pathogens
+Survival & persistence beyond intended zone
+Production of toxic substance to 'non-target' organisms
+"Horizontal Gene transfer "
+\\ To make the section below seem less dense, need to present it differently...i.e. via interactivity \\
+Scientists have bred pesticide resistance into these crops, which causes controversy when pesticides, such as Roundup, are over sprayed. By using such quantities of chemicals to control weeds in the crops, the weeds begin to develop their own resistance to the pesticides thus creating 'super weeds.' This phenomenon is referred to as gene transfer. Seed dispersal and pollen transfer caused by wind, animals, and farming equipment, contribute to gene transfer.
+There are many studies that examine the potential environmental and ecological risks of GMOs. L.L. Wofenbarger and P. R. Phifer discuss some of the existing studies and literature regarding these potential risks. These studies suggest that there is a heightened risk for hybridization among GMO crops. This undermines any control scientists have over GMO crops and leads to the evolution of weed species that carry the genetic modification (like pesticide resistance). When the weeds obtain pesticide resistant DNA from GMO crops, this defeats the purpose of modifying the crops at all.
+While there is some widely accepted evidence for these negative impacts against the environment and a lack of evidence proving otherwisethere are compelling statistics concerning potential benefits to the environment.
+A decreased use of pesticides & insecticides
+Reduced greenhouse gas emissions
+Evidence has shown that with the introduction of GMO crops, there has been a significant decrease in the use of pesticides and insecticides. Brookes and Barfoot note a global trend toward reducing greenhouse gas emissions since GMO use has increased. They explain that pest-resistance and repellant traits that are bred into the crop's DNA lead to a reduced necessity for the use of pesticides and insecticides. This global decrease in the amount and frequency of pesticide use means fewer instances of pesticide spraying reduces the use of fuel and consequently reduced greenhouse gas emissions.
+For such a complicated topic, one thing remains clear: the use of GMOs and the effects they have (either positive or negative impacts) on the environment must be effectively measured so that we might isolate trends and be able to find a clearer answer about whether or not GMOs are hurting or helping our environment.
+Risks and Benefits
+Research studies present conflicting arguments as to whether consuming GM crops is beneficial or harmful to human health. With every alleged GMO health risk, there are counterarguments either opposing health risk claims or suggesting GMOs provide more benefits than harm. The most notable GMO risks to humans are the potential development of allergens to GM related crops and toxicity from GM crops. However, studies also show GM crops have benefits including the increased nutritional value in foods.
+\\ Improved from initial draft. However, it is still very paragraph-dense...there needs to be better balance between use of paragraphs and other means to present info...more graphics, interactivity, and other means of providing text, i.e. tables, bullet points. Can probably cut some info out also. \\
+Allergens
+An allergen is a type of antigen that sets off an abnormal vigorous immune response, triggering the immune system to fight off perceived threats that are harmless to the body. Barber Rodriguez and Salcedo (2008) are only some researches that have looked into the allergenic properties GM crops have and their impact on human health. Researchers outline multiple ways for an individual to develop allergies from consuming GM crops.
+The first is due to transgene genetic materials with inherent allergic properties. Transgene genetic materials present in GM crops are transferred into the human body through using a change in the gene expression. Changes in gene expression can encompass changes in storage tissue or in other parts of the plant. The interaction of the trangenetic material with the exposed population will determine the magnitude of the allergic reactions (or lack there of). Examples of GM crops that have transgenetic material include Bacillus thuringiensis (Bt) corn/maize, BT potato and soybean resistant to the herbicide glyphosate.
+Newly expressed proteins from GM crops have the potential to sensitize the immune system to react abnormally to similar proteins due to cross-reactivity with another allergen to which individuals have already been sensitized. Allergopharma states "a cross-reactivity allergy is present when the antibodies against a specific allergen are also capable of identifying other allergens from other allergen sources and may thus induce an allergic reaction to those allergens as well. Cross-reactivity is usually due to the cross between pollen and foods. Some cross-reactive GM crops include soy, rice and tomato.
+One other contributing factor for the increase incidences of allergens is the role of gene transfer(s). Gene transfer(s) can cause change in gene expression creating abnormal immune responses to perceived threats that were previously coded as harmless. Additionally, allergenic potential can directly be a result from new proteins or by interactions between new and usual proteins.
+Example: Gene transfer of an allergen occurred in the 1996 transgenic soybeans case. The gene for a 2S albumin, a major group of seed storage protein, from the Brazil nut, a common allergen, was transferred to enhance the methionine content of animal feed. The introduction of allergenic proteins contained in the Brazil nut in soy products contributed to the increased sensitivity of soybean products for those already allergic to the nut protein.
+While some studies state GMOs have negative effects on allergies, other studies cite potential benefits to GM crops consumption for individuals with allergies. Individuals with food allergies may profit from hypoallergenic novel foods through increased dietary variation and reduced restriction accompanying GM crops.
+There are a few studies showing data supporting incidence of food allergens are increasing. There is no documented proof of commercially grown GM crops caused new allergies due to transgenically induced allergenic proteins or that generation of a GM crop causes biologically significant increases in endogenous allergenicity of a crop. All major genes used in GM crops indicated no allergenic potential.
+Toxicity
+GM crop studies found an association between tryptophan consumption, L-tryptophan specifically, and an increased number of deaths as well as neurologic disability. Tryptophan acted as the causal toxic agent. L-tryptophan is used plant proteins of crops such as GM maize and dietary supplements. The use of L-tryptophan was associated with an outbreak of eosinophilia-myalgia syndrome (EMS), a flu-like neurological condition. Large doses of tryptophan produced metabolites, which hindered normal degradation of histamine.
+Example: Seralini and colleagues looked into the effects of R-tolerant GM maize in rodents. The study found life-long toxic effects. Tumors developed considerably faster in rodents with a diet of R-tolerant GM maize in comparison to control rodents.
+Studies suggests that many traditional foods such as potatoes and beans are considered safe to consume, even if the food contains anti-nutrients, toxins and/or allergens. Furthermore, studies found no expected toxicities by the preparation of Bacillus thurngienses, a pesticide associated with increased allergen sensitivity.
+Antibiotic Resistance
+Antibiotic resistance is attributed to HGT. Antibiotics are used in early stages of genetic modification from HGT to eliminate chances of bacterial mutation and antibiotic resistant. A study done by Indiana State University and University of California San Diego found that hospitals observed decreased effectiveness of antibiotic drugs Hug (2008) found antibiotic resistance could be due to the HGT of GM crops via the transformation of bacteria in the food chain. Being exposed to the production or consumption GM crops can decrease antibiotic efficiency. Antibiotic markers persist in the body and can make antibiotic medications less effective. The amount of DNA experiencing HGTs is between 0.1 and 1g per day. About 20% of GM crops create new viral strains with unknown properties (positive or negative).
+However, studies state the probability of transfer genesis is "infinitestimally" small. Antibiotic resistance is limited by the breakdown of DNA in the gut and food in the digestive process.
+Additional Risks and Benefits
+Producing and consuming GM crops is associated with increased endocrine disruption, reproductive disorders, and accelerated aging. There is evidence that the increased use of glyphospate-based herbicides on GM crops is linked to endocrine disruption. While not directly a result of the crop, it's a consequence of making the crops resistant to the herbicides. More research needs to be done over these potential risks.
+GM crops also contributed to an increase in the number of functional foods or nutraceutical foods with added benefits. Nutraceutical is applied to isolated nutrients, dietary supplements and herbal products, specific diets, processed foods, and GM crops. Several nutraceutical foods include tomatoes, soybeans, and golden rice. Modified genes can be more specific and controlled to produce particular health advantages. Nutritionists expect higher nutrient content and an increased amount of nutrients (proteins, fatty acids, minerals, trace elements and vitamins) along with less anti-nutritional factors from GM crops.
+Tomatoes are genetically modified with increased lycopene. Nutritionists suggested an association between increased consumption of lycopene and reduced risk of prostate cancer. However, the Food and Drug Administration concluded there is little scientific evidence to reliably back this claim. Studies associated soybean proteins with antihypertensive properties such as lowering blood pressure. Scientists claim Golden Rice contains more Vitamin A. Studies showed Golden Rice leads to decreased rates of childhood blindness due to the increased consumption of Vitamin A.
+Capacity of Golden Rice lines with varying carotene content to supply the recommended nutrient intake of vitamin A. In rice-based societies,Golden Rice stands a very good chance of being able to deliver the recommended daily allowance of vitamin A (after conversion from -carotene) to all children. The diagram (right) shows that even with a very low dietary intake of vitamin A from other sources (green), Golden Rice varieties with a low -carotene content (orange) could fully provide the daily needs of these children. Varieties with higher -carotene content would make sure that an even larger proportion of the population reached the recommended levels.
+Genetically engineering crops have the potential to produce safer variation of crops, which could replace harmful traditional varieties by reducing the levels of undesired substances including mycotoxins, alkaloids and glucosinolates.
+Proponents of GM crops state GM crops are cheaper to manufacture allowing a higher yield in food production. Increased crop yield could reduce global hunger by supplying more nutritious food to developing countries for distribution.
+Scientific Studies and Guidelines
+A number of scientific studies done over the benefits and risks of GM crops were in collaboration with GM corporations themselves. Many third party scientists believe the conflict of interest associated with research scientists working under GM corporation guidelines increases the risk for bias in study results to unfairly favor GM products. Many GM corporations respond by stating they comply with GM crop approval guidelines for mainstream consumption.
+Possible Bias in Research Studies
+There are no studies that have looked or are currently looking at long-term effects of GM crops on the exposed human population. Close positive relationships between scientific researchers and GM corporation's interests have led to concerns for possible influences of financial conflicts of interest create bias results in favor of GM corporations. Diels observed a positive association between scientific research and GM industries relationships and financial conflicts of interests. For example, scientists from Monsanto's headquarters spearheaded counterarguments against Seralini and colleagues' results showing GM foods (produced by Monsanto) caused tumors in research rats, Conflict of interest in GM funded scientific research presents a risk of GM funded studies influencing study results. Funding from outside the GM industry such as government agencies and NGOs influence research outcomes as well.
+Nature's October 2009 issue found contractual agreements, publication restrictions, and other scientific dependencies on GM corporations were present in research on risk analysis of GM crops. \\ This is interesting...would like some follow-up, e.g. link to article \\
+Approval Guidelines
+Current crops being sold in the food market were tested and approved for consumption by the FDA. The FDA issued a statement in regards to GM safety: "We recognize and appreciate the strong interest that many consumers have in knowing whether a food was produced using bioengineering. FDA supports voluntary labeling that provides consumers with this information and has issued draft guidance to industry regarding such labeling. One of FDA's top priorities is food safety, which means ensuring that foods, whether genetically engineered or not, meet applicable requirements for safety and labeling."
+The World Health Organization (WHO) and the Organization first proposed comparative approaches to safety assessments for Economic Co-operation and Development (OECD). Comparative safety assessments are meant to be a starting point for a safety assessment and not a safety assessment in itself. However, there are some studies such as Constable and colleagues that claimed a comparative safety assessment between novel foods and GM crops does not correctly describe the safety profile of GM crops. The comparative safety assessment is focused on the safety evaluation of GM crop foods  structured outline of any potential differences between novel foods and GM crops in terms of the safety implications through appropriate methods and approaches as outlined by the OECD.
+Traditional foods are inherently noted as safe due to a long history of consumption as opposed to systematic toxicological and nutritional assessment. The disconnect between comparative safety assessments and the safety of traditional foods create a false/imprecise checklist of criteria to determine whether GM crops are safe or harmful. It is important to note that the history of safe use is largely determined by the context of its traditional use, population consuming the food product and ways the traditional foods are prepared and processed. Conducting a comparative safety assessment is more of a benchmark location as to where GM crops' safety is relative to the perceived safety of traditional foods. \\ Make this paragraph briefer and more concise \\
+Important information in regards to both traditional and GM crops to conduct a comparative safety assessment include (Constable et al., 2007):
+Toxiocology data including details of known natural toxicants
+Nutritional data including details of known natural antinutritional factors
+Allergenicity
+Pathogenicity (for micro-organisms)
+Known health compromising contaminants (nature and level of)
+Bioactive substances
+Metabolic and/or gastrointestinal effects in humans
+There are detailed guidelines for the preparation and presentation of application for approval for human consumption of GMO crops. The approval process of GMO crops into mainstream consumption requires a number of testing and the ability to pass multiple criteria to ensure safety. A history of safe use is needed to determine the regulatory status of a food, whether it is appropriate to conduct research and/or evaluate the safety of a food. The assessment, as a whole, will then be reviewed to determine the safety of GM crops for human consumption.
+Below are the criteria to determine a history of safe use taken from Constable et al. 2007.
+History of Safe Use - Key Issues
+History:
+Correct identification
+Biology (origin, genetic diversity)
+Length of use
+Geographic/demographic distribution of use
+Details of use
+Evidence of adverse effects
+Reliability of data
+Safe:
+Composition (especially toxic, allergenic, metabolic, nutritional and antinutritional components as well as health compromising compounds)
+In silico tests (e.g. structural homology to known allergens of known toxins)
+In vitro tests (e.g. serum screening, digestibility tests)
+Animal studies (toxiocology and nutritional studies)
+Clinical studies
+Epidemiological evidence
+Use:
+Type/purpose (e.g. as a food, ingredient, supplement or pharmaceutical)
+Preparation and processing
+Known precautions
+Pattern of consumption (occasional, regular or co-administration)
+Intake (level, populations exposed, mean/extremes)
+\\ Need to organize this pageand incorporate some citations into sections throughout the module \\
+References
+http://californiaagriculture.ucanr.edu/landingpage.cfm?articleid=ca.v054n04p6
+http://biotech.about.com/od/technicaltheory/a/Genetically-Modified-Food-How-Did-We-Get-Here.htm
+http://www.isaaa.org/kc/Publications/pdfs/isaaabriefs/Briefs%201.pdf
+http://americanradioworks.publicradio.org/features/gmos_india/history.html
+http://www.who.int/foodsafety/publications/biotech/20questions/en/
+Mechanism of Recombination, 2010 http://www.youtube.com/watch?v=8rXizmLjegI&feature=youtube_gdata_player.
+"Agrobacterium." Wikipedia, the Free Encyclopedia, October 22, 2013. http://en.wikipedia.org/w/index.php?title=Agrobacterium&oldid=552480686.
+http://www.doctoroz.com/videos/genetically-modified-foods-get-facts
+http://www.globalization101.org/highly-beneficial-increased-yield-and-hardiness
+http://www.globalhealingcenter.com/natural-health/what-are-genetically-modified-organisms/
+https://wiki.brown.edu/confluence/download/attachments/31602/whatisgefood.pdf?version=1
+http://www.public.iastate.edu/~ethics/LabelGMFood.pdf
+Barber, D., Rodrigues, R. & Salcedo, G. (2008) Molecular profiles: A new tool to substantiate serum banks for evaluation of potential allergenicity of GMO. Food and Chemical Toxicology, 46: S35-S40.
+Brookes G, Barfoot P. Key environmental impacts of global genetically modified (GM) crop use 19962011. GM Crops and Food: Biotechnology in Agriculture and the Food Chain ; 4:0 - 10; http://dx.doi.org/10.4161/gmcr.24459; PMID: 23635915
+Constable, A., Jonas, D., Cockburn, A., Davi, A., Edwards, G., Hepburn, P., Herouet-Guicheney, C., Knowles, M., Moseley, Oberdorfer, R., & Samuels, F. (2007) History of safe use as applied to the safety assessment of novel foods and foods derived from genetically modified organisms. Food and Chemical Toxicology, 45: 2513-2525.
+D'Angolo, G. (2005) GMO: Human health risk assessment. Veterinary Research Communication, 29: 7-11.
+Diels, J., Cunha, M., Manaia, C., Sabugosa-Madeira, B., & Silva, M. (2011) Association of financial or professional conflict of interest to research outcomes on health risks or nutritional assessment studies of genetically modified products. Food Policy, 36: 197-203.
+Hug, K. (2008) Genetically modified organisms: do the benefits outweigh the risks? Medicina, 44(2): 87-99
+Nussair, C., Robin, S., & Ruffieux, B. (2004) Do consumers really refuse to buy genetically modified food? The Economic Journal, 114(492): 102-120.
+Purchase, I. F. H. (2005) What determines the acceptabilty of genetically modified food that can improve human nutrition? Toxicology and Applied Pharmacology, 207: S19-S27.
+Putten, M. V, Kleter, G. A., Glissen, L.J.W.J., Gremmen, B., Wichers, H. J., & Frewer, L. J. (2011) Novel foods and allergy: Regulations and risk-benefit assessment. Food Control, 22: 143-157.

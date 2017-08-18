@@ -1,0 +1,56 @@
+Genetically Modified Foods
+HomeGenetic Science and SocietyGenetically Modified FoodsGenetically Modified FoodsWhat would you do in the following situations? You are a tomato farmer whose crops are threatened by a persistent species of
+beetle. Each year, you spend large sums of money for pesticides to protect your crops.
+A biotechnology company introduces a new strain of tomato plant that produces a natural
+pesticide, making it resistant to the beetle. By switching to this new strain, you could
+avoid both the beetle and the chemical pesticides traditionally needed to fight it.As a family physician, you often treat children who suffer from infectious diseases
+that could easily be prevented through vaccination. But the parents of many of your patients
+cannot afford the cost of vaccinations. You hear of a new approach that would reduce the cost
+to a fraction of its current price: genetically modified fruits and vegetables that contain
+various vaccines. By simply eating a banana, a child could be protected against diseasewithout getting a shot!You are the leader of a developing nation. Hunger is a problem among your citizens: the
+salty coastal wetlands of your country can&apos;t support the growth of
+needed crops, and your slow economy can&apos;t support importing enough food for everyone. A
+biotechnology company has genetically modified a rice plant that can thrive in salt water,
+providing your nation with the opportunity to feed its citizens while bolstering its economy.Our ability to manipulate plants by introducing new genes promises innovative solutions to
+these and many other real-world problems. Yet there is considerable opposition to the use of
+genetically modified plants for food production and other uses.Genetic engineering offers a time-saving method for producing larger, higher-quality crops with
+less effort and expense. Yet such benefits must be balanced against the risks of changing the
+genetic makeup of organisms.What are those risks, and how likely are they to occur? In order to define them, we need to
+understand the science of plant genetic engineering. Genetically modified: what exactly are we talking about? For thousands of years, humans have been genetically enhancing other organisms through the practice
+of selective breeding. Look around you: the sweet corn and seedless watermelons at the supermarket,
+the purebred dogs at the park, and your neighbor&apos;s prize rosebush are all examples of how humans have
+selectively enhanced desirable traits in other living things.The type of genetic enhancement that generates the most concern goes a step beyond selective
+breeding, however. Technology now allows us to transfer genes between organisms. For example,
+the tomato plant&apos;s beetle resistance relies on a gene from a bacterium (Bacillus thuringiensis),
+which scientists inserted into the tomato plant&apos;s genome. This gene, called cry1Ac, encodes a
+protein that is poisonous to certain types of insects, including the beetle.How is this done? Gene transfer technology is simply a sophisticated version of a cut-and-paste
+operation. Once the desired gene is identified in the native organism&apos;s genome, it can be cut out,
+transferred to the target plant, and pasted into its genome. (The illustration to the right describes
+the "gene-gun" approach, which is one of several gene transfer methods.) Once the new gene has been
+introduced, the plant can be bred to create a new strain that passes the gene from generation to generation.
+Benefits versus risks of genetically modified plants Can you think of some possible risks of growing plants that contain genes from other organisms? Let&apos;s
+examine our earlier examples: the beetle-resistant tomato, the vaccination banana, and the saltwater rice
+plant. We&apos;ve already covered the potential advantages of these plants, but what are the concerns? Cross-breeding with wild populations. For all of these examples, a primary concern is preventing
+genetically modified versions from mixing with the naturally existing populations of plants from
+which they&apos;re derived. Plants rely on the transfer of pollen, via insects or the air, to breed and
+produce offspring, and it&apos;s difficult to control how they cross-breed in the wild. In most cases, it&apos;s not yet clear how introduction of the non-native gene would affect wild
+populations. Critics of genetically modified plant technology cite the need to learn more about
+the potential long-term impacts of genetically modified plants on the environment before mass-producing them. Toxicity or allergic reactions. Many people suffer from allergies to various food items, including nuts,
+wheat, eggs, or dairy products. There is concern that the protein products of introduced genes may be toxic
+or allergenic to certain individuals. When farmers start growing genetically modified crops, they stop growing the old varieties. These
+old varieties are important sources of diverse genes that give plants other desirable characteristics.
+For example, a new pest or disease could come along and destroy the genetically modified rice. If one
+of the old rice varieties has a gene that makes it resistant, it could be cross-bred to make the
+saltwater rice resistant as well. If we lose the old varieties, we also lose their useful genes. It has been estimated that 70% of all processed foods in the United States contain at least one
+genetically modified ingredientusually a product of soy plants. There are initiatives afoot to require
+food manufacturers to provide clear labeling on processed food products that contain genetically modified
+ingredients. This would make it easier for people with allergies to avoid foods that might pose a danger
+to them, and it would allow those who oppose genetically modified foods to opt out of buying them. Unlike countries such as Australia and Japan, the United States currently has no laws requiring
+companies to label products containing genetically modified ingredients. Despite the controversy surrounding them, genetically modified plants have taken root in our
+world. As with any new technology, members of society have the responsibility to become informed
+about genetically modified plants, in order to make decisions about their responsible use and
+regulation.
+FundingCite this pageFeedbackDisclaimerPermissions PolicyPrivacy PolicyCopyright University of UtahGenetic Science Learning CenterAPA format:Genetic Science Learning Center. (2013, July 15) Genetically Modified Foods.
+Retrieved August 15, 2016, from http://learn.genetics.utah.edu/content/science/gmfoods/CSE format:Genetically Modified Foods [Internet]. Salt Lake City (UT): Genetic Science Learning Center; 2013
+[cited 2016 Aug 15] Available from http://learn.genetics.utah.edu/content/science/gmfoods/Chicago format:Genetic Science Learning Center. "Genetically Modified Foods." Learn.Genetics.
+July 15, 2013. Accessed August 15, 2016. http://learn.genetics.utah.edu/content/science/gmfoods/.

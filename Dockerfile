@@ -7,9 +7,6 @@ USER root
 RUN chown -R $NB_USER $HOME
 
 #Get a whole lot of GNU core development tools
-#version control java development, maven
-#Libraries required for building MPI from source
-#Libraries required for building NEURON from source
 
 RUN apt-get update
 RUN apt-get install apt-transport-https ca-certificates
@@ -35,7 +32,7 @@ RUN echo "${NB_USER} ALL=NOPASSWD: ALL" >> /etc/sudoers
 
 RUN sudo /opt/conda/bin/pip install nltk
 RUN python -c "import nltk; nltk.download('punkt');from nltk import word_tokenize,sent_tokenize"
-
+RUN python -c "import nltk; nltk.download('averaged_perceptron_tagger')"
 RUN sudo /opt/conda/bin/pip install textstat
 RUN sudo /opt/conda/bin/pip install tabulate
 RUN sudo /opt/conda/bin/pip install textblob

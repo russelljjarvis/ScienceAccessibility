@@ -1,23 +1,24 @@
 #set parameters- THESE ARE ALL USER DEFINED
 #searchList = ['GMO']
-searchList = ['GMO','Genetically Modified Organism']
+import os
+
+searchList = ['/GMO','/Genetically Modified Organism']
 #searchList = ['Transgenic','Vaccine']
 
 web = 4 #number of search websites being implemented (google, google scholar, bing, yahoo)
 numURLs = 50 #number of URLs per search website  (number determined by 1.scrape code)
 
 #set filePath below to specify where the text Data is located on your machine
-FileLocation = '/Users/PMcG/Dropbox (ASU)/AAB_files/Pat-files/WCP/code/Data Files/'
-
+#FileLocation = '/Users/PMcG/Dropbox(ASU)/AAB_files/Pat-files/WCP/code/Data Files/'
+fileLocation = os.getcwd() + str('/dataFiles')
 #if you're switchign computers you can use this to indicate a second location to use if the first doesn't exist
-import os
-if not os.path.exists(FileLocation):
-   FileLocaton = 'D:/Dropbox (ASU)/RESEARCH/Pat_Projects/textAnalyze/'
+#if not os.path.exists(FileLocation):
+#   FileLocaton = 'D:/Dropbox (ASU)/RESEARCH/Pat_Projects/textAnalyze/'
 
 
 ##once the above is set you can run the code!
 #this code assumes you've run the ScrapLinksandText code - it requires the text files it generates
-   
+
 ########################################################################
 #call in necessary packages that code requires to operate and define additional vars
 import numpy
@@ -38,7 +39,7 @@ from nltk.corpus import subjectivity
 from nltk.corpus import cmudict
 from nltk.sentiment import SentimentAnalyzer
 from nltk import compat
-from nltk.compat import Counter
+#from nltk.compat import Counter
 from nltk.draw import dispersion_plot
 
 from textstat.textstat import textstat
@@ -46,15 +47,17 @@ import time
 from tabulate import tabulate
 from textblob import TextBlob
 ########################################################################
+import ipyparallel
 
-for s in range(0,len(searchList)) :
+for s, value in enumerate(searchList):
 
     #set filepath where data is saved
-    os.chdir(FileLocation + str(searchList[s]) +'/')
+    os.chdir(fileLocation + str(value))
 
     ##start analysis code
     print (" "); print ("###############################################")
-    print (" "); print ("Term "+ str(s+1) + " of " + str(len(searchList)) + ": " + searchList[s]);  print (" "); print ("###############################################")
+    print (" "); print ("Term {0} of {1} : {2}".format(s+1 , str(len(searchList)), value))
+    print (" "); print ("###############################################")
 
     for b in range(0,web) :
         #search engine selection
@@ -73,14 +76,15 @@ for s in range(0,len(searchList)) :
 
         for p in range(0,numURLs) :
             print ("-------------------------------------------")
-            print ("Analyzing Search Engine " + str(b+1) + " of " + str(web) + ": Link " + str(p+1)); print (""); 
+            print ("Analyzing Search Engine " + str(b+1) + " of " + str(web) + ": Link " + str(p+1)); print ("");
 
             #open and read text file
-            fileName = textName + str(p+1) + ".txt"        
-            fileHandle = open(fileName, 'rU');
+            fileName = '{0}{1}.txt'.format(textName,p+1)
+            print(fileName)
+            fileHandle = open(fileName, 'r');
             url_text = fileHandle.read()
             fileHandle.close()
-            url_text = url_text.decode('ascii','ignore')
+            #url_text = url_text.decode('ascii','ignore')
 
             #initialize dataArray
             urlDat = {}
@@ -88,10 +92,10 @@ for s in range(0,len(searchList)) :
             urlDat[2,1] = "Number of Sentences"
             urlDat[3,1] = "Frequency of Search Term"
             urlDat[4,1] = "Sentiment Analysis"
-            urlDat[5,1] = "Subjectivity Analysis" 
+            urlDat[5,1] = "Subjectivity Analysis"
             urlDat[6,1] = "Grade level"
             urlDat[7,1] = "Flesch Reading Ease"
-            urlDat[8,1] = "SMOG Index"       
+            urlDat[8,1] = "SMOG Index"
             urlDat[9,1] = "Coleman Liau"
             urlDat[10,1] = "Automated Readability Index"
             urlDat[11,1] = "Gunning Fog"
@@ -120,15 +124,23 @@ for s in range(0,len(searchList)) :
             sents = [w.lower() for w in sents] #lowercase all
 
             urlDat[2,2]   = len(sents) #determine number of sentences
-            
+
             ########################################################################
             ##frequency distribtuion of text
             fdist = FreqDist(w.lower() for w in URLtext if w.isalpha()) #frequency distribution of words only
-            fd_temp = fdist.items()
+            ##
+            # Note casting the dictionary to a list is probably bad for long term code maintainability.
+            # probably the same fAll = {} can be created
+            # iterating through key value pairs of dictionaries
+            # with the idiom:
+            # for key, value in fdist.items():
+            #    key, value
+            ##
+            fd_temp = list(fdist.items())
 
-            urlDat[3,2] = fdist[searchList[s].lower()] #frequency of search term    
+            urlDat[3,2] = fdist[searchList[s].lower()] #frequency of search term
             frexMost = fdist.most_common(15) #show N most common words
-            
+
             fAll = {}
             for x in range(0,len(fd_temp)):
                 fAll[x,1], fAll[x,2] = [y.strip('}()",{:') for y in (str(fd_temp[x])).split(',')]
@@ -138,12 +150,12 @@ for s in range(0,len(searchList)) :
             for x in range(0,len(frexMost)) :
                 fM[x,1], fM[x,2] = [y.strip('}()",{:') for y in (str(frexMost[x])).split(',')]
             ##
-                
+
             #identify long words based on word length of n characters
             #long_words = [w for w in words if len(w) > 8] #last number is character length
             #sorted(long_words)
 
-            ########################################################################       
+            ########################################################################
             ##determine syllable count for all words in each sentece
             sentSyl = {}
             WperS = {}
@@ -157,32 +169,36 @@ for s in range(0,len(searchList)) :
 
                 WperS[n] = len(sent) #number of words per sentence
 
-                #syllable analysis    
+                #syllable analysis
                 for x in range (0,len(sent)):
-                    
+
                     word = sent[x]
-                    
+
                     # Count the syllables in the word.
                     syllables = textstat.syllable_count(str(word))
                     sentSyl[n,x] = syllables
 
             ########################################################################
             ## Complexity Analysis
-            urlDat[6,2]  = textstat.flesch_kincaid_grade(str(url_text))        
+            urlDat[6,2]  = textstat.flesch_kincaid_grade(str(url_text))
             urlDat[7,2] = textstat.flesch_reading_ease(str(url_text))
-            urlDat[8,2]  = textstat.smog_index(str(url_text))    
+            urlDat[8,2]  = textstat.smog_index(str(url_text))
             urlDat[9,2]  = textstat.coleman_liau_index(str(url_text))
             urlDat[10,2]  = textstat.automated_readability_index(str(url_text))
             urlDat[11,2] = textstat.gunning_fog(str(url_text))
 
             urlDat[12,2]  = textstat.dale_chall_readability_score(str(url_text))
             urlDat[13,2]  = textstat.difficult_words(str(url_text))
-            urlDat[14,2]  = textstat.linsear_write_formula(str(url_text)) 
+            urlDat[14,2]  = textstat.linsear_write_formula(str(url_text))
             urlDat[15,2]  = textstat.text_standard(str(url_text))
 
             ########################################################################
             ##defining part of speech for each word
-            wordsPOS = pos_tag([w.lower() for w in URLtext if w.isalpha()]) 
+            from nltk.tag.perceptron import PerceptronTagger
+
+            tagger = PerceptronTagger(load=False)
+
+            wordsPOS = pos_tag([w.lower() for w in URLtext if w.isalpha()])
 
             PS = {}
             for x in range(0,len(wordsPOS)) :
@@ -207,7 +223,7 @@ for s in range(0,len(searchList)) :
                            [str(urlDat[15,1]) + ": " + str(urlDat[15,2])]]
 
             headers = ["Complexity Results:"]; print (tabulate(plotDat,headers,tablefmt="simple",stralign="left"))
-            time.sleep(1); print (""); print (""); print ("");       
+            time.sleep(1); print (""); print (""); print ("");
             ########################################################################
             ##convert all dict variables to list for multidimensional conversion to matlab cell array
             urlDat = urlDat.items()

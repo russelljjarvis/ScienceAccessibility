@@ -40,3 +40,7 @@ RUN sudo /opt/conda/bin/pip install textblob
 USER $NB_USER
 ENV WORK_HOME $HOME/work
 WORKDIR $WORK_HOME
+COPY ~/git/SReadability SReadability
+#ADD ./downloads /tmp
+
+ENTRYPOINT ipython -i tAnalysis.py

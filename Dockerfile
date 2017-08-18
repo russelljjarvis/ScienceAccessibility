@@ -9,9 +9,9 @@ RUN chown -R $NB_USER $HOME
 #Get a whole lot of GNU core development tools
 
 RUN apt-get update
-RUN apt-get install apt-transport-https ca-certificates
+RUN apt-get -y install apt-transport-https ca-certificates
 RUN apt-get -y install apt-transport-https curl
-RUN apt-get install -y wget
+RUN apt-get -y install wget
 
 RUN pip install --upgrade pip
 

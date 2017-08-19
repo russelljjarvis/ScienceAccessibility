@@ -36,11 +36,13 @@ RUN python -c "import nltk; nltk.download('averaged_perceptron_tagger')"
 RUN sudo /opt/conda/bin/pip install textstat
 RUN sudo /opt/conda/bin/pip install tabulate
 RUN sudo /opt/conda/bin/pip install textblob
+RUN sudo /opt/conda/bin/pip install ipyparallel
 
 USER $NB_USER
 ENV WORK_HOME $HOME/work
 WORKDIR $WORK_HOME
-COPY ~/git/SReadability SReadability
-#ADD ./downloads /tmp
-
+WORKDIR SReadability
+WORKDIR $WORK_HOME
+COPY . SReadability
+WORKDIR SReadability
 ENTRYPOINT ipython -i tAnalysis.py

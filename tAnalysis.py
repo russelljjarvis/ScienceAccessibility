@@ -2,6 +2,16 @@
 #searchList = ['GMO']
 import os
 
+import matplotlib # Its not that this file is responsible for doing plotting, but it calls many modules that are, such that it needs to pre-empt
+# setting of an appropriate backend.
+matplotlib.use('Agg')
+# Uncomment to enable parallelization.
+# import sys
+# import os
+# import ipyparallel as ipp
+# from ipyparallel import depend, require, dependent
+# rc = ipp.Client(profile='default')
+
 searchList = ['/GMO','/Genetically Modified Organism']
 #searchList = ['Transgenic','Vaccine']
 
@@ -47,7 +57,7 @@ import time
 from tabulate import tabulate
 from textblob import TextBlob
 ########################################################################
-import ipyparallel
+#import ipyparallel
 
 for s, value in enumerate(searchList):
 
@@ -58,35 +68,21 @@ for s, value in enumerate(searchList):
     print (" "); print ("###############################################")
     print (" "); print ("Term {0} of {1} : {2}".format(s+1 , str(len(searchList)), value))
     print (" "); print ("###############################################")
-
-    for b in range(0,web) :
-        #search engine selection
-        if b == 0:
-            textName = "google_"
-            print ("Google")
-        elif b == 1:
-            textName = "gScholar_"
-            print ("Google Scholar")
-        elif b == 2:
-            textName = "bing_"
-            print ("Bing")
-        elif b == 3:
-            textName = "yahoo_"
-            print ("Yahoo")
-
+    web = ["google_","gScholar_","bing_","yahoo_"]
+    for b, textName in enumerate(web):
         for p in range(0,numURLs) :
+            import pdb; pdb.set_trace()
             print ("-------------------------------------------")
             print ("Analyzing Search Engine " + str(b+1) + " of " + str(web) + ": Link " + str(p+1)); print ("");
 
-            #open and read text file
+            #open and read text q
             fileName = '{0}{1}.txt'.format(textName,p+1)
             print(fileName)
             fileHandle = open(fileName, 'r');
             url_text = fileHandle.read()
             fileHandle.close()
-            #url_text = url_text.decode('ascii','ignore')
 
-            #initialize dataArray
+            #initialize dataArray Dictionary
             urlDat = {}
             urlDat[1,1] = "Number of Words"
             urlDat[2,1] = "Number of Sentences"
@@ -159,20 +155,18 @@ for s, value in enumerate(searchList):
             ##determine syllable count for all words in each sentece
             sentSyl = {}
             WperS = {}
-
-            for n in range (0,len(sents)):
-
+            # def sentence_processing(sent):
+            # TODO turn this nested for loop into a map.
+            # only problem is this
+            for sent in sents:
                 #setup sent variable to analyze each sentence individually
-                sent = sents[n] #select sentence n in total text
                 sent = word_tokenize(sent) #tokenize sentence n in to words
                 sent = [w.lower() for w in sent if w.isalpha()] #remove any non-text
 
                 WperS[n] = len(sent) #number of words per sentence
 
                 #syllable analysis
-                for x in range (0,len(sent)):
-
-                    word = sent[x]
+                for word in sent:
 
                     # Count the syllables in the word.
                     syllables = textstat.syllable_count(str(word))
@@ -239,7 +233,7 @@ for s, value in enumerate(searchList):
             else:
                 obj_arr_add = np.array([urlDat,WperS, sentSyl, fM, PS, fAll], dtype=object)
                 obj_arr = np.vstack( [obj_arr, obj_arr_add] )
-
+            return obj_arrar
     #after the full code runs export to a .mat file to a designed location
     os.chdir(FileLocation)
 

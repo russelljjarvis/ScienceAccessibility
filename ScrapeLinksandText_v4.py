@@ -119,28 +119,28 @@ for x,category in enumerate(searchList):
 
         print(" ")
         if b == 0:
-            searchName = "google_" #output name for text file
+            #searchName = "google_" #output name for text file
             linkName = "https://www.google.com/search?num=100&filter=0&start=" #search engine web address
             linkCheck1 = "//div[@class='srg']/div[@class='g']/div[@class='rc']/h3[@class='r']/a" #HTML syntax where links are stored
             linkCheck2 = "//div[@id='rso']/div[@class='g']/div[@class='rc']/h3[@class='r']/a" #HTML syntax where links are stored
             print("Google")
 
         elif b == 1:
-            searchName = "gScholar_" #output name for text file
+            #searchName = "gScholar_" #output name for text file
             linkName = "https://www.scholar.google.com/scholar?num=100&filter=0&start=" #search engine web address
             linkCheck1 = "//div[@class='gs_r']/div[@class='gs_ri']/h3[@class='gs_rt']/a" #HTML syntax where links are stored
             linkCheck2 = "//div[@class='gs_r']/div[@class='gs_ri']/h3[@class='gs_rt']/a" #HTML syntax where links are stored
             print("Google Scholar")
 
         elif b == 2:
-            searchName = "bing_" #output name for text file
+            #searchName = "bing_" #output name for text file
             linkName = "https://www.bing.com/search?num=100&filter=0&first=" #search engine web address
             linkCheck1 = "//h2/a" #HTML syntax where links are stored
             linkCheck2 = "//h2/a" #HTML syntax where links are stored
             print("Bing")
 
         elif b == 3:
-            searchName = "yahoo_" #output name for text file
+            #searchName = "yahoo_" #output name for text file
             linkName =  "https://search.yahoo.com/search?p=" #search engine web address
             linkCheck1 = "//a[@class=' ac-algo ac-21th lh-24']" #HTML syntax where links are stored
             linkCheck2 = "//a[@class=' ac-algo ac-21th lh-24']" #HTML syntax where links are stored

@@ -49,6 +49,8 @@ from textblob import TextBlob
 ########################################################################
 import ipyparallel
 
+import pdb; pdb.set_trace()
+
 for s, value in enumerate(searchList):
 
     #set filepath where data is saved

@@ -43,7 +43,6 @@ RUN wget https://chromedriver.storage.googleapis.com/2.31/chromedriver_linux64.z
 RUN unzip chromedriver_linux64.zip
 
 
-neuro:autoload rjjarvis$ cat Dockerfile 
 ###
 ## A file that is expected to be available after a volume is mounted
 ## cannot be executed by using the entrypoint command, since
@@ -59,18 +58,12 @@ neuro:autoload rjjarvis$ cat Dockerfile
 ##                                                                        -v /tmp/.X11-unix:/tmp/.X11-unix \
 ##                                                    scidash/autoload'
 ###
-RUN touch start.sh
-RUN echo "cd /home/mnt/WComplexityP" >> start.sh
-RUN echo "ipcluster start -n 8 --profile=default & sleep 5 && ipython -i tAnalysis_v3.py" >> start.sh
-ENTRYPOINT /bin/bash start.sh
 
 USER $NB_USER
 ENV WORK_HOME $HOME/work
 WORKDIR $WORK_HOME
 WORKDIR SReadability
 WORKDIR $WORK_HOME
-COPY . SReadability
-WORKDIR SReadability
 
 RUN sudo apt-get update
 RUN sudo apt-get install -y python3-software-properties
@@ -103,4 +96,9 @@ RUN sudo apt-get install -yqq xvfb
 # set dbus env to avoid hanging
 ENV DISPLAY=:99
 ENV DBUS_SESSION_BUS_ADDRESS=/dev/null
-ENTRYPOINT ipython -i tAnalysis.py
+#ENTRYPOINT ipython -i tAnalysis.py
+RUN touch start.sh
+RUN echo "cd /home/mnt" >> start.sh
+RUN echo "ipython -i ScrapeLinksandText_v4.py" >> start.sh
+#RUN echo "ipcluster start -n 8 --profile=default & sleep 5 && ipython -i tAnalysis_v3.py" >> start.sh
+ENTRYPOINT /bin/bash start.sh

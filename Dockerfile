@@ -37,6 +37,27 @@ RUN sudo /opt/conda/bin/pip install textstat
 RUN sudo /opt/conda/bin/pip install tabulate
 RUN sudo /opt/conda/bin/pip install textblob
 
+neuro:autoload rjjarvis$ cat Dockerfile 
+###
+## A file that is expected to be available after a volume is mounted
+## cannot be executed by using the entrypoint command, since
+## Entry point acts on files that already exist
+## Instead write a BASH script
+## That merely assumes this path will
+## become available at start up
+## and execute it from its expected path on the mounted volume
+## After building this file
+## docker build autoload -t scidash/autoload
+## I launch docker with the alias al given below:
+## alias al='cd ~/scratch;sudo docker run -e DISPLAY=$DISPLAY -it -v `pwd`:/home/mnt -v ${HOME}/git/.git \
+##                                                                        -v /tmp/.X11-unix:/tmp/.X11-unix \
+##                                                    scidash/autoload'
+###
+RUN touch start.sh
+RUN echo "cd /home/mnt/WComplexityP" >> start.sh
+RUN echo "ipcluster start -n 8 --profile=default & sleep 5 && ipython -i tAnalysis_v3.py" >> start.sh
+ENTRYPOINT /bin/bash start.sh
+
 USER $NB_USER
 ENV WORK_HOME $HOME/work
 WORKDIR $WORK_HOME

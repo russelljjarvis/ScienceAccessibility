@@ -6,11 +6,13 @@ import matplotlib # Its not that this file is responsible for doing plotting, bu
 # setting of an appropriate backend.
 matplotlib.use('Agg')
 # Uncomment to enable parallelization.
-# import sys
-# import os
-# import ipyparallel as ipp
-# from ipyparallel import depend, require, dependent
-# rc = ipp.Client(profile='default')
+import sys
+import os
+import ipyparallel as ipp
+from ipyparallel import depend, require, dependent
+rc = ipp.Client(profile='default')
+dview = rc[:]
+
 
 searchList = ['/GMO','/Genetically Modified Organism']
 #searchList = ['Transgenic','Vaccine']
@@ -69,173 +71,180 @@ for s, value in enumerate(searchList):
     print (" "); print ("Term {0} of {1} : {2}".format(s+1 , str(len(searchList)), value))
     print (" "); print ("###############################################")
     web = ["google_","gScholar_","bing_","yahoo_"]
-    for b, textName in enumerate(web):
-        for p in range(0,numURLs) :
-            import pdb; pdb.set_trace()
-            print ("-------------------------------------------")
-            print ("Analyzing Search Engine " + str(b+1) + " of " + str(web) + ": Link " + str(p+1)); print ("");
 
-            #open and read text q
-            fileName = '{0}{1}.txt'.format(textName,p+1)
-            print(fileName)
-            fileHandle = open(fileName, 'r');
-            url_text = fileHandle.read()
-            fileHandle.close()
+    flattened = [ (p,b,textName) for b, textName in enumerate(web) for p in range(0,numURLs) ]
 
-            #initialize dataArray Dictionary
-            urlDat = {}
-            urlDat[1,1] = "Number of Words"
-            urlDat[2,1] = "Number of Sentences"
-            urlDat[3,1] = "Frequency of Search Term"
-            urlDat[4,1] = "Sentiment Analysis"
-            urlDat[5,1] = "Subjectivity Analysis"
-            urlDat[6,1] = "Grade level"
-            urlDat[7,1] = "Flesch Reading Ease"
-            urlDat[8,1] = "SMOG Index"
-            urlDat[9,1] = "Coleman Liau"
-            urlDat[10,1] = "Automated Readability Index"
-            urlDat[11,1] = "Gunning Fog"
-            urlDat[12,1] = "Dale Chall Readability Score"
-            urlDat[13,1] = "Difficult Words"
-            urlDat[14,1] = "Linsear Write Formula"
-            urlDat[15,1] = "Text Standard"
+    def map_search(flattened):
+        p,b,textName = flattened
+        #import pdb; pdb.set_trace()
+        print ("-------------------------------------------")
+        print ("Analyzing Search Engine " + str(b+1) + " of " + str(web) + ": Link " + str(p+1)); print ("");
 
-            ########################################################################
-            #remove unreadable characters
-            url_text = url_text.replace("-", " ") #remove characters that nltk can't read
-            textNum = re.findall(r'\d', url_text) #locate numbers that nltk cannot see to analyze
-            for x in range(0,len(textNum)) :
-                url_text.find(textNum[x])
+        #open and read text q
+        fileName = '{0}{1}.txt'.format(textName,p+1)
+        print(fileName)
+        fileHandle = open(fileName, 'r');
+        url_text = fileHandle.read()
+        fileHandle.close()
 
-            ########################################################################
-            ##Splitting text into:
-            #words.
-            URLtext = word_tokenize(url_text)
-            URLtext = [w.lower() for w in URLtext] #make everything lower case
+        #initialize dataArray Dictionary
+        urlDat = {}
+        urlDat[1,1] = "Number of Words"
+        urlDat[2,1] = "Number of Sentences"
+        urlDat[3,1] = "Frequency of Search Term"
+        urlDat[4,1] = "Sentiment Analysis"
+        urlDat[5,1] = "Subjectivity Analysis"
+        urlDat[6,1] = "Grade level"
+        urlDat[7,1] = "Flesch Reading Ease"
+        urlDat[8,1] = "SMOG Index"
+        urlDat[9,1] = "Coleman Liau"
+        urlDat[10,1] = "Automated Readability Index"
+        urlDat[11,1] = "Gunning Fog"
+        urlDat[12,1] = "Dale Chall Readability Score"
+        urlDat[13,1] = "Difficult Words"
+        urlDat[14,1] = "Linsear Write Formula"
+        urlDat[15,1] = "Text Standard"
 
-            urlDat[1,2] = textstat.lexicon_count(str(url_text))
+        ########################################################################
+        #remove unreadable characters
+        url_text = url_text.replace("-", " ") #remove characters that nltk can't read
+        textNum = re.findall(r'\d', url_text) #locate numbers that nltk cannot see to analyze
+        for x in range(0,len(textNum)) :
+            url_text.find(textNum[x])
 
-            #sentences
-            sents = sent_tokenize(url_text) #split all of text in to sentences
-            sents = [w.lower() for w in sents] #lowercase all
+        ########################################################################
+        ##Splitting text into:
+        #words.
+        URLtext = word_tokenize(url_text)
+        URLtext = [w.lower() for w in URLtext] #make everything lower case
 
-            urlDat[2,2]   = len(sents) #determine number of sentences
+        urlDat[1,2] = textstat.lexicon_count(str(url_text))
 
-            ########################################################################
-            ##frequency distribtuion of text
-            fdist = FreqDist(w.lower() for w in URLtext if w.isalpha()) #frequency distribution of words only
-            ##
-            # Note casting the dictionary to a list is probably bad for long term code maintainability.
-            # probably the same fAll = {} can be created
-            # iterating through key value pairs of dictionaries
-            # with the idiom:
-            # for key, value in fdist.items():
-            #    key, value
-            ##
-            fd_temp = list(fdist.items())
+        #sentences
+        sents = sent_tokenize(url_text) #split all of text in to sentences
+        sents = [w.lower() for w in sents] #lowercase all
 
-            urlDat[3,2] = fdist[searchList[s].lower()] #frequency of search term
-            frexMost = fdist.most_common(15) #show N most common words
+        urlDat[2,2]   = len(sents) #determine number of sentences
 
-            fAll = {}
-            for x in range(0,len(fd_temp)):
-                fAll[x,1], fAll[x,2] = [y.strip('}()",{:') for y in (str(fd_temp[x])).split(',')]
-            ##
+        ########################################################################
+        ##frequency distribtuion of text
+        fdist = FreqDist(w.lower() for w in URLtext if w.isalpha()) #frequency distribution of words only
+        ##
+        # Note casting the dictionary to a list is probably bad for long term code maintainability.
+        # probably the same fAll = {} can be created
+        # iterating through key value pairs of dictionaries
+        # with the idiom:
+        # for key, value in fdist.items():
+        #    key, value
+        ##
+        fd_temp = list(fdist.items())
 
-            fM = {}
-            for x in range(0,len(frexMost)) :
-                fM[x,1], fM[x,2] = [y.strip('}()",{:') for y in (str(frexMost[x])).split(',')]
-            ##
+        urlDat[3,2] = fdist[searchList[s].lower()] #frequency of search term
+        frexMost = fdist.most_common(15) #show N most common words
 
-            #identify long words based on word length of n characters
-            #long_words = [w for w in words if len(w) > 8] #last number is character length
-            #sorted(long_words)
+        fAll = {}
+        for x in range(0,len(fd_temp)):
+            fAll[x,1], fAll[x,2] = [y.strip('}()",{:') for y in (str(fd_temp[x])).split(',')]
+        ##
 
-            ########################################################################
-            ##determine syllable count for all words in each sentece
-            sentSyl = {}
-            WperS = {}
-            # def sentence_processing(sent):
-            # TODO turn this nested for loop into a map.
-            # only problem is this
-            for sent in sents:
-                #setup sent variable to analyze each sentence individually
-                sent = word_tokenize(sent) #tokenize sentence n in to words
-                sent = [w.lower() for w in sent if w.isalpha()] #remove any non-text
+        fM = {}
+        for x in range(0,len(frexMost)) :
+            fM[x,1], fM[x,2] = [y.strip('}()",{:') for y in (str(frexMost[x])).split(',')]
+        ##
 
-                WperS[n] = len(sent) #number of words per sentence
+        #identify long words based on word length of n characters
+        #long_words = [w for w in words if len(w) > 8] #last number is character length
+        #sorted(long_words)
 
-                #syllable analysis
-                for word in sent:
+        ########################################################################
+        ##determine syllable count for all words in each sentece
+        sentSyl = {}
+        WperS = {}
+        # def sentence_processing(sent):
+        # TODO turn this nested for loop into a map.
+        # only problem is this
+        for n,sent in enumerate(sents):
+            #setup sent variable to analyze each sentence individually
+            sent = word_tokenize(sent) #tokenize sentence n in to words
+            sent = [w.lower() for w in sent if w.isalpha()] #remove any non-text
 
-                    # Count the syllables in the word.
-                    syllables = textstat.syllable_count(str(word))
-                    sentSyl[n,x] = syllables
+            WperS[n] = len(sent) #number of words per sentence
 
-            ########################################################################
-            ## Complexity Analysis
-            urlDat[6,2]  = textstat.flesch_kincaid_grade(str(url_text))
-            urlDat[7,2] = textstat.flesch_reading_ease(str(url_text))
-            urlDat[8,2]  = textstat.smog_index(str(url_text))
-            urlDat[9,2]  = textstat.coleman_liau_index(str(url_text))
-            urlDat[10,2]  = textstat.automated_readability_index(str(url_text))
-            urlDat[11,2] = textstat.gunning_fog(str(url_text))
+            #syllable analysis
+            for word in sent:
 
-            urlDat[12,2]  = textstat.dale_chall_readability_score(str(url_text))
-            urlDat[13,2]  = textstat.difficult_words(str(url_text))
-            urlDat[14,2]  = textstat.linsear_write_formula(str(url_text))
-            urlDat[15,2]  = textstat.text_standard(str(url_text))
+                # Count the syllables in the word.
+                syllables = textstat.syllable_count(str(word))
+                sentSyl[n,x] = syllables
 
-            ########################################################################
-            ##defining part of speech for each word
-            from nltk.tag.perceptron import PerceptronTagger
+        ########################################################################
+        ## Complexity Analysis
+        urlDat[6,2]  = textstat.flesch_kincaid_grade(str(url_text))
+        urlDat[7,2] = textstat.flesch_reading_ease(str(url_text))
+        urlDat[8,2]  = textstat.smog_index(str(url_text))
+        urlDat[9,2]  = textstat.coleman_liau_index(str(url_text))
+        urlDat[10,2]  = textstat.automated_readability_index(str(url_text))
+        urlDat[11,2] = textstat.gunning_fog(str(url_text))
 
-            tagger = PerceptronTagger(load=False)
+        urlDat[12,2]  = textstat.dale_chall_readability_score(str(url_text))
+        urlDat[13,2]  = textstat.difficult_words(str(url_text))
+        urlDat[14,2]  = textstat.linsear_write_formula(str(url_text))
+        urlDat[15,2]  = textstat.text_standard(str(url_text))
 
-            wordsPOS = pos_tag([w.lower() for w in URLtext if w.isalpha()])
+        ########################################################################
+        ##defining part of speech for each word
+        from nltk.tag.perceptron import PerceptronTagger
 
-            PS = {}
-            for x in range(0,len(wordsPOS)) :
-                PS[x,1], PS[x,2] = [y.strip('}()",{:') for y in (str(wordsPOS[x])).split(',')]
+        tagger = PerceptronTagger(load=False)
 
-            ########################################################################
-            ##Sentiment and Subjectivity analysis
-            testimonial = TextBlob(url_text)
-            testimonial.sentiment
+        wordsPOS = pos_tag([w.lower() for w in URLtext if w.isalpha()])
 
-            urlDat[4,2] = testimonial.sentiment.polarity
-            urlDat[5,2] = testimonial.sentiment.subjectivity
+        PS = {}
+        for x in range(0,len(wordsPOS)) :
+            PS[x,1], PS[x,2] = [y.strip('}()",{:') for y in (str(wordsPOS[x])).split(',')]
 
-            #print it all pretty-like
-            plotDat = [[str(urlDat[1,1]) + ": " + str(urlDat[1,2])], [str(urlDat[2,1]) + ": " + str(urlDat[2,2])],
-                           [str(urlDat[3,1]) + ": " + str(urlDat[3,2])], [str(urlDat[4,1]) + ": " + str(urlDat[4,2])],
-                           [str(urlDat[5,1]) + ": " + str(urlDat[5,2])], [str(urlDat[6,1]) + ": " + str(urlDat[6,2])],
-                           [str(urlDat[7,1]) + ": " + str(urlDat[7,2])], [str(urlDat[8,1]) + ": " + str(urlDat[8,2])],
-                           [str(urlDat[9,1]) + ": " + str(urlDat[9,2])], [str(urlDat[10,1]) + ": " + str(urlDat[10,2])],
-                           [str(urlDat[11,1]) + ": " + str(urlDat[11,2])], [str(urlDat[12,1]) + ": " + str(urlDat[12,2])],
-                           [str(urlDat[13,1]) + ": " + str(urlDat[13,2])], [str(urlDat[14,1]) + ": " + str(urlDat[14,2])],
-                           [str(urlDat[15,1]) + ": " + str(urlDat[15,2])]]
+        ########################################################################
+        ##Sentiment and Subjectivity analysis
+        testimonial = TextBlob(url_text)
+        testimonial.sentiment
 
-            headers = ["Complexity Results:"]; print (tabulate(plotDat,headers,tablefmt="simple",stralign="left"))
-            time.sleep(1); print (""); print (""); print ("");
-            ########################################################################
-            ##convert all dict variables to list for multidimensional conversion to matlab cell array
-            urlDat = urlDat.items()
-            sentSyl = sentSyl.items()
-            WperS = WperS.items()
-            fAll = fAll.items()
-            fM = fM.items()
-            PS = PS.items()
+        urlDat[4,2] = testimonial.sentiment.polarity
+        urlDat[5,2] = testimonial.sentiment.subjectivity
 
-            ##generate a .mat file for further analysis in matlab
-            if b == 0 and p == 0:
-                obj_arr = np.array([urlDat,WperS, sentSyl, fM, PS, fAll], dtype=object)
-            else:
-                obj_arr_add = np.array([urlDat,WperS, sentSyl, fM, PS, fAll], dtype=object)
-                obj_arr = np.vstack( [obj_arr, obj_arr_add] )
-            return obj_arrar
+        #print it all pretty-like
+        plotDat = [[str(urlDat[1,1]) + ": " + str(urlDat[1,2])], [str(urlDat[2,1]) + ": " + str(urlDat[2,2])],
+                       [str(urlDat[3,1]) + ": " + str(urlDat[3,2])], [str(urlDat[4,1]) + ": " + str(urlDat[4,2])],
+                       [str(urlDat[5,1]) + ": " + str(urlDat[5,2])], [str(urlDat[6,1]) + ": " + str(urlDat[6,2])],
+                       [str(urlDat[7,1]) + ": " + str(urlDat[7,2])], [str(urlDat[8,1]) + ": " + str(urlDat[8,2])],
+                       [str(urlDat[9,1]) + ": " + str(urlDat[9,2])], [str(urlDat[10,1]) + ": " + str(urlDat[10,2])],
+                       [str(urlDat[11,1]) + ": " + str(urlDat[11,2])], [str(urlDat[12,1]) + ": " + str(urlDat[12,2])],
+                       [str(urlDat[13,1]) + ": " + str(urlDat[13,2])], [str(urlDat[14,1]) + ": " + str(urlDat[14,2])],
+                       [str(urlDat[15,1]) + ": " + str(urlDat[15,2])]]
+
+        headers = ["Complexity Results:"]; print (tabulate(plotDat,headers,tablefmt="simple",stralign="left"))
+        time.sleep(1); print (""); print (""); print ("");
+        ########################################################################
+        ##convert all dict variables to list for multidimensional conversion to matlab cell array
+        urlDat = urlDat.items()
+        sentSyl = sentSyl.items()
+        WperS = WperS.items()
+        fAll = fAll.items()
+        fM = fM.items()
+        PS = PS.items()
+
+        ##generate a .mat file for further analysis in matlab
+        #if b == 0 and p == 0:
+        obj_arr = np.array([urlDat,WperS, sentSyl, fM, PS, fAll], dtype=object)
+        #else:
+        obj_arr_add = np.array([urlDat,WperS, sentSyl, fM, PS, fAll], dtype=object)
+        obj_arr = np.vstack( [obj_arr, obj_arr_add] )
+        sio.savemat('textData_' + str(searchList[s]) + '.mat', {'obj_arr':obj_arr})
+
+        return obj_arr
+
+    returned_object = list(dview.map_sync(map_search,flattened))
     #after the full code runs export to a .mat file to a designed location
     os.chdir(FileLocation)
 
     #save
-    sio.savemat('textData_' + str(searchList[s]) + '.mat', {'obj_arr':obj_arr})
+    #for obj_arr in

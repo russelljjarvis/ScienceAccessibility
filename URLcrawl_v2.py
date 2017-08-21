@@ -7,12 +7,14 @@ numURLs = 2 #number of URLs per search website (number determined by 1.scrape co
 linkstoget = 3 #number of links to crawl through per URL - be careful with this number, as it greatly increases computation time
 
 #set filePath below to specify where the text Data is located on your machine
-FileLocation = '/Users/PMcG/Dropbox (ASU)/AAB_files/Pat-files/WCP/code/Data Files/'
 
 #if you're switchign computers you can use this to indicate a second location to use if the first doesn't exist
 import os
 if not os.path.exists(FileLocation):
+
    FileLocaton = 'D:/Dropbox (ASU)/RESEARCH/Pat_Projects/textAnalyze/'
+
+FileLocation = os.getcwd()+'Data Files'
 
 ##once the above is set you can run the code!
 
@@ -52,9 +54,7 @@ interpreter = PDFPageInterpreter(rsrcmgr, device)
 #########################################################################
 #########################################################################
 #start code
-#for s in range(0,len(searchList)) :
-for s,category in enumerate(searchList):
-
+for s in range(0,len(searchList)) :
 
     #define the search term
     category = searchList[s]
@@ -65,9 +65,24 @@ for s,category in enumerate(searchList):
     #set path for saving, and make the folder to save if it doesn't already exist
     os.chdir(FileLocation + str(category) +'/')
 
-    web = ["google_","gScholar_","bing_","yahoo_"]
-    for b, searchName in enumerate(web):
+    for b in range(0,web) :
         #set scrape parameters
+        print " "
+        if b == 0:
+            searchName = "google_" #input name for text file
+            print ("Google")
+
+        elif b == 1:
+            searchName = "gScholar_" #input name for text file
+            print ("Google Scholar")
+
+        elif b == 2:
+            searchName = "bing_" #input name for text file
+            print ("Bing")
+
+        elif b == 3:
+            searchName = "yahoo_" #input name for text file
+            print ("Yahoo")
 
         #open text file
         filename = searchName + category + '.txt' #text file name that will list and save all URLs
@@ -113,9 +128,7 @@ for s,category in enumerate(searchList):
             urlDat[13,1] = "Link scraped"
 
             #crawl through n number of links for each URL
-            #linkcount += 1
-
-            for linkcount, link in enumerate(soup.find_all('a')):
+            for link in soup.find_all('a'):
                 if linkcount < linkstoget:
                     time.sleep(randint(1,2)) #short (random) wait to prevent overloading a website or having the call blocked
 
@@ -192,6 +205,7 @@ for s,category in enumerate(searchList):
                     urlDat[11,linkcount+2]  = textstat.linsear_write_formula(str(url_text))
                     urlDat[12,linkcount+2]  = textstat.text_standard(str(url_text))
 
+                    linkcount += 1
 
             ##generate a .mat file for further analysis in matlab
             urlDat = urlDat.items()

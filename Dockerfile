@@ -1,4 +1,3 @@
-# neuron-mpi-neuroml
 # author Russell Jarvis rjjarvis@asu.edu
 
 FROM jupyter/scipy-notebook
@@ -98,8 +97,26 @@ ENV DBUS_SESSION_BUS_ADDRESS=/dev/null
 ##                                                                        -v /tmp/.X11-unix:/tmp/.X11-unix \
 ##                                                    scidash/autoload'
 ###
-RUN touch start.sh
-RUN echo "cd /home/mnt" >> start.sh
-RUN echo "ipython -i ScrapeLinksandText_v4.py" >> start.sh
-#RUN echo "ipcluster start -n 8 --profile=default & sleep 5 && ipython -i tAnalysis_v3.py" >> start.sh
-ENTRYPOINT /bin/bash start.sh
+#RUN touch start.sh
+#RUN echo "cd /home/mnt" >> start.sh
+#RUN echo "ipython -i ScrapeLinksandText_v4.py" >> start.sh
+##RUN echo "ipcluster start -n 8 --profile=default & sleep 5 && ipython -i tAnalysis_v3.py" >> start.sh
+
+#ENTRYPOINT /bin/bash start.sh
+
+RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.18.0/geckodriver-v0.18.0-linux64.tar.gz
+
+RUN sudo tar -xvzf geckodriver-v0.18.0-linux64.tar.gz
+#RUN tar -xvzf geckodriver*
+#RUN chmod +x geckodriver
+
+## Geckodriver
+RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.16.1/geckodriver-v0.16.1-linux64.tar.gz
+RUN sudo sh -c 'tar -x geckodriver -zf geckodriver-v0.16.1-linux64.tar.gz -O > /usr/bin/geckodriver'
+RUN sudo chmod +x /usr/bin/geckodriver
+RUN rm geckodriver-v0.16.1-linux64.tar.gz
+
+RUN python -c "from selenium import webdriver;browser = webdriver.Firefox('/usr/bin'); browser.get('http://www.ubuntu.com/'); print(browser.page_source)"
+
+
+#RUN sudo geckodriver -d /usr/local/bin/

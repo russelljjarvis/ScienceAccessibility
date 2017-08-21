@@ -18,30 +18,15 @@ if not os.path.exists(FileLocation):
 #import web driver file to access chrome and establish a user-agent code
 import selenium
 from selenium import webdriver
-#driver = webdriver.Chrome('/Users/PMcG/Documents/python packages/chromedriver')
+#driver = webdriver.Chrome()
 
-from selenium import webdriver
-os.system('sudo /opt/conda/bin/pip install pyvirtualdisplay')
-from pyvirtualdisplay import Display
-#from selenium import webdriver
+browser = webdriver.Firefox('/usr/bin')
 
-display = Display(visible=0, size=(1024, 768))
-display.start()
-
-browser = webdriver.Firefox()
 browser.get('http://www.ubuntu.com/')
 print(browser.page_source)
 
-browser.close()
-display.stop()
-os.system('wget https://chromedriver.storage.googleapis.com/2.31/chromedriver_linux64.zip')
-os.system('unzip chromedriver_linux64.zip')
-
-driver = webdriver.Chrome(os.getcwd()+str('/chromedriver'))
-
-#driver = webdriver.Chrome(os.getcwd())
-
-#download driver here: https://sites.google.com/a/chromium.org/chromedriver/downloads
+#browser.close()
+#display.stop()
 
 #assumptions made in the code
 #1. any website that returns less than 20 words will not be counted
@@ -167,15 +152,15 @@ for x,category in enumerate(searchList):
                 pagestring = linkName + str(linkcount + 1) + "&q=" + categoryquery # googles
 
             #print "\nchecking: " + pagestring + "\n"
-            driver.get(pagestring)
+            browser.get(pagestring)
 
             #print driver.page_source
             searchresults = {}
             linkChecker = list()
 
             #locate URLs within specific search engine HTML syntax
-            linkChecker1 = driver.find_elements_by_xpath(linkCheck1)
-            linkChecker2 = driver.find_elements_by_xpath(linkCheck2)
+            linkChecker1 = browser.find_elements_by_xpath(linkCheck1)
+            linkChecker2 = browser.find_elements_by_xpath(linkCheck2)
 
             for l in linkChecker1:
                 linkChecker.append(l)

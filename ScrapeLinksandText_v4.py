@@ -6,24 +6,42 @@ linkstoget = 50 #number of links to pull from each search engine (this can be an
 searchList = ['GMO','Genetically Modified Organism','Vaccine','Transgenic']
 #searchList = ['GMO','Genetically Modified Organism'] #set to whatever, but broken up as to not overload the search
 #searchList  = ['Vaccine','Transgenic'] #set to whatever, but broken up as to not overload the search
+import sys
+import os
+os.system('ipcluster start -n4 --profile=default &')
+os.system('sleep 5')
+import ipyparallel as ipp
+from ipyparallel import depend, require, dependent
+rc = ipp.Client(profile='default')
+dview = rc[:]
 
 #filepath for creating/saving the text files
-FileLocation = '/Users/PMcG/Dropbox (ASU)/AAB_files/Pat-files/WCP/code/Data Files/'
+FileLocation = 'AAB_files/Pat-files/WCP/code/Data Files/'
 
 #if you're switchign computers you can use this to indicate a second location to use if the first doesn't exist
 import os
 if not os.path.exists(FileLocation):
-   FileLocaton = 'D:/Dropbox (ASU)/RESEARCH/Pat_Projects/textAnalyze/'
+   FileLocaton = 'textAnalyze/'
 
 #import web driver file to access chrome and establish a user-agent code
 import selenium
 from selenium import webdriver
 #driver = webdriver.Chrome()
 
-browser = webdriver.Firefox('/usr/bin')
+#browser = webdriver.Firefox('/home/jovyan/work')
 
-browser.get('http://www.ubuntu.com/')
-print(browser.page_source)
+from pyvirtualdisplay import Display
+from selenium import webdriver
+
+display = Display(visible=0, size=(1024, 768))
+display.start()
+
+driver = webdriver.Firefox()
+driver.get('http://www.ubuntu.com/')
+
+print(driver.page_source)
+
+#driver.close() # Close the current window.
 
 #browser.close()
 #display.stop()
@@ -57,10 +75,10 @@ except ImportError:
     from io import StringIO
 
 try:
-   import urllib2
-   from urllib2 import Request
+   import urllib3
+   from urllib3 import Request
 except ImportError:
-   import urllib.request
+   import urllib3.request
 
 try:
    import pdfminer
@@ -84,6 +102,8 @@ from textstat.textstat import textstat
 ##########################################################################
 ##########################################################################
 #start code
+
+
 for x,category in enumerate(searchList):
 
     #define the search term
@@ -100,7 +120,14 @@ for x,category in enumerate(searchList):
 
     os.chdir(FileLocation + str(category) +'/')
     web = ["google_","gScholar_","bing_","yahoo_"]
-    for b, searchName in enumerate(web):
+
+#    flattened = [ (b,searchName) for b, searchName in enumerate(web)  ]
+    print(flattened)
+    def map_search(flattened):
+        print(flattened)
+
+        b, searchName = flattened
+    #for b, searchName in enumerate(web):
 
         print(" ")
         if b == 0:
@@ -152,15 +179,15 @@ for x,category in enumerate(searchList):
                 pagestring = linkName + str(linkcount + 1) + "&q=" + categoryquery # googles
 
             #print "\nchecking: " + pagestring + "\n"
-            browser.get(pagestring)
+            driver.get(pagestring)
 
             #print driver.page_source
             searchresults = {}
             linkChecker = list()
 
             #locate URLs within specific search engine HTML syntax
-            linkChecker1 = browser.find_elements_by_xpath(linkCheck1)
-            linkChecker2 = browser.find_elements_by_xpath(linkCheck2)
+            linkChecker1 = driver.find_elements_by_xpath(linkCheck1)
+            linkChecker2 = driver.find_elements_by_xpath(linkCheck2)
 
             for l in linkChecker1:
                 linkChecker.append(l)
@@ -183,7 +210,7 @@ for x,category in enumerate(searchList):
                     else:
                        #if  URL directs to a PDF it requires special coding to pull characters
                        try:
-                          pdf_file = urllib2.urlopen(Request(strlink)).read()
+                          pdf_file = urllib3.urlopen(Request(strlink)).read()
                           memoryFile = StringIO(pdf_file)
                           parser = PDFParser(memoryFile)
                           document = PDFDocument(parser)
@@ -239,8 +266,10 @@ for x,category in enumerate(searchList):
                 checkflag = 0
             else:
                 prevlinkcount = linkcount
-
-        outfile.close() #close the text file containing list of URLs per search engine
-
+    flattened = [ (b,searchName) for b, searchName in enumerate(web)  ]
+    results = list(dview.map_sync(map_search,flattened))
+    outfile.close() #close the text file containing list of URLs per search engine
+    driver.quit() # Quit the driver and close every associated window.
+    display.stop()
 #close chrome after looping through the various search engines
-driver.close() #close the driver
+#driver.close() #close the driver

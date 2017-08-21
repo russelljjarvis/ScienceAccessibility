@@ -121,8 +121,8 @@ for x,category in enumerate(searchList):
     os.chdir(FileLocation + str(category) +'/')
     web = ["google_","gScholar_","bing_","yahoo_"]
 
-#    flattened = [ (b,searchName) for b, searchName in enumerate(web)  ]
-    print(flattened)
+    flattened = [ (b,searchName) for b, searchName in enumerate(web)  ]
+    #print(flattened)
     def map_search(flattened):
         print(flattened)
 
@@ -266,7 +266,8 @@ for x,category in enumerate(searchList):
                 checkflag = 0
             else:
                 prevlinkcount = linkcount
-    flattened = [ (b,searchName) for b, searchName in enumerate(web)  ]
+    #flattened = [ (b,searchName) for b, searchName in enumerate(web)  ]
+    print(flattened)
     results = list(dview.map_sync(map_search,flattened))
     outfile.close() #close the text file containing list of URLs per search engine
     driver.quit() # Quit the driver and close every associated window.

@@ -20,25 +20,26 @@ import selenium
 from selenium import webdriver
 #driver = webdriver.Chrome('/Users/PMcG/Documents/python packages/chromedriver')
 
-from selenium import webdriver
-os.system('sudo /opt/conda/bin/pip install pyvirtualdisplay')
-from pyvirtualdisplay import Display
-#from selenium import webdriver
+#os.system('sudo /opt/conda/bin/pip install pyvirtualdisplay')
+#from pyvirtualdisplay import Display
 
-display = Display(visible=0, size=(1024, 768))
-display.start()
+#display = Display(visible=0, size=(1024, 768))
+#display.start()
 
-browser = webdriver.Firefox()
-browser.get('http://www.ubuntu.com/')
-print(browser.page_source)
+#browser = webdriver.Firefox()
+#browser.get('http://www.ubuntu.com/')
+#print(browser.page_source)
 
-browser.close()
-display.stop()
-os.system('wget https://chromedriver.storage.googleapis.com/2.31/chromedriver_linux64.zip')
-os.system('unzip chromedriver_linux64.zip')
+#browser.close()
+#display.stop()
+#os.system('wget https://chromedriver.storage.googleapis.com/2.31/chromedriver_linux64.zip')
+#os.system('unzip chromedriver_linux64.zip')
+driver = webdriver.Chrome()
+print(driver)
 
-driver = webdriver.Chrome(os.getcwd()+str('/chromedriver'))
-
+#driver = webdriver.Chrome(os.getcwd()+str('/chromedriver'))
+#driver.get('http://www.ubuntu.com/')
+#print(driver.page_source)
 #driver = webdriver.Chrome(os.getcwd())
 
 #download driver here: https://sites.google.com/a/chromium.org/chromedriver/downloads

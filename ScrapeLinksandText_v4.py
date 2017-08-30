@@ -8,12 +8,12 @@ searchList = ['GMO','Genetically Modified Organism','Vaccine','Transgenic']
 #searchList  = ['Vaccine','Transgenic'] #set to whatever, but broken up as to not overload the search
 import sys
 import os
-os.system('ipcluster start -n4 --profile=default &')
-os.system('sleep 5')
-import ipyparallel as ipp
-from ipyparallel import depend, require, dependent
-rc = ipp.Client(profile='default')
-dview = rc[:]
+#os.system('ipcluster start -n4 --profile=default &')
+#os.system('sleep 5')
+#import ipyparallel as ipp
+#from ipyparallel import depend, require, dependent
+#rc = ipp.Client(profile='default')
+#dview = rc[:]
 
 #filepath for creating/saving the text files
 FileLocation = 'AAB_files/Pat-files/WCP/code/Data Files/'
@@ -127,7 +127,6 @@ for x,category in enumerate(searchList):
         print(flattened)
 
         b, searchName = flattened
-    #for b, searchName in enumerate(web):
 
         print(" ")
         if b == 0:
@@ -268,7 +267,8 @@ for x,category in enumerate(searchList):
                 prevlinkcount = linkcount
     #flattened = [ (b,searchName) for b, searchName in enumerate(web)  ]
     print(flattened)
-    results = list(dview.map_sync(map_search,flattened))
+    results = list(map(map_search,flattened))
+    print(results)
     outfile.close() #close the text file containing list of URLs per search engine
     driver.quit() # Quit the driver and close every associated window.
     display.stop()

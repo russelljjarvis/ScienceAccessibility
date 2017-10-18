@@ -25,17 +25,17 @@ from selenium import webdriver
 
 #display = Display(visible=0, size=(1024, 768))
 #display.start()
-
+browser = webdriver.Chrome()
 #browser = webdriver.Firefox()
-#browser.get('http://www.ubuntu.com/')
+browser.get('http://www.ubuntu.com/')
 #print(browser.page_source)
 
 #browser.close()
 #display.stop()
 #os.system('wget https://chromedriver.storage.googleapis.com/2.31/chromedriver_linux64.zip')
 #os.system('unzip chromedriver_linux64.zip')
-driver = webdriver.Chrome()
-print(driver)
+#driver = webdriver.Chrome()
+#print(driver)
 
 #driver = webdriver.Chrome(os.getcwd()+str('/chromedriver'))
 #driver.get('http://www.ubuntu.com/')

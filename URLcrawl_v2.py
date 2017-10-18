@@ -7,12 +7,12 @@ numURLs = 2 #number of URLs per search website (number determined by 1.scrape co
 linkstoget = 3 #number of links to crawl through per URL - be careful with this number, as it greatly increases computation time
 
 #set filePath below to specify where the text Data is located on your machine
-FileLocation = '/Users/PMcG/Dropbox (ASU)/AAB_files/Pat-files/WCP/code/Data Files/'
+FileLocation = 'WCP/code/data_files/'
 
 #if you're switchign computers you can use this to indicate a second location to use if the first doesn't exist
 import os
 if not os.path.exists(FileLocation):
-   FileLocaton = 'D:/Dropbox (ASU)/RESEARCH/Pat_Projects/textAnalyze/'
+   FileLocaton = 'textAnalyze/'
 
 ##once the above is set you can run the code!
 
@@ -26,14 +26,20 @@ from random import randint
 import numpy
 import numpy as np
 import scipy.io as sio
-from urlparse import urlparse
+from urllib.parse import urlparse
+#from urlparse import urlparse
+from urllib.request import Request
 import time
 from textstat.textstat import textstat
-import urllib2
-from urllib2 import Request
-from StringIO import StringIO
+import urllib
+
+from io import StringIO
+
+#from urllib import Request
+#from StringIO import StringIO
 from fake_useragent import UserAgent
 ua = UserAgent()
+    
 
 import pdfminer
 from pdfminer.pdfparser import PDFParser
@@ -60,10 +66,13 @@ for s,category in enumerate(searchList):
     category = searchList[s]
 
     print (" "); print ("###############################################")
-    print (" "); print category);  print (" "); print ("######(#########################################")
+    print (" "); print(category);  print (" "); print ("######(#########################################")
 
     #set path for saving, and make the folder to save if it doesn't already exist
-    os.chdir(FileLocation + str(category) +'/')
+    directory = FileLocation + str(category)
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+   
 
     web = ["google_","gScholar_","bing_","yahoo_"]
     for b, searchName in enumerate(web):
@@ -77,8 +86,10 @@ for s,category in enumerate(searchList):
         for u in range(0,numURLs) :
 
             url = URL[u]
-            print( ""); print "-------------"; print ("URL " + str(u+1) + " of " + str(numURLs));
-            print ("Link to crawl: " + url); print ("");  print ("Linked crawled:)"
+            print(""); print("-------------"); print ("URL " + str(u+1) + " of " + str(numURLs));
+            print ("Link to crawl: " + url); print ("");
+            print ("Linked crawled:)")
+                   
 
             #request content from URL
             headers = {'User-Agent': str(ua.chrome)}

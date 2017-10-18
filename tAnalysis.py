@@ -8,12 +8,12 @@ matplotlib.use('Agg')
 # Uncomment to enable parallelization.
 import sys
 import os
-os.system('ipcluster start -n4 --profile=default &')
-os.system('sleep 3')
-import ipyparallel as ipp
-from ipyparallel import depend, require, dependent
-rc = ipp.Client(profile='default')
-dview = rc[:]
+#os.system('ipcluster start -n4 --profile=default &')
+#os.system('sleep 3')
+#import ipyparallel as ipp
+#from ipyparallel import depend, require, dependent
+#rc = ipp.Client(profile='default')
+#dview = rc[:]
 
 
 searchList = ['/GMO','/Genetically Modified Organism']
@@ -244,7 +244,9 @@ for s, value in enumerate(searchList):
 
         return obj_arr
 
-    returned_object = list(dview.map_sync(map_search,flattened))
+    returned_object = list(map(map_search,flattened))
+
+    #returned_object = list(dview.map_sync(map_search,flattened))
     #after the full code runs export to a .mat file to a designed location
     os.chdir(FileLocation)
 

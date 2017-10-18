@@ -8,12 +8,7 @@ searchList = ['GMO','Genetically Modified Organism','Vaccine','Transgenic']
 #searchList  = ['Vaccine','Transgenic'] #set to whatever, but broken up as to not overload the search
 import sys
 import os
-#os.system('ipcluster start -n4 --profile=default &')
-#os.system('sleep 5')
-#import ipyparallel as ipp
-#from ipyparallel import depend, require, dependent
-#rc = ipp.Client(profile='default')
-#dview = rc[:]
+
 
 #filepath for creating/saving the text files
 FileLocation = 'AAB_files/Pat-files/WCP/code/Data Files/'
@@ -21,7 +16,7 @@ FileLocation = 'AAB_files/Pat-files/WCP/code/Data Files/'
 #if you're switchign computers you can use this to indicate a second location to use if the first doesn't exist
 import os
 if not os.path.exists(FileLocation):
-   FileLocaton = 'textAnalyze/'
+   FileLocaton = 'textAnalyze'
 
 #import web driver file to access chrome and establish a user-agent code
 import selenium

@@ -64,6 +64,9 @@ RUN sudo apt-get install -y software-properties-common
 
 RUN sudo chown -R jovyan ~/
 #RUN sudo apt-get -y install octave
+RUN echo "cd /home/mnt" >> start.sh
+RUN echo "ipython -i ScrapeLinksandText_v4.py" >> start.sh
+#RUN echo "ipcluster start -n 8 --profile=default & sleep 5 && ipython -i tAnalysis_v3.py" >> start.sh
 
 # install google chrome
 RUN sudo apt-get -y update

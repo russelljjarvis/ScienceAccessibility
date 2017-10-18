@@ -5,7 +5,6 @@ RUN apt-get update
 RUN apt-get install --fix-missing
 
 
-RUN echo "deb [arch=amd64] file:/local_repo/octave ./" >> /etc/apt/sources.list
 
 RUN apt-get update
 
@@ -28,26 +27,21 @@ RUN apt-get install --force-yes -y \
   graphviz \
   xpdf \
   liboctave-dev
+
+RUN sudo apt-get -y install gnuplot rlwrap ipython
+
   
 
 # Fetch Octave forge packages
 RUN mkdir /home/octave
 
-# Install Octave forge packages
-RUN octave --eval "cd /home/octave; \
-                   more off; \
-                   pkg install -auto -global -verbose \
-                   control-2.8.0.tar.gz \
-                   general-1.3.4.tar.gz \
-                   signal-1.3.0.tar.gz \
-                   image-2.2.2.tar.gz \
-                   io-2.0.2.tar.gz \
-                   statistics-1.2.4.tar.gz"
 
 # Build octave configure file
 RUN echo more off >> /etc/octave.conf
 RUN echo save_default_options\(\'-7\'\)\; >> /etc/octave.conf
 RUN echo graphics_toolkit gnuplot >> /etc/octave.conf
+
+USER jovyan
 
 # Command for build
 # docker build --no-cache -t="simexp/octave:3.8.1" .

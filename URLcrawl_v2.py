@@ -77,7 +77,7 @@ for s,category in enumerate(searchList):
     web = ["google_","gScholar_","bing_","yahoo_"]
     for b, searchName in enumerate(web):
         #set scrape parameters
-
+	print(searchName)
         #open text file
         filename = searchName + category + '.txt' #text file name that will list and save all URLs
         infile = open(filename, 'r')
@@ -202,7 +202,11 @@ for s,category in enumerate(searchList):
                     urlDat[10,linkcount+2]  = textstat.difficult_words(str(url_text))
                     urlDat[11,linkcount+2]  = textstat.linsear_write_formula(str(url_text))
                     urlDat[12,linkcount+2]  = textstat.text_standard(str(url_text))
-
+	            #counter not 
+		    #required since 
+		    #counting function is implied 
+		    # by enumerate.
+                    #linkcount += 1
 
             ##generate a .mat file for further analysis in matlab
             urlDat = urlDat.items()

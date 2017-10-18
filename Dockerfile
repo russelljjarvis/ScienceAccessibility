@@ -2,6 +2,8 @@
 
 FROM jupyter/scipy-notebook
 
+
+RUN echo 'force rebuild'
 USER root
 RUN chown -R $NB_USER $HOME
 
@@ -38,25 +40,14 @@ RUN sudo /opt/conda/bin/pip install textblob
 RUN sudo /opt/conda/bin/pip install ipyparallel
 RUN sudo /opt/conda/bin/pip install selenium
 
+RUN wget https://chromedriver.storage.googleapis.com/2.31/chromedriver_linux64.zip
+RUN unzip chromedriver_linux64.zip
 
-###
-## A file that is expected to be available after a volume is mounted
-## cannot be executed by using the entrypoint command, since
-## Entry point acts on files that already exist
-## Instead write a BASH script
-## That merely assumes this path will
-## become available at start up
-## and execute it from its expected path on the mounted volume
-## After building this file
-## docker build autoload -t scidash/autoload
-## I launch docker with the alias al given below:
-## alias al='cd ~/scratch;sudo docker run -e DISPLAY=$DISPLAY -it -v `pwd`:/home/mnt -v ${HOME}/git/.git \
-##                                                                        -v /tmp/.X11-unix:/tmp/.X11-unix \
-##                                                    scidash/autoload'
-###
 
 USER $NB_USER
 ENV WORK_HOME $HOME/work
+WORKDIR $WORK_HOME
+WORKDIR SReadability
 WORKDIR $WORK_HOME
 
 RUN sudo apt-get update
@@ -76,81 +67,34 @@ RUN echo "cd /home/mnt" >> start.sh
 RUN echo "ipython -i ScrapeLinksandText_v4.py" >> start.sh
 #RUN echo "ipcluster start -n 8 --profile=default & sleep 5 && ipython -i tAnalysis_v3.py" >> start.sh
 
-#ENTRYPOINT /bin/bash start.sh
+# install google chrome
+RUN sudo apt-get -y update
+RUN sudo apt-get install -yqq unzip libxss1 libappindicator1 libindicator7 gconf-service libasound2 \
+  libgconf-2-4 libnspr4 libnss3 libpango1.0-0 libxtst6 fonts-liberation xdg-utils
+RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+RUN sudo dpkg -i google-chrome*.deb
 
+# install chromedriver
+RUN wget -O /tmp/chromedriver.zip http://chromedriver.storage.googleapis.com/`curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE`/chromedriver_linux64.zip
+RUN sudo unzip /tmp/chromedriver.zip chromedriver -d /usr/local/bin/
 
-ENV DEBIAN_FRONTEND noninteractive
-ENV DEBCONF_NONINTERACTIVE_SEEN true
+# install xvfb
+RUN sudo apt-get install -yqq xvfb
 
-# Set timezone
-USER root
+# set dbus env to avoid hanging
+ENV DISPLAY=:99
+ENV DBUS_SESSION_BUS_ADDRESS=/dev/null
 
-RUN dpkg-reconfigure --frontend noninteractive tzdata
+RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.18.0/geckodriver-v0.18.0-linux64.tar.gz
+RUN sudo tar -xvzf geckodriver-v0.18.0-linux64.tar.gz
+#RUN tar -xvzf geckodriver*
+#RUN chmod +x geckodriver
 
-# Update the repositories
-# Install utilities
-# Install XVFB and TinyWM
-# Install fonts
-# Install Python
-RUN apt-get -yqq update && \
-    apt-get -yqq install curl unzip && \
-    apt-get -yqq install xvfb tinywm && \
-    rm -rf /var/lib/apt/lists/*
-
-
-# Install Chrome WebDriver
-RUN CHROMEDRIVER_VERSION=`curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE` && \
-    mkdir -p /opt/chromedriver-$CHROMEDRIVER_VERSION && \
-    curl -sS -o /tmp/chromedriver_linux64.zip http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip && \
-    unzip -qq /tmp/chromedriver_linux64.zip -d /opt/chromedriver-$CHROMEDRIVER_VERSION && \
-    rm /tmp/chromedriver_linux64.zip && \
-    chmod +x /opt/chromedriver-$CHROMEDRIVER_VERSION/chromedriver && \
-    ln -fs /opt/chromedriver-$CHROMEDRIVER_VERSION/chromedriver /usr/local/bin/chromedriver
-
-# Install Google Chrome
-RUN curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
-    echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list && \
-    apt-get -yqq update && \
-    apt-get -yqq install google-chrome-stable && \
-    rm -rf /var/lib/apt/lists/*
-
-# Default configuration
-ENV DISPLAY :20.0
-ENV SCREEN_GEOMETRY "1440x900x24"
-ENV CHROMEDRIVER_PORT 4444
-ENV CHROMEDRIVER_WHITELISTED_IPS "127.0.0.1"
-ENV CHROMEDRIVER_URL_BASE ''
-ENV DISPLAY 0.0
-USER jovyan
-WORKDIR $HOME
-RUN sudo apt-get update
-
-RUN sudo apt-get -y install google-chrome-stable
-
-
-#RUN google-chrome --no-sandbox &
-#RUN ng e2e --serve true --port 4200 --watch true
-#RUN curl -X POST -H "Content-Type: application/json; charset=utf-8" -d "{\"desiredCapabilities\":{\"platform\":\"ANY\",\"browserName\":\"chrome\",\"chromeOptions\":{\"args\":[],\"extensions\":[]},\"version\":\"\",\"chrome.switches\":[]}}" localhost:12495/session
-#RUN python -c "from selenium import webdriver; browser = webdriver.Chrome(); browser.get('http://google.com/')"
-RUN sudo wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-#RUN sudo echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list
-RUN sudo apt-get update -y
-RUN sudo apt-get install -y -q software-properties-common wget
-RUN sudo add-apt-repository -y ppa:mozillateam/firefox-next
-RUN sudo apt-get update
-RUN sudo apt-get install -y -q firefox google-chrome-beta
-RUN sudo apt-get upgrade
-#RUN sudo echo "deb http://ppa.launchpad.net/mozillateam/firefox-next/ubuntu trusty main" > /etc/apt/sources.list.d//mozillateam-firefox-next-trusty.list
-RUN sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CE49EC21
-RUN sudo apt-get update
-RUN sudo apt-get install -y firefox xvfb
-#RUN pip install selenium
-RUN mkdir -p /root/selenium_wd_tests
-# ADD sel_wd_new_user.py /root/selenium_wd_tests
-# ADD xvfb.init /etc/init.d/xvfb
-RUN sudo chmod +x /etc/init.d/xvfb
-RUN sudo update-rc.d xvfb defaults
-RUN sudo service xvfb start; export DISPLAY=:10)
-EXPOSE 4444 5999
-ENTRYPOINT (sudo service xvfb start; export DISPLAY=:10)
-#; python /root/selenium_wd_tests/sel_wd_new_user.py)
+## Geckodriver
+RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.16.1/geckodriver-v0.16.1-linux64.tar.gz
+RUN sudo sh -c 'tar -x geckodriver -zf geckodriver-v0.16.1-linux64.tar.gz -O > /usr/bin/geckodriver'
+RUN sudo chmod +x /usr/bin/geckodriver
+RUN rm geckodriver-v0.16.1-linux64.tar.gz
+RUN sudo apt-get upgrade -y firefox
+RUN sudo /opt/conda/bin/pip install pyvirtualdisplay
+RUN sudo /opt/conda/bin/pip install fake_useragent

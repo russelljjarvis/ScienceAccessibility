@@ -86,4 +86,3 @@ RUN sudo python setup.py install
 
 # Command to run octave as GUI
 # docker run -i -t --rm --name octavegui  -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY -v $HOME:$HOME --user $UID:$GID simexp/octave:3.8.1 /bin/bash -c "export HOME=$HOME; cd $HOME; source /opt/minc-itk4/minc-toolkit-config.sh; octave --force-gui"
-RUN sudo /opt/conda/bin/pip install fake-useragent

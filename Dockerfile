@@ -105,3 +105,7 @@ RUN sudo chown -R jovyan /home/jovyan
 RUN sudo /opt/conda/bin/pip install pyvirtualdisplay
 RUN sudo /opt/conda/bin/pip install fake_useragent
 #WORKDIR /home/jovyan/work
+
+RUN sudo gitclone https://github.com/pdfminer/pdfminer.six
+WORKDIR pdfminer.six
+RUN sudo /opt/conda/bin/ipython setup.py install

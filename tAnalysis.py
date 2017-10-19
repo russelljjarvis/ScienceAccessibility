@@ -1,7 +1,10 @@
 #set parameters- THESE ARE ALL USER DEFINED
 #searchList = ['GMO']
 import os
-
+import nltk
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
+from nltk import word_tokenize,sent_tokenize
 import matplotlib # Its not that this file is responsible for doing plotting, but it calls many modules that are, such that it needs to pre-empt
 # setting of an appropriate backend.
 matplotlib.use('Agg')
@@ -14,7 +17,7 @@ import os
 #from ipyparallel import depend, require, dependent
 #rc = ipp.Client(profile='default')
 #dview = rc[:]
-
+current_dir = os.getcwd()
 
 searchList = ['/GMO','/Genetically Modified Organism']
 #searchList = ['Transgenic','Vaccine']
@@ -76,8 +79,8 @@ for s, value in enumerate(searchList):
 
     flattened = [ (p,b,textName) for b, textName in enumerate(web) for p in range(0,numURLs) ]
 
-    def map_search(flattened):
-        p,b,textName = flattened
+    for flat in flattened:
+        p,b,textName = flat
         #import pdb; pdb.set_trace()
         print ("-------------------------------------------")
         print ("Analyzing Search Engine " + str(b+1) + " of " + str(web) + ": Link " + str(p+1)); print ("");
@@ -227,27 +230,38 @@ for s, value in enumerate(searchList):
         time.sleep(1); print (""); print (""); print ("");
         ########################################################################
         ##convert all dict variables to list for multidimensional conversion to matlab cell array
-        urlDat = urlDat.items()
-        sentSyl = sentSyl.items()
-        WperS = WperS.items()
-        fAll = fAll.items()
-        fM = fM.items()
-        PS = PS.items()
+        urlDat = list(urlDat.items())
+        sentSyl = list(sentSyl.items())
+        WperS = list(WperS.items())
+        fAll = list(fAll.items())
+        fM = list(fM.items())
+        PS = list(PS.items())
 
         ##generate a .mat file for further analysis in matlab
         #if b == 0 and p == 0:
         obj_arr = np.array([urlDat,WperS, sentSyl, fM, PS, fAll], dtype=object)
+        obj_list = [urlDat,WperS,sentSyl,fM,PS,fAll]
         #else:
         obj_arr_add = np.array([urlDat,WperS, sentSyl, fM, PS, fAll], dtype=object)
         obj_arr = np.vstack( [obj_arr, obj_arr_add] )
-        sio.savemat('textData_' + str(searchList[s]) + '.mat', {'obj_arr':obj_arr})
+        import os
+        os.chdir(current_dir)
+        #os.system('touch '+str('testData_')+str(searchList[s]))
+        import pickle
 
-        return obj_arr
+        with open(str(str('textData_')+searchList[s]) + '.mat','wb') as handle:
+            pickle.dump(list(obj_list),handle)
+            sio.savemat(handle, {'obj_arr':obj_arr})
+        os.chdir(fileLocation + str(value))
 
-    returned_object = list(map(map_search,flattened))
+
+        #return obj_arr
+
+    #returned_object = list(map(map_search,flattened))
 
     #returned_object = list(dview.map_sync(map_search,flattened))
     #after the full code runs export to a .mat file to a designed location
+
     os.chdir(FileLocation)
 
     #save

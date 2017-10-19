@@ -1,4 +1,4 @@
-from slc
+from wcp
 USER root
 
 RUN apt-get update

@@ -45,11 +45,11 @@ RUN unzip chromedriver_linux64.zip
 
 
 USER $NB_USER
-WORKDIR $HOME/work
-ENV WORK_HOME $HOME/work
-WORKDIR $WORK_HOME
-WORKDIR SReadability
-WORKDIR $WORK_HOME
+#WORKDIR $HOME/work
+#ENV WORK_HOME $HOME/work
+#WORKDIR $WORK_HOME
+#WORKDIR SReadability
+#WORKDIR $WORK_HOME
 
 RUN sudo apt-get update
 RUN sudo apt-get install -y python3-software-properties
@@ -104,4 +104,4 @@ RUN sudo chown -R jovyan /home/jovyan
 
 RUN sudo /opt/conda/bin/pip install pyvirtualdisplay
 RUN sudo /opt/conda/bin/pip install fake_useragent
-WORKDIR /home/jovyan/work
+#WORKDIR /home/jovyan/work

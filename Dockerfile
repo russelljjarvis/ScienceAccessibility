@@ -1,9 +1,10 @@
 # author Russell Jarvis rjjarvis@asu.edu
 
 FROM jupyter/scipy-notebook
+RUN apt-get update
+RUN apt-get -y install gem 
+RUN gem install rake
 
-
-RUN echo 'force rebuild'
 USER root
 RUN chown -R $NB_USER $HOME
 

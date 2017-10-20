@@ -26,8 +26,7 @@
     "docker build ./with_octave -t slc",
   ],
   "script": [
-    "docker run -it slc",
-    "docker run -it scidash/neuronunit-showcase"
+    "docker run -it slc ipython tAnalysis.py",
   ],
   "group": "stable",
   "dist": "trusty",

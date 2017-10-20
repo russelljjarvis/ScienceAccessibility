@@ -1,36 +1,16 @@
 
+sudo: required
 
-# vim ft=yaml
-# travis-ci.org definition for MOxUnit build (based on CoSMoMVPA,
-# which is based on PyMVPA, which is based on nipype configuration,
-# which in turn was based on nipy)
-#
-# We pretend to be java because we need GNU Octave which is not
-# available (as of April 2015)
+language: python 
 
-# Language is python and Java (Java becomes matlab)
+services:
+  - docker
 
-# the variable matrix is also important fusion.
+before_install:
+  - docker build -t slc .
+  - docker run -d slc /opt/conda/bin/ipython tAnalysis.py
+script:
+  - bundle exec rake test
 
-{
-  "language": "python",
-  "python": "3.6",
-  "sudo": "required",
-  "services": [
-    "docker",
-    "git",
-    "python",
-    "octave"
-  ],
-  "before_script": [
-    "docker build ./with_octave -t slc",
-  ],
-  "script": [
-    "docker run -it slc ipython tAnalysis.py",
-  ],
-  "group": "stable",
-  "dist": "trusty",
-  "os": "linux"
-}
 
 

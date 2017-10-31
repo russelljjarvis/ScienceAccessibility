@@ -1,16 +1,16 @@
-
+language: python
+python:
+  - "3.6"
 sudo: required
-
-language: python 
-
 services:
   - docker
+  - git
+  - python
 
-before_install:
+before_script:
   - docker build -t slc .
-  - docker run -d slc /opt/conda/bin/ipython tAnalysis.py
 script:
-  - bundle exec rake test
+  - docker run -d slc /opt/conda/bin/ipython tAnalysis.py
 
 
 

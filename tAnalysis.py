@@ -11,16 +11,9 @@ matplotlib.use('Agg')
 # Uncomment to enable parallelization.
 import sys
 import os
-#os.system('ipcluster start -n4 --profile=default &')
-#os.system('sleep 3')
-#import ipyparallel as ipp
-#from ipyparallel import depend, require, dependent
-#rc = ipp.Client(profile='default')
-#dview = rc[:]
 current_dir = os.getcwd()
 
-searchList = ['/GMO','/Genetically Modified Organism']
-#searchList = ['Transgenic','Vaccine']
+searchList = ['/GMO','/Genetically Modified Organism','Transgenic','Vaccine']
 
 web = 4 #number of search websites being implemented (google, google scholar, bing, yahoo)
 numURLs = 50 #number of URLs per search website  (number determined by 1.scrape code)
@@ -257,12 +250,7 @@ for s, value in enumerate(searchList):
 
         #return obj_arr
 
-    #returned_object = list(map(map_search,flattened))
-
-    #returned_object = list(dview.map_sync(map_search,flattened))
     #after the full code runs export to a .mat file to a designed location
 
-    os.chdir(FileLocation)
+    os.chdir(fileLocation)
 
-    #save
-    #for obj_arr in

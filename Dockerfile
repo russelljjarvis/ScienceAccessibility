@@ -1,9 +1,10 @@
 # author Russell Jarvis rjjarvis@asu.edu
 
 FROM jupyter/scipy-notebook
+RUN apt-get update
+RUN apt-get -y install gem 
+RUN gem install rake
 
-
-RUN echo 'force rebuild'
 USER root
 RUN chown -R $NB_USER $HOME
 
@@ -18,7 +19,6 @@ RUN pip install --upgrade pip
 
 # Upgrade to version 2.0
 RUN conda install -y matplotlib
-RUN conda install plotly seaborn
 # Make sure every Python file belongs to jovyan
 RUN find /opt/conda ! -user $NB_USER -print0 | xargs -0 -I {} chown -h $NB_USER {}
 # Remove dangling symlinks

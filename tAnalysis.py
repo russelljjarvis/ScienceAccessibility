@@ -262,7 +262,7 @@ for s, value in enumerate(searchList):
     #returned_object = list(dview.map_sync(map_search,flattened))
     #after the full code runs export to a .mat file to a designed location
 
-    os.chdir(FileLocation)
+    os.chdir(fileLocation)
 
     #save
     #for obj_arr in

@@ -15,18 +15,20 @@ import os
 
 current_dir = os.getcwd()
 
-searchList = ['/GMO','/Genetically Modified Organism','Transgenic','Vaccine']
+searchList = ['GMO','Genetically Modified Organism','Transgenic','Vaccine']
 
 web = 4 #number of search websites being implemented (google, google scholar, bing, yahoo)
 numURLs = 50 #number of URLs per search website  (number determined by 1.scrape code)
 
 #set filePath below to specify where the text Data is located on your machine
-fileLocation = 'AAB_files/Pat-files/WCP/code/Data Files/'
+fileLocation = 'AAB_files/Pat-files/WCP/code/Data_Files/'
 
 #if you're switchign computers you can use this to indicate a second location to use if the first doesn't exist
 
-if not os.path.exists(FileLocation):
-   fileLocaton = 'RESEARCH/Pat_Projects/textAnalyze/'
+if not os.path.exists(fileLocation):
+   files = str('mkdir ')+str(fileLocation)
+   os.system(files)
+   #fileLocaton = 'RESEARCH/Pat_Projects/textAnalyze/'
 
 
 ##once the above is set you can run the code!
@@ -62,22 +64,25 @@ from textblob import TextBlob
 ########################################################################
 
 for s, value in enumerate(searchList):
-
     #set filepath where data is saved
+    if not os.path.exists(fileLocation + str(value) +'/'):
+        files = str('mkdir ')+str(fileLocation + str(value) +'/')
+        os.system(files)
     os.chdir(fileLocation + str(value) +'/')
 
     ##start analysis code
-    print (" "); print ("###############################################")
-    print (" "); print ("Term {0} of {1} : {2}".format(s+1 , str(len(searchList)), value))
-    print (" "); print ("###############################################")
-    web = ["google_","gScholar_","bing_","yahoo_"]
-
-	# Note for long term code maintaince it will be better to flatten the
-	# Iterator, as below by building the iterator first in a list comprehension
-	# The idea is multilayered nested clauses leads to more bugs.
-    #flattened = [ (p,b,textName) for b, textName in enumerate(web) for p in range(0,numURLs) ]
-    #for p,b,textName in flattened:
-	for b in range(0,web) :
+    print (" ")
+    print ("###############################################")
+    print (" ")
+    print ("Term {0} of {1} : {2}".format(s+1 , str(len(searchList)), value))
+    print (" ")
+    print ("###############################################")
+    web = [ "google_","gScholar_","bing_","yahoo_" ]
+    # Note for long term code maintaince it will be better to flatten the
+    # Iterator, as below by building the iterator first in a list comprehension
+    # The idea is multilayered nested clauses leads to more bugs.
+    # cflattened = [ (p,b,textName) for b, textName in enumerate(web) for p in range(0,numURLs) ]
+    for b, _ in enumerate(web):
         #search engine selection
         if b == 0:
             textName = "google_"
@@ -95,32 +100,31 @@ for s, value in enumerate(searchList):
         for p in range(0,numURLs) :
             print ("-------------------------------------------")
             print ("Analyzing Search Engine " + str(b+1) + " of " + str(web) + ": Link " + str(p+1)); print ("");
+            #open and read text q
+            fileName = '{0}{1}.txt'.format(textName,p+1)
+            print(fileName)
+            fileHandle = open(fileName, 'r');
+            url_text = fileHandle.read()
+            fileHandle.close()
+            url_text = url_text.decode('ascii','ignore')
 
-		    #open and read text q
-		    fileName = '{0}{1}.txt'.format(textName,p+1)
-		    print(fileName)
-		    fileHandle = open(fileName, 'r');
-		    url_text = fileHandle.read()
-		    fileHandle.close()
-		    url_text = url_text.decode('ascii','ignore')
-
-		    #initialize dataArray Dictionary
-		    urlDat = {}
-		    urlDat[1,1] = "Number of Words"
-		    urlDat[2,1] = "Number of Sentences"
-		    urlDat[3,1] = "Frequency of Search Term"
-		    urlDat[4,1] = "Sentiment Analysis"
-		    urlDat[5,1] = "Subjectivity Analysis"
-		    urlDat[6,1] = "Grade level"
-		    urlDat[7,1] = "Flesch Reading Ease"
-		    urlDat[8,1] = "SMOG Index"
-		    urlDat[9,1] = "Coleman Liau"
-		    urlDat[10,1] = "Automated Readability Index"
-		    urlDat[11,1] = "Gunning Fog"
-		    urlDat[12,1] = "Dale Chall Readability Score"
-		    urlDat[13,1] = "Difficult Words"
-		    urlDat[14,1] = "Linsear Write Formula"
-		    urlDat[15,1] = "Text Standard"
+            #initialize dataArray Dictionary
+            urlDat = {}
+            urlDat[1,1] = "Number of Words"
+            urlDat[2,1] = "Number of Sentences"
+            urlDat[3,1] = "Frequency of Search Term"
+            urlDat[4,1] = "Sentiment Analysis"
+            urlDat[5,1] = "Subjectivity Analysis"
+            urlDat[6,1] = "Grade level"
+            urlDat[7,1] = "Flesch Reading Ease"
+            urlDat[8,1] = "SMOG Index"
+            urlDat[9,1] = "Coleman Liau"
+            urlDat[10,1] = "Automated Readability Index"
+            urlDat[11,1] = "Gunning Fog"
+            urlDat[12,1] = "Dale Chall Readability Score"
+            urlDat[13,1] = "Difficult Words"
+            urlDat[14,1] = "Linsear Write Formula"
+            urlDat[15,1] = "Text Standard"
 
             ########################################################################
             #remove unreadable characters
@@ -148,9 +152,9 @@ for s, value in enumerate(searchList):
             fdist = FreqDist(w.lower() for w in URLtext if w.isalpha()) #frequency distribution of words only
 
 
-			# Bug fix
-			# cast dict to list
-	        fd_temp = list(fdist.items())
+            # Bug fix
+            # cast dict to list
+            fd_temp = list(fdist.items())
 
 
             urlDat[3,2] = fdist[searchList[s].lower()] #frequency of search term
@@ -174,9 +178,9 @@ for s, value in enumerate(searchList):
             ##determine syllable count for all words in each sentece
             sentSyl = {}
             WperS = {}
-			# for n,sent in enumerate(sents):
-			# future use
-			for n in range (0,len(sents)):
+            # for n,sent in enumerate(sents):
+            # future use
+            for n, _ in enumerate(sents):
 
                 #setup sent variable to analyze each sentence individually
                 sent = sents[n] #select sentence n in total text
@@ -186,14 +190,16 @@ for s, value in enumerate(searchList):
                 WperS[n] = len(sent) #number of words per sentence
 
                 #syllable analysis
-                for x in range (0,len(sent)):
+                # aetna student health
+                # 8774804161
+            for x, _ in enumerate(sent):
 
-                    word = sent[x]
+                word = sent[x]
 
-                    # Count the syllables in the word.
-                    syllables = textstat.syllable_count(str(word))
-                    sentSyl[n,x] = syllables
-
+                # Count the syllables in the word.
+                syllables = textstat.syllable_count(str(word))
+                sentSyl[n,x] = syllables
+            #
             ########################################################################
             ## Complexity Analysis
             urlDat[6,2]  = textstat.flesch_kincaid_grade(str(url_text))
@@ -216,13 +222,13 @@ for s, value in enumerate(searchList):
             for x in range(0,len(wordsPOS)) :
                 PS[x,1], PS[x,2] = [y.strip('}()",{:') for y in (str(wordsPOS[x])).split(',')]
 
-		    ########################################################################
-		    ##Sentiment and Subjectivity analysis
-		    testimonial = TextBlob(url_text)
-		    testimonial.sentiment
-		    ##defining part of speech for each word
-		    from nltk.tag.perceptron import PerceptronTagger
-		    tagger = PerceptronTagger(load=False)
+            ########################################################################
+            ##Sentiment and Subjectivity analysis
+            testimonial = TextBlob(url_text)
+            testimonial.sentiment
+            ##defining part of speech for each word
+            from nltk.tag.perceptron import PerceptronTagger
+            tagger = PerceptronTagger(load=False)
 
             urlDat[4,2] = testimonial.sentiment.polarity
             urlDat[5,2] = testimonial.sentiment.subjectivity
@@ -255,15 +261,15 @@ for s, value in enumerate(searchList):
                 obj_arr_add = np.array([urlDat,WperS, sentSyl, fM, PS, fAll], dtype=object)
                 obj_arr = np.vstack( [obj_arr, obj_arr_add] )
 
-			      import pickle
+            import pickle
 
-		    with open(str(str('textData_')+searchList[s]) + '.mat','wb') as handle:
-		        pickle.dump(list(obj_list),handle)
-		        sio.savemat(handle, {'obj_arr':obj_arr})
-		    os.chdir(fileLocation + str(value))
+            with open(str(str('textData_')+searchList[s]) + '.mat','wb') as handle:
+                pickle.dump(list(obj_list),handle)
+                sio.savemat(handle, {'obj_arr':obj_arr})
+            os.chdir(fileLocation + str(value))
 
-			#save
-			sio.savemat('textData_' + str(searchList[s]) + '.mat', {'obj_arr':obj_arr})
+            #save
+            sio.savemat('textData_' + str(searchList[s]) + '.mat', {'obj_arr':obj_arr})
 
 
     #after the full code runs export to a .mat file to a designed location

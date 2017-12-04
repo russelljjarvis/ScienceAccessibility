@@ -110,4 +110,9 @@ RUN sudo /opt/conda/bin/pip install fake_useragent
 RUN sudo git clone https://github.com/pdfminer/pdfminer.six.git
 WORKDIR pdfminer.six
 RUN sudo /opt/conda/bin/ipython setup.py install
+WORKDIR $HOME
+COPY ScrapeLinksandText_v4.py .
+COPY URLcrawl_v2.py .
+COPY tAnalysis.py .
+#ENTRYPOINT /bin/bash
 ENTRYPOINT python ScrapeLinksandText_v4.py; python URLcrawl_v2.py; python tAnalysis.py /bin/bash

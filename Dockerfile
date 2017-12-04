@@ -107,8 +107,7 @@ RUN sudo /opt/conda/bin/pip install pyvirtualdisplay
 RUN sudo /opt/conda/bin/pip install fake_useragent
 #WORKDIR /home/jovyan/work
 
-RUN sudo gitclone https://github.com/pdfminer/pdfminer.six
+RUN sudo git clone https://github.com/pdfminer/pdfminer.six.git
 WORKDIR pdfminer.six
 RUN sudo /opt/conda/bin/ipython setup.py install
 ENTRYPOINT /bin/python ScrapeLinksandText_v4.py; /bin/python URLcrawl_v2.py; /bin/python tAnalysis.py /bin/bash
- 

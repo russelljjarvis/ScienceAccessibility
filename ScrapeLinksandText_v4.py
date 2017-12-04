@@ -16,14 +16,12 @@ FileLocation = 'AAB_files/Pat-files/WCP/code/Data Files/'
 #if you're switchign computers you can use this to indicate a second location to use if the first doesn't exist
 import os
 if not os.path.exists(FileLocation):
-   FileLocaton = 'textAnalyze'
+   FileLocaton = 'RESEARCH/Pat_Projects/textAnalyze/'
 
 #import web driver file to access chrome and establish a user-agent code
 import selenium
 from selenium import webdriver
-#driver = webdriver.Chrome()
 
-#browser = webdriver.Firefox('/home/jovyan/work')
 
 from pyvirtualdisplay import Display
 from selenium import webdriver
@@ -34,12 +32,6 @@ display.start()
 driver = webdriver.Firefox()
 driver.get('http://www.ubuntu.com/')
 
-#print(driver.page_source)
-
-#driver.close() # Close the current window.
-
-#browser.close()
-#display.stop()
 
 #assumptions made in the code
 #1. any website that returns less than 20 words will not be counted
@@ -117,13 +109,8 @@ for x,category in enumerate(searchList):
     web = ["google_","gScholar_","bing_","yahoo_"]
 
     flattening = [ (b,searchName) for b, searchName in enumerate(web)  ]
-    #print(flattened)
-    for flat in flattening:
-    #def map_search(flattened):
-        #print(flattened)
 
-        b, searchName = flat
-
+    for b, searchName in flattening:
         print(" ")
         if b == 0:
             #searchName = "google_" #output name for text file
@@ -173,9 +160,8 @@ for x,category in enumerate(searchList):
             else:
                 pagestring = linkName + str(linkcount + 1) + "&q=" + categoryquery # googles
 
-            #print "\nchecking: " + pagestring + "\n"
-            try:
-                driver.get(pagestring)
+            #print "\nchecking: " + pagestring + "\n"               
+            driver.get(pagestring)
 
                 #print driver.page_source
                 searchresults = {}
@@ -199,9 +185,9 @@ for x,category in enumerate(searchList):
                         except:
                             print("fail")
 
-                        #sometimes bing pulls in weird ads with the href tag. this ignores those and doesn't count them against the link count
-                        if 'r.bat' in strlink or 'r.msn' in strlink or 'www.bing.com/news/search' in strlink:
-                           linkcount +=0
+                    #sometimes bing pulls in weird ads with the href tag. this ignores those and doesn't count them against the link count
+                    if 'r.bat' in strlink or 'r.msn' in strlink or 'www.bing.com/news/search' in strlink: 
+                       linkcount +=0
 
                         else:
                            #if  URL directs to a PDF it requires special coding to pull characters
@@ -216,32 +202,28 @@ for x,category in enumerate(searchList):
                                  interpreter.process_page(page)
                                  write_text =  retstr.getvalue()
 
-                           #if not a PDF link try fails the exception treats it like a non-PDF document
-                           except:
-                              #establish human agent header
-                              headers = {'User-Agent': str(ua.chrome)}
+                       #if not a PDF link try fails the exception treats it like a non-PDF document
+                       except:
+                          #establish human agent header
+                          headers = {'User-Agent': str(ua.chrome)}
 
-                              #request website data using beautiful soup
-                              r = requests.get(strlink, headers=headers)
-                              soup = BeautifulSoup(r.content, 'html.parser')
+                          #request website data using beautiful soup
+                          r = requests.get(strlink, headers=headers)
+                          soup = BeautifulSoup(r.content, 'html.parser')
 
-                              #strip HTML
-                              for script in soup(["script", "style"]):
-                                      script.extract()    # rip it out
+                          #strip HTML 
+                          for script in soup(["script", "style"]):
+                                  script.extract()    # rip it out
 
-                              # get text
-                              text = soup.get_text()
+                          # get text
+                          text = soup.get_text()
 
-                              #organize text
-                              lines = (line.strip() for line in text.splitlines())  # break into lines and remove leading and trailing space on each
-                              chunks = (phrase.strip() for line in lines for phrase in line.split("  ")) # break multi-headlines into a line each
-                              text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines
-                              write_text = text.encode('ascii','ignore')
+                          #organize text
+                          lines = (line.strip() for line in text.splitlines())  # break into lines and remove leading and trailing space on each
+                          chunks = (phrase.strip() for line in lines for phrase in line.split("  ")) # break multi-headlines into a line each
+                          text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines
+                          write_text = text.encode('ascii','ignore')   
 
-                           #check to see if there is text after scraping the web address
-                           if textstat.lexicon_count(str(write_text)) < 20:
-                              #if there is no text after scraping the web address then skip this link (i.e. don't save it). Some of the above scraping code simply doesn't catch the text due to site parameters
-                              linkcount += 0
 
                            else:
                               #if there is text, print the URL & save the URL/text to file for further analysis
@@ -263,14 +245,10 @@ for x,category in enumerate(searchList):
                 checkflag = 0
             else:
                 prevlinkcount = linkcount
-
+      
         outfile.close() #close the text file containing list of URLs per search engine
     driver.quit() # Quit the driver and close every associated window.
     display.stop()
 
-    #flattened = [ (b,searchName) for b, searchName in enumerate(web)  ]
-    #print(flattened)
-    #results = list(map(map_search,flattened))
-    #print(results)
 #close chrome after looping through the various search engines
-#driver.close() #close the driver
+driver.close() #close the driver

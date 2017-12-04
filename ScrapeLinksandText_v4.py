@@ -11,12 +11,24 @@ import os
 
 
 #filepath for creating/saving the text files
-FileLocation = 'AAB_files/Pat-files/WCP/code/Data Files/'
+fileLocation = 'AAB_files/Pat-files/WCP/code/Data_Files/'
 
 #if you're switchign computers you can use this to indicate a second location to use if the first doesn't exist
+'''
 import os
-if not os.path.exists(FileLocation):
+if not os.path.exists(fileLocation):
    FileLocaton = 'RESEARCH/Pat_Projects/textAnalyze/'
+
+fileLocation = 'AAB_files/Pat-files/WCP/code/Data_Files'
+'''
+#if you're switchign computers you can use this to indicate a second location to use if the first doesn't exist
+import os
+#if not os.path.exists(fileLocation):
+#   fileLocaton = 'RESEARCH/Pat_Projects/textAnalyze/'
+if not os.path.exists(fileLocation):
+    file_ops = str('mkdir ')+str(fileLocation)
+    os.system(file_ops)
+os.chdir(fileLocation)
 
 #import web driver file to access chrome and establish a user-agent code
 import selenium
@@ -101,154 +113,156 @@ for x,category in enumerate(searchList):
     categoryquery = category.replace(' ',"+")
 
     #set path for saving, and make the folder to save if it doesn't already exist
-    path = FileLocation + str(category) +'/'
+    path = fileLocation + str(category) +'/'
     if not os.path.exists(path):
         os.makedirs(path)
 
-    os.chdir(FileLocation + str(category) +'/')
+    os.chdir(fileLocation + str(category) +'/')
     web = ["google_","gScholar_","bing_","yahoo_"]
 
     flattening = [ (b,searchName) for b, searchName in enumerate(web)  ]
 
     for b, searchName in flattening:
-        print(" ")
-        if b == 0:
-            #searchName = "google_" #output name for text file
-            linkName = "https://www.google.com/search?num=100&filter=0&start=" #search engine web address
-            linkCheck1 = "//div[@class='srg']/div[@class='g']/div[@class='rc']/h3[@class='r']/a" #HTML syntax where links are stored
-            linkCheck2 = "//div[@id='rso']/div[@class='g']/div[@class='rc']/h3[@class='r']/a" #HTML syntax where links are stored
-            print("Google")
+        try:
+            print(" ")
+            if b == 0:
+                #searchName = "google_" #output name for text file
+                linkName = "https://www.google.com/search?num=100&filter=0&start=" #search engine web address
+                linkCheck1 = "//div[@class='srg']/div[@class='g']/div[@class='rc']/h3[@class='r']/a" #HTML syntax where links are stored
+                linkCheck2 = "//div[@id='rso']/div[@class='g']/div[@class='rc']/h3[@class='r']/a" #HTML syntax where links are stored
+                print("Google")
 
-        elif b == 1:
-            #searchName = "gScholar_" #output name for text file
-            linkName = "https://www.scholar.google.com/scholar?num=100&filter=0&start=" #search engine web address
-            linkCheck1 = "//div[@class='gs_r']/div[@class='gs_ri']/h3[@class='gs_rt']/a" #HTML syntax where links are stored
-            linkCheck2 = "//div[@class='gs_r']/div[@class='gs_ri']/h3[@class='gs_rt']/a" #HTML syntax where links are stored
-            print("Google Scholar")
+            elif b == 1:
+                #searchName = "gScholar_" #output name for text file
+                linkName = "https://www.scholar.google.com/scholar?num=100&filter=0&start=" #search engine web address
+                linkCheck1 = "//div[@class='gs_r']/div[@class='gs_ri']/h3[@class='gs_rt']/a" #HTML syntax where links are stored
+                linkCheck2 = "//div[@class='gs_r']/div[@class='gs_ri']/h3[@class='gs_rt']/a" #HTML syntax where links are stored
+                print("Google Scholar")
 
-        elif b == 2:
-            #searchName = "bing_" #output name for text file
-            linkName = "https://www.bing.com/search?num=100&filter=0&first=" #search engine web address
-            linkCheck1 = "//h2/a" #HTML syntax where links are stored
-            linkCheck2 = "//h2/a" #HTML syntax where links are stored
-            print("Bing")
+            elif b == 2:
+                #searchName = "bing_" #output name for text file
+                linkName = "https://www.bing.com/search?num=100&filter=0&first=" #search engine web address
+                linkCheck1 = "//h2/a" #HTML syntax where links are stored
+                linkCheck2 = "//h2/a" #HTML syntax where links are stored
+                print("Bing")
 
-        elif b == 3:
-            #searchName = "yahoo_" #output name for text file
-            linkName =  "https://search.yahoo.com/search?p=" #search engine web address
-            linkCheck1 = "//a[@class=' ac-algo ac-21th lh-24']" #HTML syntax where links are stored
-            linkCheck2 = "//a[@class=' ac-algo ac-21th lh-24']" #HTML syntax where links are stored
-            print("Yahoo")
-
-        print ("--------------------")
-        #create a text file with Search term name and open the text file
-        ofilename = searchName + category + '.txt' #text file name that will list and save all URLs
-        outfile = open(ofilename, 'w')
-
-        linkcount = 0
-        checkflag = 1
-        prevlinkcount= -1
-
-        while linkcount < linkstoget and checkflag:
-            time.sleep(randint(1,2)) #short (random) wait to prevent google from blocking the call
-
-            #finish each web address link in the correct way depending on the search engine
-            if b == 2:
-                pagestring = linkName + str(linkcount + 1) + "&q=" + categoryquery #bing
             elif b == 3:
-                pagestring = linkName + categoryquery + "&pstart=" + str(linkcount + 1) #yahoo
-            else:
-                pagestring = linkName + str(linkcount + 1) + "&q=" + categoryquery # googles
+                #searchName = "yahoo_" #output name for text file
+                linkName =  "https://search.yahoo.com/search?p=" #search engine web address
+                linkCheck1 = "//a[@class=' ac-algo ac-21th lh-24']" #HTML syntax where links are stored
+                linkCheck2 = "//a[@class=' ac-algo ac-21th lh-24']" #HTML syntax where links are stored
+                print("Yahoo")
 
-            #print "\nchecking: " + pagestring + "\n"
-            driver.get(pagestring)
+            print ("--------------------")
+            #create a text file with Search term name and open the text file
+            ofilename = searchName + category + '.txt' #text file name that will list and save all URLs
+            outfile = open(ofilename, 'w')
 
-                #print driver.page_source
-            searchresults = {}
-            linkChecker = list()
+            linkcount = 0
+            checkflag = 1
+            prevlinkcount= -1
 
-                #locate URLs within specific search engine HTML syntax
-            linkChecker1 = driver.find_elements_by_xpath(linkCheck1)
-            linkChecker2 = driver.find_elements_by_xpath(linkCheck2)
+            while linkcount < linkstoget and checkflag:
+                time.sleep(randint(1,5)) #short (random) wait to prevent google from blocking the call
 
-            for l in linkChecker1:
-                linkChecker.append(l)
-            for l in linkChecker2:
-                linkChecker.append(l)
-
-            for linko in linkChecker:
-                if linkcount < linkstoget:
-                    strlink = ""
-                    try:
-                        # print link to text
-                        strlink = linko.get_attribute("href")
-                    except:
-                        print("fail")
-
-                #sometimes bing pulls in weird ads with the href tag. this ignores those and doesn't count them against the link count
-                if 'r.bat' in strlink or 'r.msn' in strlink or 'www.bing.com/news/search' in strlink:
-                   linkcount +=0
-
+                #finish each web address link in the correct way depending on the search engine
+                if b == 2:
+                    pagestring = linkName + str(linkcount + 1) + "&q=" + categoryquery #bing
+                elif b == 3:
+                    pagestring = linkName + categoryquery + "&pstart=" + str(linkcount + 1) #yahoo
                 else:
-                    #if  URL directs to a PDF it requires special coding to pull characters
-                    try:
-                        pdf_file = urllib3.urlopen(Request(strlink)).read()
-                        memoryFile = StringIO(pdf_file)
-                        parser = PDFParser(memoryFile)
-                        document = PDFDocument(parser)
+                    pagestring = linkName + str(linkcount + 1) + "&q=" + categoryquery # googles
 
-                        #Process all pages in the document
-                        for page in PDFPage.create_pages(document):
-                            interpreter.process_page(page)
-                            write_text =  retstr.getvalue()
+                #print "\nchecking: " + pagestring + "\n"
+                #driver.get(pagestring)
 
-                    #if not a PDF link try fails the exception treats it like a non-PDF document
-                    except:
-                        #establish human agent header
-                        headers = {'User-Agent': str(ua.chrome)}
+                    #print driver.page_source
+                searchresults = {}
+                linkChecker = list()
 
-                        #request website data using beautiful soup
-                        r = requests.get(strlink, headers=headers)
-                        soup = BeautifulSoup(r.content, 'html.parser')
+                    #locate URLs within specific search engine HTML syntax
+                linkChecker1 = driver.find_elements_by_xpath(linkCheck1)
+                linkChecker2 = driver.find_elements_by_xpath(linkCheck2)
 
-                        #strip HTML
-                        for script in soup(["script", "style"]):
-                              script.extract()    # rip it out
+                for l in linkChecker1:
+                    linkChecker.append(l)
+                for l in linkChecker2:
+                    linkChecker.append(l)
 
-                        # get text
-                        text = soup.get_text()
+                for linko in linkChecker:
+                    if linkcount < linkstoget:
+                        strlink = ""
+                        try:
+                            # print link to text
+                            strlink = linko.get_attribute("href")
+                        except:
+                            print("fail")
 
-                        #organize text
-                        lines = (line.strip() for line in text.splitlines())  # break into lines and remove leading and trailing space on each
-                        chunks = (phrase.strip() for line in lines for phrase in line.split("  ")) # break multi-headlines into a line each
-                        text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines
-                        write_text = text.encode('ascii','ignore')
+                    #sometimes bing pulls in weird ads with the href tag. this ignores those and doesn't count them against the link count
+                    if 'r.bat' in strlink or 'r.msn' in strlink or 'www.bing.com/news/search' in strlink:
+                       linkcount +=0
 
-                        if textstat.lexicon_count(str(write_text)) < 20:
-                              #if there is no text after scraping the web address then skip this link (i.e. don't save it). Some of the above scraping code simply doesn't catch the text due to site parameters
-                              linkcount += 0
+                    else:
+                        #if  URL directs to a PDF it requires special coding to pull characters
+                        try:
+                            pdf_file = urllib3.urlopen(Request(strlink)).read()
+                            memoryFile = StringIO(pdf_file)
+                            parser = PDFParser(memoryFile)
+                            document = PDFDocument(parser)
 
-                        else:
-                            #if there is text, print the URL & save the URL/text to file for further analysis
-                            linkcount += 1
-                            #print the link to the command window
-                            print (str(linkcount) + ". " + str(strlink)) #this is the actual link
+                            #Process all pages in the document
+                            for page in PDFPage.create_pages(document):
+                                interpreter.process_page(page)
+                                write_text =  retstr.getvalue()
 
-                            #write the link to the text file containing all URLs
-                            outfile.write("%s\n" % (strlink))
+                        #if not a PDF link try fails the exception treats it like a non-PDF document
+                        except:
+                            #establish human agent header
+                            headers = {'User-Agent': str(ua.chrome)}
 
-                            #write contents to individual textfile
-                            fileName = searchName  + str(linkcount) + ".txt"
-                            f = open(fileName, 'w')
-                            f.write(str(write_text))
-                            f.close()
-            #except:
-            #    None
-            if prevlinkcount == linkcount:
-                checkflag = 0
-            else:
-                prevlinkcount = linkcount
+                            #request website data using beautiful soup
+                            r = requests.get(strlink, headers=headers)
+                            soup = BeautifulSoup(r.content, 'html.parser')
 
+                            #strip HTML
+                            for script in soup(["script", "style"]):
+                                  script.extract()    # rip it out
+
+                            # get text
+                            text = soup.get_text()
+
+                            #organize text
+                            lines = (line.strip() for line in text.splitlines())  # break into lines and remove leading and trailing space on each
+                            chunks = (phrase.strip() for line in lines for phrase in line.split("  ")) # break multi-headlines into a line each
+                            text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines
+                            write_text = text.encode('ascii','ignore')
+
+                            if textstat.lexicon_count(str(write_text)) < 20:
+                                  #if there is no text after scraping the web address then skip this link (i.e. don't save it). Some of the above scraping code simply doesn't catch the text due to site parameters
+                                  linkcount += 0
+
+                            else:
+                                #if there is text, print the URL & save the URL/text to file for further analysis
+                                linkcount += 1
+                                #print the link to the command window
+                                print (str(linkcount) + ". " + str(strlink)) #this is the actual link
+
+                                #write the link to the text file containing all URLs
+                                outfile.write("%s\n" % (strlink))
+
+                                #write contents to individual textfile
+                                fileName = searchName  + str(linkcount) + ".txt"
+                                f = open(fileName, 'w')
+                                f.write(str(write_text))
+                                f.close()
+                #except:
+                #    None
+                if prevlinkcount == linkcount:
+                    checkflag = 0
+                else:
+                    prevlinkcount = linkcount
+        except:
+            print('google can tell we are crawling it')
         outfile.close() #close the text file containing list of URLs per search engine
     driver.quit() # Quit the driver and close every associated window.
     display.stop()

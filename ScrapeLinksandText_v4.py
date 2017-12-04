@@ -262,10 +262,12 @@ for x,category in enumerate(searchList):
                 else:
                     prevlinkcount = linkcount
         except:
-            print('google can tell we are crawling it')
+            print('excption')
+            #raise
+            #print('google can tell we are crawling it')
         outfile.close() #close the text file containing list of URLs per search engine
     driver.quit() # Quit the driver and close every associated window.
     display.stop()
 
 #close chrome after looping through the various search engines
-driver.close() #close the driver
+#driver.close() #close the driver

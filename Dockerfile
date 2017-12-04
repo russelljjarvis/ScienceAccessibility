@@ -1,11 +1,12 @@
 # author Russell Jarvis rjjarvis@asu.edu
 
 FROM jupyter/scipy-notebook
+USER root
+
 RUN apt-get update
 RUN apt-get -y install gem 
 RUN gem install rake
 
-USER root
 RUN chown -R $NB_USER $HOME
 
 #Get a whole lot of GNU core development tools

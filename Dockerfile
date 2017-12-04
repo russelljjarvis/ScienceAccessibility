@@ -4,8 +4,8 @@ FROM jupyter/scipy-notebook
 USER root
 
 RUN apt-get update
-RUN apt-get -y install gem 
-RUN gem install rake
+#RUN apt-get -y install gem rake
+#RUN gem install rake
 
 RUN chown -R $NB_USER $HOME
 

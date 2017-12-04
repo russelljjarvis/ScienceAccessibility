@@ -26,12 +26,12 @@ fileLocation = 'AAB_files/Pat-files/WCP/code/Data Files/'
 #if you're switchign computers you can use this to indicate a second location to use if the first doesn't exist
 
 if not os.path.exists(FileLocation):
-   fileLocaton = RESEARCH/Pat_Projects/textAnalyze/'
+   fileLocaton = 'RESEARCH/Pat_Projects/textAnalyze/'
 
 
 ##once the above is set you can run the code!
 #this code assumes you've run the ScrapLinksandText code - it requires the text files it generates
-   
+
 ########################################################################
 #call in necessary packages that code requires to operate and define additional vars
 import numpy
@@ -72,11 +72,11 @@ for s, value in enumerate(searchList):
     print (" "); print ("###############################################")
     web = ["google_","gScholar_","bing_","yahoo_"]
 
-	# Note for long term code maintaince it will be better to flatten the 
+	# Note for long term code maintaince it will be better to flatten the
 	# Iterator, as below by building the iterator first in a list comprehension
 	# The idea is multilayered nested clauses leads to more bugs.
     #flattened = [ (p,b,textName) for b, textName in enumerate(web) for p in range(0,numURLs) ]
-    #for p,b,textName in flattened:    
+    #for p,b,textName in flattened:
 	for b in range(0,web) :
         #search engine selection
         if b == 0:
@@ -94,7 +94,7 @@ for s, value in enumerate(searchList):
 
         for p in range(0,numURLs) :
             print ("-------------------------------------------")
-            print ("Analyzing Search Engine " + str(b+1) + " of " + str(web) + ": Link " + str(p+1)); print (""); 
+            print ("Analyzing Search Engine " + str(b+1) + " of " + str(web) + ": Link " + str(p+1)); print ("");
 
 		    #open and read text q
 		    fileName = '{0}{1}.txt'.format(textName,p+1)
@@ -142,20 +142,20 @@ for s, value in enumerate(searchList):
             sents = [w.lower() for w in sents] #lowercase all
 
             urlDat[2,2]   = len(sents) #determine number of sentences
-            
+
             ########################################################################
             ##frequency distribtuion of text
             fdist = FreqDist(w.lower() for w in URLtext if w.isalpha()) #frequency distribution of words only
-            
+
 
 			# Bug fix
 			# cast dict to list
 	        fd_temp = list(fdist.items())
 
 
-            urlDat[3,2] = fdist[searchList[s].lower()] #frequency of search term    
+            urlDat[3,2] = fdist[searchList[s].lower()] #frequency of search term
             frexMost = fdist.most_common(15) #show N most common words
-            
+
             fAll = {}
             for x in range(0,len(fd_temp)):
                 fAll[x,1], fAll[x,2] = [y.strip('}()",{:') for y in (str(fd_temp[x])).split(',')]
@@ -165,17 +165,17 @@ for s, value in enumerate(searchList):
             for x in range(0,len(frexMost)) :
                 fM[x,1], fM[x,2] = [y.strip('}()",{:') for y in (str(frexMost[x])).split(',')]
             ##
-                
+
             #identify long words based on word length of n characters
             #long_words = [w for w in words if len(w) > 8] #last number is character length
             #sorted(long_words)
 
-            ########################################################################       
+            ########################################################################
             ##determine syllable count for all words in each sentece
             sentSyl = {}
             WperS = {}
 			# for n,sent in enumerate(sents):
-			# future use             
+			# future use
 			for n in range (0,len(sents)):
 
                 #setup sent variable to analyze each sentence individually
@@ -185,32 +185,32 @@ for s, value in enumerate(searchList):
 
                 WperS[n] = len(sent) #number of words per sentence
 
-                #syllable analysis    
+                #syllable analysis
                 for x in range (0,len(sent)):
-                    
+
                     word = sent[x]
-                    
+
                     # Count the syllables in the word.
                     syllables = textstat.syllable_count(str(word))
                     sentSyl[n,x] = syllables
 
             ########################################################################
             ## Complexity Analysis
-            urlDat[6,2]  = textstat.flesch_kincaid_grade(str(url_text))        
+            urlDat[6,2]  = textstat.flesch_kincaid_grade(str(url_text))
             urlDat[7,2] = textstat.flesch_reading_ease(str(url_text))
-            urlDat[8,2]  = textstat.smog_index(str(url_text))    
+            urlDat[8,2]  = textstat.smog_index(str(url_text))
             urlDat[9,2]  = textstat.coleman_liau_index(str(url_text))
             urlDat[10,2]  = textstat.automated_readability_index(str(url_text))
             urlDat[11,2] = textstat.gunning_fog(str(url_text))
 
             urlDat[12,2]  = textstat.dale_chall_readability_score(str(url_text))
             urlDat[13,2]  = textstat.difficult_words(str(url_text))
-            urlDat[14,2]  = textstat.linsear_write_formula(str(url_text)) 
+            urlDat[14,2]  = textstat.linsear_write_formula(str(url_text))
             urlDat[15,2]  = textstat.text_standard(str(url_text))
 
             ########################################################################
             ##defining part of speech for each word
-            wordsPOS = pos_tag([w.lower() for w in URLtext if w.isalpha()]) 
+            wordsPOS = pos_tag([w.lower() for w in URLtext if w.isalpha()])
 
             PS = {}
             for x in range(0,len(wordsPOS)) :
@@ -238,7 +238,7 @@ for s, value in enumerate(searchList):
                            [str(urlDat[15,1]) + ": " + str(urlDat[15,2])]]
 
             headers = ["Complexity Results:"]; print (tabulate(plotDat,headers,tablefmt="simple",stralign="left"))
-            time.sleep(1); print (""); print (""); print ("");       
+            time.sleep(1); print (""); print (""); print ("");
             ########################################################################
             ##convert all dict variables to list for multidimensional conversion to matlab cell array
             urlDat = urlDat.items()

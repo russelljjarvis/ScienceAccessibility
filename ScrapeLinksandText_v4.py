@@ -160,92 +160,92 @@ for x,category in enumerate(searchList):
             else:
                 pagestring = linkName + str(linkcount + 1) + "&q=" + categoryquery # googles
 
-            #print "\nchecking: " + pagestring + "\n"               
+            #print "\nchecking: " + pagestring + "\n"
             driver.get(pagestring)
 
                 #print driver.page_source
-                searchresults = {}
-                linkChecker = list()
+            searchresults = {}
+            linkChecker = list()
 
                 #locate URLs within specific search engine HTML syntax
-                linkChecker1 = driver.find_elements_by_xpath(linkCheck1)
-                linkChecker2 = driver.find_elements_by_xpath(linkCheck2)
+            linkChecker1 = driver.find_elements_by_xpath(linkCheck1)
+            linkChecker2 = driver.find_elements_by_xpath(linkCheck2)
 
-                for l in linkChecker1:
-                    linkChecker.append(l)
-                for l in linkChecker2:
-                    linkChecker.append(l)
+            for l in linkChecker1:
+                linkChecker.append(l)
+            for l in linkChecker2:
+                linkChecker.append(l)
 
-                for linko in linkChecker:
-                    if linkcount < linkstoget:
-                        strlink = ""
-                        try:
-                            # print link to text
-                            strlink = linko.get_attribute("href")
-                        except:
-                            print("fail")
+            for linko in linkChecker:
+                if linkcount < linkstoget:
+                    strlink = ""
+                    try:
+                        # print link to text
+                        strlink = linko.get_attribute("href")
+                    except:
+                        print("fail")
 
-                    #sometimes bing pulls in weird ads with the href tag. this ignores those and doesn't count them against the link count
-                    if 'r.bat' in strlink or 'r.msn' in strlink or 'www.bing.com/news/search' in strlink: 
-                       linkcount +=0
+                #sometimes bing pulls in weird ads with the href tag. this ignores those and doesn't count them against the link count
+                if 'r.bat' in strlink or 'r.msn' in strlink or 'www.bing.com/news/search' in strlink:
+                   linkcount +=0
 
-                        else:
-                           #if  URL directs to a PDF it requires special coding to pull characters
-                           try:
-                              pdf_file = urllib3.urlopen(Request(strlink)).read()
-                              memoryFile = StringIO(pdf_file)
-                              parser = PDFParser(memoryFile)
-                              document = PDFDocument(parser)
+                    else:
+                       #if  URL directs to a PDF it requires special coding to pull characters
+                       try:
+                          pdf_file = urllib3.urlopen(Request(strlink)).read()
+                          memoryFile = StringIO(pdf_file)
+                          parser = PDFParser(memoryFile)
+                          document = PDFDocument(parser)
 
-                              #Process all pages in the document
-                              for page in PDFPage.create_pages(document):
-                                 interpreter.process_page(page)
-                                 write_text =  retstr.getvalue()
+                          #Process all pages in the document
+                          for page in PDFPage.create_pages(document):
+                             interpreter.process_page(page)
+                             write_text =  retstr.getvalue()
 
-                       #if not a PDF link try fails the exception treats it like a non-PDF document
-                       except:
-                          #establish human agent header
-                          headers = {'User-Agent': str(ua.chrome)}
+                   #if not a PDF link try fails the exception treats it like a non-PDF document
+                   except:
+                      #establish human agent header
+                      headers = {'User-Agent': str(ua.chrome)}
 
-                          #request website data using beautiful soup
-                          r = requests.get(strlink, headers=headers)
-                          soup = BeautifulSoup(r.content, 'html.parser')
+                      #request website data using beautiful soup
+                      r = requests.get(strlink, headers=headers)
+                      soup = BeautifulSoup(r.content, 'html.parser')
 
-                          #strip HTML 
-                          for script in soup(["script", "style"]):
-                                  script.extract()    # rip it out
+                      #strip HTML
+                      for script in soup(["script", "style"]):
+                              script.extract()    # rip it out
 
-                          # get text
-                          text = soup.get_text()
+                      # get text
+                      text = soup.get_text()
 
-                          #organize text
-                          lines = (line.strip() for line in text.splitlines())  # break into lines and remove leading and trailing space on each
-                          chunks = (phrase.strip() for line in lines for phrase in line.split("  ")) # break multi-headlines into a line each
-                          text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines
-                          write_text = text.encode('ascii','ignore')   
+                      #organize text
+                      lines = (line.strip() for line in text.splitlines())  # break into lines and remove leading and trailing space on each
+                      chunks = (phrase.strip() for line in lines for phrase in line.split("  ")) # break multi-headlines into a line each
+                      text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines
+                      write_text = text.encode('ascii','ignore')
 
 
-                           else:
-                              #if there is text, print the URL & save the URL/text to file for further analysis
-                              linkcount += 1
-                             #print the link to the command window
-                              print (str(linkcount) + ". " + str(strlink)) #this is the actual link
+                       else:
+                          #if there is text, print the URL & save the URL/text to file for further analysis
+                          linkcount += 1
+                         #print the link to the command window
+                          print (str(linkcount) + ". " + str(strlink)) #this is the actual link
 
-                              #write the link to the text file containing all URLs
-                              outfile.write("%s\n" % (strlink))
+                          #write the link to the text file containing all URLs
+                          outfile.write("%s\n" % (strlink))
 
-                              #write contents to individual textfile
-                              fileName = searchName  + str(linkcount) + ".txt"
-                              f = open(fileName, 'w')
-                              f.write(str(write_text))
-                              f.close()
+                          #write contents to individual textfile
+                          fileName = searchName  + str(linkcount) + ".txt"
+                          f = open(fileName, 'w')
+                          f.write(str(write_text))
+                          f.close()
             except:
                 None
             if prevlinkcount == linkcount:
                 checkflag = 0
             else:
                 prevlinkcount = linkcount
-      
+
         outfile.close() #close the text file containing list of URLs per search engine
     driver.quit() # Quit the driver and close every associated window.
     display.stop()

@@ -12,16 +12,10 @@ matplotlib.use('Agg')
 # Uncomment to enable parallelization.
 import sys
 import os
-#os.system('ipcluster start -n4 --profile=default &')
-#os.system('sleep 3')
-#import ipyparallel as ipp
-#from ipyparallel import depend, require, dependent
-#rc = ipp.Client(profile='default')
-#dview = rc[:]
+
 current_dir = os.getcwd()
 
-searchList = ['/GMO','/Genetically Modified Organism']
-#searchList = ['Transgenic','Vaccine']
+searchList = ['/GMO','/Genetically Modified Organism','Transgenic','Vaccine']
 
 web = 4 #number of search websites being implemented (google, google scholar, bing, yahoo)
 numURLs = 50 #number of URLs per search website  (number determined by 1.scrape code)
@@ -30,7 +24,7 @@ numURLs = 50 #number of URLs per search website  (number determined by 1.scrape 
 fileLocation = 'AAB_files/Pat-files/WCP/code/Data Files/'
 
 #if you're switchign computers you can use this to indicate a second location to use if the first doesn't exist
-import os
+
 if not os.path.exists(FileLocation):
    fileLocaton = RESEARCH/Pat_Projects/textAnalyze/'
 
@@ -261,9 +255,20 @@ for s, value in enumerate(searchList):
                 obj_arr_add = np.array([urlDat,WperS, sentSyl, fM, PS, fAll], dtype=object)
                 obj_arr = np.vstack( [obj_arr, obj_arr_add] )
 
+			      import pickle
+
+		    with open(str(str('textData_')+searchList[s]) + '.mat','wb') as handle:
+		        pickle.dump(list(obj_list),handle)
+		        sio.savemat(handle, {'obj_arr':obj_arr})
+		    os.chdir(fileLocation + str(value))
+
+			#save
+			sio.savemat('textData_' + str(searchList[s]) + '.mat', {'obj_arr':obj_arr})
+
+
     #after the full code runs export to a .mat file to a designed location
 
     os.chdir(fileLocation)
 
     #save
-    sio.savemat('textData_' + str(searchList[s]) + '.mat', {'obj_arr':obj_arr})
+    #sio.savemat('textData_' + str(searchList[s]) + '.mat', {'obj_arr':obj_arr})

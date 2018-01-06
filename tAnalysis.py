@@ -15,6 +15,7 @@ import os
 
 current_dir = os.getcwd()
 
+#searchList = ['GMO','Genetically Modified Organism','Transgenic','Vaccine']
 searchList = ['GMO','Genetically Modified Organism','Transgenic','Vaccine']
 
 web = 4 #number of search websites being implemented (google, google scholar, bing, yahoo)
@@ -77,7 +78,8 @@ for s, value in enumerate(searchList):
     print ("Term {0} of {1} : {2}".format(s+1 , str(len(searchList)), value))
     print (" ")
     print ("###############################################")
-    web = [ "google_","gScholar_","bing_","yahoo_" ]
+    #web = [ "google_","gScholar_","bing_","yahoo_" ]
+    web = [ "bing_"]
     # Note for long term code maintaince it will be better to flatten the
     # Iterator, as below by building the iterator first in a list comprehension
     # The idea is multilayered nested clauses leads to more bugs.

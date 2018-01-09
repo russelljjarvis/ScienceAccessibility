@@ -16,19 +16,26 @@ import os
 current_dir = os.getcwd()
 
 #searchList = ['GMO','Genetically Modified Organism','Transgenic','Vaccine']
-searchList = ['GMO','Genetically Modified Organism','Transgenic','Vaccine']
 
 web = 4 #number of search websites being implemented (google, google scholar, bing, yahoo)
 numURLs = 50 #number of URLs per search website  (number determined by 1.scrape code)
 
 #set filePath below to specify where the text Data is located on your machine
-fileLocation = 'AAB_files/Pat-files/WCP/code/Data_Files/'
+fileLocation = os.getcwd()
+#fileLocation = 'AAB_files/Pat-files/WCP/code/Data_Files/'
 
 #if you're switchign computers you can use this to indicate a second location to use if the first doesn't exist
-
+'''
 if not os.path.exists(fileLocation):
    files = str('mkdir ')+str(fileLocation)
    os.system(files)
+'''
+#path = FileLocation + str(category) +'/'
+if not os.path.exists(fileLocation):
+    os.makedirs(fileLocation)
+#os.chdir(FileLocation + str(category) +'/')
+
+
    #fileLocaton = 'RESEARCH/Pat_Projects/textAnalyze/'
 
 
@@ -64,12 +71,14 @@ from tabulate import tabulate
 from textblob import TextBlob
 ########################################################################
 
+searchList = ['GMO','Genetically Modified Organism','Transgenic','Vaccine']
+
 for s, value in enumerate(searchList):
     #set filepath where data is saved
     if not os.path.exists(fileLocation + str(value) +'/'):
         files = str('mkdir ')+str(fileLocation + str(value) +'/')
         os.system(files)
-    os.chdir(fileLocation + str(value) +'/')
+    os.chdir(fileLocation +str('/') + str(value) +'/')
 
     ##start analysis code
     print (" ")
@@ -103,12 +112,20 @@ for s, value in enumerate(searchList):
             print ("-------------------------------------------")
             print ("Analyzing Search Engine " + str(b+1) + " of " + str(web) + ": Link " + str(p+1)); print ("");
             #open and read text q
-            fileName = '{0}{1}.txt'.format(textName,p+1)
+            fileName = '{0}{1}.p'.format(textName,p+1)
             print(fileName)
-            fileHandle = open(fileName, 'r');
-            url_text = fileHandle.read()
-            fileHandle.close()
-            url_text = url_text.decode('ascii','ignore')
+            import pickle
+
+            fileHandle = open(fileName, 'rb');
+            file_contents = pickle.load(fileHandle)
+            if len(file_contents) == 2:
+                date_created = file_contents[0]
+                url_text = [1]
+            else:
+
+                url_text = file_contents#fileHandle.read()
+            #fileHandle.close()
+            #url_text = url_text.decode('ascii','ignore')
 
             #initialize dataArray Dictionary
             urlDat = {}
@@ -142,7 +159,7 @@ for s, value in enumerate(searchList):
             URLtext = [w.lower() for w in URLtext] #make everything lower case
 
             urlDat[1,2] = textstat.lexicon_count(str(url_text))
-
+            #import pdb; pdb.set_trace()
             #sentences
             sents = sent_tokenize(url_text) #split all of text in to sentences
             sents = [w.lower() for w in sents] #lowercase all
@@ -249,12 +266,12 @@ for s, value in enumerate(searchList):
             time.sleep(1); print (""); print (""); print ("");
             ########################################################################
             ##convert all dict variables to list for multidimensional conversion to matlab cell array
-            urlDat = urlDat.items()
-            sentSyl = sentSyl.items()
-            WperS = WperS.items()
-            fAll = fAll.items()
-            fM = fM.items()
-            PS = PS.items()
+            urlDat = list(urlDat.items())
+            sentSyl = list(sentSyl.items())
+            WperS = list(WperS.items())
+            fAll = list(fAll.items())
+            fM = list(fM.items())
+            PS = list(PS.items())
 
             ##generate a .mat file for further analysis in matlab
             if b == 0 and p == 0:
@@ -265,18 +282,27 @@ for s, value in enumerate(searchList):
 
             import pickle
 
-            with open(str(str('textData_')+searchList[s]) + '.mat','wb') as handle:
-                pickle.dump(list(obj_list),handle)
+            path = str('textData_/') + str(searchList[s])
+            if not os.path.exists(path):
+               os.makedirs(path)
+               #os.chdir(FileLocation + str(category) +'/')
+
+            with open(str(str('textData_/')+searchList[s]) + '.mat','wb') as handle:
+                #print(type(obj_arr))
+                #import pdb
+                #pdb.set_trace()
+                print(handle)
+                pickle.dump(list(obj_arr),handle)
                 sio.savemat(handle, {'obj_arr':obj_arr})
-            os.chdir(fileLocation + str(value))
+            #os.chdir(fileLocation + str(value))
 
             #save
-            sio.savemat('textData_' + str(searchList[s]) + '.mat', {'obj_arr':obj_arr})
+            #sio.savemat('textData_' + str(searchList[s]) + '.mat', {'obj_arr':obj_arr})
 
 
     #after the full code runs export to a .mat file to a designed location
 
-    os.chdir(fileLocation)
+    #os.chdir(fileLocation)
 
     #save
     #sio.savemat('textData_' + str(searchList[s]) + '.mat', {'obj_arr':obj_arr})

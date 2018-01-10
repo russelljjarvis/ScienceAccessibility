@@ -1,10 +1,11 @@
 # author Russell Jarvis rjjarvis@asu.edu
 
 FROM jupyter/scipy-notebook
-
-
-RUN echo 'force rebuild'
 USER root
+
+RUN apt-get update
+
+
 RUN chown -R $NB_USER $HOME
 
 #Get a whole lot of GNU core development tools
@@ -45,10 +46,11 @@ RUN unzip chromedriver_linux64.zip
 
 
 USER $NB_USER
-ENV WORK_HOME $HOME/work
-WORKDIR $WORK_HOME
-WORKDIR SReadability
-WORKDIR $WORK_HOME
+#WORKDIR $HOME/work
+#ENV WORK_HOME $HOME/work
+#WORKDIR $WORK_HOME
+#WORKDIR SReadability
+#WORKDIR $WORK_HOME
 
 RUN sudo apt-get update
 RUN sudo apt-get install -y python3-software-properties
@@ -90,13 +92,37 @@ RUN sudo tar -xvzf geckodriver-v0.18.0-linux64.tar.gz
 #RUN tar -xvzf geckodriver*
 #RUN chmod +x geckodriver
 
+RUN sudo chown -R $NB_USER $HOME
+
 ## Geckodriver
 RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.16.1/geckodriver-v0.16.1-linux64.tar.gz
 RUN sudo sh -c 'tar -x geckodriver -zf geckodriver-v0.16.1-linux64.tar.gz -O > /usr/bin/geckodriver'
 RUN sudo chmod +x /usr/bin/geckodriver
 RUN rm geckodriver-v0.16.1-linux64.tar.gz
-#RUN sudo apt-get update
-#RUN sudo apt-get install firefox
-#RUN sudo apt-get upgrade -y firefox
+RUN sudo apt-get update
+RUN sudo apt-get upgrade -y firefox
+RUN sudo chown -R jovyan /home/jovyan
+
 RUN sudo /opt/conda/bin/pip install pyvirtualdisplay
 RUN sudo /opt/conda/bin/pip install fake_useragent
+#WORKDIR /home/jovyan/work
+
+RUN sudo apt-get update
+RUN sudo apt-get install --fix-missing
+RUN sudo apt-get install -y octave
+RUN sudo pip install octave_kernel
+#ipython notebook
+# In the notebook interface, select Octave from the 'New' menu
+#http://nbviewer.jupyter.org/github/Calysto/octave_kernel/blob/master/octave_kernel.ipynb
+#ipython qtconsole --kernel octave
+#ipython console --kernel octave
+
+RUN sudo git clone https://github.com/pdfminer/pdfminer.six.git
+WORKDIR pdfminer.six
+RUN sudo /opt/conda/bin/ipython setup.py install
+WORKDIR $HOME
+COPY ScrapeLinksandText_v5.py .
+COPY URLcrawl_v2.py .
+COPY tAnalysis.py .
+ENTRYPOINT /bin/bash
+#ENTRYPOINT python ScrapeLinksandText_v4.py; python URLcrawl_v2.py; python tAnalysis.py /bin/bash

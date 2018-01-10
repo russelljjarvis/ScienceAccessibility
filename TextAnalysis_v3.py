@@ -1,3 +1,5 @@
+#MOVED to tAnalysis
+
 #set parameters- THESE ARE ALL USER DEFINED
 #searchList = ['GMO']
 import os

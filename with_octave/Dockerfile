@@ -39,6 +39,9 @@ RUN apt-get install --force-yes -y \
   xpdf \
   liboctave-dev
 
+# RUN sudo apt-get -y install gnuplot rlwrap 
+
+  
 
 # Fetch Octave forge packages
 RUN mkdir /home/octave

@@ -5,15 +5,20 @@ numURLs = 2 #number of URLs per search website (number determined by 1.scrape co
 
 #crawler input
 linkstoget = 3 #number of links to crawl through per URL - be careful with this number, as it greatly increases computation time
+#searchList = ['GMO','Genetically Modified Organism','Transgenic','Vaccine']
 
 #set filePath below to specify where the text Data is located on your machine
-FileLocation = 'WCP/code/data_files/'
 
 #if you're switchign computers you can use this to indicate a second location to use if the first doesn't exist
 import os
-if not os.path.exists(FileLocation):
-   FileLocaton = 'textAnalyze/'
+fileLocation = os.getcwd()#'AAB_files/Pat-files/WCP/code/Data_Files'
 
+#if not os.path.exists(fileLocation):
+#   fileLocaton = 'RESEARCH/Pat_Projects/textAnalyze/'
+if not os.path.exists(fileLocation):
+    file_ops = str('mkdir ')+str(fileLocation)
+    os.system(file_ops)
+os.chdir(fileLocation)
 ##once the above is set you can run the code!
 
 
@@ -39,7 +44,6 @@ from io import StringIO
 #from StringIO import StringIO
 from fake_useragent import UserAgent
 ua = UserAgent()
-    
 
 import pdfminer
 from pdfminer.pdfparser import PDFParser
@@ -59,6 +63,8 @@ interpreter = PDFPageInterpreter(rsrcmgr, device)
 #########################################################################
 #start code
 #for s in range(0,len(searchList)) :
+
+#import os
 for s,category in enumerate(searchList):
 
 
@@ -67,30 +73,64 @@ for s,category in enumerate(searchList):
 
     print (" "); print ("###############################################")
     print (" "); print(category);  print (" "); print ("######(#########################################")
-
+    print(str(fileLocation) + str('/') + str(category) )
+    if not os.path.exists(str(fileLocation) + str('/') + str(category)):
+        location = str(fileLocation + str('/') + str(category))
+        os.makedirs(location)
+        print(location)
+    os.chdir(fileLocation + str('/') + str(category))
     #set path for saving, and make the folder to save if it doesn't already exist
-    directory = FileLocation + str(category)
-    if not os.path.exists(directory):
-        os.makedirs(directory)
-   
+    #os.chdir(fileLocation + str(category) +'/')
+    #if not os.path.exists(directory):
+    #    os.makedirs(directory)
+    print(os.getcwd())
 
-    web = ["google_","gScholar_","bing_","yahoo_"]
+
+    web = ["bing_","yahoo_","google_","gScholar_"]
     for b, searchName in enumerate(web):
         #set scrape parameters
-	print(searchName)
+        print(searchName)
+
+        #set scrape parameters
+        print(" ")
+        if b == 0:
+            searchName = "bing_" #input name for text file
+
+            #searchName = "google_" #input name for text file
+            print ("Google")
+
+        elif b == 1:
+            searchName = "bing_" #input name for text file
+
+            #searchName = "gScholar_" #input name for text file
+            print ("Google Scholar")
+
+        elif b == 2:
+            searchName = "bing_" #input name for text file
+
+            print ("Bing")
+
+        elif b == 3:
+            searchName = "bing_" #input name for text file
+
+            #searchName = "yahoo_" #input name for text file
+            print ("Yahoo")
+
         #open text file
         filename = searchName + category + '.txt' #text file name that will list and save all URLs
+        print(filename)
+        #import pdb; pdb.set_trace()
         infile = open(filename, 'r')
-        URL = infile.readlines()
-
+        import pickle
+        URL = pickle.load(infile)
+        #URL = infile.readlines()
+        print(URL)
         for u in range(0,numURLs) :
-
             url = URL[u]
-            print(""); print("-------------"); print ("URL " + str(u+1) + " of " + str(numURLs));
-            print ("Link to crawl: " + url); print ("");
-            print ("Linked crawled:)")
-                   
-
+            print("\n"); print("-------------"); print ("URL " + str(u+1) + str(" of ") + str(numURLs));
+            print ("Link to crawl: " + url);
+            print ("\n");
+            print ("Linked crawled:")
             #request content from URL
             headers = {'User-Agent': str(ua.chrome)}
             r  = requests.get(url, headers=headers)
@@ -102,10 +142,10 @@ for s,category in enumerate(searchList):
             pageURLs = {}
             baseURLtemp = {}
             baseURL = {}
-
             #retrieve base URL for use below in concatenating internal links
             baseURLtemp= urlparse(url)
             baseURL = str(baseURLtemp[0] + "://" + baseURLtemp[1])
+
 
             #initialize dataArray
             urlDat = {}
@@ -124,8 +164,6 @@ for s,category in enumerate(searchList):
             urlDat[13,1] = "Link scraped"
 
             #crawl through n number of links for each URL
-            #linkcount += 1
-
             for linkcount, link in enumerate(soup.find_all('a')):
                 if linkcount < linkstoget:
                     time.sleep(randint(1,2)) #short (random) wait to prevent overloading a website or having the call blocked
@@ -170,46 +208,47 @@ for s,category in enumerate(searchList):
 
                     #if not a PDF link
                     except:
-                       #establish human agent header
-                       headers = {'User-Agent': str(ua.chrome)}
+                        #establish human agent header
+                        headers = {'User-Agent': str(ua.chrome)}
 
-                       #request website data using beautiful soup
-                       r = requests.get(urlDat[13,linkcount+2], headers=headers)
-                       soup = BeautifulSoup(r.content, 'html.parser')
+                        #request website data using beautiful soup
+                        r = requests.get(urlDat[13,linkcount+2], headers=headers)
+                        soup = BeautifulSoup(r.content, 'html.parser')
 
-                       #strip HTML
-                       for script in soup(["script", "style"]):
+                        #strip HTML
+                        for script in soup(["script", "style"]):
                                script.extract()    # rip it out
 
-                       # get text
-                       text = soup.get_text()
+                        # get text
+                        text = soup.get_text()
 
-                       #organize text
-                       lines = (line.strip() for line in text.splitlines())  # break into lines and remove leading and trailing space on each
-                       chunks = (phrase.strip() for line in lines for phrase in line.split("  ")) # break multi-headlines into a line each
-                       text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines
-                       url_text = text.encode('ascii','ignore')
+                        #organize text
+                        lines = (line.strip() for line in text.splitlines())  # break into lines and remove leading and trailing space on each
+                        chunks = (phrase.strip() for line in lines for phrase in line.split("  ")) # break multi-headlines into a line each
+                        text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines
+                        url_text = text.encode('ascii','ignore')
 
-                    #perform a subset of the text analysis
-                    urlDat[2,linkcount+2] = textstat.lexicon_count(str(url_text))
-                    urlDat[3,linkcount+2]  = textstat.flesch_kincaid_grade(str(url_text))
-                    urlDat[4,linkcount+2] = textstat.flesch_reading_ease(str(url_text))
-                    urlDat[5,linkcount+2]  = textstat.smog_index(str(url_text))
-                    urlDat[6,linkcount+2]  = textstat.coleman_liau_index(str(url_text))
-                    urlDat[7,linkcount+2]  = textstat.automated_readability_index(str(url_text))
-                    urlDat[8,linkcount+2] = textstat.gunning_fog(str(url_text))
-                    urlDat[9,linkcount+2]  = textstat.dale_chall_readability_score(str(url_text))
-                    urlDat[10,linkcount+2]  = textstat.difficult_words(str(url_text))
-                    urlDat[11,linkcount+2]  = textstat.linsear_write_formula(str(url_text))
-                    urlDat[12,linkcount+2]  = textstat.text_standard(str(url_text))
-	            #counter not 
-		    #required since 
-		    #counting function is implied 
-		    # by enumerate.
+                        #perform a subset of the text analysis
+                        urlDat[2,linkcount+2] = textstat.lexicon_count(str(url_text))
+                        urlDat[3,linkcount+2]  = textstat.flesch_kincaid_grade(str(url_text))
+                        urlDat[4,linkcount+2] = textstat.flesch_reading_ease(str(url_text))
+                        urlDat[5,linkcount+2]  = textstat.smog_index(str(url_text))
+                        urlDat[6,linkcount+2]  = textstat.coleman_liau_index(str(url_text))
+                        urlDat[7,linkcount+2]  = textstat.automated_readability_index(str(url_text))
+                        urlDat[8,linkcount+2] = textstat.gunning_fog(str(url_text))
+                        urlDat[9,linkcount+2]  = textstat.dale_chall_readability_score(str(url_text))
+                        urlDat[10,linkcount+2]  = textstat.difficult_words(str(url_text))
+                        urlDat[11,linkcount+2]  = textstat.linsear_write_formula(str(url_text))
+                        urlDat[12,linkcount+2]  = textstat.text_standard(str(url_text))
+
                     #linkcount += 1
 
             ##generate a .mat file for further analysis in matlab
-            urlDat = urlDat.items()
+			#
+			# Bug fix
+			#
+
+            urlDat = list(urlDat.items())
             if b == 0 and u == 0:
                obj_arr = np.array([urlDat], dtype=object)
             else:

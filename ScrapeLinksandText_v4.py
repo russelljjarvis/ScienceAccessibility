@@ -1,5 +1,5 @@
 ##set parameters - THESE ARE ALL USER DEFINED
-web = 2 #how many search engines to include (4 possible- google google scholar bing yahoo)
+web = 4 #how many search engines to include (4 possible- google google scholar bing yahoo)
 linkstoget = 50 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
 
 #search terms of interest
@@ -11,7 +11,7 @@ import os
 
 
 #filepath for creating/saving the text files
-FileLocation = 'AAB_files/Pat-files/WCP/code/Data Files/'
+fileLocation = 'AAB_files/Pat-files/WCP/code/Data_Files/'
 
 #if you're switchign computers you can use this to indicate a second location to use if the first doesn't exist
 import os
@@ -202,19 +202,12 @@ for x,category in enumerate(searchList):
                         linkcount +=0
 
                     else:
-                        #if  URL directs to a PDF it requires special coding to pull characters
-                        try:
-                            import urllib3.request
-                            with urllib3.request.urlopen(strlink) as url:
-                                pdf_file = url.read()
-                                import pdb
-                                pdb.set_trace()
-                                #I'm guessing this would output the html source code?
-                                #print(s)
-                                #pdf_file = urllib3.urlopen(Request(strlink)).read()
-                            memoryFile = StringIO(pdf_file)
-                            parser = PDFParser(memoryFile)
-                            document = PDFDocument(parser)
+                       #if  URL directs to a PDF it requires special coding to pull characters
+                       try:
+                          pdf_file = urllib3.urlopen(Request(strlink)).read()
+                          memoryFile = StringIO(pdf_file)
+                          parser = PDFParser(memoryFile)
+                          document = PDFDocument(parser)
 
                             #Process all pages in the document
                             for page in PDFPage.create_pages(document):

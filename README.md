@@ -17,4 +17,11 @@ type ```wcp``` until the prompt says 'jovyan' then you are in the container (fas
 Then inside container run ```ipython -i ScrapeLinksandText_v5.py``` and then ```ipython -i tAnalysis.py```
 Or I can do it on your computer when you are free next.
 
+To install octave (MATLAB by FOSS), use the command inside docker container:
+```sudo bash install_octave.sh```
 
+To run both Scrape_links_and_text_etc.py and tAnalysis.py
+
+Run:
+
+``` ipython -i run_all.py ```

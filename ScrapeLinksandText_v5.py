@@ -94,7 +94,25 @@ from textstat.textstat import textstat
 ##########################################################################
 #start code
 
+def check_for_self_referencing(list_of_links):
+   from urllib.parse import urlparse
+   print(list_of_links[0])
+   print(list_of_links[0].get_attribute("href"))
+
+   baseURLtemp= urlparse(list_of_links[0].get_attribute("href"))
+   #  baseURL = str(baseURLtemp[0] + "://" + baseURLtemp[1])
+   baseURL = str(baseURLtemp[0] + "://" + baseURLtemp[1])
+   for i in list_of_links[1:-1]:
+       if baseURL in i:
+           print(baseURL,i)
+           print('internal link')
+       if baseURL not in i:
+           print(baseURL,i)
+           print('external link')
+   return list_of_links
+
 def contents_to_file(strlink):
+
    if 'pdf' in strlink:
        pdf_file = str(urllib.request.urlopen(strlink).read())
        assert type(pdf_file) is type(str)
@@ -248,7 +266,7 @@ for x in range(0,len(searchList)) :
                 strings_to_process.append(linko)
                 print(strlink)
             print("\nchecking: " + pagestring + "\n")
-
+        check_for_self_referencing(linkChecker)
         map(contents_to_file,strings_to_process)
 
 driver.close() #close the driver

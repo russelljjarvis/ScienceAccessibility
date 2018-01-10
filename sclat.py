@@ -100,6 +100,7 @@ def check_for_self_referencing(list_of_links):
    return list_of_links
 
 def contents_to_file(strlink):
+   #import pdb; pdb.set_trace()
 
    if 'pdf' in strlink:
        pdf_file = str(urllib.request.urlopen(strlink).read())
@@ -111,44 +112,50 @@ def contents_to_file(strlink):
        # Process all pages in the document
        for page in PDFPage.create_pages(document):
            interpreter.process_page(page)
-           write_text =  retstr.getvalue()
+           write_text +=  retstr.getvalue()
+
+
+       str_text = str(write_text)
+       fileName = searchName + ".p" #create text file save name
+       print(fileName, 'filename')
+       #try:
+       print(type(str_text))
+       f = open(fileName, 'wb')
+       ts = datetime.now()
+       st = datetime.datetime.fromtimestamp(ts).strftime('%m/%d/%Y_%H:%M:%S')
+       pickle.dump([st, str_text],f)
 
    else:
       #establish human agent header
       headers = {'User-Agent': str(ua.chrome)}
-      try:
-      #request website data using beautiful soup
-          r = requests.get(strlink, headers=headers)
-          soup = BeautifulSoup(r.content, 'html.parser')
-
-          #strip HTML
-          for script in soup(["script", "style"]):
-                  script.extract()    # rip it out
-
-          # get text
-          text = soup.get_text()
-
-          #organize text
-          lines = (line.strip() for line in text.splitlines())  # break into lines and remove leading and trailing space on each
-          chunks = (phrase.strip() for line in lines for phrase in line.split("  ")) # break multi-headlines into a line each
-          text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines
-          str_text = str(text)
-      except:
-          print('reaches exception one')
-
-      #write_text = text.encode('ascii','ignore')
       #try:
-      #write contents to file - individual text file for each URL's scraped text
-      fileName = searchName  + str(linkcount) + ".p" #create text file save name
-      print(fileName, 'filename')
-      try:
-           print(type(str_text))
+      #request website data using beautiful soup
+      r = requests.get(strlink, headers=headers)
+      soup = BeautifulSoup(r.content, 'html.parser')
 
-           f = open(fileName, 'wb')
-           st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
-           pickle.dump([st, str_text],f)
-      except:
-          print('reaches exception two')
+      #strip HTML
+      for script in soup(["script", "style"]):
+              script.extract()    # rip it out
+
+      # get text
+      text = soup.get_text()
+
+      #organize text
+      lines = (line.strip() for line in text.splitlines())  # break into lines and remove leading and trailing space on each
+      chunks = (phrase.strip() for line in lines for phrase in line.split("  ")) # break multi-headlines into a line each
+      text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines
+      str_text = str(text)
+
+      fileName = searchName + ".p" #create text file save name
+      print(fileName, 'filename')
+      #try:
+      print(type(str_text))
+
+      f = open(fileName, 'wb')
+      st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
+      pickle.dump([st, str_text],f)
+   return None
+
 
 
 for x, category in enumerate(searchList):
@@ -187,9 +194,9 @@ for x, category in enumerate(searchList):
             strings_to_process = []
             for linko in linkChecker:
                 strlink = linko.get_attribute("href")
-                strings_to_process.append(linko)
+                strings_to_process.append(strlink)
                 print(strlink)
-            print("\nchecking: " + pagestring + "\n")
+            #print("\nchecking: " + pagestring + "\n")
 
 
         elif b == 1:
@@ -209,9 +216,9 @@ for x, category in enumerate(searchList):
             strings_to_process = []
             for linko in linkChecker:
                 strlink = linko.get_attribute("href")
-                strings_to_process.append(linko)
+                strings_to_process.append(strlink)
                 print(strlink)
-            print("\nchecking: " + pagestring + "\n")
+            #print("\nchecking: " + pagestring + "\n")
             print("Google Scholar")
 
 
@@ -221,7 +228,7 @@ for x, category in enumerate(searchList):
             searchName = "bing_" #output name for text file
             linkName = "https://www.bing.com/search?num=100&filter=0&first=" #search engine web address
             pagestring = linkName + "&q=" + categoryquery # googles
-            print("Google")
+            #print("Google")
             driver.get(pagestring)
             continue_link = driver.find_element_by_tag_name('a')
             elem = None
@@ -234,9 +241,9 @@ for x, category in enumerate(searchList):
             strings_to_process = []
             for linko in linkChecker:
                 strlink = linko.get_attribute("href")
-                strings_to_process.append(linko)
+                strings_to_process.append(strlink)
                 print(strlink)
-            print("\nchecking: " + pagestring + "\n")
+            #print("\nchecking: " + pagestring + "\n")
             print("Bing")
 
 
@@ -254,9 +261,9 @@ for x, category in enumerate(searchList):
             strings_to_process = []
             for linko in linkChecker:
                 strlink = linko.get_attribute("href")
-                strings_to_process.append(linko)
+                strings_to_process.append(strlink)
                 print(strlink)
-            print("\nchecking: " + pagestring + "\n")
-        map(contents_to_file,strings_to_process)
+
+        null = list(map(contents_to_file,strings_to_process))
 
 driver.close() #close the driver

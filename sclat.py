@@ -100,8 +100,8 @@ def check_for_self_referencing(list_of_links):
    return list_of_links
 
 def contents_to_file(contents):
-   print(strlink, ' pacifier')
    incrementor, strlink = contents
+   print(strlink,incrementor, ' pacifier')
 
    if 'pdf' in strlink:
        pdf_file = str(urllib.request.urlopen(strlink).read())

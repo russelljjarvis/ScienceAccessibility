@@ -4,35 +4,23 @@ linkstoget = 50 #number of links to pull from each search engine (this can be an
 
 #search terms of interest
 searchList = ['GMO','Genetically Modified Organism','Vaccine','Transgenic']
-#searchList = ['GMO','Genetically Modified Organism'] #set to whatever, but broken up as to not overload the search
-#searchList  = ['Vaccine','Transgenic'] #set to whatever, but broken up as to not overload the search
 import sys
 import os
 
 
-#filepath for creating/saving the text files
-#FileLocation = '/Users/PMcG/Dropbox (ASU)/AAB_files/Pat-files/WCP/code/Data Files/'
 FileLocation = os.getcwd()+str('/')
 #if you're switchign computers you can use this to indicate a second location to use if the first doesn't exist
 import os
 #if not os.path.exists(FileLocation):
-#   FileLocaton = 'D:/Dropbox (ASU)/RESEARCH/Pat_Projects/textAnalyze/'
-
 #import web driver file to access chrome and establish a user-agent code
 import selenium
-#from selenium import webdriver
 
 from pyvirtualdisplay import Display
 from selenium import webdriver
 import os
 import pickle
-#import time
+import time
 import datetime
-
-
-#driver = webdriver.Chrome(os.getcwd())#'/Users/PMcG/Documents/python packages/chromedriver')
-#download driver here: https://sites.google.com/a/chromium.org/chromedriver/downloads
-#if you experience an error using driver.get() below make sure chromedriver is up to date
 
 display = Display(visible=0, size=(1024, 768))
 display.start()
@@ -124,9 +112,7 @@ def contents_to_file(strlink):
        for page in PDFPage.create_pages(document):
            interpreter.process_page(page)
            write_text =  retstr.getvalue()
-       #except:
-        #   print('give up on pdf')
-   #if not a PDF link
+
    else:
       #establish human agent header
       headers = {'User-Agent': str(ua.chrome)}
@@ -266,110 +252,6 @@ for x in range(0,len(searchList)) :
                 strings_to_process.append(linko)
                 print(strlink)
             print("\nchecking: " + pagestring + "\n")
-        check_for_self_referencing(linkChecker)
         map(contents_to_file,strings_to_process)
 
 driver.close() #close the driver
-
-
-
-
-
-'''
-while linkcount < linkstoget and checkflag:
-    time.sleep(randint(1,2)) #short (random) wait to prevent google from blocking the call
-
-    #finish each web address link in the correct way depending on the search engine
-
-
-
-
-    for linko in linkChecker:
-        if linkcount < linkstoget:
-            strlink = ""
-            try:
-                # print link to text
-                strlink = linko.get_attribute("href")
-            except:
-                print("fail")
-
-            #sometimes bing pulls in weird ads with the href tag. this ignores those and doesn't count them against the link count
-            if 'r.bat' in strlink or 'r.msn' in strlink or 'www.bing.com/news/search' in strlink:
-               linkcount +=0
-
-            else:
-               linkcount += 1
-               print(str(linkcount) + ". " + str(strlink)) #this is the actual link
-
-               #write the link to the text file containing all URLs
-               outfile.write("%s\n" % (strlink))
-               import urllib.request
-
-               #if the URL directs to a PDF it requires special coding to pull characters
-               if 'pdf' in strlink:
-                   ##pdf_file = requests.get(strlink)
-                   #pdf_file = urllib2.urlopen(Request(strlink)).read()
-
-                   #  try:
-                   pdf_file = str(urllib.request.urlopen(strlink).read())
-                   #print(pdf_file)
-                   #import pdb; pdb.set_trace()
-                   assert type(pdf_file) is type(str)
-                   memoryFile = StringIO(pdf_file)
-                   parser = PDFParser(memoryFile)
-                   document = PDFDocument(parser)
-
-                   # Process all pages in the document
-                   for page in PDFPage.create_pages(document):
-                       interpreter.process_page(page)
-                       write_text =  retstr.getvalue()
-                   #except:
-                    #   print('give up on pdf')
-               #if not a PDF link
-               else:
-                  #establish human agent header
-                  headers = {'User-Agent': str(ua.chrome)}
-                  try:
-                  #request website data using beautiful soup
-                      r = requests.get(strlink, headers=headers)
-                      soup = BeautifulSoup(r.content, 'html.parser')
-
-                      #strip HTML
-                      for script in soup(["script", "style"]):
-                              script.extract()    # rip it out
-
-                      # get text
-                      text = soup.get_text()
-
-                      #organize text
-                      lines = (line.strip() for line in text.splitlines())  # break into lines and remove leading and trailing space on each
-                      chunks = (phrase.strip() for line in lines for phrase in line.split("  ")) # break multi-headlines into a line each
-                      text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines
-                      str_text = str(text)
-                  except:
-                      print(None)
-
-                  #write_text = text.encode('ascii','ignore')
-                  #try:
-                  #write contents to file - individual text file for each URL's scraped text
-                  fileName = searchName  + str(linkcount) + ".p" #create text file save name
-                  print(fileName, 'filename')
-                  try:
-                       print(type(str_text))
-
-                       f = open(fileName, 'wb')
-                       #f.write(str(write_text))
-                       pickle.dump(str_text,f)
-                  except:
-                       print(None)
-                   #f.close()
-                   #f = None
-
-    if prevlinkcount == linkcount:
-        checkflag = 0
-    else:
-        prevlinkcount = linkcount
-
-outfile.close() #close the text file containing list of URLs per search engine
-'''
-#close chrome after looping through the various search engines

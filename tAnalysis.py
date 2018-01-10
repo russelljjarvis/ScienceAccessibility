@@ -87,8 +87,8 @@ for s, value in enumerate(searchList):
     print ("Term {0} of {1} : {2}".format(s+1 , str(len(searchList)), value))
     print (" ")
     print ("###############################################")
-    #web = [ "google_","gScholar_","bing_","yahoo_" ]
-    web = [ "bing_"]
+    web = [ "google_","gScholar_","bing_","yahoo_" ]
+    #web = [ "bing_"]
     # Note for long term code maintaince it will be better to flatten the
     # Iterator, as below by building the iterator first in a list comprehension
     # The idea is multilayered nested clauses leads to more bugs.
@@ -108,11 +108,16 @@ for s, value in enumerate(searchList):
             textName = "yahoo_"
             print ("Yahoo")
 
-        for p in range(0,numURLs) :
+        #import pdb; pdb.set_trace()
+        import glob
+        #list_of_files = glob.glob(r'textName*.p')
+        list_of_files = glob.glob(str(textName)+r'*.p')
+        for p,fileName in enumerate(list_of_files):
             print ("-------------------------------------------")
-            print ("Analyzing Search Engine " + str(b+1) + " of " + str(web) + ": Link " + str(p+1)); print ("");
+            print ("Analyzing Search Engine " + str(b+1) + " of " + str(web) + ": Link " + str(p)); print ("");
             #open and read text q
-            fileName = '{0}{1}.p'.format(textName,p+1)
+
+            #fileName = l#'{0}{1}.p'.format(textName,p+1)
             print(fileName)
             import pickle
 

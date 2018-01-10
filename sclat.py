@@ -3,12 +3,12 @@ web = 4 #how many search engines to include (4 possible- google google scholar b
 linkstoget = 50 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
 
 #search terms of interest
-searchList = ['GMO','Genetically Modified Organism','Vaccine','Transgenic']
+searchList = ['GMO','Genetically_Modified_Organism','Vaccine','Transgenic']
 import sys
 import os
 
 
-FileLocation = os.getcwd()+str('/')
+fileLocation = os.getcwd()#+str('/')
 #if you're switchign computers you can use this to indicate a second location to use if the first doesn't exist
 import os
 #if not os.path.exists(FileLocation):
@@ -151,18 +151,23 @@ def contents_to_file(strlink):
           print('reaches exception two')
 
 
-for x in range(0,len(searchList)) :
+for x, category in enumerate(searchList):
     #define the search term
-    category = searchList[x]
+    #category = sl
     print(" "); print("###############################################")
     print(" "); print(category);  print(" "); print("###############################################")
     categoryquery = category.replace(' ',"+")
     #set path for saving, and make the folder to save if it doesn't already exist
-    path = FileLocation + str(category) +'/'
+    path = fileLocation + '/' +  str(category) +'/'
     if not os.path.exists(path):
         os.makedirs(path)
-    os.chdir(FileLocation + str(category) +'/')
-    for b in range(0,web) :
+    os.chdir(fileLocation + '/' +  str(category) +'/')
+    '''
+    if not os.path.exists(str(fileLocation) + '/' + str(value) +'/'):
+        os.makedirs(str(fileLocation) + '/' + str(value) +'/')
+    os.chdir(fileLocation +str('/') + str(value) +'/')
+    '''
+    for b in range(0,web):
         time.sleep(randint(1,2)) #shor
 
         print(" ")

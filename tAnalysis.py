@@ -54,15 +54,16 @@ from textstat.textstat import textstat
 import time
 from tabulate import tabulate
 from textblob import TextBlob
+
+import glob
+
 ########################################################################
 
-searchList = ['GMO','Genetically Modified Organism','Transgenic','Vaccine']
+searchList = ['GMO','Genetically_Modified_Organism','Transgenic','Vaccine']
 
 for s, value in enumerate(searchList):
-    #set filepath where data is saved
-    if not os.path.exists(fileLocation + str(value) +'/'):
-        files = str('mkdir ')+str(fileLocation + str(value) +'/')
-        os.system(files)
+    if not os.path.exists(str(fileLocation) + '/' + str(value) +'/'):
+        os.makedirs(str(fileLocation) + '/' + str(value) +'/')
     os.chdir(fileLocation +str('/') + str(value) +'/')
 
     ##start analysis code
@@ -94,7 +95,6 @@ for s, value in enumerate(searchList):
             print ("Yahoo")
 
         #import pdb; pdb.set_trace()
-        import glob
         #list_of_files = glob.glob(r'textName*.p')
         list_of_files = glob.glob(str(textName)+r'*.p')
         for p,fileName in enumerate(list_of_files):
@@ -113,7 +113,9 @@ for s, value in enumerate(searchList):
                 url_text = [1]
             else:
 
-                url_text = file_contents#fileHandle.read()
+                url_text = file_contents
+            print(url_text)
+                #fileHandle.read()
             #fileHandle.close()
             #url_text = url_text.decode('ascii','ignore')
 

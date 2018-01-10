@@ -199,62 +199,68 @@ for x,category in enumerate(searchList):
 
                     #sometimes bing pulls in weird ads with the href tag. this ignores those and doesn't count them against the link count
                     if 'r.bat' in strlink or 'r.msn' in strlink or 'www.bing.com/news/search' in strlink:
-                       linkcount +=0
+                        linkcount +=0
 
                     else:
-                       #if  URL directs to a PDF it requires special coding to pull characters
-                       try:
-                          pdf_file = urllib3.urlopen(Request(strlink)).read()
-                          memoryFile = StringIO(pdf_file)
-                          parser = PDFParser(memoryFile)
-                          document = PDFDocument(parser)
+                        #if  URL directs to a PDF it requires special coding to pull characters
+                        try:
+                            import urllib3.request
+                            with urllib3.request.urlopen(strlink) as url:
+                                pdf_file = url.read()
+                                import pdb
+                                pdb.set_trace()
+                                #I'm guessing this would output the html source code?
+                                #print(s)
+                                #pdf_file = urllib3.urlopen(Request(strlink)).read()
+                            memoryFile = StringIO(pdf_file)
+                            parser = PDFParser(memoryFile)
+                            document = PDFDocument(parser)
 
-                          #Process all pages in the document
-                          for page in PDFPage.create_pages(document):
-                             interpreter.process_page(page)
-                             write_text =  retstr.getvalue()
+                            #Process all pages in the document
+                            for page in PDFPage.create_pages(document):
+                                interpreter.process_page(page)
+                                write_text =  retstr.getvalue()
 
-                       #if not a PDF link try fails the exception treats it like a non-PDF document
-                       except:
-                          #establish human agent header
-                          headers = {'User-Agent': str(ua.chrome)}
+                        #if not a PDF link try fails the exception treats it like a non-PDF document
+                        except:
+                            #establish human agent header
+                            headers = {'User-Agent': str(ua.chrome)}
 
-                          #request website data using beautiful soup
-                          r = requests.get(strlink, headers=headers)
-                          soup = BeautifulSoup(r.content, 'html.parser')
+                            #request website data using beautiful soup
+                            r = requests.get(strlink, headers=headers)
+                            soup = BeautifulSoup(r.content, 'html.parser')
 
-                          #strip HTML
-                          for script in soup(["script", "style"]):
+                            #strip HTML
+                            for script in soup(["script", "style"]):
                                   script.extract()    # rip it out
 
-                          # get text
-                          text = soup.get_text()
+                            # get text
+                            text = soup.get_text()
 
-                          #organize text
-                          lines = (line.strip() for line in text.splitlines())  # break into lines and remove leading and trailing space on each
-                          chunks = (phrase.strip() for line in lines for phrase in line.split("  ")) # break multi-headlines into a line each
-                          text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines
-                          write_text = text.encode('ascii','ignore')
+                            #organize text
+                            lines = (line.strip() for line in text.splitlines())  # break int o lines and remove leading and trailing space on each
+                            chunks = (phrase.strip() for line in lines for phrase in line.split ("  ")) # break multi-headlines into a line each
+                            text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lin es
+                            write_text = text.encode('ascii','ignore')
+                            #check to see if there is text after scraping the web address
+                            if textstat.lexicon_count(str(write_text)) < 20:
+                                #if there is no text after scraping the web address then skip this link (i.e. don't save it). Some of the above scraping code simply doesn't catch the text due to site parameters
+                                linkcount += 0
 
-                       #check to see if there is text after scraping the web address
-                       if textstat.lexicon_count(str(write_text)) < 20:
-                          #if there is no text after scraping the web address then skip this link (i.e. don't save it). Some of the above scraping code simply doesn't catch the text due to site parameters
-                          linkcount += 0
+                        else:
+                            #if there is text, print the URL & save the URL/text to file for further analysis
+                            linkcount += 1
+                            #print the link to the command window
+                            print (str(linkcount) + ". " + str(strlink)) #this is the actual link
 
-                       else:
-                          #if there is text, print the URL & save the URL/text to file for further analysis
-                          linkcount += 1
-                         #print the link to the command window
-                          print (str(linkcount) + ". " + str(strlink)) #this is the actual link
+                            #write the link to the text file containing all URLs
+                            outfile.write("%s\n" % (strlink))
 
-                          #write the link to the text file containing all URLs
-                          outfile.write("%s\n" % (strlink))
-
-                          #write contents to individual textfile
-                          fileName = searchName  + str(linkcount) + ".txt"
-                          f = open(fileName, 'w')
-                          f.write(str(write_text))
-                          f.close()
+                            #write contents to individual textfile
+                            fileName = searchName  + str(linkcount) + ".txt"
+                            f = open(fileName, 'w')
+                            f.write(str(write_text))
+                            f.close()
 
             if prevlinkcount == linkcount:
                 checkflag = 0

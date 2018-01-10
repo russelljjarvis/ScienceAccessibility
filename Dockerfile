@@ -95,6 +95,8 @@ RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.16.1/geckod
 RUN sudo sh -c 'tar -x geckodriver -zf geckodriver-v0.16.1-linux64.tar.gz -O > /usr/bin/geckodriver'
 RUN sudo chmod +x /usr/bin/geckodriver
 RUN rm geckodriver-v0.16.1-linux64.tar.gz
-RUN sudo apt-get upgrade -y firefox
+#RUN sudo apt-get update
+#RUN sudo apt-get install firefox
+#RUN sudo apt-get upgrade -y firefox
 RUN sudo /opt/conda/bin/pip install pyvirtualdisplay
 RUN sudo /opt/conda/bin/pip install fake_useragent

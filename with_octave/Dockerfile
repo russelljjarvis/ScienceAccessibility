@@ -1,4 +1,5 @@
-from slc
+#from slc
+from wcproject
 USER root
 
 RUN apt-get update

@@ -96,7 +96,10 @@ for s, value in enumerate(searchList):
 
         #import pdb; pdb.set_trace()
         #list_of_files = glob.glob(r'textName*.p')
-        list_of_files = glob.glob(str(textName)+r'*.p')
+        list_of_files = sort(glob.glob(str(textName)+r'*.p'))
+        if len(list_of_files) > 50:
+            list_of_files =  sort(list_of_files[0:50])
+
         for p,fileName in enumerate(list_of_files):
             print ("-------------------------------------------")
             print ("Analyzing Search Engine " + str(b+1) + " of " + str(web) + ": Link " + str(p)); print ("");

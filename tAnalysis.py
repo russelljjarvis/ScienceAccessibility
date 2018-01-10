@@ -277,13 +277,12 @@ for s, value in enumerate(searchList):
                os.makedirs(path)
                #os.chdir(FileLocation + str(category) +'/')
 
-            with open(str(str('textData_/')+searchList[s]) + '.mat','wb') as handle:
-                #print(type(obj_arr))
-                #import pdb
-                #pdb.set_trace()
+            with open(str(str('textData_/')+searchList[s]) + '.p','wb') as handle:
                 print(handle)
                 pickle.dump(list(obj_arr),handle)
-                sio.savemat(handle, {'obj_arr':obj_arr})
+
+            with open(str(str('textData_/')+searchList[s]) + '.mat','wb') as handle:
+                sio.savemat(handle, {'obj_arr':list(obj_arr)})
             #os.chdir(fileLocation + str(value))
 
             #save

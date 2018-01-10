@@ -13,12 +13,12 @@ def my_fork():
 
     else:
         print("Parent Process: PID# %s" % os.getpid(),'tAnalysis')
-        import tAnalysis
+        import t_analysis
 
 
 if __name__ == "__main__":
     import sclat
-    import tAnalysis
+    import t_analysis
 
     #uncomment my fork to do both modules at the same time.
     #my_fork()

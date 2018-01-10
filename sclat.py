@@ -82,7 +82,7 @@ from textstat.textstat import textstat
 def csr(text,strlink):
    '''
    # This method compares a new link with an old link. We want to know when websites reference themselves (self reference).
-   # One way of doing this is to see if a substring constituted by the referal website (URL basename) can be found in the link string.  
+   # One way of doing this is to see if a substring constituted by the referal website (URL basename) can be found in the link string.
    # inputs: text on referal website (including links):
    # strlink links to external websites (projections)
    # outputs boolean flag
@@ -94,7 +94,7 @@ def csr(text,strlink):
    links = []
    for e in links_from_external_projection:
        links.append(str(e.get_attribute("href")))
-   
+
    from urllib.parse import urlparse
    print(strlink)
    baseURLtemp = urlparse(strlink)
@@ -102,19 +102,19 @@ def csr(text,strlink):
    for l in links:
        if str(baseURL) in str(l):
            return True
-   return False    
-    
+   return False
+
 
 def contents_to_file(contents):
    '''
    visit links if the link expands into HTML, convert to string using Beautiful Soup,
    if it expands to a PDF use appropriate tools to extract string from PDF.
    Write files (pickle), with a time stamp when the file was created.
-   ''' 
+   '''
    incrementor, strlink = contents
    print(strlink,incrementor, ' pacifier')
 
-   
+
    if 'pdf' in strlink:
        pdf_file = str(urllib.request.urlopen(strlink).read())
        assert type(pdf_file) is type(str)
@@ -132,7 +132,7 @@ def contents_to_file(contents):
 
        #flag = csr(strlink,str_text)
        #print(flag, 'self referencing')
-       
+
        fileName = searchName +str(incrementor) + ".p" #create text file save name
        print(fileName, 'filename')
        print(type(str_text))
@@ -196,7 +196,7 @@ for x, category in enumerate(searchList):
         os.makedirs(str(fileLocation) + '/' + str(value) +'/')
     os.chdir(fileLocation +str('/') + str(value) +'/')
     '''
-    for b in range(2,web):
+    for b in range(0,web):
         time.sleep(randint(1,2)) #shor
 
         print(" ")

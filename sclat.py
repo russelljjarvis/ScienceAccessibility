@@ -196,7 +196,7 @@ for x, category in enumerate(searchList):
         os.makedirs(str(fileLocation) + '/' + str(value) +'/')
     os.chdir(fileLocation +str('/') + str(value) +'/')
     '''
-    for b in range(0,web):
+    for b in range(2,web):
         time.sleep(randint(1,2)) #shor
 
         print(" ")

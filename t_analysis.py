@@ -110,7 +110,7 @@ for s, value in enumerate(searchList):
             file_contents = pickle.load(fileHandle)
             if len(file_contents) == 2:
                 date_created = file_contents[0]
-                url_text = [1]
+                url_text = file_contents[1]
             else:
 
                 url_text = file_contents

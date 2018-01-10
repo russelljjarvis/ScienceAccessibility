@@ -114,5 +114,5 @@ WORKDIR $HOME
 COPY ScrapeLinksandText_v4.py .
 COPY URLcrawl_v2.py .
 COPY tAnalysis.py .
-#ENTRYPOINT /bin/bash
-ENTRYPOINT python ScrapeLinksandText_v4.py; python URLcrawl_v2.py; python tAnalysis.py /bin/bash
+ENTRYPOINT /bin/bash
+#ENTRYPOINT python ScrapeLinksandText_v4.py; python URLcrawl_v2.py; python tAnalysis.py /bin/bash

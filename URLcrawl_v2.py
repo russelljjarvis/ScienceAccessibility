@@ -8,10 +8,11 @@ linkstoget = 3 #number of links to crawl through per URL - be careful with this 
 #searchList = ['GMO','Genetically Modified Organism','Transgenic','Vaccine']
 
 #set filePath below to specify where the text Data is located on your machine
-fileLocation = 'AAB_files/Pat-files/WCP/code/Data_Files'
 
 #if you're switchign computers you can use this to indicate a second location to use if the first doesn't exist
 import os
+fileLocation = os.getcwd()#'AAB_files/Pat-files/WCP/code/Data_Files'
+
 #if not os.path.exists(fileLocation):
 #   fileLocaton = 'RESEARCH/Pat_Projects/textAnalyze/'
 if not os.path.exists(fileLocation):
@@ -89,29 +90,41 @@ for s,category in enumerate(searchList):
     for b, searchName in enumerate(web):
         #set scrape parameters
         print(searchName)
-        '''
+
         #set scrape parameters
-        print " "
+        print(" ")
         if b == 0:
-        searchName = "google_" #input name for text file
-        print ("Google")
+            searchName = "bing_" #input name for text file
+
+            #searchName = "google_" #input name for text file
+            print ("Google")
 
         elif b == 1:
-        searchName = "gScholar_" #input name for text file
-        print ("Google Scholar")
+            searchName = "bing_" #input name for text file
+
+            #searchName = "gScholar_" #input name for text file
+            print ("Google Scholar")
 
         elif b == 2:
-        searchName = "bing_" #input name for text file
-        print ("Bing")
+            searchName = "bing_" #input name for text file
+
+            print ("Bing")
 
         elif b == 3:
-        searchName = "yahoo_" #input name for text file
-        print ("Yahoo")
-        '''
+            searchName = "bing_" #input name for text file
+
+            #searchName = "yahoo_" #input name for text file
+            print ("Yahoo")
+
         #open text file
         filename = searchName + category + '.txt' #text file name that will list and save all URLs
+        print(filename)
+        #import pdb; pdb.set_trace()
         infile = open(filename, 'r')
-        URL = infile.readlines()
+        import pickle
+        URL = pickle.load(infile)
+        #URL = infile.readlines()
+        print(URL)
         for u in range(0,numURLs) :
             url = URL[u]
             print("\n"); print("-------------"); print ("URL " + str(u+1) + str(" of ") + str(numURLs));

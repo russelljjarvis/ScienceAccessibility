@@ -148,21 +148,21 @@ for x,category in enumerate(searchList):
             linkCheck2 = "//h2/a" #HTML syntax where links are stored
             print("Bing")
 
-        elif b == 2:
+        if b == 2:
             searchName = "bing_" #output name for text file
             linkName = "https://www.bing.com/search?num=100&filter=0&first=" #search engine web address
             linkCheck1 = "//h2/a" #HTML syntax where links are stored
             linkCheck2 = "//h2/a" #HTML syntax where links are stored
             print("Bing")
 
-        elif b == 3:
+        if b == 3:
             searchName = "yahoo_" #output name for text file
             linkName =  "https://search.yahoo.com/search?p=" #search engine web address
             linkCheck1 = "//a[@class=' ac-algo ac-21th lh-24']" #HTML syntax where links are stored
             linkCheck2 = "//a[@class=' ac-algo ac-21th lh-24']" #HTML syntax where links are stored
             print("Yahoo")
 
-        print("--------------------")
+        print ("--------------------")
         #create a text file with Search term name and open the text file
         ofilename = searchName + category + '.txt' #text file name that will list and save all URLs
         outfile = open(ofilename, 'w')
@@ -185,7 +185,7 @@ for x,category in enumerate(searchList):
             print("\nchecking: " + pagestring + "\n")
             #import pdb
             #pdb.set_trace()
-            driver.get(pagestring)
+            #driver.get(pagestring)
 
 
             #print(driver.page_source)

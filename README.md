@@ -3,7 +3,7 @@
 ## NB: I renamed ScrapeLinks_and_Text.py sclat.py
 
 
-## NB: I renamed TextAnalysis_v3.py tAnalysis.py 
+## NB: I renamed TextAnalysis_v3.py t_analysis.py 
 
 The original versions of the files have been deleted from the most current branch, although they still are accessible on this website, by viewing 'parent commits'
 

@@ -1,7 +1,9 @@
-Scientific readability project
+# Scientific readability project
 
-NB: I renamed ScrapeLinks and Text sclat.py
-NB: I renamed TextAnalysis_v3.py tAnalysis.py 
+## NB: I renamed ScrapeLinks and Text sclat.py
+
+
+## NB: I renamed TextAnalysis_v3.py tAnalysis.py 
 
 The original versions of the files have been deleted from the most current branch, although they still are accessible on this website, by viewing 'parent commits'
 

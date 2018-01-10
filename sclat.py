@@ -26,8 +26,6 @@ display = Display(visible=0, size=(1024, 768))
 display.start()
 
 driver = webdriver.Firefox()
-#driver.get('http://www.ubuntu.com/')
-#driver.quit()
 
 #assumptions made in the code
 #1. any website that returns less than 20 words will not be counted
@@ -83,6 +81,10 @@ from textstat.textstat import textstat
 #start code
 
 def check_for_self_referencing(list_of_links):
+   '''
+   This method compares a new link with an old link. We want to know when websites reference themselves (self reference).
+   One way of doing this is to see if a substring constituted by the referal website (URL basename) can be found in the link string.
+   '''
    from urllib.parse import urlparse
    print(list_of_links[0])
    print(list_of_links[0].get_attribute("href"))
@@ -99,10 +101,32 @@ def check_for_self_referencing(list_of_links):
            print('external link')
    return list_of_links
 
+def csr(text,strlink):
+   '''
+   inputs, text on referal website (including links):
+   strlink links to external websites (projections)
+   '''
+   from urllib.parse import urlparse
+   print(strlink)
+   print(strlink.get_attribute("href"))
+   baseURLtemp= urlparse(strlink.get_attribute("href"))
+   baseURL = str(baseURLtemp[0] + "://" + baseURLtemp[1])
+   if baseURL in text:
+       return True
+   else:
+       return False
+    
+
 def contents_to_file(contents):
+   '''
+   visit links if the link expands into HTML, convert to string using Beautiful Soup,
+   if it expands to a PDF use appropriate tools to extract string from PDF.
+   Write files (pickle), with a time stamp when the file was created.
+   ''' 
    incrementor, strlink = contents
    print(strlink,incrementor, ' pacifier')
 
+   
    if 'pdf' in strlink:
        pdf_file = str(urllib.request.urlopen(strlink).read())
        assert type(pdf_file) is type(str)
@@ -117,17 +141,16 @@ def contents_to_file(contents):
 
 
        str_text = str(write_text)
+
+       flag = csr(strlink,str_text)
+       print(flag, 'self referencing')
+       
        fileName = searchName +str(incrementor) + ".p" #create text file save name
        print(fileName, 'filename')
-       #try:
        print(type(str_text))
        f = open(fileName, 'wb')
-      # ts = datetime.now()
-       #d = datetime.now()
-       #st = str(d.strftime('%m/%d/%Y_%H:%M:%S'))
        from datetime import datetime
        st = datetime.utcnow().strftime('%Y-%m-%d_%H:%M:%S.%f')[:-3]
-
        pickle.dump([st, str_text],f)
 
    else:
@@ -159,10 +182,8 @@ def contents_to_file(contents):
       print(type(str_text))
 
       f = open(fileName, 'wb')
-      #d = datetime.now()
       from datetime import datetime
       st = datetime.utcnow().strftime('%Y-%m-%d_%H:%M:%S.%f')[:-3]
-      #st = str(d.strftime('%m/%d/%Y_%H:%M:%S'))
       pickle.dump([st, str_text],f)
    f = None
    return None
@@ -273,10 +294,10 @@ for x, category in enumerate(searchList):
             for linko in linkChecker:
                 strlink = linko.get_attribute("href")
                 strings_to_process.append(strlink)
-                print(strlink)
+                #print(strlink)
 
-
-        stp = [ (i,j) for i,j in enumerate(strings_to_process) ]
+        # only check the first 50 links : [0,49]
+        stp = [ (i,j) for i,j in enumerate(strings_to_process[0:49]) ]
         null = list(map(contents_to_file,stp))
 
 driver.close() #close the driver

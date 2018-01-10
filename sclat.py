@@ -121,8 +121,12 @@ def contents_to_file(strlink):
        #try:
        print(type(str_text))
        f = open(fileName, 'wb')
-       ts = datetime.now()
-       st = datetime.datetime.fromtimestamp(ts).strftime('%m/%d/%Y_%H:%M:%S')
+      # ts = datetime.now()
+       #d = datetime.now()
+       #st = str(d.strftime('%m/%d/%Y_%H:%M:%S'))
+       from datetime import datetime
+       st = datetime.utcnow().strftime('%Y-%m-%d_%H:%M:%S.%f')[:-3]
+
        pickle.dump([st, str_text],f)
 
    else:
@@ -152,7 +156,10 @@ def contents_to_file(strlink):
       print(type(str_text))
 
       f = open(fileName, 'wb')
-      st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
+      #d = datetime.now()
+      from datetime import datetime
+      st = datetime.utcnow().strftime('%Y-%m-%d_%H:%M:%S.%f')[:-3]
+      #st = str(d.strftime('%m/%d/%Y_%H:%M:%S'))
       pickle.dump([st, str_text],f)
    return None
 

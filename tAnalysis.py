@@ -14,29 +14,14 @@ import sys
 import os
 
 current_dir = os.getcwd()
-
-#searchList = ['GMO','Genetically Modified Organism','Transgenic','Vaccine']
-
 web = 4 #number of search websites being implemented (google, google scholar, bing, yahoo)
 numURLs = 50 #number of URLs per search website  (number determined by 1.scrape code)
 
 #set filePath below to specify where the text Data is located on your machine
 fileLocation = os.getcwd()
-#fileLocation = 'AAB_files/Pat-files/WCP/code/Data_Files/'
 
-#if you're switchign computers you can use this to indicate a second location to use if the first doesn't exist
-'''
-if not os.path.exists(fileLocation):
-   files = str('mkdir ')+str(fileLocation)
-   os.system(files)
-'''
-#path = FileLocation + str(category) +'/'
 if not os.path.exists(fileLocation):
     os.makedirs(fileLocation)
-#os.chdir(FileLocation + str(category) +'/')
-
-
-   #fileLocaton = 'RESEARCH/Pat_Projects/textAnalyze/'
 
 
 ##once the above is set you can run the code!

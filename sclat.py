@@ -78,43 +78,31 @@ except ImportError:
 from textstat.textstat import textstat
 ##########################################################################
 ##########################################################################
-#start code
-
-def check_for_self_referencing(list_of_links):
-   '''
-   This method compares a new link with an old link. We want to know when websites reference themselves (self reference).
-   One way of doing this is to see if a substring constituted by the referal website (URL basename) can be found in the link string.
-   '''
-   from urllib.parse import urlparse
-   print(list_of_links[0])
-   print(list_of_links[0].get_attribute("href"))
-
-   baseURLtemp= urlparse(list_of_links[0].get_attribute("href"))
-   #  baseURL = str(baseURLtemp[0] + "://" + baseURLtemp[1])
-   baseURL = str(baseURLtemp[0] + "://" + baseURLtemp[1])
-   for i in list_of_links[1:-1]:
-       if baseURL in i:
-           print(baseURL,i)
-           print('internal link')
-       if baseURL not in i:
-           print(baseURL,i)
-           print('external link')
-   return list_of_links
 
 def csr(text,strlink):
    '''
-   inputs, text on referal website (including links):
-   strlink links to external websites (projections)
+   # This method compares a new link with an old link. We want to know when websites reference themselves (self reference).
+   # One way of doing this is to see if a substring constituted by the referal website (URL basename) can be found in the link string.  
+   # inputs: text on referal website (including links):
+   # strlink links to external websites (projections)
+   # outputs boolean flag
    '''
+   driver.get(strlink)
+   continue_link = driver.find_element_by_tag_name('a')
+   links_from_external_projection = None
+   links_from_external_projection = driver.find_elements_by_xpath("//*[@href]")
+   links = []
+   for e in links_from_external_projection:
+       links.append(str(e.get_attribute("href")))
+   
    from urllib.parse import urlparse
    print(strlink)
-   print(strlink.get_attribute("href"))
-   baseURLtemp= urlparse(strlink.get_attribute("href"))
+   baseURLtemp = urlparse(strlink)
    baseURL = str(baseURLtemp[0] + "://" + baseURLtemp[1])
-   if baseURL in text:
-       return True
-   else:
-       return False
+   for l in links:
+       if str(baseURL) in str(l):
+           return True
+   return False    
     
 
 def contents_to_file(contents):
@@ -142,8 +130,8 @@ def contents_to_file(contents):
 
        str_text = str(write_text)
 
-       flag = csr(strlink,str_text)
-       print(flag, 'self referencing')
+       #flag = csr(strlink,str_text)
+       #print(flag, 'self referencing')
        
        fileName = searchName +str(incrementor) + ".p" #create text file save name
        print(fileName, 'filename')
@@ -173,6 +161,8 @@ def contents_to_file(contents):
       chunks = (phrase.strip() for line in lines for phrase in line.split("  ")) # break multi-headlines into a line each
       text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines
       str_text = str(text)
+      #flag = csr(strlink,str_text)
+      #print(flag, 'self referencing')
 
       #fileName = searchName + ".p" #create text file save name
       fileName = searchName +str(incrementor) + ".p" #create text file save name

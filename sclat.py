@@ -99,8 +99,9 @@ def check_for_self_referencing(list_of_links):
            print('external link')
    return list_of_links
 
-def contents_to_file(strlink):
-   #import pdb; pdb.set_trace()
+def contents_to_file(contents):
+   print(strlink, ' pacifier')
+   incrementor, strlink = contents
 
    if 'pdf' in strlink:
        pdf_file = str(urllib.request.urlopen(strlink).read())
@@ -116,7 +117,7 @@ def contents_to_file(strlink):
 
 
        str_text = str(write_text)
-       fileName = searchName + ".p" #create text file save name
+       fileName = searchName +str(incrementor) + ".p" #create text file save name
        print(fileName, 'filename')
        #try:
        print(type(str_text))
@@ -150,7 +151,9 @@ def contents_to_file(strlink):
       text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines
       str_text = str(text)
 
-      fileName = searchName + ".p" #create text file save name
+      #fileName = searchName + ".p" #create text file save name
+      fileName = searchName +str(incrementor) + ".p" #create text file save name
+
       print(fileName, 'filename')
       #try:
       print(type(str_text))
@@ -161,6 +164,7 @@ def contents_to_file(strlink):
       st = datetime.utcnow().strftime('%Y-%m-%d_%H:%M:%S.%f')[:-3]
       #st = str(d.strftime('%m/%d/%Y_%H:%M:%S'))
       pickle.dump([st, str_text],f)
+   f = None
    return None
 
 
@@ -271,6 +275,8 @@ for x, category in enumerate(searchList):
                 strings_to_process.append(strlink)
                 print(strlink)
 
-        null = list(map(contents_to_file,strings_to_process))
+
+        stp = [ (i,j) for i,j in enumerate(strings_to_process) ]
+        null = list(map(contents_to_file,stp))
 
 driver.close() #close the driver

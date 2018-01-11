@@ -286,7 +286,7 @@ def scraplandtext(fi):
 
     # only check the first 50 links : [0,49]
     stp = [ (i,j, searchName) for i,j in enumerate(strings_to_process[0:49]) ]
-    Nones = list(map(contents_to_file,stp))
+    _ = list(map(contents_to_file,stp))
     return Nones
 #flat_iter =[ (b,x,category) for b in range(0,web): for x, category in enumerate(searchList) ]
     #define the search term

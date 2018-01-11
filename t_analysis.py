@@ -215,18 +215,21 @@ for s, value in enumerate(searchList):
             #
             ########################################################################
             ## Complexity Analysis
-            urlDat[6,2]  = textstat.flesch_kincaid_grade(str(url_text))
-            urlDat[7,2] = textstat.flesch_reading_ease(str(url_text))
-            urlDat[8,2]  = textstat.smog_index(str(url_text))
-            urlDat[9,2]  = textstat.coleman_liau_index(str(url_text))
-            urlDat[10,2]  = textstat.automated_readability_index(str(url_text))
-            urlDat[11,2] = textstat.gunning_fog(str(url_text))
+            try:
+                assert len(url_text) != 0
+                urlDat[6,2]  = textstat.flesch_kincaid_grade(str(url_text))
+                urlDat[7,2] = textstat.flesch_reading_ease(str(url_text))
+                urlDat[8,2]  = textstat.smog_index(str(url_text))
+                urlDat[9,2]  = textstat.coleman_liau_index(str(url_text))
+                urlDat[10,2]  = textstat.automated_readability_index(str(url_text))
+                urlDat[11,2] = textstat.gunning_fog(str(url_text))
 
-            urlDat[12,2]  = textstat.dale_chall_readability_score(str(url_text))
-            urlDat[13,2]  = textstat.difficult_words(str(url_text))
-            urlDat[14,2]  = textstat.linsear_write_formula(str(url_text))
-            urlDat[15,2]  = textstat.text_standard(str(url_text))
-
+                urlDat[12,2]  = textstat.dale_chall_readability_score(str(url_text))
+                urlDat[13,2]  = textstat.difficult_words(str(url_text))
+                urlDat[14,2]  = textstat.linsear_write_formula(str(url_text))
+                urlDat[15,2]  = textstat.text_standard(str(url_text))
+            except:
+                print('number of words is zero on that link, so analysis will fail')
             ########################################################################
             ##defining part of speech for each word
             wordsPOS = pos_tag([w.lower() for w in URLtext if w.isalpha()])

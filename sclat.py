@@ -116,14 +116,6 @@ def contents_to_file(contents):
    Write files (pickle), with a time stamp when the file was created.
    '''
    incrementor, strlink, searchName = contents
-   print(strlink,incrementor, ' pacifier')
-
-
-   # uncommonet lines below to test out code for removing self referencing websites.
-   # if csr(strlink,str_text) is True:
-   #    return None
-
-
    if 'pdf' in strlink:
        try:
            pdf_file = str(urllib.request.urlopen(strlink).read())

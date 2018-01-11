@@ -289,3 +289,4 @@ for x, category in enumerate(searchList):
         null = list(map(contents_to_file,stp))
 
 driver.close() #close the driver
+exit()

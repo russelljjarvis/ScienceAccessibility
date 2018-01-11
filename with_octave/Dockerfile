@@ -10,4 +10,4 @@ WORKDIR $HOME
 #RUN ipython -i t_analysis.py ;
 #RUN octave crawlAnalysis.m & octave QuantAnalysis_v2.m
 
-ENTRYPOINT ipython -i sclat.py; ipython -i t_analysis.py; octave crawlAnalysis.m & octave QuantAnalysis_v2.m
+ENTRYPOINT ipython sclat.py; ipython t_analysis.py; octave crawlAnalysis.m & octave QuantAnalysis_v2.m

@@ -123,7 +123,7 @@ def contents_to_file(contents):
    if it expands to a PDF use appropriate tools to extract string from PDF.
    Write files (pickle), with a time stamp when the file was created.
    '''
-   incrementor, strlink = contents
+   incrementor, strlink, searchName = contents
    print(strlink,incrementor, ' pacifier')
 
 
@@ -188,9 +188,10 @@ def contents_to_file(contents):
    return None
 
 
+flat_iter = [ (b,x,category) for b in range(0,web) for x, category in enumerate(searchList) ]
 
-for x, category in enumerate(searchList):
-    #define the search term
+def scraplandtext(fi):
+    b,x,category = fi
     print(" "); print("###############################################")
     print(" "); print(category);  print(" "); print("###############################################")
     categoryquery = category.replace(' ',"+")
@@ -199,94 +200,96 @@ for x, category in enumerate(searchList):
     if not os.path.exists(path):
         os.makedirs(path)
     os.chdir(fileLocation + '/' +  str(category) +'/')
-    for b in range(0,web):
-        time.sleep(randint(1,2)) #shor
+    time.sleep(randint(1,2)) #shor
 
-        print(" ")
-        if b == 0:
+    print(" ")
+    if b == 0:
 
-            searchName = "google_" #output name for text file
-            linkName = "https://www.google.com/search?num=100&filter=0&start=" #search engine web address
-            pagestring = linkName + "&q=" + categoryquery # googles
-            print("Google")
-            driver.get(pagestring)
-            continue_link = driver.find_element_by_tag_name('a')
-            elem = None
-            elem = driver.find_elements_by_xpath("//*[@href]")
-            linkChecker = [ e for e in elem if "https://www.google.com/search?" in str(e.get_attribute("href")) ]
+        searchName = "google_" #output name for text file
+        linkName = "https://www.google.com/search?num=100&filter=0&start=" #search engine web address
+        pagestring = linkName + "&q=" + categoryquery # googles
+        print("Google")
+        driver.get(pagestring)
+        continue_link = driver.find_element_by_tag_name('a')
+        elem = None
+        elem = driver.find_elements_by_xpath("//*[@href]")
+        linkChecker = [ e for e in elem if "https://www.google.com/search?" in str(e.get_attribute("href")) ]
 
-            strings_to_process = []
-            for linko in linkChecker:
-                strlink = linko.get_attribute("href")
-                strings_to_process.append(strlink)
-                print(strlink)
-
-
-        elif b == 1:
-
-            searchName = "gScholar_" #output name for text file
-            linkName = "https://scholar.google.com/scholar?hl=en&as_sdt=0%2C3&q="
-
-            pagestring = linkName + "&q=" + categoryquery # googles
-            print("Google")
-            driver.get(pagestring)
-            continue_link = driver.find_element_by_tag_name('a')
-            elem = None
-            elem = driver.find_elements_by_xpath("//*[@href]")
-            linkChecker = []
-            linkChecker = [ e for e in elem if "https://scholar.google.com/scholar?" in str(e.get_attribute("href")) ]
-
-            strings_to_process = []
-            for linko in linkChecker:
-                strlink = linko.get_attribute("href")
-                strings_to_process.append(strlink)
-                print(strlink)
-            print("Google Scholar")
+        strings_to_process = []
+        for linko in linkChecker:
+            strlink = linko.get_attribute("href")
+            strings_to_process.append(strlink)
+            print(strlink)
 
 
+    elif b == 1:
 
-        elif b == 2:
+        searchName = "gScholar_" #output name for text file
+        linkName = "https://scholar.google.com/scholar?hl=en&as_sdt=0%2C3&q="
 
-            searchName = "bing_" #output name for text file
-            linkName = "https://www.bing.com/search?num=100&filter=0&first=" #search engine web address
-            pagestring = linkName + "&q=" + categoryquery # googles
-            driver.get(pagestring)
-            continue_link = driver.find_element_by_tag_name('a')
-            elem = None
-            elem = driver.find_elements_by_xpath("//*[@href]")
-            linkChecker = [ e for e in elem if "https://www.bing.com/search?q=" in str(e.get_attribute("href")) ]
-            linkChecker = [ strlink for strlink in linkChecker if 'r.bat' not in strlink.get_attribute("href") or 'r.msn' \
-             not in strlink.get_attribute("href") or'www.bing.com/news/search' not in strlink.get_attribute("href") ]
+        pagestring = linkName + "&q=" + categoryquery # googles
+        print("Google")
+        driver.get(pagestring)
+        continue_link = driver.find_element_by_tag_name('a')
+        elem = None
+        elem = driver.find_elements_by_xpath("//*[@href]")
+        linkChecker = []
+        linkChecker = [ e for e in elem if "https://scholar.google.com/scholar?" in str(e.get_attribute("href")) ]
 
-            strings_to_process = []
-            for linko in linkChecker:
-                strlink = linko.get_attribute("href")
-                strings_to_process.append(strlink)
-                print(strlink)
-            #print("\nchecking: " + pagestring + "\n")
-            print("Bing")
+        strings_to_process = []
+        for linko in linkChecker:
+            strlink = linko.get_attribute("href")
+            strings_to_process.append(strlink)
+            print(strlink)
+        print("Google Scholar")
 
 
-        elif b == 3:
-            searchName = "yahoo_" #output name for text file
-            linkName =  "https://search.yahoo.com/search?p=" #search engine web address
-            pagestring = linkName + "&q=" + categoryquery # googles
-            print("Google")
-            driver.get(pagestring)
-            continue_link = driver.find_element_by_tag_name('a')
-            elem = None
-            elem = driver.find_elements_by_xpath("//*[@href]")
-            linkChecker = [ e for e in elem if "http://r.search.yahoo.com/_ylt=" in str(e.get_attribute("href")) ]
 
-            strings_to_process = []
-            for linko in linkChecker:
-                strlink = linko.get_attribute("href")
-                strings_to_process.append(strlink)
-                #print(strlink)
+    elif b == 2:
 
-        # only check the first 50 links : [0,49]
-        stp = [ (i,j) for i,j in enumerate(strings_to_process[0:49]) ]
-        null = list(map(contents_to_file,stp))
+        searchName = "bing_" #output name for text file
+        linkName = "https://www.bing.com/search?num=100&filter=0&first=" #search engine web address
+        pagestring = linkName + "&q=" + categoryquery # googles
+        driver.get(pagestring)
+        continue_link = driver.find_element_by_tag_name('a')
+        elem = None
+        elem = driver.find_elements_by_xpath("//*[@href]")
+        linkChecker = [ e for e in elem if "https://www.bing.com/search?q=" in str(e.get_attribute("href")) ]
+        linkChecker = [ strlink for strlink in linkChecker if 'r.bat' not in strlink.get_attribute("href") or 'r.msn' \
+         not in strlink.get_attribute("href") or'www.bing.com/news/search' not in strlink.get_attribute("href") ]
 
+        strings_to_process = []
+        for linko in linkChecker:
+            strlink = linko.get_attribute("href")
+            strings_to_process.append(strlink)
+            print(strlink)
+        #print("\nchecking: " + pagestring + "\n")
+        print("Bing")
+
+
+    elif b == 3:
+        searchName = "yahoo_" #output name for text file
+        linkName =  "https://search.yahoo.com/search?p=" #search engine web address
+        pagestring = linkName + "&q=" + categoryquery # googles
+        print("Google")
+        driver.get(pagestring)
+        continue_link = driver.find_element_by_tag_name('a')
+        elem = None
+        elem = driver.find_elements_by_xpath("//*[@href]")
+        linkChecker = [ e for e in elem if "http://r.search.yahoo.com/_ylt=" in str(e.get_attribute("href")) ]
+
+        strings_to_process = []
+        for linko in linkChecker:
+            strlink = linko.get_attribute("href")
+            strings_to_process.append(strlink)
+            #print(strlink)
+
+    # only check the first 50 links : [0,49]
+    stp = [ (i,j, searchName) for i,j in enumerate(strings_to_process[0:49]) ]
+    Nones = list(map(contents_to_file,stp))
+    return Nones
+#flat_iter =[ (b,x,category) for b in range(0,web): for x, category in enumerate(searchList) ]
+    #define the search term
+_ = list(map(scraplandtext,flat_iter))
 driver.close() #close the driver
 exit()

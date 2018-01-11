@@ -280,7 +280,6 @@ for s, value in enumerate(searchList):
             path = str('textData_/') + str(searchList[s])
             if not os.path.exists(path):
                os.makedirs(path)
-               #os.chdir(FileLocation + str(category) +'/')
 
             with open(str(str('textData_/')+searchList[s]) + '.p','wb') as handle:
                 print(handle)
@@ -288,15 +287,3 @@ for s, value in enumerate(searchList):
 
             with open(str(str('textData_/')+searchList[s]) + '.mat','wb') as handle:
                 sio.savemat(handle, {'obj_arr':list(obj_arr)})
-            #os.chdir(fileLocation + str(value))
-
-            #save
-            #sio.savemat('textData_' + str(searchList[s]) + '.mat', {'obj_arr':obj_arr})
-
-
-    #after the full code runs export to a .mat file to a designed location
-
-    #os.chdir(fileLocation)
-
-    #save
-    #sio.savemat('textData_' + str(searchList[s]) + '.mat', {'obj_arr':obj_arr})

@@ -147,10 +147,6 @@ def contents_to_file(contents):
 
        str_text = str(write_text)
 
-
-
-       #print(flag, 'self referencing')
-
        fileName = searchName +str(incrementor) + ".p" #create text file save name
        print(fileName, 'filename')
        print(type(str_text))
@@ -179,14 +175,9 @@ def contents_to_file(contents):
       chunks = (phrase.strip() for line in lines for phrase in line.split("  ")) # break multi-headlines into a line each
       text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines
       str_text = str(text)
-      #flag = csr(strlink,str_text)
-      #print(flag, 'self referencing')
-
-      #fileName = searchName + ".p" #create text file save name
       fileName = searchName +str(incrementor) + ".p" #create text file save name
 
       print(fileName, 'filename')
-      #try:
       print(type(str_text))
 
       f = open(fileName, 'wb')
@@ -200,7 +191,6 @@ def contents_to_file(contents):
 
 for x, category in enumerate(searchList):
     #define the search term
-    #category = sl
     print(" "); print("###############################################")
     print(" "); print(category);  print(" "); print("###############################################")
     categoryquery = category.replace(' ',"+")
@@ -209,11 +199,6 @@ for x, category in enumerate(searchList):
     if not os.path.exists(path):
         os.makedirs(path)
     os.chdir(fileLocation + '/' +  str(category) +'/')
-    '''
-    if not os.path.exists(str(fileLocation) + '/' + str(value) +'/'):
-        os.makedirs(str(fileLocation) + '/' + str(value) +'/')
-    os.chdir(fileLocation +str('/') + str(value) +'/')
-    '''
     for b in range(0,web):
         time.sleep(randint(1,2)) #shor
 
@@ -228,7 +213,6 @@ for x, category in enumerate(searchList):
             continue_link = driver.find_element_by_tag_name('a')
             elem = None
             elem = driver.find_elements_by_xpath("//*[@href]")
-            #print(elem)
             linkChecker = [ e for e in elem if "https://www.google.com/search?" in str(e.get_attribute("href")) ]
 
             strings_to_process = []
@@ -236,7 +220,6 @@ for x, category in enumerate(searchList):
                 strlink = linko.get_attribute("href")
                 strings_to_process.append(strlink)
                 print(strlink)
-            #print("\nchecking: " + pagestring + "\n")
 
 
         elif b == 1:
@@ -258,7 +241,6 @@ for x, category in enumerate(searchList):
                 strlink = linko.get_attribute("href")
                 strings_to_process.append(strlink)
                 print(strlink)
-            #print("\nchecking: " + pagestring + "\n")
             print("Google Scholar")
 
 
@@ -268,13 +250,11 @@ for x, category in enumerate(searchList):
             searchName = "bing_" #output name for text file
             linkName = "https://www.bing.com/search?num=100&filter=0&first=" #search engine web address
             pagestring = linkName + "&q=" + categoryquery # googles
-            #print("Google")
             driver.get(pagestring)
             continue_link = driver.find_element_by_tag_name('a')
             elem = None
             elem = driver.find_elements_by_xpath("//*[@href]")
             linkChecker = [ e for e in elem if "https://www.bing.com/search?q=" in str(e.get_attribute("href")) ]
-            #linkChecker = []
             linkChecker = [ strlink for strlink in linkChecker if 'r.bat' not in strlink.get_attribute("href") or 'r.msn' \
              not in strlink.get_attribute("href") or'www.bing.com/news/search' not in strlink.get_attribute("href") ]
 

@@ -107,14 +107,6 @@ def csr(text,strlink):
            return True
    return False
 
-def complexity(other_function):
-    '''
-    Get the code complexity of another function.
-    Ideally the complexity of this function would be calculated
-
-    '''
-    from radon import complexity
-    return complexity.cc_rank(str(other_function))
 
 
 def contents_to_file(contents):
@@ -133,62 +125,70 @@ def contents_to_file(contents):
 
 
    if 'pdf' in strlink:
-       pdf_file = str(urllib.request.urlopen(strlink).read())
-       assert type(pdf_file) is type(str)
-       memoryFile = StringIO(pdf_file)
-       parser = PDFParser(memoryFile)
-       document = PDFDocument(parser)
+       try:
+           pdf_file = str(urllib.request.urlopen(strlink).read())
+           assert type(pdf_file) is type(str)
+           memoryFile = StringIO(pdf_file)
+           parser = PDFParser(memoryFile)
+           document = PDFDocument(parser)
 
-       # Process all pages in the document
-       for page in PDFPage.create_pages(document):
-           interpreter.process_page(page)
-           write_text +=  retstr.getvalue()
+           # Process all pages in the document
+           for page in PDFPage.create_pages(document):
+               interpreter.process_page(page)
+               write_text +=  retstr.getvalue()
 
 
-       str_text = str(write_text)
+           str_text = str(write_text)
 
-       fileName = searchName +str(incrementor) + ".p" #create text file save name
-       print(fileName, 'filename')
-       print(type(str_text))
-       f = open(fileName, 'wb')
-       from datetime import datetime
-       st = datetime.utcnow().strftime('%Y-%m-%d_%H:%M:%S.%f')[:-3]
-       pickle.dump([st, str_text],f)
-
+           fileName = searchName +str(incrementor) + ".p" #create text file save name
+           print(fileName, 'filename')
+           print(type(str_text))
+           f = open(fileName, 'wb')
+           from datetime import datetime
+           st = datetime.utcnow().strftime('%Y-%m-%d_%H:%M:%S.%f')[:-3]
+           pickle.dump([st, str_text],f)
+       except:
+           print('bad link',strlinkto)
    else:
       #establish human agent header
-      headers = {'User-Agent': str(ua.chrome)}
+      headers = {'User-Agent': str(ua.Firefox)}
       #try:
       #request website data using beautiful soup
-      r = requests.get(strlink, headers=headers)
-      soup = BeautifulSoup(r.content, 'html.parser')
+      try:
 
-      #strip HTML
-      for script in soup(["script", "style"]):
-              script.extract()    # rip it out
+          r = requests.get(strlink, headers=headers)
+          soup = BeautifulSoup(r.content, 'html.parser')
 
-      # get text
-      text = soup.get_text()
+          #strip HTML
+          for script in soup(["script", "style"]):
+                  script.extract()    # rip it out
 
-      #organize text
-      lines = (line.strip() for line in text.splitlines())  # break into lines and remove leading and trailing space on each
-      chunks = (phrase.strip() for line in lines for phrase in line.split("  ")) # break multi-headlines into a line each
-      text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines
-      str_text = str(text)
-      fileName = searchName +str(incrementor) + ".p" #create text file save name
+          # get text
+          text = soup.get_text()
 
-      print(fileName, 'filename')
-      print(type(str_text))
+          #organize text
+          lines = (line.strip() for line in text.splitlines())  # break into lines and remove leading and trailing space on each
+          chunks = (phrase.strip() for line in lines for phrase in line.split("  ")) # break multi-headlines into a line each
+          text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines
+          str_text = str(text)
+          fileName = searchName +str(incrementor) + ".p" #create text file save name
 
-      f = open(fileName, 'wb')
-      from datetime import datetime
-      st = datetime.utcnow().strftime('%Y-%m-%d_%H:%M:%S.%f')[:-3]
-      pickle.dump([st, str_text],f)
+          print(fileName, 'filename')
+          print(type(str_text))
+
+          f = open(fileName, 'wb')
+          from datetime import datetime
+          st = datetime.utcnow().strftime('%Y-%m-%d_%H:%M:%S.%f')[:-3]
+          pickle.dump([st, str_text],f)
+
+      except:
+          print('bad link',strlink)
+
    f = None
    return None
 
 
-flat_iter = [ (b,x,category) for b in range(0,web) for x, category in enumerate(searchList) ]
+flat_iter = [ (b,x,category) for x, category in enumerate(searchList) for b in range(web,0,-1) ]
 
 def scraplandtext(fi):
     import pickle
@@ -304,7 +304,7 @@ def scraplandtext(fi):
                 marker = i
                 break
         if type(marker) is not type(None):
-            stp = [ (i,j, searchName) for i,j in enumerate(strings_to_process[marker+1:49]) ]
+            stp = [ (i,j, searchName) for i,j in enumerate(stp[marker+1:49]) ]
         _ = list(map(contents_to_file,stp))
     except:
         print('file doesn\'t exist yet')

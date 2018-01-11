@@ -191,6 +191,12 @@ def contents_to_file(contents):
 flat_iter = [ (b,x,category) for b in range(0,web) for x, category in enumerate(searchList) ]
 
 def scraplandtext(fi):
+    import pickle
+    f = open('last_state.p', 'wb')
+    #from datetime import datetime
+    #st = datetime.utcnow().strftime('%Y-%m-%d_%H:%M:%S.%f')[:-3]
+    pickle.dump(fi,f)
+    #pickle.dump()
     b,x,category = fi
     print(" "); print("###############################################")
     print(" "); print(category);  print(" "); print("###############################################")
@@ -285,9 +291,25 @@ def scraplandtext(fi):
             #print(strlink)
 
     # only check the first 50 links : [0,49]
+
+    # This code is here, to start up where left off, if HTTP requests are denied, because exceeded
+    # crawling qouta policies.
     stp = [ (i,j, searchName) for i,j in enumerate(strings_to_process[0:49]) ]
-    _ = list(map(contents_to_file,stp))
-    return Nones
+    try:
+        f = open('../last_state.p', 'rb')
+        last_state = pickle.load(f)
+        marker = None
+        for i, temp in enumerate(stp):
+            if str(last_state) == str(marker):
+                marker = i
+                break
+        if type(marker) is not type(None):
+            stp = [ (i,j, searchName) for i,j in enumerate(strings_to_process[marker+1:49]) ]
+        _ = list(map(contents_to_file,stp))
+    except:
+        print('file doesn\'t exist yet')
+        _ = list(map(contents_to_file,stp))
+    return None
 #flat_iter =[ (b,x,category) for b in range(0,web): for x, category in enumerate(searchList) ]
     #define the search term
 _ = list(map(scraplandtext,flat_iter))

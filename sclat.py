@@ -99,10 +99,22 @@ def csr(text,strlink):
    print(strlink)
    baseURLtemp = urlparse(strlink)
    baseURL = str(baseURLtemp[0] + "://" + baseURLtemp[1])
+   if strlink in text:
+       print('probably links to self')
+       print(strlink,text)
    for l in links:
        if str(baseURL) in str(l):
            return True
    return False
+
+def complexity(other_function):
+    '''
+    Get the code complexity of another function.
+    Ideally the complexity of this function would be calculated
+
+    '''
+    from radon import complexity
+    return complexity.cc_rank(str(other_function))
 
 
 def contents_to_file(contents):
@@ -113,6 +125,11 @@ def contents_to_file(contents):
    '''
    incrementor, strlink = contents
    print(strlink,incrementor, ' pacifier')
+
+
+   # uncommonet lines below to test out code for removing self referencing websites.
+   # if csr(strlink,str_text) is True:
+   #    return None
 
 
    if 'pdf' in strlink:
@@ -130,7 +147,8 @@ def contents_to_file(contents):
 
        str_text = str(write_text)
 
-       #flag = csr(strlink,str_text)
+
+
        #print(flag, 'self referencing')
 
        fileName = searchName +str(incrementor) + ".p" #create text file save name

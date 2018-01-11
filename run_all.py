@@ -9,7 +9,7 @@ def my_fork():
     child_pid = os.fork()
     if child_pid == 0:
         print("Child Process: PID# %s" % os.getpid(),'scrape links and text')
-        import sclata
+        import sclat
 
     else:
         print("Parent Process: PID# %s" % os.getpid(),'tAnalysis')
@@ -17,8 +17,10 @@ def my_fork():
 
 
 if __name__ == "__main__":
+    my_fork()
+
     import sclat
     import t_analysis
 
     #uncomment my fork to do both modules at the same time.
-    #my_fork()
+    

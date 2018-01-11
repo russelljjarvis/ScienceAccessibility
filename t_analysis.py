@@ -96,9 +96,9 @@ for s, value in enumerate(searchList):
 
         #import pdb; pdb.set_trace()
         #list_of_files = glob.glob(r'textName*.p')
-        list_of_files = sort(glob.glob(str(textName)+r'*.p'))
+        list_of_files = sorted(glob.glob(str(textName)+r'*.p'))
         if len(list_of_files) >= 50:
-            list_of_files =  sort(list_of_files[0:49])
+            list_of_files =  sorted(list_of_files[0:49])
 
         for p,fileName in enumerate(list_of_files):
             print ("-------------------------------------------")

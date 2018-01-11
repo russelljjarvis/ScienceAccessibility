@@ -31,3 +31,8 @@ To run both Scrape_links_and_text_etc.py and tAnalysis.py
 Run:
 
 ``` ipython -i run_all.py ```
+which runs both scrape_links_and_text and text_analysis at the same time (note older existing outputs of scrape_links_and_text are used as inputs into text_analysis, such
+that the latest analysis, is always one iteration older than the latest.
+
+```bash run_all.sh ``` simultaneously executes run_all, at the same time as installing octave.
+Once run_all.py is completed it tries to then execute the MATLAB graphing code on the results files

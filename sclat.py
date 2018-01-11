@@ -188,7 +188,7 @@ def contents_to_file(contents):
    return None
 
 
-flat_iter = [ (b,x,category) for x, category in enumerate(searchList) for b in range(web,0,-1) ]
+flat_iter = [ (b,x,category) for x, category in enumerate(searchList) for b in range(0,web) ]
 
 def scraplandtext(fi):
     import pickle
@@ -294,8 +294,9 @@ def scraplandtext(fi):
 
     # This code is here, to start up where left off, if HTTP requests are denied, because exceeded
     # crawling qouta policies.
-    stp = [ (i,j, searchName) for i,j in enumerate(strings_to_process[0:49]) ]
     try:
+
+        stp = [ (i,j, searchName) for i,j in enumerate(strings_to_process[0:49]) ]
         f = open('../last_state.p', 'rb')
         last_state = pickle.load(f)
         marker = None
@@ -307,7 +308,8 @@ def scraplandtext(fi):
             stp = [ (i,j, searchName) for i,j in enumerate(stp[marker+1:49]) ]
         _ = list(map(contents_to_file,stp))
     except:
-        print('file doesn\'t exist yet')
+        #print('file doesn\'t exist yet')
+        #if type(strings_to_process) is not type(None):
         _ = list(map(contents_to_file,stp))
     return None
 #flat_iter =[ (b,x,category) for b in range(0,web): for x, category in enumerate(searchList) ]

@@ -9,7 +9,6 @@ from nltk import word_tokenize,sent_tokenize
 import matplotlib # Its not that this file is responsible for doing plotting, but it calls many modules that are, such that it needs to pre-empt
 # setting of an appropriate backend.
 matplotlib.use('Agg')
-# Uncomment to enable parallelization.
 import sys
 import os
 

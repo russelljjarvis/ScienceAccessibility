@@ -287,13 +287,12 @@ def scraplandtext(fi):
     # This code is here, to start up where left off, if HTTP requests are denied, because exceeded
     # crawling qouta policies.
     try:
-
-        stp = [ (i,j, searchName) for i,j in enumerate(strings_to_process[0:49]) ]
         f = open('../last_state.p', 'rb')
+        stp = [ (i,j, searchName) for i,j in enumerate(strings_to_process[0:49]) ]
         last_state = pickle.load(f)
         marker = None
         for i, temp in enumerate(stp):
-            if str(last_state) == str(marker):
+            if str(last_state) == str(temp):
                 marker = i
                 break
         if type(marker) is not type(None):

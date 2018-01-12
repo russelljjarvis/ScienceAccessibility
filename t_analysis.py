@@ -228,66 +228,68 @@ for s, value in enumerate(searchList):
                 urlDat[13,2]  = textstat.difficult_words(str(url_text))
                 urlDat[14,2]  = textstat.linsear_write_formula(str(url_text))
                 urlDat[15,2]  = textstat.text_standard(str(url_text))
+                ########################################################################
+                ##defining part of speech for each word
+                wordsPOS = pos_tag([w.lower() for w in URLtext if w.isalpha()])
+
+                PS = {}
+                for x in range(0,len(wordsPOS)) :
+                    PS[x,1], PS[x,2] = [y.strip('}()",{:') for y in (str(wordsPOS[x])).split(',')]
+
+                ########################################################################
+                ##Sentiment and Subjectivity analysis
+                testimonial = TextBlob(url_text)
+                testimonial.sentiment
+                ##defining part of speech for each word
+                from nltk.tag.perceptron import PerceptronTagger
+                tagger = PerceptronTagger(load=False)
+
+                urlDat[4,2] = testimonial.sentiment.polarity
+                urlDat[5,2] = testimonial.sentiment.subjectivity
+
+                #print it all pretty-like
+                plotDat = [[str(urlDat[1,1]) + ": " + str(urlDat[1,2])], [str(urlDat[2,1]) + ": " + str(urlDat[2,2])],
+                               [str(urlDat[3,1]) + ": " + str(urlDat[3,2])], [str(urlDat[4,1]) + ": " + str(urlDat[4,2])],
+                               [str(urlDat[5,1]) + ": " + str(urlDat[5,2])], [str(urlDat[6,1]) + ": " + str(urlDat[6,2])],
+                               [str(urlDat[7,1]) + ": " + str(urlDat[7,2])], [str(urlDat[8,1]) + ": " + str(urlDat[8,2])],
+                               [str(urlDat[9,1]) + ": " + str(urlDat[9,2])], [str(urlDat[10,1]) + ": " + str(urlDat[10,2])],
+                               [str(urlDat[11,1]) + ": " + str(urlDat[11,2])], [str(urlDat[12,1]) + ": " + str(urlDat[12,2])],
+                               [str(urlDat[13,1]) + ": " + str(urlDat[13,2])], [str(urlDat[14,1]) + ": " + str(urlDat[14,2])],
+                               [str(urlDat[15,1]) + ": " + str(urlDat[15,2])]]
+
+                headers = ["Complexity Results:"]; print (tabulate(plotDat,headers,tablefmt="simple",stralign="left"))
+                time.sleep(1); print (""); print (""); print ("");
+                ########################################################################
+                ##convert all dict variables to list for multidimensional conversion to matlab cell array
+                urlDat = list(urlDat.items())
+                sentSyl = list(sentSyl.items())
+                WperS = list(WperS.items())
+                fAll = list(fAll.items())
+                fM = list(fM.items())
+                PS = list(PS.items())
+
+                ##generate a .mat file for further analysis in matlab
+                if b == 0 and p == 0:
+                    obj_arr = np.array([urlDat,WperS, sentSyl, fM, PS, fAll], dtype=object)
+                else:
+                    obj_arr_add = np.array([urlDat,WperS, sentSyl, fM, PS, fAll], dtype=object)
+                    obj_arr = np.vstack( [obj_arr, obj_arr_add] )
+
+                import pickle
+
+                path = str('textData_/') + str(searchList[s])
+                if not os.path.exists(path):
+                   os.makedirs(path)
+
+                with open(str(str('textData_/')+searchList[s]) + '.p','wb') as handle:
+                    print(handle)
+                    pickle.dump(list(obj_arr),handle)
+
+                with open(str(str('textData_/')+searchList[s]) + '.mat','wb') as handle:
+                    sio.savemat(handle, {'obj_arr':list(obj_arr)})
+
             except:
                 print('number of words is zero on that link, so analysis will fail')
-            ########################################################################
-            ##defining part of speech for each word
-            wordsPOS = pos_tag([w.lower() for w in URLtext if w.isalpha()])
 
-            PS = {}
-            for x in range(0,len(wordsPOS)) :
-                PS[x,1], PS[x,2] = [y.strip('}()",{:') for y in (str(wordsPOS[x])).split(',')]
-
-            ########################################################################
-            ##Sentiment and Subjectivity analysis
-            testimonial = TextBlob(url_text)
-            testimonial.sentiment
-            ##defining part of speech for each word
-            from nltk.tag.perceptron import PerceptronTagger
-            tagger = PerceptronTagger(load=False)
-
-            urlDat[4,2] = testimonial.sentiment.polarity
-            urlDat[5,2] = testimonial.sentiment.subjectivity
-
-            #print it all pretty-like
-            plotDat = [[str(urlDat[1,1]) + ": " + str(urlDat[1,2])], [str(urlDat[2,1]) + ": " + str(urlDat[2,2])],
-                           [str(urlDat[3,1]) + ": " + str(urlDat[3,2])], [str(urlDat[4,1]) + ": " + str(urlDat[4,2])],
-                           [str(urlDat[5,1]) + ": " + str(urlDat[5,2])], [str(urlDat[6,1]) + ": " + str(urlDat[6,2])],
-                           [str(urlDat[7,1]) + ": " + str(urlDat[7,2])], [str(urlDat[8,1]) + ": " + str(urlDat[8,2])],
-                           [str(urlDat[9,1]) + ": " + str(urlDat[9,2])], [str(urlDat[10,1]) + ": " + str(urlDat[10,2])],
-                           [str(urlDat[11,1]) + ": " + str(urlDat[11,2])], [str(urlDat[12,1]) + ": " + str(urlDat[12,2])],
-                           [str(urlDat[13,1]) + ": " + str(urlDat[13,2])], [str(urlDat[14,1]) + ": " + str(urlDat[14,2])],
-                           [str(urlDat[15,1]) + ": " + str(urlDat[15,2])]]
-
-            headers = ["Complexity Results:"]; print (tabulate(plotDat,headers,tablefmt="simple",stralign="left"))
-            time.sleep(1); print (""); print (""); print ("");
-            ########################################################################
-            ##convert all dict variables to list for multidimensional conversion to matlab cell array
-            urlDat = list(urlDat.items())
-            sentSyl = list(sentSyl.items())
-            WperS = list(WperS.items())
-            fAll = list(fAll.items())
-            fM = list(fM.items())
-            PS = list(PS.items())
-
-            ##generate a .mat file for further analysis in matlab
-            if b == 0 and p == 0:
-                obj_arr = np.array([urlDat,WperS, sentSyl, fM, PS, fAll], dtype=object)
-            else:
-                obj_arr_add = np.array([urlDat,WperS, sentSyl, fM, PS, fAll], dtype=object)
-                obj_arr = np.vstack( [obj_arr, obj_arr_add] )
-
-            import pickle
-
-            path = str('textData_/') + str(searchList[s])
-            if not os.path.exists(path):
-               os.makedirs(path)
-
-            with open(str(str('textData_/')+searchList[s]) + '.p','wb') as handle:
-                print(handle)
-                pickle.dump(list(obj_arr),handle)
-
-            with open(str(str('textData_/')+searchList[s]) + '.mat','wb') as handle:
-                sio.savemat(handle, {'obj_arr':list(obj_arr)})
 
 exit()

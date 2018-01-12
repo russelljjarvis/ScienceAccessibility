@@ -9,5 +9,6 @@ WORKDIR $HOME
 #RUN ipython -i sclat.py ;
 #RUN ipython -i t_analysis.py ;
 #RUN octave crawlAnalysis.m & octave QuantAnalysis_v2.m
+RUN sudo /opt/conda/bin/pip install oct2py
 
 ENTRYPOINT ipython sclat.py; ipython t_analysis.py; octave crawlAnalysis.m & octave QuantAnalysis_v2.m

@@ -287,7 +287,13 @@ for s, value in enumerate(searchList):
 
                 with open(str(str('textData_/')+searchList[s]) + '.mat','wb') as handle:
                     sio.savemat(handle, {'obj_arr':list(obj_arr)})
-
+                    mat_contents = sio.loadmat(handle)
+                    print(mat_contents)
+                    import oct2py    
+                    from oct2py import octave
+                    import os 
+                    #octave.addpath(os.getcwd())
+                    octave.eval('load '+str(handle))
             except:
                 print('number of words is zero on that link, so analysis will fail')
 

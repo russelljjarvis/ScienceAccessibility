@@ -5,6 +5,16 @@
 
 ## NB: I renamed TextAnalysis_v3.py t_analysis.py 
 
+# Launch Graphically in OSX
+## 1 
+click on whale symbol 
+## 2. 
+click Kitematic in drop down. 
+## 3.
+in search bar type: run_all_complexity, 
+## 4. 
+click on it and follow download and run links. I think you will also be able to get output files graphically.
+
 The original versions of the files have been deleted from the most current branch, although they still are accessible on this website, by viewing 'parent commits'
 
 

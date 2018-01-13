@@ -116,7 +116,7 @@ for s, value in enumerate(searchList):
             else:
 
                 url_text = file_contents
-            print(url_text)
+            #print(url_text)
                 #fileHandle.read()
             #fileHandle.close()
             #url_text = url_text.decode('ascii','ignore')
@@ -275,7 +275,9 @@ for s, value in enumerate(searchList):
                     obj_arr_add = np.array([urlDat,WperS, sentSyl, fM, PS, fAll], dtype=object)
                     obj_arr = np.vstack( [obj_arr, obj_arr_add] )
 
+
                 import pickle
+
 
                 path = str('textData_/') + str(searchList[s])
                 if not os.path.exists(path):
@@ -284,18 +286,35 @@ for s, value in enumerate(searchList):
                 with open(str(str('textData_/')+searchList[s]) + '.p','wb') as handle:
                     print(handle)
                     pickle.dump(list(obj_arr),handle)
-
-                with open(str(str('textData_/')+searchList[s]) + '.mat','wb') as handle:
-                    sio.savemat(handle, {'obj_arr':list(obj_arr)})
-                    mat_contents = sio.loadmat(handle)
-                    print(mat_contents)
-                    import oct2py    
-                    from oct2py import octave
-                    import os 
-                    #octave.addpath(os.getcwd())
-                    octave.eval('load '+str(handle))
             except:
                 print('number of words is zero on that link, so analysis will fail')
+            import scipy
+            handle = str('textData_/'+searchList[s] + '.mat')
+            scipy.io.savemat(handle,mdict = {'obj_arr':obj_arr} )
+            mat_contents = scipy.io.loadmat(handle)
+            print(mat_contents, 'matrix contents')
+            #with open(str('textData_/')+searchList[s]) + '.mat') as handle:
+            #data = _encode(obj_arr, convert_to_float)
+            '''
+            sio.savemat(handle,'obj_arr')
+            pdb.set_trace()
+
+            print('matrix contents: ',mat_contents)
+            var_name = str(searchList[s])
+            import oct2py
+            from oct2py import octave
+            import os
+            import pdb
+            pdb.set_trace()
+
+            octave.push(str,obj_arr)
+            print(octave.run('whos'))
+            octave.run('save '+var_name)
+            #octave.addpath(os.getcwd())
+            octave.eval('load '+var_name)
+            print('octave worked')
+            import pdb
+            '''
 
 
 exit()

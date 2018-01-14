@@ -13,8 +13,8 @@ word = length(TermName);
 %% organize all the data
 for wordi = 1:word
 
-    %load data textData_GMO.mat
-    load(strcat('~/',TermName{wordi,1},'/textData_',TermName{wordi,1},'.mat'));
+    %load data GMO.mat
+    load(strcat(TermName{wordi,1},'/',TermName{wordi,1},'.mat'));
     % textData_GMO.mat
     %organize data
     for urli = 1:Tot_url

@@ -1,0 +1,18 @@
+S = load("GMO/GMO0.mat")
+S
+
+%urlDat[1,1] = "Number of Words".encode('utf-16')
+%urlDat[2,1] = "Number of Sentences".encode('utf-16')
+%urlDat[3,1] = "Frequency of Search Term".encode('utf-16')
+%urlDat[4,1] = "Sentiment Analysis".encode('utf-16')
+%urlDat[5,1] = "Subjectivity Analysis".encode('utf-16')
+%urlDat[6,1] = "Grade level".encode('utf-16')
+%urlDat[7,1] = "Flesch Reading Ease".encode('utf-16')
+%urlDat[8,1] = "SMOG Index".encode('utf-16')
+%urlDat[9,1] = "Coleman Liau".encode('utf-16')
+%urlDat[10,1] = "Automated Readability Index".encode('utf-16')
+%urlDat[11,1] = "Gunning Fog".encode('utf-16')
+%urlDat[12,1] = "Dale Chall Readability Score".encode('utf-16')
+%urlDat[13,1] = "Difficult Words".encode('utf-16')
+%urlDat[14,1] = "Linsear Write Formula".encode('utf-16')
+%urlDat[15,1] = "Text Standard".encode('utf-16')

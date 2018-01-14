@@ -1,7 +1,10 @@
 #set parameters- THESE ARE ALL USER DEFINED
 #searchList = ['GMO']
-searchList = ['GMO','Genetically Modified Organism']
 import os
+#os.system('ipcluster start -n 8 --profile=default & sleep 15 ;  ')
+
+searchList = ['GMO','Genetically Modified Organism']
+#import os
 import nltk
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
@@ -21,6 +24,11 @@ fileLocation = os.getcwd()
 
 if not os.path.exists(fileLocation):
     os.makedirs(fileLocation)
+
+#import ipyparallel as ipp
+#rc = ipp.Client(profile='default')
+#from ipyparallel import depend, require, dependent
+#dview = rc[:]
 
 
 ##once the above is set you can run the code!
@@ -60,7 +68,10 @@ import glob
 
 searchList = ['GMO','Genetically_Modified_Organism','Transgenic','Vaccine']
 
-for s, value in enumerate(searchList):
+#for s, value in enumerate(searchList):
+def iter_over(searchListElement):
+    s, value = searchListElement
+
     if not os.path.exists(str(fileLocation) + '/' + str(value) +'/'):
         os.makedirs(str(fileLocation) + '/' + str(value) +'/')
     os.chdir(fileLocation +str('/') + str(value) +'/')
@@ -106,6 +117,7 @@ for s, value in enumerate(searchList):
 
             #fileName = l#'{0}{1}.p'.format(textName,p+1)
             print(fileName)
+            print(os.getcwd(), 'pwd')
             import pickle
 
             fileHandle = open(fileName, 'rb');
@@ -123,21 +135,39 @@ for s, value in enumerate(searchList):
 
             #initialize dataArray Dictionary
             urlDat = {}
-            urlDat[1,1] = "Number of Words"
-            urlDat[2,1] = "Number of Sentences"
-            urlDat[3,1] = "Frequency of Search Term"
-            urlDat[4,1] = "Sentiment Analysis"
-            urlDat[5,1] = "Subjectivity Analysis"
-            urlDat[6,1] = "Grade level"
-            urlDat[7,1] = "Flesch Reading Ease"
-            urlDat[8,1] = "SMOG Index"
-            urlDat[9,1] = "Coleman Liau"
-            urlDat[10,1] = "Automated Readability Index"
-            urlDat[11,1] = "Gunning Fog"
-            urlDat[12,1] = "Dale Chall Readability Score"
-            urlDat[13,1] = "Difficult Words"
-            urlDat[14,1] = "Linsear Write Formula"
-            urlDat[15,1] = "Text Standard"
+
+            urlDat[1,1] = "Number of Words".encode('ascii','ignore').encode("utf-16")
+            urlDat[2,1] = "Number of Sentences".encode('ascii','ignore').encode("utf-16")
+            urlDat[3,1] = "Frequency of Search Term".encode('ascii','ignore').encode("utf-16")
+            urlDat[4,1] = "Sentiment Analysis".encode('ascii','ignore').encode("utf-16")
+            urlDat[5,1] = "Subjectivity Analysis".encode('ascii','ignore').encode("utf-16")
+            urlDat[6,1] = "Grade level".encode('ascii','ignore').encode("utf-16")
+            urlDat[7,1] = "Flesch Reading Ease".encode('ascii','ignore').encode("utf-16")
+            urlDat[8,1] = "SMOG Index".encode('ascii','ignore').encode("utf-16")
+            urlDat[9,1] = "Coleman Liau".encode('ascii','ignore').encode("utf-16")
+            urlDat[10,1] = "Automated Readability Index".encode('ascii','ignore').encode("utf-16")
+            urlDat[11,1] = "Gunning Fog".encode('ascii','ignore').encode("utf-16")
+            urlDat[12,1] = "Dale Chall Readability Score".encode('ascii','ignore').encode("utf-16")
+            urlDat[13,1] = "Difficult Words".encode('ascii','ignore').encode("utf-16")
+            urlDat[14,1] = "Linsear Write Formula".encode('ascii','ignore').encode("utf-16")
+            urlDat[15,1] = "Text Standard".encode('ascii','ignore').encode("utf-16")
+
+            urlDat[1,1] = 0#"Number of Words"
+            urlDat[2,1] = 1#"Number of Sentences"
+            urlDat[3,1] = 2#"Frequency of Search Term"
+            urlDat[4,1] = 3#"Sentiment Analysis"
+            urlDat[5,1] = 4#"Subjectivity Analysis"
+            urlDat[6,1] = 5#"Grade level"
+            urlDat[7,1] = 6#"Flesch Reading Ease"
+            urlDat[8,1] = 7#"SMOG Index"
+            urlDat[9,1] = 8#"Coleman Liau"
+            urlDat[10,1] = 9#"Automated Readability Index"
+            urlDat[11,1] = 10#"Gunning Fog"
+            urlDat[12,1] = 11#"Dale Chall Readability Score"
+            urlDat[13,1] = 12#"Difficult Words"
+            urlDat[14,1] = 13#"Linsear Write Formula"
+            urlDat[15,1] = 14#"Text Standard"
+
 
             ########################################################################
             #remove unreadable characters
@@ -270,32 +300,28 @@ for s, value in enumerate(searchList):
 
                 ##generate a .mat file for further analysis in matlab
                 if b == 0 and p == 0:
-                    obj_arr = np.array([urlDat,WperS, sentSyl, fM, PS, fAll], dtype=object)
+                    obj_arr = np.array([urlDat,WperS, sentSyl, fM, PS, fAll], dtype=np.object)
                 else:
-                    obj_arr_add = np.array([urlDat,WperS, sentSyl, fM, PS, fAll], dtype=object)
-                    obj_arr = np.vstack( [obj_arr, obj_arr_add] )
+                    obj_arr_add = np.array([urlDat,WperS, sentSyl, fM, PS, fAll], dtype=np.object)
+                    obj_arr = np.vstack( [obj_arr, obj_arr_add] , dtype=np.object)
+                my_dict = {'obj_arr':obj_arr}
+                import scipy
+                handle = searchList[s]  + '.mat'
+                scipy.io.savemat(handle, mdict={ 'obj_arr' : my_dict}, oned_as='row')
 
-
-                #import pickle
-
-
-                path = str('textData_/') + str(searchList[s])
-                if not os.path.exists(path):
-                   os.makedirs(path)
-                os.chdir(path)
-                '''
-                with open(str(str('textData_/')+searchList[s]) + '.p','wb') as handle:
-                    print(handle)
-                    pickle.dump(list(obj_arr),handle)
-                '''
             except:
                 print('number of words is zero on that link, so analysis will fail')
-            import scipy
-            handle = searchList[s] + '.mat')
-            scipy.io.savemat(handle,mdict = {'obj_arr':obj_arr} )
-            mat_contents = scipy.io.loadmat(handle)
-            print(mat_contents, 'matrix contents')
 
+            #h.create_dataset(name=str(p)+searchList[s], data=np.array(obj_arr))
+            #save('test.mat','-v7')
+            #f = h5py.File(handle,'wr')
+            #data = f.get('data/variable1')
+            #mat_contents = scipy.io.loadmat(handle)
+            #print(mat_contents, 'matrix contents')
+sl = [ (i, val) for i, val in enumerate(searchList) ]
+_ = list(map(iter_over,sl))
+
+#searchList
 
 
 exit()

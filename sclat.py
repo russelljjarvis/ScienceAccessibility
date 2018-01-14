@@ -307,4 +307,4 @@ def scraplandtext(fi):
     #define the search term
 _ = list(map(scraplandtext,flat_iter))
 driver.close() #close the driver
-exit()
+exit

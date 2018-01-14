@@ -17,8 +17,7 @@ def my_fork():
 
 
 if __name__ == "__main__":
-    my_fork()
-
+    #my_fork()
     import sclat
     import t_analysis
 

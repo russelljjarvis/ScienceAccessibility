@@ -15,6 +15,8 @@ for wordi = 1:word
 
     %load data GMO.mat
     load(strcat(TermName{wordi,1},'/',TermName{wordi,1},'.mat'));
+    disp ("The value of obj array:"), disp (obj_arr);
+    disp ("Actually a structure not an array:"), disp (obj_arr);
     % textData_GMO.mat
     %organize data
     for urli = 1:Tot_url

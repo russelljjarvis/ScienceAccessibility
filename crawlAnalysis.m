@@ -18,6 +18,8 @@ for wordi = 1:word
 
     %load data
     load(strcat(TermName{wordi,1},'/',TermName{wordi,1},'.mat'));
+    disp ("The value of obj array:"), disp (obj_arr);
+    disp ("Actually a structure not an array:"), disp (obj_arr);
 
     %load(strcat('crawlData_',TermName{wordi,1},'.mat'));
 

@@ -135,23 +135,7 @@ def iter_over(searchListElement):
 
             #initialize dataArray Dictionary
             urlDat = {}
-
-            urlDat[1,1] = "Number of Words".encode('ascii','ignore').encode("utf-16")
-            urlDat[2,1] = "Number of Sentences".encode('ascii','ignore').encode("utf-16")
-            urlDat[3,1] = "Frequency of Search Term".encode('ascii','ignore').encode("utf-16")
-            urlDat[4,1] = "Sentiment Analysis".encode('ascii','ignore').encode("utf-16")
-            urlDat[5,1] = "Subjectivity Analysis".encode('ascii','ignore').encode("utf-16")
-            urlDat[6,1] = "Grade level".encode('ascii','ignore').encode("utf-16")
-            urlDat[7,1] = "Flesch Reading Ease".encode('ascii','ignore').encode("utf-16")
-            urlDat[8,1] = "SMOG Index".encode('ascii','ignore').encode("utf-16")
-            urlDat[9,1] = "Coleman Liau".encode('ascii','ignore').encode("utf-16")
-            urlDat[10,1] = "Automated Readability Index".encode('ascii','ignore').encode("utf-16")
-            urlDat[11,1] = "Gunning Fog".encode('ascii','ignore').encode("utf-16")
-            urlDat[12,1] = "Dale Chall Readability Score".encode('ascii','ignore').encode("utf-16")
-            urlDat[13,1] = "Difficult Words".encode('ascii','ignore').encode("utf-16")
-            urlDat[14,1] = "Linsear Write Formula".encode('ascii','ignore').encode("utf-16")
-            urlDat[15,1] = "Text Standard".encode('ascii','ignore').encode("utf-16")
-
+            '''
             urlDat[1,1] = 0#"Number of Words"
             urlDat[2,1] = 1#"Number of Sentences"
             urlDat[3,1] = 2#"Frequency of Search Term"
@@ -168,6 +152,54 @@ def iter_over(searchListElement):
             urlDat[14,1] = 13#"Linsear Write Formula"
             urlDat[15,1] = 14#"Text Standard"
 
+
+            urlDat[1,1] = "Number of Words".encode('ascii','ignore')
+            urlDat[2,1] = "Number of Sentences".encode('ascii','ignore')
+            urlDat[3,1] = "Frequency of Search Term".encode('ascii','ignore')
+            urlDat[4,1] = "Sentiment Analysis".encode('ascii','ignore')
+            urlDat[5,1] = "Subjectivity Analysis".encode('ascii','ignore')
+            urlDat[6,1] = "Grade level".encode('ascii','ignore')
+            urlDat[7,1] = "Flesch Reading Ease".encode('ascii','ignore')
+            urlDat[8,1] = "SMOG Index".encode('ascii','ignore')
+            urlDat[9,1] = "Coleman Liau".encode('ascii','ignore')
+            urlDat[10,1] = "Automated Readability Index".encode('ascii','ignore')
+            urlDat[11,1] = "Gunning Fog".encode('ascii','ignore')
+            urlDat[12,1] = "Dale Chall Readability Score".encode('ascii','ignore')
+            urlDat[13,1] = "Difficult Words".encode('ascii','ignore')
+            urlDat[14,1] = "Linsear Write Formula".encode('ascii','ignore')
+            urlDat[15,1] = "Text Standard".encode('ascii','ignore')
+
+            urlDat[1,1] = "Number of Words".encode("utf-16")
+            urlDat[2,1] = "Number of Sentences".encode("utf-16")
+            urlDat[3,1] = "Frequency of Search Term".encode("utf-16")
+            urlDat[4,1] = "Sentiment Analysis".encode("utf-16")
+            urlDat[5,1] = "Subjectivity Analysis".encode("utf-16")
+            urlDat[6,1] = "Grade level".encode("utf-16")
+            urlDat[7,1] = "Flesch Reading Ease".encode("utf-16")
+            urlDat[8,1] = "SMOG Index".encode("utf-16")
+            urlDat[9,1] = "Coleman Liau".encode("utf-16")
+            urlDat[10,1] = "Automated Readability Index".encode("utf-16")
+            urlDat[11,1] = "Gunning Fog".encode("utf-16")
+            urlDat[12,1] = "Dale Chall Readability Score".encode("utf-16")
+            urlDat[13,1] = "Difficult Words".encode("utf-16")
+            urlDat[14,1] = "Linsear Write Formula".encode("utf-16")
+            urlDat[15,1] = "Text Standard".encode("utf-16")
+            '''
+            urlDat[1,1] = str("Number of Words")
+            urlDat[2,1] = str("Number of Sentences")#.encode("utf-16")
+            urlDat[3,1] = str("Frequency of Search Term")#.encode("utf-16")
+            urlDat[4,1] = str("Sentiment Analysis")#.encode("utf-16")
+            urlDat[5,1] = str("Subjectivity Analysis")#.encode("utf-16")
+            urlDat[6,1] = str("Grade level")#.encode("utf-16")
+            urlDat[7,1] = str("Flesch Reading Ease")#.encode("utf-16")
+            urlDat[8,1] = str("SMOG Index")#.encode("utf-16")
+            urlDat[9,1] = str("Coleman Liau")#.encode("utf-16")
+            urlDat[10,1] = str("Automated Readability Index")#.encode("utf-16")
+            urlDat[11,1] = str("Gunning Fog")#.encode("utf-16")
+            urlDat[12,1] = str("Dale Chall Readability Score")#.encode("utf-16")
+            urlDat[13,1] = str("Difficult Words")#.encode("utf-16")
+            urlDat[14,1] = str("Linsear Write Formula")#.encode("utf-16")
+            urlDat[15,1] = str("Text Standard")#.encode("utf-16")
 
             ########################################################################
             #remove unreadable characters
@@ -308,20 +340,20 @@ def iter_over(searchListElement):
                 import scipy
                 handle = searchList[s]  + '.mat'
                 scipy.io.savemat(handle, mdict={ 'obj_arr' : my_dict}, oned_as='row')
-
+                
             except:
                 print('number of words is zero on that link, so analysis will fail')
-
+            
+            return obj_arr
             #h.create_dataset(name=str(p)+searchList[s], data=np.array(obj_arr))
             #save('test.mat','-v7')
             #f = h5py.File(handle,'wr')
             #data = f.get('data/variable1')
             #mat_contents = scipy.io.loadmat(handle)
             #print(mat_contents, 'matrix contents')
-sl = [ (i, val) for i, val in enumerate(searchList) ]
-_ = list(map(iter_over,sl))
+
 
 #searchList
 
 
-exit()
+#exit()

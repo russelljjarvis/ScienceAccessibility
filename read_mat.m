@@ -1,5 +1,5 @@
-S = load("GMO/GMO0.mat")
-S
+data = load("GMO/GMO0.mat")
+
 
 %urlDat[1,1] = "Number of Words".encode('utf-16')
 %urlDat[2,1] = "Number of Sentences".encode('utf-16')

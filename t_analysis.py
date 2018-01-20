@@ -2,7 +2,7 @@
 #searchList = ['GMO']
 import os
 #os.system('ipcluster start -n 8 --profile=default & sleep 15 ;  ')
-
+import dask
 searchList = ['GMO','Genetically Modified Organism']
 #import os
 import nltk

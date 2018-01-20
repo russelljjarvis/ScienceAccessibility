@@ -37,10 +37,33 @@ for wordi = 1:word
     elseif urli >= (numPerURL*3) && urli <= (numPerURL*4); webi = 4; %yahoo
     end
 
-    for n = 1:length(crawlDat)
+
+    cdat = struct2cell(crawlDat)
+    for n = 1:length(cdat)
+
+      	disp("seems to work a")
+      	crawlDat(n,1) %%,1)(1,1)))
+	      disp("seems to work b")
+	      disp("gets to c")
+
+	      crawlDat(n,1) %%,1)(1,2)))
+	      ndims(crawlDat(n,1,1))
+	      size(crawlDat(n,1,1))
+	      length(crawlDat(n,1,1))
+	      numel(crawlDat(n,1,1))
+	      crawlDat(n,1,1,1)
+	      disp("gets to d")
+
+	      %cd{n,1} =
+        whos %(
+        %crawlDat(n,1,1,1));
+
+        cd{n,2} = double(crawlDat(n,1)(1,2));
+        cd{n,3} = crawlDat(n,2);
         cd{n,1} = double(crawlDat{n,1}(1,1));
         cd{n,2} = double(crawlDat{n,1}(1,2));
         cd{n,3} = crawlDat{n,2};
+
     end; clear n crawlDat
 
     cd = sortrows(cd,[2,1]);

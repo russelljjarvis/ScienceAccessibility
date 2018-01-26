@@ -3,7 +3,7 @@ web = 4 #how many search engines to include (4 possible- google google scholar b
 linkstoget = 50 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
 
 #search terms of interest
-searchList = ['GMO','Genetically_Modified_Organism','Vaccine','Transgenic']
+searchList = ['Vaccine','Transgenic','BrainScales SpiNNaker','GMO','Genetically_Modified_Organism']
 import sys
 import os
 
@@ -93,6 +93,7 @@ def csr(text,strlink):
    links_from_external_projection = driver.find_elements_by_xpath("//*[@href]")
    links = []
    for e in links_from_external_projection:
+       # scholar is  href="/scholar?
        links.append(str(e.get_attribute("href")))
 
    from urllib.parse import urlparse
@@ -195,9 +196,11 @@ def scraplandtext(fi):
     categoryquery = category.replace(' ',"+")
     #set path for saving, and make the folder to save if it doesn't already exist
     path = fileLocation + '/' +  str(category) +'/'
+
     if not os.path.exists(path):
         os.makedirs(path)
-    os.chdir(fileLocation + '/' +  str(category) +'/')
+    os.chdir(path)    
+    #os.chdir(fileLocation + '/' +  str(category) +'/')
     time.sleep(randint(1,2)) #shor
 
     print(" ")
@@ -233,6 +236,7 @@ def scraplandtext(fi):
         elem = driver.find_elements_by_xpath("//*[@href]")
         linkChecker = []
         linkChecker = [ e for e in elem if "https://scholar.google.com/scholar?" in str(e.get_attribute("href")) ]
+        # scholar is  href="/scholar?
 
         strings_to_process = []
         for linko in linkChecker:
@@ -252,6 +256,7 @@ def scraplandtext(fi):
         continue_link = driver.find_element_by_tag_name('a')
         elem = None
         elem = driver.find_elements_by_xpath("//*[@href]")
+        #href="/search?q=
         linkChecker = [ e for e in elem if "https://www.bing.com/search?q=" in str(e.get_attribute("href")) ]
         linkChecker = [ strlink for strlink in linkChecker if 'r.bat' not in strlink.get_attribute("href") or 'r.msn' \
          not in strlink.get_attribute("href") or'www.bing.com/news/search' not in strlink.get_attribute("href") ]
@@ -297,14 +302,28 @@ def scraplandtext(fi):
                 break
         if type(marker) is not type(None):
             stp = [ (i,j, searchName) for i,j in enumerate(stp[marker+1:49]) ]
+        import dask.bag as db
+        bstp = db.from_sequence(stp, npartitions=8)
+
         _ = list(map(contents_to_file,stp))
     except:
         #print('file doesn\'t exist yet')
         #if type(strings_to_process) is not type(None):
+        import dask.bag as db
+        bstp = db.from_sequence(stp, npartitions=8)
+
         _ = list(map(contents_to_file,stp))
     return None
 #flat_iter =[ (b,x,category) for b in range(0,web): for x, category in enumerate(searchList) ]
     #define the search term
 _ = list(map(scraplandtext,flat_iter))
+
+#sl = [ (i, val) for i, val in enumerate(flat_iter)
+import dask.bag as db
+bi = db.from_sequence(flat_iter, npartitions=8)
+
+print(b)
+#_ = list(db.map(scraplandtext,b).compute())#.result()\n",
+
 driver.close() #close the driver
 exit

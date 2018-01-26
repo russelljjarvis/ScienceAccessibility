@@ -1,52 +1,29 @@
-#set parameters- THESE ARE ALL USER DEFINED
-#searchList = ['GMO']
 import os
-#os.system('ipcluster start -n 8 --profile=default & sleep 15 ;  ')
 import dask
-searchList = ['GMO','Genetically Modified Organism']
-#import os
-import nltk
-nltk.download('punkt')
-nltk.download('averaged_perceptron_tagger')
-from nltk import word_tokenize,sent_tokenize
 import matplotlib # Its not that this file is responsible for doing plotting, but it calls many modules that are, such that it needs to pre-empt
 # setting of an appropriate backend.
 matplotlib.use('Agg')
 import sys
-import os
-
-current_dir = os.getcwd()
-web = 4 #number of search websites being implemented (google, google scholar, bing, yahoo)
-numURLs = 50 #number of URLs per search website  (number determined by 1.scrape code)
-
-#set filePath below to specify where the text Data is located on your machine
-fileLocation = os.getcwd()
-
-if not os.path.exists(fileLocation):
-    os.makedirs(fileLocation)
-
-#import ipyparallel as ipp
-#rc = ipp.Client(profile='default')
-#from ipyparallel import depend, require, dependent
-#dview = rc[:]
-
-
-##once the above is set you can run the code!
-#this code assumes you've run the ScrapLinksandText code - it requires the text files it generates
-
-########################################################################
-#call in necessary packages that code requires to operate and define additional vars
 import numpy
 import numpy as np
 import scipy.io as sio
+import scipy
 import math
 import re
 from bs4 import BeautifulSoup
 import matplotlib
 import json
 import requests
+import time
+from tabulate import tabulate
+from textblob import TextBlob
+import glob
 
+#NLTK
 import nltk
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
+from nltk import word_tokenize,sent_tokenize
 from nltk import sent_tokenize, word_tokenize, pos_tag
 from nltk.probability import FreqDist
 from nltk.classify import NaiveBayesClassifier
@@ -57,20 +34,40 @@ from nltk import compat
 #from nltk.compat import Counter
 from nltk.draw import dispersion_plot
 
+#functions to perform text analysis
 from textstat.textstat import textstat
-import time
-from tabulate import tabulate
-from textblob import TextBlob
 
-import glob
-
+current_dir = os.getcwd()
+########################################################################
+########################################################################
 ########################################################################
 
+# Set user parameters based on type of analysis
 searchList = ['GMO','Genetically_Modified_Organism','Transgenic','Vaccine']
+nweb = 2 #number of search websites being implemented (google, google scholar, bing, yahoo)
+numURLs = 10 #number of URLs per search website  (number determined by 1.scrape code)
+
+#save the parameters for analysis purposes
+save_dict = { 'searchList':searchList, 'nweb':nweb, 'numURLs':numURLs}
+handle = 'Data/analysis.mat'
+scipy.io.savemat(handle, mdict=save_dict, oned_as='row')
+
+
+#set filePath below to specify where the text Data is located on your machine
+fileLocation = os.getcwd()
+
+if not os.path.exists(fileLocation):
+    os.makedirs(fileLocation)
+
+########################################################################
+########################################################################
+########################################################################
 
 #for s, value in enumerate(searchList):
-def iter_over(searchListElement):
-    s, value = searchListElement
+#def iter_over(searchListElement):
+sl = [ (i, val) for i, val in enumerate(searchList) ]
+for s, value in sl:
+    #s, value = searchListElement
 
     if not os.path.exists(str(fileLocation) + '/' + str(value) +'/'):
         os.makedirs(str(fileLocation) + '/' + str(value) +'/')
@@ -83,13 +80,10 @@ def iter_over(searchListElement):
     print ("Term {0} of {1} : {2}".format(s+1 , str(len(searchList)), value))
     print (" ")
     print ("###############################################")
-    web = [ "google_","gScholar_","bing_","yahoo_" ]
-    #web = [ "bing_"]
-    # Note for long term code maintaince it will be better to flatten the
-    # Iterator, as below by building the iterator first in a list comprehension
-    # The idea is multilayered nested clauses leads to more bugs.
-    # cflattened = [ (p,b,textName) for b, textName in enumerate(web) for p in range(0,numURLs) ]
-    for b, _ in enumerate(web):
+    #web = [ "google_","gScholar_","bing_","yahoo_" ]
+    #web = [0:nweb]
+    for b in range(0,nweb):
+    #for b, _ in enumerate(web):
         #search engine selection
         if b == 0:
             textName = "google_"
@@ -107,12 +101,12 @@ def iter_over(searchListElement):
         #import pdb; pdb.set_trace()
         #list_of_files = glob.glob(r'textName*.p')
         list_of_files = sorted(glob.glob(str(textName)+r'*.p'))
-        if len(list_of_files) >= 50:
-            list_of_files =  sorted(list_of_files[0:49])
+        #if len(list_of_files) >= 50:
+        list_of_files =  sorted(list_of_files[0:numURLs-1])
 
         for p,fileName in enumerate(list_of_files):
             print ("-------------------------------------------")
-            print ("Analyzing Search Engine " + str(b+1) + " of " + str(web) + ": Link " + str(p)); print ("");
+            print ("Analyzing Search Engine " + str(b+1) + " of " + str(nweb) + ": Link " + str(p)); print ("");
             #open and read text q
 
             #fileName = l#'{0}{1}.p'.format(textName,p+1)
@@ -128,79 +122,10 @@ def iter_over(searchListElement):
             else:
 
                 url_text = file_contents
-            #print(url_text)
-                #fileHandle.read()
-            #fileHandle.close()
-            #url_text = url_text.decode('ascii','ignore')
 
             #initialize dataArray Dictionary
             urlDat = {}
-            '''
-            urlDat[1,1] = 0#"Number of Words"
-            urlDat[2,1] = 1#"Number of Sentences"
-            urlDat[3,1] = 2#"Frequency of Search Term"
-            urlDat[4,1] = 3#"Sentiment Analysis"
-            urlDat[5,1] = 4#"Subjectivity Analysis"
-            urlDat[6,1] = 5#"Grade level"
-            urlDat[7,1] = 6#"Flesch Reading Ease"
-            urlDat[8,1] = 7#"SMOG Index"
-            urlDat[9,1] = 8#"Coleman Liau"
-            urlDat[10,1] = 9#"Automated Readability Index"
-            urlDat[11,1] = 10#"Gunning Fog"
-            urlDat[12,1] = 11#"Dale Chall Readability Score"
-            urlDat[13,1] = 12#"Difficult Words"
-            urlDat[14,1] = 13#"Linsear Write Formula"
-            urlDat[15,1] = 14#"Text Standard"
-
-
-            urlDat[1,1] = "Number of Words".encode('ascii','ignore')
-            urlDat[2,1] = "Number of Sentences".encode('ascii','ignore')
-            urlDat[3,1] = "Frequency of Search Term".encode('ascii','ignore')
-            urlDat[4,1] = "Sentiment Analysis".encode('ascii','ignore')
-            urlDat[5,1] = "Subjectivity Analysis".encode('ascii','ignore')
-            urlDat[6,1] = "Grade level".encode('ascii','ignore')
-            urlDat[7,1] = "Flesch Reading Ease".encode('ascii','ignore')
-            urlDat[8,1] = "SMOG Index".encode('ascii','ignore')
-            urlDat[9,1] = "Coleman Liau".encode('ascii','ignore')
-            urlDat[10,1] = "Automated Readability Index".encode('ascii','ignore')
-            urlDat[11,1] = "Gunning Fog".encode('ascii','ignore')
-            urlDat[12,1] = "Dale Chall Readability Score".encode('ascii','ignore')
-            urlDat[13,1] = "Difficult Words".encode('ascii','ignore')
-            urlDat[14,1] = "Linsear Write Formula".encode('ascii','ignore')
-            urlDat[15,1] = "Text Standard".encode('ascii','ignore')
-
-            urlDat[1,1] = "Number of Words".encode("utf-16")
-            urlDat[2,1] = "Number of Sentences".encode("utf-16")
-            urlDat[3,1] = "Frequency of Search Term".encode("utf-16")
-            urlDat[4,1] = "Sentiment Analysis".encode("utf-16")
-            urlDat[5,1] = "Subjectivity Analysis".encode("utf-16")
-            urlDat[6,1] = "Grade level".encode("utf-16")
-            urlDat[7,1] = "Flesch Reading Ease".encode("utf-16")
-            urlDat[8,1] = "SMOG Index".encode("utf-16")
-            urlDat[9,1] = "Coleman Liau".encode("utf-16")
-            urlDat[10,1] = "Automated Readability Index".encode("utf-16")
-            urlDat[11,1] = "Gunning Fog".encode("utf-16")
-            urlDat[12,1] = "Dale Chall Readability Score".encode("utf-16")
-            urlDat[13,1] = "Difficult Words".encode("utf-16")
-            urlDat[14,1] = "Linsear Write Formula".encode("utf-16")
-            urlDat[15,1] = "Text Standard".encode("utf-16")
-            '''
-            urlDat[1,1] = str("Number of Words")
-            urlDat[2,1] = str("Number of Sentences")#.encode("utf-16")
-            urlDat[3,1] = str("Frequency of Search Term")#.encode("utf-16")
-            urlDat[4,1] = str("Sentiment Analysis")#.encode("utf-16")
-            urlDat[5,1] = str("Subjectivity Analysis")#.encode("utf-16")
-            urlDat[6,1] = str("Grade level")#.encode("utf-16")
-            urlDat[7,1] = str("Flesch Reading Ease")#.encode("utf-16")
-            urlDat[8,1] = str("SMOG Index")#.encode("utf-16")
-            urlDat[9,1] = str("Coleman Liau")#.encode("utf-16")
-            urlDat[10,1] = str("Automated Readability Index")#.encode("utf-16")
-            urlDat[11,1] = str("Gunning Fog")#.encode("utf-16")
-            urlDat[12,1] = str("Dale Chall Readability Score")#.encode("utf-16")
-            urlDat[13,1] = str("Difficult Words")#.encode("utf-16")
-            urlDat[14,1] = str("Linsear Write Formula")#.encode("utf-16")
-            urlDat[15,1] = str("Text Standard")#.encode("utf-16")
-
+            
             ########################################################################
             #remove unreadable characters
             url_text = url_text.replace("-", " ") #remove characters that nltk can't read
@@ -214,13 +139,13 @@ def iter_over(searchListElement):
             URLtext = word_tokenize(url_text)
             URLtext = [w.lower() for w in URLtext] #make everything lower case
 
-            urlDat[1,2] = textstat.lexicon_count(str(url_text))
+            urlDat[1,1] = textstat.lexicon_count(str(url_text))
             #import pdb; pdb.set_trace()
             #sentences
             sents = sent_tokenize(url_text) #split all of text in to sentences
             sents = [w.lower() for w in sents] #lowercase all
 
-            urlDat[2,2]   = len(sents) #determine number of sentences
+            urlDat[2,1]   = len(sents) #determine number of sentences
 
             ########################################################################
             ##frequency distribtuion of text
@@ -232,7 +157,7 @@ def iter_over(searchListElement):
             fd_temp = list(fdist.items())
 
 
-            urlDat[3,2] = fdist[searchList[s].lower()] #frequency of search term
+            urlDat[3,1] = fdist[searchList[s].lower()] #frequency of search term
             frexMost = fdist.most_common(15) #show N most common words
 
             fAll = {}
@@ -265,8 +190,7 @@ def iter_over(searchListElement):
                 WperS[n] = len(sent) #number of words per sentence
 
                 #syllable analysis
-                # aetna student health
-                # 8774804161
+
             for x, _ in enumerate(sent):
 
                 word = sent[x]
@@ -277,83 +201,61 @@ def iter_over(searchListElement):
             #
             ########################################################################
             ## Complexity Analysis
-            try:
-                assert len(url_text) != 0
-                urlDat[6,2]  = textstat.flesch_kincaid_grade(str(url_text))
-                urlDat[7,2] = textstat.flesch_reading_ease(str(url_text))
-                urlDat[8,2]  = textstat.smog_index(str(url_text))
-                urlDat[9,2]  = textstat.coleman_liau_index(str(url_text))
-                urlDat[10,2]  = textstat.automated_readability_index(str(url_text))
-                urlDat[11,2] = textstat.gunning_fog(str(url_text))
+            #try:
+            assert len(url_text) != 0
+            assert type(url_text) is not type(None)
+            urlDat[6,1]  = textstat.flesch_kincaid_grade(str(url_text))
+            urlDat[7,1] = textstat.flesch_reading_ease(str(url_text))
+            urlDat[8,1]  = textstat.smog_index(str(url_text))
+            urlDat[9,1]  = textstat.coleman_liau_index(str(url_text))
+            urlDat[10,1]  = textstat.automated_readability_index(str(url_text))
+            urlDat[11,1] = textstat.gunning_fog(str(url_text))
 
-                urlDat[12,2]  = textstat.dale_chall_readability_score(str(url_text))
-                urlDat[13,2]  = textstat.difficult_words(str(url_text))
-                urlDat[14,2]  = textstat.linsear_write_formula(str(url_text))
-                urlDat[15,2]  = textstat.text_standard(str(url_text))
-                ########################################################################
-                ##defining part of speech for each word
-                wordsPOS = pos_tag([w.lower() for w in URLtext if w.isalpha()])
+            urlDat[12,1]  = textstat.dale_chall_readability_score(str(url_text))
+            urlDat[13,1]  = textstat.difficult_words(str(url_text))
+            urlDat[14,1]  = textstat.linsear_write_formula(str(url_text))
+            urlDat[15,1]  = textstat.text_standard(str(url_text))
+            #import pdb
+            #pdb.set_trace()
 
-                PS = {}
-                for x in range(0,len(wordsPOS)) :
-                    PS[x,1], PS[x,2] = [y.strip('}()",{:') for y in (str(wordsPOS[x])).split(',')]
+            ########################################################################
+            ##Sentiment and Subjectivity analysis
+            testimonial = TextBlob(url_text)
+            testimonial.sentiment
+            ##defining part of speech for each word
+            from nltk.tag.perceptron import PerceptronTagger
+            tagger = PerceptronTagger(load=False)
 
-                ########################################################################
-                ##Sentiment and Subjectivity analysis
-                testimonial = TextBlob(url_text)
-                testimonial.sentiment
-                ##defining part of speech for each word
-                from nltk.tag.perceptron import PerceptronTagger
-                tagger = PerceptronTagger(load=False)
+            urlDat[4,1] = testimonial.sentiment.polarity
+            urlDat[5,1] = testimonial.sentiment.subjectivity
 
-                urlDat[4,2] = testimonial.sentiment.polarity
-                urlDat[5,2] = testimonial.sentiment.subjectivity
+            #time.sleep(1); #print (""); print (""); print ("");
+            ########################################################################
+            ##convert all dict variables to list for multidimensional conversion to matlab cell array
+            urlDat = list(urlDat.items())
+            sentSyl = list(sentSyl.items())
+            WperS = list(WperS.items())
+            fAll = list(fAll.items())
+            fM = list(fM.items())
 
-                #print it all pretty-like
-                plotDat = [[str(urlDat[1,1]) + ": " + str(urlDat[1,2])], [str(urlDat[2,1]) + ": " + str(urlDat[2,2])],
-                               [str(urlDat[3,1]) + ": " + str(urlDat[3,2])], [str(urlDat[4,1]) + ": " + str(urlDat[4,2])],
-                               [str(urlDat[5,1]) + ": " + str(urlDat[5,2])], [str(urlDat[6,1]) + ": " + str(urlDat[6,2])],
-                               [str(urlDat[7,1]) + ": " + str(urlDat[7,2])], [str(urlDat[8,1]) + ": " + str(urlDat[8,2])],
-                               [str(urlDat[9,1]) + ": " + str(urlDat[9,2])], [str(urlDat[10,1]) + ": " + str(urlDat[10,2])],
-                               [str(urlDat[11,1]) + ": " + str(urlDat[11,2])], [str(urlDat[12,1]) + ": " + str(urlDat[12,2])],
-                               [str(urlDat[13,1]) + ": " + str(urlDat[13,2])], [str(urlDat[14,1]) + ": " + str(urlDat[14,2])],
-                               [str(urlDat[15,1]) + ": " + str(urlDat[15,2])]]
+            ##generate a .mat file for further analysis in matlab
+            if b == 0 and p == 0:
+                obj_arr = np.array([urlDat, WperS, sentSyl, fM, fAll], dtype=np.object)
+                print('dimensions change of object array: ',np.shape(obj_arr),np.shape(urlDat))
+                old = np.shape(obj_arr)
 
-                headers = ["Complexity Results:"]; print (tabulate(plotDat,headers,tablefmt="simple",stralign="left"))
-                time.sleep(1); print (""); print (""); print ("");
-                ########################################################################
-                ##convert all dict variables to list for multidimensional conversion to matlab cell array
-                urlDat = list(urlDat.items())
-                sentSyl = list(sentSyl.items())
-                WperS = list(WperS.items())
-                fAll = list(fAll.items())
-                fM = list(fM.items())
-                PS = list(PS.items())
-
-                ##generate a .mat file for further analysis in matlab
-                if b == 0 and p == 0:
-                    obj_arr = np.array([urlDat,WperS, sentSyl, fM, PS, fAll], dtype=np.object)
-                else:
-                    obj_arr_add = np.array([urlDat,WperS, sentSyl, fM, PS, fAll], dtype=np.object)
-                    obj_arr = np.vstack( [obj_arr, obj_arr_add] , dtype=np.object)
-                my_dict = {'obj_arr':obj_arr}
-                import scipy
-                handle = searchList[s]  + '.mat'
-                scipy.io.savemat(handle, mdict={ 'obj_arr' : my_dict}, oned_as='row')
-                
-            except:
-                print('number of words is zero on that link, so analysis will fail')
-            
-            return obj_arr
-            #h.create_dataset(name=str(p)+searchList[s], data=np.array(obj_arr))
-            #save('test.mat','-v7')
-            #f = h5py.File(handle,'wr')
-            #data = f.get('data/variable1')
-            #mat_contents = scipy.io.loadmat(handle)
-            #print(mat_contents, 'matrix contents')
+                #import pdb; pdb.set_trace()
+            else:
+                obj_arr_add = np.array([urlDat ,WperS, sentSyl, fM, fAll], dtype=np.object)
+                assert type(obj_arr) is not type(None)
 
 
-#searchList
+                print('dimensions change of object array: ',np.shape(obj_arr),np.shape(urlDat))
+                obj_arr = np.vstack( [obj_arr, obj_arr_add])
 
+                assert np.shape(obj_arr) != old
+                old = np.shape(obj_arr)
 
-#exit()
+            handle = str('../Data/') + str(searchList[s]) + str('_term_')+ str(s)+ '.mat'
+            import scipy
+            scipy.io.savemat(handle, {'obj_arr':obj_arr} , oned_as='row')

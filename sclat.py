@@ -3,7 +3,7 @@ web = 4 #how many search engines to include (4 possible- google google scholar b
 linkstoget = 50 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
 
 #search terms of interest
-searchList = ['Vaccine','Transgenic','BrainScales SpiNNaker','GMO','Genetically_Modified_Organism']
+searchList = ['Vaccine','Transgenic','GMO','Genetically_Modified_Organism']
 import sys
 import os
 
@@ -104,8 +104,9 @@ def csr(text,strlink):
        print('probably links to self')
        print(strlink,text)
    for l in links:
-       if str(baseURL) in str(l):
-           return True
+      print('conclusively links to self')
+      if str(baseURL) in str(l):
+          return True
    return False
 
 
@@ -118,64 +119,78 @@ def contents_to_file(contents):
    '''
    incrementor, strlink, searchName = contents
    if 'pdf' in strlink:
-       try:
-           pdf_file = str(urllib.request.urlopen(strlink).read())
-           assert type(pdf_file) is type(str)
-           memoryFile = StringIO(pdf_file)
-           parser = PDFParser(memoryFile)
-           document = PDFDocument(parser)
+       #try:
+       pdf_file = str(urllib.request.urlopen(strlink).read())
+       assert type(pdf_file) is type(str)
+       memoryFile = StringIO(pdf_file)
+       parser = PDFParser(memoryFile)
+       document = PDFDocument(parser)
 
-           # Process all pages in the document
-           for page in PDFPage.create_pages(document):
-               interpreter.process_page(page)
-               write_text +=  retstr.getvalue()
+       # Process all pages in the document
+       for page in PDFPage.create_pages(document):
+           interpreter.process_page(page)
+           write_text +=  retstr.getvalue()
 
 
-           str_text = str(write_text)
+       str_text = str(write_text)
+       write_text = str_text.encode('ascii','ignore')
+       fileName = searchName  + str(incrementor) + ".txt" #create text file save name
+       f = open(fileName, 'w')
+       f.write(write_text)
+       f.close()
 
-           fileName = searchName +str(incrementor) + ".p" #create text file save name
-           print(fileName, 'filename')
-           print(type(str_text))
-           f = open(fileName, 'wb')
-           from datetime import datetime
-           st = datetime.utcnow().strftime('%Y-%m-%d_%H:%M:%S.%f')[:-3]
-           pickle.dump([st, str_text],f)
-       except:
-           print('bad link',strlinkto)
+
+       fileName = searchName +str(incrementor) + ".p" #create text file save name
+       print(fileName, 'filename')
+       print(type(str_text))
+       f = open(fileName, 'wb')
+       from datetime import datetime
+       st = datetime.utcnow().strftime('%Y-%m-%d_%H:%M:%S.%f')[:-3]
+       pickle.dump([st, str(write_text)],f)
+       #except:
+        #   print('bad link',strlinkto)
    else:
       #establish human agent header
       headers = {'User-Agent': str(ua.Firefox)}
       #try:
       #request website data using beautiful soup
-      try:
+      #try:
 
-          r = requests.get(strlink, headers=headers)
-          soup = BeautifulSoup(r.content, 'html.parser')
+      r = requests.get(strlink, headers=headers)
+      soup = BeautifulSoup(r.content, 'html.parser')
 
-          #strip HTML
-          for script in soup(["script", "style"]):
-                  script.extract()    # rip it out
+      #strip HTML
+      for script in soup(["script", "style"]):
+              script.extract()    # rip it out
 
-          # get text
-          text = soup.get_text()
+      # get text
+      text = soup.get_text()
 
-          #organize text
-          lines = (line.strip() for line in text.splitlines())  # break into lines and remove leading and trailing space on each
-          chunks = (phrase.strip() for line in lines for phrase in line.split("  ")) # break multi-headlines into a line each
-          text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines
-          str_text = str(text)
-          fileName = searchName +str(incrementor) + ".p" #create text file save name
+      #organize text
+      lines = (line.strip() for line in text.splitlines())  # break into lines and remove leading and trailing space on each
+      chunks = (phrase.strip() for line in lines for phrase in line.split("  ")) # break multi-headlines into a line each
+      text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines
+      str_text = str(text)
+      fileName = searchName +str(incrementor) + ".p" #create text file save name
+      #write contents to file - individual text file for each URL's scraped text
+      write_text = text.encode('ascii','ignore')
+      fileName = searchName  + str(incrementor) + ".txt" #create text file save name
+      f = open(fileName, 'w')
+      f.write(str(write_text))
+      f.close()
 
-          print(fileName, 'filename')
-          print(type(str_text))
+      print(fileName, 'filename')
+      print(type(str_text))
 
-          f = open(fileName, 'wb')
-          from datetime import datetime
-          st = datetime.utcnow().strftime('%Y-%m-%d_%H:%M:%S.%f')[:-3]
-          pickle.dump([st, str_text],f)
+      f = open(fileName, 'wb')
+      from datetime import datetime
+      st = datetime.utcnow().strftime('%Y-%m-%d_%H:%M:%S.%f')[:-3]
+      pickle.dump([st, str(write_text)],f)
 
-      except:
-          print('bad link',strlink)
+
+      #except:
+      #      print('bad link',strlink)
+
 
    f = None
    return None
@@ -199,7 +214,7 @@ def scraplandtext(fi):
 
     if not os.path.exists(path):
         os.makedirs(path)
-    os.chdir(path)    
+    os.chdir(path)
     #os.chdir(fileLocation + '/' +  str(category) +'/')
     time.sleep(randint(1,2)) #shor
 

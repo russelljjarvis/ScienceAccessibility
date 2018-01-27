@@ -5,6 +5,8 @@
 
 ## NB: I renamed TextAnalysis_v3.py t_analysis.py 
 
+
+
 # Launch Graphically in OSX
 ## 1 
 click on whale symbol 
@@ -12,6 +14,8 @@ click on whale symbol
 click Kitematic in drop down. 
 ## 3.
 
+# inside Kitematic find this docker container through the repository:
+https://hub.docker.com/r/russelljarvis/run_all_wcomplexity/
 in search bar type: run_all_complexity, 
 ## 4. 
 click on it and follow download and run links. 

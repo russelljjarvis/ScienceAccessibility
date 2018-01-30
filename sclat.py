@@ -119,6 +119,7 @@ def contents_to_file(contents):
    '''
    incrementor, strlink, searchName = contents
    if 'pdf' in strlink:
+       import urllib
        #try:
        pdf_file = str(urllib.request.urlopen(strlink).read())
        assert type(pdf_file) is type(str)
@@ -294,14 +295,33 @@ def scraplandtext(fi):
         continue_link = driver.find_element_by_tag_name('a')
         elem = None
         elem = driver.find_elements_by_xpath("//*[@href]")
-        linkChecker = [ e for e in elem if "http://r.search.yahoo.com/_ylt=" in str(e.get_attribute("href")) ]
+        linkChecker = [ e for e in elem if "https://r.search.yahoo.com" in str(e.get_attribute("href")) ]
 
         strings_to_process = []
         for linko in linkChecker:
             strlink = linko.get_attribute("href")
             strings_to_process.append(strlink)
-            #print(strlink)
 
+    '''	
+    elif b == 4:
+        searchName = "duckduckgo_" #output name for text file
+        #https://duckduckgo.com/?q=  #Vaccine&t=hf&atb=v73-3_q&ia=web
+        #https://duckduckgo.com/?q=  #GMO&t=hf&atb=v73-3_q&ia=stock
+        linkName =  "https://duckduckgo.com/?q=" #search engine web address
+        pagestring = linkName + "&q=" + categoryquery # googles
+        print("Google")
+        driver.get(pagestring)
+        continue_link = driver.find_element_by_tag_name('a')
+        elem = None
+        elem = driver.find_elements_by_xpath("//*[@href]")
+        #linkChecker = [ e for e in elem if "http://r.search.yahoo.com/_ylt=" in str(e.get_attribute("href")) ]
+
+        strings_to_process = []
+        for linko in elem:
+            strlink = linko.get_attribute("href")
+            strings_to_process.append(strlink)
+            #print(strlink)
+    '''
     # only check the first 50 links : [0,49]
 
     # This code is here, to start up where left off, if HTTP requests are denied, because exceeded
@@ -337,7 +357,7 @@ _ = list(map(scraplandtext,flat_iter))
 import dask.bag as db
 bi = db.from_sequence(flat_iter, npartitions=8)
 
-print(b)
+#print(b)
 #_ = list(db.map(scraplandtext,b).compute())#.result()\n",
 
 driver.close() #close the driver

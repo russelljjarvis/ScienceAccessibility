@@ -40,20 +40,24 @@ import json
 
 from textstat.textstat import textstat
 
+import os
+os.system('pip install natsort')
+from natsort import natsorted, ns
+
 ########################################################################
 ########################################################################
 ########################################################################
 # Set user parameters based on type of analysis
 searchList = ['GMO','Genetically_Modified_Organism','Transgenic','Vaccine']
-nweb = 1 #number of search websites being implemented (google, google scholar, bing, yahoo)
-numURLs = 10 #number of URLs per search website  (number determined by 1.scrape code)
+nweb = 4 #number of search websites being implemented (google, google scholar, bing, yahoo)
+numURLs = 26 #number of URLs per search website  (number determined by 1.scrape code)
 
 #also save these parameters for analysis purposes
 spec_dict = { 'searchList':searchList, 'nweb':nweb, 'numURLs':numURLs}
 handle = 'Data/analysisSpecs.mat'
 scipy.io.savemat(handle, mdict=spec_dict, oned_as='row')
 handle = None
-
+TEXT_FOUNTAIN = False
 ########################################################################
 ########################################################################
 ########################################################################
@@ -73,14 +77,12 @@ infoDat[11,1] = "Gunning Fog"
 infoDat[12,1] = "Dale Chall Readability Score"
 infoDat[13,1] = "Difficult Words"
 infoDat[14,1] = "Linsear Write Formula"
-infoDat[15,1] = "Text Standard"
 
 #save these parameters for analysis purposes
 infoDat = list(infoDat.items())
 handle = 'Data/analysisInfo.mat'
 scipy.io.savemat(handle, {'infoDat':infoDat})
 handle = None
-
 ########################################################################
 ########################################################################
 ########################################################################
@@ -97,7 +99,7 @@ if not os.path.exists(fileLocation):
 
 #for s, value in enumerate(searchList):
 #def iter_over(searchListElement):
-date_created = {}
+date_created = []
 sl = [ (i, val) for i, val in enumerate(searchList) ]
 for s, value in sl:
     #s, value = searchListElement
@@ -130,28 +132,31 @@ for s, value in sl:
         elif b == 3:
             textName = "yahoo_"
             print ("Yahoo")
-
-        #import pdb; pdb.set_trace()
-        #list_of_files = glob.glob(r'textName*.p')
-        list_of_files = sorted(glob.glob(str(textName)+r'*.p'))
-        #if len(list_of_files) >= 50:
-        list_of_files =  sorted(list_of_files[0:numURLs-1])
+        # grab all the file names ending with pickle suffix.
+        list_of_files = natsorted(glob.glob(str(textName)+r'*.p'))
+        # select only a subset of them.
+        list_of_files =  natsorted(list_of_files[0:numURLs-1])
 
         for p,fileName in enumerate(list_of_files):
             print ("-------------------------------------------")
             print ("Analyzing Search Engine " + str(b+1) + " of " + str(nweb) + ": Link " + str(p)); print ("");
             #open and read text q
 
-            #fileName = l#'{0}{1}.p'.format(textName,p+1)
-            print(fileName)
-            print(os.getcwd(), 'pwd')
             import pickle
 
             fileHandle = open(fileName, 'rb');
             file_contents = pickle.load(fileHandle)
             fileHandle.close()
+
+            if TEXT_FOUNTAIN == True:
+                # Recover the initial text file data, corresponding to both PDFs and html web page content.
+                # Used for interoperable reproducibility.
+                f = open(str(fileName)+'.txt','w')
+                f.write(str(file_contents.encode('ascii','ignore')))
+                f.close()
+
             if len(file_contents) == 2:
-                date_created[fileHandle] = file_contents[0]
+                date_created.append((str(fileName), file_contents[0]))
                 url_text = file_contents[1]
 
             else:
@@ -238,70 +243,69 @@ for s, value in sl:
             #
             ########################################################################
             ## Complexity Analysis
-            #try:
-            assert len(url_text) != 0
-            assert type(url_text) is not type(None)
-            urlDat[6,1]  = textstat.flesch_kincaid_grade(str(url_text))
-            urlDat[7,1] = textstat.flesch_reading_ease(str(url_text))
-            urlDat[8,1]  = textstat.smog_index(str(url_text))
-            urlDat[9,1]  = textstat.coleman_liau_index(str(url_text))
-            urlDat[10,1]  = textstat.automated_readability_index(str(url_text))
-            urlDat[11,1] = textstat.gunning_fog(str(url_text))
+            try:
+                assert len(url_text) != 0
+                #assert type(url_text) is not type(None)
+                urlDat[6,1]  = textstat.flesch_kincaid_grade(str(url_text))
+                urlDat[7,1] = textstat.flesch_reading_ease(str(url_text))
+                urlDat[8,1]  = textstat.smog_index(str(url_text))
+                urlDat[9,1]  = textstat.coleman_liau_index(str(url_text))
+                urlDat[10,1]  = textstat.automated_readability_index(str(url_text))
+                urlDat[11,1] = textstat.gunning_fog(str(url_text))
 
-            urlDat[12,1]  = textstat.dale_chall_readability_score(str(url_text))
-            urlDat[13,1]  = textstat.difficult_words(str(url_text))
-            urlDat[14,1]  = textstat.linsear_write_formula(str(url_text))
-            urlDat[15,1]  = textstat.text_standard(str(url_text))
-            #import pdb
-            #pdb.set_trace()
+                urlDat[12,1]  = textstat.dale_chall_readability_score(str(url_text))
+                urlDat[13,1]  = textstat.difficult_words(str(url_text))
+                urlDat[14,1]  = textstat.linsear_write_formula(str(url_text))
 
-            ########################################################################
-            ########################################################################
-            ########################################################################
-            ########################################################################
-            #clean-up and prep for saving for subsequent analysis and plotting
+                ########################################################################
+                ########################################################################
+                ########################################################################
+                ########################################################################
+                #clean-up and prep for saving for subsequent analysis and plotting
 
-            ##convert all dict variables to list for multidimensional conversion to matlab cell array
-            urlDat = list(urlDat.items())
-            sentSyl = list(sentSyl.items())
-            WperS = list(WperS.items())
-            fAll = list(fAll.items())
-            fM = list(fM.items())
+                ##convert all dict variables to list for multidimensional conversion to matlab cell array
+                urlDat = list(urlDat.items())
+                sentSyl = list(sentSyl.items())
+                WperS = list(WperS.items())
+                fAll = list(fAll.items())
+                fM = list(fM.items())
 
-            ##generate a .mat file for further analysis in matlab
-            if b == 0 and p == 0:
-                obj_arr = np.array([urlDat, WperS, sentSyl, fM, fAll], dtype=np.object)
+                ##generate a .mat file for further analysis in matlab
+                if b == 0 and p == 0:
+                    obj_arr = np.array([urlDat, WperS, sentSyl, fM, fAll], dtype=np.object)
 
-                #obj_arr = np.array([urlDat, WperS, sentSyl, fM, fAll], dtype=np.object)
-                print('dimensions change of object array: ',np.shape(obj_arr),np.shape(urlDat))
-                old = np.shape(obj_arr)
+                    #obj_arr = np.array([urlDat, WperS, sentSyl, fM, fAll], dtype=np.object)
+                    print('dimensions change of object array: ',np.shape(obj_arr),np.shape(urlDat))
+                    old = np.shape(obj_arr)
 
-            else:
-                obj_arr_add = np.array([urlDat, WperS, sentSyl, fM, fAll], dtype=np.object)
+                else:
+                    obj_arr_add = np.array([urlDat, WperS, sentSyl, fM, fAll], dtype=np.object)
 
-                #obj_arr_add = np.array([urlDat, WperS, sentSyl, fM, fAll], dtype=np.object)
+                    #obj_arr_add = np.array([urlDat, WperS, sentSyl, fM, fAll], dtype=np.object)
 
-                print('dimensions change of object array: ',np.shape(obj_arr),np.shape(urlDat))
+                    print('dimensions change of object array: ',np.shape(obj_arr),np.shape(urlDat))
 
-                obj_arr = np.vstack( [obj_arr, obj_arr_add])
-                assert type(obj_arr) is not type(None)
-                assert np.shape(obj_arr) != old
-                old = np.shape(obj_arr)
-            # File path is equivalent to Term.mat
-            handle = str('../Data/') + str(searchList[s]) + '.mat'
-            import scipy
-            scipy = None
-            import scipy
-            scipy.io.savemat(handle, {'obj_arr':obj_arr})
-            print(scipy.io.loadmat(handle))
-            handle = None
-
+                    obj_arr = np.vstack( [obj_arr, obj_arr_add])
+                    assert type(obj_arr) is not type(None)
+                    assert np.shape(obj_arr) != old
+                    old = np.shape(obj_arr)
+                # File path is equivalent to Term.mat
+                handle = str('../Data/') + str(searchList[s]) + '.mat'
+                #import scipy
+                scipy = None
+                import scipy
+                scipy.io.savemat(handle, {'obj_arr':obj_arr})
+                print(scipy.io.loadmat(handle))
+                handle = None
+            except:
+                print(len(url_text), 'zero size link text badness!')
+                pass
 
 os.chdir('../Data/')
 
-infoDated = list(date_created.items())
 handle = 'file_name_versus_date.mat'
-scipy.io.savemat(handle, {'infoDated':infoDated})
+scipy.io.savemat(handle, {'infoDated':date_created})
 
 os.system('octave read_mat.m')
+os.system('octave read_matSoft.m')
 exit

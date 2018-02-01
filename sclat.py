@@ -134,10 +134,10 @@ def contents_to_file(contents):
 
 
        str_text = str(write_text)
-       write_text = str_text.encode('ascii','ignore')
+       #write_text = str_text.encode('ascii','ignore')
        fileName = searchName  + str(incrementor) + ".txt" #create text file save name
        f = open(fileName, 'w')
-       f.write(write_text)
+       f.write(str_text)
        f.close()
 
 
@@ -361,4 +361,4 @@ bi = db.from_sequence(flat_iter, npartitions=8)
 #_ = list(db.map(scraplandtext,b).compute())#.result()\n",
 
 driver.close() #close the driver
-exit
+#exit

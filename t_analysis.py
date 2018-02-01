@@ -176,6 +176,11 @@ for s, value in sl:
             ########################################################################
             ##Splitting text into:
             #words.
+            #if url_text is not
+            print(url_text)
+            url_text = [ u for u in url_text if not '\x00' == u ]
+            boolean = '\x00' in url_text
+            print(boolean, 'boolean')
             URLtext = word_tokenize(url_text)
             URLtext = [w.lower() for w in URLtext] #make everything lower case
 

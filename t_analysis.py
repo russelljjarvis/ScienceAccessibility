@@ -146,7 +146,6 @@ for s, value in sl:
 
             fileHandle = open(fileName, 'rb');
             file_contents = pickle.load(fileHandle)
-            fileHandle.close()
 
             if TEXT_FOUNTAIN == True:
                 # Recover the initial text file data, corresponding to both PDFs and html web page content.
@@ -162,6 +161,7 @@ for s, value in sl:
             else:
 
                 url_text = file_contents
+            fileHandle.close()
 
             #initialize dataArray Dictionary
             urlDat = {}
@@ -177,10 +177,10 @@ for s, value in sl:
             ##Splitting text into:
             #words.
             #if url_text is not
-            print(url_text)
-            url_text = str([ u for u in url_text if not '\x00' == u ])
-            boolean = '\x00' in url_text
-            print(boolean, 'boolean')
+            #print(url_text)
+            #url_text = str([ u for u in url_text if not '\x00' == u ])
+            #boolean = '\x00' in url_text
+            #print(boolean, 'boolean')
             URLtext = word_tokenize(url_text)
             URLtext = [w.lower() for w in URLtext] #make everything lower case
 
@@ -275,6 +275,12 @@ for s, value in sl:
                 fAll = list(fAll.items())
                 fM = list(fM.items())
 
+                # check that these columns are even filling.
+                assert len(fAll) != 0
+                assert len(fM) != 0
+                assert len(sentSyl) != 0
+
+
                 ##generate a .mat file for further analysis in matlab
                 if b == 0 and p == 0:
                     obj_arr = np.array([urlDat, WperS, sentSyl, fM, fAll], dtype=np.object)
@@ -282,9 +288,17 @@ for s, value in sl:
                     #obj_arr = np.array([urlDat, WperS, sentSyl, fM, fAll], dtype=np.object)
                     print('dimensions change of object array: ',np.shape(obj_arr),np.shape(urlDat))
                     old = np.shape(obj_arr)
+                    print(obj_arr[-1],obj_arr[-2],obj_arr[-3])
+                    assert len(obj_arr[-1])!= 0
+                    assert len(obj_arr[-2])!= 0
+                    assert len(obj_arr[-3])!= 0
 
                 else:
                     obj_arr_add = np.array([urlDat, WperS, sentSyl, fM, fAll], dtype=np.object)
+                    print(obj_arr_add[-1],obj_arr_add[-2],obj_arr_add[-3])
+                    assert len(obj_arr_add[-1])!= 0
+                    assert len(obj_arr_add[-2])!= 0
+                    assert len(obj_arr_add[-3])!= 0
 
                     #obj_arr_add = np.array([urlDat, WperS, sentSyl, fM, fAll], dtype=np.object)
 

@@ -100,9 +100,19 @@ if not os.path.exists(fileLocation):
 #for s, value in enumerate(searchList):
 #def iter_over(searchListElement):
 date_created = []
-sl = [ (i, val) for i, val in enumerate(searchList) ]
+import pickle
+import os
+try:
+    assert os.path.isfile('last_iterator.p')
+    [s1,value1, obj_arr1, obj_arr_add1] = pickle.load(open('last_iterator.p', 'rb'))
+    if s1 > 0:
+        sl = [ (i, val) for i, val in enumerate(searchList[s1]) ]
+    import pdb
+    pdb.set_trace()
+except:
+    sl = [ (i, val) for i, val in enumerate(searchList) ]
+
 for s, value in sl:
-    #s, value = searchListElement
 
     if not os.path.exists(str(fileLocation) + '/' + str(value) +'/'):
         os.makedirs(str(fileLocation) + '/' + str(value) +'/')
@@ -118,7 +128,6 @@ for s, value in sl:
     #web = [0:nweb]
 
     for b in range(0,nweb):
-    #for b, _ in enumerate(web):
         #search engine selection
         if b == 0:
             textName = "google_"
@@ -149,7 +158,7 @@ for s, value in sl:
 
             if TEXT_FOUNTAIN == True:
                 # Recover the initial text file data, corresponding to both PDFs and html web page content.
-                # Used for interoperable reproducibility.
+                # Used to generate data for people who lack python, reproducibility.
                 f = open(str(fileName)+'.txt','w')
                 f.write(str(file_contents.encode('ascii','ignore')))
                 f.close()
@@ -185,8 +194,6 @@ for s, value in sl:
             URLtext = [w.lower() for w in URLtext] #make everything lower case
 
             urlDat[1,1] = textstat.lexicon_count(str(url_text))
-            #import pdb; pdb.set_trace()
-
             #sentences
             sents = sent_tokenize(url_text) #split all of text in to sentences
             sents = [w.lower() for w in sents] #lowercase all
@@ -248,8 +255,7 @@ for s, value in sl:
             #
             ########################################################################
             ## Complexity Analysis
-            try:
-                assert len(url_text) != 0
+            if len(url_text) != 0:
                 #assert type(url_text) is not type(None)
                 urlDat[6,1]  = textstat.flesch_kincaid_grade(str(url_text))
                 urlDat[7,1] = textstat.flesch_reading_ease(str(url_text))
@@ -279,35 +285,39 @@ for s, value in sl:
                 assert len(fAll) != 0
                 assert len(fM) != 0
                 assert len(sentSyl) != 0
-
-
                 ##generate a .mat file for further analysis in matlab
-                if b == 0 and p == 0:
+
+                if p == 0 or b == 0:
                     obj_arr = np.array([urlDat, WperS, sentSyl, fM, fAll], dtype=np.object)
 
-                    #obj_arr = np.array([urlDat, WperS, sentSyl, fM, fAll], dtype=np.object)
                     print('dimensions change of object array: ',np.shape(obj_arr),np.shape(urlDat))
                     old = np.shape(obj_arr)
-                    print(obj_arr[-1],obj_arr[-2],obj_arr[-3])
+
                     assert len(obj_arr[-1])!= 0
                     assert len(obj_arr[-2])!= 0
                     assert len(obj_arr[-3])!= 0
 
                 else:
                     obj_arr_add = np.array([urlDat, WperS, sentSyl, fM, fAll], dtype=np.object)
-                    print(obj_arr_add[-1],obj_arr_add[-2],obj_arr_add[-3])
+
                     assert len(obj_arr_add[-1])!= 0
                     assert len(obj_arr_add[-2])!= 0
                     assert len(obj_arr_add[-3])!= 0
 
-                    #obj_arr_add = np.array([urlDat, WperS, sentSyl, fM, fAll], dtype=np.object)
 
                     print('dimensions change of object array: ',np.shape(obj_arr),np.shape(urlDat))
 
                     obj_arr = np.vstack( [obj_arr, obj_arr_add])
+
                     assert type(obj_arr) is not type(None)
                     assert np.shape(obj_arr) != old
                     old = np.shape(obj_arr)
+
+
+                    f = open('last_iterator.p', 'wb')
+                    fi = [s,value, obj_arr, obj_arr_add]
+                    pickle.dump(fi,f)
+
                 # File path is equivalent to Term.mat
                 handle = str('../Data/') + str(searchList[s]) + '.mat'
                 #import scipy
@@ -316,7 +326,7 @@ for s, value in sl:
                 scipy.io.savemat(handle, {'obj_arr':obj_arr})
                 print(scipy.io.loadmat(handle))
                 handle = None
-            except:
+            else:
                 print(len(url_text), 'zero size link text badness!')
                 pass
 

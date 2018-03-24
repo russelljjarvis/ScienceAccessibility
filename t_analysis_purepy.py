@@ -272,3 +272,24 @@ import dask.bag as db
 b0 = db.from_sequence(sl)
 obj_arr_add = list(db.map(web_iter,b0).compute())
 obj_arr = finish_up(obj_arr_add)
+
+
+
+'''
+import dask.bag as db
+grid = {}
+grid['b']=[0,1,2,3]
+grid['value']=['GMO','Genetically_Modified_Organism','Transgenic','Vaccine']
+from sklearn.grid_search import ParameterGrid
+grid = list(ParameterGrid(grid))
+grid = [(dicti['b'],dicti['value']) for dicti in grid ]        
+grid = db.from_sequence(grid,npartitions = 8)
+obj_arr_add = list(db.map(web_iter,grid).compute())
+
+import pandas as pd
+df = pd.DataFrame(data=obj_arr_add)
+print(obj_arr_add)
+'''
+#df
+
+

@@ -42,7 +42,7 @@ from nltk import compat
 
 from bs4 import BeautifulSoup
 import json
-
+#!pip install git+"https://github.com/russelljjarvis/textstat.git"
 from textstat.textstat import textstat
 
 from natsort import natsorted, ns
@@ -125,16 +125,16 @@ def web_iter(args):
 
     #textName = 
     # grab all the file names ending with pickle suffix.
-    lo_query_links = natsorted(glob.glob(str(se[b])+r'*.p'))
+    lo_query_links = natsorted(glob.glob(+r'*.p'))
     print(lo_query_links)
     print(se[b])
-    # select only a subset of them.
+    # select only a subset of them.str(se[b])
     lo_query_links =  natsorted(lo_query_links[0:numURLs-1])
     list_per_links = []
     for p,fileName in enumerate(lo_query_links):
         
 
-        print ("Analyzing Search Engine " + str(b+1) + " of " + str(nweb) + ": Link " + str(p)); print ("");
+        print ("Analyzing Search Engine " + str(se[b]) + " of " + str(nweb) + ": Link " + str(p)); print ("");
 
         fileHandle = open(fileName, 'rb');
         file_contents = pickle.load(fileHandle)
@@ -157,6 +157,8 @@ def web_iter(args):
 
         #initialize dataArray Dictionary
         urlDat = {}
+        urlDat['link_rank'] = p
+        print(urlDat['link_rank'])
         urlDat['se'] = se[b]
         urlDat['keyword'] = keyword
         
@@ -232,21 +234,49 @@ def web_iter(args):
                 sentSyl[n,x] = syllables
 
         if len(URLtext) != 0:
-            #assert type(url_text) is not type(None)
+            # https://github.com/shivam5992/textstat
+            # explanation of metrics    
             urlDat['fkg']  = textstat.flesch_kincaid_grade(str(url_text))
             urlDat['fre'] = textstat.flesch_reading_ease(str(url_text))
             urlDat['smog']  = textstat.smog_index(str(url_text))
             urlDat['cliau']  = textstat.coleman_liau_index(str(url_text))
             urlDat['ri']  = textstat.automated_readability_index(str(url_text))
             urlDat['gf'] = textstat.gunning_fog(str(url_text))
-
+            urlDat['gl'] =  textstat.grade_level(str(url_text))
             urlDat['dcr']  = textstat.dale_chall_readability_score(str(url_text))
             urlDat['dw']  = textstat.difficult_words(str(url_text))
             urlDat['lwf']  = textstat.linsear_write_formula(str(url_text))
+            urlDat['standard']  = textstat.text_standard(str(url_text))
+            '''
+            infoDat[6,1] = "Grade level"
+            infoDat[7,1] = "Flesch Reading Ease"
+            infoDat[8,1] = "SMOG Index"
+            infoDat[9,1] = "Coleman Liau"
+            infoDat[10,1] = "Automated Readability Index"
+            infoDat[11,1] = "Gunning Fog"
+            infoDat[12,1] = "Dale Chall Readability Score"
+            infoDat[13,1] = "Difficult Words"
+            infoDat[14,1] = "Linsear Write Formula"
+            '''
+            
 
            
-            obj_arr = [urlDat, WperS, sentSyl, fM, fAll]
+            obj_arr = {}
+            obj_arr['urlDat'] = urlDat
+            obj_arr['WperS'] = WperS
+            obj_arr['sentSyl'] = sentSyl
+            obj_arr['fM'] = fM
+            obj_arr['fAll'] = fAll
+            if type(obj_arr) is not None:
+                list_per_links.append(obj_arr)
+            
+            #obj_arr = [urlDat, WperS, sentSyl, fM, fAll]
 
+            
+            
+            
+            #, WperS, sentSyl, fM, fAll]
+            '''
 
             assert len(fAll) != 0
             assert len(fM) != 0
@@ -255,15 +285,14 @@ def web_iter(args):
             assert len(obj_arr[-2])!= 0
             assert len(obj_arr[-3])!= 0
             assert type(obj_arr) is not type(None)
-            '''    
+                
             f = open('last_iterator.p', 'wb')
             fi = [i,keyword, obj_arr]
             pickle.dump(fi,f)
             fi = None
             '''
             # File path is equivalent to Term.mat
-            if type(obj_arr) is not None:
-                list_per_links.append(obj_arr)
+
     return list_per_links
 
 def finish_up(obj_arr_add):

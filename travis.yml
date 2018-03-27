@@ -1,0 +1,16 @@
+language: python
+python:
+  - "3.6"
+sudo: required
+services:
+  - docker
+  - git
+  - python
+
+before_script:
+  - docker build -t slc .
+script:
+  - docker run -d slc /opt/conda/bin/ipython tAnalysis.py
+
+
+

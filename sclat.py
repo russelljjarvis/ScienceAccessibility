@@ -1,5 +1,5 @@
 ##set parameters - THESE ARE ALL USER DEFINED
-web = 5 #how many search engines to include (4 possible- google google scholar bing yahoo)
+web = 4 #how many search engines to include (4 possible- google google scholar bing yahoo)
 linkstoget = 50 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
 
 #search terms of interest
@@ -119,6 +119,7 @@ def contents_to_file(contents):
    '''
    incrementor, strlink, searchName = contents
    if 'pdf' in strlink:
+       import urllib
        #try:
        pdf_file = str(urllib.request.urlopen(strlink).read())
        assert type(pdf_file) is type(str)
@@ -133,10 +134,10 @@ def contents_to_file(contents):
 
 
        str_text = str(write_text)
-       write_text = str_text.encode('ascii','ignore')
+       #write_text = str_text.encode('ascii','ignore')
        fileName = searchName  + str(incrementor) + ".txt" #create text file save name
        f = open(fileName, 'w')
-       f.write(write_text)
+       f.write(str_text)
        f.close()
 
 
@@ -301,7 +302,7 @@ def scraplandtext(fi):
             strlink = linko.get_attribute("href")
             strings_to_process.append(strlink)
 
-
+    '''	
     elif b == 4:
         searchName = "duckduckgo_" #output name for text file
         #https://duckduckgo.com/?q=  #Vaccine&t=hf&atb=v73-3_q&ia=web
@@ -320,7 +321,7 @@ def scraplandtext(fi):
             strlink = linko.get_attribute("href")
             strings_to_process.append(strlink)
             #print(strlink)
-
+    '''
     # only check the first 50 links : [0,49]
 
     # This code is here, to start up where left off, if HTTP requests are denied, because exceeded
@@ -360,4 +361,4 @@ bi = db.from_sequence(flat_iter, npartitions=8)
 #_ = list(db.map(scraplandtext,b).compute())#.result()\n",
 
 driver.close() #close the driver
-exit
+#exit

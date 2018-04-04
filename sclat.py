@@ -1,9 +1,14 @@
 ##set parameters - THESE ARE ALL USER DEFINED
-web = 4 #how many search engines to include (4 possible- google google scholar bing yahoo)
-linkstoget = 50 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
+WEB = 5 #how many search engines to include (4 possible- google google scholar bing yahoo)
+LINKSTOGET= 50 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
+SEARCHLIST = ['Play Dough','Vaccine','Transgenic','GMO','Genetically Modified Organism','Neutron']
 
-#search terms of interest
-searchList = ['Vaccine','Transgenic','GMO','Genetically_Modified_Organism']
+grid = {}
+grid['b']=[0,1,2,3,4]
+grid['search_term'] = [ (i, q) for i,q in enumerate(SEARCHLIST) ]
+from sklearn.grid_search import ParameterGrid
+grid = list(ParameterGrid(grid))
+
 import sys
 import os
 
@@ -81,6 +86,9 @@ from textstat.textstat import textstat
 
 def csr(text,strlink):
    '''
+   # This function is not used though it's not depricated either.
+   # The method needs debugging
+
    # This method compares a new link with an old link. We want to know when websites reference themselves (self reference).
    # One way of doing this is to see if a substring constituted by the referal website (URL basename) can be found in the link string.
    # inputs: text on referal website (including links):
@@ -174,12 +182,15 @@ def contents_to_file(contents):
       str_text = str(text)
       fileName = searchName +str(incrementor) + ".p" #create text file save name
       #write contents to file - individual text file for each URL's scraped text
-      write_text = text.encode('ascii','ignore')
-      fileName = searchName  + str(incrementor) + ".txt" #create text file save name
-      f = open(fileName, 'w')
-      f.write(str(write_text))
-      f.close()
 
+      write_text = text.encode('ascii','ignore')
+      #fileName = searchName  + str(incrementor) + ".txt" #create text file save name
+      #
+      #f = open(fileName, 'w')
+      #f.write(str(write_text))
+      #f.close()
+      fileName = searchName  + str(incrementor) + ".p" #create text file save name
+      #
       print(fileName, 'filename')
       print(type(str_text))
 
@@ -187,24 +198,16 @@ def contents_to_file(contents):
       from datetime import datetime
       st = datetime.utcnow().strftime('%Y-%m-%d_%H:%M:%S.%f')[:-3]
       pickle.dump([st, str(write_text)],f)
-
-
-      #except:
-      #      print('bad link',strlink)
-
-
    f = None
    return None
 
 
-flat_iter = [ (b,x,category) for x, category in enumerate(searchList) for b in range(0,web) ]
-
 def scraplandtext(fi):
-    import pickle
-    f = open('last_state.p', 'wb')
+    #import pickle
+    #f = open('last_state.p', 'wb')
     #from datetime import datetime
     #st = datetime.utcnow().strftime('%Y-%m-%d_%H:%M:%S.%f')[:-3]
-    pickle.dump(fi,f)
+    #pickle.dump(fi,f)
     #pickle.dump()
     b,x,category = fi
     print(" "); print("###############################################")
@@ -245,7 +248,7 @@ def scraplandtext(fi):
         linkName = "https://scholar.google.com/scholar?hl=en&as_sdt=0%2C3&q="
 
         pagestring = linkName + "&q=" + categoryquery # googles
-        print("Google")
+        print("Google Scholar")
         driver.get(pagestring)
         continue_link = driver.find_element_by_tag_name('a')
         elem = None
@@ -269,6 +272,7 @@ def scraplandtext(fi):
         linkName = "https://www.bing.com/search?num=100&filter=0&first=" #search engine web address
         pagestring = linkName + "&q=" + categoryquery # googles
         driver.get(pagestring)
+        print(' Bing')
         continue_link = driver.find_element_by_tag_name('a')
         elem = None
         elem = driver.find_elements_by_xpath("//*[@href]")
@@ -283,14 +287,13 @@ def scraplandtext(fi):
             strings_to_process.append(strlink)
             print(strlink)
         #print("\nchecking: " + pagestring + "\n")
-        print("Bing")
 
 
     elif b == 3:
         searchName = "yahoo_" #output name for text file
         linkName =  "https://search.yahoo.com/search?p=" #search engine web address
         pagestring = linkName + "&q=" + categoryquery # googles
-        print("Google")
+        print("yahoo")
         driver.get(pagestring)
         continue_link = driver.find_element_by_tag_name('a')
         elem = None
@@ -302,14 +305,14 @@ def scraplandtext(fi):
             strlink = linko.get_attribute("href")
             strings_to_process.append(strlink)
 
-    '''	
+
     elif b == 4:
         searchName = "duckduckgo_" #output name for text file
         #https://duckduckgo.com/?q=  #Vaccine&t=hf&atb=v73-3_q&ia=web
         #https://duckduckgo.com/?q=  #GMO&t=hf&atb=v73-3_q&ia=stock
         linkName =  "https://duckduckgo.com/?q=" #search engine web address
         pagestring = linkName + "&q=" + categoryquery # googles
-        print("Google")
+        print("duckduckgo")
         driver.get(pagestring)
         continue_link = driver.find_element_by_tag_name('a')
         elem = None
@@ -321,44 +324,39 @@ def scraplandtext(fi):
             strlink = linko.get_attribute("href")
             strings_to_process.append(strlink)
             #print(strlink)
-    '''
+
+    assert b < 5
     # only check the first 50 links : [0,49]
 
-    # This code is here, to start up where left off, if HTTP requests are denied, because exceeded
-    # crawling qouta policies.
-    try:
-        f = open('../last_state.p', 'rb')
-        stp = [ (i,j, searchName) for i,j in enumerate(strings_to_process[0:49]) ]
-        last_state = pickle.load(f)
-        marker = None
-        for i, temp in enumerate(stp):
-            if str(last_state) == str(temp):
-                marker = i
-                break
-        if type(marker) is not type(None):
-            stp = [ (i,j, searchName) for i,j in enumerate(stp[marker+1:49]) ]
-        import dask.bag as db
-        bstp = db.from_sequence(stp, npartitions=8)
+    lta = [ (i,j, searchName) for i,j in enumerate(strings_to_process[0:LINKSTOGET]) ]
+    # links to analyze
+    import dask.bag as db
+    _ = list(map(contents_to_file,lta))
 
-        _ = list(map(contents_to_file,stp))
-    except:
-        #print('file doesn\'t exist yet')
-        #if type(strings_to_process) is not type(None):
-        import dask.bag as db
-        bstp = db.from_sequence(stp, npartitions=8)
-
-        _ = list(map(contents_to_file,stp))
     return None
-#flat_iter =[ (b,x,category) for b in range(0,web): for x, category in enumerate(searchList) ]
-    #define the search term
-_ = list(map(scraplandtext,flat_iter))
-
-#sl = [ (i, val) for i, val in enumerate(flat_iter)
 import dask.bag as db
-bi = db.from_sequence(flat_iter, npartitions=8)
+#flat_iter = db.from_sequence(flat_iter)
 
-#print(b)
-#_ = list(db.map(scraplandtext,b).compute())#.result()\n",
+print(len(range(0,WEB)))
+import pdb
+#pdb.set_trace()
+
+flat_iter = [ (b,x,category) for x, category in enumerate(SEARCHLIST) for b in range(0,WEB) ]
+grid = [(dicti['search_term'][0],dicti['b'],dicti['search_term'][1]) for dicti in grid ]
+
+for i, j in enumerate(flat_iter):
+    print(j,grid[i],i)
+    #assert j == grid[i]
+#grid = db.from_sequence(grid,npartitions = 8)
+#import pdb
+print(grid)
+print(flat_iter)
+#pdb.set_trace()
+# the idea is that grid and flat iter should be very similar.
+_ = list(map(scraplandtext,iter(grid)))#.result()\n",
 
 driver.close() #close the driver
+
+#sl = [ (i, val) for i, val in enumerate(flat_iter)
+
 #exit

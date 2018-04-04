@@ -22,6 +22,9 @@ import pickle
 import nltk
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
+import os
+os.system('pip install natsort')
+
 from nltk.tag.perceptron import PerceptronTagger
 tagger = PerceptronTagger(load=False)
 
@@ -38,52 +41,25 @@ from nltk import compat
 
 from bs4 import BeautifulSoup
 import json
-
+#!pip install git+"https://github.com/russelljjarvis/textstat.git"
 from textstat.textstat import textstat
 
-import os
-os.system('pip install natsort')
 from natsort import natsorted, ns
 
 ########################################################################
 ########################################################################
 ########################################################################
 # Set user parameters based on type of analysis
-searchList = ['GMO','Genetically_Modified_Organism','Transgenic','Vaccine']
-nweb = 4 #number of search websites being implemented (google, google scholar, bing, yahoo)
-numURLs = 26 #number of URLs per search website  (number determined by 1.scrape code)
+searchList = ['GMO','Genetically_Modified_Organism','Transgenic','Vaccine', 'Neutron']
+NWEB = 5 #number of search websites being implemented (google, google scholar, bing, yahoo, duckduckgo)
+numURLs = 49 #number of URLs per search website  (number determined by 1.scrape code)
 
 #also save these parameters for analysis purposes
-spec_dict = { 'searchList':searchList, 'nweb':nweb, 'numURLs':numURLs}
+spec_dict = { 'searchList':searchList, 'nweb':NWEB, 'numURLs':numURLs}
 handle = 'Data/analysisSpecs.mat'
 scipy.io.savemat(handle, mdict=spec_dict, oned_as='row')
 handle = None
 TEXT_FOUNTAIN = False
-########################################################################
-########################################################################
-########################################################################
-#what are we analyzing???? - this is the list of text analysis features
-infoDat = {}
-infoDat[1,1] = "Number of Words"
-infoDat[2,1] = "Number of Sentences"
-infoDat[3,1] = "Frequency of Search Term"
-infoDat[4,1] = "Sentiment Analysis"
-infoDat[5,1] = "Subjectivity Analysis"
-infoDat[6,1] = "Grade level"
-infoDat[7,1] = "Flesch Reading Ease"
-infoDat[8,1] = "SMOG Index"
-infoDat[9,1] = "Coleman Liau"
-infoDat[10,1] = "Automated Readability Index"
-infoDat[11,1] = "Gunning Fog"
-infoDat[12,1] = "Dale Chall Readability Score"
-infoDat[13,1] = "Difficult Words"
-infoDat[14,1] = "Linsear Write Formula"
-
-#save these parameters for analysis purposes
-infoDat = list(infoDat.items())
-handle = 'Data/analysisInfo.mat'
-scipy.io.savemat(handle, {'infoDat':infoDat})
-handle = None
 ########################################################################
 ########################################################################
 ########################################################################
@@ -98,35 +74,65 @@ date_created = []
 import pickle
 import os
 
+se = {}
+se[0] = "google_"
+se[1] = "gScholar_"
+se[2] = "bing_"
+se[3] = "yahoo_"
+se[4] = "duckduckgo_"
+#NWEB = 5
+
+
+def map_wrapper(function_item,list_items):
+    from dask.distributed import Client
+    import dask.bag as db
+    c = Client()
+    NCORES = len(c.ncores().values())
+    b0 = db.from_sequence(list_items, npartitions=NCORES)
+    list_items = list(db.map(function_item,b0).compute())
+    return list_items
+
+
+#here you construct the unigram language model
+'''
+def unigram(tokens):
+    import collections
+    model = collections.defaultdict(lambda: 0.01)
+    for f in tokens:
+        #print(model[f],'model[f]')
+        try:
+            model[f] += 1
+        except KeyError:
+            model [f] = 1
+            continue
+    for word in model:
+        #print(model[word],float(sum(model.values())))
+        model[word] = model[word]/float(sum(model.values()))
+    return model
+# Our model here is smoothed. For words outside the scope of its knowledge, it assigns a low probability of 0.01. I already told you how to compute perplexity:
+
+#computes perplexity of the unigram model on a testset
+def perplexity(testset, model):
+    testset = testset.split()
+    perplexity = 1
+    N = 0
+    for word in testset:
+        N += 1
+        perplexity = perplexity * (1/model[word])
+    # I suspect this calculation is bunkum
+    perplexity = pow(perplexity, 1/float(N))
+    return perplexity
+'''
 def web_iter(args):
     i,keyword,b = args
-    if not os.path.exists(str(fileLocation) + '/' + str(keyword) +'/'):
-        os.makedirs(str(fileLocation) + '/' + str(keyword) +'/')
     os.chdir(fileLocation +str('/') + str(keyword) +'/')
-    print(os.getcwd(),keyword,i,b)
-    nweb = 4
-
-    if b == 0:
-        textName = "google_"
-        print ("Google")
-    elif b == 1:
-        textName = "gScholar_"
-        print ("Google Scholar")
-    elif b == 2:
-        textName = "bing_"
-        print ("Bing")
-    elif b == 3:
-        textName = "yahoo_"
-        print ("Yahoo")
+    print(os.getcwd(),i,keyword,b)
     # grab all the file names ending with pickle suffix.
-    list_of_files = natsorted(glob.glob(str(textName)+r'*.p'))
-    # select only a subset of them.
-    lo_keyword_files =  natsorted(list_of_files[0:numURLs-1])
-    list_per_kw = []
-    for p,fileName in enumerate(lo_keyword_files):
-
-        print ("Analyzing Search Engine " + str(b+1) + " of " + str(nweb) + ": Link " + str(p)); print ("");
-
+    lo_query_links = natsorted(glob.glob('*.p'))
+    lo_query_links =  natsorted(lo_query_links[0:numURLs-1])
+    list_per_links = []
+    for p,fileName in enumerate(lo_query_links):
+        print ("Analyzing Search Engine " + str(se[b]) + " of " + str(NWEB) + ": Link " + str(p)); print ("");
         fileHandle = open(fileName, 'rb');
         file_contents = pickle.load(fileHandle)
 
@@ -148,6 +154,11 @@ def web_iter(args):
 
         #initialize dataArray Dictionary
         urlDat = {}
+        urlDat['link_rank'] = p
+        print(urlDat['link_rank'])
+        urlDat['se'] = se[b]
+        urlDat['keyword'] = keyword
+
 
         ########################################################################
         #remove unreadable characters
@@ -158,13 +169,15 @@ def web_iter(args):
 
         URLtext = word_tokenize(url_text)
         URLtext = [w.lower() for w in URLtext] #make everything lower case
-
-        urlDat[1,1] = textstat.lexicon_count(str(url_text))
+        #model = unigram(url_text)
+        #urlDat['perplexity'] = perplexity(url_text, model)
+        #print(urlDat['perplexity'], 'a bit like shannon entropy of text, but on the level of words as symbols, rather than letters as symbols')
+        urlDat['wcount'] = textstat.lexicon_count(str(url_text))
         #sentences
         sents = sent_tokenize(url_text) #split all of text in to sentences
         sents = [w.lower() for w in sents] #lowercase all
 
-        urlDat[2,1] = len(sents) #determine number of sentences
+        urlDat['sentcount'] = len(sents) #determine number of sentences
 
         ########################################################################
         ##frequency distribtuion of text
@@ -173,14 +186,27 @@ def web_iter(args):
         # Bug fix
         # cast dict to list
         fd_temp = list(fdist.items())
-        #keyword
-        urlDat[3,1] = fdist[keyword.lower()] #frequency of search term
+        urlDat['stfreq'] = fdist[keyword.lower()] #frequency of search term
 
         #frequency of all words
         fAll = {}
         for x in range(0,len(fd_temp)):
             fAll[x,1], fAll[x,2] = [y.strip('}()",{:') for y in (str(fd_temp[x])).split(',')]
 
+        obj_arr = {}
+        obj_arr['frequencies'] = sorted([ (f[1],f[0]) for f in fd_temp ],reverse=True)
+        sum_of_words = sum([ f[0] for f in obj_arr['frequencies'] ])
+
+        probs = [float(c[0]) / sum_of_words for c in obj_arr['frequencies'] ]
+        probs = [p for p in probs if p > 0.]
+        ent = 0
+        for p in probs:
+            if p > 0.:
+                ent -= p * math.log(p, 2)
+        obj_arr['eofh'] = ent
+
+        #urlDat['entropy_of_word_hist'] = ent
+        print(ent,'entropy_of_word_hist')
         #frequency of the most used n number of words
         frexMost = fdist.most_common(15) #show N most common words
         fM = {}
@@ -192,8 +218,8 @@ def web_iter(args):
         testimonial = TextBlob(url_text)
         testimonial.sentiment
 
-        urlDat[4,1] = testimonial.sentiment.polarity
-        urlDat[5,1] = testimonial.sentiment.subjectivity
+        urlDat['sp'] = testimonial.sentiment.polarity
+        urlDat['ss'] = testimonial.sentiment.subjectivity
 
         ########################################################################
         #determine syllable count for all words in each sentece
@@ -220,76 +246,52 @@ def web_iter(args):
                 sentSyl[n,x] = syllables
 
         if len(URLtext) != 0:
-            #assert type(url_text) is not type(None)
-            urlDat[6,1]  = textstat.flesch_kincaid_grade(str(url_text))
-            urlDat[7,1] = textstat.flesch_reading_ease(str(url_text))
-            urlDat[8,1]  = textstat.smog_index(str(url_text))
-            urlDat[9,1]  = textstat.coleman_liau_index(str(url_text))
-            urlDat[10,1]  = textstat.automated_readability_index(str(url_text))
-            urlDat[11,1] = textstat.gunning_fog(str(url_text))
+            # explanation of metrics
+            # https://github.com/shivam5992/textstat
+            urlDat['fkg']  = textstat.flesch_kincaid_grade(str(url_text))
+            urlDat['fre'] = textstat.flesch_reading_ease(str(url_text))
+            urlDat['smog']  = textstat.smog_index(str(url_text))
+            urlDat['cliau']  = textstat.coleman_liau_index(str(url_text))
+            urlDat['ri']  = textstat.automated_readability_index(str(url_text))
+            urlDat['gf'] = textstat.gunning_fog(str(url_text))
+            #print(dir(textstat))
+            #urlDat['gl'] =  textstat.grade_level(str(url_text))
+            urlDat['dcr']  = textstat.dale_chall_readability_score(str(url_text))
+            urlDat['dw']  = textstat.difficult_words(str(url_text))
+            urlDat['lwf']  = textstat.linsear_write_formula(str(url_text))
+            urlDat['standard']  = textstat.text_standard(str(url_text))
 
-            urlDat[12,1]  = textstat.dale_chall_readability_score(str(url_text))
-            urlDat[13,1]  = textstat.difficult_words(str(url_text))
-            urlDat[14,1]  = textstat.linsear_write_formula(str(url_text))
-
-            urlDat = list(urlDat.items())
-            sentSyl = list(sentSyl.items())
-            WperS = list(WperS.items())
-            fAll = list(fAll.items())
-            fM = list(fM.items())
-
-            obj_arr = np.array([urlDat, WperS, sentSyl, fM, fAll], dtype=np.object)
-
-
-            assert len(fAll) != 0
-            assert len(fM) != 0
-            assert len(sentSyl) != 0
-            assert len(obj_arr[-1])!= 0
-            assert len(obj_arr[-2])!= 0
-            assert len(obj_arr[-3])!= 0
-            assert type(obj_arr) is not type(None)
-
-            f = open('last_iterator.p', 'wb')
-            fi = [i,keyword, obj_arr]
-            pickle.dump(fi,f)
-            fi = None
-            # File path is equivalent to Term.mat
+            obj_arr['urlDat'] = urlDat
+            obj_arr['WperS'] = WperS
+            obj_arr['sentSyl'] = sentSyl
+            obj_arr['fM'] = fM
+            obj_arr['fAll'] = fAll
             if type(obj_arr) is not None:
-                list_per_kw.append(obj_arr)
-    return list_per_kw
-
-def finish_up(obj_arr_add):
-    obj_arr_add = [ i for i in obj_arr_add  if i is not type(None) ]
-    obj_arr = obj_arr_add[0]
-    for oaa in obj_arr_add[1:-1]:
-        print(np.shape(oaa), np.shape(obj_arr))
-    return
-
-
-sl = [ (i, keyword, b) for i, keyword in enumerate(searchList) for b in range(0,nweb) ]
-import dask.bag as db
-
-b0 = db.from_sequence(sl)
-obj_arr_add = list(db.map(web_iter,b0).compute())
-obj_arr = finish_up(obj_arr_add)
-
-
+                list_per_links.append(obj_arr)
+    return list_per_links
 
 '''
+#To use functions above with ipython notebook uncomment this code.
 import dask.bag as db
 grid = {}
-grid['b']=[0,1,2,3]
-grid['value']=['GMO','Genetically_Modified_Organism','Transgenic','Vaccine']
+grid['b'] = [ r for r in range(0,len(se)) ]
+query_list = ['GMO','Genetically_Modified_Organism','Transgenic','Vaccine', "Neutron"]
+grid['search_term'] = [ (i, q) for i,q in enumerate(query_list) ]
 from sklearn.grid_search import ParameterGrid
 grid = list(ParameterGrid(grid))
-grid = [(dicti['b'],dicti['value']) for dicti in grid ]        
-grid = db.from_sequence(grid,npartitions = 8)
-obj_arr_add = list(db.map(web_iter,grid).compute())
+grid = [(dicti['search_term'][0],dicti['search_term'][1],dicti['b']) for dicti in grid ]
 
-import pandas as pd
-df = pd.DataFrame(data=obj_arr_add)
-print(obj_arr_add)
+#grid = db.from_sequence(grid,npartitions = 8)
+#list_per_links = list(db.map(web_iter,grid).compute())
+#list_per_links = list(map(web_iter,grid))
+remove_empty = [i for i in list_per_links if len(i)>0 ]
+unravel = []
+for i in remove_empty:
+    unravel.extend(i)
+with open('unraveled_links.p','wb') as handle:
+    pickle.dump(unravel,handle)
 '''
-#df
-
-
+#import pdb; pdb.set_trace()
+#import pandas as pd
+#df = pd.DataFrame(data=obj_arr_add)
+#print(obj_arr_add)

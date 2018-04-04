@@ -64,37 +64,11 @@ TEXT_FOUNTAIN = False
 ########################################################################
 ########################################################################
 ########################################################################
-#what are we analyzing???? - this is the list of text analysis features
-infoDat = {}
-infoDat[1,1] = "Number of Words"
-infoDat[2,1] = "Number of Sentences"
-infoDat[3,1] = "Frequency of Search Term"
-infoDat[4,1] = "Sentiment Analysis"
-infoDat[5,1] = "Subjectivity Analysis"
-infoDat[6,1] = "Grade level"
-infoDat[7,1] = "Flesch Reading Ease"
-infoDat[8,1] = "SMOG Index"
-infoDat[9,1] = "Coleman Liau"
-infoDat[10,1] = "Automated Readability Index"
-infoDat[11,1] = "Gunning Fog"
-infoDat[12,1] = "Dale Chall Readability Score"
-infoDat[13,1] = "Difficult Words"
-infoDat[14,1] = "Linsear Write Formula"
-
-#save these parameters for analysis purposes
-infoDat = list(infoDat.items())
-handle = 'Data/analysisInfo.mat'
-scipy.io.savemat(handle, {'infoDat':infoDat})
-handle = None
-########################################################################
-########################################################################
-########################################################################
 #set filePath below to specify where the data will be going after the code runs
 fileLocation = os.getcwd()
 
 if not os.path.exists(fileLocation):
     os.makedirs(fileLocation)
-
 
 date_created = []
 import pickle
@@ -123,19 +97,12 @@ def web_iter(args):
     i,keyword,b = args
     os.chdir(fileLocation +str('/') + str(keyword) +'/')
 
-    #textName = 
     # grab all the file names ending with pickle suffix.
     lo_query_links = natsorted(glob.glob(+r'*.p'))
-    print(lo_query_links)
-    print(se[b])
-    # select only a subset of them.str(se[b])
     lo_query_links =  natsorted(lo_query_links[0:numURLs-1])
     list_per_links = []
     for p,fileName in enumerate(lo_query_links):
-        
-
         print ("Analyzing Search Engine " + str(se[b]) + " of " + str(nweb) + ": Link " + str(p)); print ("");
-
         fileHandle = open(fileName, 'rb');
         file_contents = pickle.load(fileHandle)
 
@@ -161,7 +128,7 @@ def web_iter(args):
         print(urlDat['link_rank'])
         urlDat['se'] = se[b]
         urlDat['keyword'] = keyword
-        
+
 
         ########################################################################
         #remove unreadable characters
@@ -184,10 +151,7 @@ def web_iter(args):
         ##frequency distribtuion of text
         fdist = FreqDist(w.lower() for w in URLtext if w.isalpha()) #frequency distribution of words only
 
-        # Bug fix
-        # cast dict to list
         fd_temp = list(fdist.items())
-        #keyword
         urlDat['stfreq'] = fdist[keyword.lower()] #frequency of search term
 
         #frequency of all words
@@ -234,8 +198,8 @@ def web_iter(args):
                 sentSyl[n,x] = syllables
 
         if len(URLtext) != 0:
+            # explanation of metrics
             # https://github.com/shivam5992/textstat
-            # explanation of metrics    
             urlDat['fkg']  = textstat.flesch_kincaid_grade(str(url_text))
             urlDat['fre'] = textstat.flesch_reading_ease(str(url_text))
             urlDat['smog']  = textstat.smog_index(str(url_text))
@@ -247,20 +211,6 @@ def web_iter(args):
             urlDat['dw']  = textstat.difficult_words(str(url_text))
             urlDat['lwf']  = textstat.linsear_write_formula(str(url_text))
             urlDat['standard']  = textstat.text_standard(str(url_text))
-            '''
-            infoDat[6,1] = "Grade level"
-            infoDat[7,1] = "Flesch Reading Ease"
-            infoDat[8,1] = "SMOG Index"
-            infoDat[9,1] = "Coleman Liau"
-            infoDat[10,1] = "Automated Readability Index"
-            infoDat[11,1] = "Gunning Fog"
-            infoDat[12,1] = "Dale Chall Readability Score"
-            infoDat[13,1] = "Difficult Words"
-            infoDat[14,1] = "Linsear Write Formula"
-            '''
-            
-
-           
             obj_arr = {}
             obj_arr['urlDat'] = urlDat
             obj_arr['WperS'] = WperS
@@ -269,43 +219,10 @@ def web_iter(args):
             obj_arr['fAll'] = fAll
             if type(obj_arr) is not None:
                 list_per_links.append(obj_arr)
-            
-            #obj_arr = [urlDat, WperS, sentSyl, fM, fAll]
-
-            
-            
-            
-            #, WperS, sentSyl, fM, fAll]
-            '''
-
-            assert len(fAll) != 0
-            assert len(fM) != 0
-            assert len(sentSyl) != 0
-            assert len(obj_arr[-1])!= 0
-            assert len(obj_arr[-2])!= 0
-            assert len(obj_arr[-3])!= 0
-            assert type(obj_arr) is not type(None)
-                
-            f = open('last_iterator.p', 'wb')
-            fi = [i,keyword, obj_arr]
-            pickle.dump(fi,f)
-            fi = None
-            '''
-            # File path is equivalent to Term.mat
-
     return list_per_links
 
-def finish_up(obj_arr_add):
-
-    obj_arr_add = [ i for i in obj_arr_add  if i is not type(None) ]
-    obj_arr = obj_arr_add[0]
-    for oaa in obj_arr_add[1:-1]:
-        print(np.shape(oaa), np.shape(obj_arr))
-    return
-
-#sl = [ (i, keyword, b) for i, keyword in enumerate(searchList) for b in range(0,nweb) ]
-
 '''
+To use functions above with ipython notebook uncomment this code.
 import dask.bag as db
 grid = {}
 grid['b']=[0,1,2,3]
@@ -329,29 +246,3 @@ b0 = db.from_sequence(sl)
 obj_arr_add = list(db.map(web_iter,b0).compute())
 obj_arr = finish_up(obj_arr_add)
 '''
-
-
-
-# For all of these,
-# I think it may be best if we keep text complexity on the y axes,
-# mainly for ease of reading the graphs. For the correlation
-# it won’t really matter which way it goes, as these both seem to be independent;
-# for the others, I think bar charts would work with complexity on the
-# y axes… so I figure we should stay consistent as there isn’t a real
-# reason to change for #1.
-# I’m having a brain fart right now… did we get
-# the sentimentality analysis figured out (pro vs. con vs. neutral)?
-# If not, I’m willing to work on going through and judging them one by one…
-# But as for the figures, here are 3 ideas to start
-# 1.       Text complexity vs site ranking
-# (I think this would be really cool to see in general; do more popular sites,
-#  in general, have lower complexity?), likely pooled for each major subject
-# (e.g., GMO and transgenics results pooled together)
-
-# 2.       Pro/anti/neutral vs. text complexity#
-
-# 3.       GMO/transgenics vs. text complexity
-
-
-
-#:

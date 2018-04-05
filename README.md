@@ -1,9 +1,9 @@
 # Scientific readability project
 
-## NB: I renamed ScrapeLinks_and_Text.py sclat.py
+NB: I renamed ScrapeLinks_and_Text.py sclat.py
 
 
-## NB: I renamed TextAnalysis_v3.py t_analysis.py 
+NB: I renamed TextAnalysis_v3.py t_analysis_purepy.py 
 
 
 

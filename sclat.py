@@ -210,6 +210,10 @@ def scraplandtext(fi):
     #pickle.dump(fi,f)
     #pickle.dump()
     b,x,category = fi
+
+    f = open('last_iterator.p', 'wb')
+    fi = [b,x,category]
+    pickle.dump(fi,f)
     print(" "); print("###############################################")
     print(" "); print(category);  print(" "); print("###############################################")
     categoryquery = category.replace(' ',"+")
@@ -339,14 +343,22 @@ import dask.bag as db
 print(len(range(0,WEB)))
 import pdb
 
-flat_iter = [ (b,x,category) for x, category in enumerate(SEARCHLIST) for b in range(0,WEB-1) ]
-grid = [(dicti['search_term'][0],dicti['b'],dicti['search_term'][1]) for dicti in grid ]
 
+
+import pickle
+import os
+try:
+    assert os.path.isfile('last_iterator.p')
+    b,x,category = pickle.load(open('last_iterator.p', 'rb'))
+    flat_iter = [ (b1,x1,SEARCHLIST[x1]) for x1 in range(x,len(SEARCHLIST)) for b1 in range(b,WEB-1) ]
+    grid = [(dicti['search_term'][0],dicti['b'],dicti['search_term'][1]) for dicti in grid ]
+except:
+    flat_iter = [ (b,x,category) for x, category in enumerate(SEARCHLIST) for b in range(0,WEB-1) ]
+    grid = [(dicti['search_term'][0],dicti['b'],dicti['search_term'][1]) for dicti in grid ]
 for i, j in enumerate(flat_iter):
     print(j,grid[i],i)
 print(grid)
 print(flat_iter)
 # the idea is that grid and flat iter should be very similar.
 _ = list(map(scraplandtext,iter(flat_iter)))#.result()\n",
-
 driver.close() #close the driver

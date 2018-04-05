@@ -50,7 +50,7 @@ from natsort import natsorted, ns
 ########################################################################
 ########################################################################
 # Set user parameters based on type of analysis
-searchList = ['GMO','Genetically_Modified_Organism','Transgenic','Vaccine', 'Neutron']
+searchList = ['Play Dough','GMO','Genetically_Modified_Organism','Transgenic','Vaccine', 'Neutron']
 NWEB = 5 #number of search websites being implemented (google, google scholar, bing, yahoo, duckduckgo)
 numURLs = 49 #number of URLs per search website  (number determined by 1.scrape code)
 
@@ -94,7 +94,7 @@ def map_wrapper(function_item,list_items):
 
 
 #here you construct the unigram language model
-'''
+
 def unigram(tokens):
     import collections
     model = collections.defaultdict(lambda: 0.01)
@@ -107,7 +107,8 @@ def unigram(tokens):
             continue
     for word in model:
         #print(model[word],float(sum(model.values())))
-        model[word] = model[word]/float(sum(model.values()))
+        model[word] = model[word]/float(sum(list(model.values())))
+        assert model[word] != 0
     return model
 # Our model here is smoothed. For words outside the scope of its knowledge, it assigns a low probability of 0.01. I already told you how to compute perplexity:
 
@@ -116,35 +117,43 @@ def perplexity(testset, model):
     testset = testset.split()
     perplexity = 1
     N = 0
+    '''
+    for p in probs:
+        if p > 0.:
+            ent -= p * math.log(p, 2)
+    obj_arr['eofh'] = ent
+    '''
     for word in testset:
         N += 1
         perplexity = perplexity * (1/model[word])
     # I suspect this calculation is bunkum
     perplexity = pow(perplexity, 1/float(N))
     return perplexity
-'''
+
 def web_iter(args):
-    i,keyword,b = args
-    os.chdir(fileLocation +str('/') + str(keyword) +'/')
-    print(os.getcwd(),i,keyword,b)
+    i,keyword = args
+    #os.chdir(fileLocation +str('/') + str(keyword) +'/')
+    #print(os.getcwd(),i,keyword,b)
     # grab all the file names ending with pickle suffix.
-    lo_query_links = natsorted(glob.glob('*.p'))
+    base_path = fileLocation + str('/') + str(keyword)
+    lo_query_links = natsorted(glob.glob(str(base_path)+'/*.p'))
     lo_query_links =  natsorted(lo_query_links[0:numURLs-1])
     list_per_links = []
     for p,fileName in enumerate(lo_query_links):
-        print ("Analyzing Search Engine " + str(se[b]) + " of " + str(NWEB) + ": Link " + str(p)); print ("");
+        urlDat = {}
+        obj_arr = {}
         fileHandle = open(fileName, 'rb');
         file_contents = pickle.load(fileHandle)
 
         if TEXT_FOUNTAIN == True:
             # Recover the initial text file data, corresponding to both PDFs and html web page content.
             # Used to generate data for people who lack python, reproducibility.
-            f = open(str(fileName)+'.txt','w')
+            f = open(str(base_path + fileName)+'.txt','w')
             f.write(str(file_contents.encode('ascii','ignore')))
             f.close()
 
         if len(file_contents) == 2:
-            date_created.append((str(fileName), file_contents[0]))
+            date_created.append((str(base_path + fileName), file_contents[0]))
             url_text = file_contents[1]
 
         else:
@@ -153,10 +162,20 @@ def web_iter(args):
         fileHandle.close()
 
         #initialize dataArray Dictionary
-        urlDat = {}
+
+
         urlDat['link_rank'] = p
         print(urlDat['link_rank'])
-        urlDat['se'] = se[b]
+        if 'google_' in fileName:
+            urlDat['se'] = 'google_'#se[b]
+        elif 'gScholar_' in fileName:
+            urlDat['se'] = 'gScholar_'#se[b]
+        elif 'yahoo_' in fileName:
+            urlDat['se'] = 'yahoo_'#se[b]
+        elif 'duckduckgo_' in fileName:
+            urlDat['se'] = 'duckduckgo_'#se[b]
+        elif 'bing' in fileName:
+            urlDat['se'] = 'bing_'#se[b]
         urlDat['keyword'] = keyword
 
 
@@ -193,11 +212,10 @@ def web_iter(args):
         for x in range(0,len(fd_temp)):
             fAll[x,1], fAll[x,2] = [y.strip('}()",{:') for y in (str(fd_temp[x])).split(',')]
 
-        obj_arr = {}
         obj_arr['frequencies'] = sorted([ (f[1],f[0]) for f in fd_temp ],reverse=True)
-        sum_of_words = sum([ f[0] for f in obj_arr['frequencies'] ])
+        number_of_words = sum([ f[0] for f in obj_arr['frequencies'] ])
 
-        probs = [float(c[0]) / sum_of_words for c in obj_arr['frequencies'] ]
+        probs = [float(c[0]) / number_of_words for c in obj_arr['frequencies'] ]
         probs = [p for p in probs if p > 0.]
         ent = 0
         for p in probs:
@@ -206,7 +224,9 @@ def web_iter(args):
         obj_arr['eofh'] = ent
 
         #urlDat['entropy_of_word_hist'] = ent
-        print(ent,'entropy_of_word_hist')
+        print(obj_arr['eofh'],'entropy_of_word_hist')
+        print(urlDat['se'], 'search engine')
+        print(urlDat['keyword'],'search term')
         #frequency of the most used n number of words
         frexMost = fdist.most_common(15) #show N most common words
         fM = {}
@@ -266,20 +286,21 @@ def web_iter(args):
             obj_arr['sentSyl'] = sentSyl
             obj_arr['fM'] = fM
             obj_arr['fAll'] = fAll
-            if type(obj_arr) is not None:
-                list_per_links.append(obj_arr)
+            #if type(obj_arr) is not None:
+        list_per_links.append(obj_arr)
+    assert len(lo_query_links) == len(list_per_links)
     return list_per_links
 
 '''
 #To use functions above with ipython notebook uncomment this code.
 import dask.bag as db
 grid = {}
-grid['b'] = [ r for r in range(0,len(se)) ]
+#grid['b'] = [ r for r in range(0,len(se)) ]
 query_list = ['GMO','Genetically_Modified_Organism','Transgenic','Vaccine', "Neutron"]
 grid['search_term'] = [ (i, q) for i,q in enumerate(query_list) ]
 from sklearn.grid_search import ParameterGrid
 grid = list(ParameterGrid(grid))
-grid = [(dicti['search_term'][0],dicti['search_term'][1],dicti['b']) for dicti in grid ]
+grid = [(dicti['search_term'][0],dicti['search_term'][1]) for dicti in grid ]
 
 #grid = db.from_sequence(grid,npartitions = 8)
 #list_per_links = list(db.map(web_iter,grid).compute())

@@ -1,7 +1,7 @@
 ##set parameters - THESE ARE ALL USER DEFINED
 WEB = 5 #how many search engines to include (4 possible- google google scholar bing yahoo)
 LINKSTOGET= 50 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
-SEARCHLIST = ['Play Dough','Vaccine','Transgenic','GMO','Genetically Modified Organism','Neutron']
+SEARCHLIST = ['Play Dough','Neutron','Vaccine','Transgenic','GMO','Genetically Modified Organism']
 
 grid = {}
 grid['b']=[0,1,2,3,4]
@@ -324,8 +324,9 @@ def scraplandtext(fi):
             strlink = linko.get_attribute("href")
             strings_to_process.append(strlink)
             #print(strlink)
-
-    assert b < 5
+    # assert there are less than 5 search engines
+    if b >= 5:
+        return None
     # only check the first 50 links : [0,49]
 
     lta = [ (i,j, searchName) for i,j in enumerate(strings_to_process[0:LINKSTOGET]) ]
@@ -335,28 +336,17 @@ def scraplandtext(fi):
 
     return None
 import dask.bag as db
-#flat_iter = db.from_sequence(flat_iter)
-
 print(len(range(0,WEB)))
 import pdb
-#pdb.set_trace()
 
-flat_iter = [ (b,x,category) for x, category in enumerate(SEARCHLIST) for b in range(0,WEB) ]
+flat_iter = [ (b,x,category) for x, category in enumerate(SEARCHLIST) for b in range(0,WEB-1) ]
 grid = [(dicti['search_term'][0],dicti['b'],dicti['search_term'][1]) for dicti in grid ]
 
 for i, j in enumerate(flat_iter):
     print(j,grid[i],i)
-    #assert j == grid[i]
-#grid = db.from_sequence(grid,npartitions = 8)
-#import pdb
 print(grid)
 print(flat_iter)
-#pdb.set_trace()
 # the idea is that grid and flat iter should be very similar.
-_ = list(map(scraplandtext,iter(grid)))#.result()\n",
+_ = list(map(scraplandtext,iter(flat_iter)))#.result()\n",
 
 driver.close() #close the driver
-
-#sl = [ (i, val) for i, val in enumerate(flat_iter)
-
-#exit

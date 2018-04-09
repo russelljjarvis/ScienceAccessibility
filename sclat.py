@@ -3,12 +3,6 @@ WEB = 5 #how many search engines to include (4 possible- google google scholar b
 LINKSTOGET= 50 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
 SEARCHLIST = ['Play Dough','Neutron','Vaccine','Transgenic','GMO','Genetically Modified Organism']
 
-grid = {}
-grid['b']=[0,1,2,3,4]
-grid['search_term'] = [ (i, q) for i,q in enumerate(SEARCHLIST) ]
-from sklearn.grid_search import ParameterGrid
-grid = list(ParameterGrid(grid))
-
 import sys
 import os
 
@@ -203,16 +197,11 @@ def contents_to_file(contents):
 
 
 def scraplandtext(fi):
-    #import pickle
-    #f = open('last_state.p', 'wb')
-    #from datetime import datetime
-    #st = datetime.utcnow().strftime('%Y-%m-%d_%H:%M:%S.%f')[:-3]
-    #pickle.dump(fi,f)
-    #pickle.dump()
-    b,x,category = fi
+    # Old expresion: b,x,category = fi
+    # New Expression
+    b,category = fi
 
     f = open('last_iterator.p', 'wb')
-    fi = [b,x,category]
     pickle.dump(fi,f)
     print(" "); print("###############################################")
     print(" "); print(category);  print(" "); print("###############################################")
@@ -308,6 +297,9 @@ def scraplandtext(fi):
         for linko in linkChecker:
             strlink = linko.get_attribute("href")
             strings_to_process.append(strlink)
+            print(strlink)
+
+        #print('yhaoo seems broken')
 
 
     elif b == 4:
@@ -327,9 +319,9 @@ def scraplandtext(fi):
         for linko in elem:
             strlink = linko.get_attribute("href")
             strings_to_process.append(strlink)
-            #print(strlink)
     # assert there are less than 5 search engines
     if b >= 5:
+        print(b,'gets here bug causing data loss. Check iterator construction below')
         return None
     # only check the first 50 links : [0,49]
 
@@ -338,7 +330,7 @@ def scraplandtext(fi):
     import dask.bag as db
     _ = list(map(contents_to_file,lta))
 
-    return None
+    return lta
 import dask.bag as db
 print(len(range(0,WEB)))
 import pdb
@@ -347,18 +339,42 @@ import pdb
 
 import pickle
 import os
-try:
-    assert os.path.isfile('last_iterator.p')
-    b,x,category = pickle.load(open('last_iterator.p', 'rb'))
-    flat_iter = [ (b1,x1,SEARCHLIST[x1]) for x1 in range(x,len(SEARCHLIST)) for b1 in range(b,WEB-1) ]
-    grid = [(dicti['search_term'][0],dicti['b'],dicti['search_term'][1]) for dicti in grid ]
-except:
-    flat_iter = [ (b,x,category) for x, category in enumerate(SEARCHLIST) for b in range(0,WEB-1) ]
-    grid = [(dicti['search_term'][0],dicti['b'],dicti['search_term'][1]) for dicti in grid ]
-for i, j in enumerate(flat_iter):
-    print(j,grid[i],i)
-print(grid)
-print(flat_iter)
+
+
+if 1==2:# deliberately break so iterator is built from scratch
+    #os.path.isfile('last_iterator.p'):
+    #x,b,category = fi
+    b,category = pickle.load(open('last_iterator.p', 'rb'))
+    flat_iter = [ (b1,SEARCHLIST[x1]) for x1 in range(x,len(SEARCHLIST)) for b1 in range(b,WEB) ]
+    '''
+    Idealized syntax would utilize grid.
+    grid = {}
+    grid['b']=[0,1,2,3,4]
+    grid['search_term'] = [ i for i in enumerate(SEARCHLIST) ]
+    from sklearn.grid_search import ParameterGrid
+    grid = list(ParameterGrid(grid))
+    grid = [(dicti['b'],dicti['search_term'][1]) for dicti in grid ]
+    '''
+else:
+    grid = {}
+    grid['b']=[0,1,2,3,4]
+    grid['search_term'] = [ i for i in enumerate(SEARCHLIST) ]
+    from sklearn.grid_search import ParameterGrid
+    grid = list(ParameterGrid(grid))
+    flat_iter = [ (b,category) for category in SEARCHLIST for b in range(0,WEB) ]
+    #import pdb
+    #pdb.set_trace()
+    #for i, j in enumerate(flat_iter):
+    #    print(j,grid[i],i)
+    #print(grid)
+    print(flat_iter)
 # the idea is that grid and flat iter should be very similar.
-_ = list(map(scraplandtext,iter(flat_iter)))#.result()\n",
+# grid is a bit more maintainable and conventional way of building iterators.
+ltas = list(map(scraplandtext,iter(flat_iter)))#.result()\n",
+for i,l in enumerate(ltas):
+    if i !=0:
+        assert len(l)==old
+    old = len(l)
+    
 driver.close() #close the driver
+exit()

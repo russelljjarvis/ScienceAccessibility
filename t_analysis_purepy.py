@@ -93,47 +93,9 @@ def map_wrapper(function_item,list_items):
     return list_items
 
 
-#here you construct the unigram language model
-
-def unigram(tokens):
-    import collections
-    model = collections.defaultdict(lambda: 0.01)
-    for f in tokens:
-        #print(model[f],'model[f]')
-        try:
-            model[f] += 1
-        except KeyError:
-            model [f] = 1
-            continue
-    for word in model:
-        #print(model[word],float(sum(model.values())))
-        model[word] = model[word]/float(sum(list(model.values())))
-        assert model[word] != 0
-    return model
-# Our model here is smoothed. For words outside the scope of its knowledge, it assigns a low probability of 0.01. I already told you how to compute perplexity:
-
-#computes perplexity of the unigram model on a testset
-def perplexity(testset, model):
-    testset = testset.split()
-    perplexity = 1
-    N = 0
-    '''
-    for p in probs:
-        if p > 0.:
-            ent -= p * math.log(p, 2)
-    obj_arr['eofh'] = ent
-    '''
-    for word in testset:
-        N += 1
-        perplexity = perplexity * (1/model[word])
-    # I suspect this calculation is bunkum
-    perplexity = pow(perplexity, 1/float(N))
-    return perplexity
-
-def web_iter(args):
-    i,keyword = args
-    #os.chdir(fileLocation +str('/') + str(keyword) +'/')
-    #print(os.getcwd(),i,keyword,b)
+def web_iter(keyword):
+    #keyword = args
+    visited_files = []
     # grab all the file names ending with pickle suffix.
     base_path = fileLocation + str('/') + str(keyword)
     lo_query_links = natsorted(glob.glob(str(base_path)+'/*.p'))
@@ -143,6 +105,7 @@ def web_iter(args):
         urlDat = {}
         obj_arr = {}
         fileHandle = open(fileName, 'rb');
+        visited_files.append(fileHandle)
         file_contents = pickle.load(fileHandle)
 
         if TEXT_FOUNTAIN == True:
@@ -174,7 +137,7 @@ def web_iter(args):
             urlDat['se'] = 'yahoo_'#se[b]
         elif 'duckduckgo_' in fileName:
             urlDat['se'] = 'duckduckgo_'#se[b]
-        elif 'bing' in fileName:
+        elif 'bing_' in fileName:
             urlDat['se'] = 'bing_'#se[b]
         urlDat['keyword'] = keyword
 
@@ -223,10 +186,6 @@ def web_iter(args):
                 ent -= p * math.log(p, 2)
         obj_arr['eofh'] = ent
 
-        #urlDat['entropy_of_word_hist'] = ent
-        print(obj_arr['eofh'],'entropy_of_word_hist')
-        print(urlDat['se'], 'search engine')
-        print(urlDat['keyword'],'search term')
         #frequency of the most used n number of words
         frexMost = fdist.most_common(15) #show N most common words
         fM = {}
@@ -286,29 +245,32 @@ def web_iter(args):
             obj_arr['sentSyl'] = sentSyl
             obj_arr['fM'] = fM
             obj_arr['fAll'] = fAll
-            #if type(obj_arr) is not None:
+        #obj_arr['visited_files'] = visited_files
         list_per_links.append(obj_arr)
     assert len(lo_query_links) == len(list_per_links)
     return list_per_links
 
-'''
 #To use functions above with ipython notebook uncomment this code.
+'''
 import dask.bag as db
+from t_analysis_purepy import web_iter, map_wrapper
 grid = {}
-#grid['b'] = [ r for r in range(0,len(se)) ]
-query_list = ['GMO','Genetically_Modified_Organism','Transgenic','Vaccine', "Neutron"]
-grid['search_term'] = [ (i, q) for i,q in enumerate(query_list) ]
-from sklearn.grid_search import ParameterGrid
-grid = list(ParameterGrid(grid))
-grid = [(dicti['search_term'][0],dicti['search_term'][1]) for dicti in grid ]
-
-#grid = db.from_sequence(grid,npartitions = 8)
-#list_per_links = list(db.map(web_iter,grid).compute())
-#list_per_links = list(map(web_iter,grid))
+query_list = ['GMO','Genetically_Modified_Organism','Transgenic','Vaccine', 'Neutron', 'Play Dough']
+#grid['search_term'] = query_list #[ (i, q) for i,q in enumerate(query_list) ]
+#from sklearn.grid_search import ParameterGrid
+#grid = list(ParameterGrid(grid))
+#grid = [(dicti['search_term'][0],dicti['search_term'][1]) for dicti in grid ]
+#import pdb
+#pdb.set_trace()
+#import dask.bag as db
+grid = db.from_sequence(query_list,npartitions = 8)
+#list_per_links = map_wrapper(web_iter,grid)
+list_per_links = list(db.map(web_iter,grid).compute());
 remove_empty = [i for i in list_per_links if len(i)>0 ]
 unravel = []
 for i in remove_empty:
     unravel.extend(i)
+
 with open('unraveled_links.p','wb') as handle:
     pickle.dump(unravel,handle)
 '''

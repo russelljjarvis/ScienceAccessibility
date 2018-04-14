@@ -131,16 +131,23 @@ def web_iter(keyword):
         print(urlDat['link_rank'])
         if 'google_' in fileName:
             urlDat['se'] = 'google_'#se[b]
-        elif 'gScholar_' in fileName:
+        if 'gScholar_' in fileName:
             urlDat['se'] = 'gScholar_'#se[b]
-        elif 'yahoo_' in fileName:
+        if 'yahoo_' in fileName:
             urlDat['se'] = 'yahoo_'#se[b]
-        elif 'duckduckgo_' in fileName:
+        if 'duckduckgo_' in fileName:
             urlDat['se'] = 'duckduckgo_'#se[b]
-        elif 'bing_' in fileName:
+        if 'bing_' in fileName:
             urlDat['se'] = 'bing_'#se[b]
         urlDat['keyword'] = keyword
-
+        if 'last_iterator' in fileName:
+            break
+        if 'unraveled_links' in fileName:
+            break
+        if 'last_state' in fileName:
+            break
+        #elif:
+        #assert urlDat['se'] is not None
 
         ########################################################################
         #remove unreadable characters
@@ -239,7 +246,7 @@ def web_iter(keyword):
             urlDat['dw']  = textstat.difficult_words(str(url_text))
             urlDat['lwf']  = textstat.linsear_write_formula(str(url_text))
             urlDat['standard']  = textstat.text_standard(str(url_text))
-
+            obj_arr['raw_text'] = str(url_text)
             obj_arr['urlDat'] = urlDat
             obj_arr['WperS'] = WperS
             obj_arr['sentSyl'] = sentSyl
@@ -247,7 +254,8 @@ def web_iter(keyword):
             obj_arr['fAll'] = fAll
         #obj_arr['visited_files'] = visited_files
         list_per_links.append(obj_arr)
-    assert len(lo_query_links) == len(list_per_links)
+    print(len(lo_query_links) == len(list_per_links))
+    #assert len(lo_query_links) == len(list_per_links)
     return list_per_links
 
 #To use functions above with ipython notebook uncomment this code.

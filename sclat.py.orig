@@ -1,26 +1,18 @@
-import requests
-
-def get_tor_session():
-    session = requests.session()
-    # Tor uses the 9050 port as the default socks port
-    session.proxies = {'http':  'socks5://127.0.0.1:9050',
-                       'https': 'socks5://127.0.0.1:9050'}
-    return session
-
-# Make a request through the Tor connection
-# IP visible through Tor
-session = get_tor_session()
-
 ##set parameters - THESE ARE ALL USER DEFINED
-WEB = 4#how many search engines to include (4 possible- google google scholar bing yahoo)
-LINKSTOGET= 10 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
-SEARCHLIST = ['Play Dough','Neutron','Vaccine','Transgenic','GMO','Genetically Modified Organism']
+<<<<<<< HEAD
+web = 5 #how many search engines to include (4 possible- google google scholar bing yahoo)
+=======
+web = 4 #how many search engines to include (4 possible- google google scholar bing yahoo)
+>>>>>>> 748058382c1fea0aef4597250fe8c965eaec4c3f
+linkstoget = 50 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
 
+#search terms of interest
+searchList = ['Vaccine','Transgenic','GMO','Genetically_Modified_Organism']
 import sys
 import os
 
 
-fileLocation = os.getcwd()
+fileLocation = os.getcwd()#+str('/')
 #if you're switchign computers you can use this to indicate a second location to use if the first doesn't exist
 import os
 #if not os.path.exists(FileLocation):
@@ -93,9 +85,6 @@ from textstat.textstat import textstat
 
 def csr(text,strlink):
    '''
-   # This function is not used though it's not depricated either.
-   # The method needs debugging
-
    # This method compares a new link with an old link. We want to know when websites reference themselves (self reference).
    # One way of doing this is to see if a substring constituted by the referal website (URL basename) can be found in the link string.
    # inputs: text on referal website (including links):
@@ -125,25 +114,6 @@ def csr(text,strlink):
    return False
 
 
-import random
-
-def black_string(check_with):
-    check="Our systems have detected unusual traffic from your computer network.\\nThis page checks to see if it\'s really you sending the requests, and not a robot.\\nWhy did this happen?\\nThis page appears when Google automatically detects requests coming from your computer network which appear to be in violation of the Terms of Service. The block will expire shortly after those requests stop.\\nIn the meantime, solving the above CAPTCHA will let you continue to use our services.This traffic may have been sent by malicious software, a browser plug in, or a script that sends automated requests.\\nIf you share your network connection, ask your administrator for help  a different computer using the same IP address may be responsible.\\nLearn moreSometimes you may be asked to solve the CAPTCHA if you are using advanced terms that robots are known to use, or sending requests very quickly."
-    if len(check_with) == 1079:
-        print('suspicious')
-
-    if check in check_with:
-        return True
-    check = "\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00"
-    if check in check_with:
-        return True
-    check = "Please click here if you are not redirected within a few seconds."
-    if check in check_with:
-        return True
-    check="DuckDuckGo  Privacy, simplified.\\nAbout DuckDuckGo\\nDuck it!\\nThe search engine that doesn\'t track you.\\nLearn More."
-    if check in check_with:
-        return True
-    return False
 
 def contents_to_file(contents):
    '''
@@ -153,7 +123,10 @@ def contents_to_file(contents):
    '''
    incrementor, strlink, searchName = contents
    if 'pdf' in strlink:
+<<<<<<< HEAD
+=======
        import urllib
+>>>>>>> 748058382c1fea0aef4597250fe8c965eaec4c3f
        #try:
        pdf_file = str(urllib.request.urlopen(strlink).read())
        assert type(pdf_file) is type(str)
@@ -168,10 +141,17 @@ def contents_to_file(contents):
 
 
        str_text = str(write_text)
+<<<<<<< HEAD
+       write_text = str_text.encode('ascii','ignore')
+       fileName = searchName  + str(incrementor) + ".txt" #create text file save name
+       f = open(fileName, 'w')
+       f.write(write_text)
+=======
        #write_text = str_text.encode('ascii','ignore')
        fileName = searchName  + str(incrementor) + ".txt" #create text file save name
        f = open(fileName, 'w')
        f.write(str_text)
+>>>>>>> 748058382c1fea0aef4597250fe8c965eaec4c3f
        f.close()
 
 
@@ -187,6 +167,10 @@ def contents_to_file(contents):
    else:
       #establish human agent header
       headers = {'User-Agent': str(ua.Firefox)}
+      #try:
+      #request website data using beautiful soup
+      #try:
+
       r = requests.get(strlink, headers=headers)
       soup = BeautifulSoup(r.content, 'html.parser')
 
@@ -196,54 +180,60 @@ def contents_to_file(contents):
 
       # get text
       text = soup.get_text()
-      if black_string(text) == True:
-          print('badness')
-          print('contents')
-          return 0.0
-      else:
-          print('goodness')
 
-          #organize text
-          lines = (line.strip() for line in text.splitlines())  # break into lines and remove leading and trailing space on each
-          chunks = (phrase.strip() for line in lines for phrase in line.split("  ")) # break multi-headlines into a line each
-          text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines
-          str_text = str(text)
-          fileName = searchName +str(incrementor) + ".p" #create text file save name
-          #write contents to file - individual text file for each URL's scraped text
+      #organize text
+      lines = (line.strip() for line in text.splitlines())  # break into lines and remove leading and trailing space on each
+      chunks = (phrase.strip() for line in lines for phrase in line.split("  ")) # break multi-headlines into a line each
+      text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines
+      str_text = str(text)
+      fileName = searchName +str(incrementor) + ".p" #create text file save name
+      #write contents to file - individual text file for each URL's scraped text
+      write_text = text.encode('ascii','ignore')
+      fileName = searchName  + str(incrementor) + ".txt" #create text file save name
+      f = open(fileName, 'w')
+      f.write(str(write_text))
+      f.close()
 
-          write_text = text.encode('ascii','ignore')
-          #fileName = searchName  + str(incrementor) + ".txt" #create text file save name
-          #
-          #f = open(fileName, 'w')
-          #f.write(str(write_text))
-          #f.close()
-          fileName = searchName  + str(incrementor) + ".p" #create text file save name
-          #
-          print(fileName, 'filename')
-          print(type(str_text))
+      print(fileName, 'filename')
+      print(type(str_text))
 
-          f = open(fileName, 'wb')
-          from datetime import datetime
-          st = datetime.utcnow().strftime('%Y-%m-%d_%H:%M:%S.%f')[:-3]
-          pickle.dump([st, str(write_text)],f)
-          f = None
-      return len(str_text)
+      f = open(fileName, 'wb')
+      from datetime import datetime
+      st = datetime.utcnow().strftime('%Y-%m-%d_%H:%M:%S.%f')[:-3]
+      pickle.dump([st, str(write_text)],f)
 
 
+      #except:
+      #      print('bad link',strlink)
+
+
+   f = None
+   return None
+
+
+flat_iter = [ (b,x,category) for x, category in enumerate(searchList) for b in range(0,web) ]
 
 def scraplandtext(fi):
-
-    os.chdir('/home/jovyan/wcproject')
-    b,category = fi
-    f = open('last_iterator.p', 'wb')
+    import pickle
+    f = open('last_state.p', 'wb')
+    #from datetime import datetime
+    #st = datetime.utcnow().strftime('%Y-%m-%d_%H:%M:%S.%f')[:-3]
     pickle.dump(fi,f)
+    #pickle.dump()
+    b,x,category = fi
+    print(" "); print("###############################################")
+    print(" "); print(category);  print(" "); print("###############################################")
     categoryquery = category.replace(' ',"+")
     #set path for saving, and make the folder to save if it doesn't already exist
     path = fileLocation + '/' +  str(category) +'/'
+
+    if not os.path.exists(path):
+        os.makedirs(path)
     os.chdir(path)
     #os.chdir(fileLocation + '/' +  str(category) +'/')
-    time.sleep(random.uniform(0.0125,5.75)) #shor
+    time.sleep(randint(1,2)) #shor
 
+    print(" ")
     if b == 0:
 
         searchName = "google_" #output name for text file
@@ -269,7 +259,7 @@ def scraplandtext(fi):
         linkName = "https://scholar.google.com/scholar?hl=en&as_sdt=0%2C3&q="
 
         pagestring = linkName + "&q=" + categoryquery # googles
-        print("Google Scholar")
+        print("Google")
         driver.get(pagestring)
         continue_link = driver.find_element_by_tag_name('a')
         elem = None
@@ -293,7 +283,6 @@ def scraplandtext(fi):
         linkName = "https://www.bing.com/search?num=100&filter=0&first=" #search engine web address
         pagestring = linkName + "&q=" + categoryquery # googles
         driver.get(pagestring)
-        print(' Bing')
         continue_link = driver.find_element_by_tag_name('a')
         elem = None
         elem = driver.find_elements_by_xpath("//*[@href]")
@@ -308,15 +297,37 @@ def scraplandtext(fi):
             strings_to_process.append(strlink)
             print(strlink)
         #print("\nchecking: " + pagestring + "\n")
+        print("Bing")
 
 
     elif b == 3:
+        searchName = "yahoo_" #output name for text file
+        linkName =  "https://search.yahoo.com/search?p=" #search engine web address
+        pagestring = linkName + "&q=" + categoryquery # googles
+        print("Google")
+        driver.get(pagestring)
+        continue_link = driver.find_element_by_tag_name('a')
+        elem = None
+        elem = driver.find_elements_by_xpath("//*[@href]")
+        linkChecker = [ e for e in elem if "https://r.search.yahoo.com" in str(e.get_attribute("href")) ]
+
+        strings_to_process = []
+        for linko in linkChecker:
+            strlink = linko.get_attribute("href")
+            strings_to_process.append(strlink)
+
+<<<<<<< HEAD
+
+=======
+    '''	
+>>>>>>> 748058382c1fea0aef4597250fe8c965eaec4c3f
+    elif b == 4:
         searchName = "duckduckgo_" #output name for text file
         #https://duckduckgo.com/?q=  #Vaccine&t=hf&atb=v73-3_q&ia=web
         #https://duckduckgo.com/?q=  #GMO&t=hf&atb=v73-3_q&ia=stock
         linkName =  "https://duckduckgo.com/?q=" #search engine web address
         pagestring = linkName + "&q=" + categoryquery # googles
-        print("duckduckgo")
+        print("Google")
         driver.get(pagestring)
         continue_link = driver.find_element_by_tag_name('a')
         elem = None
@@ -327,121 +338,53 @@ def scraplandtext(fi):
         for linko in elem:
             strlink = linko.get_attribute("href")
             strings_to_process.append(strlink)
+            #print(strlink)
+<<<<<<< HEAD
 
-
-    if 1==2:
-        searchName = "yahoo_" #output name for text file
-        linkName =  "https://duckduckgo.com/?q="+"!y " #search engine web address
-        pagestring = linkName + "&q=" + categoryquery
-        from xml.etree import ElementTree
-        response = session.get("https://search.yahoo.com/search?p="+str(categoryquery)).text
-        tree = ElementTree.fromstring(response.content)
-        continue_link = tree.find_element_by_tag_name('a')
-        elem = None
-        elem = tree.find_elements_by_xpath("//*[@href]")
-        linkChecker = [ e for e in elem if "https://r.search.yahoo.com" in str(e.get_attribute("href")) ]
-        strings_to_process = []
-        for linko in linkChecker:
-            strlink = linko.get_attribute("href")
-            strings_to_process.append(strlink)
-            print(strlink)
-            
-    # assert there are less than 5 search engines
-    if b >= 5:
-        print(b,'gets here bug causing data loss. Check iterator construction below')
-        return None
+=======
+    '''
+>>>>>>> 748058382c1fea0aef4597250fe8c965eaec4c3f
     # only check the first 50 links : [0,49]
 
+    # This code is here, to start up where left off, if HTTP requests are denied, because exceeded
+    # crawling qouta policies.
+    try:
+        f = open('../last_state.p', 'rb')
+        stp = [ (i,j, searchName) for i,j in enumerate(strings_to_process[0:49]) ]
+        last_state = pickle.load(f)
+        marker = None
+        for i, temp in enumerate(stp):
+            if str(last_state) == str(temp):
+                marker = i
+                break
+        if type(marker) is not type(None):
+            stp = [ (i,j, searchName) for i,j in enumerate(stp[marker+1:49]) ]
+        import dask.bag as db
+        bstp = db.from_sequence(stp, npartitions=8)
 
-    lta = [ (i,j, searchName) for i,j in enumerate(strings_to_process[0:LINKSTOGET]) ]
-    # links to analyze
-    import dask.bag as db
-    lengths_of_texts = list(map(contents_to_file,lta))
-    print('lengths_of_texts',lengths_of_texts)
-    cnt = 0
-    for i in lengths_of_texts:
-        if i==0:
-            cnt+=1
-    old = LINKSTOGET
-    old_plus = LINKSTOGET+cnt
+        _ = list(map(contents_to_file,stp))
+    except:
+        #print('file doesn\'t exist yet')
+        #if type(strings_to_process) is not type(None):
+        import dask.bag as db
+        bstp = db.from_sequence(stp, npartitions=8)
 
-    while 0 in lengths_of_texts:
-        cnt = 0
-        for i in lengths_of_texts:
-            if i==0:
-                cnt+=1
+        _ = list(map(contents_to_file,stp))
+    return None
+#flat_iter =[ (b,x,category) for b in range(0,web): for x, category in enumerate(searchList) ]
+    #define the search term
+_ = list(map(scraplandtext,flat_iter))
 
-        lta = [ (i,j, searchName) for i,j in enumerate(strings_to_process[old:int(old_plus)]) ]
-        lengths_of_texts = list(map(contents_to_file,lta))
-        old = old_plus
-        old_plus = old + cnt
-
-    
-
-    return lta
+#sl = [ (i, val) for i, val in enumerate(flat_iter)
 import dask.bag as db
+bi = db.from_sequence(flat_iter, npartitions=8)
 
-
-
-
-import pickle
-import os
-
-
-if 1==2:# deliberately break so iterator is built from scratch
-    #os.path.isfile('last_iterator.p'):
-    #x,b,category = fi
-    b,category = pickle.load(open('last_iterator.p', 'rb'))
-    flat_iter = [ (b1,SEARCHLIST[x1]) for b1 in range(b,WEB) for x1 in range(x,len(SEARCHLIST))  ]
-    '''
-    Idealized syntax would utilize grid.
-    grid = {}
-    grid['b']=[0,1,2,3,4]
-    grid['search_term'] = [ i for i in enumerate(SEARCHLIST) ]
-    from sklearn.grid_search import ParameterGrid
-    grid = list(ParameterGrid(grid))
-    grid = [(dicti['b'],dicti['search_term'][1]) for dicti in grid ]
-    '''
-else:
-    grid = {}
-    grid['b']=[0,1,2,3,4]
-    grid['search_term'] = [ i for i in enumerate(SEARCHLIST) ]
-    from sklearn.grid_search import ParameterGrid
-    grid = list(ParameterGrid(grid))
-    flat_iter = [ (b,category) for b in range(0,WEB) for category in SEARCHLIST ]
-    #import pdb
-    #pdb.set_trace()
-    #for i, j in enumerate(flat_iter):
-    #    print(j,grid[i],i)
-    #print(grid)
-    print(flat_iter)
-
-
-def pre_dir(fi):
-    # Old expresion: b,x,category = fi
-    # New Expression
-    b,category = fi
-    categoryquery = category.replace(' ',"+")
-    path = fileLocation + '/' +  str(category) +'/'
-
-    if os.path.exists(path):
-        os.chdir(path)
-        os.system('rm *.p')
-        print('purging cached data')
-    else:
-        os.makedirs(path)
-        os.chdir(path)
-# the idea is that grid and flat iter should be very similar.
-# grid is a bit more maintainable and conventional way of building iterators.
-ltas = list(map(pre_dir,iter(flat_iter)))#.result()\n",
-
-ltas = list(map(scraplandtext,iter(flat_iter)))#.result()\n",
-for i,l in enumerate(ltas):
-    if i !=0:
-        print(len(l)==0)
-        print('yahoo broken')
-        #assert len(l)==old
-    old = len(l)
+#print(b)
+#_ = list(db.map(scraplandtext,b).compute())#.result()\n",
 
 driver.close() #close the driver
-os.chdir('/home/jovyan/../')
+<<<<<<< HEAD
+exit
+=======
+#exit
+>>>>>>> 748058382c1fea0aef4597250fe8c965eaec4c3f

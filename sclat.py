@@ -12,7 +12,7 @@ def get_tor_session():
 session = get_tor_session()
 
 ##set parameters - THESE ARE ALL USER DEFINED
-WEB = 4#how many search engines to include (4 possible- google google scholar bing yahoo)
+WEB = 5#how many search engines to include (4 possible- google google scholar bing yahoo)
 LINKSTOGET= 10 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
 SEARCHLIST = ['Play Dough','Neutron','Vaccine','Transgenic','GMO','Genetically Modified Organism']
 
@@ -53,7 +53,7 @@ from bs4 import BeautifulSoup
 import time
 import shutil
 import requests
-from random import randint
+from random import uniform
 
 from fake_useragent import UserAgent
 ua = UserAgent()
@@ -129,9 +129,9 @@ import random
 
 def black_string(check_with):
     check="Our systems have detected unusual traffic from your computer network.\\nThis page checks to see if it\'s really you sending the requests, and not a robot.\\nWhy did this happen?\\nThis page appears when Google automatically detects requests coming from your computer network which appear to be in violation of the Terms of Service. The block will expire shortly after those requests stop.\\nIn the meantime, solving the above CAPTCHA will let you continue to use our services.This traffic may have been sent by malicious software, a browser plug in, or a script that sends automated requests.\\nIf you share your network connection, ask your administrator for help  a different computer using the same IP address may be responsible.\\nLearn moreSometimes you may be asked to solve the CAPTCHA if you are using advanced terms that robots are known to use, or sending requests very quickly."
-    if len(check_with) == 1079:
+    if len(check_with) == 1145:
         print('suspicious')
-
+        return True
     if check in check_with:
         return True
     check = "\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00"
@@ -144,7 +144,7 @@ def black_string(check_with):
     if check in check_with:
         return True
     return False
-
+MORE = 0.0
 def contents_to_file(contents):
    '''
    visit links if the link expands into HTML, convert to string using Beautiful Soup,
@@ -152,6 +152,9 @@ def contents_to_file(contents):
    Write files (pickle), with a time stamp when the file was created.
    '''
    incrementor, strlink, searchName = contents
+   import time
+   import random
+   time.sleep(random.uniform(1.0125 + MORE,5.75)) #shor
    if 'pdf' in strlink:
        import urllib
        #try:
@@ -196,9 +199,12 @@ def contents_to_file(contents):
 
       # get text
       text = soup.get_text()
+      if len(text) < 1145:
+          print('suspicious')
       if black_string(text) == True:
           print('badness')
           print('contents')
+          MORE += 1.0
           return 0.0
       else:
           print('goodness')
@@ -242,7 +248,7 @@ def scraplandtext(fi):
     path = fileLocation + '/' +  str(category) +'/'
     os.chdir(path)
     #os.chdir(fileLocation + '/' +  str(category) +'/')
-    time.sleep(random.uniform(0.0125,5.75)) #shor
+
 
     if b == 0:
 
@@ -329,7 +335,7 @@ def scraplandtext(fi):
             strings_to_process.append(strlink)
 
 
-    if 1==2:
+    if b==4:
         searchName = "yahoo_" #output name for text file
         linkName =  "https://duckduckgo.com/?q="+"!y " #search engine web address
         pagestring = linkName + "&q=" + categoryquery
@@ -345,7 +351,8 @@ def scraplandtext(fi):
             strlink = linko.get_attribute("href")
             strings_to_process.append(strlink)
             print(strlink)
-            
+        time.sleep(random.uniform(1.0125,5.75)) #shor
+
     # assert there are less than 5 search engines
     if b >= 5:
         print(b,'gets here bug causing data loss. Check iterator construction below')
@@ -376,7 +383,7 @@ def scraplandtext(fi):
         old = old_plus
         old_plus = old + cnt
 
-    
+
 
     return lta
 import dask.bag as db
@@ -388,11 +395,10 @@ import pickle
 import os
 
 
-if 1==2:# deliberately break so iterator is built from scratch
-    #os.path.isfile('last_iterator.p'):
+if os.path.isfile('last_iterator.p'):
     #x,b,category = fi
     b,category = pickle.load(open('last_iterator.p', 'rb'))
-    flat_iter = [ (b1,SEARCHLIST[x1]) for b1 in range(b,WEB) for x1 in range(x,len(SEARCHLIST))  ]
+    flat_iter = [ (b1,SEARCHLIST[x1]) for x1 in range(x,len(SEARCHLIST)) for b1 in range(b,WEB)   ]
     '''
     Idealized syntax would utilize grid.
     grid = {}
@@ -408,7 +414,7 @@ else:
     grid['search_term'] = [ i for i in enumerate(SEARCHLIST) ]
     from sklearn.grid_search import ParameterGrid
     grid = list(ParameterGrid(grid))
-    flat_iter = [ (b,category) for b in range(0,WEB) for category in SEARCHLIST ]
+    flat_iter = [ (b,category) for category in SEARCHLIST for b in range(0,WEB) ]
     #import pdb
     #pdb.set_trace()
     #for i, j in enumerate(flat_iter):

@@ -1,19 +1,9 @@
 import requests
 
-def get_tor_session():
-    session = requests.session()
-    # Tor uses the 9050 port as the default socks port
-    session.proxies = {'http':  'socks5://127.0.0.1:9050',
-                       'https': 'socks5://127.0.0.1:9050'}
-    return session
-
-# Make a request through the Tor connection
-# IP visible through Tor
-session = get_tor_session()
-
+#print(requests.get(url, proxies=proxies).text)
 ##set parameters - THESE ARE ALL USER DEFINED
-WEB = 5#how many search engines to include (4 possible- google google scholar bing yahoo)
-LINKSTOGET= 10 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
+WEB = 4#how many search engines to include (4 possible- google google scholar bing yahoo)
+LINKSTOGET= 50 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
 SEARCHLIST = ['Play Dough','Neutron','Vaccine','Transgenic','GMO','Genetically Modified Organism']
 
 import sys
@@ -144,7 +134,7 @@ def black_string(check_with):
     if check in check_with:
         return True
     return False
-MORE = 0.0
+
 def contents_to_file(contents):
    '''
    visit links if the link expands into HTML, convert to string using Beautiful Soup,
@@ -154,7 +144,9 @@ def contents_to_file(contents):
    incrementor, strlink, searchName = contents
    import time
    import random
-   time.sleep(random.uniform(1.0125 + MORE,5.75)) #shor
+
+
+   time.sleep(random.uniform(4.0125,11.75)) #shor
    if 'pdf' in strlink:
        import urllib
        #try:
@@ -204,7 +196,7 @@ def contents_to_file(contents):
       if black_string(text) == True:
           print('badness')
           print('contents')
-          MORE += 1.0
+          #MORE += 1.0
           return 0.0
       else:
           print('goodness')
@@ -237,6 +229,14 @@ def contents_to_file(contents):
 
 
 
+def lc(linkChecker):
+    strings_to_process = []
+    for linko in linkChecker:
+        strlink = linko.get_attribute("href")
+        strings_to_process.append(strlink)
+        print(strlink)
+    return strings_to_process
+
 def scraplandtext(fi):
 
     os.chdir('/home/jovyan/wcproject')
@@ -262,12 +262,7 @@ def scraplandtext(fi):
         elem = driver.find_elements_by_xpath("//*[@href]")
         linkChecker = [ e for e in elem if "https://www.google.com/search?" in str(e.get_attribute("href")) ]
 
-        strings_to_process = []
-        for linko in linkChecker:
-            strlink = linko.get_attribute("href")
-            strings_to_process.append(strlink)
-            print(strlink)
-
+        strings_to_process = lc(linkChecker)
 
     elif b == 1:
 
@@ -283,17 +278,11 @@ def scraplandtext(fi):
         linkChecker = []
         linkChecker = [ e for e in elem if "https://scholar.google.com/scholar?" in str(e.get_attribute("href")) ]
         # scholar is  href="/scholar?
-
-        strings_to_process = []
-        for linko in linkChecker:
-            strlink = linko.get_attribute("href")
-            strings_to_process.append(strlink)
-            print(strlink)
+        strings_to_process = lc(linkChecker)
         print("Google Scholar")
 
 
-
-    elif b == 2:
+    if b == 2:
 
         searchName = "bing_" #output name for text file
         linkName = "https://www.bing.com/search?num=100&filter=0&first=" #search engine web address
@@ -308,11 +297,8 @@ def scraplandtext(fi):
         linkChecker = [ strlink for strlink in linkChecker if 'r.bat' not in strlink.get_attribute("href") or 'r.msn' \
          not in strlink.get_attribute("href") or'www.bing.com/news/search' not in strlink.get_attribute("href") ]
 
-        strings_to_process = []
-        for linko in linkChecker:
-            strlink = linko.get_attribute("href")
-            strings_to_process.append(strlink)
-            print(strlink)
+        strings_to_process = lc(linkChecker)
+
         #print("\nchecking: " + pagestring + "\n")
 
 
@@ -327,15 +313,13 @@ def scraplandtext(fi):
         continue_link = driver.find_element_by_tag_name('a')
         elem = None
         elem = driver.find_elements_by_xpath("//*[@href]")
-        #linkChecker = [ e for e in elem if "http://r.search.yahoo.com/_ylt=" in str(e.get_attribute("href")) ]
+        linkChecker = [ e for e in elem if "http://r.search.yahoo.com/_ylt=" in str(e.get_attribute("href")) ]
 
-        strings_to_process = []
-        for linko in elem:
-            strlink = linko.get_attribute("href")
-            strings_to_process.append(strlink)
+        strings_to_process = lc(linkChecker)
 
 
-    if b==4:
+    '''
+    if b == 4:
         searchName = "yahoo_" #output name for text file
         linkName =  "https://duckduckgo.com/?q="+"!y " #search engine web address
         pagestring = linkName + "&q=" + categoryquery
@@ -346,23 +330,17 @@ def scraplandtext(fi):
         elem = None
         elem = tree.find_elements_by_xpath("//*[@href]")
         linkChecker = [ e for e in elem if "https://r.search.yahoo.com" in str(e.get_attribute("href")) ]
-        strings_to_process = []
-        for linko in linkChecker:
-            strlink = linko.get_attribute("href")
-            strings_to_process.append(strlink)
-            print(strlink)
-        time.sleep(random.uniform(1.0125,5.75)) #shor
+        strings_to_process = lc(linkChecker)
+    '''
+    time.sleep(random.uniform(1.0125,5.75)) #shor
 
-    # assert there are less than 5 search engines
-    if b >= 5:
-        print(b,'gets here bug causing data loss. Check iterator construction below')
-        return None
-    # only check the first 50 links : [0,49]
 
 
     lta = [ (i,j, searchName) for i,j in enumerate(strings_to_process[0:LINKSTOGET]) ]
     # links to analyze
     import dask.bag as db
+    # shuffle to feign humanhood
+    random.shuffle(lta)
     lengths_of_texts = list(map(contents_to_file,lta))
     print('lengths_of_texts',lengths_of_texts)
     cnt = 0
@@ -379,12 +357,12 @@ def scraplandtext(fi):
                 cnt+=1
 
         lta = [ (i,j, searchName) for i,j in enumerate(strings_to_process[old:int(old_plus)]) ]
+        # shuffle to feign humanhood
+        random.shuffle(lta)
+
         lengths_of_texts = list(map(contents_to_file,lta))
         old = old_plus
         old_plus = old + cnt
-
-
-
     return lta
 import dask.bag as db
 
@@ -396,9 +374,10 @@ import os
 
 
 if os.path.isfile('last_iterator.p'):
+    pass
     #x,b,category = fi
-    b,category = pickle.load(open('last_iterator.p', 'rb'))
-    flat_iter = [ (b1,SEARCHLIST[x1]) for x1 in range(x,len(SEARCHLIST)) for b1 in range(b,WEB)   ]
+    #b,category = pickle.load(open('last_iterator.p', 'rb'))
+    #flat_iter = [ (b1,SEARCHLIST[x1]) for x1 in range(x,len(SEARCHLIST)) for b1 in range(b,WEB)   ]
     '''
     Idealized syntax would utilize grid.
     grid = {}
@@ -409,21 +388,17 @@ if os.path.isfile('last_iterator.p'):
     grid = [(dicti['b'],dicti['search_term'][1]) for dicti in grid ]
     '''
 else:
-    grid = {}
-    grid['b']=[0,1,2,3,4]
-    grid['search_term'] = [ i for i in enumerate(SEARCHLIST) ]
-    from sklearn.grid_search import ParameterGrid
-    grid = list(ParameterGrid(grid))
-    flat_iter = [ (b,category) for category in SEARCHLIST for b in range(0,WEB) ]
-    #import pdb
-    #pdb.set_trace()
-    #for i, j in enumerate(flat_iter):
-    #    print(j,grid[i],i)
-    #print(grid)
-    print(flat_iter)
+    pass
+
+grid = {}
+grid['b'] = [0,1,2,3,4]
+grid['search_term'] = [ i for i in enumerate(SEARCHLIST) ]
+from sklearn.grid_search import ParameterGrid
+grid = list(ParameterGrid(grid))
+flat_iter = [ (b,category) for category in SEARCHLIST for b in range(0,WEB) ]
 
 
-def pre_dir(fi):
+def pre_pro_dir(fi):
     # Old expresion: b,x,category = fi
     # New Expression
     b,category = fi
@@ -439,9 +414,18 @@ def pre_dir(fi):
         os.chdir(path)
 # the idea is that grid and flat iter should be very similar.
 # grid is a bit more maintainable and conventional way of building iterators.
-ltas = list(map(pre_dir,iter(flat_iter)))#.result()\n",
+
+#ltas = list(map(pre_pro_dir,iter(flat_iter)))#.result()\n",
+##
+# Randomly shuffle the list, instead of going through the list in logical sequence.
+# Humans are erratic, bots are not. Feign humanhood by adopting erratic behavior.
+##
+
+
+random.shuffle(flat_iter)
 
 ltas = list(map(scraplandtext,iter(flat_iter)))#.result()\n",
+
 for i,l in enumerate(ltas):
     if i !=0:
         print(len(l)==0)

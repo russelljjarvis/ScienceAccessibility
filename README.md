@@ -1,6 +1,9 @@
 # Scientific readability project
-* NB: I renamed ScrapeLinks_and_Text.py sclat_revised.py
-* NB: I renamed TextAnalysis_v3.py t_analysis_purepython.py
+
+To Run the project
+You need to run python sclat.py, and python t_analysis_purepython.py
+jupyter notebook Visualization_of_terms_reading_level.ipynb in a non trivial environment brought to you by Docker (read below)
+
 
 * To future developers a GH repository of this code lives at
 https://github.com/russelljjarvis/SReadability.git/
@@ -47,7 +50,7 @@ Python chromium/geckodriver configuration is here:
 https://github.com/russelljjarvis/SReadability/blob/dev/Dockerfile#L34-L111
 
 
-Instructions for running code on your end. In the terminal navigate to to the Sreadability directory. Type
+Instructions for running code on your end. In the terminal navigate to to the WCP directory. Type
 
 ```git pull origin master``` and enter GH credentials.
 
@@ -55,19 +58,10 @@ Then use wcp alias. (ie type `wcp` in the terminal). If that does not work you m
 
 and then
 type ```wcp``` until the prompt says 'jovyan' then you are in the container (fast command line virtual machine).
-Then inside container run ```ipython -i ScrapeLinksandText_v5.py``` and then ```ipython -i tAnalysis.py```
+Then inside container run ```ipython -i sclat.py``` and then ```ipython -i t_analysis_purepython.py```
 Or I can do it on your computer when you are free next.
 
-To install octave (MATLAB by FOSS), use the command inside docker container:
-```sudo bash install_octave.sh```
+alias octave='cd /Users/Dropbox\ \(ASU\)/SReadability_revised; docker run -it -v /Users/rjjarvis/Dropbox\ \(ASU\)/SReadability_revised:/home/jovyan russelljarvis/wcomp_env:latest /bin/bash'
 
-To run both Scrape_links_and_text_etc.py and tAnalysis.py
-
-Run:
-
-``` ipython -i run_all.py ```
-which runs both scrape_links_and_text and text_analysis at the same time (note older existing outputs of scrape_links_and_text are used as inputs into text_analysis, such
-that the latest analysis, is always one iteration older than the latest.
-
-```bash run_all.sh ``` simultaneously executes run_all, at the same time as installing octave.
-Once run_all.py is completed it tries to then execute the MATLAB graphing code on the results files
+alias joct='cd /Users/Dropbox\ \(ASU\)/SReadability_revised; docker run -p 8888:8888 -e USERID=$UID -v /Users/rjjarvis/Dropbox\ \(ASU\)/SReadability_revised:/home/jovyan/wcproject russelljarvis/wcomp_env:latest jupyter notebook \
+--ip=0.0.0.0 --NotebookApp.disable_check_xsrf=True'

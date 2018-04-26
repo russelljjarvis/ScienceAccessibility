@@ -35,6 +35,10 @@ from nltk.classify import NaiveBayesClassifier
 from nltk.corpus import subjectivity
 from nltk.corpus import cmudict
 from nltk.sentiment import SentimentAnalyzer
+from nltk import NgramAssocMeasures
+#pmi as nentropy
+mi = NgramAssocMeasures.mi_like
+
 from nltk import compat
 #from nltk.compat import Counter
 #from nltk.draw import dispersion_plot
@@ -106,6 +110,7 @@ def web_iter(keyword):
         obj_arr = {}
         fileHandle = open(fileName, 'rb');
         visited_files.append(fileHandle)
+        print(keyword,fileHandle,'location before crash')
         file_contents = pickle.load(fileHandle)
 
         if TEXT_FOUNTAIN == True:
@@ -126,8 +131,9 @@ def web_iter(keyword):
 
         #initialize dataArray Dictionary
 
-
         urlDat['link_rank'] = p
+        urlDat['keyword'] = keyword
+
         print(urlDat['link_rank'])
         if 'google_' in fileName:
             urlDat['se'] = 'google_'#se[b]
@@ -139,15 +145,6 @@ def web_iter(keyword):
             urlDat['se'] = 'duckduckgo_'#se[b]
         if 'bing_' in fileName:
             urlDat['se'] = 'bing_'#se[b]
-        urlDat['keyword'] = keyword
-        if 'last_iterator' in fileName:
-            break
-        if 'unraveled_links' in fileName:
-            break
-        if 'last_state' in fileName:
-            break
-        #elif:
-        #assert urlDat['se'] is not None
 
         ########################################################################
         #remove unreadable characters
@@ -252,6 +249,8 @@ def web_iter(keyword):
             obj_arr['sentSyl'] = sentSyl
             obj_arr['fM'] = fM
             obj_arr['fAll'] = fAll
+            #obj_arr['nltkent']= mi(list(fdist.values()))
+            #print(obj_arr['nltkent'])
         #obj_arr['visited_files'] = visited_files
         list_per_links.append(obj_arr)
     print(len(lo_query_links) == len(list_per_links))

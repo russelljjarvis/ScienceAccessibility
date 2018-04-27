@@ -2,12 +2,12 @@ import requests
 
 #print(requests.get(url, proxies=proxies).text)
 ##set parameters - THESE ARE ALL USER DEFINED
-WEB = 5#how many search engines to include (4 possible- google google scholar bing yahoo)
+WEB = 6#how many search engines to include (4 possible- google google scholar bing yahoo)
 LINKSTOGET= 50 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
 SEARCHLIST = ['Play Dough','Neutron','Vaccine','Transgenic','GMO','Genetically Modified Organism']
-
 import sys
 import os
+#os.system('pip install python-twitter')
 
 import selenium
 from pyvirtualdisplay import Display
@@ -119,11 +119,11 @@ def csr(text,strlink):
 import random
 
 def black_string(check_with):
-    print(check_with)
+    #print(check_with)
     check="Our systems have detected unusual traffic from your computer network.\\nThis page checks to see if it\'s really you sending the requests, and not a robot.\\nWhy did this happen?\\nThis page appears when Google automatically detects requests coming from your computer network which appear to be in violation of the Terms of Service. The block will expire shortly after those requests stop.\\nIn the meantime, solving the above CAPTCHA will let you continue to use our services.This traffic may have been sent by malicious software, a browser plug in, or a script that sends automated requests.\\nIf you share your network connection, ask your administrator for help  a different computer using the same IP address may be responsible.\\nLearn moreSometimes you may be asked to solve the CAPTCHA if you are using advanced terms that robots are known to use, or sending requests very quickly."
     if len(check_with) == 1145:
         print('suspicious')
-        print(check_with)
+        #print(check_with)
         return True
     if check in check_with:
         return True
@@ -139,16 +139,22 @@ def black_string(check_with):
     return False
 
 def referal_check(check_with):
+    '''
+    this is effective at finding when a click forward would help
+    '''
     check = "DuckDuckGoYou are being redirected to the non-JavaScript site.Click here if it doesn't happen automatically."
     if check in check_with:
-        print(check_with)
+        #print(check_with)
         return True
     else:
         return False
 
 def referal_trick():
+    '''
+    This only half works
+    '''
     crude_html = driver.page_source
-    print(crude_html)
+    #print(crude_html)
     driver.find_element_by_partial_link_text("Click here if it doesn't happen automatically").click()
     crude_html = driver.page_source
     soup = BeautifulSoup(crude_html, 'html.parser')
@@ -168,8 +174,13 @@ def contents_to_file(contents):
    import time
    import random
 
-
-   time.sleep(random.uniform(4.0125,11.75)) #shor
+   extra = 0.0
+   if searchName == '_google':
+       extra = 10.0
+       print('extra time')
+   sleepy = random.uniform(extra+4.0125,extra+11.75)
+   print('time to sleep',sleepy)
+   time.sleep(sleepy) #shor
    if 'pdf' in strlink:
        import urllib
        #try:
@@ -199,7 +210,7 @@ def contents_to_file(contents):
        f = open(fileName, 'wb')
        from datetime import datetime
        st = datetime.utcnow().strftime('%Y-%m-%d_%H:%M:%S.%f')[:-3]
-       pickle.dump([st, str(write_text)],f)
+       pickle.dump([st, str(write_text),strlink],f)
        #except:
         #   print('bad link',strlinkto)
    else:
@@ -225,8 +236,6 @@ def contents_to_file(contents):
               print(text)
               if referal_check(text) == True:
                   return 0.0
-                  #text = referal_trick()
-
           print('goodness')
 
           #organize text
@@ -241,18 +250,21 @@ def contents_to_file(contents):
           fileName = searchName  + str(incrementor) + ".p" #create text file save name
           #
           print(fileName, 'filename')
-          print(type(str_text),'stuck d')
+          #print(type(str_text),'stuck d')
 
           f = open(fileName, 'wb')
           from datetime import datetime
           st = datetime.utcnow().strftime('%Y-%m-%d_%H:%M:%S.%f')[:-3]
-          pickle.dump([st, str(write_text)],f)
+          pickle.dump([st, str(write_text),strlink],f)
           f = None
       return len(str_text)
 
 
 
 def lc(linkChecker):
+    '''
+    Reformat html elements containing links to lists of strings.
+    '''
     strings_to_process = []
     for linko in linkChecker:
         strlink = linko.get_attribute("href")
@@ -260,117 +272,149 @@ def lc(linkChecker):
         print(strlink)
     return strings_to_process
 
+import requests
+from bs4 import BeautifulSoup
+
+headers_Get = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:49.0) Gecko/20100101 Firefox/49.0',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'Accept-Language': 'en-US,en;q=0.5',
+        'Accept-Encoding': 'gzip, deflate',
+        'DNT': '1',
+        'Connection': 'keep-alive',
+        'Upgrade-Insecure-Requests': '1'
+    }
+
+
+def google(q):
+    s = requests.Session()
+    q = '+'.join(q.split())
+    url = 'https://www.google.com/search?q=' + q + '&ie=utf-8&oe=utf-8'
+    r = s.get(url, headers=headers_Get)
+
+    soup = BeautifulSoup(r.text, "html.parser")
+    output = []
+    for searchWrapper in soup.find_all('h3', {'class':'r'}): #this line may change in future based on google's web page structure
+        url = searchWrapper.find('a')["href"]
+        text = searchWrapper.find('a').text.strip()
+        #result = {'text': text, 'url': url}
+        output.append(url)
+    return output
 
 
 def preview_links(b,categoryquery):
-    try :
-        if b == 0:
 
-            searchName = "google_" #output name for text file
-            linkName = "https://www.google.com/search?q=" #search engine web address
-            pagestring = linkName + categoryquery # googles
-            driver.get(pagestring)
-            continue_link = driver.find_element_by_tag_name('a')
-            elem = None
-            elem = driver.find_elements_by_xpath("//*[@href]")
-            linkChecker = []
-            linkChecker = [ e for e in elem if "https://www.google.com/search?q=" in str(e.get_attribute("href")) ]
-            # scholar is  href="/scholar?
-            strings_to_process = lc(linkChecker)
-            print("Google ")
-            #strings_to_process = google(categoryquery)
-            #strings_to_process = lc(linkChecker)
-
-        if b == 1:
-
-            searchName = "gScholar_" #output name for text file
-            linkName = "https://scholar.google.com/scholar?hl=en&as_sdt=0%2C3&q="
-
-            pagestring = linkName + "&q=" + categoryquery # googles
-            print("Google Scholar")
-            driver.get(pagestring)
-            continue_link = driver.find_element_by_tag_name('a')
-            elem = None
-            elem = driver.find_elements_by_xpath("//*[@href]")
-            linkChecker = []
-            linkChecker = [ e for e in elem if "https://scholar.google.com/scholar?q=" in str(e.get_attribute("href")) ]
-            # scholar is  href="/scholar?
-            strings_to_process = lc(linkChecker)
-            print("Google Scholar")
+    if b == 0:
+        strings_to_process = google(categoryquery)
 
 
-        if b == 2:
+        # probably toggle between above mode and this commented out mode, such as to diversify requests sent to google
+        # under principle that diversified request sources are more human and less bot like.
 
-            searchName = "bing_" #output name for text file
-            linkName = "https://www.bing.com/search?num=100&filter=0&first=" #search engine web address
-            pagestring = linkName + "&q=" + categoryquery # googles
-            driver.get(pagestring)
-            print(' Bing')
-            continue_link = driver.find_element_by_tag_name('a')
-            elem = None
-            elem = driver.find_elements_by_xpath("//*[@href]")
-            #href="/search?q=
-            linkChecker = [ e for e in elem if "https://www.bing.com/search?" in str(e.get_attribute("href")) ]
-            linkChecker = [ strlink for strlink in linkChecker if 'r.bat' not in strlink.get_attribute("href") or 'r.msn' \
-             not in strlink.get_attribute("href") or'www.bing.com/news/search' not in strlink.get_attribute("href") ]
+        '''
+        searchName = "google_" #output name for text file
+        linkName = "https://www.google.com/search?q=" #search engine web address
 
-            strings_to_process = lc(linkChecker)
-
-            #print("\nchecking: " + pagestring + "\n")
-
-
-        elif b == 5:
-            searchName = "duckduckgo_" #output name for text file
-            #https://duckduckgo.com/?q=  #Vaccine&t=hf&atb=v73-3_q&ia=web
-            #https://duckduckgo.com/?q=  #GMO&t=hf&atb=v73-3_q&ia=stock
-            linkName =  "https://duckduckgo.com/?q=" #search engine web address
-            pagestring = linkName + categoryquery # googles
-            print("duckduckgo")
-            driver.get(pagestring)
-            continue_link = driver.find_element_by_tag_name('a')
-            elem = None
-            elem = driver.find_elements_by_xpath("//*[@href]")
-            linkChecker = [ e for e in elem if "https://duckduckgo.com/?q=" in str(e.get_attribute("href")) ]
-
-            strings_to_process = lc(linkChecker)
+        pagestring = linkName + categoryquery # googles
+        driver.get(pagestring)
+        continue_link = driver.find_element_by_tag_name('a')
+        elem = None
+        elem = driver.find_elements_by_xpath("//*[@href]")
+        linkChecker = []
+        linkChecker = [ e for e in elem if "https://www.google.com/search?q=" in str(e.get_attribute("href")) ]
+        strings_to_process = lc(linkChecker)
+        '''
 
 
 
-        if b == 4:
-            searchName = "yahoo_" #output name for text file
-            linkName =  "https://search.yahoo.com/search?p=" #search engine web address
-            pagestring = linkName + categoryquery
-            print("yahoo")
-            driver.get(pagestring)
-            continue_link = driver.find_element_by_tag_name('a')
-            elem = None
-            elem = driver.find_elements_by_xpath("//*[@href]")
-            linkChecker = [ e for e in elem if "https://search.yahoo.com" in str(e.get_attribute("href")) ]
-            strings_to_process = lc(linkChecker)
+    if b == 1:
+
+        searchName = "gScholar_" #output name for text file
+        linkName = "https://scholar.google.com/scholar?hl=en&as_sdt=0%2C3&q="
+
+        pagestring = linkName + "&q=" + categoryquery # googles
+        print("Google Scholar")
+        driver.get(pagestring)
+        continue_link = driver.find_element_by_tag_name('a')
+        elem = None
+        elem = driver.find_elements_by_xpath("//*[@href]")
+        linkChecker = []
+        linkChecker = [ e for e in elem if "https://scholar.google.com/scholar?q=" in str(e.get_attribute("href")) ]
+        # scholar is  href="/scholar?
+        strings_to_process = lc(linkChecker)
+        print("Google Scholar")
 
 
+    if b == 2:
 
-        if b == 3:
-            searchName = "twitter_" #output name for text file
-            linkName =  "https://twitter.com/search?q=" #search engine web address
-            pagestring = linkName + categoryquery
-            print("yahoo")
-            driver.get(pagestring)
-            #from xml.etree import ElementTree
-            #response = session.get("https://search.yahoo.com/search?p="+str(categoryquery)).text
-            #tree = ElementTree.fromstring(response.content)
-            continue_link = driver.find_element_by_tag_name('a')
-            elem = None
-            elem = driver.find_elements_by_xpath("//*[@href]")
-            linkChecker = [ e for e in elem if "https://twitter.com" in str(e.get_attribute("href")) ]
-            strings_to_process = lc(linkChecker)
+        searchName = "bing_" #output name for text file
+        linkName = "https://www.bing.com/search?num=100&filter=0&first=" #search engine web address
+        pagestring = linkName + "&q=" + categoryquery # googles
+        driver.get(pagestring)
+        print(' Bing')
+        continue_link = driver.find_element_by_tag_name('a')
+        elem = None
+        elem = driver.find_elements_by_xpath("//*[@href]")
+        #href="/search?q=
+        linkChecker = [ e for e in elem if "https://www.bing.com/search?" in str(e.get_attribute("href")) ]
+        linkChecker = [ strlink for strlink in linkChecker if 'r.bat' not in strlink.get_attribute("href") or 'r.msn' \
+         not in strlink.get_attribute("href") or'www.bing.com/news/search' not in strlink.get_attribute("href") ]
 
-        return strings_to_process
+        strings_to_process = lc(linkChecker)
+
+        #strings_to_process = []
+
+        #print("\nchecking: " + pagestring + "\n")
+    if b == 3:
+        strings_to_process = []
+
+    '''
+    if b == 3:
+        searchName = "twitter_" #output name for text file
+        linkName =  "https://twitter.com/search?q=" #search engine web address
+        pagestring = linkName + categoryquery +str('%50&result_type=recent&since=2014-07-19&count=100')
+        print("yahoo")
+        driver.get(pagestring)
+        #results = api.GetSearch(raw_query="q="+categoryquery+"%50&result_type=recent&since=2014-07-19&count=100")
+        #from xml.etree import ElementTree
+        #response = session.get("https://search.yahoo.com/search?p="+str(categoryquery)).text
+        #tree = ElementTree.fromstring(response.content)
+        continue_link = driver.find_element_by_tag_name('a')
+        elem = None
+        elem = driver.find_elements_by_xpath("//*[@href]")
+        linkChecker = [ e for e in elem if "https://twitter.com" in str(e.get_attribute("href")) ]
+        strings_to_process = lc(linkChecker)
+    '''
+
+    if b == 4:
+        searchName = "yahoo_" #output name for text file
+        linkName =  "https://search.yahoo.com/search?p=" #search engine web address
+        pagestring = linkName + categoryquery
+        print("yahoo")
+        driver.get(pagestring)
+        continue_link = driver.find_element_by_tag_name('a')
+        elem = None
+        elem = driver.find_elements_by_xpath("//*[@href]")
+        linkChecker = [ e for e in elem if "https://search.yahoo.com" in str(e.get_attribute("href")) ]
+        strings_to_process = lc(linkChecker)
 
 
-    except :
-        print("Page load Timeout Occured. Quiting !!!")
-        return None
+    elif b == 5:
+        searchName = "duckduckgo_" #output name for text file
+        #https://duckduckgo.com/?q=  #Vaccine&t=hf&atb=v73-3_q&ia=web
+        #https://duckduckgo.com/?q=  #GMO&t=hf&atb=v73-3_q&ia=stock
+        linkName =  "https://duckduckgo.com/html/?q=" #search engine web address
+        pagestring = linkName + categoryquery # googles
+        print("duckduckgo")
+        #pagestring = str('https://api.duckduckgo.com/?q=')+categoryquery+
+        driver.get(pagestring)
+        continue_link = driver.find_element_by_tag_name('a')
+        elem = None
+        elem = driver.find_elements_by_xpath("//*[@href]")
+        linkChecker = [ e for e in elem if "https://duckduckgo.com/?q=" in str(e.get_attribute("href")) ]
+        strings_to_process = lc(linkChecker)
+    return strings_to_process
+
 
 
 
@@ -380,7 +424,7 @@ def scraplandtext(fi):
 
     os.chdir('/home/jovyan')
     b,category = fi
-    f = open('last_iterator.p', 'wb')
+    f = open('last_iterator.p', 'ab')
     pickle.dump(fi,f)
     categoryquery = category.replace(' ',"+")
     #set path for saving, and make the folder to save if it doesn't already exist
@@ -388,23 +432,36 @@ def scraplandtext(fi):
     os.chdir(path)
 
     strings_to_process = preview_links(b,categoryquery)
+    print(strings_to_process)
+    assert type(strings_to_process) is type([0,0])
+    import utils
+    se, _ = utils.engine_dict_list()
 
-
-    time.sleep(random.uniform(1.0125,5.75)) #shor
-    lta = [ (i,j, searchName) for i,j in enumerate(strings_to_process[0:LINKSTOGET]) ]
-    # links to analyze
+    lta = [ (i,j, se[b]) for i,j in enumerate(strings_to_process[0:LINKSTOGET]) ]
     import dask.bag as db
-    # shuffle to feign humanhood
+    # shuffle
+    # random traversal of an otherwides hierachical traversal of link rank to
+    # principle that random traversal feigns humanhood
+
     random.shuffle(lta)
+    random.shuffle(lta)
+    random.shuffle(lta)
+
     lengths_of_texts = list(map(contents_to_file,lta))
     lengths_of_texts_old = list(filter(lambda x: x != 0, lengths_of_texts))
+    old_delta = LINKSTOGET - len(lengths_of_texts_old)
     print('delta',LINKSTOGET - len(lengths_of_texts_old) )
     print(lengths_of_texts_old)
     #return lta
 
     old = LINKSTOGET + 1
     while len(lengths_of_texts_old) < LINKSTOGET:
-        print('stuck a')
+        # if links searched was less than 50
+        # assume the first links searched were good and the rest were bad
+        # therefore want to make up the difference between links explored and 50 if possible
+        # but only if the server isn't outright rejecting requests
+        # comparing 50 versus number of valid search returns twice, gives an indication of whether exploring
+        # further down the page rank helps. If it doesn't quit outright.
 
         new_delta = LINKSTOGET - len(lengths_of_texts_old)
         if old_delta == new_delta:
@@ -421,6 +478,8 @@ def scraplandtext(fi):
         old = old_plus
         old_delta = new_delta
 
+    return # required for readability only
+
 
 
 
@@ -430,29 +489,16 @@ import os
 
 if os.path.isfile('last_iterator.p'):
     try:
-        pass
-        #b,category = pickle.load(open('last_iterator.p', 'rb'))
+        contents = pickle.load(open('last_iterator.p', 'rb'))
+        flat_iter = contents[0]
+        b,category = contents[-1]
     except:
-        pass
+        flat_iter = [ (b,category) for category in SEARCHLIST for b in range(0,WEB) ]
+        f = open('last_iterator.p', 'wb')
+        pickle.dump(flat_iter,f)
+        random.shuffle(flat_iter)
+        from utils import purge
 
-flat_iter = [ (b,category) for category in SEARCHLIST for b in range(0,WEB) ]
-random.shuffle(flat_iter)
-
-
-def purge(fi):
-    # Old expresion: b,x,category = fi
-    # New Expression
-    b,category = fi
-    categoryquery = category.replace(' ',"+")
-    path = fileLocation + '/' +  str(category) +'/'
-
-    if os.path.exists(path):
-        os.chdir(path)
-        os.system('rm *.p')
-        print('purging cached data')
-    else:
-        os.makedirs(path)
-        os.chdir(path)
 # the idea is that grid and flat iter should be very similar.
 # grid is a bit more maintainable and conventional way of building iterators.
 

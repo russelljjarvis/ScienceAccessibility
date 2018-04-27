@@ -58,7 +58,7 @@ import pandas as pd
 # Set user parameters based on type of analysis
 searchList = ['Play Dough','GMO','Genetically_Modified_Organism','Transgenic','Vaccine', 'Neutron']
 NWEB = 5 #number of search websites being implemented (google, google scholar, bing, yahoo, duckduckgo)
-numURLs = 49 #number of URLs per search website  (number determined by 1.scrape code)
+numURLs = 50 #number of URLs per search website  (number determined by 1.scrape code)
 
 #also save these parameters for analysis purposes
 spec_dict = { 'searchList':searchList, 'nweb':NWEB, 'numURLs':numURLs}
@@ -75,18 +75,13 @@ fileLocation = os.getcwd()
 if not os.path.exists(fileLocation):
     os.makedirs(fileLocation)
 
-
 date_created = []
 import pickle
 import os
 
-se = {}
-se[0] = "google_"
-se[1] = "gScholar_"
-se[2] = "bing_"
-se[3] = "twitter_"
-se[4] = "yahoo_"
-se[5] = "duckduckgo_"
+
+import utils
+se, _ = utils.engine_dict_list()
 #NWEB = 5
 
 
@@ -100,7 +95,7 @@ def map_wrapper(function_item,list_items):
     return list_items
 
 
-def web_iter(keyword):
+def web_iter(keyword, frames = False):
     #keyword = args
     visited_files = []
     # grab all the file names ending with pickle suffix.
@@ -116,6 +111,7 @@ def web_iter(keyword):
         visited_files.append(fileHandle)
         print(keyword,fileHandle,'location before crash')
         file_contents = pickle.load(fileHandle)
+        fileHandle.close()
 
         if TEXT_FOUNTAIN == True:
             # Recover the initial text file data, corresponding to both PDFs and html web page content.
@@ -124,19 +120,18 @@ def web_iter(keyword):
             f.write(str(file_contents.encode('ascii','ignore')))
             f.close()
 
-        if len(file_contents) == 2:
-            date_created.append((str(base_path + fileName), file_contents[0]))
-            url_text = file_contents[1]
-
-        else:
-
-            url_text = file_contents
-        fileHandle.close()
+        date_created.append((str(base_path + fileName), file_contents[0]))
+        url_text = file_contents[1]
 
         #initialize dataArray Dictionary
 
+        if len(file_contents)==3:
+            print('crashes in file type read')
+            print(str(file_contents[2]))
+            urlDat['link_string'] = str(file_contents[2])
         urlDat['link_rank'] = p
         urlDat['keyword'] = keyword
+
 
         print(urlDat['link_rank'])
         if 'google_' in fileName:
@@ -149,7 +144,6 @@ def web_iter(keyword):
             urlDat['se'] = 'duckduckgo_'#se[b]
         if 'bing_' in fileName:
             urlDat['se'] = 'bing_'#se[b]
-        print(urlDat['se'])
         assert type(urlDat['se']) is not None
 
         ########################################################################
@@ -181,19 +175,20 @@ def web_iter(keyword):
         for x in range(0,len(fd_temp)):
             fAll[x,1], fAll[x,2] = [y.strip('}()",{:') for y in (str(fd_temp[x])).split(',')]
 
-        obj_arr['frequencies'] = sorted([ (f[1],f[0]) for f in fd_temp ],reverse=True)
-        number_of_words = sum([ f[0] for f in obj_arr['frequencies'] ])
+        urlDat['frequencies'] = sorted([ (f[1],f[0]) for f in fd_temp ],reverse=True)
+        number_of_words = sum([ f[0] for f in urlDat['frequencies'] ])
 
-        probs = [float(c[0]) / number_of_words for c in obj_arr['frequencies'] ]
+        probs = [float(c[0]) / number_of_words for c in urlDat['frequencies'] ]
         probs = [p for p in probs if p > 0.]
         ent = 0
         for p in probs:
             if p > 0.:
                 ent -= p * math.log(p, 2)
-        obj_arr['eofh'] = ent
+        urlDat['eofh'] = ent
 
         #frequency of the most used n number of words
         frexMost = fdist.most_common(15) #show N most common words
+        urlDat['frexMost'] = frexMost
         fM = {}
         for x in range(0,len(frexMost)) :
             fM[x,1], fM[x,2] = [y.strip('}()",{:') for y in (str(frexMost[x])).split(',')]
@@ -204,6 +199,8 @@ def web_iter(keyword):
         urlDat['sp'] = testimonial.sentiment.polarity
         urlDat['ss'] = testimonial.sentiment.subjectivity
 
+            #break
+        #else:
         ########################################################################
         #determine syllable count for all words in each sentece
         sentSyl = {}
@@ -243,62 +240,39 @@ def web_iter(keyword):
             urlDat['dw']  = textstat.difficult_words(str(url_text))
             urlDat['lwf']  = textstat.linsear_write_formula(str(url_text))
             urlDat['standard']  = textstat.text_standard(str(url_text))
-            obj_arr['raw_text'] = str(url_text)
-            obj_arr['urlDat'] = urlDat
-            obj_arr['WperS'] = WperS
-            obj_arr['sentSyl'] = sentSyl
-            obj_arr['fM'] = fM
-            obj_arr['fAll'] = fAll
-            if textstat.flesch_kincaid_grade(str(url_text)) > 100.0:
-                objarr = None
+            urlDat['file_path'] = fileHandle
+            urlDat['WperS'] = WperS
+            urlDat['sentSyl'] = sentSyl
+            urlDat['fM'] = fM
+            urlDat['fAll'] = fAll
 
-        df = pd.DataFrame(list(obj_arr.values()), columns=obj_arr.keys() )
-        print(df,'got here')
-        if 'data_frames' not in locals():
-            data_frames = pd.DataFrame(obj_arr, columns=obj_arr.keys() )
-            print('got here?')
-        else:
-            data_frames.append(df)
-        print(data_frames)
-        list_per_links.append(obj_arr)
-    if 'data_frames' not in locals():
-        data_frames = None #pd.DataFrame()
-        print(data_frames,'got here')
+        if len(list_per_links) == 0:
+            dfs = pd.DataFrame(pd.Series(urlDat)).T
+        dfs = pd.concat([ dfs, pd.DataFrame(pd.Series(urlDat)).T ])
+        if textstat.flesch_kincaid_grade(str(url_text)) > 100.0:
+            objarr = {}
+        list_per_links.append(urlDat)
+    if frames == False:
 
-    print(len(lo_query_links) == len(list_per_links))
-    package = ( list_per_links, data_frames )
-    return package
+        print(len(list_per_links))
+        return list_per_links
+    else:
+        return dfs
 
 #To use functions above with ipython notebook uncomment this code.
 import dask.bag as db
-from t_analysis_purepy import web_iter, map_wrapper
 grid = {}
 query_list = ['GMO','Genetically_Modified_Organism','Transgenic','Vaccine', 'Neutron', 'Play Dough']
-#grid['search_term'] = query_list #[ (i, q) for i,q in enumerate(query_list) ]
-#from sklearn.grid_search import ParameterGrid
-#grid = list(ParameterGrid(grid))
-#grid = [(dicti['search_term'][0],dicti['search_term'][1]) for dicti in grid ]
-#import pdb
-#pdb.set_trace()
-#import dask.bag as db
+'''
 grid = db.from_sequence(query_list,npartitions = 8)
 #list_per_links = map_wrapper(web_iter,grid)
-packages = list(db.map(web_iter,grid).compute());
-remove_empty = [i for i in packages[0] if len(i)>0 ]
-
+list_per_links = list(map(web_iter,grid))
+remove_empty = [i for i in list_per_links if len(i)>0 ]
 unravel = []
 for i in remove_empty:
     unravel.extend(i)
-#giant_frame =
-giant_frame = pd.DataFrame(packages[1][0], columns=packages[1][0].keys() )
-
-unest_frame = [i for i in packages[1][1:-1]]
-for i in unest_frame:
-    giant_frame.append(i)
-
-with open('giant_frame.p','wb') as handle:
-    pickle.dump(unravel,handle)
-
+#print(unravel)
 
 with open('unraveled_links.p','wb') as handle:
     pickle.dump(unravel,handle)
+'''

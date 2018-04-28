@@ -61,9 +61,10 @@ NWEB = 5 #number of search websites being implemented (google, google scholar, b
 numURLs = 50 #number of URLs per search website  (number determined by 1.scrape code)
 
 #also save these parameters for analysis purposes
-spec_dict = { 'searchList':searchList, 'nweb':NWEB, 'numURLs':numURLs}
-handle = 'Data/analysisSpecs.mat'
-scipy.io.savemat(handle, mdict=spec_dict, oned_as='row')
+#spec_dict = { 'searchList':searchList, 'nweb':NWEB, 'numURLs':numURLs}
+#handle = 'Data/analysisSpecs.mat'
+#scipy.io.savemat(handle, mdict=spec_dict, oned_as='row')
+
 handle = None
 TEXT_FOUNTAIN = False
 ########################################################################
@@ -262,7 +263,7 @@ def web_iter(keyword, frames = False):
 #To use functions above with ipython notebook uncomment this code.
 import dask.bag as db
 grid = {}
-query_list = ['GMO','Genetically_Modified_Organism','Transgenic','Vaccine', 'Neutron', 'Play Dough']
+query_list = ['GMO','Genetically Modified Organism','Transgenic','Vaccine', 'Neutron', 'Play Dough']
 '''
 grid = db.from_sequence(query_list,npartitions = 8)
 #list_per_links = map_wrapper(web_iter,grid)

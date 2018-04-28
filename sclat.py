@@ -1,13 +1,7 @@
 import requests
 
-#print(requests.get(url, proxies=proxies).text)
-##set parameters - THESE ARE ALL USER DEFINED
-WEB = 6#how many search engines to include (4 possible- google google scholar bing yahoo)
-LINKSTOGET= 50 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
-SEARCHLIST = ['Play Dough','Neutron','Vaccine','Transgenic','GMO','Genetically Modified Organism']
 import sys
 import os
-#os.system('pip install python-twitter')
 
 import selenium
 from pyvirtualdisplay import Display
@@ -75,6 +69,9 @@ try:
    interpreter = PDFPageInterpreter(rsrcmgr, device)
 except ImportError:
    pass
+from utils import search_params
+SEARCHLIST, WEB, LINKSTOGET = search_params()
+
 
 from textstat.textstat import textstat
 ##########################################################################
@@ -118,25 +115,6 @@ def csr(text,strlink):
 
 import random
 
-def black_string(check_with):
-    #print(check_with)
-    check="Our systems have detected unusual traffic from your computer network.\\nThis page checks to see if it\'s really you sending the requests, and not a robot.\\nWhy did this happen?\\nThis page appears when Google automatically detects requests coming from your computer network which appear to be in violation of the Terms of Service. The block will expire shortly after those requests stop.\\nIn the meantime, solving the above CAPTCHA will let you continue to use our services.This traffic may have been sent by malicious software, a browser plug in, or a script that sends automated requests.\\nIf you share your network connection, ask your administrator for help  a different computer using the same IP address may be responsible.\\nLearn moreSometimes you may be asked to solve the CAPTCHA if you are using advanced terms that robots are known to use, or sending requests very quickly."
-    if len(check_with) == 1145:
-        print('suspicious')
-        #print(check_with)
-        return True
-    if check in check_with:
-        return True
-    check = "\\x00\\x00\\x00\\x00"
-    if check in check_with:
-        return True
-    check = "Please click here if you are not redirected within a few seconds."
-    if check in check_with:
-        return True
-    check="DuckDuckGo  Privacy, simplified.\\nAbout DuckDuckGo\\nDuck it!\\nThe search engine that doesn\'t track you.\\nLearn More."
-    if check in check_with:
-        return True
-    return False
 
 def referal_check(check_with):
     '''
@@ -175,89 +153,94 @@ def contents_to_file(contents):
    import random
 
    extra = 0.0
-   if searchName == '_google':
+   if searchName == 'google_' or searchName == 'gScholar_':
        extra = 10.0
        print('extra time')
    sleepy = random.uniform(extra+4.0125,extra+11.75)
    print('time to sleep',sleepy)
    time.sleep(sleepy) #shor
-   if 'pdf' in strlink:
-       import urllib
-       #try:
-       pdf_file = str(urllib.request.urlopen(strlink).read())
-       assert type(pdf_file) is type(str)
-       memoryFile = StringIO(pdf_file)
-       parser = PDFParser(memoryFile)
-       document = PDFDocument(parser)
+   headers = {'User-Agent': str(ua.Firefox)}
+   try:
+       assert requests.get(strlink, headers=headers)
+       if 'pdf' in strlink:
+           import urllib
+           #try:
+           pdf_file = str(urllib.request.urlopen(strlink).read())
+           assert type(pdf_file) is type(str)
+           memoryFile = StringIO(pdf_file)
+           parser = PDFParser(memoryFile)
+           document = PDFDocument(parser)
 
-       # Process all pages in the document
-       for page in PDFPage.create_pages(document):
-           interpreter.process_page(page)
-           write_text +=  retstr.getvalue()
-
-
-       str_text = str(write_text)
-       #write_text = str_text.encode('ascii','ignore')
-       fileName = searchName  + str(incrementor) + ".txt" #create text file save name
-       f = open(fileName, 'w')
-       f.write(str_text)
-       f.close()
+           # Process all pages in the document
+           for page in PDFPage.create_pages(document):
+               interpreter.process_page(page)
+               write_text +=  retstr.getvalue()
 
 
-       fileName = searchName +str(incrementor) + ".p" #create text file save name
-       print(fileName, 'filename')
-       print(type(str_text),'stuck c')
-       f = open(fileName, 'wb')
-       from datetime import datetime
-       st = datetime.utcnow().strftime('%Y-%m-%d_%H:%M:%S.%f')[:-3]
-       pickle.dump([st, str(write_text),strlink],f)
-       #except:
-        #   print('bad link',strlinkto)
-   else:
-      #establish human agent header
-
-      headers = {'User-Agent': str(ua.Firefox)}
-      r = requests.get(strlink, headers=headers)
-      soup = BeautifulSoup(r.content, 'html.parser')
-
-      #strip HTML
-      for script in soup(["script", "style"]):
-              script.extract()    # rip it out
-
-      text = soup.get_text()
+           str_text = str(write_text)
+           #write_text = str_text.encode('ascii','ignore')
+           fileName = searchName  + str(incrementor) + ".txt" #create text file save name
+           f = open(fileName, 'w')
+           f.write(str_text)
+           f.close()
 
 
-      if black_string(text) == True:
-          print('badness')
-          return 0.0
-      else:
-          if len(text) < 1000:
-              print('suspicious')
-              print(text)
-              if referal_check(text) == True:
-                  return 0.0
-          print('goodness')
+           fileName = searchName +str(incrementor) + ".p" #create text file save name
+           print(fileName, 'filename')
+           print(type(str_text),'stuck c')
+           f = open(fileName, 'wb')
+           from datetime import datetime
+           st = datetime.utcnow().strftime('%Y-%m-%d_%H:%M:%S.%f')[:-3]
+           pickle.dump([st, str(write_text),strlink],f)
+           #except:
+            #   print('bad link',strlinkto)
+       else:
+          #establish human agent header
 
-          #organize text
-          lines = (line.strip() for line in text.splitlines())  # break into lines and remove leading and trailing space on each
-          chunks = (phrase.strip() for line in lines for phrase in line.split("  ")) # break multi-headlines into a line each
-          text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines
-          str_text = str(text)
-          fileName = searchName +str(incrementor) + ".p" #create text file save name
-          #write contents to file - individual text file for each URL's scraped text
+          headers = {'User-Agent': str(ua.Firefox)}
+          r = requests.get(strlink, headers=headers)
+          soup = BeautifulSoup(r.content, 'html.parser')
 
-          write_text = text.encode('ascii','ignore')
-          fileName = searchName  + str(incrementor) + ".p" #create text file save name
-          #
-          print(fileName, 'filename')
-          #print(type(str_text),'stuck d')
+          #strip HTML
+          for script in soup(["script", "style"]):
+                  script.extract()    # rip it out
 
-          f = open(fileName, 'wb')
-          from datetime import datetime
-          st = datetime.utcnow().strftime('%Y-%m-%d_%H:%M:%S.%f')[:-3]
-          pickle.dump([st, str(write_text),strlink],f)
-          f = None
-      return len(str_text)
+          text = soup.get_text()
+
+          from utils import black_string
+          if black_string(text) == True:
+              print('badness')
+              return 0.0
+          else:
+              if len(text) < 1000:
+                  print('suspicious')
+                  print(text)
+                  if referal_check(text) == True:
+                      return 0.0
+              print('goodness')
+
+              #organize text
+              lines = (line.strip() for line in text.splitlines())  # break into lines and remove leading and trailing space on each
+              chunks = (phrase.strip() for line in lines for phrase in line.split("  ")) # break multi-headlines into a line each
+              text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines
+              str_text = str(text)
+              fileName = searchName +str(incrementor) + ".p" #create text file save name
+              #write contents to file - individual text file for each URL's scraped text
+
+              write_text = text.encode('ascii','ignore')
+              fileName = searchName  + str(incrementor) + ".p" #create text file save name
+              #
+              print(fileName, 'filename')
+              #print(type(str_text),'stuck d')
+
+              f = open(fileName, 'wb')
+              from datetime import datetime
+              st = datetime.utcnow().strftime('%Y-%m-%d_%H:%M:%S.%f')[:-3]
+              pickle.dump([st, str(write_text),strlink],f)
+              f = None
+       return len(str_text)
+   except:
+       return 0
 
 
 
@@ -450,7 +433,6 @@ def scraplandtext(fi):
     lengths_of_texts = list(map(contents_to_file,lta))
     lengths_of_texts_old = list(filter(lambda x: x != 0, lengths_of_texts))
     old_delta = LINKSTOGET - len(lengths_of_texts_old)
-    print('delta',LINKSTOGET - len(lengths_of_texts_old) )
     print(lengths_of_texts_old)
     #return lta
 
@@ -481,14 +463,12 @@ def scraplandtext(fi):
     return # required for readability only
 
 
-
-
 import pickle
 import os
 
-
 if os.path.isfile('last_iterator.p'):
     try:
+        assert 1==2
         contents = pickle.load(open('last_iterator.p', 'rb'))
         flat_iter = contents[0]
         b,category = contents[-1]
@@ -502,14 +482,16 @@ if os.path.isfile('last_iterator.p'):
 # the idea is that grid and flat iter should be very similar.
 # grid is a bit more maintainable and conventional way of building iterators.
 
+#from utils import purge
 #ltas = list(map(purge,iter(flat_iter)))
 ##
 # Randomly shuffle the list, instead of going through the list in logical sequence.
 # Humans are erratic, bots are not. Feign humanhood by adopting erratic behavior.
 ##
+import utils
+_ = list(map(utils.mkdirs,iter(flat_iter)))
 
-
-ltas = list(map(scraplandtext,iter(flat_iter)))
+_ = list(map(scraplandtext,iter(flat_iter)))
 
 driver.close() #close the driver
 os.chdir('/home/jovyan/')

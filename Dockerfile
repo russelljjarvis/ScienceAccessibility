@@ -34,7 +34,6 @@ RUN python -c "import nltk; nltk.download('averaged_perceptron_tagger')"
 RUN sudo /opt/conda/bin/pip install textstat
 RUN sudo /opt/conda/bin/pip install tabulate
 RUN sudo /opt/conda/bin/pip install textblob
-RUN sudo /opt/conda/bin/pip install ipyparallel
 RUN sudo /opt/conda/bin/pip install selenium
 
 RUN wget https://chromedriver.storage.googleapis.com/2.31/chromedriver_linux64.zip
@@ -48,12 +47,7 @@ RUN sudo apt-get install -y python3-software-properties
 RUN sudo apt-get install -y software-properties-common
 
 
-
-
 RUN sudo chown -R jovyan ~/
-RUN echo "cd /home/mnt" >> start.sh
-RUN echo "ipython -i ScrapeLinksandText_v4.py" >> start.sh
-
 # install google chrome
 RUN sudo apt-get -y update
 RUN sudo apt-get install -yqq unzip libxss1 libappindicator1 libindicator7 gconf-service libasound2 \

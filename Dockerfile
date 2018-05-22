@@ -96,9 +96,9 @@ RUN sudo apt-get update
 RUN sudo apt-get install --fix-missing
 
 #RUN sudo git clone https://github.com/pdfminer/pdfminer.six.git
-RUN sudo pip install git+https://github.com/pdfminer/pdfminer.six.git
+RUN sudo /opt/conda/bin/pip install git+https://github.com/pdfminer/pdfminer.six.git
 #WORKDIR pdfminer.six
 #RUN sudo /opt/conda/bin/python setup.py install
-RUN sudo pip install git+https://github.com/russelljjarvis/GoogleScraper.git
+RUN sudo /opt/conda/bin/pip install git+https://github.com/russelljjarvis/GoogleScraper.git
 WORKDIR $HOME
 ENTRYPOINT /bin/bash

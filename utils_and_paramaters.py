@@ -4,14 +4,6 @@
 # rjjarvis@asu.edu
 
 
-def map_wrapper(function_item,list_items):
-    from dask.distributed import Client
-    import dask.bag as db
-    c = Client()
-    NCORES = len(c.ncores().values())
-    b0 = db.from_sequence(list_items, npartitions=NCORES)
-    list_items = list(db.map(function_item,b0).compute())
-    return list_items
 
 def engine_dict_list():
     se = {0:"google",1:"yahoo",2:"duckduckgo",3:"ask",4:"scholar"}

@@ -98,4 +98,6 @@ RUN sudo /opt/conda/bin/pip install git+https://github.com/pdfminer/pdfminer.six
 #RUN sudo /opt/conda/bin/python setup.py install
 RUN sudo /opt/conda/bin/pip install git+https://github.com/russelljjarvis/GoogleScraper.git
 WORKDIR $HOME
+RUN python -c "import nltk; nltk.download('punkt'); nltk.download('averaged_perceptron_tagger')"
+
 ENTRYPOINT /bin/bash

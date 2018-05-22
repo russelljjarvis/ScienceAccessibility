@@ -1,3 +1,3 @@
 #!/bin/bash
-sudo docker build -t slc `pwd`
+sudo docker build -t slc .
 

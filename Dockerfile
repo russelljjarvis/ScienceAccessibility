@@ -47,6 +47,10 @@ RUN sudo apt-get install -y python3-software-properties
 RUN sudo apt-get install -y software-properties-common
 
 
+##
+# Which is used chrome or firefox? Delete the one which is not.
+##
+
 RUN sudo chown -R jovyan ~/
 # install google chrome
 RUN sudo apt-get -y update
@@ -83,7 +87,6 @@ RUN sudo apt-get upgrade -y firefox
 RUN sudo chown -R jovyan /home/jovyan
 
 RUN sudo /opt/conda/bin/pip install pyvirtualdisplay
-RUN sudo /opt/conda/bin/pip install fake_useragent
 #WORKDIR /home/jovyan/work
 
 RUN sudo apt-get update

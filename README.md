@@ -1,27 +1,27 @@
 # Scientific readability project
 
-To Run the project
-You need to run python sclat.py, and python t_analysis_purepython.py
-jupyter notebook Visualization_of_terms_reading_level.ipynb in a non trivial environment brought to you by Docker (read below)
+To Run the project, one needs to execute the files:
+`bash 
+python scrape.py`,
+and the jupyter notebook: Visualisation_search_terms_reading_levelGS.ipynb. 
 
+TODO rename Visualisation_search_terms_reading_levelGS.ipynb vstrl.ipynb
 
-* To future developers a GH repository of this code lives at
-https://github.com/russelljjarvis/SReadability.git/
-Its currently private but it can be forked and cloned etc.
-
-Running t_analysis_purepython.py is not sufficient to perform an analysis unless the bottom most
-code block is uncommented.
-
-preferably the Jupyter notebook Visualization of Terms.ipynb is run instead.
-Using more pythonic data types (dictionaries and lists) speeds up a parallel
-analysis, as these data types are able to utilize memory more efficiently.
-
-The search engine Duckduckgo is added in as well as search terms 'play dough', and
-'neutron' as reference points. Ideally
+Executing these files is not yet straight forward, as the execution environment is dependency heavy. Docker is used to solve non trivial software dependency issues where possible.
 
 # Launch via BASH alias's in Linux
 ## 1
-This how I execute the project but I can't be bothered explaining how.
+If docker is installed on the base OS, git clone this repository, and assuming the file build.sh is chmod +x , run: `bash build.sh` to perform the dockerbuild. To run the jupyter notebook over docker:
+```
+'cd this_path; sudo docker run -p 8888:8888 -v this_path:/home/jovyan wtor jupyter notebook --ip=0.0.0.0 --NotebookApp.token=\"\" --NotebookApp.disable_check_xsrf=True' 
+```
+
+Maybe define a bash alias, if this command get's too big and old.
+
+```
+alias drvt='cd this_path; sudo docker run -p 8888:8888 -v this_path:/home/jovyan wtor jupyter notebook --ip=0.0.0.0 --NotebookApp.token=\"\" --NotebookApp.disable_check_xsrf=True' 
+```
+                                                                  
 
 # Launch Graphically in OSX
 ## 1

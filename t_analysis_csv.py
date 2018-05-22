@@ -30,8 +30,10 @@ import nltk
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
 import os
-#os.system('pip install natsort')
-
+os.system('pip install natsort')
+os.system('pip install pycld2')
+os.system('pip install pylzma')
+import lzma
 from nltk.tag.perceptron import PerceptronTagger
 tagger = PerceptronTagger(load=False)
 
@@ -51,7 +53,6 @@ from textstat.textstat import textstat
 
 from natsort import natsorted, ns
 
-os.system('pip install pycld2')
 import pandas as pd
 import pycld2 as cld2
 import pickle
@@ -78,8 +79,8 @@ TEXT_FOUNTAIN = False
 #set filePath below to specify where the data will be going after the code runs
 fileLocation = os.getcwd()
 
-if not os.path.exists(fileLocation):
-    os.makedirs(fileLocation)
+#if not os.path.exists(fileLocation):
+#    os.makedirs(fileLocation)
 
 date_created = []
 
@@ -92,24 +93,29 @@ se, _ = engine_dict_list()
 
 # we first tokenize the text corpus
 
-
 def lzma_compression_ratio(test_string):
+    import lzma
+    
     c = lzma.LZMACompressor()
     bytes_in = bytes(test_string,'utf-8')
     bytes_out = c.compress(bytes_in)
     return len(bytes_out)/len(bytes_in)
 
 
-WORD_LIM = 600 # word limit
+WORD_LIM = 100 # word limit
 
 def web_iter(flat_iter):
     # better to rewrite nested for loop as a function to map over.
     # note it's likely that p and index are the same and one should be factored out.
     p, fileName, file_contents, index = flat_iter
+    #print(flat_iter, 'stuck here?')
     urlDat = {}
     _, _, details = cld2.detect(' '.join(file_contents.iloc[index]['snippet']), bestEffort=True)
     detectedLangName, _ = details[0][:2]
+    #import pdb
+    #pdb.set_trace()
     if file_contents.iloc[index]['status']=='successful' and len(file_contents.iloc[index]['snippet']) > WORD_LIM and detectedLangName == 'ENGLISH':
+        print(file_contents)
         urlDat['link_rank'] = file_contents.iloc[index]['rank']
         rank_old = file_contents.iloc[index]['rank']
         urlDat['keyword'] = file_contents.iloc[index]['query']
@@ -206,12 +212,12 @@ def web_iter(flat_iter):
         #determine syllable count for all words in each sentece
         sentSyl = {}
         WperS = {}
-        # for n,sent in enumerate(sents):
+        for n, sent in enumerate(sents):
         # future use
-        for n in range(0,len(sents)):
+        #for n in range(0,len(sents)):
 
             #setup sent variable to analyze each sentence individually
-            sent = sents[n] #select sentence n in total text
+            #sent = sents[n] #select sentence n in total text
             sent = word_tokenize(sent) #tokenize sentence n in to words
             sent = [w.lower() for w in sent if w.isalpha()] #remove any non-text
 
@@ -235,8 +241,6 @@ def web_iter(flat_iter):
             urlDat['cliau']  = textstat.coleman_liau_index(str(tokens))
             urlDat['ri']  = textstat.automated_readability_index(str(tokens))
             urlDat['gf'] = textstat.gunning_fog(str(tokens))
-            #print(dir(textstat))
-            #urlDat['gl'] =  textstat.grade_level(str(tokens))
             urlDat['dcr']  = textstat.dale_chall_readability_score(str(tokens))
             urlDat['dw']  = textstat.difficult_words(str(tokens))
             urlDat['lwf']  = textstat.linsear_write_formula(str(tokens))
@@ -249,22 +253,25 @@ def web_iter(flat_iter):
     return urlDat
 
 flat_iter = []
-visited_files = []
+# visited_files = []
 # naturally sort a list of files, as machine sorted is not the desired file list hierarchy.
 lo_query_links = natsorted(glob.glob(str(os.getcwd())+'/*.csv'))
 list_per_links = []
-
+import pdb
 for p,fileName in enumerate(lo_query_links):
-    file_contents = pd.read_csv(fileName)
-    for index in range(0,len(file_contents)):
-        flat_iter.append((p,fileName,file_contents,index))
-
+    import os
+    b = os.path.getsize(fileName)
+    if b>250:
+        file_contents = pd.read_csv(fileName)
+        for index in range(0,len(file_contents)):
+            flat_iter.append((p,fileName,file_contents,index))
+        
 
 
 def process_dics(urlDats,frames = False):
     for urlDat in urlDats:
         #pandas Data frames are best data container for maths/stats, but steep learning curve.
-        if frames == True:
+        if frames == True and len(urlDat)>0:
             #
             # Other exclusion criteria. Exclude reading levels above grade 100,
             # as this is most likely a problem with the metric algorithm, and or rubbish data in.
@@ -275,7 +282,7 @@ def process_dics(urlDats,frames = False):
                     dfs = pd.DataFrame(pd.Series(urlDat)).T
                 dfs = pd.concat([ dfs, pd.DataFrame(pd.Series(urlDat)).T ])
 
-        if frames == False:
+        if frames == False and len(urlDat)>0:
 
             # Other exclusion criteria. Exclude reading levels above grade 100,
             # as this is most likely a problem with the metric algorithm, and or rubbish data in.
@@ -289,27 +296,13 @@ def process_dics(urlDats,frames = False):
     else:
         return dfs
 
-urlDats = map(web_iter,flat_iter)
+print(flat_iter)
+import dask
+import dask.bag as db
+grid = db.from_sequence(flat_iter)
+urlDats = list(db.map(web_iter,grid).compute())
+print(urlDats)
 unravel = process_dics(urlDats, frames = False)
 with open('unraveled_links.p','wb') as handle:
     pickle.dump(unravel,handle)
 
-'''
-#To use functions above with ipython notebook uncomment this code.
-import dask.bag as db
-grid = {}
-import utils_and_parameters
-grid , WEB, LINKSTOGET = utils_and_parameters.search_params()
-
-#grid = db.from_sequence(query_list,npartitions = 8)
-#list_per_links = map_wrapper(web_iter,grid)
-list_per_links = list(map(web_iter,grid))
-remove_empty = [i for i in list_per_links if len(i)>0 ]
-unravel = []
-for i in remove_empty:
-    unravel.extend(i)
-#print(unravel)
-
-with open('unraveled_links.p','wb') as handle:
-    pickle.dump(unravel,handle)
-'''

@@ -1,19 +1,21 @@
 # Scientific readability project
-# author Russell Jarvis
+# authors: other_authors
+# Russell Jarvis
 # https://github.com/russelljjarvis/
 # rjjarvis@asu.edu
 
 
 
 def engine_dict_list():
-    se = {0:"google",1:"yahoo",2:"duckduckgo",3:"ask",4:"scholar"}
+    se = {0:"google",1:"yahoo",2:"duckduckgo",3:"ask",4:"scholar",5:"bing"}
 
     return se, list(se.values())
 
 def search_params():
-    SEARCHLIST = ["autosomes","respiration", "bacteriophage",'Neutron','Vaccine','Transgenic','GMO','Genetically Modified Organism','neuromorphic hardware']
-    WEB = 6#how many search engines to include (4 possible- google google scholar bing yahoo)
-    LINKSTOGET= 10 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
+    SEARCHLIST = ["autosomes","respiration", "bacteriophage",'Neutron','Vaccine','Transgenic','GMO','Genetically Modified Organism','neuromorphic hardware', 'unicorns']
+    _, ses = engine_dict_list()
+    WEB = len(ses) #how many search engines to include (many possible- google google scholar bing yahoo)
+    LINKSTOGET= 15 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
     return SEARCHLIST, WEB, LINKSTOGET
 
 def black_string(check_with):

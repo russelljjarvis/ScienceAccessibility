@@ -1,3 +1,8 @@
+# Scientific readability project
+# author Russell Jarvis
+# https://github.com/russelljjarvis/
+# rjjarvis@asu.edu
+
 #general python imports
 import os
 import dask
@@ -68,7 +73,7 @@ if not os.path.exists(fileLocation):
 date_created = []
 import pickle
 import os
-from utils_and_parameters import search_params, engine_dict_list
+from utils_and_paramaters import search_params, engine_dict_list
 SEARCHLIST, WEB, LINKSTOGET = search_params()
 se, _ = engine_dict_list()
 
@@ -129,7 +134,7 @@ def web_iter(frames = False):
                 #word_fd = nltk.FreqDist(tokens)
 
                 urlDat['uniqueness'] = len(set(tokens))/float(len(tokens))
-                bfc = len(corpus)
+                #bfc = len(corpus)
                 #import pdb; pdb.set_trace()
 
                 # information dense articles are already compressed in language
@@ -139,18 +144,19 @@ def web_iter(frames = False):
                 # the difference between compressed and uncompressed should be small.
                 comp = str(zlib.compress(corpus.encode(),6))
                 comp = comp.split("\\")
-                afc = len(comp)
-                delta = float(bfc) - float(afc)
+                #afc = len(comp)
+                ratio = len(corpus.encode())/len(comp)
 
                 #https://pudding.cool/2017/05/song-repetition/
                 import lzma
                 def lzma_compression_ratio(test_string):
-                    c = .LZMACompressor()
+                    c = lzma.LZMACompressor()
                     bytes_in = bytes(test_string,'utf-8')
                     bytes_out = c.compress(bytes_in)
                     return len(bytes_out)/len(bytes_in)
 
-                compression_ratio = lzma_compression_ratio(corpus.encode())
+                compression_ratio = lzma_compression_ratio(corpus)
+                #print(ratio,compression_ratio)
                 #print(compression_ratio)
 
                 # big deltas mean redudancy/sparse information info_density

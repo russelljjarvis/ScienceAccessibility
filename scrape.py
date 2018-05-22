@@ -1,9 +1,12 @@
+# Scientific readability project
+# author Russell Jarvis
+# https://github.com/russelljjarvis/
+# rjjarvis@asu.edu
 
 import dask
-from utils_and_parameters import search_params, engine_dict_list
+from utils_and_paramaters import search_params, engine_dict_list, map_wrapper
 SEARCHLIST, WEB, LINKSTOGET = search_params()
 se, _ = engine_dict_list()
-import utils
 from numpy import random
 flat_iter = [ (b,category) for category in SEARCHLIST for b in range(0,5) ]
 
@@ -13,9 +16,7 @@ import time
 random.shuffle(flat_iter)
 random.shuffle(flat_iter)
 print(flat_iter)
-import utils
 import os
-from utils import map_wrapper
 def scraplandtext(fi):
     b,category = fi
     if b==4:

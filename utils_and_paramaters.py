@@ -1,3 +1,7 @@
+# Scientific readability project
+# author Russell Jarvis
+# https://github.com/russelljjarvis/
+# rjjarvis@asu.edu
 
 
 def map_wrapper(function_item,list_items):

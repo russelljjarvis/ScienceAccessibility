@@ -1,5 +1,7 @@
 # Scientific readability project
-# author Russell Jarvis
+# authors: other authors,
+# ...,
+# Russell Jarvis
 # https://github.com/russelljjarvis/
 # rjjarvis@asu.edu
 
@@ -24,8 +26,9 @@ def scraplandtext(fi):
 
     temp['search_engine'] = str(se[b])
     temp['scrape_method'] = str('selenium')
-    #temp['scrape_method'] = str('http-async')
-
+    # asynchronous is preferred, does it work?
+    # temp['scrape_method'] = str('http-async')
+    
     temp['num_pages_for_keyword'] = 15
     temp['use_own_ip'] = True
     temp['sel_browser'] = str('chrome')

@@ -3,7 +3,8 @@
 # Russell Jarvis
 # https://github.com/russelljjarvis/
 # rjjarvis@asu.edu
-
+# Patrick McGurrin
+# patrick.mcgurrin@gmail.com
 #general python imports
 import os
 import dask

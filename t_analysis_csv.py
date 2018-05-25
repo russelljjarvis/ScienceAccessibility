@@ -66,6 +66,8 @@ from nltk import bigrams, trigrams
 from nltk.metrics import ContingencyMeasures
 import pandas as pd
 
+import lzma
+
 ########################################################################
 ########################################################################
 ########################################################################
@@ -95,7 +97,7 @@ se, _ = engine_dict_list()
 
 def lzma_compression_ratio(test_string):
     import lzma
-    
+
     c = lzma.LZMACompressor()
     bytes_in = bytes(test_string,'utf-8')
     bytes_out = c.compress(bytes_in)
@@ -106,23 +108,30 @@ WORD_LIM = 100 # word limit
 
 def web_iter(flat_iter):
     # better to rewrite nested for loop as a function to map over.
-    # note it's likely that p and index are the same and one should be factored out.
+
     p, fileName, file_contents, index = flat_iter
-    #print(flat_iter, 'stuck here?')
     urlDat = {}
     _, _, details = cld2.detect(' '.join(file_contents.iloc[index]['snippet']), bestEffort=True)
     detectedLangName, _ = details[0][:2]
-    #import pdb
-    #pdb.set_trace()
-    if file_contents.iloc[index]['status']=='successful' and len(file_contents.iloc[index]['snippet']) > WORD_LIM and detectedLangName == 'ENGLISH':
-        print(file_contents)
+
+    server_status = bool(file_contents.iloc[index]['status']=='successful')
+    word_lim = bool(len(file_contents.iloc[index]['snippet']) > WORD_LIM)
+    english = bool(detectedLangName == 'ENGLISH')
+
+
+    if server_status and word_lim and bool:
         urlDat['link_rank'] = file_contents.iloc[index]['rank']
         rank_old = file_contents.iloc[index]['rank']
-        urlDat['keyword'] = file_contents.iloc[index]['query']
         urlDat['vslink'] = file_contents.iloc[index]['visible_link']
         urlDat['link'] = file_contents.iloc[index]['link']
+        urlDat['keyword'] = file_contents.iloc[index]['query']
 
-        urlDat['se'] = file_contents.iloc[index]['search_engine_name']
+        if str('!gs') in urlDat['keyword']:
+            urlDat['se'] = 'g_scholar'
+        elif str('!bing') in urlDat['keyword']:
+            urlDat['se'] = 'bing'
+        else:
+            urlDat['se'] = file_contents.iloc[index]['search_engine_name']
         ########################################################################
         corpus = file_contents.iloc[index]['snippet']
         #remove unreadable characters
@@ -155,7 +164,6 @@ def web_iter(flat_iter):
         ratio = len(corpus.encode())/len(comp)
 
         #https://pudding.cool/2017/05/song-repetition/
-        import lzma
 
         compression_ratio = lzma_compression_ratio(corpus)
         # big deltas mean redudancy/sparse information/information/density
@@ -257,7 +265,7 @@ flat_iter = []
 # naturally sort a list of files, as machine sorted is not the desired file list hierarchy.
 lo_query_links = natsorted(glob.glob(str(os.getcwd())+'/*.csv'))
 list_per_links = []
-import pdb
+#import pdb
 for p,fileName in enumerate(lo_query_links):
     import os
     b = os.path.getsize(fileName)
@@ -265,7 +273,7 @@ for p,fileName in enumerate(lo_query_links):
         file_contents = pd.read_csv(fileName)
         for index in range(0,len(file_contents)):
             flat_iter.append((p,fileName,file_contents,index))
-        
+
 
 
 def process_dics(urlDats,frames = False):
@@ -305,4 +313,3 @@ print(urlDats)
 unravel = process_dics(urlDats, frames = False)
 with open('unraveled_links.p','wb') as handle:
     pickle.dump(unravel,handle)
-

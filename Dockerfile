@@ -31,9 +31,8 @@ RUN /opt/conda/bin/pip install textstat
 RUN /opt/conda/bin/pip install tabulate
 RUN /opt/conda/bin/pip install textblob
 RUN /opt/conda/bin/pip install selenium
-RUN /opt/conda/bin/pip install fake_useragent bokeh
-
-
+# pycld2 seems to be the most accurate english text classifier of the python packages.
+RUN /opt/conda/bin/pip install fake_useragent bokeh natsort pycld2 pylzma
 
 USER $NB_USER
 
@@ -72,7 +71,7 @@ ENV DBUS_SESSION_BUS_ADDRESS=/dev/null
 
 
 ##
-# Firefox
+# Programatic Firefox driver that can bind with selenium/gecko.
 ## 
 
 RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.18.0/geckodriver-v0.18.0-linux64.tar.gz
@@ -94,10 +93,13 @@ RUN sudo chown -R jovyan /home/jovyan
 RUN sudo /opt/conda/bin/pip install pyvirtualdisplay
 RUN sudo apt-get update
 RUN sudo apt-get install --fix-missing
-
-#RUN sudo git clone https://github.com/pdfminer/pdfminer.six.git
+# A lot of academic text is still in PDF, so better get some tools to deal with that.
 RUN sudo /opt/conda/bin/pip install git+https://github.com/pdfminer/pdfminer.six.git
+
+# The only difference to the official version, is download throttling. Self throttling actually speeds up time, 
+# as it prevents getting booted off by SE servers.
 RUN sudo /opt/conda/bin/pip install git+https://github.com/russelljjarvis/GoogleScraper.git
+
 WORKDIR $HOME
 RUN python -c "import nltk; nltk.download('punkt'); nltk.download('averaged_perceptron_tagger')"
 ENTRYPOINT /bin/bash

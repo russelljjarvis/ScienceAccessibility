@@ -9,6 +9,20 @@ import pandas as pd
 import pandas as pd
 import pycld2 as cld2
 
+import pdfminer
+from pdfminer.pdfparser import PDFParser
+from pdfminer.pdfdocument import PDFDocument
+from pdfminer.pdfpage import PDFPage
+from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
+from pdfminer.pdfdevice import PDFDevice
+from pdfminer.layout import LAParams
+from pdfminer.converter import  TextConverter
+rsrcmgr = PDFResourceManager()
+retstr = StringIO()
+laparams = LAParams()
+codec = 'utf-8'
+device = TextConverter(rsrcmgr, retstr, codec = codec, laparams = laparams)
+interpreter = PDFPageInterpreter(rsrcmgr, device)
 
 def crawl(flat_iter):
     # better to rewrite nested for loop as a function to map over.
@@ -41,10 +55,22 @@ class FetchResource(threading.Thread):
         else:
             self.engine = file_contents.iloc[index]['search_engine_name']
         print(self.engine)
+
     def run(self):
         for url in self.urls:
             url = urllib.parse.unquote(url)
-            try:
+            if 'pdf' in url:
+               import urllib
+               pdf_file = str(urllib.request.urlopen(strlink).read())
+               memoryFile = StringIO(pdf_file)
+               parser = PDFParser(memoryFile)
+               document = PDFDocument(parser)
+               # Process all pages in the document
+               for page in PDFPage.create_pages(document):
+                   interpreter.process_page(page)
+                   write_text +=  retstr.getvalue()
+               str_text = str(write_text)
+           else:
                 content = requests.get(url).content
                 soup = BeautifulSoup(content, 'html.parser')
                 #strip HTML
@@ -56,10 +82,8 @@ class FetchResource(threading.Thread):
                 chunks = (phrase.strip() for line in lines for phrase in line.split("  ")) # break multi-headlines into a line each
                 text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines
                 str_text = str(text)
-                return str_text
-                #print(str_text)
-            except Exception as e:
-                pass
+            return str_text
+
             print('[+] Fetched {}'.format(url))
 
 

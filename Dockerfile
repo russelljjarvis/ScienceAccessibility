@@ -31,6 +31,7 @@ RUN /opt/conda/bin/pip install textstat
 RUN /opt/conda/bin/pip install tabulate
 RUN /opt/conda/bin/pip install textblob
 RUN /opt/conda/bin/pip install selenium
+RUN /opt/conda/bin/pip install fake_useragent bokeh
 
 
 
@@ -40,6 +41,10 @@ RUN sudo apt-get update
 RUN sudo apt-get install -y python3-software-properties
 RUN sudo apt-get install -y software-properties-common
 
+##
+# TODO consider installing phantom-js browser instead, it's probably the most suited to scraping.
+# https://stackoverflow.com/questions/39451134/installing-phantomjs-with-node-in-docker
+##
 
 ##
 # Only firefox is used, delete chrome driver to save space.
@@ -87,17 +92,12 @@ RUN sudo apt-get upgrade -y firefox
 RUN sudo chown -R jovyan /home/jovyan
 
 RUN sudo /opt/conda/bin/pip install pyvirtualdisplay
-#WORKDIR /home/jovyan/work
-
 RUN sudo apt-get update
 RUN sudo apt-get install --fix-missing
 
 #RUN sudo git clone https://github.com/pdfminer/pdfminer.six.git
 RUN sudo /opt/conda/bin/pip install git+https://github.com/pdfminer/pdfminer.six.git
-#WORKDIR pdfminer.six
-#RUN sudo /opt/conda/bin/python setup.py install
 RUN sudo /opt/conda/bin/pip install git+https://github.com/russelljjarvis/GoogleScraper.git
 WORKDIR $HOME
 RUN python -c "import nltk; nltk.download('punkt'); nltk.download('averaged_perceptron_tagger')"
-RUN sudo /opt/conda/bin/pip install fake_useragent bokeh
 ENTRYPOINT /bin/bash

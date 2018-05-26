@@ -7,7 +7,8 @@ import glob
 import pandas as pd
 
 import pandas as pd
-import pycld2 as cld2
+import pycld2 as cld2 
+import urllib
 
 import pdfminer
 from pdfminer.pdfparser import PDFParser
@@ -17,6 +18,7 @@ from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
 from pdfminer.pdfdevice import PDFDevice
 from pdfminer.layout import LAParams
 from pdfminer.converter import  TextConverter
+
 rsrcmgr = PDFResourceManager()
 retstr = StringIO()
 laparams = LAParams()
@@ -45,9 +47,6 @@ class FetchResource(threading.Thread):
     """
     def __init__(self, file_contents):
         super().__init__()
-        print(file_contents)
-        print(dir(file_contents))
-        #file_contents = package
         self.urls = file_contents.iloc[index]['link']
         self.query = file_contents.iloc[index]['query']
         if str('!gs') in self.query:
@@ -60,7 +59,6 @@ class FetchResource(threading.Thread):
         for url in self.urls:
             url = urllib.parse.unquote(url)
             if 'pdf' in url:
-               import urllib
                pdf_file = str(urllib.request.urlopen(strlink).read())
                memoryFile = StringIO(pdf_file)
                parser = PDFParser(memoryFile)
@@ -82,10 +80,8 @@ class FetchResource(threading.Thread):
                 chunks = (phrase.strip() for line in lines for phrase in line.split("  ")) # break multi-headlines into a line each
                 text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines
                 str_text = str(text)
-            return str_text
-
             print('[+] Fetched {}'.format(url))
-
+            return # for readibility only
 
 flat_iter = []
 # naturally sort a list of files, as machine sorted is not the desired file list hierarchy.
@@ -99,7 +95,9 @@ for p,fileName in enumerate(lo_query_links):
         file_contents = pd.read_csv(fileName)
         for index in range(0,len(file_contents)):
             flat_iter.append((p,fileName,file_contents,index))
-
+print(flat_iter)
+import pdb
+pdb.set_trace()
 resource_urls = list(map(crawl,flat_iter))
 import threading,requests, os, urllib
 

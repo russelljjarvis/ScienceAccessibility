@@ -107,6 +107,10 @@ def lzma_compression_ratio(test_string):
 
 WORD_LIM = 100 # word limit
 
+
+
+
+
 def web_iter(flat_iter):
     # better to rewrite nested for loop as a function to map over.
 
@@ -152,36 +156,11 @@ def web_iter(flat_iter):
         tokens = [ w.lower() for w in tokens if w.isalpha() ]
         fdist = FreqDist(tokens) #frequency distribution of words only
         urlDat['uniqueness'] = len(set(tokens))/float(len(tokens))
-
-
-        # information dense articles are already compressed in language
-        # They are concise due to low redundancy
-        # if an article is already very dense it's entropy is high
-        # and compression savings will be low
-        # the difference between compressed and uncompressed should be small.
-        #comp = str(zlib.compress(corpus.encode(),6))
-        #comp = comp.split("\\")
-        #ratio = len(corpus.encode())/len(comp)
-        #https://pudding.cool/2017/05/song-repetition/
-
         compression_ratio = lzma_compression_ratio(corpus)
         # big deltas mean redudancy/sparse information/information/density
 
         # long file lengths lead to big deltas.
-
         urlDat['info_density'] = compression_ratio
-
-        bm = nltk.collocations.BigramAssocMeasures()
-        tm = nltk.collocations.TrigramAssocMeasures()
-        bgs = bigrams(tokens)
-        tgs = trigrams(tokens)
-
-        trigram = nltk.collocations.TrigramCollocationFinder.from_words(tokens)
-        trigram.score_ngrams(tm.raw_freq)
-        tpmi = trigram.score_ngrams(tm.pmi)
-        urlDat['trimi'] = tpmi
-
-
         # cast dict to list
         fd_temp = list(fdist.items())
         urlDat['stfreq'] = fdist[str(file_contents.iloc[index]['query']).lower()] #frequency of search term
@@ -257,19 +236,17 @@ def web_iter(flat_iter):
     return urlDat
 
 flat_iter = []
-# visited_files = []
 # naturally sort a list of files, as machine sorted is not the desired file list hierarchy.
-
 lo_query_links = natsorted(glob.glob(str(os.getcwd())+'/*.csv'))
 list_per_links = []
 for p,fileName in enumerate(lo_query_links):
     b = os.path.getsize(fileName)
-    if b>250:
+    if b>250: # this is just to prevent reading in of incomplete data.
         file_contents = pd.read_csv(fileName)
         for index in range(0,len(file_contents)):
             flat_iter.append((p,fileName,file_contents,index))
-
-
+print(flat_iter)
+import pdb; pdb.set_trace()
 
 def process_dics(urlDats,frames = False):
     for urlDat in urlDats:
@@ -299,12 +276,10 @@ def process_dics(urlDats,frames = False):
     else:
         return dfs
 
-print(flat_iter)
 import dask
 import dask.bag as db
 grid = db.from_sequence(flat_iter)
 urlDats = list(db.map(web_iter,grid).compute())
-print(urlDats)
 unravel = process_dics(urlDats, frames = False)
 with open('unraveled_links.p','wb') as handle:
     pickle.dump(unravel,handle)

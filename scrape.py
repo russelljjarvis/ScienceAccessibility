@@ -21,36 +21,6 @@ driver = webdriver.Firefox()
 from fake_useragent import UserAgent
 ua = UserAgent()
 
-import threading,requests, os, urllib
-
-
-class FetchResource(threading.Thread):
-    """Grabs a web resource and stores it in the target directory.
-
-    Args:
-        target: A directory where to save the resource.
-        urls: A bunch of urls to grab
-
-    """
-    def __init__(self, urls):
-        super().__init__()
-        #self.target = target
-        self.urls = urls
-
-
-    def run(self):
-        for url in self.urls:
-            url = urllib.parse.unquote(url)
-            with open(os.path.join(url.split('/')[-1]), 'wb') as f:
-                try:
-                    print(url)
-                    content = requests.get(url).content
-                    print(content)
-                    f.write(content)
-                except Exception as e:
-                    pass
-                print('[+] Fetched {}'.format(url))
-
 
 import pickle
 from GoogleScraper import scrape_with_config, GoogleSearchError
@@ -88,27 +58,6 @@ def scrapelandtext(fi):
     config['output_filename'] = str(category)+str(' ')+str(se[b])+str('.csv')
     try:
         search = scrape_with_config(config)
-        if len(search.serps):
-            resource_urls = []
-            for serp in search.serps:
-                resource_urls.extend([link.link for link in serp.links])
-
-            import threading,requests, os, urllib
-
-            # fire up 100 threads to get the images
-            num_threads = 100
-            threads = [FetchResource([]) for i in range(num_threads)]
-            while resource_urls:
-                for t in threads:
-                    try:
-                        t.urls.append(resource_urls.pop())
-                    except IndexError as e:
-                        break
-            threads = [t for t in threads if t.urls]
-            for t in threads:
-                t.start()
-            for t in threads:
-                t.join()
     except GoogleSearchError as e:
         print(e)
 

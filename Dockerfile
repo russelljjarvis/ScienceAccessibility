@@ -3,7 +3,7 @@
 FROM jupyter/scipy-notebook
 USER root
 RUN apt-get update
-RUN chown -R $NB_USER $HOME
+# RUN chown -R $NB_USER $HOME
 
 #Get a whole lot of GNU core development tools
 
@@ -99,5 +99,7 @@ RUN sudo /opt/conda/bin/pip install git+https://github.com/pdfminer/pdfminer.six
 RUN sudo /opt/conda/bin/pip install git+https://github.com/russelljjarvis/GoogleScraper.git
 WORKDIR $HOME
 RUN python -c "import nltk; nltk.download('punkt'); nltk.download('averaged_perceptron_tagger')"
+                                                                                                                                                                                      
+RUN sudo /opt/conda/bin/pip install fake_useragent
 
 ENTRYPOINT /bin/bash

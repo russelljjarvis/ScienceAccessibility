@@ -89,6 +89,7 @@ date_created = []
 # params are defined in a seperate file, as they are prone to changing,
 # yet, different programs draw on them, better to have to only change them in one
 # place not three.
+import os
 from utils_and_paramaters import search_params, engine_dict_list
 SEARCHLIST, WEB, LINKSTOGET = search_params()
 se, _ = engine_dict_list()
@@ -158,11 +159,9 @@ def web_iter(flat_iter):
         # if an article is already very dense it's entropy is high
         # and compression savings will be low
         # the difference between compressed and uncompressed should be small.
-        comp = str(zlib.compress(corpus.encode(),6))
-        comp = comp.split("\\")
-        #afc = len(comp)
-        ratio = len(corpus.encode())/len(comp)
-
+        #comp = str(zlib.compress(corpus.encode(),6))
+        #comp = comp.split("\\")
+        #ratio = len(corpus.encode())/len(comp)
         #https://pudding.cool/2017/05/song-repetition/
 
         compression_ratio = lzma_compression_ratio(corpus)
@@ -221,11 +220,8 @@ def web_iter(flat_iter):
         sentSyl = {}
         WperS = {}
         for n, sent in enumerate(sents):
-        # future use
-        #for n in range(0,len(sents)):
 
             #setup sent variable to analyze each sentence individually
-            #sent = sents[n] #select sentence n in total text
             sent = word_tokenize(sent) #tokenize sentence n in to words
             sent = [w.lower() for w in sent if w.isalpha()] #remove any non-text
 
@@ -263,11 +259,10 @@ def web_iter(flat_iter):
 flat_iter = []
 # visited_files = []
 # naturally sort a list of files, as machine sorted is not the desired file list hierarchy.
+
 lo_query_links = natsorted(glob.glob(str(os.getcwd())+'/*.csv'))
 list_per_links = []
-#import pdb
 for p,fileName in enumerate(lo_query_links):
-    import os
     b = os.path.getsize(fileName)
     if b>250:
         file_contents = pd.read_csv(fileName)

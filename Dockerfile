@@ -3,8 +3,6 @@
 FROM jupyter/scipy-notebook
 USER root
 RUN apt-get update
-
-RUN apt-get update
 RUN apt-get -y install apt-transport-https ca-certificates
 RUN apt-get -y install apt-transport-https curl
 RUN apt-get -y install wget
@@ -96,10 +94,13 @@ RUN sudo apt-get install --fix-missing
 # A lot of academic text is still in PDF, so better get some tools to deal with that.
 RUN sudo /opt/conda/bin/pip install git+https://github.com/pdfminer/pdfminer.six.git
 
-# The only difference to the official version, is download throttling. Self throttling actually speeds up time, 
-# as it prevents getting booted off by SE servers.
+# The only difference to the official version, is download throttling. Self throttling actually speeds up execution, 
+# as it prevents getting booted off by SE servers, which can mean restarting scrape. Thankfuly GoogleScraper has good awareness
+# of what it has already done.
 RUN sudo /opt/conda/bin/pip install git+https://github.com/russelljjarvis/GoogleScraper.git
 
 WORKDIR $HOME
-RUN python -c "import nltk; nltk.download('punkt'); nltk.download('averaged_perceptron_tagger')"
+# Probably the reason doing this here is ineffective, is just a execution path problem.
+# If this doesn't work maybe do it post hoc in an interactive shell.
+# RUN python -c "import nltk; nltk.download('punkt'); nltk.download('averaged_perceptron_tagger')"
 ENTRYPOINT /bin/bash

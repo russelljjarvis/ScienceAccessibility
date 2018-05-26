@@ -1,5 +1,8 @@
 
-
+## A lot of this code is informed by this multi-threading of web-grabbing example:
+# https://github.com/NikolaiT/GoogleScraper/blob/master/Examples/image_search.py
+# Probably the parallel architecture sucks, probably dask.bag mapping would be more readable and efficient.
+##
 import threading,requests, os, urllib
 from bs4 import BeautifulSoup
 from natsort import natsorted, ns

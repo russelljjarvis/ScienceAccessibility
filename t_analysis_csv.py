@@ -5,6 +5,13 @@
 # rjjarvis@asu.edu
 # Patrick McGurrin
 # patrick.mcgurrin@gmail.com
+
+
+##
+# Probably 75% of the metrics computed here are not utilized, as the customers did not know what they wanted.
+# The analysis tries to be everything for everyone, and this can and should change for the better.
+##
+
 #general python imports
 import os
 import dask
@@ -26,13 +33,7 @@ import glob
 import pickle
 
 #text analysis imports
-import nltk
-nltk.download('punkt')
-nltk.download('averaged_perceptron_tagger')
-import os
-os.system('pip install natsort')
-os.system('pip install pycld2')
-os.system('pip install pylzma')
+
 import lzma
 from nltk.tag.perceptron import PerceptronTagger
 tagger = PerceptronTagger(load=False)
@@ -44,11 +45,10 @@ from nltk.classify import NaiveBayesClassifier
 from nltk.corpus import subjectivity
 from nltk.corpus import cmudict
 from nltk.sentiment import SentimentAnalyzer
-from nltk import NgramAssocMeasures
+#from nltk import NgramAssocMeasures
 from nltk import compat
 from bs4 import BeautifulSoup
 import json
-#!pip install git+"https://github.com/russelljjarvis/textstat.git"
 from textstat.textstat import textstat
 
 from natsort import natsorted, ns
@@ -60,31 +60,15 @@ import os
 import base64
 
 import zlib
-from nltk import NgramAssocMeasures
-from nltk.metrics import ContingencyMeasures
-from nltk import bigrams, trigrams
-from nltk.metrics import ContingencyMeasures
-import pandas as pd
+#from nltk import NgramAssocMeasures
+#from nltk.metrics import ContingencyMeasures
+#from nltk import bigrams, trigrams
+#from nltk.metrics import ContingencyMeasures
+#import pandas as pd
+#import lzma
 
-import lzma
-
-########################################################################
-########################################################################
-########################################################################
-
-
-handle = None
-TEXT_FOUNTAIN = False
-########################################################################
-########################################################################
-########################################################################
 #set filePath below to specify where the data will be going after the code runs
 fileLocation = os.getcwd()
-
-#if not os.path.exists(fileLocation):
-#    os.makedirs(fileLocation)
-
-date_created = []
 
 # params are defined in a seperate file, as they are prone to changing,
 # yet, different programs draw on them, better to have to only change them in one
@@ -94,35 +78,30 @@ from utils_and_paramaters import search_params, engine_dict_list
 SEARCHLIST, WEB, LINKSTOGET = search_params()
 se, _ = engine_dict_list()
 
-# we first tokenize the text corpus
 
 def lzma_compression_ratio(test_string):
     import lzma
-
     c = lzma.LZMACompressor()
     bytes_in = bytes(test_string,'utf-8')
     bytes_out = c.compress(bytes_in)
     return len(bytes_out)/len(bytes_in)
 
 
-WORD_LIM = 100 # word limit
-
-
-
-
+WORD_LIM = 100 # word limit, should be imposed to exclude many pages from analysis, but is not yet used.
 
 def web_iter(flat_iter):
-    # better to rewrite nested for loop as a function to map over.
 
     p, fileName, file_contents, index = flat_iter
     urlDat = {}
     _, _, details = cld2.detect(' '.join(file_contents.iloc[index]['snippet']), bestEffort=True)
     detectedLangName, _ = details[0][:2]
-
+    
     server_status = bool(file_contents.iloc[index]['status']=='successful')
     word_lim = bool(len(file_contents.iloc[index]['snippet']) > WORD_LIM)
+    # It's not that we are cultural imperialists, but the people at textstat, and nltk may have been, 
+    # so we are also forced into this tacit agreement.
+    # Japanese characters massively distort information theory estimates, as they are potentially very concise.
     english = bool(detectedLangName == 'ENGLISH')
-
 
     if server_status and word_lim and bool:
         urlDat['link_rank'] = file_contents.iloc[index]['rank']
@@ -133,8 +112,11 @@ def web_iter(flat_iter):
 
         if str('!gs') in urlDat['keyword']:
             urlDat['se'] = 'g_scholar'
-        elif str('!bing') in urlDat['keyword']:
-            urlDat['se'] = 'bing'
+        elif str('!yahoo') in urlDat['keyword']:
+            urlDat['se'] = 'yahoo'
+        elif str('!twitter') in urlDat['keyword']:
+            urlDat['se'] = 'twitter'
+    
         else:
             urlDat['se'] = file_contents.iloc[index]['search_engine_name']
         ########################################################################
@@ -217,8 +199,8 @@ def web_iter(flat_iter):
             # explanation of metrics
             # https://github.com/shivam5992/textstat
             urlDat['fkg']  = textstat.flesch_kincaid_grade(str(tokens))
-
-
+            # Mostly not used:
+            # need more clarity about what to plot:
             urlDat['fre'] = textstat.flesch_reading_ease(str(tokens))
             urlDat['smog']  = textstat.smog_index(str(tokens))
             urlDat['cliau']  = textstat.coleman_liau_index(str(tokens))
@@ -248,38 +230,29 @@ for p,fileName in enumerate(lo_query_links):
 print(flat_iter)
 import pdb; pdb.set_trace()
 
-def process_dics(urlDats,frames = False):
+def process_dics(urlDats):
     for urlDat in urlDats:
-        #pandas Data frames are best data container for maths/stats, but steep learning curve.
-        if frames == True and len(urlDat)>0:
-            #
-            # Other exclusion criteria. Exclude reading levels above grade 100,
-            # as this is most likely a problem with the metric algorithm, and or rubbish data in.
-            if urlDat['fkg'] > 100.0 or urlDat['ss'] == 0 or urlDat['eofh'] == 0:
-                pass
-            else:
-                if len(list_per_links) == 0:
-                    dfs = pd.DataFrame(pd.Series(urlDat)).T
-                dfs = pd.concat([ dfs, pd.DataFrame(pd.Series(urlDat)).T ])
-
-        if frames == False and len(urlDat)>0:
-
-            # Other exclusion criteria. Exclude reading levels above grade 100,
-            # as this is most likely a problem with the metric algorithm, and or rubbish data in.
-            if urlDat['fkg'] > 100.0 or urlDat['ss'] == 0 or urlDat['eofh'] == 0:
-                pass
-            else:
-                list_per_links.append(urlDat)
-
-    if frames == False:
-        return list_per_links
-    else:
-        return dfs
+        # pandas Data frames are best data container for maths/stats, but steep learning curve.
+        # Other exclusion criteria. Exclude reading levels above grade 100,
+        # as this is most likely a problem with the metric algorithm, and or rubbish data in.
+        # TODO: speed everything up, by performing exclusion criteri above not here.
+        if urlDat['fkg'] > 100.0 or urlDat['ss'] == 0 or urlDat['eofh'] == 0:
+            pass
+        else:
+            if len(list_per_links) == 0:
+                dfs = pd.DataFrame(pd.Series(urlDat)).T
+            dfs = pd.concat([ dfs, pd.DataFrame(pd.Series(urlDat)).T ])
+    return dfs
 
 import dask
 import dask.bag as db
 grid = db.from_sequence(flat_iter)
 urlDats = list(db.map(web_iter,grid).compute())
-unravel = process_dics(urlDats, frames = False)
+
+if frames ==True:
+    unravel = process_dics(urlDats)
+else:
+    unravel = urlDats
+
 with open('unraveled_links.p','wb') as handle:
     pickle.dump(unravel,handle)

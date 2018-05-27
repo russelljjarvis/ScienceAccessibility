@@ -74,13 +74,13 @@ ENV DBUS_SESSION_BUS_ADDRESS=/dev/null
 ##
 # Firefox
 ## 
+RUN sudo chown -R $NB_USER $HOME
 
 RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.18.0/geckodriver-v0.18.0-linux64.tar.gz
 RUN sudo tar -xvzf geckodriver-v0.18.0-linux64.tar.gz
 # RUN tar -xvzf geckodriver*
 # RUN chmod +x geckodriver
 
-RUN sudo chown -R $NB_USER $HOME
 
 ## Geckodriver
 RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.16.1/geckodriver-v0.16.1-linux64.tar.gz
@@ -95,9 +95,13 @@ RUN sudo /opt/conda/bin/pip install pyvirtualdisplay
 RUN sudo apt-get update
 RUN sudo apt-get install --fix-missing
 
+RUN sudo chown -R $NB_USER $HOME
+
 #RUN sudo git clone https://github.com/pdfminer/pdfminer.six.git
 RUN sudo /opt/conda/bin/pip install git+https://github.com/pdfminer/pdfminer.six.git
 RUN sudo /opt/conda/bin/pip install git+https://github.com/russelljjarvis/GoogleScraper.git
 WORKDIR $HOME
 RUN python -c "import nltk; nltk.download('punkt'); nltk.download('averaged_perceptron_tagger')"
+RUN sudo chown -R $NB_USER $HOME
+
 ENTRYPOINT /bin/bash

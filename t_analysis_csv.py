@@ -27,12 +27,12 @@ import pickle
 
 #text analysis imports
 import nltk
-nltk.download('punkt')
-nltk.download('averaged_perceptron_tagger')
-import os
-os.system('pip install natsort')
-os.system('pip install pycld2')
-os.system('pip install pylzma')
+#nltk.download('punkt')
+#nltk.download('averaged_perceptron_tagger')
+#import os
+#os.system('pip install natsort')
+#os.system('pip install pycld2')
+##os.system('pip install pylzma')
 import lzma
 from nltk.tag.perceptron import PerceptronTagger
 tagger = PerceptronTagger(load=False)
@@ -68,21 +68,7 @@ import pandas as pd
 
 import lzma
 
-########################################################################
-########################################################################
-########################################################################
 
-
-handle = None
-TEXT_FOUNTAIN = False
-########################################################################
-########################################################################
-########################################################################
-#set filePath below to specify where the data will be going after the code runs
-fileLocation = os.getcwd()
-
-#if not os.path.exists(fileLocation):
-#    os.makedirs(fileLocation)
 
 date_created = []
 

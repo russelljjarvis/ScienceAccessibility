@@ -63,9 +63,7 @@ def scrapelandtext(fi):
     # It's more just log keeping of what has already been obtained, as opposed to substantial content
     # The file crawl.py contains methods for crawling the scrapped links.
     # For this reason, a subsequent action, crawling will be necessary.
-    # Crawling is a lot more trivial than SE scrapping. Probably more so SE servers are fortified against scrapping
-    # but regular web servers probably don't care.
-    # crawling the returned links probably does not require any masqaruading or evasion. So a crawl function could be very basic.
+    # see file crawl.py
 
     config['output_filename'] = str(category)+str(' ')+str(se[b])+str('.csv')
     try:

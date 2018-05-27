@@ -8,21 +8,18 @@
 
 def engine_dict_list():
     se = {0:"google",1:"yahoo",2:"duckduckgo",3:"ask",4:"scholar",5:"bing"}
-
     return se, list(se.values())
 
 def search_params():
     SEARCHLIST = ["autosomes","respiration", "bacteriophage",'Neutron','Vaccine','Transgenic','GMO','Genetically Modified Organism','neuromorphic hardware', 'unicorns']
     _, ses = engine_dict_list()
     WEB = len(ses) #how many search engines to include (many possible- google google scholar bing yahoo)
-    LINKSTOGET= 15 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
+    LINKSTOGET= 10 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
     return SEARCHLIST, WEB, LINKSTOGET
 
 def black_string(check_with):
     #print(check_with)
     if len(check_with) == 1145:
-        print('suspicious')
-        #print(check_with)
         return True
     check="Our systems have detected unusual traffic from your computer network.\\nThis page checks to see if it\'s really you sending the requests, and not a robot.\\nWhy did this happen?\\nThis page appears when Google automatically detects requests coming from your computer network which appear to be in violation of the Terms of Service. The block will expire shortly after those requests stop.\\nIn the meantime, solving the above CAPTCHA will let you continue to use our services.This traffic may have been sent by malicious software, a browser plug in, or a script that sends automated requests.\\nIf you share your network connection, ask your administrator for help  a different computer using the same IP address may be responsible.\\nLearn moreSometimes you may be asked to solve the CAPTCHA if you are using advanced terms that robots are known to use, or sending requests very quickly."
     if check in check_with:
@@ -84,6 +81,3 @@ def mkdirs(fi,filter_string=''):
         pass
     else:
         os.makedirs(path)
-
-    # the idea is that grid and flat iter should be very similar.
-    # grid is a bit more maintainable and conventional way of building iterators.

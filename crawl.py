@@ -11,9 +11,23 @@ from natsort import natsorted, ns
 import glob
 #import pandas as pd
 
+
+import selenium
+from pyvirtualdisplay import Display
+from selenium import webdriver
+
+display = Display(visible=0, size=(1024, 768))
+display.start()
+driver = webdriver.Firefox()
+from fake_useragent import UserAgent
+ua = UserAgent()
+
+
+import scrapy
+
+
 import pandas as pd
 import pycld2 as cld2
-import urllib
 
 
 import pdfminer
@@ -24,6 +38,8 @@ from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
 from pdfminer.pdfdevice import PDFDevice
 from pdfminer.layout import LAParams
 from pdfminer.converter import  TextConverter
+
+import re
 
 
 from io import StringIO
@@ -65,7 +81,7 @@ def convert_pdf_to_txt(r):
     return text
 
 def html_to_txt(content):
-    soup = BeautifulSoup(content.read(), 'html.parser')
+    soup = BeautifulSoup(content, 'html.parser')
     #strip HTML
     for script in soup(["script", "style"]):
         script.extract()    # rip it out
@@ -77,6 +93,16 @@ def html_to_txt(content):
     str_text = str(text)
     return str_text
 
+def openable(url):
+    try:
+        content = urllib.request.urlopen(url)
+        return url
+    except:
+        return None
+    '''
+    https://github.com/alaminopu/pdf_downloader/blob/master/pdf_downloader.py
+    '''
+import requests
 class FetchResource():
 
     """Grabs a web resource and stores it in the target directory.
@@ -99,42 +125,29 @@ class FetchResource():
             else:
                 self.engine = url.iloc[index]['search_engine_name']
 
+
     def run(self):
-        url = urllib.parse.unquote(self.url)
-        if 'pdf' in url:
-            r = requests.get(url)
-            str_text = convert_pdf_to_txt(r)
+        # https://stackoverflow.com/questions/25936072/python-urllib2-httperror-http-error-503-service-unavailable-on-valid-website
+        if 'pdf' in self.url:
+            pdf_file = requests.get(self.url, stream=True)
+            str_text = convert_pdf_to_txt(pdf_file)
         else:
-            content = urllib.request.urlopen(url)
-            str_text = html_to_txt(content)
+            driver.get(self.url)
+            crude_html = driver.page_source
+            str_text = html_to_txt(crude_html)
         print('[+] Fetched {}'.format(str_text))
         return str_text
 
-flat_iter = []
-# naturally sort a list of files, as machine sorted is not the desired file list hierarchy.
-lo_query_links = natsorted(glob.glob(str(os.getcwd())+'/*.csv'))
-print(lo_query_links)
-#lo_query_links = lo_query_links[0:5]
-list_per_links = []
-for p,fileName in enumerate(lo_query_links):
-    b = os.path.getsize(fileName)
-    if b>250: # this is just to prevent reading in of incomplete data.
-        file_contents = pd.read_csv(fileName)
-        for index in range(0,len(file_contents)):
-            flat_iter.append((p,fileName,file_contents,index))
-#print(flat_iter)
-resource_urls = list(map(pre_crawl,flat_iter))
 
 
-# Especially this one it was written with upgoer5
-# These texts should be pretty good:
-# http://splasho.com/upgoer5/library.php
-
-resource_urls = ['http://splasho.com/upgoer5/library.php','https://academic.oup.com/beheco/article-abstract/29/1/264/4677340', \
-'https://elifesciences.org/download/aHR0cHM6Ly9jZG4uZWxpZmVzY2llbmNlcy5vcmcvYXJ0aWNsZXMvMjc3MjUvZWxpZmUtMjc3MjUtdjIucGRm/elife-27725-v2.pdf?_hash=WA%2Fey48HnQ4FpVd6bc0xCTZPXjE5ralhFP2TaMBMp1c%3D',\
-]
-texts = []
-for r in resource_urls:
-    fr = FetchResource(r)
-    texts.append(fr.run())
-print(texts)
+def collect_pubs(scholar_url):
+    #<a href="javascript:void(0)" data-href="/citations?view_op=view_citation&amp;hl=en&amp;user=GzG5kRAAAAAJ&amp;citation_for_view=GzG5kRAAAAAJ:u5HHmVD_uO8C" class="gsc_a_at">Coactivation and timing-dependent integration of synaptic potentiation and depression</a>
+    print(scholar_url)
+    html_page = urllib.request.urlopen(scholar_url)
+    soup = BeautifulSoup(html_page, 'html.parser')
+    links = []
+    for link in soup.findAll('a', attrs={'href': re.compile("https://")}):
+        check_out = link.get('href')
+        #if '/citations?' in check_out:
+        links.append(check_out)
+    return links

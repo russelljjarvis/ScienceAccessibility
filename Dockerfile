@@ -106,4 +106,5 @@ WORKDIR $HOME
 # Probably the reason doing this here is ineffective, is just a execution path problem.
 # If this doesn't work maybe do it post hoc in an interactive shell.
 # RUN python -c "import nltk; nltk.download('punkt'); nltk.download('averaged_perceptron_tagger')"
-ENTRYPOINT /bin/bash
+ADD run_post_docker_build.sh .
+ENTRYPOINT /bin/bash run_post_docker_build.sh && /bin/bash

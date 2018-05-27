@@ -43,6 +43,7 @@ random.shuffle(flat_iter)
 def scrapelandtext(fi):
     b,category = fi
     config = {}
+    stalk_relative = str('https://scholar.google.com/citations?user=2agHNksAAAAJ&hl=en&oi=sra')
     if b==4: # google scholar is not supported by google scraper
              # duckduckgo bang expansion can be used as to access engines that GS does not support.
              # for example twitter etc
@@ -56,7 +57,7 @@ def scrapelandtext(fi):
     config['sel_browser'] = str('firefox')
     config['do_caching'] = True # bloat warning.
 
-    # NB caching results in only text snippets, which are merely previews 
+    # NB caching results in only text snippets, which are merely previews
     # of the web pages, visible from the page-ranked search engine results. The snippets are not a total
     # text dump suitable for analysis (however initially I was confused and I thought it was).
     # It's more just log keeping of what has already been obtained, as opposed to substantial content

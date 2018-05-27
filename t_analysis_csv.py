@@ -87,16 +87,117 @@ def lzma_compression_ratio(test_string):
 
 
 WORD_LIM = 100 # word limit, should be imposed to exclude many pages from analysis, but is not yet used.
+DEBUG = False
+def text_proc(corpus,urlDat):
+    #remove unreadable characters
+    corpus = corpus.replace("-", " ") #remove characters that nltk can't read
+    textNum = re.findall(r'\d', corpus) #locate numbers that nltk cannot see to analyze
+    tokens = word_tokenize(corpus)
+    tokens = [w.lower() for w in tokens] #make everything lower case
+    urlDat['wcount'] = textstat.lexicon_count(str(tokens))
+    #sentences
+    sents = sent_tokenize(corpus) #split all of text in to sentences
+    sents = [w.lower() for w in sents] #lowercase all
+
+    urlDat['sentcount'] = len(sents) #determine number of sentences
+
+    ########################################################################
+    ##frequency distribtuion of text
+    tokens = [ w.lower() for w in tokens if w.isalpha() ]
+    fdist = FreqDist(tokens) #frequency distribution of words only
+    urlDat['uniqueness'] = len(set(tokens))/float(len(tokens))
+    compression_ratio = lzma_compression_ratio(corpus)
+    #import pdb; pdb.set_trace()
+    # big deltas mean redudancy/sparse information/information/density
+
+    # long file lengths lead to big deltas.
+    urlDat['info_density'] = compression_ratio
+    urlDat['info_density_explanation'] = 'the smaller the more redundancy exploited by compression'
+    # cast dict to list
+    fd_temp = list(fdist.items())
+
+    #frequency of all words
+    fAll = {}
+    for x in range(0,len(fd_temp)):
+        fAll[x,1], fAll[x,2] = [y.strip('}()",{:') for y in (str(fd_temp[x])).split(',')]
+    #
+    urlDat['frequencies'] = sorted([ (f[1],f[0]) for f in fd_temp ],reverse=True)
+    number_of_words = sum([ f[0] for f in urlDat['frequencies'] ])
+
+    probs = [float(c[0]) / number_of_words for c in urlDat['frequencies'] ]
+    probs = [p for p in probs if p > 0.]
+    ent = 0
+    for p in probs:
+        if p > 0.:
+            ent -= p * math.log(p, 2)
+    urlDat['eofh'] = ent
+
+    #frequency of the most used n number of words
+    frexMost = fdist.most_common(15) #show N most common words
+    urlDat['frexMost'] = frexMost
+    fM = {}
+    for x in range(0,len(frexMost)) :
+        fM[x,1], fM[x,2] = [y.strip('}()",{:') for y in (str(frexMost[x])).split(',')]
+    if DEBUG == False:
+        urlDat['frexMost'] = None
+        urlDat['frequencies'] = None
+    ########################################################################
+    #Sentiment and Subjectivity analysis
+    testimonial = TextBlob(corpus)
+    urlDat['sp'] = testimonial.sentiment.polarity
+    urlDat['ss'] = testimonial.sentiment.subjectivity
+
+    ########################################################################
+    #determine syllable count for all words in each sentece
+    sentSyl = {}
+    WperS = {}
+    for n, sent in enumerate(sents):
+
+        #setup sent variable to analyze each sentence individually
+        sent = word_tokenize(sent) #tokenize sentence n in to words
+        sent = [w.lower() for w in sent if w.isalpha()] #remove any non-text
+
+        WperS[n] = len(sent) #number of words per sentence
+
+        #syllable analysis
+        for x in range(0,len(sent)):
+            word = sent[x]
+            # Count the syllables in the word.
+            syllables = textstat.syllable_count(str(word))
+            sentSyl[n,x] = syllables
+
+    if len(tokens) != 0:
+        # explanation of metrics
+        # https://github.com/shivam5992/textstat
+        #import pdb; pdb.set_trace()
+        urlDat['fkg']  = textstat.flesch_kincaid_grade(corpus)
+        # Mostly not used:
+        # need more clarity about what to plot:
+        urlDat['fre'] = textstat.flesch_reading_ease(corpus)
+        urlDat['smog']  = textstat.smog_index(corpus)
+        urlDat['cliau']  = textstat.coleman_liau_index(corpus)
+        #urlDat['ri']  = textstat.automated_readability_index(str(tokens))
+        urlDat['gf'] = textstat.gunning_fog(corpus)
+        #urlDat['dcr']  = textstat.dale_chall_readability_score(str(tokens))
+        #urlDat['dw']  = textstat.difficult_words(str(tokens))
+        #urlDat['lwf']  = textstat.linsear_write_formula(str(tokens))
+        urlDat['standard']  = textstat.text_standard(corpus)
+        #urlDat['WperS'] = WperS
+        #urlDat['sentSyl'] = sentSyl
+        #urlDat['fM'] = fM
+        #urlDat['fAll'] = fAll
+    return urlDat
+
 
 def web_iter(flat_iter):
     p, fileName, file_contents, index = flat_iter
     urlDat = {}
     _, _, details = cld2.detect(' '.join(file_contents.iloc[index]['snippet']), bestEffort=True)
     detectedLangName, _ = details[0][:2]
-    
+
     server_status = bool(file_contents.iloc[index]['status']=='successful')
     word_lim = bool(len(file_contents.iloc[index]['snippet']) > WORD_LIM)
-    # It's not that we are cultural imperialists, but the people at textstat, and nltk may have been, 
+    # It's not that we are cultural imperialists, but the people at textstat, and nltk may have been,
     # so we are also forced into this tacit agreement.
     # Japanese characters massively distort information theory estimates, as they are potentially very concise.
     english = bool(detectedLangName == 'ENGLISH')
@@ -115,107 +216,19 @@ def web_iter(flat_iter):
             urlDat['se'] = 'yahoo'
         elif str('!twitter') in urlDat['keyword']:
             urlDat['se'] = 'twitter'
-    
+
         else:
             urlDat['se'] = file_contents.iloc[index]['search_engine_name']
-        ########################################################################
-        corpus = file_contents.iloc[index]['snippet']
-        #remove unreadable characters
-        corpus = corpus.replace("-", " ") #remove characters that nltk can't read
-        textNum = re.findall(r'\d', corpus) #locate numbers that nltk cannot see to analyze
-        tokens = word_tokenize(corpus)
-        tokens = [w.lower() for w in tokens] #make everything lower case
-        urlDat['wcount'] = textstat.lexicon_count(str(tokens))
-        #sentences
-        sents = sent_tokenize(corpus) #split all of text in to sentences
-        sents = [w.lower() for w in sents] #lowercase all
-
-        urlDat['sentcount'] = len(sents) #determine number of sentences
-
-        ########################################################################
-        ##frequency distribtuion of text
-        tokens = [ w.lower() for w in tokens if w.isalpha() ]
-        fdist = FreqDist(tokens) #frequency distribution of words only
-        urlDat['uniqueness'] = len(set(tokens))/float(len(tokens))
-        compression_ratio = lzma_compression_ratio(corpus)
-        # big deltas mean redudancy/sparse information/information/density
-
-        # long file lengths lead to big deltas.
-        urlDat['info_density'] = compression_ratio
-        # cast dict to list
-        fd_temp = list(fdist.items())
         urlDat['stfreq'] = fdist[str(file_contents.iloc[index]['query']).lower()] #frequency of search term
 
-        #frequency of all words
-        fAll = {}
-        for x in range(0,len(fd_temp)):
-            fAll[x,1], fAll[x,2] = [y.strip('}()",{:') for y in (str(fd_temp[x])).split(',')]
-
-        urlDat['frequencies'] = sorted([ (f[1],f[0]) for f in fd_temp ],reverse=True)
-        number_of_words = sum([ f[0] for f in urlDat['frequencies'] ])
-
-        probs = [float(c[0]) / number_of_words for c in urlDat['frequencies'] ]
-        probs = [p for p in probs if p > 0.]
-        ent = 0
-        for p in probs:
-            if p > 0.:
-                ent -= p * math.log(p, 2)
-        urlDat['eofh'] = ent
-
-        #frequency of the most used n number of words
-        frexMost = fdist.most_common(15) #show N most common words
-        urlDat['frexMost'] = frexMost
-        fM = {}
-        for x in range(0,len(frexMost)) :
-            fM[x,1], fM[x,2] = [y.strip('}()",{:') for y in (str(frexMost[x])).split(',')]
+        urlDat['file_path'] = fileName
 
         ########################################################################
-        #Sentiment and Subjectivity analysis
-        testimonial = TextBlob(corpus)
-        urlDat['sp'] = testimonial.sentiment.polarity
-        urlDat['ss'] = testimonial.sentiment.subjectivity
+        corpus = file_contents.iloc[index]['snippet']
+        urlDat = text_proc(corpus,urlDat)
 
-        ########################################################################
-        #determine syllable count for all words in each sentece
-        sentSyl = {}
-        WperS = {}
-        for n, sent in enumerate(sents):
-
-            #setup sent variable to analyze each sentence individually
-            sent = word_tokenize(sent) #tokenize sentence n in to words
-            sent = [w.lower() for w in sent if w.isalpha()] #remove any non-text
-
-            WperS[n] = len(sent) #number of words per sentence
-
-            #syllable analysis
-            for x in range(0,len(sent)):
-                word = sent[x]
-                # Count the syllables in the word.
-                syllables = textstat.syllable_count(str(word))
-                sentSyl[n,x] = syllables
-
-        if len(tokens) != 0:
-            # explanation of metrics
-            # https://github.com/shivam5992/textstat
-            urlDat['fkg']  = textstat.flesch_kincaid_grade(str(tokens))
-            # Mostly not used:
-            # need more clarity about what to plot:
-            urlDat['fre'] = textstat.flesch_reading_ease(str(tokens))
-            urlDat['smog']  = textstat.smog_index(str(tokens))
-            urlDat['cliau']  = textstat.coleman_liau_index(str(tokens))
-            #urlDat['ri']  = textstat.automated_readability_index(str(tokens))
-            urlDat['gf'] = textstat.gunning_fog(str(tokens))
-            #urlDat['dcr']  = textstat.dale_chall_readability_score(str(tokens))
-            #urlDat['dw']  = textstat.difficult_words(str(tokens))
-            #urlDat['lwf']  = textstat.linsear_write_formula(str(tokens))
-            urlDat['standard']  = textstat.text_standard(str(tokens))
-            urlDat['file_path'] = fileName
-            #urlDat['WperS'] = WperS
-            #urlDat['sentSyl'] = sentSyl
-            #urlDat['fM'] = fM
-            #urlDat['fAll'] = fAll
     return urlDat
-
+'''
 flat_iter = []
 # naturally sort a list of files, as machine sorted is not the desired file list hierarchy.
 lo_query_links = natsorted(glob.glob(str(os.getcwd())+'/*.csv'))
@@ -227,7 +240,8 @@ for p,fileName in enumerate(lo_query_links):
         for index in range(0,len(file_contents)):
             flat_iter.append((p,fileName,file_contents,index))
 print(flat_iter)
-import pdb; pdb.set_trace()
+'''
+#import pdb; pdb.set_trace()
 
 def process_dics(urlDats):
     for urlDat in urlDats:
@@ -242,7 +256,7 @@ def process_dics(urlDats):
                 dfs = pd.DataFrame(pd.Series(urlDat)).T
             dfs = pd.concat([ dfs, pd.DataFrame(pd.Series(urlDat)).T ])
     return dfs
-
+'''
 #import dask
 import dask.bag as db
 grid = db.from_sequence(flat_iter)
@@ -255,3 +269,4 @@ else:
 
 with open('unraveled_links.p','wb') as handle:
     pickle.dump(unravel,handle)
+'''

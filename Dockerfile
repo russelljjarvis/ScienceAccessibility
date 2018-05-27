@@ -3,8 +3,6 @@
 FROM jupyter/scipy-notebook
 USER root
 RUN apt-get update
-
-RUN apt-get update
 RUN apt-get -y install apt-transport-https ca-certificates
 RUN apt-get -y install apt-transport-https curl
 RUN apt-get -y install wget
@@ -31,9 +29,8 @@ RUN /opt/conda/bin/pip install textstat
 RUN /opt/conda/bin/pip install tabulate
 RUN /opt/conda/bin/pip install textblob
 RUN /opt/conda/bin/pip install selenium
-RUN /opt/conda/bin/pip install fake_useragent bokeh
-
-
+# pycld2 seems to be the most accurate english text classifier of the python packages.
+RUN /opt/conda/bin/pip install fake_useragent bokeh natsort pycld2 pylzma
 
 USER $NB_USER
 
@@ -72,15 +69,15 @@ ENV DBUS_SESSION_BUS_ADDRESS=/dev/null
 
 
 ##
-# Firefox
+# Programatic Firefox driver that can bind with selenium/gecko.
 ## 
-RUN sudo chown -R $NB_USER $HOME
 
 RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.18.0/geckodriver-v0.18.0-linux64.tar.gz
 RUN sudo tar -xvzf geckodriver-v0.18.0-linux64.tar.gz
 # RUN tar -xvzf geckodriver*
 # RUN chmod +x geckodriver
 
+RUN sudo chown -R $NB_USER $HOME
 
 ## Geckodriver
 RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.16.1/geckodriver-v0.16.1-linux64.tar.gz
@@ -94,14 +91,19 @@ RUN sudo chown -R jovyan /home/jovyan
 RUN sudo /opt/conda/bin/pip install pyvirtualdisplay
 RUN sudo apt-get update
 RUN sudo apt-get install --fix-missing
-
-RUN sudo chown -R $NB_USER $HOME
-
-#RUN sudo git clone https://github.com/pdfminer/pdfminer.six.git
+# A lot of academic text is still in PDF, so better get some tools to deal with that.
 RUN sudo /opt/conda/bin/pip install git+https://github.com/pdfminer/pdfminer.six.git
+
+# The only difference to the official version, is download throttling. Self throttling actually speeds up execution, 
+# as it prevents getting booted off by SE servers, which can mean restarting scrape. Thankfuly GoogleScraper has good awareness
+# of what it has already done.
 RUN sudo /opt/conda/bin/pip install git+https://github.com/russelljjarvis/GoogleScraper.git
 WORKDIR $HOME
 RUN python -c "import nltk; nltk.download('punkt'); nltk.download('averaged_perceptron_tagger')"
 RUN sudo chown -R $NB_USER $HOME
 
+WORKDIR $HOME
+# Probably the reason doing this here is ineffective, is just a execution path problem.
+# If this doesn't work maybe do it post hoc in an interactive shell.
+# RUN python -c "import nltk; nltk.download('punkt'); nltk.download('averaged_perceptron_tagger')"
 ENTRYPOINT /bin/bash

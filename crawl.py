@@ -5,11 +5,11 @@
 # https://github.com/NikolaiT/GoogleScraper/blob/master/Examples/image_search.py
 # Probably the parallel architecture sucks, probably dask.bag mapping would be more readable and efficient.
 ##
-import threading,requests, os, urllib
+#import threading,requests, os, urllib
 from bs4 import BeautifulSoup
 from natsort import natsorted, ns
 import glob
-#import pandas as pd
+import requests
 
 
 import selenium
@@ -41,6 +41,9 @@ from pdfminer.converter import  TextConverter
 
 import re
 
+from bs4 import BeautifulSoup
+import bs4 as bs
+import urllib.request
 
 from io import StringIO
 import io
@@ -53,9 +56,6 @@ device = TextConverter(rsrcmgr, retstr, codec = codec, laparams = laparams)
 interpreter = PDFPageInterpreter(rsrcmgr, device)
 
 
-from bs4 import BeautifulSoup
-import bs4 as bs
-import urllib.request
 
 def pre_crawl(flat_iter):
     p, fileName, file_contents, index = flat_iter
@@ -93,16 +93,6 @@ def html_to_txt(content):
     str_text = str(text)
     return str_text
 
-def openable(url):
-    try:
-        content = urllib.request.urlopen(url)
-        return url
-    except:
-        return None
-    '''
-    https://github.com/alaminopu/pdf_downloader/blob/master/pdf_downloader.py
-    '''
-import requests
 class FetchResource():
 
     """Grabs a web resource and stores it in the target directory.
@@ -139,9 +129,7 @@ class FetchResource():
         return str_text
 
 
-
 def collect_pubs(scholar_url):
-    #<a href="javascript:void(0)" data-href="/citations?view_op=view_citation&amp;hl=en&amp;user=GzG5kRAAAAAJ&amp;citation_for_view=GzG5kRAAAAAJ:u5HHmVD_uO8C" class="gsc_a_at">Coactivation and timing-dependent integration of synaptic potentiation and depression</a>
     print(scholar_url)
     html_page = urllib.request.urlopen(scholar_url)
     soup = BeautifulSoup(html_page, 'html.parser')

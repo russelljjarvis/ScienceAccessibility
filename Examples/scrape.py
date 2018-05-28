@@ -61,17 +61,17 @@ def scrapelandtext(fi):
     config['num_pages_for_keyword'] = 10
     config['use_own_ip'] = True
     config['sel_browser'] = str('firefox')
-    #config['do_caching'] = True # bloat warning.
+    config['do_caching'] = True # bloat warning.
 
     # NB caching results in only text snippets, which are merely previews
     # of the web pages, visible from the page-ranked search engine results. The snippets are not a total
     # text dump suitable for analysis (however initially I was confused and I thought it was).
     # It's more just log keeping of what has already been obtained, as opposed to substantial content
     # The file crawl.py contains methods for crawling the scrapped links.
-    # For this reason, a subsequent action, crawling will be necessary.
-    # see file crawl.py
+    # For this reason, a subsequent action, c.download (crawl download ) is ncessary.
 
     config['output_filename'] = str(category)+str(' ')+str(se[b])+str('.csv')
+    path_link_map ={}
     try:
         search = scrape_with_config(config)
         links = []
@@ -80,17 +80,20 @@ def scrapelandtext(fi):
 
         try:
             for index, link in enumerate(links):
+                # Bulk download wht is scrapped by GS.
                 if str('pdf') in link:
                     local_file_path = c.download(local_path=os.getcwd(),url=link,name=str(category)+str(se[b])+str(index)+str('.pdf'))
                     print('hit',local_file_path)
                 else:
                     local_file_path = c.download(local_path=os.getcwd(),url=link,name=str(category)+str(se[b])+str(index)+str('.html'))
-
+                #config['snippets']
+                path_link_map[str(link)] = local_file_path
                 os.path.isfile(local_file_path)
         except:
             pass
 
     except GoogleSearchError as e:
         print(e)
+    return path_link_map
 
-_ = list(map(scrapelandtext,flat_iter))
+path_link_maps = list(map(scrapelandtext,flat_iter))

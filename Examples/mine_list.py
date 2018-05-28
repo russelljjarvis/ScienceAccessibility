@@ -37,10 +37,12 @@ urlDats.extend(list(db.map(local_opt,grid1).compute()))
 urlDats2 = list(filter(lambda url: len(list(url.keys()))>3, urlDats))
 
 urlDats0 = list(filter(lambda url: str('penalty') in url.keys(), urlDats2))
-winners = sorted([ (w['penalty'],w['link']) for w in urlDats0])#winners = sorted([ (w['penalty'],w) for w in urlDats0])
-winners_len = sorted([ (w['wcount'],w['link']) for w in urlDats0])#winners = sorted([ (w['penalty'],w) for w in urlDats0])
+#winners = sorted([ (w['penalty'],w['link']) for w in urlDats0])#winners = sorted([ (w['penalty'],w) for w in urlDats0])
+#winners_len = sorted([ (w['wcount'],w['link']) for w in urlDats0])#winners = sorted([ (w['penalty'],w) for w in urlDats0])
 
-print(winners[0])
+winners = sorted(urlDats0, key=lambda w: w['penalty'])   # sort by age
+#import pdb; pdb.set_trace()
+#print(winners[0])
 def print_best_text(fileName):
     file = open(fileName)
     if str('.html') in fileName:
@@ -55,11 +57,11 @@ text1 = print_best_text(winners[1][1])
 
 import pprint
 pp = pprint.PrettyPrinter(indent=4)
+pp.pprint(winners[0])
 pp.pprint(text0)
+pp.pprint(winners[1])
 pp.pprint(text1)
 
-#print(text)
-#import pdb; pdb.set_trace()
 
 frames = False
 if frames ==True:

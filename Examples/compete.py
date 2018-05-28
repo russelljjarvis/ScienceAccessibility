@@ -1,5 +1,8 @@
 
 
+
+
+
 try:
     assert os.path.isfile('results.p')
     winners = pickle.load(open('results.p','rb'))
@@ -17,7 +20,6 @@ except:
     import os.path
     import pickle
 
-
     from crawl import FetchResource
     from t_analysis_csv import text_proc
 
@@ -28,9 +30,12 @@ except:
     except:
         rgerkin = collect_pubs(rgerkin)
         scrook = collect_pubs(scrook)
+        sjarvis = collect_pubs(sjarvis)
+
         authors = {}
         authors['rgerkin'] = rgerkin
         authors['scrook'] = scrook
+        authors['sjarvis'] = sjarvis
         with open('authors.p','wb') as f:
             pickle.dump(authors,f)
 

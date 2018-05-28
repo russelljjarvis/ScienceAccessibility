@@ -60,14 +60,7 @@ import os
 import base64
 
 import zlib
-#from nltk import NgramAssocMeasures
-#from nltk.metrics import ContingencyMeasures
-#from nltk import bigrams, trigrams
-#from nltk.metrics import ContingencyMeasures
-#import pandas as pd
-#import lzma
 
-#set filePath below to specify where the data will be going after the code runs
 fileLocation = os.getcwd()
 
 # params are defined in a seperate file, as they are prone to changing,
@@ -86,87 +79,73 @@ def lzma_compression_ratio(test_string):
     return len(bytes_out)/len(bytes_in)
 
 
-WORD_LIM = 100 # word limit, should be imposed to exclude many pages from analysis, but is not yet used.
+WORD_LIM = 4916 # word limit, should be imposed to exclude many pages from analysis, but is not yet used.
 DEBUG = False
+
+
+import numpy as np
+
+
+import copy
 def text_proc(corpus,urlDat):
     #remove unreadable characters
     corpus = corpus.replace("-", " ") #remove characters that nltk can't read
     textNum = re.findall(r'\d', corpus) #locate numbers that nltk cannot see to analyze
     tokens = word_tokenize(corpus)
     tokens = [w.lower() for w in tokens] #make everything lower case
+
     urlDat['wcount'] = textstat.lexicon_count(str(tokens))
-    #sentences
-    sents = sent_tokenize(corpus) #split all of text in to sentences
-    sents = [w.lower() for w in sents] #lowercase all
+    word_lim = bool(urlDat['wcount']  > WORD_LIM)
+    _, _, details = cld2.detect(' '.join(corpus), bestEffort=True)
+    detectedLangName, _ = details[0][:2]
+    urlDat['english'] = bool(detectedLangName == 'ENGLISH')
+    if len(tokens) != 0 and urlDat['english'] and word_lim:
 
-    urlDat['sentcount'] = len(sents) #determine number of sentences
+        ##frequency distribtuion of text
+        tokens = [ w.lower() for w in tokens if w.isalpha() ]
+        fdist = FreqDist(tokens) #frequency distribution of words only
+        urlDat['uniqueness'] = len(set(tokens))/float(len(tokens))
+        compression_ratio = lzma_compression_ratio(corpus)
+        # big deltas mean redudancy/sparse information/information/density
 
-    ########################################################################
-    ##frequency distribtuion of text
-    tokens = [ w.lower() for w in tokens if w.isalpha() ]
-    fdist = FreqDist(tokens) #frequency distribution of words only
-    urlDat['uniqueness'] = len(set(tokens))/float(len(tokens))
-    compression_ratio = lzma_compression_ratio(corpus)
-    #import pdb; pdb.set_trace()
-    # big deltas mean redudancy/sparse information/information/density
+        # long file lengths lead to big deltas.
+        urlDat['info_density'] = compression_ratio
+        scaled_density = urlDat['info_density']/urlDat['wcount']
+        urlDat['scaled_info_density'] = scaled_density
+        #urlDat['info_density_explanation'] = 'the smaller the more redundancy exploited by compression'
+        # cast dict to list
+        fd_temp = list(fdist.items())
 
-    # long file lengths lead to big deltas.
-    urlDat['info_density'] = compression_ratio
-    urlDat['info_density_explanation'] = 'the smaller the more redundancy exploited by compression'
-    # cast dict to list
-    fd_temp = list(fdist.items())
+        #frequency of all words
+        fAll = {}
+        for x in range(0,len(fd_temp)):
+            fAll[x,1], fAll[x,2] = [y.strip('}()",{:') for y in (str(fd_temp[x])).split(',')]
+        #
+        urlDat['frequencies'] = sorted([ (f[1],f[0]) for f in fd_temp ],reverse=True)
+        number_of_words = sum([ f[0] for f in urlDat['frequencies'] ])
 
-    #frequency of all words
-    fAll = {}
-    for x in range(0,len(fd_temp)):
-        fAll[x,1], fAll[x,2] = [y.strip('}()",{:') for y in (str(fd_temp[x])).split(',')]
-    #
-    urlDat['frequencies'] = sorted([ (f[1],f[0]) for f in fd_temp ],reverse=True)
-    number_of_words = sum([ f[0] for f in urlDat['frequencies'] ])
+        probs = [float(c[0]) / number_of_words for c in urlDat['frequencies'] ]
+        probs = [p for p in probs if p > 0.]
+        ent = 0
+        for p in probs:
+            if p > 0.:
+                ent -= p * math.log(p, 2)
+        urlDat['eofh'] = ent
 
-    probs = [float(c[0]) / number_of_words for c in urlDat['frequencies'] ]
-    probs = [p for p in probs if p > 0.]
-    ent = 0
-    for p in probs:
-        if p > 0.:
-            ent -= p * math.log(p, 2)
-    urlDat['eofh'] = ent
-
-    #frequency of the most used n number of words
-    frexMost = fdist.most_common(15) #show N most common words
-    urlDat['frexMost'] = frexMost
-    fM = {}
-    for x in range(0,len(frexMost)) :
-        fM[x,1], fM[x,2] = [y.strip('}()",{:') for y in (str(frexMost[x])).split(',')]
-    if DEBUG == False:
-        urlDat['frexMost'] = None
-        urlDat['frequencies'] = None
-    ########################################################################
-    #Sentiment and Subjectivity analysis
-    testimonial = TextBlob(corpus)
-    urlDat['sp'] = testimonial.sentiment.polarity
-    urlDat['ss'] = testimonial.sentiment.subjectivity
-
-    ########################################################################
-    #determine syllable count for all words in each sentece
-    sentSyl = {}
-    WperS = {}
-    for n, sent in enumerate(sents):
-
-        #setup sent variable to analyze each sentence individually
-        sent = word_tokenize(sent) #tokenize sentence n in to words
-        sent = [w.lower() for w in sent if w.isalpha()] #remove any non-text
-
-        WperS[n] = len(sent) #number of words per sentence
-
-        #syllable analysis
-        for x in range(0,len(sent)):
-            word = sent[x]
-            # Count the syllables in the word.
-            syllables = textstat.syllable_count(str(word))
-            sentSyl[n,x] = syllables
-
-    if len(tokens) != 0:
+        #frequency of the most used n number of words
+        frexMost = fdist.most_common(15) #show N most common words
+        urlDat['frexMost'] = frexMost
+        fM = {}
+        for x in range(0,len(frexMost)) :
+            fM[x,1], fM[x,2] = [y.strip('}()",{:') for y in (str(frexMost[x])).split(',')]
+        if DEBUG == False:
+            urlDat['frexMost'] = None
+            urlDat['frequencies'] = None
+        ########################################################################
+        #Sentiment and Subjectivity analysis
+        testimonial = TextBlob(corpus)
+        urlDat['sp'] = testimonial.sentiment.polarity
+        urlDat['ss'] = testimonial.sentiment.subjectivity
         # explanation of metrics
         # https://github.com/shivam5992/textstat
         urlDat['fkg']  = textstat.flesch_kincaid_grade(corpus)
@@ -177,6 +156,9 @@ def text_proc(corpus,urlDat):
         urlDat['cliau']  = textstat.coleman_liau_index(corpus)
         urlDat['gf'] = textstat.gunning_fog(corpus)
         urlDat['standard']  = textstat.text_standard(corpus)
+        # good writing should be readable, objective, concise.
+        penalty = urlDat['gf'] + abs(urlDat['sp']) - scaled_density + urlDat['uniqueness']
+        urlDat['penalty'] = penalty
     return urlDat
 
 
@@ -185,15 +167,13 @@ def web_iter(flat_iter):
     urlDat = {}
     _, _, details = cld2.detect(' '.join(file_contents.iloc[index]['snippet']), bestEffort=True)
     detectedLangName, _ = details[0][:2]
+    english = bool(detectedLangName == 'ENGLISH')
 
     server_status = bool(file_contents.iloc[index]['status']=='successful')
     word_lim = bool(len(file_contents.iloc[index]['snippet']) > WORD_LIM)
     # It's not that we are cultural imperialists, but the people at textstat, and nltk may have been,
     # so we are also forced into this tacit agreement.
     # Japanese characters massively distort information theory estimates, as they are potentially very concise.
-    english = bool(detectedLangName == 'ENGLISH')
-
-
     if server_status and word_lim and bool:
         urlDat['link_rank'] = file_contents.iloc[index]['rank']
         rank_old = file_contents.iloc[index]['rank']
@@ -217,6 +197,7 @@ def web_iter(flat_iter):
         ########################################################################
         corpus = file_contents.iloc[index]['snippet']
         urlDat = text_proc(corpus,urlDat)
+
 
     return urlDat
 

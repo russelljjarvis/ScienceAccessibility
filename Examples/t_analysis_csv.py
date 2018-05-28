@@ -14,7 +14,7 @@
 
 #general python imports
 import os
-import dask
+#import dask
 import matplotlib # Its not that this file is responsible for doing plotting, but it calls many modules that are, such that it needs to pre-empt
 # setting of an appropriate backend not an X11 one.
 matplotlib.use('Agg')
@@ -95,6 +95,10 @@ def text_proc(corpus,urlDat, WORD_LIM = 4000):
     word_lim = bool(urlDat['wcount']  > WORD_LIM)
 
     try:
+        # It's not that we are cultural imperialists, but the people at textstat, and nltk may have been,
+        # so we are also forced into this tacit agreement.
+        # Japanese characters massively distort information theory estimates, as they are potentially very concise.
+ 
         _, _, details = cld2.detect(' '.join(corpus), bestEffort=True)
         detectedLangName, _ = details[0][:2]
         urlDat['english'] = bool(detectedLangName == 'ENGLISH')
@@ -143,7 +147,6 @@ def text_proc(corpus,urlDat, WORD_LIM = 4000):
         if DEBUG == False:
             urlDat['frexMost'] = None
             urlDat['frequencies'] = None
-        ########################################################################
         #Sentiment and Subjectivity analysis
         testimonial = TextBlob(corpus)
         urlDat['sp'] = testimonial.sentiment.polarity
@@ -166,12 +169,27 @@ def text_proc(corpus,urlDat, WORD_LIM = 4000):
         # Good writing should not be obfucstated either. The reading level is a check for obfucstation.
         # The resulting metric is a balance of concision, low obfucstation, expression.
 
-
         penalty = urlDat['gf'] + abs(urlDat['sp']) - scaled_density - urlDat['uniqueness']
         urlDat['penalty'] = penalty
     return urlDat
 
 
+def process_dics(urlDats):
+    for urlDat in urlDats:
+        # pandas Data frames are best data container for maths/stats, but steep learning curve.
+        # Other exclusion criteria. Exclude reading levels above grade 100,
+        # as this is most likely a problem with the metric algorithm, and or rubbish data in.
+        # TODO: speed everything up, by performing exclusion criteri above not here.
+        if urlDat['fkg'] > 100.0 or urlDat['ss'] == 0 or urlDat['eofh'] == 0:
+            pass
+        else:
+            if len(list_per_links) == 0:
+                dfs = pd.DataFrame(pd.Series(urlDat)).T
+            dfs = pd.concat([ dfs, pd.DataFrame(pd.Series(urlDat)).T ])
+    return dfs
+
+'''
+Probably depreciated
 def web_iter(flat_iter):
     p, fileName, file_contents, index = flat_iter
     urlDat = {}
@@ -186,7 +204,7 @@ def web_iter(flat_iter):
     # It's not that we are cultural imperialists, but the people at textstat, and nltk may have been,
     # so we are also forced into this tacit agreement.
     # Japanese characters massively distort information theory estimates, as they are potentially very concise.
-    if server_status and word_lim and bool:
+    if server_status and word_lim and word_lim:
         urlDat['link_rank'] = file_contents.iloc[index]['rank']
         rank_old = file_contents.iloc[index]['rank']
         urlDat['vslink'] = file_contents.iloc[index]['visible_link']
@@ -212,18 +230,4 @@ def web_iter(flat_iter):
 
 
     return urlDat
-
-
-def process_dics(urlDats):
-    for urlDat in urlDats:
-        # pandas Data frames are best data container for maths/stats, but steep learning curve.
-        # Other exclusion criteria. Exclude reading levels above grade 100,
-        # as this is most likely a problem with the metric algorithm, and or rubbish data in.
-        # TODO: speed everything up, by performing exclusion criteri above not here.
-        if urlDat['fkg'] > 100.0 or urlDat['ss'] == 0 or urlDat['eofh'] == 0:
-            pass
-        else:
-            if len(list_per_links) == 0:
-                dfs = pd.DataFrame(pd.Series(urlDat)).T
-            dfs = pd.concat([ dfs, pd.DataFrame(pd.Series(urlDat)).T ])
-    return dfs
+'''

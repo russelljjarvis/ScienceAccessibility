@@ -20,16 +20,12 @@ import matplotlib # Its not that this file is responsible for doing plotting, bu
 matplotlib.use('Agg')
 import sys
 import numpy
-import numpy as np
-import scipy
-import scipy.io as sio
+import copy
 import math
 import re
-#import requests
 import time
 from tabulate import tabulate
 from textblob import TextBlob
-import glob
 import pickle
 
 #text analysis imports
@@ -45,13 +41,12 @@ from nltk.classify import NaiveBayesClassifier
 from nltk.corpus import subjectivity
 from nltk.corpus import cmudict
 from nltk.sentiment import SentimentAnalyzer
-#from nltk import NgramAssocMeasures
 from nltk import compat
-from bs4 import BeautifulSoup
-import json
+#from bs4 import BeautifulSoup
+#import json
 from textstat.textstat import textstat
 
-from natsort import natsorted, ns
+#from natsort import natsorted, ns
 
 import pandas as pd
 import pycld2 as cld2
@@ -61,7 +56,6 @@ import base64
 
 import zlib
 
-fileLocation = os.getcwd()
 
 # params are defined in a seperate file, as they are prone to changing,
 # yet, different programs draw on them, better to have to only change them in one
@@ -82,8 +76,6 @@ def lzma_compression_ratio(test_string):
 DEBUG = False
 
 
-import numpy as np
-import copy
 def text_proc(corpus,urlDat, WORD_LIM = 4000):
     #remove unreadable characters
     corpus = corpus.replace("-", " ") #remove characters that nltk can't read
@@ -145,6 +137,7 @@ def text_proc(corpus,urlDat, WORD_LIM = 4000):
         for x in range(0,len(frexMost)) :
             fM[x,1], fM[x,2] = [y.strip('}()",{:') for y in (str(frexMost[x])).split(',')]
         if DEBUG == False:
+            # These clutter readouts.
             urlDat['frexMost'] = None
             urlDat['frequencies'] = None
         #Sentiment and Subjectivity analysis

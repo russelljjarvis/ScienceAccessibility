@@ -80,8 +80,9 @@ def scrapelandtext(fi):
 
         try:
             for index, link in enumerate(links):
-                if 'pdf' in link:
+                if str('pdf') in link:
                     local_file_path = c.download(local_path=os.getcwd(),url=link,name=str(category)+str(se[b])+str(index)+str('.pdf'))
+                    print('hit',local_file_path)
                 else:
                     local_file_path = c.download(local_path=os.getcwd(),url=link,name=str(category)+str(se[b])+str(index)+str('.html'))
 

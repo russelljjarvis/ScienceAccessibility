@@ -14,12 +14,19 @@
 import selenium
 from pyvirtualdisplay import Display
 from selenium import webdriver
+from fake_useragent import UserAgent
 
 display = Display(visible=0, size=(1024, 768))
 display.start()
-driver = webdriver.Firefox()
-from fake_useragent import UserAgent
-ua = UserAgent()
+
+
+useragent = UserAgent()
+# Rotate through random user profiles.
+profile = webdriver.FirefoxProfile()
+profile.set_preference("general.useragent.override", useragent.random)
+profile.set_preference("javascript.enabled", True)
+driver = webdriver.Firefox(firefox_profile=profile)
+
 
 
 import pickle
@@ -40,12 +47,6 @@ flat_iter = [ (b,category) for category in SEARCHLIST for b in range(0,4) ]
 # traverse this list randomly as hierarchial traversal may be a bot give away.
 random.shuffle(flat_iter)
 
-# If one was to seperate data, from code this would be how:
-# if not os.path.exists('cached'):
-#    os.makedirs('cached')
-# if not os.path.exists('text_dump'):
-#    os.makedirs('text_dump')
-# os.chdir('text_dump')
 import pickle
 def scrapelandtext(fi):
     b,category = fi

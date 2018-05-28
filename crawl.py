@@ -9,7 +9,6 @@ from natsort import natsorted, ns
 import glob
 import requests
 
-
 import selenium
 from pyvirtualdisplay import Display
 from selenium import webdriver
@@ -28,7 +27,6 @@ driver = webdriver.Firefox(firefox_profile=profile)
 
 import pandas as pd
 import pycld2 as cld2
-
 
 import pdfminer
 from pdfminer.pdfparser import PDFParser
@@ -139,7 +137,7 @@ class FetchResource():
             pdf_file = requests.get(self.url, stream=True)
             str_text = convert_pdf_to_txt(pdf_file)
         else:
-            # of denver versus, selenium. Both are good clothes.
+            # of denver versus, selenium. Both are good profolactics.
             # which one works best will depend on how much exposure the servers queried have already had
             # with your client.
             try:

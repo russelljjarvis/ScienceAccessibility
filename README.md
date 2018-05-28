@@ -9,19 +9,22 @@ If docker is installed on the base OS, git clone this repository, and assuming t
 launch via BASH in Linux as follows:
 
 ```
-'cd this_path; sudo docker run -p 8888:8888 -v this_path:/home/jovyan slc jupyter notebook --ip=0.0.0.0 --NotebookApp.token=\"\" --NotebookApp.disable_check_xsrf=True' 
+'cd this_path; sudo docker run -p 8888:8888 -v this_path:/home/jovyan slc jupyter notebook --ip=0.0.0.0 --NotebookApp.token=\"\" --NotebookApp.disable_check_xsrf=True'
 ```
 
 Maybe define a bash alias, if this command get's too big and old.
 
 ```
-alias drvt='cd this_path; sudo docker run -p 8888:8888 -v this_path:/home/jovyan slc jupyter notebook --ip=0.0.0.0 --NotebookApp.token=\"\" --NotebookApp.disable_check_xsrf=True' 
+alias drvt='cd this_path; sudo docker run -p 8888:8888 -v this_path:/home/jovyan slc jupyter notebook --ip=0.0.0.0 --NotebookApp.token=\"\" --NotebookApp.disable_check_xsrf=True'
 ```
-                                                                 
-To Run the project, one needs to execute the files:
-`bash 
-python scrape.py`,
-and or the jupyter notebook: vstrl.ipynb. 
 
+To Run the project, one needs to execute the files navigate to the examples directory and execute:
+`python scrape.py`,
+scrapes search engines for parameters defined in utils_and_params
 
-If you succeed at launching a jupyter notebook, you can enter a terminal there through the browser. Jupyter notebooks are therefore the most general solution.
+and or the jupyter notebook: vstrl.ipynb which plots analysis based on scrapped data.
+
+Note: a lot of complexity in the code base comes from the need to masquerade as a non bot web surfer.
+It's a bad idea to surf naked ie to only use: `urllib`, or `requests`, as these resource grabbers are sure fire bot give aways.
+`Selenium`, `Google Scrape` (uses Selenium), and `delver Crawler`, are the surfing clothes I used; they work together to prolong a period feigned humanhood.
+The downloading of pdf's as opposed to html usually occurs in the nude, but this does not seem to cause any problems. 

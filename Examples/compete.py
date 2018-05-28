@@ -1,9 +1,34 @@
 
 
 
+import os
 
+from bs4 import BeautifulSoup
+from crawl import collect_pubs
+import os.path
+import pickle
+
+from crawl import FetchResource
+from t_analysis_csv import text_proc
+
+
+def compute_authors(author_results):
+    for author,links in authors.items():
+        for r in links:
+            fr = FetchResource(r)
+            corpus = fr.run()
+            if corpus is not None:
+                urlDat = {'link':r}
+                urlDat = text_proc(corpus,urlDat,WORD_LIM = 100)
+                if str(r) not in author_results.keys():
+                    author_results[author][str(r)] = urlDat
+                else:
+                    author_results[author][str(r)] = urlDat
+        print(author_results)
+    return author_results
 
 try:
+    assert 1==2
     assert os.path.isfile('results.p')
     winners = pickle.load(open('results.p','rb'))
 except:
@@ -15,14 +40,6 @@ except:
     sjarvis = str('https://scholar.google.com/citations?user=2agHNksAAAAJ&hl=en&oi=sra')
 
 
-    from bs4 import BeautifulSoup
-    from crawl import collect_pubs
-    import os.path
-    import pickle
-
-    from crawl import FetchResource
-    from t_analysis_csv import text_proc
-
 
     try:
         assert os.path.isfile('authors.p')
@@ -31,55 +48,58 @@ except:
         rgerkin = collect_pubs(rgerkin)
         scrook = collect_pubs(scrook)
         sjarvis = collect_pubs(sjarvis)
+        kmoeller = collect_pubs(kmoeller)
 
         authors = {}
         authors['rgerkin'] = rgerkin
         authors['scrook'] = scrook
         authors['sjarvis'] = sjarvis
+
         with open('authors.p','wb') as f:
             pickle.dump(authors,f)
 
 
+    try:
+        assert os.path.isfile('benchmarks.p')
+        benchmarks = pickle.load(open('benchmarks.p','rb'))
+        hss = benchmarks[0]
+        bench = benchmarks[1]
+        pmarting = benchmarks[2]
+
+    except:
+        fr = FetchResource(high_standard)
+        hs = fr.run()
+        urlDat = {'link':high_standard}
+        hss = text_proc(hs,urlDat)
+
+        fr = FetchResource(xkcd_self_sufficient)
+        bench_mark = fr.run()
+        urlDat = {'link':xkcd_self_sufficient}
+        bench = text_proc(bench_mark,urlDat)
+
+        fr = FetchResource(peter)
+        pmarting = fr.run()
+        urlDat = {'link':peter}
+        pm = text_proc(pmarting,urlDat)
+
+        benchmarks = [ hss,bench,pmarting ]
+        with open('benchmarks.p','wb') as f:
+            pickle.dump(benchmarks,f)
 
 
-    fr = FetchResource(high_standard)
-    hs = fr.run()
-    urlDat = {'link':high_standard}
-    hss = text_proc(hs,urlDat)
-
-    fr = FetchResource(xkcd_self_sufficient)
-    bench_mark = fr.run()
-    urlDat = {'link':xkcd_self_sufficient}
-    bench = text_proc(bench_mark,urlDat)
-
-    fr = FetchResource(peter)
-    pmarting = fr.run()
-    urlDat = {'link':peter}
-    pm = text_proc(pmarting,urlDat)
 
     try:
         assert os.path.isfile('author_results.p')
         author_results = pickle.load(open('author_results.p','rb'))
     except:
-        author_results = {'rgerkin':{}, 'scrook':{}}
-        for author,links in authors.items():
-            for r in links:
-                fr = FetchResource(r)
-                corpus = fr.run()
-                if corpus is not None:
-                    urlDat = {'link':r}
-                    urlDat = text_proc(corpus,urlDat)
-
-                    if str(r) not in author_results.keys():
-                        author_results[author][str(r)] = urlDat
-                    else:
-                        author_results[author][str(r)] = urlDat
-            print(author_results)
+        author_results = {'rgerkin':{}, 'scrook':{}, 'sjarvis':{} }
+        author_results = compute_authors(author_results)
         with open('author_results.p','wb') as f:
             pickle.dump(author_results,f)
 
     rg = list(author_results['rgerkin'].values())
     sc = list(author_results['scrook'].values())
+    sj = list(author_results['sjarvis'].values())
     import numpy as np
 
     def metrics(rg):
@@ -99,13 +119,21 @@ except:
             wcount = rg['wcount']
             obj = rg['sp']
             scaled_density = density/wcount # higher better
-            # good writing should be readable, objective, concise.
-        penalty = fog + abs(obj) - scaled_density + unique
+
+            # Good writing should be readable, objective, concise.
+            # The writing should be articulate/expressive enough not to have to repeat phrases,
+            # thereby seeming redundant. Articulate expressive writing then employs
+            # many unique words, and does not yield high compression savings.
+            # Good writing should not be obfucstated either. The reading level is a check for obfucstation.
+            # The resulting metric is a balance of concision, low obfucstation, expression.
+
+        penalty = fog + abs(obj) - scaled_density - unique
         return (fog, obj, scaled_density, unique, penalty)
 
 
     rick = metrics(rg)[4]
     scrook = metrics(sc)[4]
+    sjarvis = metrics(sj)[4]
     bench = metrics(bench)[4]
     pm = metrics(pm)[4]
     hss = metrics(hss)[4]

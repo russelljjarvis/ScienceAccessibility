@@ -11,7 +11,7 @@ def engine_dict_list():
     return se, list(se.values())
 
 def search_params():
-    SEARCHLIST = ["autosomes","respiration", "bacteriophage",'Neutron','Vaccine','Transgenic','GMO','Genetically Modified Organism','neuromorphic hardware', 'unicorns']
+    SEARCHLIST = ["autosomes","respiration", "bacteriophage",'Neutron','Vaccine','Transgenic','GMO','Genetically Modified Organism','neuromorphic hardware', 'mustang unicorn', 'scrook rgerkin neuron', 'prancercise philosophy', 'play dough delicious deserts']
     _, ses = engine_dict_list()
     WEB = len(ses) #how many search engines to include (many possible- google google scholar bing yahoo)
     LINKSTOGET= 10 #number of links to pull from each search engine (this can be any value, but more processing with higher number)

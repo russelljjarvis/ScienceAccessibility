@@ -52,8 +52,10 @@ def print_best_text(fileName):
     file.close()
     return text
 
-text0 = print_best_text(winners[0][1])
-text1 = print_best_text(winners[1][1])
+#import pdb
+#pdb.set_trace()
+text0 = print_best_text(winners[0]['link'])
+text1 = print_best_text(winners[1]['link'])
 
 import pprint
 pp = pprint.PrettyPrinter(indent=4)

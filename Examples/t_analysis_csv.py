@@ -79,15 +79,12 @@ def lzma_compression_ratio(test_string):
     return len(bytes_out)/len(bytes_in)
 
 
-WORD_LIM = 4916 # word limit, should be imposed to exclude many pages from analysis, but is not yet used.
 DEBUG = False
 
 
 import numpy as np
-
-
 import copy
-def text_proc(corpus,urlDat):
+def text_proc(corpus,urlDat, WORD_LIM = 4000):
     #remove unreadable characters
     corpus = corpus.replace("-", " ") #remove characters that nltk can't read
     textNum = re.findall(r'\d', corpus) #locate numbers that nltk cannot see to analyze
@@ -96,9 +93,14 @@ def text_proc(corpus,urlDat):
 
     urlDat['wcount'] = textstat.lexicon_count(str(tokens))
     word_lim = bool(urlDat['wcount']  > WORD_LIM)
-    _, _, details = cld2.detect(' '.join(corpus), bestEffort=True)
-    detectedLangName, _ = details[0][:2]
-    urlDat['english'] = bool(detectedLangName == 'ENGLISH')
+
+    try:
+        _, _, details = cld2.detect(' '.join(corpus), bestEffort=True)
+        detectedLangName, _ = details[0][:2]
+        urlDat['english'] = bool(detectedLangName == 'ENGLISH')
+    except:
+        urlDat['english'] = True
+
     if len(tokens) != 0 and urlDat['english'] and word_lim:
 
         ##frequency distribtuion of text
@@ -156,8 +158,16 @@ def text_proc(corpus,urlDat):
         urlDat['cliau']  = textstat.coleman_liau_index(corpus)
         urlDat['gf'] = textstat.gunning_fog(corpus)
         urlDat['standard']  = textstat.text_standard(corpus)
-        # good writing should be readable, objective, concise.
-        penalty = urlDat['gf'] + abs(urlDat['sp']) - scaled_density + urlDat['uniqueness']
+
+        # Good writing should be readable, objective, concise.
+        # The writing should be articulate/expressive enough not to have to repeat phrases,
+        # thereby seeming redundant. Articulate expressive writing then employs
+        # many unique words, and does not yield high compression savings.
+        # Good writing should not be obfucstated either. The reading level is a check for obfucstation.
+        # The resulting metric is a balance of concision, low obfucstation, expression.
+
+
+        penalty = urlDat['gf'] + abs(urlDat['sp']) - scaled_density - urlDat['uniqueness']
         urlDat['penalty'] = penalty
     return urlDat
 
@@ -165,10 +175,12 @@ def text_proc(corpus,urlDat):
 def web_iter(flat_iter):
     p, fileName, file_contents, index = flat_iter
     urlDat = {}
-    _, _, details = cld2.detect(' '.join(file_contents.iloc[index]['snippet']), bestEffort=True)
-    detectedLangName, _ = details[0][:2]
-    english = bool(detectedLangName == 'ENGLISH')
-
+    try:
+        _, _, details = cld2.detect(' '.join(file_contents.iloc[index]['snippet']), bestEffort=True)
+        detectedLangName, _ = details[0][:2]
+        english = bool(detectedLangName == 'ENGLISH')
+    except:
+        english = True
     server_status = bool(file_contents.iloc[index]['status']=='successful')
     word_lim = bool(len(file_contents.iloc[index]['snippet']) > WORD_LIM)
     # It's not that we are cultural imperialists, but the people at textstat, and nltk may have been,

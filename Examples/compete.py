@@ -9,6 +9,8 @@ except:
     high_standard = str('https://elifesciences.org/download/aHR0cHM6Ly9jZG4uZWxpZmVzY2llbmNlcy5vcmcvYXJ0aWNsZXMvMjc3MjUvZWxpZmUtMjc3MjUtdjIucGRm/elife-27725-v2.pdf?_hash=WA%2Fey48HnQ4FpVd6bc0xCTZPXjE5ralhFP2TaMBMp1c%3D')
     rgerkin = str('https://scholar.google.com/citations?user=GzG5kRAAAAAJ&hl=en&oi=sra')
     scrook = str('https://scholar.google.com/citations?user=xnsDhO4AAAAJ&hl=en&oe=ASCII&oi=sra')
+    sjarvis = str('https://scholar.google.com/citations?user=2agHNksAAAAJ&hl=en&oi=sra')
+
 
     from bs4 import BeautifulSoup
     from crawl import collect_pubs

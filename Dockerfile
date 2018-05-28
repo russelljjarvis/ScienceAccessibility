@@ -43,23 +43,6 @@ RUN sudo apt-get install -y software-properties-common
 # https://stackoverflow.com/questions/39451134/installing-phantomjs-with-node-in-docker
 ##
 
-##
-# Only firefox is used, delete chrome driver to save space.
-##
-# RUN wget https://chromedriver.storage.googleapis.com/2.31/chromedriver_linux64.zip
-# RUN unzip chromedriver_linux64.zip
-# RUN sudo chown -R jovyan ~/
-# install google chrome
-# RUN sudo apt-get -y update
-# RUN sudo apt-get install -yqq unzip libxss1 libappindicator1 libindicator7 gconf-service libasound2 \
-# libgconf-2-4 libnspr4 libnss3 libpango1.0-0 libxtst6 fonts-liberation xdg-utils
-# RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-# RUN sudo dpkg -i google-chrome*.deb
-# install chromedriver
-# RUN wget -O /tmp/chromedriver.zip http://chromedriver.storage.googleapis.com/`curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE`/chromedriver_linux64.zip
-# RUN sudo unzip /tmp/chromedriver.zip chromedriver -d /usr/local/bin/
-
-
 # install xvfb
 RUN sudo apt-get install -yqq xvfb
 

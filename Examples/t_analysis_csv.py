@@ -30,7 +30,6 @@ import pickle
 
 #text analysis imports
 
-import lzma
 from nltk.tag.perceptron import PerceptronTagger
 tagger = PerceptronTagger(load=False)
 
@@ -52,20 +51,20 @@ import pandas as pd
 import pycld2 as cld2
 import pickle
 import os
-import base64
+import lzma
 
-import zlib
+import base64
+#import zlib
 
 
 # params are defined in a seperate file, as they are prone to changing,
 # yet, different programs draw on them, better to have to only change them in one
 # place not three.
-import os
+
 from utils_and_paramaters import search_params, engine_dict_list
 SEARCHLIST, WEB, LINKSTOGET = search_params()
 se, _ = engine_dict_list()
 
-import lzma
 def lzma_compression_ratio(test_string):
     c = lzma.LZMACompressor()
     bytes_in = bytes(test_string,'utf-8')

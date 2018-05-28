@@ -1,6 +1,4 @@
 
-
-
 ## A lot of this code is informed by this multi-threading of web-grabbing example:
 # https://github.com/NikolaiT/GoogleScraper/blob/master/Examples/image_search.py
 # Probably the parallel architecture sucks, probably dask.bag mapping would be more readable and efficient.
@@ -21,9 +19,6 @@ display.start()
 driver = webdriver.Firefox()
 from fake_useragent import UserAgent
 ua = UserAgent()
-
-
-import scrapy
 
 
 import pandas as pd

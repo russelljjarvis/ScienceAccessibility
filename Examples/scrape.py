@@ -8,8 +8,6 @@
 
 # for some reason the docker build does not properly install the fake user_agent, oh well do it again here
 # NB move this to the Docker container
-# import os
-# os.system('sudo /opt/conda/bin/pip install fake_useragent')
 
 import selenium
 from pyvirtualdisplay import Display
@@ -106,4 +104,7 @@ def scrapelandtext(fi):
         print(e)
     return path_link_map
 
+# Use this variable to later reconcile file names with urls
+# As there was no, quick and dirty way to bind the two togethor here, without complicating things later.
 path_link_maps = list(map(scrapelandtext,flat_iter))
+with open('path_link_maps.p','wb') as f: pickle.dump(path_link_maps,f)

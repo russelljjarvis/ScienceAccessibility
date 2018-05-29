@@ -144,3 +144,4 @@ def compute_authors(author_results):
                     author_results[author][str(r)] = urlDat
         print(author_results)
     return author_results
+'''

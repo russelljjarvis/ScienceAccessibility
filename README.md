@@ -27,7 +27,7 @@ and or the jupyter notebook: vstrl.ipynb which plots analysis based on scrapped 
 Note: a lot of complexity in the code base comes from the need to masquerade as a non bot web surfer.
 It's a bad idea to surf naked ie to only use: `urllib`, or `requests`, as these resource grabbers are sure fire bot give aways.
 `Selenium`, `Google Scrape` (uses Selenium), and `delver Crawler`, are the surfing clothes I used; they work together to prolong a period feigned humanhood.
-The downloading of pdf's as opposed to html usually occurs in the nude, but this does not seem to cause any problems. 
+The downloading of pdf's as opposed to html usually occurs in the nude, but this does not seem to cause any problems.
 
-Search Engine: 'who are you?' code: 'I am an honest human centric browser, and certainly note a nude surfing robot'. Search Engine: 'good, here are some pages'.
-Time elapses and the deception is revealed just like in 'the Emperors New Clothes'.
+Search Engine: 'who are you?' code: 'I am an honest human centric browser, and certainly note a robot surfing in the nude'. Search Engine: 'good, here are some pages'.
+Time elapses and the truth is revealed just like in 'the Emperors New Clothes'.

@@ -98,6 +98,7 @@ RUN sudo /opt/conda/bin/pip install -U git+https://github.com/nuncjo/Delver
 ADD . SComplexity
 RUN sudo chown -R jovyan SComplexity
 RUN sudo /opt/conda/bin/pip install -e SComplexity
+RUN python -c "import SComplexity"
 RUN python -c "import bs4"
 RUN python -c "import delver"
 

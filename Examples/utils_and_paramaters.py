@@ -5,6 +5,25 @@
 # rjjarvis@asu.edu
 import pycld2 as cld2
 import lzma
+from crawl import html_to_txt, convert_pdf_to_txt
+import os
+def convert_to_text(fileName):
+    b = os.path.getsize(fileName)
+    urlDat = {}
+    if b>250: # this is just to prevent reading in of incomplete data.
+        try:
+            file = open(fileName)
+            if str('.html') in fileName:
+                text = html_to_txt(file)
+            else:
+                text = convert_pdf_to_txt(file)
+            #file.close()
+            urlDat = {'link':fileName}
+            urlDat = text_proc(text,urlDat)
+            print(urlDat)
+        except:
+            pass
+    return urlDat
 
 
 def comp_ratio(test_string):
@@ -51,11 +70,19 @@ def search_known_corpus():
     LINKSTOGET= 10 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
     return SEARCHLIST, WEB, LINKSTOGET
 
+def print_best_text(fileName):
+    file = open(fileName)
+    if str('.html') in fileName:
+        text = html_to_txt(file)
+    else:
+        text = convert_pdf_to_txt(file)
+    file.close()
+    return text
 
 
 def science_string(check_with):
-
-    checks=[str("Abstract"),str("Methods"),str("Results"),str("Conclusion")]
+    # check_with should be lower cse now
+    checks=[str("abstract"),str("methods"),str("results")]
     assume_false = False
     for check in checks:
         if check in check_with:

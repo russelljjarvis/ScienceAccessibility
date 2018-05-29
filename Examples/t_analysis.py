@@ -51,7 +51,7 @@ import os
 # yet, different programs draw on them, better to have to only change them in one
 # place not three.
 # Local imports
-from utils_and_paramaters import black_string, english_check, comp_ratio
+from utils_and_paramaters import black_string, english_check, comp_ratio, science_string
 
 DEBUG = False
 
@@ -62,14 +62,20 @@ def text_proc(corpus,urlDat, WORD_LIM = 4000):
     textNum = re.findall(r'\d', corpus) #locate numbers that nltk cannot see to analyze
     tokens = word_tokenize(corpus)
     tokens = [w.lower() for w in tokens] #make everything lower case
-
+    # the kind of change that might break everything
+    sc = ''
+    for t in tokens:
+         sc += t
     urlDat['wcount'] = textstat.lexicon_count(str(tokens))
     word_lim = bool(urlDat['wcount']  > WORD_LIM)
 
     try:
         urlDat['english'] = english_check(corpus)
+        urlDat['science'] = science_string(sc)
+        sc = None
     except:
         urlDat['english'] = True
+        urlDat['science'] = False
         server_error = bool(not black_string(corpus))
 
     # The post modern essay generator is so obfuscated, that ENGLISH classification fails, and this criteria needs to be relaxed.
@@ -82,7 +88,7 @@ def text_proc(corpus,urlDat, WORD_LIM = 4000):
         # The larger the ratio of unqiue words to repeated words the more colourful the language.
         lexicon = textstat.lexicon_count(corpus, True)
         urlDat['uniqueness'] = len(set(tokens))/float(len(tokens))
-        print(len(set(tokens)),lexicon)
+        urlDat['other_uniqueness'] = lexicon/len(tokens)
         # It's harder to have a good unique ratio in a long document, as 'and', 'the' and 'a', will dominate.
         # big deltas mean redudancy/sparse information/information/density
 

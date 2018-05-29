@@ -5,9 +5,12 @@ import dask.bag as db
 from crawl import html_to_txt, convert_pdf_to_txt
 from t_analysis_csv import text_proc#, metrics
 from natsort import natsorted, ns
+import pprint
+import pickle
 # naturally sort a list of files, as machine sorted is not the desired file list hierarchy.
 lo_query_html = natsorted(glob.glob(str(os.getcwd())+'/*.html'))
 lo_query_pdf = natsorted(glob.glob(str(os.getcwd())+'/*.pdf'))
+
 
 def local_opt(fileName):
     b = os.path.getsize(fileName)
@@ -34,6 +37,14 @@ grid1 = db.from_sequence(lo_query_pdf)
 urlDats = list(db.map(local_opt,grid0).compute())
 urlDats.extend(list(db.map(local_opt,grid1).compute()))
 
+
+try:
+    assert os.path.isfile('benchmarks.p')
+    benchmarks = pickle.load(open('benchmarks.p','rb'))
+    for b in benchmarks:
+        urlDats.append(b)
+except:
+    pass
 urlDats2 = list(filter(lambda url: len(list(url.keys()))>3, urlDats))
 
 urlDats0 = list(filter(lambda url: str('penalty') in url.keys(), urlDats2))
@@ -57,7 +68,6 @@ def print_best_text(fileName):
 text0 = print_best_text(winners[0]['link'])
 text1 = print_best_text(winners[1]['link'])
 
-import pprint
 pp = pprint.PrettyPrinter(indent=4)
 pp.pprint(winners[0])
 pp.pprint(text0)

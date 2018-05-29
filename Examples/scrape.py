@@ -31,33 +31,45 @@ driver = webdriver.Firefox(firefox_profile=profile)
 
 import pickle
 from GoogleScraper import scrape_with_config, GoogleSearchError
-from utils_and_paramaters import search_params, engine_dict_list
+from utils_and_paramaters import search_params, engine_dict_list, search_known_corpus
 from numpy import random
 import pickle
 import os
-
+from itertools import repeat
 from delver import Crawler
 c = Crawler()
 
+COMPETITION = True
+if COMPETITION:
+    SEARCHLIST, WEB, LINKSTOGET = search_known_corpus()
+    se, _ = engine_dict_list()
+    flat_iter = [ category for category in SEARCHLIST ]
+    # traverse this list randomly as hierarchial traversal may be a bot give away.
+    random.shuffle(flat_iter)
+    flat_iter = [(4,f) for f in flat_iter ]
 
-SEARCHLIST, WEB, LINKSTOGET = search_params()
-se, _ = engine_dict_list()
-print(se)
-flat_iter = [ (b,category) for category in SEARCHLIST for b in range(0,4) ]
-# traverse this list randomly as hierarchial traversal may be a bot give away.
-random.shuffle(flat_iter)
+else:
+    SEARCHLIST, WEB, LINKSTOGET = search_params()
+    se, _ = engine_dict_list()
+    print(se)
+    flat_iter = [ (b,category) for category in SEARCHLIST for b in range(0,4) ]
+    # traverse this list randomly as hierarchial traversal may be a bot give away.
+    random.shuffle(flat_iter)
 
 import pickle
 def scrapelandtext(fi):
     b,category = fi
     config = {}
-    if b==4: # google scholar is not supported by google scraper
+    if b == 4: # google scholar is not supported by google scraper
              # duckduckgo bang expansion can be used as to access engines that GS does not support.
              # for example twitter etc
         config['keyword'] = str('!scholar ')+str(category)
+        print(config['keyword'])
+        config['search_engine'] = str('duckduckgo')
+        print(config['search_engine'])
     else:
         config['keyword'] = str(category)
-    config['search_engine'] = str(se[b])
+        config['search_engine'] = str(se[b])
     config['scrape_method'] = str('selenium')
     config['num_pages_for_keyword'] = 10
     config['use_own_ip'] = True
@@ -84,7 +96,6 @@ def scrapelandtext(fi):
                 # Bulk download wht is scrapped by GS.
                 if str('pdf') in link:
                     local_file_path = c.download(local_path=os.getcwd(),url=link,name=str(category)+str(se[b])+str(index)+str('.pdf'))
-                    print('hit',local_file_path)
                 else:
                     local_file_path = c.download(local_path=os.getcwd(),url=link,name=str(category)+str(se[b])+str(index)+str('.html'))
                 #config['snippets']

@@ -60,7 +60,7 @@ RUN sudo tar -xvzf geckodriver-v0.18.0-linux64.tar.gz
 # RUN tar -xvzf geckodriver*
 # RUN chmod +x geckodriver
 
-RUN sudo chown -R $NB_USER $HOME
+RUN sudo chown -R jovyan $HOME
 
 ## Geckodriver
 RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.16.1/geckodriver-v0.16.1-linux64.tar.gz
@@ -83,11 +83,22 @@ RUN sudo /opt/conda/bin/pip install git+https://github.com/pdfminer/pdfminer.six
 RUN sudo /opt/conda/bin/pip install git+https://github.com/russelljjarvis/GoogleScraper.git
 WORKDIR $HOME
 RUN python -c "import nltk; nltk.download('punkt'); nltk.download('averaged_perceptron_tagger')"
-RUN sudo chown -R $NB_USER $HOME
+RUN sudo chown -R jovyan $HOME
 
 WORKDIR $HOME
 # Probably the reason doing this here is ineffective, is just a execution path problem.
 # If this doesn't work maybe do it post hoc in an interactive shell.
 # RUN python -c "import nltk; nltk.download('punkt'); nltk.download('averaged_perceptron_tagger')"
-ADD run_post_docker_build.sh .
-ENTRYPOINT /bin/bash run_post_docker_build.sh && /bin/bash
+# ADD run_post_docker_build.sh .
+
+RUN sudo /opt/conda/bin/pip install -U natsort 
+RUN sudo /opt/conda/bin/pip install -U pycld2
+RUN sudo /opt/conda/bin/pip install -U beautifulsoup4
+RUN sudo /opt/conda/bin/pip install -U git+https://github.com/nuncjo/Delver
+ADD . SComplexity
+RUN sudo chown -R jovyan SComplexity
+RUN sudo /opt/conda/bin/pip install -e SComplexity
+RUN python -c "import bs4"
+RUN python -c "import delver"
+
+ENTRYPOINT /bin/bash

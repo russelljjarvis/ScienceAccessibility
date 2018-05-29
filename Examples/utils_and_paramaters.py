@@ -3,11 +3,27 @@
 # Russell Jarvis
 # https://github.com/russelljjarvis/
 # rjjarvis@asu.edu
+import pycld2 as cld2
+import lzma
 
 
+def comp_ratio(test_string):
+    c = lzma.LZMACompressor()
+    bytes_in = bytes(test_string,'utf-8')
+    bytes_out = c.compress(bytes_in)
+    return len(bytes_out)/len(bytes_in)
+
+def english_check(corpus):
+
+    # It's not that we are cultural imperialists, but the people at textstat, and nltk may have been,
+    # so we are also forced into this tacit agreement.
+    # Japanese characters massively distort information theory estimates, as they are potentially very concise.
+    _, _, details = cld2.detect(' '.join(corpus), bestEffort=True)
+    detectedLangName, _ = details[0][:2]
+    return bool(detectedLangName == 'ENGLISH')
 
 def engine_dict_list():
-    se = {0:"google",1:"yahoo",2:"duckduckgo",3:"ask",4:"scholar",5:"bing"}
+    se = {0:"google",1:"yahoo",2:"duckduckgo",3:"wikipedia",4:"scholar",5:"bing"}
     return se, list(se.values())
 
 def search_params():
@@ -16,6 +32,26 @@ def search_params():
     WEB = len(ses) #how many search engines to include (many possible- google google scholar bing yahoo)
     LINKSTOGET= 10 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
     return SEARCHLIST, WEB, LINKSTOGET
+
+def search_known_corpus():
+    SEARCHLIST = []
+    LINKSTOGET = []
+    SEARCHLIST = [str('rcgerkin'),str('smcrook'), str('s jarvis optogenetics'), str('Patrick mcgurrin ASU')]
+
+    LINKSTOGET.append(str('https://academic.oup.com/beheco/article-abstract/29/1/264/4677340'))
+    LINKSTOGET.append(str('http://splasho.com/upgoer5/library.php'))
+    LINKSTOGET.append(str('https://elifesciences.org/download/aHR0cHM6Ly9jZG4uZWxpZmVzY2llbmNlcy5vcmcvYXJ0aWNsZXMvMjc3MjUvZWxpZmUtMjc3MjUtdjIucGRm/elife-27725-v2.pdf?_hash=WA%2Fey48HnQ4FpVd6bc0xCTZPXjE5ralhFP2TaMBMp1c%3D'))
+    LINKSTOGET.append(str('https://scholar.google.com/scholar?hl=en&as_sdt=0%2C3&q=Patrick+mcgurrin+ASU&btnG='))
+    LINKSTOGET.append(str('https://scholar.google.com/citations?user=GzG5kRAAAAAJ&hl=en&oi=sra'))
+    LINKSTOGET.append(str('https://scholar.google.com/citations?user=xnsDhO4AAAAJ&hl=en&oe=ASCII&oi=sra'))
+    LINKSTOGET.append(str('https://scholar.google.com/citations?user=2agHNksAAAAJ&hl=en&oi=sra'))
+    #_, ses = engine_dict_list()
+    WEB = 1
+    #WEB = len(ses) #how many search engines to include (many possible- google google scholar bing yahoo)
+    LINKSTOGET= 10 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
+    return SEARCHLIST, WEB, LINKSTOGET
+
+
 
 def black_string(check_with):
     #print(check_with)
@@ -46,13 +82,14 @@ def black_string(check_with):
         return True
     return False
 
-
+'''
+depreciated
 def purge(fi,filter_string=''):
-    '''
+
     If filter string is not defined, the method will probably delete all data.
     Delete caches if suspect that full of rubbish
     This will create a lot of non fatal errors, since I was too lazy to write this function properly
-    '''
+
     import os
     b,category = fi
     categoryquery = category.replace(' ',"+")
@@ -67,11 +104,11 @@ def purge(fi,filter_string=''):
         os.chdir(path)
 
 def mkdirs(fi,filter_string=''):
-    '''
+
     If filter string is not defined, the method will probably delete all data.
     Delete caches if suspect that full of rubbish
     This will create a lot of non fatal errors, since I was too lazy to write this function properly
-    '''
+
     import os
     b,category = fi
     categoryquery = category.replace(' ',"+")
@@ -81,3 +118,4 @@ def mkdirs(fi,filter_string=''):
         pass
     else:
         os.makedirs(path)
+'''

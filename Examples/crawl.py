@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 from natsort import natsorted, ns
 import glob
 import requests
-
+import os
 
 import selenium
 from pyvirtualdisplay import Display
@@ -56,7 +56,8 @@ device = TextConverter(rsrcmgr, retstr, codec = codec, laparams = laparams)
 interpreter = PDFPageInterpreter(rsrcmgr, device)
 
 
-
+'''
+Depricated
 def pre_crawl(flat_iter):
     p, fileName, file_contents, index = flat_iter
     urlDat = {}
@@ -66,7 +67,7 @@ def pre_crawl(flat_iter):
     english = bool(detectedLangName == 'ENGLISH')
     if server_status and english:
         return file_contents
-
+'''
 
 def convert_pdf_to_txt(r):
     pdf = io.BytesIO(r.content)

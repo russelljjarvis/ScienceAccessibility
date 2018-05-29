@@ -7,11 +7,6 @@
 # patrick.mcgurrin@gmail.com
 
 
-##
-# Probably 75% of the metrics computed here are not utilized, as the customers did not know what they wanted.
-# The analysis tries to be everything for everyone, and this can and should change for the better.
-##
-
 #general python imports
 import os
 #import dask
@@ -45,32 +40,18 @@ from nltk import compat
 #import json
 from textstat.textstat import textstat
 
-#from natsort import natsorted, ns
-
-import pandas as pd
-import pycld2 as cld2
-import pickle
-import os
-import lzma
 
 import base64
-#import zlib
+import pandas as pd
+import pickle
+import os
 
 
 # params are defined in a seperate file, as they are prone to changing,
 # yet, different programs draw on them, better to have to only change them in one
 # place not three.
-
-from utils_and_paramaters import search_params, engine_dict_list
-SEARCHLIST, WEB, LINKSTOGET = search_params()
-se, _ = engine_dict_list()
-
-def lzma_compression_ratio(test_string):
-    c = lzma.LZMACompressor()
-    bytes_in = bytes(test_string,'utf-8')
-    bytes_out = c.compress(bytes_in)
-    return len(bytes_out)/len(bytes_in)
-
+# Local imports
+from utils_and_paramaters import black_string, english_check, comp_ratio
 
 DEBUG = False
 
@@ -85,74 +66,44 @@ def text_proc(corpus,urlDat, WORD_LIM = 4000):
     urlDat['wcount'] = textstat.lexicon_count(str(tokens))
     word_lim = bool(urlDat['wcount']  > WORD_LIM)
 
-    try:
-        # It's not that we are cultural imperialists, but the people at textstat, and nltk may have been,
-        # so we are also forced into this tacit agreement.
-        # Japanese characters massively distort information theory estimates, as they are potentially very concise.
- 
-        _, _, details = cld2.detect(' '.join(corpus), bestEffort=True)
-        detectedLangName, _ = details[0][:2]
-        urlDat['english'] = bool(detectedLangName == 'ENGLISH')
-    except:
-        urlDat['english'] = True
-
-    if len(tokens) != 0 and urlDat['english'] and word_lim:
+    #try:
+    #    urlDat['english'] = english_check(corpus)
+    #except:
+    #    urlDat['english'] = True
+    #    server_error = bool(not black_string(corpus))
+    urlDat['english'] = True
+    if len(tokens) != 0 and urlDat['english'] and word_lim: #  and server_error:
 
         ##frequency distribtuion of text
         tokens = [ w.lower() for w in tokens if w.isalpha() ]
         fdist = FreqDist(tokens) #frequency distribution of words only
+        # The larger the ratio of unqiue words to repeated words the more colourful the language.
+        lexicon = textstat.lexicon_count(corpus, True)
         urlDat['uniqueness'] = len(set(tokens))/float(len(tokens))
-        compression_ratio = lzma_compression_ratio(corpus)
+        print(len(set(tokens)),lexicon)
+        # It's harder to have a good unique ratio in a long document, as 'and', 'the' and 'a', will dominate.
         # big deltas mean redudancy/sparse information/information/density
 
         # long file lengths lead to big deltas.
-        urlDat['info_density'] = compression_ratio
+        urlDat['info_density'] =  comp_ratio(corpus)
         scaled_density = urlDat['info_density']/urlDat['wcount']
         urlDat['scaled_info_density'] = scaled_density
-        #urlDat['info_density_explanation'] = 'the smaller the more redundancy exploited by compression'
-        # cast dict to list
-        fd_temp = list(fdist.items())
 
-        #frequency of all words
-        fAll = {}
-        for x in range(0,len(fd_temp)):
-            fAll[x,1], fAll[x,2] = [y.strip('}()",{:') for y in (str(fd_temp[x])).split(',')]
-        #
-        urlDat['frequencies'] = sorted([ (f[1],f[0]) for f in fd_temp ],reverse=True)
-        number_of_words = sum([ f[0] for f in urlDat['frequencies'] ])
 
-        probs = [float(c[0]) / number_of_words for c in urlDat['frequencies'] ]
-        probs = [p for p in probs if p > 0.]
-        ent = 0
-        for p in probs:
-            if p > 0.:
-                ent -= p * math.log(p, 2)
-        urlDat['eofh'] = ent
-
-        #frequency of the most used n number of words
-        frexMost = fdist.most_common(15) #show N most common words
-        urlDat['frexMost'] = frexMost
-        fM = {}
-        for x in range(0,len(frexMost)) :
-            fM[x,1], fM[x,2] = [y.strip('}()",{:') for y in (str(frexMost[x])).split(',')]
-        if DEBUG == False:
-            # These clutter readouts.
-            urlDat['frexMost'] = None
-            urlDat['frequencies'] = None
         #Sentiment and Subjectivity analysis
         testimonial = TextBlob(corpus)
         urlDat['sp'] = testimonial.sentiment.polarity
         urlDat['ss'] = testimonial.sentiment.subjectivity
         # explanation of metrics
         # https://github.com/shivam5992/textstat
-        urlDat['fkg']  = textstat.flesch_kincaid_grade(corpus)
-        # Mostly not used:
-        # need more clarity about what to plot:
-        urlDat['fre'] = textstat.flesch_reading_ease(corpus)
-        urlDat['smog']  = textstat.smog_index(corpus)
-        urlDat['cliau']  = textstat.coleman_liau_index(corpus)
+
+        standard_  = textstat.text_standard(corpus)
+        try:
+            urlDat['standard']  = float(standard_[0:2])
+        except:
+            urlDat['standard']  = float(standard_[0:1])
+
         urlDat['gf'] = textstat.gunning_fog(corpus)
-        urlDat['standard']  = textstat.text_standard(corpus)
 
         # Good writing should be readable, objective, concise.
         # The writing should be articulate/expressive enough not to have to repeat phrases,
@@ -161,7 +112,7 @@ def text_proc(corpus,urlDat, WORD_LIM = 4000):
         # Good writing should not be obfucstated either. The reading level is a check for obfucstation.
         # The resulting metric is a balance of concision, low obfucstation, expression.
 
-        penalty = urlDat['gf'] + abs(urlDat['sp']) - scaled_density - urlDat['uniqueness']
+        penalty = urlDat['standard'] + urlDat['gf'] * (scaled_density) + urlDat['gf'] * (urlDat['uniqueness']) + abs(urlDat['sp'])
         urlDat['penalty'] = penalty
     return urlDat
 
@@ -181,6 +132,10 @@ def process_dics(urlDats):
     return dfs
 
 '''
+from utils_and_paramaters import search_params, engine_dict_list
+SEARCHLIST, WEB, LINKSTOGET = search_params()
+se, _ = engine_dict_list()
+
 Probably depreciated
 def web_iter(flat_iter):
     p, fileName, file_contents, index = flat_iter

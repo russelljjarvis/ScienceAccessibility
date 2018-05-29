@@ -99,6 +99,7 @@ ADD . SComplexity
 RUN sudo chown -R jovyan SComplexity
 RUN sudo /opt/conda/bin/pip install -e SComplexity
 RUN python -c "import SComplexity"
+RUN python -c "from SComplexity import t_analysis, utils_and_paramaters"
 RUN python -c "import bs4"
 RUN python -c "import delver"
 

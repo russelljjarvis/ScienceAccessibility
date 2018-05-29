@@ -37,7 +37,7 @@ grid1 = db.from_sequence(lo_query_pdf)
 urlDats = list(db.map(local_opt,grid0).compute())
 urlDats.extend(list(db.map(local_opt,grid1).compute()))
 
-
+'''
 try:
     assert os.path.isfile('benchmarks.p')
     benchmarks = pickle.load(open('benchmarks.p','rb'))
@@ -45,6 +45,7 @@ try:
         urlDats.append(b)
 except:
     pass
+'''
 urlDats2 = list(filter(lambda url: len(list(url.keys()))>3, urlDats))
 
 urlDats0 = list(filter(lambda url: str('penalty') in url.keys(), urlDats2))
@@ -67,6 +68,7 @@ def print_best_text(fileName):
 #pdb.set_trace()
 text0 = print_best_text(winners[0]['link'])
 text1 = print_best_text(winners[1]['link'])
+
 
 pp = pprint.PrettyPrinter(indent=4)
 pp.pprint(winners[0])

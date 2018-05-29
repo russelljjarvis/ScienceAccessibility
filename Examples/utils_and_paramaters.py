@@ -36,7 +36,7 @@ def search_params():
 def search_known_corpus():
     SEARCHLIST = []
     LINKSTOGET = []
-    SEARCHLIST = [str('rcgerkin'),str('smcrook'), str('s jarvis optogenetics'), str('Patrick mcgurrin ASU')]
+    SEARCHLIST = [str('rcgerkin'),str('smcrook'), str('s jarvis optogenetics'), str('Patrick mcgurrin ASU'), str('Melanie jarvis neonate')]
 
     LINKSTOGET.append(str('https://academic.oup.com/beheco/article-abstract/29/1/264/4677340'))
     LINKSTOGET.append(str('http://splasho.com/upgoer5/library.php'))
@@ -52,6 +52,17 @@ def search_known_corpus():
     return SEARCHLIST, WEB, LINKSTOGET
 
 
+
+def science_string(check_with):
+
+    checks=[str("Abstract"),str("Methods"),str("Results"),str("Conclusion")]
+    assume_false = False
+    for check in checks:
+        if check in check_with:
+            assume_false = True
+        else:
+            return False
+    return assume_false
 
 def black_string(check_with):
     #print(check_with)
@@ -118,4 +129,18 @@ def mkdirs(fi,filter_string=''):
         pass
     else:
         os.makedirs(path)
-'''
+
+def compute_authors(author_results):
+    for author,links in authors.items():
+        for r in links:
+            fr = FetchResource(r)
+            corpus = fr.run()
+            if corpus is not None and not black_string(corpus):
+                urlDat = {'link':r}
+                urlDat = text_proc(corpus,urlDat,WORD_LIM = 100)
+                if str(r) not in author_results.keys():
+                    author_results[author][str(r)] = urlDat
+                else:
+                    author_results[author][str(r)] = urlDat
+        print(author_results)
+    return author_results

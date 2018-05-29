@@ -3,7 +3,7 @@
 
 from distutils.core import setup
 
-setup(name='scomplexity',
+setup(name='SComplexity',
       version='1.0',
       description='heavily applied scrapping, crawling and language analysis, tightly coupled with the goal of analysing scientific discourse',
       author='various',

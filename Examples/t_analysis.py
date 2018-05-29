@@ -55,7 +55,7 @@ from utils_and_paramaters import black_string, english_check, comp_ratio
 
 DEBUG = False
 
-
+# word limit smaller than 4000 gets product/merchandise sites.
 def text_proc(corpus,urlDat, WORD_LIM = 4000):
     #remove unreadable characters
     corpus = corpus.replace("-", " ") #remove characters that nltk can't read
@@ -66,12 +66,14 @@ def text_proc(corpus,urlDat, WORD_LIM = 4000):
     urlDat['wcount'] = textstat.lexicon_count(str(tokens))
     word_lim = bool(urlDat['wcount']  > WORD_LIM)
 
-    #try:
-    #    urlDat['english'] = english_check(corpus)
-    #except:
-    #    urlDat['english'] = True
-    #    server_error = bool(not black_string(corpus))
-    urlDat['english'] = True
+    try:
+        urlDat['english'] = english_check(corpus)
+    except:
+        urlDat['english'] = True
+        server_error = bool(not black_string(corpus))
+
+    # The post modern essay generator is so obfuscated, that ENGLISH classification fails, and this criteria needs to be relaxed.
+
     if len(tokens) != 0 and urlDat['english'] and word_lim: #  and server_error:
 
         ##frequency distribtuion of text
@@ -104,15 +106,14 @@ def text_proc(corpus,urlDat, WORD_LIM = 4000):
             urlDat['standard']  = float(standard_[0:1])
 
         urlDat['gf'] = textstat.gunning_fog(corpus)
-
+        # special sauce
         # Good writing should be readable, objective, concise.
         # The writing should be articulate/expressive enough not to have to repeat phrases,
         # thereby seeming redundant. Articulate expressive writing then employs
         # many unique words, and does not yield high compression savings.
         # Good writing should not be obfucstated either. The reading level is a check for obfucstation.
         # The resulting metric is a balance of concision, low obfucstation, expression.
-
-        penalty = urlDat['standard'] + urlDat['gf'] * (scaled_density) + urlDat['gf'] * (urlDat['uniqueness']) + abs(urlDat['sp'])
+        penalty = urlDat['standard'] - scaled_density - urlDat['uniqueness'] + abs(urlDat['sp'])
         urlDat['penalty'] = penalty
     return urlDat
 

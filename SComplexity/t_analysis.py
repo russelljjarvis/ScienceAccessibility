@@ -78,6 +78,15 @@ def text_proc(corpus,urlDat, WORD_LIM = 4000):
         urlDat['science'] = False
         server_error = bool(not black_string(corpus))
 
+    if str('keyword') in urldDat.keys():   
+        if str('!gs') in urlDat['keyword']:
+            urlDat['se'] = 'g_scholar'
+        elif str('!wiki') in urlDat['keyword']:
+            urlDat['se'] = 'wiki'
+        elif str('!twitter') in urlDat['keyword']:
+            urlDat['se'] = 'twitter'
+    
+
     # The post modern essay generator is so obfuscated, that ENGLISH classification fails, and this criteria needs to be relaxed.
 
     if len(tokens) != 0 and urlDat['english'] and word_lim: #  and server_error:
@@ -94,7 +103,7 @@ def text_proc(corpus,urlDat, WORD_LIM = 4000):
 
         # long file lengths lead to big deltas.
         urlDat['info_density'] =  comp_ratio(corpus)
-        scaled_density = urlDat['info_density']/urlDat['wcount']
+        scaled_density = urlDat['info_density'] * 1/float(urlDat['wcount'])
         urlDat['scaled_info_density'] = scaled_density
 
 
@@ -118,7 +127,7 @@ def text_proc(corpus,urlDat, WORD_LIM = 4000):
         # thereby seeming redundant. Articulate expressive writing then employs
         # many unique words, and does not yield high compression savings.
         # Good writing should not be obfucstated either. The reading level is a check for obfucstation.
-        # The resulting metric is a balance of concision, low obfucstation, expression.
+        # The resulting metric is a balance conflicted priotities of concision, low obfucstation, expression.
         penalty = urlDat['standard'] - scaled_density - urlDat['uniqueness'] + abs(urlDat['sp'])
         urlDat['penalty'] = penalty
     return urlDat
@@ -165,12 +174,6 @@ def web_iter(flat_iter):
         urlDat['link'] = file_contents.iloc[index]['link']
         urlDat['keyword'] = file_contents.iloc[index]['query']
 
-        if str('!gs') in urlDat['keyword']:
-            urlDat['se'] = 'g_scholar'
-        elif str('!yahoo') in urlDat['keyword']:
-            urlDat['se'] = 'yahoo'
-        elif str('!twitter') in urlDat['keyword']:
-            urlDat['se'] = 'twitter'
 
         else:
             urlDat['se'] = file_contents.iloc[index]['search_engine_name']

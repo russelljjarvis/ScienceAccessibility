@@ -2,11 +2,13 @@
 import glob
 import os
 import dask.bag as db
-from crawl import html_to_txt, convert_pdf_to_txt
-from t_analysis_csv import text_proc#, metrics
 from natsort import natsorted, ns
 import pprint
 import pickle
+
+from SComplexity.crawl import html_to_txt, convert_pdf_to_txt
+from SComplexity.t_analysis import text_proc#, metrics
+
 # naturally sort a list of files, as machine sorted is not the desired file list hierarchy.
 lo_query_html = natsorted(glob.glob(str(os.getcwd())+'/*.html'))
 lo_query_pdf = natsorted(glob.glob(str(os.getcwd())+'/*.pdf'))

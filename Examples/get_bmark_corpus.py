@@ -19,7 +19,7 @@ simple_science = str('https://www.bnl.gov/newsroom/news.php?a=23678')
 pmeg = str('http://www.elsewhere.org/pomo/') # Note this is so obfuscated, even the english language classifier rejects it.
 
 try:
-    assert 1 != 2
+    assert 1 == 2
     assert os.path.isfile('benchmarks.p')
     with open('benchmarks.p','rb') as f:
         benchmarks = pickle.load(f)
@@ -27,8 +27,6 @@ try:
 
 except:
     # Hardest to read,
-
-
     fr = FetchResource(pmeg)
     pmegr = fr.run()
     with open('pmr.p','wb') as f: pickle.dump(pmegr,f)
@@ -67,7 +65,7 @@ with open('benchmarks.p','wb') as f: pickle.dump(benchmarks,f)
 ranked = [('post modern essay generator',pm),('upgoer5_corpus',xkcd),('the readability of science decr over time', hss), ('science of writing',sow)]
 #winners.append(('simple_science',ss),('sarah_jarvis',sj),('melanie_jarvis',mj),)
 ranked = [ r[1] for r in ranked ]
-winners = sorted(ranked, key=lambda w: w['penalty'])
+winners = sorted(ranked, key=lambda w: w['gf'])
 import pdb; pdb.set_trace()
 
 with open('benchmarks_ranked.p','wb') as f: pickle.dump(winners,f)

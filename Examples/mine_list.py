@@ -2,9 +2,9 @@
 import glob
 import os
 import dask.bag as db
-from crawl import html_to_txt, convert_pdf_to_txt
-#from utils_and_paramaters import convert_to_text
-from t_analysis import text_proc#, metrics
+
+from SComplexity.crawl import html_to_txt, convert_pdf_to_txt
+from SComplexity.t_analysis import text_proc
 from natsort import natsorted, ns
 import pprint
 import pickle
@@ -64,19 +64,20 @@ if TOURNAMENT:
     urlDats.extend(sharon)
     urlDats.extend(rick)
     urlDats.extend(sarah)
+    print(len(urlDats))
 
     urlDats = list(filter(lambda url: len(list(url))>3, urlDats))
     urlDats = list(filter(lambda url: len(list(url.keys()))>3, urlDats))
-    #urlDats = list(filter(lambda url: str('science') in url.keys(), urlDats))
-    #urlDats = list(filter(lambda url: url['science'] == True, urlDats))
     urlDats = list(filter(lambda url: str('penalty') in url.keys(), urlDats))
+    print(len(urlDats))
+
     ranked = sorted(urlDats, key=lambda w: w['penalty'])   # sort by age
     sharon_mean = np.mean([r['penalty'] for r in ranked if 'scrook' in r['link']])
     rick_mean = np.mean([r['penalty'] for r in ranked if 'rcgerkin' in r['link']])
     sarah_mean = np.mean([r['penalty'] for r in ranked if 'jarvis' in r['link']])
 
-    print(rick_mean,sharon_mean,sarah_mean)
-    import pdb
+    #print(rick_mean,sharon_mean,sarah_mean)
+    #import pdb
     pdb.set_trace()
 
 

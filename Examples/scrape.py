@@ -13,6 +13,14 @@ import selenium
 from pyvirtualdisplay import Display
 from selenium import webdriver
 from fake_useragent import UserAgent
+from numpy import random
+import os
+from delver import Crawler
+from GoogleScraper import scrape_with_config, GoogleSearchError
+
+from SComplexity.utils_and_paramaters import search_params, engine_dict_list, search_known_corpus
+
+c = Crawler()
 
 display = Display(visible=0, size=(1024, 768))
 display.start()
@@ -30,13 +38,7 @@ def rotate_profiles():
     return driver
 driver = rotate_profiles()
 
-from GoogleScraper import scrape_with_config, GoogleSearchError
 
-from SComplexity.utils_and_paramaters import search_params, engine_dict_list, search_known_corpus
-from numpy import random
-import os
-from delver import Crawler
-c = Crawler()
 
 COMPETITION = False
 if COMPETITION:

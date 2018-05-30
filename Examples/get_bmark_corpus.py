@@ -5,9 +5,11 @@ import os.path
 import pickle
 import numpy as np
 
-from crawl import FetchResource
-from t_analysis import text_proc
-from utils_and_paramaters import black_string
+#from SComplexity import t_analysis, utils_and_paramaters
+from SComplexity.crawl import FetchResource# html_to_txt, convert_pdf_to_txt
+from SComplexity.t_analysis import text_proc
+
+from SComplexity. utils_and_paramaters import black_string
 
 peter = str('https://academic.oup.com/beheco/article-abstract/29/1/264/4677340')
 xkcd_self_sufficient = str('http://splasho.com/upgoer5/library.php')
@@ -17,42 +19,55 @@ simple_science = str('https://www.bnl.gov/newsroom/news.php?a=23678')
 pmeg = str('http://www.elsewhere.org/pomo/') # Note this is so obfuscated, even the english language classifier rejects it.
 
 try:
-    #assert 1 == 2
+    assert 1 != 2
     assert os.path.isfile('benchmarks.p')
     with open('benchmarks.p','rb') as f:
         benchmarks = pickle.load(f)
-        [ (sj,sjtext),(hss,hsr),(xkcd,xkcdr),(sow,sowr)] = benchmarks
+        [ (pm,pmegr),(hss,hsr),(xkcd,xkcdr),(sow,sowr)] = benchmarks
 
 except:
     # Hardest to read,
+
+
     fr = FetchResource(pmeg)
-    pmr = fr.run()
-    urlDat = {'link':pmeg}
-    pm = text_proc(pmr,urlDat, WORD_LIM = 100)
+    pmegr = fr.run()
+    with open('pmr.p','wb') as f: pickle.dump(pmegr,f)
     # Easiest to read
     fr = FetchResource(xkcd_self_sufficient)
     xkcdr = fr.run()
-    urlDat = {'link':xkcd_self_sufficient}
-    xkcd = text_proc(xkcdr,urlDat, WORD_LIM = 100)
 
     # Propounding a very high standard of scientific communication are they hypocrites?
     fr = FetchResource(the_science_of_writing)
     sowr = fr.run()
-    urlDat = {'link':the_science_of_writing}
-    sow = text_proc(sowr,urlDat, WORD_LIM = 100)
 
     fr = FetchResource(high_standard)
     hsr = fr.run()
-    urlDat = {'link':high_standard}
-    hss = text_proc(hsr,urlDat, WORD_LIM = 100)
 
 
-    benchmarks = [ (pm,pmeg),(hss,hsr),(xkcd,xkcdr),(sow,sowr)]
+urlDat = {'link':xkcd_self_sufficient}
+xkcd = text_proc(xkcdr,urlDat, WORD_LIM = 100)
 
-    with open('benchmarks.p','wb') as f: pickle.dump(benchmarks,f)
+urlDat = {'link':the_science_of_writing}
+sow = text_proc(sowr,urlDat, WORD_LIM = 100)
+
+urlDat = {'link':high_standard}
+hss = text_proc(hsr,urlDat, WORD_LIM = 100)
+
+with open('pmr.p','rb') as f:
+    pmegr = pickle.load(f)
+urlDat = {'link':pmeg}
+pm = text_proc(pmegr,urlDat, WORD_LIM = 100)
+
+#import pdb; pdb.set_trace()
+
+benchmarks = [ (pm,pmegr),(hss,hsr),(xkcd,xkcdr),(sow,sowr)]
+
+with open('benchmarks.p','wb') as f: pickle.dump(benchmarks,f)
 
 ranked = [('post modern essay generator',pm),('upgoer5_corpus',xkcd),('the readability of science decr over time', hss), ('science of writing',sow)]
 #winners.append(('simple_science',ss),('sarah_jarvis',sj),('melanie_jarvis',mj),)
-winners = sorted(ranked, key=lambda w: w[1]['penalty'])
+ranked = [ r[1] for r in ranked ]
+winners = sorted(ranked, key=lambda w: w['penalty'])
+import pdb; pdb.set_trace()
 
 with open('benchmarks_ranked.p','wb') as f: pickle.dump(winners,f)

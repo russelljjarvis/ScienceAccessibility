@@ -77,7 +77,7 @@ def text_proc(corpus,urlDat, WORD_LIM = 4000):
         urlDat['english'] = True
         urlDat['science'] = False
         server_error = bool(not black_string(corpus))
-
+    '''
     if str('keyword') in urldDat.keys():   
         if str('!gs') in urlDat['keyword']:
             urlDat['se'] = 'g_scholar'
@@ -85,7 +85,7 @@ def text_proc(corpus,urlDat, WORD_LIM = 4000):
             urlDat['se'] = 'wiki'
         elif str('!twitter') in urlDat['keyword']:
             urlDat['se'] = 'twitter'
-    
+    '''
 
     # The post modern essay generator is so obfuscated, that ENGLISH classification fails, and this criteria needs to be relaxed.
 

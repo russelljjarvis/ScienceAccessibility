@@ -31,7 +31,8 @@ def rotate_profiles():
 driver = rotate_profiles()
 
 from GoogleScraper import scrape_with_config, GoogleSearchError
-from utils_and_paramaters import search_params, engine_dict_list, search_known_corpus
+
+from SComplexity.utils_and_paramaters import search_params, engine_dict_list, search_known_corpus
 from numpy import random
 import os
 from delver import Crawler

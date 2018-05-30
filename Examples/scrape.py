@@ -4,11 +4,6 @@
 # Russell Jarvis
 # https://github.com/russelljjarvis/
 # rjjarvis@asu.edu
-
-
-# for some reason the docker build does not properly install the fake user_agent, oh well do it again here
-# NB move this to the Docker container
-
 import selenium
 from pyvirtualdisplay import Display
 from selenium import webdriver
@@ -38,7 +33,20 @@ def rotate_profiles():
     return driver
 driver = rotate_profiles()
 
-
+def url_to_file(link_tuple):
+    b,index,link = link_tuple
+    fname = str(category)+str(se[b])+str(index)
+    # Bulk download wht is scrapped by GS.
+    if str('pdf') in link:
+        fname += str('.pdf')
+    if str('html') in link:
+        fname += str('.html')
+    # note it's possible that downloaded link is neither html, nor pdf (ie jpg). Incorrectly assigning extensions to such resources will cause
+    # problems further down the road.
+    local_file_path = c.download(local_path=os.getcwd(),url=link,name=fname)
+    os.path.isfile(local_file_path)
+    path_link_map[str(link)] = local_file_path
+    return path_link_map
 
 COMPETITION = False
 if COMPETITION:
@@ -76,9 +84,9 @@ def scrapelandtext(fi):
     config['sel_browser'] = str('firefox')
     config['do_caching'] = False # bloat warning.
 
+    # Google scrap + selenium implements a lot of human centric browser masquarading tools.    
     # Search Engine: 'who are you?' code: 'I am an honest human centric browser, and certainly note a robot surfing in the nude'. Search Engine: 'good, here are some pages'.
-    # Time elapses and the truth is revealed just like in 'the Emperors New Clothes'.
-
+    # Time elapses and the reality is exposed just like in 'the Emperors New Clothes'.
     # The file crawl.py contains methods for crawling the scrapped links.
     # For this reason, a subsequent action, c.download (crawl download ) is ncessary.
 
@@ -92,22 +100,17 @@ def scrapelandtext(fi):
 		# This code block jumps over fench two
         # The (possibly private, or hosted server as a gatekeeper).
         try:
-            for index, link in enumerate(links):
-                # Bulk download wht is scrapped by GS.
-                if str('pdf') in link:
-                    local_file_path = c.download(local_path=os.getcwd(),url=link,name=str(category)+str(se[b])+str(index)+str('.pdf'))
-                else:
-                    local_file_path = c.download(local_path=os.getcwd(),url=link,name=str(category)+str(se[b])+str(index)+str('.html'))
-                path_link_map[str(link)] = local_file_path
-                os.path.isfile(local_file_path)
+            get_links = [(b,index,link) for index, link in enumerate(links)]
+            plm = list(map(get_links))
         except:
-            pass
+            plm = None
 
     except GoogleSearchError as e:
         print(e)
-    return path_link_map
+    return plm
 
 # Use this variable to later reconcile file names with urls
 # As there was no, quick and dirty way to bind the two togethor here, without complicating things later.
+
 path_link_maps = list(map(scrapelandtext,flat_iter))
 with open('path_link_maps.p','wb') as f: pickle.dump(path_link_maps,f)

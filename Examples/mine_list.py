@@ -68,17 +68,17 @@ if TOURNAMENT:
 
     urlDats = list(filter(lambda url: len(list(url))>3, urlDats))
     urlDats = list(filter(lambda url: len(list(url.keys()))>3, urlDats))
-    urlDats = list(filter(lambda url: str('penalty') in url.keys(), urlDats))
+    urlDats = list(filter(lambda url: str('gf') in url.keys(), urlDats))
     print(len(urlDats))
 
     ranked = sorted(urlDats, key=lambda w: w['penalty'])   # sort by age
-    sharon_mean = np.mean([r['penalty'] for r in ranked if 'scrook' in r['link']])
-    rick_mean = np.mean([r['penalty'] for r in ranked if 'rcgerkin' in r['link']])
-    sarah_mean = np.mean([r['penalty'] for r in ranked if 'jarvis' in r['link']])
+    sharon_mean = np.mean([r['gf'] for r in ranked if 'scrook' in r['link']])
+    rick_mean = np.mean([r['gf'] for r in ranked if 'rcgerkin' in r['link']])
+    sarah_mean = np.mean([r['gf'] for r in ranked if 'jarvis' in r['link']])
 
     #print(rick_mean,sharon_mean,sarah_mean)
     #import pdb
-    pdb.set_trace()
+    #pdb.set_trace()
 
 
 else:
@@ -111,12 +111,8 @@ else:
     pp.pprint(winners[1])
     pp.pprint(text1)
 
+frames = False
+if frames ==True: unravel = process_dics(urlDats) else: unravel = urlDats
+with open('winners.p','wb') as handle:
+    pickle.dump(winners,handle)
 
-    frames = False
-    if frames ==True:
-        unravel = process_dics(urlDats)
-    else:
-        unravel = urlDats
-    #import pickle
-    with open('winners.p','wb') as handle:
-        pickle.dump(winners,handle)

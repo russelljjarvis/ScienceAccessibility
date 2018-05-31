@@ -53,9 +53,10 @@ def url_to_file(link_tuple):
     return plm
 
 COMPETITION = False
+se, _ = engine_dict_list()
+
 if COMPETITION:
     SEARCHLIST, WEB, LINKSTOGET = search_known_corpus()
-    se, _ = engine_dict_list()
     flat_iter = [ category for category in SEARCHLIST ]
     # traverse this list randomly as hierarchial traversal may be a bot give away.
     random.shuffle(flat_iter)
@@ -63,7 +64,6 @@ if COMPETITION:
 
 else:
     SEARCHLIST, WEB, LINKSTOGET = search_params()
-    se, _ = engine_dict_list()
     flat_iter = [ (b,category) for category in SEARCHLIST for b in range(0,4) ]
     # traverse this list randomly as hierarchial traversal may be a bot give away.
     random.shuffle(flat_iter)
@@ -71,8 +71,10 @@ else:
 
 def scrapelandtext(fi):
     b,category = fi
+    se_ = se[b]
+
     config = {}
-    driver = rotate_profiles()
+    # driver = rotate_profiles()
 	# This code block, jumps over fence one (the search engine as a gatekeeper)
     # google scholar or wikipedia is not supported by google scraper
     # duckduckgo bang expansion can be used as to access engines that GS does not support.
@@ -81,8 +83,7 @@ def scrapelandtext(fi):
     config['keyword'] = str(category)
     if b==4: config['keyword'] = '!scholar {0}'.format(category)
     if b==3: config['keyword'] = '!wiki {0}'.format(category)
-    se = se[b]
-    config['search_engine'] = str(se)
+    config['search_engine'] = str(se_)
     config['scrape_method'] = 'selenium'
     config['num_pages_for_keyword'] = 10
     config['use_own_ip'] = True
@@ -108,7 +109,7 @@ def scrapelandtext(fi):
 		# This code block jumps over fench two
         # The (possibly private, or hosted server as a gatekeeper).
         try:
-            get_links = [(se,index,link,category) for index, link in enumerate(links)]
+            get_links = [(se_,index,link,category) for index, link in enumerate(links)]
             plms = list(map(url_to_file,get_links))
             for p in plms:
                 plm.update(p)

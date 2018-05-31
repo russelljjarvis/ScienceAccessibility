@@ -13,19 +13,19 @@ import os
 def convert_to_text(fileName):
     b = os.path.getsize(fileName)
     urlDat = {}
-    if b>250: # this is just to prevent reading in of incomplete data.
-        try:
-            file = open(fileName)
-            if str('.html') in fileName:
-                text = html_to_txt(file)
-            else:
-                text = convert_pdf_to_txt(file)
-            #file.close()
-            urlDat = {'link':fileName}
-            urlDat = text_proc(text,urlDat)
-            print(urlDat)
-        except:
-            pass
+    try: # this is just to prevent reading in of incomplete data.
+        file = open(fileName)
+        #print(file,fileName)
+        if str('.html') in fileName:
+            text = html_to_txt(file)
+        if str('.pdf') in fileName:
+            text = convert_pdf_to_txt(file)
+        #print(text)
+        urlDat = {'link':fileName}
+        urlDat = text_proc(text,urlDat)
+        print(urlDat)
+    except:
+        pass
     return urlDat
 
 
@@ -49,7 +49,7 @@ if TOURNAMENT:
     sarah = natsorted(glob.glob(str(os.getcwd())+'/*jarvis**.html'))
     sarah.extend(natsorted(glob.glob(str(os.getcwd())+'/*jarvis*.pdf')))
 
-
+    print(sarah)
     grid0 = db.from_sequence(rick)
     grid1 = db.from_sequence(sharon)
     grid2 = db.from_sequence(sarah)
@@ -57,28 +57,25 @@ if TOURNAMENT:
     rick = list(db.map(convert_to_text,grid0).compute())
     sharon = list(db.map(convert_to_text,grid1).compute())
     sarah = list(db.map(convert_to_text,grid2).compute())
-
+    print(sarah)
+    import pdb
+    pdb.set_trace()
     with open('tournment.p','wb') as handle:
         pickle.dump([sarah,rick,sharon,benchmarks],handle)
 
     urlDats.extend(sharon)
     urlDats.extend(rick)
     urlDats.extend(sarah)
-    print(len(urlDats))
 
     urlDats = list(filter(lambda url: len(list(url))>3, urlDats))
     urlDats = list(filter(lambda url: len(list(url.keys()))>3, urlDats))
     urlDats = list(filter(lambda url: str('gf') in url.keys(), urlDats))
-    print(len(urlDats))
 
     ranked = sorted(urlDats, key=lambda w: w['penalty'])   # sort by age
     sharon_mean = np.mean([r['gf'] for r in ranked if 'scrook' in r['link']])
     rick_mean = np.mean([r['gf'] for r in ranked if 'rcgerkin' in r['link']])
     sarah_mean = np.mean([r['gf'] for r in ranked if 'jarvis' in r['link']])
 
-    #print(rick_mean,sharon_mean,sarah_mean)
-    #import pdb
-    #pdb.set_trace()
 
 
 else:
@@ -112,7 +109,9 @@ else:
     pp.pprint(text1)
 
 frames = False
-if frames ==True: unravel = process_dics(urlDats) else: unravel = urlDats
+if frames ==True:
+    unravel = process_dics(urlDats)
+else:
+    unravel = urlDats
 with open('winners.p','wb') as handle:
-    pickle.dump(winners,handle)
-
+    pickle.dump(urlDats,handle)

@@ -48,6 +48,10 @@ import urllib.request
 from io import StringIO
 import io
 
+from delver import Crawler
+C = Crawler()
+
+
 rsrcmgr = PDFResourceManager()
 retstr = StringIO()
 laparams = LAParams()
@@ -56,18 +60,6 @@ device = TextConverter(rsrcmgr, retstr, codec = codec, laparams = laparams)
 interpreter = PDFPageInterpreter(rsrcmgr, device)
 
 
-'''
-Depricated
-def pre_crawl(flat_iter):
-    p, fileName, file_contents, index = flat_iter
-    urlDat = {}
-    _, _, details = cld2.detect(' '.join(file_contents.iloc[index]['snippet']), bestEffort=True)
-    detectedLangName, _ = details[0][:2]
-    server_status = bool(file_contents.iloc[index]['status']=='successful')
-    english = bool(detectedLangName == 'ENGLISH')
-    if server_status and english:
-        return file_contents
-'''
 
 def convert_pdf_to_txt(r):
     pdf = io.BytesIO(r.content)
@@ -95,11 +87,9 @@ def html_to_txt(content):
     return str_text
 
 
-from delver import Crawler
-c = Crawler()
 
 def denver_to_text(url):
-    fileName = c.download(local_path=os.getcwd(),url=url,name=url)
+    fileName = C.download(local_path=os.getcwd(),url=url,name=url)
     file = open(fileName)
     if str('.html') in fileName:
         text = html_to_txt(file)

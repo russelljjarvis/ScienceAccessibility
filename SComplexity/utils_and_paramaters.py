@@ -3,10 +3,14 @@
 # Russell Jarvis
 # https://github.com/russelljjarvis/
 # rjjarvis@asu.edu
+
+#from .t_analysis import text_proc
+#from .crawl import html_to_txt, convert_pdf_to_txt
+import os
+
 import pycld2 as cld2
 import lzma
-from crawl import html_to_txt, convert_pdf_to_txt
-import os
+
 def convert_to_text(fileName):
     b = os.path.getsize(fileName)
     urlDat = {}
@@ -15,8 +19,10 @@ def convert_to_text(fileName):
             file = open(fileName)
             if str('.html') in fileName:
                 text = html_to_txt(file)
-            else:
+            elif str('.pdf') in fileName:
                 text = convert_pdf_to_txt(file)
+            else:
+                return None
             #file.close()
             urlDat = {'link':fileName}
             urlDat = text_proc(text,urlDat)
@@ -24,7 +30,6 @@ def convert_to_text(fileName):
         except:
             pass
     return urlDat
-
 
 def comp_ratio(test_string):
     c = lzma.LZMACompressor()
@@ -92,7 +97,6 @@ def science_string(check_with):
     return assume_false
 
 def black_string(check_with):
-    #print(check_with)
     if len(check_with) == 1145:
         return True
     check="Our systems have detected unusual traffic from your computer network.\\nThis page checks to see if it\'s really you sending the requests, and not a robot.\\nWhy did this happen?\\nThis page appears when Google automatically detects requests coming from your computer network which appear to be in violation of the Terms of Service. The block will expire shortly after those requests stop.\\nIn the meantime, solving the above CAPTCHA will let you continue to use our services.This traffic may have been sent by malicious software, a browser plug in, or a script that sends automated requests.\\nIf you share your network connection, ask your administrator for help  a different computer using the same IP address may be responsible.\\nLearn moreSometimes you may be asked to solve the CAPTCHA if you are using advanced terms that robots are known to use, or sending requests very quickly."
@@ -119,56 +123,3 @@ def black_string(check_with):
     if check in check_with:
         return True
     return False
-
-'''
-depreciated
-def purge(fi,filter_string=''):
-
-    If filter string is not defined, the method will probably delete all data.
-    Delete caches if suspect that full of rubbish
-    This will create a lot of non fatal errors, since I was too lazy to write this function properly
-
-    import os
-    b,category = fi
-    categoryquery = category.replace(' ',"+")
-    path = os.getcwd() + '/' +  str(category) +'/'
-
-    if os.path.exists(path):
-        os.chdir(path)
-        os.system('rm '+filter+'*.csv')
-        print('purging cached data')
-    else:
-        os.makedirs(path)
-        os.chdir(path)
-
-def mkdirs(fi,filter_string=''):
-
-    If filter string is not defined, the method will probably delete all data.
-    Delete caches if suspect that full of rubbish
-    This will create a lot of non fatal errors, since I was too lazy to write this function properly
-
-    import os
-    b,category = fi
-    categoryquery = category.replace(' ',"+")
-    path = os.getcwd() + '/' +  str(category) +'/'
-
-    if os.path.exists(path):
-        pass
-    else:
-        os.makedirs(path)
-
-def compute_authors(author_results):
-    for author,links in authors.items():
-        for r in links:
-            fr = FetchResource(r)
-            corpus = fr.run()
-            if corpus is not None and not black_string(corpus):
-                urlDat = {'link':r}
-                urlDat = text_proc(corpus,urlDat,WORD_LIM = 100)
-                if str(r) not in author_results.keys():
-                    author_results[author][str(r)] = urlDat
-                else:
-                    author_results[author][str(r)] = urlDat
-        print(author_results)
-    return author_results
-'''

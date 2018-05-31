@@ -1,5 +1,4 @@
 name = "SComplexity"
-__all__ = ['crawl','utils_and_params', 't_analysis_csv' ]
-import crawl
-import utils_and_paramaters
-import t_analysis
+from .crawl import *
+from .utils_and_paramaters import *
+from .t_analysis import *

@@ -14,8 +14,8 @@ from delver import Crawler
 from GoogleScraper import scrape_with_config, GoogleSearchError
 
 
-
-from SComplexity.scrape import scraapelandtext
+import pickle
+from SComplexity.scrape import scrapelandtext
 
 def engine_dict_list():
     se = {0:"google",1:"yahoo",2:"duckduckgo",3:"wikipedia",4:"scholar",5:"bing"}
@@ -25,7 +25,7 @@ def search_params():
     SEARCHLIST = ["autosomes","respiration", "bacteriophage",'Neutron','Vaccine','Transgenic','GMO','Genetically Modified Organism','neuromorphic hardware', 'mustang unicorn', 'scrook rgerkin neuron', 'prancercise philosophy', 'play dough delicious deserts']
 
 
-    LINKSTOGET= 10 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
+    LINKSTOGET = 5 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
     return SEARCHLIST, se, LINKSTOGET
 
 def search_known_corpus():

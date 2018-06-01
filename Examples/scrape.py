@@ -75,7 +75,7 @@ def scrapelandtext(fi):
 
     config = {}
     # driver = rotate_profiles()
-	# This code block, jumps over fence one (the search engine as a gatekeeper)
+    # This code block, jumps over fence one (the search engine as a gatekeeper)
     # google scholar or wikipedia is not supported by google scraper
     # duckduckgo bang expansion can be used as to access engines that GS does not support.
     # for example twitter etc
@@ -106,7 +106,7 @@ def scrapelandtext(fi):
         links = []
         for serp in search.serps:
             links.extend([link.link for link in serp.links])
-		# This code block jumps over fench two
+	# This code block jumps over fench two
         # The (possibly private, or hosted server as a gatekeeper).
         try:
             get_links = [(se_,index,link,category) for index, link in enumerate(links)]

@@ -42,38 +42,40 @@ def url_to_file(link_tuple):
     fname = '{0}_{1}_{2}'.format(category,se_b,index)
     # Bulk download wht is scrapped by GS.
     if str('pdf') in link:
-        fname.join(str('.pdf'))
+        fname = fname.join(str('.pdf'))
     if str('html') in link:
-        fname.join(str('.html'))
+        fname = fname.join(str('.html'))
     # note it's possible that downloaded link is neither html, nor pdf (ie jpg). Incorrectly assigning extensions to such resources will cause
     # problems further down the road.
     local_file_path = C.download(local_path = CWD, url = link, name = fname)
     os.path.isfile(local_file_path)
-    plm = { 'fname':link}
+    plm = { fname:link}
     return plm
 
 COMPETITION = False
+se, _ = engine_dict_list()
+
 if COMPETITION:
     SEARCHLIST, WEB, LINKSTOGET = search_known_corpus()
-    se, _ = engine_dict_list()
     flat_iter = [ category for category in SEARCHLIST ]
     # traverse this list randomly as hierarchial traversal may be a bot give away.
     random.shuffle(flat_iter)
-    flat_iter = ( (4,f) for f in flat_iter )
+    flat_iter = [ (4,f) for f in flat_iter ]
 
 else:
     SEARCHLIST, WEB, LINKSTOGET = search_params()
-    se, _ = engine_dict_list()
     flat_iter = [ (b,category) for category in SEARCHLIST for b in range(0,4) ]
     # traverse this list randomly as hierarchial traversal may be a bot give away.
     random.shuffle(flat_iter)
-    flat_iter = iter(flat_iter)
+    #flat_iter = iter(flat_iter)
 
 def scrapelandtext(fi):
     b,category = fi
+    se_ = se[b]
+
     config = {}
-    driver = rotate_profiles()
-	# This code block, jumps over fence one (the search engine as a gatekeeper)
+    # driver = rotate_profiles()
+    # This code block, jumps over fence one (the search engine as a gatekeeper)
     # google scholar or wikipedia is not supported by google scraper
     # duckduckgo bang expansion can be used as to access engines that GS does not support.
     # for example twitter etc
@@ -81,8 +83,7 @@ def scrapelandtext(fi):
     config['keyword'] = str(category)
     if b==4: config['keyword'] = '!scholar {0}'.format(category)
     if b==3: config['keyword'] = '!wiki {0}'.format(category)
-
-    config['search_engine'] = se[b]
+    config['search_engine'] = str(se_)
     config['scrape_method'] = 'selenium'
     config['num_pages_for_keyword'] = 10
     config['use_own_ip'] = True
@@ -97,21 +98,24 @@ def scrapelandtext(fi):
 
     config['output_filename'] = '{0}_{1}.csv'.format(category,se[b])
     plm = {}
+    search = scrape_with_config(config)
+
     try:
         search = scrape_with_config(config)
+
         links = []
         for serp in search.serps:
             links.extend([link.link for link in serp.links])
-		# This code block jumps over fench two
+	# This code block jumps over fench two
         # The (possibly private, or hosted server as a gatekeeper).
-        #try:
-        get_links = [(se[b],index,link,category) for index, link in enumerate(links)]
-        plms = list(map(url_to_file,get_links))
-        for p in plms:
-            plm.update(p)
-            print(p)
-        #except:
-        #   plm = None
+        try:
+            get_links = [(se_,index,link,category) for index, link in enumerate(links)]
+            plms = list(map(url_to_file,get_links))
+            for p in plms:
+                plm.update(p)
+                print(p)
+        except:
+           plm = None
 
     except GoogleSearchError as e:
         print(e)

@@ -22,7 +22,7 @@ And that is how I invoke it:
 
 To Run the project, one needs to execute the files navigate to the Examples directory and execute:
 `python use_scrape.py`,
-scrapes search engines for parameters defined in utils_and_params
+scrapes search engines for parameters defined in that file.
 
 and or the jupyter notebook: vstrl.ipynb which plots analysis based on scrapped data.
 

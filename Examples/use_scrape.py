@@ -55,9 +55,9 @@ if COMPETITION:
     flat_iter = [ category for category in SEARCHLIST ]
     # traverse this list randomly as hierarchial traversal may be a bot give away.
     random.shuffle(flat_iter)
-    flat_iter = [ (se[4],f) for f in flat_iter ]
+    flat_iter = iter( (se[4],f) for f in flat_iter )
     # TODO check if lazy evaluation works.
-    # flat_iter = ( (se[4],f) for f in flat_iter )
+    flat_iter = ( (se[4],f) for f in flat_iter )
 
 
 else:

@@ -89,17 +89,18 @@ def scrapelandtext(fi):
         links = []
         for serp in search.serps:
             links.extend([link.link for link in serp.links])
-            # print(serp,links)
-	# This code block jumps over gate two
+        print(links)
+        # This code block jumps over gate two
         # The (possibly private, or hosted server as a gatekeeper).
-        try:
-            print('gets to download paart,', se_,index,link,category)
-            get_links = [(se_,index,link,category) for index, link in enumerate(links)]
+        if len(links) > 0:
+            print('gets to download part,', links)
+            get_links = ( (se_,index,link,category) for index, link in enumerate(links) )
             plms = list(map(url_to_file,get_links))
             for p in plms:
                 plm.update(p)
                 print(p)
-        except:
+        else:
+           print(links)
            plm = None
 
     except GoogleSearchError as e:

@@ -12,7 +12,7 @@ import numpy as np
 import os
 def convert_to_text(fileName):
     b = os.path.getsize(fileName)
-    urlDat = {}
+    text = None
     try: # this is just to prevent reading in of incomplete data.
         file = open(fileName)
         #print(file,fileName)
@@ -21,13 +21,16 @@ def convert_to_text(fileName):
         if str('.pdf') in fileName:
             text = convert_pdf_to_txt(file)
         #print(text)
-        urlDat = {'link':fileName}
-        urlDat = text_proc(text,urlDat)
-        print(urlDat)
+        file.close()
     except:
         pass
-    return urlDat
+    return text
 
+def proc_text(text):
+    urlDat = {'link':fileName}
+    urlDat = text_proc(text,urlDat)
+    print(urlDat)
+    return urlDat
 
 TOURNAMENT = True
 
@@ -53,13 +56,18 @@ if TOURNAMENT:
     grid0 = db.from_sequence(rick)
     grid1 = db.from_sequence(sharon)
     grid2 = db.from_sequence(sarah)
-
+    import pdb
+    pdb.set_trace()
     rick = list(db.map(convert_to_text,grid0).compute())
     sharon = list(db.map(convert_to_text,grid1).compute())
     sarah = list(db.map(convert_to_text,grid2).compute())
+    competition = [ (str('rcgerkin'),rick),(str('smcrook'),sharon) ] #,sarah]
+    for author_name,author_texts in competition:
+        for text in author_texts:
+            if author_name in text:
+                pdb.set_trace()
     print(sarah)
-    import pdb
-    pdb.set_trace()
+
     with open('tournment.p','wb') as handle:
         pickle.dump([sarah,rick,sharon,benchmarks],handle)
 

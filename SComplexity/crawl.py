@@ -50,6 +50,7 @@ import io
 
 from delver import Crawler
 C = Crawler()
+CWD = os.getcwd()
 
 
 rsrcmgr = PDFResourceManager()
@@ -68,7 +69,7 @@ def convert_pdf_to_txt(r):
     write_text = ''
     for page in PDFPage.create_pages(document):
         interpreter.process_page(page)
-        write_text +=  retstr.getvalue()
+        write_text = write_text.join(retstr.getvalue())
     # Process all pages in the document
     text = str(write_text)
     return text
@@ -89,7 +90,7 @@ def html_to_txt(content):
 
 
 def denver_to_text(url):
-    fileName = C.download(local_path=os.getcwd(),url=url,name=url)
+    fileName = C.download(local_path=CWD, url=url, name=url)
     file = open(fileName)
     if str('.html') in fileName:
         text = html_to_txt(file)

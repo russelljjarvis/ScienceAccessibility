@@ -23,6 +23,13 @@ from tabulate import tabulate
 from textblob import TextBlob
 import pickle
 
+
+import base64
+import pandas as pd
+import pickle
+import os
+import numpy as np
+
 #text analysis imports
 
 from nltk.tag.perceptron import PerceptronTagger
@@ -35,23 +42,16 @@ from nltk.classify import NaiveBayesClassifier
 from nltk.corpus import subjectivity
 from nltk.corpus import cmudict
 from nltk.sentiment import SentimentAnalyzer
-#from nltk import compat
-#from bs4 import BeautifulSoup
-#import json
+
 from textstat.textstat import textstat
 
-
-import base64
-import pandas as pd
-import pickle
-import os
 
 
 # params are defined in a seperate file, as they are prone to changing,
 # yet, different programs draw on them, better to have to only change them in one
 # place not three.
 # Local imports
-from utils_and_paramaters import black_string, english_check, comp_ratio, science_string
+from SComplexity.utils import black_string, english_check, comp_ratio, science_string
 
 DEBUG = False
 
@@ -92,7 +92,7 @@ def text_proc(corpus,urlDat, WORD_LIM = 4000):
 
         # long file lengths lead to big deltas.
         urlDat['info_density'] =  comp_ratio(corpus)
-        scaled_density = urlDat['info_density'] * (1.0/urlDat['wcount'])
+        scaled_density = np.log(urlDat['info_density'] * (1.0/urlDat['wcount']))
         urlDat['scaled_info_density'] = scaled_density
 
 

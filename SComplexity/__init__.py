@@ -1,4 +1,4 @@
 name = "SComplexity"
 from .crawl import *
-from .utils_and_paramaters import *
+from .utils import *
 from .t_analysis import *

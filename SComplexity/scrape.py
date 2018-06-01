@@ -42,70 +42,86 @@ def url_to_file(link_tuple):
     fname = '{0}_{1}_{2}'.format(category,se_b,index)
     # Bulk download wht is scrapped by GS.
     if str('pdf') in link:
-        fname = '{0}{1}'.format(fname,str('.pdf'))
+        fname = '{0}.{1}'.format(fname,str('pdf'))
     if str('html') in link:
-        fname = '{0}{1}'.format(fname,str('.html'))
+        fname = '{0}.{1}'.format(fname,str('html'))
+    if str('other') in link:
+        fname = '{0}.{1}'.format(fname,str('other'))
+
+
     # note it's possible that downloaded link is neither html, nor pdf (ie jpg). Incorrectly assigning extensions to such resources will cause
     # problems further down the road.
-    local_file_path = C.download(local_path = CWD, url = link, name = fname)
-    os.path.isfile(local_file_path)
+    try:
+        local_file_path = C.download(local_path = CWD, url = link, name = fname)
+        os.path.isfile(local_file_path)
+    except:
+        fname = 'fail'
     plm = { fname:link}
     return plm
 
-def scrapelandtext(fi):
-    se_,category = fi
-     #= se[b]
 
-    config = {}
-    driver = rotate_profiles()
-	# This code block, jumps over fence one (the search engine as a gatekeeper)
-    # google scholar or wikipedia is not supported by google scraper
-    # duckduckgo bang expansion can be used as to access engines that GS does not support.
-    # for example twitter etc
+class SW(object):
+    def __init__(self,nlinks=10):
+        self.NUM_LINKS = nlinks
 
-    config['keyword'] = str(category)
-    if str('scholar') in se_: config['keyword'] = '!scholar {0}'.format(category)
-    if str('wiki') in se_ : config['keyword'] = '!wiki {0}'.format(category)
-    config['search_engine'] = se_
-    config['scrape_method'] = 'selenium'
-    config['num_pages_for_keyword'] = 10
-    config['use_own_ip'] = True
-    config['sel_browser'] = 'firefox'
-    config['do_caching'] = False # bloat warning.
 
-    # Google scrap + selenium implements a lot of human centric browser masquarading tools.
-    # Search Engine: 'who are you?' code: 'I am an honest human centric browser, and certainly note a robot surfing in the nude'. Search Engine: 'good, here are some pages'.
-    # Time elapses and the reality is exposed just like in 'the Emperors New Clothes'.
-    # The file crawl.py contains methods for crawling the scrapped links.
-    # For this reason, a subsequent action, c.download (crawl download ) is ncessary.
+    def scrapelandtext(self,fi):
+        se_,category = fi
+        config = {}
+        driver = rotate_profiles()
+    	# This code block, jumps over fence one (the search engine as a gatekeeper)
+        # google scholar or wikipedia is not supported by google scraper
+        # duckduckgo bang expansion can be used as to access engines that GS does not support.
+        # for example twitter etc
 
-    config['output_filename'] = '{0}_{1}.csv'.format(category,se_)
-    plm = {}
-    search = scrape_with_config(config)
+        config['keyword'] = str(category)
 
-    try:
-        search = scrape_with_config(config)
-
-        links = []
-        for serp in search.serps:
-            links.extend([link.link for link in serp.links])
-        print(links)
-        # This code block jumps over gate two
-        # The (possibly private, or hosted server as a gatekeeper).
-        if len(links) > 0:
-            print('gets to download part,', links)
-            get_links = ( (se_,index,link,category) for index, link in enumerate(links) )
-            plms = list(map(url_to_file,get_links))
-            for p in plms:
-                plm.update(p)
-                print(p)
+        if str('scholar') in se_: config['keyword'] = '!scholar {0}'.format(category)
+        if str('wiki') in se_ : config['keyword'] = '!wiki {0}'.format(category)
+        if str('scholar') in se_ or str('wiki') in se_:
+            config['search_engines'] = 'duckduckgo'
         else:
-           print(links)
-           plm = None
+            config['search_engines'] = se_
 
-    except GoogleSearchError as e:
-        print(e)
-        return None
-    return plm
+        config['scrape_method'] = 'selenium'
+        config['num_pages_for_keyword'] = 1
+        config['use_own_ip'] = True
+        config['sel_browser'] = 'firefox'
+        config['do_caching'] = False # bloat warning.
+
+        # Google scrap + selenium implements a lot of human centric browser masquarading tools.
+        # Search Engine: 'who are you?' code: 'I am an honest human centric browser, and certainly note a robot surfing in the nude'. Search Engine: 'good, here are some pages'.
+        # Time elapses and the reality is exposed just like in 'the Emperors New Clothes'.
+        # The file crawl.py contains methods for crawling the scrapped links.
+        # For this reason, a subsequent action, c.download (crawl download ) is ncessary.
+
+        config['output_filename'] = '{0}_{1}.csv'.format(category,se_)
+        plm = {}
+
+        try:
+            search = scrape_with_config(config)
+
+            links = []
+            for serp in search.serps:
+                print(serp)
+                links.extend([link.link for link in serp.links])
+            # This code block jumps over gate two
+            # The (possibly private, or hosted server as a gatekeeper).
+            if len(links) > self.NUM_LINKS:
+                links = links[0:self.NUM_LINKS]
+            if len(links) > 0:
+                get_links = ( (se_,index,link,category) for index, link in enumerate(links) )
+                plms = list(map(url_to_file,get_links))
+                for p in plms:
+                    plm.update(p)
+                    print(p)
+            else:
+               print(links)
+               plm = None
+
+        except GoogleSearchError as e:
+            print(e)
+            return None
+        return plm
 # Use this variable to later reconcile file names with urls
 # As there was no, quick and dirty way to bind the two togethor here, without complicating things later.

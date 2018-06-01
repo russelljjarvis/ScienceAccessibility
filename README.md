@@ -18,8 +18,10 @@ Maybe define a bash alias, if this command get's too big and old.
 alias drvt='cd this_path; sudo docker run -p 8888:8888 -v this_path:/home/jovyan slc jupyter notebook --ip=0.0.0.0 --NotebookApp.token=\"\" --NotebookApp.disable_check_xsrf=True'
 ```
 
-To Run the project, one needs to execute the files navigate to the examples directory and execute:
-`python scrape.py`,
+And that is how I invoke it:
+
+To Run the project, one needs to execute the files navigate to the Examples directory and execute:
+`python use_scrape.py`,
 scrapes search engines for parameters defined in utils_and_params
 
 and or the jupyter notebook: vstrl.ipynb which plots analysis based on scrapped data.

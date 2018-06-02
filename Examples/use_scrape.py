@@ -25,31 +25,17 @@ def engine_dict_list():
     return se, list(se.values())
 
 def search_params():
-    SEARCHLIST = ["evolution","cancer", "photosysnthesis",'climate change','Vaccines','Transgenic','GMO','Genetically Modified Organism','reality TV', 'unicorn versus brumby', 'soccer', 'prancercise philosophy', 'play dough delicious deserts']
+    SEARCHLIST = ["evolution","cancer", "photosysnthesis",'climate change','Vaccines','Transgenic','GMO','Genetically Modified Organism','reality TV', 'unicorn versus brumby', 'football soccer', 'prancercise philosophy', 'play dough delicious deserts']
     return SEARCHLIST, se, LINKSTOGET
 # Use this variable to later reconcile file names with urls
 # As there was no, quick and dirty way to bind the two togethor here, without complicating things later.
 COMPETITION = False
 se, _ = engine_dict_list()
 
-if COMPETITION:
-    SEARCHLIST, se_, LINKSTOGET = search_known_corpus()
-    flat_iter = [ category for category in SEARCHLIST ]
-    # traverse this list randomly as hierarchial traversal may be a bot give away.
-    random.shuffle(flat_iter)
-    # flat_iter = [ (se[4],f) for f in flat_iter ]
-    # TODO check if lazy evaluation works.
-    flat_iter = iter( (se[4],f) for f in flat_iter )
-
-
-else:
-    SEARCHLIST, se, LINKSTOGET = search_params()
-    flat_iter = [ (se[b],category) for category in SEARCHLIST for b in range(0,4) ]
-    # traverse this list randomly as hierarchial traversal may be a bot give away.
-    random.shuffle(flat_iter)
-    # TODO check if lazy evaluation works.
-    flat_iter = iter(flat_iter)
+SEARCHLIST, se, LINKSTOGET = search_params()
+flat_iter = [ (se[b],category) for category in SEARCHLIST for b in range(0,4) ]
+# traverse this list randomly as hierarchial traversal may be a bot give away.
+random.shuffle(flat_iter)
+flat_iter = iter(flat_iter)
 
 path_link_maps = list(map(sw.scrapelandtext,flat_iter))
-
-with open('path_link_maps.p','wb') as f: pickle.dump(path_link_maps,f)

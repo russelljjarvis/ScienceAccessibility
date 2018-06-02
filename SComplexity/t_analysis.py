@@ -56,7 +56,7 @@ from SComplexity.utils import black_string, english_check, comp_ratio, science_s
 DEBUG = False
 
 # word limit smaller than 4000 gets product/merchandise sites.
-def text_proc(corpus,urlDat, WORD_LIM = 4000):
+def text_proc(corpus, urlDat = {}, WORD_LIM = 500):
     #remove unreadable characters
     corpus = corpus.replace("-", " ") #remove characters that nltk can't read
     textNum = re.findall(r'\d', corpus) #locate numbers that nltk cannot see to analyze
@@ -70,11 +70,10 @@ def text_proc(corpus,urlDat, WORD_LIM = 4000):
     try:
         urlDat['english'] = english_check(corpus)
         urlDat['science'] = science_string(sc)
-        sc = None
     except:
         urlDat['english'] = True
         urlDat['science'] = False
-        server_error = bool(not black_string(corpus))
+        #server_error = bool(not black_string(corpus))
 
     # The post modern essay generator is so obfuscated, that ENGLISH classification fails, and this criteria needs to be relaxed.
 
@@ -91,10 +90,14 @@ def text_proc(corpus,urlDat, WORD_LIM = 4000):
         # big deltas mean redudancy/sparse information/information/density
 
         # long file lengths lead to big deltas.
-        urlDat['info_density'] =  comp_ratio(corpus)
-        scaled_density = np.log(urlDat['info_density'] * (1.0/urlDat['wcount']))
-        urlDat['scaled_info_density'] = scaled_density
 
+        try:
+            urlDat['info_density'] =  comp_ratio(corpus)
+            scaled_density = urlDat['info_density'] * (1.0/urlDat['wcount'])
+            urlDat['scaled_info_density'] = scaled_density
+        except:
+            #imputated value how?
+            scaled_density = 10.0 #urlDat['info_density'] * (1.0/urlDat['wcount'])
 
         #Sentiment and Subjectivity analysis
         testimonial = TextBlob(corpus)
@@ -117,12 +120,13 @@ def text_proc(corpus,urlDat, WORD_LIM = 4000):
         # many unique words, and does not yield high compression savings.
         # Good writing should not be obfucstated either. The reading level is a check for obfucstation.
         # The resulting metric is a balance of concision, low obfucstation, expression.
-        penalty = urlDat['gf'] + scaled_density + urlDat['uniqueness'] + abs(urlDat['sp'])
+        penalty = (urlDat['standard'] + urlDat['gf'])/2.0  + abs(urlDat['sp']) + abs(urlDat['ss']) # +float(scaled_density)
         urlDat['penalty'] = penalty
     return urlDat
 
 
 def process_dics(urlDats):
+    dfs = []
     for urlDat in urlDats:
         # pandas Data frames are best data container for maths/stats, but steep learning curve.
         # Other exclusion criteria. Exclude reading levels above grade 100,

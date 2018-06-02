@@ -11,6 +11,10 @@ import os
 import pycld2 as cld2
 import lzma
 
+'''
+from .t_analysis import text_proc
+
+
 def convert_to_text(fileName):
     b = os.path.getsize(fileName)
     urlDat = {}
@@ -30,7 +34,7 @@ def convert_to_text(fileName):
         except:
             pass
     return urlDat
-
+'''
 def comp_ratio(test_string):
     c = lzma.LZMACompressor()
     bytes_in = bytes(test_string,'utf-8')
@@ -75,14 +79,28 @@ def search_known_corpus():
     LINKSTOGET= 10 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
     return SEARCHLIST, WEB, LINKSTOGET
 
-def print_best_text(fileName):
-    file = open(fileName)
-    if str('.html') in fileName:
-        text = html_to_txt(file)
-    else:
-        text = convert_pdf_to_txt(file)
-    file.close()
-    return text
+
+def convert_and_score(fileName):
+    b = os.path.getsize(fileName)
+    text = None
+    try: # this is just to prevent reading in of incomplete data.
+        file = open(fileName)
+        print(file)
+        if str('.html') in fileName:
+            text = html_to_txt(file)
+        elif str('.pdf') in fileName:
+            text = convert_pdf_to_txt(file)
+        else:
+            print('other')
+        file.close()
+        urlDat = {'link':fileName}
+        urlDat = text_proc(text,urlDat)
+        print(urlDat)
+    except:
+        urlDat = {'link':fileName}
+    return urlDat
+
+
 
 
 def science_string(check_with):

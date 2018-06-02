@@ -87,7 +87,14 @@ def html_to_txt(content):
     str_text = str(text)
     return str_text
 
-
+def print_best_text(fileName):
+    file = open(fileName)
+    if str('.html') in fileName:
+        text = html_to_txt(file)
+    else:
+        text = convert_pdf_to_txt(file)
+    file.close()
+    return text
 
 def denver_to_text(url):
     fileName = C.download(local_path=CWD, url=url, name=url)

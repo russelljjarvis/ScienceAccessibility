@@ -1,15 +1,15 @@
 import os
 from bs4 import BeautifulSoup
-from crawl import collect_pubs
 import os.path
 import pickle
 import numpy as np
 
 #from SComplexity import t_analysis, utils_and_paramaters
-from SComplexity.crawl import FetchResource# html_to_txt, convert_pdf_to_txt
+from SComplexity.crawl import FetchResource, collect_pubs# html_to_txt, convert_pdf_to_txt
 from SComplexity.t_analysis import text_proc
+#from crawl import collect_pubs
 
-from SComplexity. utils_and_paramaters import black_string
+from SComplexity.utils import black_string
 
 peter = str('https://academic.oup.com/beheco/article-abstract/29/1/264/4677340')
 xkcd_self_sufficient = str('http://splasho.com/upgoer5/library.php')
@@ -19,7 +19,6 @@ simple_science = str('https://www.bnl.gov/newsroom/news.php?a=23678')
 pmeg = str('http://www.elsewhere.org/pomo/') # Note this is so obfuscated, even the english language classifier rejects it.
 
 try:
-    assert 1 == 2
     assert os.path.isfile('benchmarks.p')
     with open('benchmarks.p','rb') as f:
         benchmarks = pickle.load(f)
@@ -29,7 +28,7 @@ except:
     # Hardest to read,
     fr = FetchResource(pmeg)
     pmegr = fr.run()
-    with open('pmr.p','wb') as f: pickle.dump(pmegr,f)
+    #with open('pmr.p','wb') as f: pickle.dump(pmegr,f)
     # Easiest to read
     fr = FetchResource(xkcd_self_sufficient)
     xkcdr = fr.run()
@@ -51,8 +50,8 @@ sow = text_proc(sowr,urlDat, WORD_LIM = 100)
 urlDat = {'link':high_standard}
 hss = text_proc(hsr,urlDat, WORD_LIM = 100)
 
-with open('pmr.p','rb') as f:
-    pmegr = pickle.load(f)
+#with open('pmr.p','rb') as f:
+#    pmegr = pickle.load(f)
 urlDat = {'link':pmeg}
 pm = text_proc(pmegr,urlDat, WORD_LIM = 100)
 
@@ -66,6 +65,7 @@ ranked = [('post modern essay generator',pm),('upgoer5_corpus',xkcd),('the reada
 #winners.append(('simple_science',ss),('sarah_jarvis',sj),('melanie_jarvis',mj),)
 ranked = [ r[1] for r in ranked ]
 winners = sorted(ranked, key=lambda w: w['gf'])
-import pdb; pdb.set_trace()
+print(winners)
+#import pdb; pdb.set_trace()
 
 with open('benchmarks_ranked.p','wb') as f: pickle.dump(winners,f)

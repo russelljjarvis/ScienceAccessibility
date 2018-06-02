@@ -12,9 +12,9 @@ from numpy import random
 import os
 from delver import Crawler
 from GoogleScraper import scrape_with_config, GoogleSearchError
-
-
-
+from SComplexity.crawl import html_to_txt, convert_pdf_to_txt, print_best_text
+import tempfile
+import pickle
 # from SComplexity.utils_and_paramaters import search_params, engine_dict_list, search_known_corpus
 
 C = Crawler()
@@ -36,10 +36,33 @@ def rotate_profiles():
     return driver
 driver = rotate_profiles()
 
+def convert(fileName):
+    b = os.path.getsize(fileName)
+    text = None
+    try: # this is just to prevent reading in of incomplete data.
+        file = open(fileName)
+        if str('zip') in fileName:
+            pass
+        elif str('.html') in fileName:
+            text = html_to_txt(file)
+        elif str('.pdf') in fileName:
+            text = convert_pdf_to_txt(file)
+        else:
+            try:
+                print('probably html')
+                text = html_to_txt(file)
+            except:
+                text = None 
+                print('perhaps video or image')
+        file.close()
+    except:
+        text = None
+    return text
+
 def url_to_file(link_tuple):
-    se_b,index,link,category = link_tuple
-    print(link_tuple)
-    fname = '{0}_{1}_{2}'.format(category,se_b,index)
+    se_b, page_rank, link, category = link_tuple
+
+    fname = '{0}_{1}_{2}'.format(category,se_b,page_rank)
     # Bulk download wht is scrapped by GS.
     if str('pdf') in link:
         fname = '{0}.{1}'.format(fname,str('pdf'))
@@ -52,12 +75,20 @@ def url_to_file(link_tuple):
     # note it's possible that downloaded link is neither html, nor pdf (ie jpg). Incorrectly assigning extensions to such resources will cause
     # problems further down the road.
     try:
+        #f = tempfile.NamedTemporaryFile(delete=True)
         local_file_path = C.download(local_path = CWD, url = link, name = fname)
-        os.path.isfile(local_file_path)
+
+        #text = convert(local_file_path)
+        if os.path.isfile(local_file_path):
+            #f.close()
+            pname = '{0}.p'.format(fname)#local_file_path.split(".")[0])
+            file_contents = [link_tuple, local_file_path]
+            with open(pname,'wb') as f:
+                pickle.dump(file_contents,f)
+        print('success')
     except:
-        fname = 'fail'
-    plm = { fname:link}
-    return plm
+        print('failure')
+    return
 
 
 class SW(object):
@@ -105,23 +136,18 @@ class SW(object):
             for serp in search.serps:
                 print(serp)
                 links.extend([link.link for link in serp.links])
+            #links = [ (l,config) for l in links ]
             # This code block jumps over gate two
             # The (possibly private, or hosted server as a gatekeeper).
-            if len(links) > self.NUM_LINKS:
-                links = links[0:self.NUM_LINKS]
+            if len(links) > self.NUM_LINKS: links = links[0:self.NUM_LINKS]
             if len(links) > 0:
+                print(links)
                 get_links = ( (se_,index,link,category) for index, link in enumerate(links) )
-                plms = list(map(url_to_file,get_links))
-                for p in plms:
-                    plm.update(p)
-                    print(p)
-            else:
-               print(links)
-               plm = None
+                _ = list(map(url_to_file,get_links))
 
         except GoogleSearchError as e:
             print(e)
             return None
-        return plm
+        return
 # Use this variable to later reconcile file names with urls
 # As there was no, quick and dirty way to bind the two togethor here, without complicating things later.

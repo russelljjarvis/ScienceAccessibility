@@ -62,14 +62,15 @@ interpreter = PDFPageInterpreter(rsrcmgr, device)
 
 
 
-def convert_pdf_to_txt(r):
-    pdf = io.BytesIO(r.content)
+def convert_pdf_to_txt(content):
+    pdf = io.BytesIO(content.content)
     parser = PDFParser(pdf)
     document = PDFDocument(parser, password=None) # this fails
     write_text = ''
     for page in PDFPage.create_pages(document):
         interpreter.process_page(page)
-        write_text = write_text.join(retstr.getvalue())
+        write_text +=  retstr.getvalue()
+        #write_text = write_text.join(retstr.getvalue())
     # Process all pages in the document
     text = str(write_text)
     return text
@@ -89,11 +90,7 @@ def html_to_txt(content):
 
 def print_best_text(fileName):
     file = open(fileName)
-    if str('.html') in fileName:
-        text = html_to_txt(file)
-    else:
-        text = convert_pdf_to_txt(file)
-    file.close()
+
     return text
 
 def denver_to_text(url):

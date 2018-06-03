@@ -18,7 +18,6 @@ import pickle
 from SComplexity.scrape import SW
 LINKSTOGET= 10 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
 
-sw = SW(10)
 
 def engine_dict_list():
     se = {0:"google",1:"yahoo",2:"duckduckgo",3:"wikipedia",4:"scholar",5:"bing"}
@@ -29,13 +28,13 @@ def search_params():
     return SEARCHLIST, se, LINKSTOGET
 # Use this variable to later reconcile file names with urls
 # As there was no, quick and dirty way to bind the two togethor here, without complicating things later.
-COMPETITION = False
 se, _ = engine_dict_list()
 
 SEARCHLIST, se, LINKSTOGET = search_params()
 flat_iter = [ (se[b],category) for category in SEARCHLIST for b in range(0,4) ]
+
 # traverse this list randomly as hierarchial traversal may be a bot give away.
 random.shuffle(flat_iter)
-flat_iter = iter(flat_iter)
-
-path_link_maps = list(map(sw.scrapelandtext,flat_iter))
+#flat_iter = iter(flat_iter)
+sw = SW(flat_iter,nlinks=10)
+sw.run()

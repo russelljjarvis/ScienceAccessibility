@@ -23,8 +23,9 @@ And that is how I invoke it:
 To Run the project, one needs to execute the files navigate to the Examples directory and execute:
 `python use_scrape.py`,
 scrapes search engines for parameters defined in that file.
+Afterw execute: `python use_analysis.py`. To analyse the scraped texts.
 
-and or the jupyter notebook: vstrl.ipynb which plots analysis based on scrapped data.
+The jupyter notebook: vstrl.ipynb contains idioms for plotting and analysis based on scrapped data, although it is not maintained.
 
 Note: a lot of complexity in the code base comes from the need to masquerade as a non bot web surfer.
 It's a bad idea to surf naked ie to only use: `urllib`, or `requests`, as these resource grabbers are sure fire bot give aways.

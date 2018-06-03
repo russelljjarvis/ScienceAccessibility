@@ -89,7 +89,7 @@ def url_to_text(link_tuple):
 
 def buffer_to_pickle(link_tuple):
     se_b, page_rank, link, category, buffer = link_tuple
-    fname = '{0}_{1}_{2}.p'.format(category,se_b,page_rank)
+    fname = 'results_dir/{0}_{1}_{2}.p'.format(category,se_b,page_rank)
     if type(buffer) is not None:
         with open(fname,'wb') as f:
             pickle.dump(link_tuple,f)
@@ -106,6 +106,8 @@ class SW(object):
         self.NUM_LINKS = nlinks
         self.iterable = iterable
         self.links = None
+        if not os.path.exists('results_dir'):
+            os.makedirs('results_dir')
 
     def scrapelandtext(self,fi):
         se_,category = fi

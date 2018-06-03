@@ -13,7 +13,6 @@ import os
 from delver import Crawler
 from GoogleScraper import scrape_with_config, GoogleSearchError
 
-
 LINKSTOGET= 10 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
 
 
@@ -34,5 +33,7 @@ flat_iter = [ (se[b],category) for category in SEARCHLIST for b in range(0,4) ]
 # traverse this list randomly as hierarchial traversal may be a bot give away.
 random.shuffle(flat_iter)
 
+# configure the scrapers with search terms and search indexs
 sw = SW(flat_iter,nlinks=10)
+# This line is sufficient to execute the scrapper:
 sw.run()

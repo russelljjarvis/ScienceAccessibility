@@ -56,7 +56,7 @@ from SComplexity.utils import black_string, english_check, comp_ratio, science_s
 DEBUG = False
 
 # word limit smaller than 4000 gets product/merchandise sites.
-def text_proc(corpus, urlDat = {}, WORD_LIM = 500):
+def text_proc(corpus, urlDat = {}, WORD_LIM = 2000):
     #remove unreadable characters
     corpus = corpus.replace("-", " ") #remove characters that nltk can't read
     textNum = re.findall(r'\d', corpus) #locate numbers that nltk cannot see to analyze

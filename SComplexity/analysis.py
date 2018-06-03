@@ -3,9 +3,8 @@ import glob
 import os
 import dask.bag as db
 
-from SComplexity.crawl import html_to_txt, convert_pdf_to_txt#, print_best_text
+from SComplexity.crawl import html_to_txt, convert_pdf_to_txt
 from SComplexity.t_analysis import text_proc
-#from SComplexity.utils import print_best_text#, convert_and_score
 
 from natsort import natsorted, ns
 import pprint
@@ -26,11 +25,8 @@ def convert_and_score(f):
     if type(buffer) is not type(None):
         urlDat = { 'link':link,'page_rank':page_rank,'se':se_b,'query':category,'file':f }
         urlDat = text_proc(buffer,urlDat)
-        print(urlDat)
-
     return urlDat
 
-known_corpus = []
 
 
 class Analysis(object):

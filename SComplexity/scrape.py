@@ -63,6 +63,7 @@ def html_to_txt(content):
     return str_text
 
 def convert(content,link):
+    # This is really ugly, but it's proven to be both fault tolerant and effective.
     try:
         if str('.html') in link:
             text = html_to_txt(content)

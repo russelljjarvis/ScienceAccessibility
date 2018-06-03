@@ -9,13 +9,13 @@ If docker is installed on the base OS, git clone this repository, and assuming t
 launch via BASH in Linux as follows:
 
 ```
-'cd this_path; sudo docker run -p 8888:8888 -v this_path:/home/jovyan slc jupyter notebook --ip=0.0.0.0 --NotebookApp.token=\"\" --NotebookApp.disable_check_xsrf=True'
+'cd this_path; sudo docker run -p 8888:8888 -v this_path:/home/jovyan slc && jupyter notebook --ip=0.0.0.0 --NotebookApp.token=\"\" --NotebookApp.disable_check_xsrf=True'
 ```
 
 Maybe define a bash alias, if this command get's too big and old.
 
 ```
-alias drvt='cd this_path; sudo docker run -p 8888:8888 -v this_path:/home/jovyan slc jupyter notebook --ip=0.0.0.0 --NotebookApp.token=\"\" --NotebookApp.disable_check_xsrf=True'
+alias drvt='cd this_path; sudo docker run -p 8888:8888 -v this_path:/home/jovyan slc && jupyter notebook --ip=0.0.0.0 --NotebookApp.token=\"\" --NotebookApp.disable_check_xsrf=True'
 ```
 
 And that is how I invoke it:

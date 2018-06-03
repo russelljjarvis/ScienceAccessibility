@@ -44,11 +44,17 @@ flat_iter = [ (se[b],category) for category in SEARCHLIST for b in range(0,4) ]
 # traverse this list randomly as hierarchial traversal may be a bot give away.
 random.shuffle(flat_iter)
 
+# configure the scrapers with search terms and search indexs
 sw = SW(flat_iter,nlinks=10)
+# This line is sufficient to execute the scrapper:
 sw.run()
 
 
-#
+
+
+
+# Assuming the scrapper has run:
+
 # naturally sort a list of files, as machine sorted is not the desired file list hierarchy.
 # Note this mess could be avoided if I simply stored the mined content somewhere else.
 files = natsorted(glob.glob(str(os.getcwd())+'/*.p'))
@@ -64,6 +70,7 @@ urlDats = A.cas()
 with open('unraveled_links.p','wb') as handle:
     pickle.dump(urlDats,handle)
 
+# hierarchically sort the files based on readability metrics.
 winners = sorted(urlDats, key=lambda w: w['penalty'])   # sort by age
 
 

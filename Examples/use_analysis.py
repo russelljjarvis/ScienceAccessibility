@@ -56,6 +56,9 @@ ranks = [ w['page_rank'] for w in scraped ]
 GMOs = list(filter(lambda url: str('GMO') == url['query'], scraped))
 climate = list(filter(lambda url: str('climate') in url['query'], scraped))
 vaccine = list(filter(lambda url: str('Vaccine') in url['query'], scraped))
+gmof = np.mean([g['gf'] for g in GMOs])
+climatef = np.mean([g['gf'] for g in climate])
+vaccinef = np.mean([g['gf'] for g in vaccine])
 
 #import pdb; pdb.set_trace()
 
@@ -86,7 +89,7 @@ axes.set_title('info versus fog')
 plt.xlabel('info density')
 plt.ylabel('gunning fog')
 plt.scatter(infos,fogss,label="scrapped data points")
-#plt.scatter(infok,fogk,label="reference data points")
+plt.scatter(infok,fogk,label="reference data points")
 plt.legend(loc="upper left")
 fig.tight_layout()
 plt.savefig(str('info_density_vs_complexity.png'))

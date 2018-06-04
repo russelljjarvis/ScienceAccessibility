@@ -46,18 +46,5 @@ class Analysis(object):
 
     def get_bench(self):
         known_corpus = []
-        try:
-            assert os.path.isfile('../BenchmarkCorpus/benchmarks_ranked.p')
-            benchmarks_ranked = pickle.load(open('../BenchmarkCorpus/benchmarks_ranked.p','rb'))
-            benchmarks = [ b[1] for b in benchmarks_ranked ]
-            known_corpus.extend(benchmarks)
-        except:
-            from SComplexity import get_bmark_corpus
-            assert os.path.isfile('../BenchmarkCorpus/benchmarks_ranked.p')
-            benchmarks_ranked = pickle.load(open('../BenchmarkCorpus/benchmarks_ranked.p','rb'))
-            benchmarks = [ b[1] for b in benchmarks_ranked ]
-            known_corpus.extend(benchmarks)
-        else:
-            known_corpus = None
-        self.urlDats = known_corpus
-        return
+        from SComplexity.get_bmark_corpus import get_bmarks
+        return get_bmarks()

@@ -10,16 +10,18 @@ from selenium import webdriver
 from fake_useragent import UserAgent
 from numpy import random
 import os
-from delver import Crawler
 from bs4 import BeautifulSoup
 import pickle
 import _pickle as cPickle #Using cPickle will result in performance gains
 from GoogleScraper import scrape_with_config, GoogleSearchError
 
-
+from SComplexity.crawl import convert_pdf_to_txt
 from SComplexity.crawl import print_best_text
-
+from delver import Crawler
 C = Crawler()
+import requests
+
+
 
 display = Display(visible=0, size=(1024, 768))
 display.start()
@@ -82,8 +84,12 @@ def convert(content,link):
 def url_to_text(link_tuple):
     se_b, page_rank, link, category, buffer = link_tuple
     try:
-        content = C.open(link).content
-        buffer = convert(content,link)
+        if str('pdf') not in link:
+            content = C.open(link).content
+            buffer = convert(content,link)
+        else:
+            pdf_file = requests.get(link, stream=True)
+            buffer = pdf_to_txt(pdf_file)
     except:
         buffer = None
     link_tuple = ( se_b, page_rank, link, category, buffer )

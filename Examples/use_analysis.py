@@ -56,8 +56,18 @@ ranks = [ w['page_rank'] for w in scraped ]
 GMOs = list(filter(lambda url: str('GMO') == url['query'], scraped))
 climate = list(filter(lambda url: str('climate') in url['query'], scraped))
 vaccine = list(filter(lambda url: str('Vaccine') in url['query'], scraped))
+
+climate_ranks = [ w['page_rank'] for w in climate ]
+climate_fogs = [ w['gf'] for w in climate ]
+vaccine_ranks = [ w['page_rank'] for w in vaccine ]
+vaccine_fogs = [ w['gf'] for w in vaccine ]
+GMO_ranks = [ w['page_rank'] for w in GMOs ]
+GMO_fogs = [ w['gf'] for w in GMOs ]
+
+
+
 gmof = np.mean([g['gf'] for g in GMOs])
-climatef = np.mean([g['gf'] for g in climate])
+climatef = np.mean([g['penalty'] for g in climate])
 vaccinef = np.mean([g['gf'] for g in vaccine])
 
 #import pdb; pdb.set_trace()
@@ -115,14 +125,14 @@ plt.savefig(str('penalty_vs_fog.png'))
 plt.close()
 
 plt.clf()
-axes.set_title('gunning fog complexity versus page rank')
+axes.set_title('gunning fog complexity versus page rank in climate')
 plt.xlabel('page rank')
 plt.ylabel('gunning fog')
-plt.scatter(ranks,fogss,label="scrapped data points")
+plt.scatter(climate_ranks,climate_fogs,label="scrapped data points")
 #plt.scatter(spk,fogk,label="reference points")
 plt.legend(loc="upper left")
 fig.tight_layout()
-plt.savefig(str('gf_vs_page_rank.png'))
+plt.savefig(str('gf_vs_page_rank_climate.png'))
 plt.close()
 '''
 Word Complexity Project:

@@ -47,17 +47,13 @@ from textstat.textstat import textstat
 
 
 
-# params are defined in a seperate file, as they are prone to changing,
-# yet, different programs draw on them, better to have to only change them in one
-# place not three.
-# Local imports
 from SComplexity.utils import black_string, english_check, comp_ratio, science_string
 
 DEBUG = False
 
-# word limit smaller than 4000 gets product/merchandise sites.
+# word limit smaller than 1000 gets product/merchandise sites.
 def text_proc(corpus, urlDat = {}, WORD_LIM = 1000):
-    #remove unreadable characters
+    #r emove unreadable characters
     corpus = corpus.replace("-", " ") #remove characters that nltk can't read
     textNum = re.findall(r'\d', corpus) #locate numbers that nltk cannot see to analyze
     tokens = word_tokenize(corpus)
@@ -67,13 +63,16 @@ def text_proc(corpus, urlDat = {}, WORD_LIM = 1000):
     urlDat['wcount'] = textstat.lexicon_count(str(tokens))
     word_lim = bool(urlDat['wcount']  > WORD_LIM)
 
+    # Word limits can be used to filter out product merchandise websites, which otherwise dominate scraped results.
+    # Search engine business model is revenue orientated, so most links will be for merchandise.
+
     try:
         urlDat['english'] = english_check(corpus)
         urlDat['science'] = science_string(sc)
     except:
         urlDat['english'] = True
         urlDat['science'] = False
-        #server_error = bool(not black_string(corpus))
+        # robot_detected = bool(not black_string(corpus))
 
     # The post modern essay generator is so obfuscated, that ENGLISH classification fails, and this criteria needs to be relaxed.
 
@@ -92,8 +91,19 @@ def text_proc(corpus, urlDat = {}, WORD_LIM = 1000):
         # long file lengths lead to big deltas.
 
         try:
+            # Rationale this metric.
+            # Different papers and diffferent scientific concepts,
+            # incur very different degrees of irreducible complexity
+            # intrinsic to the complexity of the concepts they are tasked with communicating.
+
+            # Assumption 1: the stanford analysis is too basic to accomodate for differences in
+            # intrinsic complexity of concepts
+            # Assumption 2: Information theory may be sensitive to intrinsic irreducible complexit
+
             urlDat['info_density'] =  comp_ratio(corpus)
-            #scaled_density = urlDat['info_density'] * (1.0/urlDat['wcount'])
+
+            # Fudge factor:
+            # The log should be moved to plotting.
             scaled_density = -1.0 * abs(np.log(urlDat['info_density'] * (1.0/urlDat['wcount'])))
 
             urlDat['scaled_info_density'] = scaled_density
@@ -122,7 +132,7 @@ def text_proc(corpus, urlDat = {}, WORD_LIM = 1000):
         # many unique words, and does not yield high compression savings.
         # Good writing should not be obfucstated either. The reading level is a check for obfucstation.
         # The resulting metric is a balance of concision, low obfucstation, expression.
-        penalty = (urlDat['standard'] + urlDat['gf'])/2.0  + abs(urlDat['sp']) + abs(urlDat['ss']) # +float(scaled_density)
+        penalty = urlDat['standard']  + abs(urlDat['sp']) + abs(urlDat['ss']) # +float(scaled_density)
         urlDat['penalty'] = penalty
     return urlDat
 

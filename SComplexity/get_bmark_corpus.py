@@ -1,13 +1,13 @@
 import os
 from bs4 import BeautifulSoup
-from crawl import collect_pubs
 import os.path
 import pickle
 import numpy as np
 
-from crawl import FetchResource
-from t_analysis import text_proc
-from utils_and_paramaters import black_string
+from SComplexity.crawl import FetchResource
+from SComplexity.t_analysis import text_proc
+from SComplexity.utils import black_string
+from SComplexity.crawl import collect_pubs
 
 peter = str('https://academic.oup.com/beheco/article-abstract/29/1/264/4677340')
 xkcd_self_sufficient = str('http://splasho.com/upgoer5/library.php')
@@ -17,13 +17,20 @@ simple_science = str('https://www.bnl.gov/newsroom/news.php?a=23678')
 pmeg = str('http://www.elsewhere.org/pomo/') # Note this is so obfuscated, even the english language classifier rejects it.
 
 try:
-    #assert 1 == 2
-    assert os.path.isfile('benchmarks.p')
-    with open('benchmarks.p','rb') as f:
+    assert os.path.isfile('../BenchmarkCorpus/benchmarks.p')
+    with open('../BenchmarkCorpus/benchmarks.p','rb') as f:
         benchmarks = pickle.load(f)
-        [ (sj,sjtext),(hss,hsr),(xkcd,xkcdr),(sow,sowr)] = benchmarks
-
+        #[ (sj,sjtext),(hss,hsr),(xkcd,xkcdr),(sow,sowr)] = benchmarks
+        [ (pm,pmr),(hss,hsr),(xkcd,xkcdr),(sow,sowr),(klpdfp,klpdf)] = benchmarks
 except:
+    klpd = '../BenchmarkCorpus/planning_document.txt'
+    #urlDat = {'link':'githublink'}
+    klpdf = open(klpd)
+    strText = klpdf.read()
+    urlDat = {'link':'local_resource'}
+
+    klpdfp = text_proc(strText,urlDat, WORD_LIM = 100)
+
     # Hardest to read,
     fr = FetchResource(pmeg)
     pmr = fr.run()
@@ -46,13 +53,13 @@ except:
     urlDat = {'link':high_standard}
     hss = text_proc(hsr,urlDat, WORD_LIM = 100)
 
-
-    benchmarks = [ (pm,pmeg),(hss,hsr),(xkcd,xkcdr),(sow,sowr)]
+    benchmarks = [ (pm,pmr),(hss,hsr),(xkcd,xkcdr),(sow,sowr),(klpdfp,klpd)]
 
     with open('benchmarks.p','wb') as f: pickle.dump(benchmarks,f)
-
-ranked = [('post modern essay generator',pm),('upgoer5_corpus',xkcd),('the readability of science decr over time', hss), ('science of writing',sow)]
+'''
+ranked = [('post modern essay generator',pm),('upgoer5_corpus',xkcd),('the readability of science decr over time', hss), ('science of writing',sow), ('planning_document',klpdfp)]
 #winners.append(('simple_science',ss),('sarah_jarvis',sj),('melanie_jarvis',mj),)
 winners = sorted(ranked, key=lambda w: w[1]['penalty'])
 
 with open('benchmarks_ranked.p','wb') as f: pickle.dump(winners,f)
+'''

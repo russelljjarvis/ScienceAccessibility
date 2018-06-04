@@ -14,14 +14,12 @@ from SComplexity.analysis import Analysis
 # naturally sort a list of files, as machine sorted is not the desired file list hierarchy.
 # Note this mess could be avoided if I simply stored the mined content somewhere else.
 files = natsorted(glob.glob(str(os.getcwd())+'/results_dir/*.p'))
-#files = [ f for f in files if not str('unraveled_links.p') in str(f) ]
-#files = [ f for f in files if not str('winners.p') in str(f) ]
-#files = [ f for f in files if not str('benchmarks.p') in str(f) ]
-#files = [ f for f in files if not str('benchmarks_ranked.p') in str(f) ]
+
 
 
 A = Analysis(files)
-A.get_bench()
+# A.get_bench() may need debugging
+
 urlDats = A.cas()
 with open('unraveled_links.p','wb') as handle:
     pickle.dump(urlDats,handle)
@@ -60,9 +58,9 @@ from pylab import rcParams
 
 known = [ w for w in winners if 'page_rank' not in w.keys()  ]
 labels = [ k['link'] for k in known ]
+import pdb; pdb.set_trace()
 
 labels = ['upgoer5','Science of Writing','ROFSTDOT','post modern EG']
-
 
 
 scraped = [ w for w in winners if 'page_rank' in w.keys()  ]

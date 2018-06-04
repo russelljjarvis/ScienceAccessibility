@@ -93,7 +93,9 @@ def text_proc(corpus, urlDat = {}, WORD_LIM = 2000):
 
         try:
             urlDat['info_density'] =  comp_ratio(corpus)
-            scaled_density = urlDat['info_density'] * (1.0/urlDat['wcount'])
+            #scaled_density = urlDat['info_density'] * (1.0/urlDat['wcount'])
+            scaled_density = -1.0 * abs(np.log(urlDat['info_density'] * (1.0/urlDat['wcount'])))
+
             urlDat['scaled_info_density'] = scaled_density
         except:
             #imputated value how?

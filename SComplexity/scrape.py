@@ -13,6 +13,7 @@ import os
 from delver import Crawler
 from bs4 import BeautifulSoup
 import pickle
+import _pickle as cPickle #Using cPickle will result in performance gains
 from GoogleScraper import scrape_with_config, GoogleSearchError
 
 

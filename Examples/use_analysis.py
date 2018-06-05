@@ -16,17 +16,12 @@ from pylab import rcParams
 import pickle
 from SComplexity.analysis import Analysis
 import pandas as pd
-#
-# naturally sort a list of files, as machine sorted is not the desired file list hierarchy.
-# Note this mess could be avoided if I simply stored the mined content somewhere else.
-files = natsorted(glob.glob(str(os.getcwd())+'/results_dir/*.p'))
 
-A = Analysis(files)
-reference = A.get_reference_web()# may need debugging
+FILES = natsorted(glob.glob(str(os.getcwd())+'/results_dir/*.p'))
+A = Analysis(FILES, min_word_length = 200)
+reference = A.get_reference_web()
 urlDats = A.cas()
 
-#urlDats = list(filter(lambda url: len(url) > 4 , urlDats))
-#known = list(filter(lambda url: str('query') not in url.keys(), urlDats))
 labels = [ w['link'] for w in reference ]
 
 scraped = list(filter(lambda url: str('query') in url.keys(), urlDats))
@@ -35,19 +30,14 @@ fogss = [ w['gf'] for w in scraped ]
 infos = [ w['scaled_info_density'] for w in scraped ]
 ranks = [ w['page_rank'] for w in scraped ]
 
-
-#urlDats = list(filter(lambda url: str('penalty') in url.keys(), urlDats))
-'''
 by_query = {}
 by_query['reference'] = {}
 by_query['reference']['sp'] = [ w['sp'] for w in reference ]
 by_query['reference']['standard'] = [ w['standard'] for w in known ]
 by_query['reference']['scaled_info_density'] = [ w['scaled_info_density'] for w in known ]
-'''
+
 keys = list(set([ s['query'] for s in urlDats ]))
 
-
-#def plot_frame(key):
 for key in keys:
     by_query[key] = {}
     by_query[key]['urlDats'] = list(filter(lambda url: str(key) == url['query'], scraped))
@@ -66,10 +56,14 @@ for key in keys:
     plt.xlabel('sentiment')
     plt.ylabel('standard')
     df = pd.DataFrame({'complexity': by_query[key]['standards'],'sentiment': by_query[key]['sp']})
-    ref = pd.DataFrame({'complexity': [ w['standard'] for w in reference ],'sentiment': [ w['sp'] for w in reference ]})
+    ##
+    # Uncomment to compare to reference data points.
+    ##
+
+    # ref = pd.DataFrame({'complexity': [ w['standard'] for w in reference ],'sentiment': [ w['sp'] for w in reference ]})
+    # ax = sns.regplot(x="complexity",y="sentiment", data=ref, ax=ax)
 
     ax = sns.regplot(x="complexity",y="sentiment", data=df, ax=ax)
-    ax = sns.regplot(x="complexity",y="sentiment", data=ref, ax=ax)
 
     legend = ax.legend(loc='upper center', shadow=True)
     plt.legend(loc="upper left")
@@ -87,7 +81,7 @@ for key in keys:
     plt.legend(loc="upper left")
     plt.savefig('rank_vs_complexity{0}.png'.format(key))
     plt.close()
-    return
+#    return
 #_ = list(map(plot_frame,keys))
 #for key in keys:
 
@@ -161,7 +155,8 @@ Word Complexity Project:
 
 General hypothesis: The language that scientists and many science educators use online is more complex than language used by non-scientists and science deniers.
 
-Problem: This leads to the most readable and findable information being potentially less accurate (especially regarding controversial issues), while the most accurate information is likely more difficult to find in searches and will have less impact.
+Problem: This leads to the most readable and findable information being potentially less accurate (especially regarding controversial issues),
+while the most accurate information is likely more difficult to find in searches and will have less impact.
 
 1. Text complexity vs. site ranking within and between searches
 Are simpler texts ranking higher in Google?

@@ -17,26 +17,29 @@ def print_best_text(f):
     se_b, page_rank, link, category, buffer = link_tuple
     return buffer
 
-def convert_and_score(f):
-    urlDat = {}
-    b = os.path.getsize(f)
-    link_tuple = pickle.load(open(f,'rb'))
-    se_b, page_rank, link, category, buffer = link_tuple
-    if type(buffer) is not type(None):
-        urlDat = { 'link':link,'page_rank':page_rank,'se':se_b,'query':category,'file':f }
-        urlDat = text_proc(buffer,urlDat)
-    return urlDat
-
 
 
 class Analysis(object):
-    def __init__(self,files, urlDats=None):
+    def __init__(self,files, min_word_length = 200, urlDats=None):
         self.files = files
         self.urlDats = urlDats
+        self.mwl = min_word_length
+
+    def convert_and_score(self,f):
+        urlDat = {}
+        b = os.path.getsize(f)
+        link_tuple = pickle.load(open(f,'rb'))
+        se_b, page_rank, link, category, buffer = link_tuple
+        if type(buffer) is not type(None):
+            urlDat = { 'link':link,'page_rank':page_rank,'se':se_b,'query':category,'file':f }
+
+            urlDat = text_proc(buffer,urlDat, WORD_LIM = self.mwl)
+
+    return urlDat
 
     def cas(self):
         grid = db.from_sequence(self.files,npartitions=8)
-        urlDats = list(db.map(convert_and_score,grid).compute())
+        urlDats = list(db.map(self.convert_and_score,grid).compute())
         urlDats = list(filter(lambda url: len(list(url))>3, urlDats))
         urlDats = list(filter(lambda url: len(list(url.keys()))>3, urlDats))
         urlDats = list(filter(lambda url: str('penalty') in url.keys(), urlDats))
@@ -44,7 +47,14 @@ class Analysis(object):
             urlDats.extend(self.urlDats)
         return urlDats
 
-    def get_bench(self):
+    def get_reference_web(self):
+        from SComplexity.scrape import SW
+
+        known_corpus = []
+        from SComplexity.get_bmark_corpus import get_bmarks
+        return get_bmarks()
+
+    def get_reference_pickle(self):
         known_corpus = []
         from SComplexity.get_bmark_corpus import get_bmarks
         return get_bmarks()

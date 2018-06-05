@@ -52,7 +52,7 @@ from SComplexity.utils import black_string, english_check, comp_ratio, science_s
 DEBUG = False
 
 # word limit smaller than 1000 gets product/merchandise sites.
-def text_proc(corpus, urlDat = {}, WORD_LIM = 1000):
+def text_proc(corpus, urlDat = {}, WORD_LIM = 100):
     #r emove unreadable characters
     corpus = corpus.replace("-", " ") #remove characters that nltk can't read
     textNum = re.findall(r'\d', corpus) #locate numbers that nltk cannot see to analyze
@@ -72,49 +72,42 @@ def text_proc(corpus, urlDat = {}, WORD_LIM = 1000):
     except:
         urlDat['english'] = True
         urlDat['science'] = False
-        # robot_detected = bool(not black_string(corpus))
 
     # The post modern essay generator is so obfuscated, that ENGLISH classification fails, and this criteria needs to be relaxed.
     not_empty = bool(len(tokens) != 0)
     if not_empty and urlDat['english'] and word_lim: #  and server_error:
 
-        ##frequency distribtuion of text
         tokens = [ w.lower() for w in tokens if w.isalpha() ]
-        fdist = FreqDist(tokens) #frequency distribution of words only
+        #fdist = FreqDist(tokens) #frequency distribution of words only
         # The larger the ratio of unqiue words to repeated words the more colourful the language.
         lexicon = textstat.lexicon_count(corpus, True)
         urlDat['uniqueness'] = len(set(tokens))/float(len(tokens))
-        #urlDat['other_uniqueness'] = lexicon/len(tokens)
         # It's harder to have a good unique ratio in a long document, as 'and', 'the' and 'a', will dominate.
         # big deltas mean redudancy/sparse information/information/density
 
-        # long file lengths lead to big deltas.
+        # Rationale this metric.
+        # Different papers and diffferent scientific concepts,
+        # incur very different degrees of irreducible complexity
+        # intrinsic to the complexity of the concepts they are tasked with communicating.
 
-        try:
-            # Rationale this metric.
-            # Different papers and diffferent scientific concepts,
-            # incur very different degrees of irreducible complexity
-            # intrinsic to the complexity of the concepts they are tasked with communicating.
+        # Assumption 1: the stanford analysis is too basic to accomodate for differences in
+        # intrinsic complexity of concepts
+        # Assumption 2: Information theory may be sensitive to intrinsic irreducible complexit
 
-            # Assumption 1: the stanford analysis is too basic to accomodate for differences in
-            # intrinsic complexity of concepts
-            # Assumption 2: Information theory may be sensitive to intrinsic irreducible complexit
+        urlDat['info_density'] =  comp_ratio(corpus)
 
-            urlDat['info_density'] =  comp_ratio(corpus)
+        # Fudge factor:
+        # The log should be moved to plotting.
+        scaled_density = -1.0 * abs(np.log(urlDat['info_density'] * (1.0/urlDat['wcount'])))
 
-            # Fudge factor:
-            # The log should be moved to plotting.
-            scaled_density = -1.0 * abs(np.log(urlDat['info_density'] * (1.0/urlDat['wcount'])))
-
-            urlDat['scaled_info_density'] = scaled_density
-        except:
-            #imputated value how?
-            scaled_density = 10.0 #urlDat['info_density'] * (1.0/urlDat['wcount'])
+        urlDat['scaled_info_density'] = scaled_density
 
         #Sentiment and Subjectivity analysis
         testimonial = TextBlob(corpus)
         urlDat['sp'] = testimonial.sentiment.polarity
         urlDat['ss'] = testimonial.sentiment.subjectivity
+        urlDat['gf'] = textstat.gunning_fog(corpus)
+
         # explanation of metrics
         # https://github.com/shivam5992/textstat
 
@@ -124,7 +117,6 @@ def text_proc(corpus, urlDat = {}, WORD_LIM = 1000):
         except:
             urlDat['standard']  = float(standard_[0:1])
 
-        urlDat['gf'] = textstat.gunning_fog(corpus)
         # special sauce
         # Good writing should be readable, objective, concise.
         # The writing should be articulate/expressive enough not to have to repeat phrases,

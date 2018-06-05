@@ -14,51 +14,40 @@ from pylab import rcParams
 
 
 import pickle
-from SComplexity.scrape import SW
 from SComplexity.analysis import Analysis
-
+import pandas as pd
 #
 # naturally sort a list of files, as machine sorted is not the desired file list hierarchy.
 # Note this mess could be avoided if I simply stored the mined content somewhere else.
 files = natsorted(glob.glob(str(os.getcwd())+'/results_dir/*.p'))
 
 A = Analysis(files)
-benchmark = A.get_bench()# may need debugging
+reference = A.get_reference_web()# may need debugging
 urlDats = A.cas()
-urlDats.extend(benchmark)
-# winners = sorted(urlDats, key=lambda w: w['penalty'])   # sort by age
 
-urlDats = list(filter(lambda url: len(url) < 4 , urlDats))
-
-known = list(filter(lambda url: str('query') not in url.keys(), urlDats))
-labels = [ w['link'] for w in known ]
+#urlDats = list(filter(lambda url: len(url) > 4 , urlDats))
+#known = list(filter(lambda url: str('query') not in url.keys(), urlDats))
+labels = [ w['link'] for w in reference ]
 
 scraped = list(filter(lambda url: str('query') in url.keys(), urlDats))
-
 sps = [ w['sp'] for w in scraped ]
-
 fogss = [ w['gf'] for w in scraped ]
-
-
 infos = [ w['scaled_info_density'] for w in scraped ]
-
-
-#penaltys = [ w['penalty'] for w in scraped ]
-#penaltyk = [ w['penalty'] for w in known ]
-
-
 ranks = [ w['page_rank'] for w in scraped ]
 
 
 #urlDats = list(filter(lambda url: str('penalty') in url.keys(), urlDats))
+'''
 by_query = {}
-by_query['known'] = {}
-by_query['known']['sp'] = [ w['sp'] for w in known ]
-by_query['known']['standard_'] = [ w['standard'] for w in known ]
-by_query['known']['scaled_info_density'] = [ w['scaled_info_density'] for w in known ]
+by_query['reference'] = {}
+by_query['reference']['sp'] = [ w['sp'] for w in reference ]
+by_query['reference']['standard'] = [ w['standard'] for w in known ]
+by_query['reference']['scaled_info_density'] = [ w['scaled_info_density'] for w in known ]
+'''
+keys = list(set([ s['query'] for s in urlDats ]))
 
-keys = set([ s['query'] for s in scraped ]) #list(filter(lambda url: str('GMO') == url['query'], scraped))
 
+#def plot_frame(key):
 for key in keys:
     by_query[key] = {}
     by_query[key]['urlDats'] = list(filter(lambda url: str(key) == url['query'], scraped))
@@ -66,39 +55,45 @@ for key in keys:
     by_query[key]['standards'] = [ w['standard'] for w in by_query[key]['urlDats'] ]
     by_query[key]['penalty'] = [ w['penalty'] for w in by_query[key]['urlDats'] ]
     by_query[key]['sp'] = [ w['sp'] for w in by_query[key]['urlDats'] ]
+    by_query[key]['s_mean'] = np.mean([ w['standard'] for w in by_query[key]['urlDats'] ])
+    by_query[key]['s_std'] = np.std([ w['standard'] for w in by_query[key]['urlDats'] ])
 
     by_query[key]['scaled_info_density'] = [ w['scaled_info_density'] for w in by_query[key]['urlDats'] ]
     plt.clf()
-    axes.set_title('sent versus fog')
-    plt.xlabel('sent density')
-    plt.ylabel('gunning fog')
-    plt.scatter(by_query[key]['sp'],by_query[key]['standards'],label="scrapped data points")
-    plt.scatter(infok,fogk,label="reference data points")
+    fig, ax = plt.subplots()
+
+    plt.title('sent versus complexity')
+    plt.xlabel('sentiment')
+    plt.ylabel('standard')
+    df = pd.DataFrame({'complexity': by_query[key]['standards'],'sentiment': by_query[key]['sp']})
+    ref = pd.DataFrame({'complexity': [ w['standard'] for w in reference ],'sentiment': [ w['sp'] for w in reference ]})
+
+    ax = sns.regplot(x="complexity",y="sentiment", data=df, ax=ax)
+    ax = sns.regplot(x="complexity",y="sentiment", data=ref, ax=ax)
+
+    legend = ax.legend(loc='upper center', shadow=True)
     plt.legend(loc="upper left")
-    fig.tight_layout()
-    plt.savefig(str('info_density_vs_complexity.png'))
+
+    plt.savefig('sentiment_vs_complexity{0}.png'.format(key))
     plt.close()
 
 
-#by_query[]
-#GMOs = list(filter(lambda url: str('GMO') == url['query'], scraped))
-#climate = list(filter(lambda url: str('climate') in url['query'], scraped))
-#vaccine = list(filter(lambda url: str('Vaccine') in url['query'], scraped))
-
-climate_ranks = [ w['page_rank'] for w in climate ]
-climate_fogs = [ w['gf'] for w in climate ]
-vaccine_ranks = [ w['page_rank'] for w in vaccine ]
-vaccine_fogs = [ w['gf'] for w in vaccine ]
-GMO_ranks = [ w['page_rank'] for w in GMOs ]
-GMO_fogs = [ w['gf'] for w in GMOs ]
-
-
-
-gmof = np.mean([g['gf'] for g in GMOs])
-climatef = np.mean([g['penalty'] for g in climate])
-vaccinef = np.mean([g['gf'] for g in vaccine])
+    plt.clf()
+    plt.title('rank versus complexity')
+    plt.xlabel('rank')
+    plt.ylabel('standard')
+    df = pd.DataFrame({'complexity':by_query[key]['standards'],'rank':by_query[key]['ranks']})
+    ax = sns.regplot(x="complexity",y="rank", data=df)
+    plt.legend(loc="upper left")
+    plt.savefig('rank_vs_complexity{0}.png'.format(key))
+    plt.close()
+    return
+#_ = list(map(plot_frame,keys))
+#for key in keys:
 
 
+#import pdb; pdb.set_trace()
+'''
 plt.clf()
 fig, axes = plt.subplots()
 axes.set_title('gunning fog complexity versus sentiment polarity')
@@ -161,7 +156,7 @@ plt.legend(loc="upper left")
 fig.tight_layout()
 plt.savefig(str('gf_vs_page_rank_climate.png'))
 plt.close()
-'''
+
 Word Complexity Project:
 
 General hypothesis: The language that scientists and many science educators use online is more complex than language used by non-scientists and science deniers.

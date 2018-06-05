@@ -14,6 +14,7 @@ from bs4 import BeautifulSoup
 import pickle
 import _pickle as cPickle #Using cPickle will result in performance gains
 from GoogleScraper import scrape_with_config, GoogleSearchError
+import dask.bag as db
 
 from SComplexity.crawl import convert_pdf_to_txt
 from SComplexity.crawl import print_best_text
@@ -162,7 +163,10 @@ class SW(object):
             if len(links) > 0:
                 buffer = None
                 get_links = ((se_,index,link,category,buffer) for index, link in enumerate(links) )
-                _ = list(map(process,get_links))
+                b = db.from_sequence(get_links,npartitions=8)
+                # grid = db.from_sequence(self.files,npartitions=8)
+                _ = list(db.map(process,b).compute())
+                # _ = list(map(process,get_links))
 
         except GoogleSearchError as e:
             print(e)

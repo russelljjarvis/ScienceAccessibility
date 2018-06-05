@@ -104,15 +104,31 @@ def denver_to_text(url):
     return text
 
 
+def collect_pubs(scholar_url):
+    print(scholar_url)
+    try:
+        crude_html = denver_to_text(scholar_url)
+    except:
+        driver.get(self.scholar_url)
+        crude_html = driver.page_source
+    soup = BeautifulSoup(crude_html, 'html.parser')
+    links = []
+    for link in soup.findAll('a', attrs={'href': re.compile("https://")}):
+        check_out = link.get('href')
+        #if '/citations?' in check_out:
+        links.append(check_out)
+    return links
+"""Depricated
+Grabs a web resource and stores it in the target directory.
+
 class FetchResource():
 
-    """Grabs a web resource and stores it in the target directory.
 
     Args:
         attrs: A directory where to save the resource.
         urls: A bunch of urls to grab
 
-    """
+
     def __init__(self, url):
         if type(url) is type(str('')):
             self.url = url
@@ -149,19 +165,4 @@ class FetchResource():
         #driver.quit()
         return str_text
 
-
-
-def collect_pubs(scholar_url):
-    print(scholar_url)
-    try:
-        crude_html = denver_to_text(scholar_url)
-    except:
-        driver.get(self.scholar_url)
-        crude_html = driver.page_source
-    soup = BeautifulSoup(crude_html, 'html.parser')
-    links = []
-    for link in soup.findAll('a', attrs={'href': re.compile("https://")}):
-        check_out = link.get('href')
-        #if '/citations?' in check_out:
-        links.append(check_out)
-    return links
+"""

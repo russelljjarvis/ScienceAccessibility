@@ -75,8 +75,8 @@ def text_proc(corpus, urlDat = {}, WORD_LIM = 1000):
         # robot_detected = bool(not black_string(corpus))
 
     # The post modern essay generator is so obfuscated, that ENGLISH classification fails, and this criteria needs to be relaxed.
-
-    if len(tokens) != 0 and urlDat['english'] and word_lim: #  and server_error:
+    not_empty = bool(len(tokens) != 0)
+    if not_empty and urlDat['english'] and word_lim: #  and server_error:
 
         ##frequency distribtuion of text
         tokens = [ w.lower() for w in tokens if w.isalpha() ]

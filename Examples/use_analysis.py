@@ -26,36 +26,64 @@ A = Analysis(files)
 benchmark = A.get_bench()# may need debugging
 urlDats = A.cas()
 urlDats.extend(benchmark)
-winners = sorted(urlDats, key=lambda w: w['penalty'])   # sort by age
+# winners = sorted(urlDats, key=lambda w: w['penalty'])   # sort by age
 
+urlDats = list(filter(lambda url: len(url) < 4 , urlDats))
 
 known = list(filter(lambda url: str('query') not in url.keys(), urlDats))
 labels = [ w['link'] for w in known ]
 
 scraped = list(filter(lambda url: str('query') in url.keys(), urlDats))
 
-fogss = [ w['gf'] for w in scraped ]
 sps = [ w['sp'] for w in scraped ]
 
-spk = [ w['sp'] for w in known ]
-fogk = [ w['gf'] for w in known ]
+fogss = [ w['gf'] for w in scraped ]
+
 
 infos = [ w['scaled_info_density'] for w in scraped ]
-infok = [ w['scaled_info_density'] for w in known ]
 
 
-penaltys = [ w['penalty'] for w in scraped ]
-penaltyk = [ w['penalty'] for w in known ]
+#penaltys = [ w['penalty'] for w in scraped ]
+#penaltyk = [ w['penalty'] for w in known ]
 
 
 ranks = [ w['page_rank'] for w in scraped ]
 
 
 #urlDats = list(filter(lambda url: str('penalty') in url.keys(), urlDats))
+by_query = {}
+by_query['known'] = {}
+by_query['known']['sp'] = [ w['sp'] for w in known ]
+by_query['known']['standard_'] = [ w['standard'] for w in known ]
+by_query['known']['scaled_info_density'] = [ w['scaled_info_density'] for w in known ]
 
-GMOs = list(filter(lambda url: str('GMO') == url['query'], scraped))
-climate = list(filter(lambda url: str('climate') in url['query'], scraped))
-vaccine = list(filter(lambda url: str('Vaccine') in url['query'], scraped))
+keys = set([ s['query'] for s in scraped ]) #list(filter(lambda url: str('GMO') == url['query'], scraped))
+
+for key in keys:
+    by_query[key] = {}
+    by_query[key]['urlDats'] = list(filter(lambda url: str(key) == url['query'], scraped))
+    by_query[key]['ranks'] = [ w['page_rank'] for w in by_query[key]['urlDats'] ]
+    by_query[key]['standards'] = [ w['standard'] for w in by_query[key]['urlDats'] ]
+    by_query[key]['penalty'] = [ w['penalty'] for w in by_query[key]['urlDats'] ]
+    by_query[key]['sp'] = [ w['sp'] for w in by_query[key]['urlDats'] ]
+
+    by_query[key]['scaled_info_density'] = [ w['scaled_info_density'] for w in by_query[key]['urlDats'] ]
+    plt.clf()
+    axes.set_title('sent versus fog')
+    plt.xlabel('sent density')
+    plt.ylabel('gunning fog')
+    plt.scatter(by_query[key]['sp'],by_query[key]['standards'],label="scrapped data points")
+    plt.scatter(infok,fogk,label="reference data points")
+    plt.legend(loc="upper left")
+    fig.tight_layout()
+    plt.savefig(str('info_density_vs_complexity.png'))
+    plt.close()
+
+
+#by_query[]
+#GMOs = list(filter(lambda url: str('GMO') == url['query'], scraped))
+#climate = list(filter(lambda url: str('climate') in url['query'], scraped))
+#vaccine = list(filter(lambda url: str('Vaccine') in url['query'], scraped))
 
 climate_ranks = [ w['page_rank'] for w in climate ]
 climate_fogs = [ w['gf'] for w in climate ]
@@ -70,7 +98,6 @@ gmof = np.mean([g['gf'] for g in GMOs])
 climatef = np.mean([g['penalty'] for g in climate])
 vaccinef = np.mean([g['gf'] for g in vaccine])
 
-#import pdb; pdb.set_trace()
 
 plt.clf()
 fig, axes = plt.subplots()

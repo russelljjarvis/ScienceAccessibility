@@ -16,9 +16,7 @@ from pylab import rcParams
 import pickle
 from SComplexity.analysis import Analysis
 import pandas as pd
-#
-# naturally sort a list of files, as machine sorted is not the desired file list hierarchy.
-# Note this mess could be avoided if I simply stored the mined content somewhere else.
+
 files = natsorted(glob.glob(str(os.getcwd())+'/results_dir/*.p'))
 
 A = Analysis(files)
@@ -36,14 +34,6 @@ infos = [ w['scaled_info_density'] for w in scraped ]
 ranks = [ w['page_rank'] for w in scraped ]
 
 
-#urlDats = list(filter(lambda url: str('penalty') in url.keys(), urlDats))
-'''
-by_query = {}
-by_query['reference'] = {}
-by_query['reference']['sp'] = [ w['sp'] for w in reference ]
-by_query['reference']['standard'] = [ w['standard'] for w in known ]
-by_query['reference']['scaled_info_density'] = [ w['scaled_info_density'] for w in known ]
-'''
 keys = list(set([ s['query'] for s in urlDats ]))
 
 
@@ -88,11 +78,7 @@ for key in keys:
     plt.savefig('rank_vs_complexity{0}.png'.format(key))
     plt.close()
     return
-#_ = list(map(plot_frame,keys))
-#for key in keys:
 
-
-#import pdb; pdb.set_trace()
 '''
 plt.clf()
 fig, axes = plt.subplots()

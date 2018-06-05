@@ -20,11 +20,9 @@ import pandas as pd
 files = natsorted(glob.glob(str(os.getcwd())+'/results_dir/*.p'))
 
 A = Analysis(files)
-reference = A.get_reference_web()# may need debugging
+reference = A.get_reference_web()# needs internet connection
 urlDats = A.cas()
 
-#urlDats = list(filter(lambda url: len(url) > 4 , urlDats))
-#known = list(filter(lambda url: str('query') not in url.keys(), urlDats))
 labels = [ w['link'] for w in reference ]
 
 scraped = list(filter(lambda url: str('query') in url.keys(), urlDats))
@@ -36,8 +34,6 @@ ranks = [ w['page_rank'] for w in scraped ]
 
 keys = list(set([ s['query'] for s in urlDats ]))
 
-
-#def plot_frame(key):
 for key in keys:
     by_query[key] = {}
     by_query[key]['urlDats'] = list(filter(lambda url: str(key) == url['query'], scraped))

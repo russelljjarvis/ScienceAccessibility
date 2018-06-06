@@ -81,12 +81,7 @@ for key in keys:
     plt.legend(loc="upper left")
     plt.savefig('rank_vs_complexity{0}.png'.format(key))
     plt.close()
-#    return
-#_ = list(map(plot_frame,keys))
-#for key in keys:
 
-
-#import pdb; pdb.set_trace()
 '''
 plt.clf()
 fig, axes = plt.subplots()

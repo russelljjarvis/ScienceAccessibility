@@ -4,6 +4,9 @@
 # Russell Jarvis
 # https://github.com/russelljjarvis/
 # rjjarvis@asu.edu
+
+# Patrick McGurrin
+# patrick.mcgurrin@gmail.com
 import selenium
 from pyvirtualdisplay import Display
 from selenium import webdriver

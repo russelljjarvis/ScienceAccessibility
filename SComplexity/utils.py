@@ -4,37 +4,15 @@
 # https://github.com/russelljjarvis/
 # rjjarvis@asu.edu
 
-#from .t_analysis import text_proc
-#from .crawl import html_to_txt, convert_pdf_to_txt
+# Patrick McGurrin
+# patrick.mcgurrin@gmail.com
+
 import os
 
 import pycld2 as cld2
 import lzma
 
-'''
-from .t_analysis import text_proc
 
-
-def convert_to_text(fileName):
-    b = os.path.getsize(fileName)
-    urlDat = {}
-    if b>250: # this is just to prevent reading in of incomplete data.
-        try:
-            file = open(fileName)
-            if str('.html') in fileName:
-                text = html_to_txt(file)
-            elif str('.pdf') in fileName:
-                text = convert_pdf_to_txt(file)
-            else:
-                return None
-            #file.close()
-            urlDat = {'link':fileName}
-            urlDat = text_proc(text,urlDat)
-            print(urlDat)
-        except:
-            pass
-    return urlDat
-'''
 def comp_ratio(test_string):
     c = lzma.LZMACompressor()
     bytes_in = bytes(test_string,'utf-8')

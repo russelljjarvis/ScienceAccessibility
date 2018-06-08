@@ -36,6 +36,8 @@ useragent = UserAgent()
 profile = webdriver.FirefoxProfile()
 
 def rotate_profiles():
+    # keep changing the header associated with browser requests to SE
+    # Its hard to tell if its a convincing masquarade but it's low cost.
     driver = None
     profile.set_preference("general.useragent.override", useragent.random)
     profile.set_preference("javascript.enabled", True)
@@ -114,18 +116,21 @@ def process(item):
 
 
 class SW(object):
-    def __init__(self,iterable,nlinks=10):
+    def __init__(self,sengines,sterms,nlinks=10):
         self.NUM_LINKS = nlinks
-        self.iterable = iterable
         self.links = None
         if not os.path.exists('results_dir'):
             os.makedirs('results_dir')
+        self.iterable = [ (v,category) for category in sterms for v in sengines.values() ]
+        random.shuffle(self.iterable)
+
+
 
     def scrapelandtext(self,fi):
         se_,category = fi
         config = {}
         driver = rotate_profiles()
-    	# This code block, jumps over fence one (the search engine as a gatekeeper)
+    	# This code block, jumps over gate one (the search engine as a gatekeeper)
         # google scholar or wikipedia is not supported by google scraper
         # duckduckgo bang expansion can be used as to access engines that GS does not support.
         # for example twitter etc
@@ -166,10 +171,9 @@ class SW(object):
             if len(links) > 0:
                 buffer = None
                 get_links = ((se_,index,link,category,buffer) for index, link in enumerate(links) )
+                # map over the function in parallel since it's 2018
                 b = db.from_sequence(get_links,npartitions=8)
-                # grid = db.from_sequence(self.files,npartitions=8)
                 _ = list(db.map(process,b).compute())
-                # _ = list(map(process,get_links))
 
         except GoogleSearchError as e:
             print(e)

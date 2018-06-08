@@ -16,26 +16,14 @@ from SComplexity.scrape import SW
 
 LINKSTOGET= 10 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
 
+SENGINES = {0:"google",1:"yahoo",2:"duckduckgo",3:"wikipedia",4:"scholar",5:"bing"}
 
-def engine_dict_list():
-    se = {0:"google",1:"yahoo",2:"duckduckgo",3:"wikipedia",4:"scholar",5:"bing"}
-    return se, list(se.values())
-
-def search_params():
-    SEARCHLIST = ["evolution","cancer", "photosysnthesis",'climate change','Vaccines','Transgenic','GMO','Genetically Modified Organism','reality TV', 'unicorn versus brumby', 'football soccer', 'prancercise philosophy', 'play dough delicious deserts']
-    return SEARCHLIST, se, LINKSTOGET
+SEARCHLIST = ["evolution","cancer", "photosysnthesis",'climate change','Vaccines','Transgenic','GMO','Genetically Modified Organism','reality TV', 'unicorn versus brumby', 'football soccer', 'prancercise philosophy', 'play dough delicious deserts']
 # Use this variable to later reconcile file names with urls
 # As there was no, quick and dirty way to bind the two togethor here, without complicating things later.
-se, _ = engine_dict_list()
-
-SEARCHLIST, se, LINKSTOGET = search_params()
-flat_iter = [ (se[b],category) for category in SEARCHLIST for b in range(0,4) ]
-
-# traverse this list randomly as hierarchial traversal may be a bot give away.
-random.shuffle(flat_iter)
-
+# traverse this list randomly as repititve query sequences eminating from simple incremental traversal may be a robot give away.
 # configure the scrapers with search terms and search indexs
-sw = SW(flat_iter,nlinks=15)
+sw = SW(SENGINES,SEARCHLIST,nlinks=15)
 # This line is sufficient to execute the scrapper:
 sw.run()
 import use_analysis

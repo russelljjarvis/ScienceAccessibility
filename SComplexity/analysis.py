@@ -38,6 +38,7 @@ class Analysis(object):
     return urlDat
 
     def cas(self):
+        # Do in parallel as it is 2018
         grid = db.from_sequence(self.files,npartitions=8)
         urlDats = list(db.map(self.convert_and_score,grid).compute())
         urlDats = list(filter(lambda url: len(list(url))>3, urlDats))
@@ -49,8 +50,6 @@ class Analysis(object):
 
     def get_reference_web(self):
         from SComplexity.scrape import SW
-
-        known_corpus = []
         from SComplexity.get_bmark_corpus import get_bmarks
         return get_bmarks()
 

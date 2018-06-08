@@ -104,4 +104,4 @@ RUN pip install -e .
 RUN python -c "import SComplexity"
 RUN python -c "from SComplexity import t_analysis, utils"
 WORKDIR $HOME
-ENTRYPOINT /bin/bash
+ENTRYPOINT /bin/bash user_input.sh; /bin/bash

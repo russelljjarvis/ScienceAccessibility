@@ -92,14 +92,13 @@ def text_proc(corpus, urlDat = {}, WORD_LIM = 100):
 
         # Assumption 1: the stanford analysis is too basic to accomodate for differences in
         # intrinsic complexity of concepts
-        # Assumption 2: Information theory may be sensitive to intrinsic irreducible complexit
+        # Assumption 2: Information theory may be sensitive to intrinsic irreducible complexity
 
         urlDat['info_density'] =  comp_ratio(corpus)
 
         # Fudge factor:
         # The log should be moved to plotting.
-        scaled_density = -1.0 * abs(np.log(urlDat['info_density'] * (1.0/urlDat['wcount'])))
-
+        scaled_density = -1.0 * abs(urlDat['info_density'] * (1.0/urlDat['wcount']))
         urlDat['scaled_info_density'] = scaled_density
 
         #Sentiment and Subjectivity analysis

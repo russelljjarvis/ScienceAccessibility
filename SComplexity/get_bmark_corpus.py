@@ -8,6 +8,8 @@ from SComplexity.t_analysis import text_proc
 from SComplexity.utils import black_string
 from SComplexity.crawl import collect_pubs
 from SComplexity.scrape import convert
+from SComplexity.crawl import convert_pdf_to_txt
+
 
 from delver import Crawler
 C = Crawler()
@@ -15,7 +17,6 @@ import requests
 import dask.bag as db
 
 
-from SComplexity.crawl import convert_pdf_to_txt
 
 
 def process(link):

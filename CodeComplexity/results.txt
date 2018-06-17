@@ -1,0 +1,44 @@
+/opt/conda/lib/python3.6/site-packages/nltk/twitter/__init__.py:20: UserWarning: The twython library has not been installed. Some functionality from the twitter package will not be available.
+  warnings.warn("The twython library has not been installed. "
+('\n'
+ '    1 - 5 A (low risk - simple block)\n'
+ '    6 - 10 B (low risk - well structured and stable block)\n'
+ '    11 - 20 C (moderate risk - slightly complex block)\n'
+ '    21 - 30 D (more than moderate risk - more complex block)\n'
+ '    31 - 40 E (high risk - complex block, alarming)\n'
+ '    41+ F (very high risk - error-prone, unstable block)\n'
+ '    ')
+'cognitive complexity of function <function text_proc at 0x7f26d29a8400> is: 9'
+'Good work keep writing modular, readable, and simple code.'
+('\n'
+ '    1 - 5 A (low risk - simple block)\n'
+ '    6 - 10 B (low risk - well structured and stable block)\n'
+ '    11 - 20 C (moderate risk - slightly complex block)\n'
+ '    21 - 30 D (more than moderate risk - more complex block)\n'
+ '    31 - 40 E (high risk - complex block, alarming)\n'
+ '    41+ F (very high risk - error-prone, unstable block)\n'
+ '    ')
+('cognitive complexity of function <function scrapelandtext at 0x7f26d29a8378> '
+ 'is: 5')
+'Good work keep writing modular, readable, and simple code.'
+('\n'
+ '    1 - 5 A (low risk - simple block)\n'
+ '    6 - 10 B (low risk - well structured and stable block)\n'
+ '    11 - 20 C (moderate risk - slightly complex block)\n'
+ '    21 - 30 D (more than moderate risk - more complex block)\n'
+ '    31 - 40 E (high risk - complex block, alarming)\n'
+ '    41+ F (very high risk - error-prone, unstable block)\n'
+ '    ')
+'cognitive complexity of function <function slat_ at 0x7f26d29a82f0> is: 7'
+'Good work keep writing modular, readable, and simple code.'
+('\n'
+ '    1 - 5 A (low risk - simple block)\n'
+ '    6 - 10 B (low risk - well structured and stable block)\n'
+ '    11 - 20 C (moderate risk - slightly complex block)\n'
+ '    21 - 30 D (more than moderate risk - more complex block)\n'
+ '    31 - 40 E (high risk - complex block, alarming)\n'
+ '    41+ F (very high risk - error-prone, unstable block)\n'
+ '    ')
+'cognitive complexity of function <function text_proc at 0x7f26d29a8400> is: 9'
+'Good work keep writing modular, readable, and simple code.'
+jovyan@1c8cb2f0367f:~/CodeComplexity$

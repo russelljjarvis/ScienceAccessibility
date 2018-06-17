@@ -53,7 +53,7 @@ ENV DBUS_SESSION_BUS_ADDRESS=/dev/null
 
 ##
 # Programatic Firefox driver that can bind with selenium/gecko.
-## 
+##
 
 RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.18.0/geckodriver-v0.18.0-linux64.tar.gz
 RUN sudo tar -xvzf geckodriver-v0.18.0-linux64.tar.gz
@@ -77,7 +77,7 @@ RUN sudo apt-get install --fix-missing
 # A lot of academic text is still in PDF, so better get some tools to deal with that.
 RUN sudo /opt/conda/bin/pip install git+https://github.com/pdfminer/pdfminer.six.git
 
-# The only difference to the official version, is download throttling. Self throttling actually speeds up execution, 
+# The only difference to the official version, is download throttling. Self throttling actually speeds up execution,
 # as it prevents getting booted off by SE servers, which can mean restarting scrape. Thankfuly GoogleScraper has good awareness
 # of what it has already done.
 RUN sudo /opt/conda/bin/pip install git+https://github.com/russelljjarvis/GoogleScraper.git
@@ -90,7 +90,7 @@ WORKDIR $HOME
 # If this doesn't work maybe do it post hoc in an interactive shell.
 # RUN python -c "import nltk; nltk.download('punkt'); nltk.download('averaged_perceptron_tagger')"
 
-RUN sudo /opt/conda/bin/pip install -U natsort 
+RUN sudo /opt/conda/bin/pip install -U natsort
 RUN sudo /opt/conda/bin/pip install -U pycld2
 RUN sudo /opt/conda/bin/pip install -U beautifulsoup4
 RUN sudo /opt/conda/bin/pip install -U git+https://github.com/nuncjo/Delver
@@ -100,8 +100,18 @@ RUN timeout 2s python
 
 ADD . .
 RUN sudo chown -R jovyan .
-RUN pip install -e . 
+RUN pip install -e .
 RUN python -c "import SComplexity"
 RUN python -c "from SComplexity import t_analysis, utils"
 WORKDIR $HOME
+
+RUN touch user_input.sh
+RUN echo "#!/bin/bash" >> user_input.sh
+RUN echo "read -n1 -p 'Run WC (r) or Develop the code, interactive Docker shell (s) ? [r,s]' doit
+RUN echo "case $doit in" >> user_input.sh
+RUN echo "  r|R) echo 'execute WC'; sudo /opt/conda/bin/pip install -e .; cd Examples; ipython -i use_scrape.py ;;" >> user_input.sh
+RUN echo "  s|S) echo 'interactive shell' ;;" >> user_input.sh
+RUN echo "  *) echo dont know ;;" >> user_input.sh
+RUN echo "esac" >> user_input.sh
+RUN cat user_input.sh
 ENTRYPOINT /bin/bash user_input.sh; /bin/bash

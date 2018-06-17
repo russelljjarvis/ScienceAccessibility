@@ -124,7 +124,28 @@ class SW(object):
         self.iterable = [ (v,category) for category in sterms for v in sengines.values() ]
         random.shuffle(self.iterable)
 
+    def slat_(self,config):
+        try:
+            search = scrape_with_config(config)
 
+            links = []
+            for serp in search.serps:
+                print(serp)
+                links.extend([link.link for link in serp.links])
+            # This code block jumps over gate two
+            # The (possibly private, or hosted server as a gatekeeper).
+            if len(links) > self.NUM_LINKS: links = links[0:self.NUM_LINKS]
+            if len(links) > 0:
+                buffer = None
+                get_links = ((se_,index,link,category,buffer) for index, link in enumerate(links) )
+                # map over the function in parallel since it's 2018
+                b = db.from_sequence(get_links,npartitions=8)
+                _ = list(db.map(process,b).compute())
+
+        except GoogleSearchError as e:
+            print(e)
+            return None
+        print('done scraping')
 
     def scrapelandtext(self,fi):
         se_,category = fi
@@ -158,27 +179,7 @@ class SW(object):
 
         config['output_filename'] = '{0}_{1}.csv'.format(category,se_)
 
-        try:
-            search = scrape_with_config(config)
-
-            links = []
-            for serp in search.serps:
-                print(serp)
-                links.extend([link.link for link in serp.links])
-            # This code block jumps over gate two
-            # The (possibly private, or hosted server as a gatekeeper).
-            if len(links) > self.NUM_LINKS: links = links[0:self.NUM_LINKS]
-            if len(links) > 0:
-                buffer = None
-                get_links = ((se_,index,link,category,buffer) for index, link in enumerate(links) )
-                # map over the function in parallel since it's 2018
-                b = db.from_sequence(get_links,npartitions=8)
-                _ = list(db.map(process,b).compute())
-
-        except GoogleSearchError as e:
-            print(e)
-            return None
-        print('done scraping')
+        self.slat_(config)
         return
 
     def run(self):

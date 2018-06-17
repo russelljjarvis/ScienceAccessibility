@@ -32,10 +32,8 @@ class Analysis(object):
         se_b, page_rank, link, category, buffer = link_tuple
         if type(buffer) is not type(None):
             urlDat = { 'link':link,'page_rank':page_rank,'se':se_b,'query':category,'file':f }
-
             urlDat = text_proc(buffer,urlDat, WORD_LIM = self.mwl)
-
-    return urlDat
+        return urlDat
 
     def cas(self):
         # Do in parallel as it is 2018

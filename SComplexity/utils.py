@@ -14,6 +14,10 @@ import lzma
 
 
 def comp_ratio(test_string):
+    # If we are agnostic about what the symbols are, and we just observe the relative frequency of each symbol.
+    # The distribution of frequencies would make some texts harder to compress, even if we don't know what the symbols mean.
+    # http://www.beamreach.org/data/101/Science/processing/Nora/Papers/Information%20entropy%20o%20fjumpback%20whale%20songs.pdf
+
     c = lzma.LZMACompressor()
     bytes_in = bytes(test_string,'utf-8')
     bytes_out = c.compress(bytes_in)
@@ -119,3 +123,71 @@ def black_string(check_with):
     if check in check_with:
         return True
     return False
+
+
+###
+# Duplicate for complexity measures only
+###
+
+def slat_(self,config):
+    try:
+        search = scrape_with_config(config)
+
+        links = []
+        for serp in search.serps:
+            print(serp)
+            links.extend([link.link for link in serp.links])
+        # This code block jumps over gate two
+        # The (possibly private, or hosted server as a gatekeeper).
+        if len(links) > self.NUM_LINKS: links = links[0:self.NUM_LINKS]
+        if len(links) > 0:
+            buffer = None
+            get_links = ((se_,index,link,category,buffer) for index, link in enumerate(links) )
+            # map over the function in parallel since it's 2018
+            b = db.from_sequence(get_links,npartitions=8)
+            _ = list(db.map(process,b).compute())
+
+    except GoogleSearchError as e:
+        print(e)
+        return None
+    print('done scraping')
+
+###
+# Duplicate for complexity measures only
+###
+
+
+def scrapelandtext(self,fi):
+    se_,category = fi
+    config = {}
+    driver = rotate_profiles()
+	# This code block, jumps over gate one (the search engine as a gatekeeper)
+    # google scholar or wikipedia is not supported by google scraper
+    # duckduckgo bang expansion can be used as to access engines that GS does not support.
+    # for example twitter etc
+
+    config['keyword'] = str(category)
+
+    if str('scholar') in se_: config['keyword'] = '!scholar {0}'.format(category)
+    if str('wiki') in se_ : config['keyword'] = '!wiki {0}'.format(category)
+    if str('scholar') in se_ or str('wiki') in se_:
+        config['search_engines'] = 'duckduckgo'
+    else:
+        config['search_engines'] = se_
+
+    config['scrape_method'] = 'selenium'
+    config['num_pages_for_keyword'] = 1
+    config['use_own_ip'] = True
+    config['sel_browser'] = 'firefox'
+    config['do_caching'] = False # bloat warning.
+
+    # Google scrap + selenium implements a lot of human centric browser masquarading tools.
+    # Search Engine: 'who are you?' code: 'I am an honest human centric browser, and certainly note a robot surfing in the nude'. Search Engine: 'good, here are some pages'.
+    # Time elapses and the reality is exposed just like in 'the Emperors New Clothes'.
+    # The file crawl.py contains methods for crawling the scrapped links.
+    # For this reason, a subsequent action, c.download (crawl download ) is ncessary.
+
+    config['output_filename'] = '{0}_{1}.csv'.format(category,se_)
+
+    self.slat_(config)
+    return

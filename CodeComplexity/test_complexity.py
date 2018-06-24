@@ -1,5 +1,7 @@
-# home work 1 for data analysis course
-# System Admin:
+
+import inspect
+import types
+
 def ccomplexity_rater(other_function):
     '''
     This function calculates the radian cyclomatic complexity of other functions.
@@ -25,10 +27,7 @@ def ccomplexity_rater(other_function):
     pp = pprint.PrettyPrinter(indent=4)
     ranking_guide = '''
     1 - 5 A (low risk - simple block)
-    6 - 10 B (low risk - well structured and stable block)
-    11 - 20 C (moderate risk - slightly complex block)
-    21 - 30 D (more than moderate risk - more complex block)
-    31 - 40 E (high risk - complex block, alarming)
+    ...
     41+ F (very high risk - error-prone, unstable block)
     '''
     pp.pprint(ranking_guide)
@@ -40,8 +39,15 @@ def ccomplexity_rater(other_function):
         pp.pprint('Consider rewriting your code it might be hard for you and others to understand, and therefore maintain')
     else:
         pp.pprint('Good work keep writing modular, readable, and simple code.')
-
     return actual_value
-from SComplexity import analysis, t_analysis, scrape
-from SComplexity import utils
-actual_values = list(map(ccomplexity_rater,[t_analysis.text_proc, utils.scrapelandtext, utils.slat_, analysis.text_proc]))
+
+def is_function(object):
+    return isinstance(object, types.FunctionType) 
+
+def rank_all_sub_module_functions(provided_module):
+    sc_objects = [v for k,v in inspect.getmembers(provided_module) ]
+    ranks = []
+    for sc in sc_objects:
+        if is_function(sc):
+            ranks.append(ccomplexity_rater(sc))
+    return ranks

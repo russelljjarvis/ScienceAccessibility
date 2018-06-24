@@ -77,10 +77,14 @@ RUN sudo apt-get install --fix-missing
 # A lot of academic text is still in PDF, so better get some tools to deal with that.
 RUN sudo /opt/conda/bin/pip install git+https://github.com/pdfminer/pdfminer.six.git
 
+# maybe faster and safer to use official version with more modest query sizes:
+RUN sudo /opt/conda/bin/pip install git+https://github.com/NikolaiT/GoogleScraper.igt
+
 # The only difference to the official version, is download throttling. Self throttling actually speeds up execution,
 # as it prevents getting booted off by SE servers, which can mean restarting scrape. Thankfuly GoogleScraper has good awareness
 # of what it has already done.
-RUN sudo /opt/conda/bin/pip install git+https://github.com/russelljjarvis/GoogleScraper.git
+# RUN sudo /opt/conda/bin/pip install git+https://github.com/russelljjarvis/GoogleScraper.git
+
 WORKDIR $HOME
 RUN python -c "import nltk; nltk.download('punkt'); nltk.download('averaged_perceptron_tagger')"
 RUN sudo chown -R jovyan $HOME
@@ -91,6 +95,8 @@ WORKDIR $HOME
 # RUN python -c "import nltk; nltk.download('punkt'); nltk.download('averaged_perceptron_tagger')"
 
 RUN sudo /opt/conda/bin/pip install -U natsort
+RUN sudo /opt/conda/bin/pip install -U radon
+
 RUN sudo /opt/conda/bin/pip install -U pycld2
 RUN sudo /opt/conda/bin/pip install -U beautifulsoup4
 RUN sudo /opt/conda/bin/pip install -U git+https://github.com/nuncjo/Delver

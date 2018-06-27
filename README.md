@@ -21,9 +21,9 @@ Once that is done an analysis program `use_analysis` is then called to run an an
 
 Given pre-existing data (pickled files consisiting of raw text contents), the analysis file can also be run on it's own by executing: `python use_analysis.py`. To analyse the scraped texts, the jupyter notebook: `vstrl.ipynb` also contains idioms for plotting and analysis based on scrapped data, although it is not maintained. The package bokeh, facilitates pretty interactive plots with data point mouse over data metrics.
 
-Another file `Examples/use_code_complexity.py` reports back about the complexity of the code, used to analyse the complexity of language. Not the code complexity analysis is not thorough enough to include third party modules that were heavily utilized in the analysis, however, the principle of code complexity, with an application limited scope is generally applied in our approach, as it's not desirable to use obfuscated code, as a tool used to advocate for simple language.
+Another file `Examples/use_code_complexity.py` reports back about the complexity of the code, used to analyse the complexity of language. This code complexity analysis is not thorough enough to include third party modules that were heavily utilized in the analysis, however, the principle of code complexity, with an application limited scope is generally applied in our approach, as it's obviously not desirable to use obfuscated code as a tool used to advocate for simple language.
 
-Note: a lot of complexity in the code base comes from the need to masquerade as a non bot web surfer.
+A lot of complexity in the code base comes from the need to masquerade as a non bot web surfer.
 It's a bad idea to surf naked ie to only use: `urllib`, or `requests`, as these resource grabbers are sure fire bot give aways.
 `Selenium`, `Google Scrape` (uses Selenium), and `delver Crawler`, are the surfing clothes I used; they work together to prolong a period feigned humanhood.
 The downloading of pdf's as opposed to html usually occurs in the nude, but this does not seem to cause any problems.

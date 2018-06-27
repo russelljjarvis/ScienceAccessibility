@@ -113,7 +113,7 @@ WORKDIR $HOME
 
 RUN touch user_input.sh
 RUN echo "#!/bin/bash" >> user_input.sh
-RUN echo "read -n1 -p 'Run WC (r) or Develop the code, interactive Docker shell (s) ? [r,s]' doit
+RUN echo "read -n1 -p 'Run WC (r) or Develop the code, interactive Docker shell (s) ? [r,s]' doit" >> user_input.sh
 RUN echo "case $doit in" >> user_input.sh
 RUN echo "  r|R) echo 'execute WC'; sudo /opt/conda/bin/pip install -e .; cd Examples; ipython -i use_scrape.py ;;" >> user_input.sh
 RUN echo "  s|S) echo 'interactive shell' ;;" >> user_input.sh

@@ -1,10 +1,13 @@
 
+
 import inspect
 import types
 import pandas as pd
 import inspect, radon, pprint
 from radon.complexity import cc_rank, cc_visit
-    
+class CodeComplexity(object):
+    def __init__(self):
+        pass
 def ccomplexity_rater(other_function):
     '''
     This function calculates the radian cyclomatic complexity of other functions.

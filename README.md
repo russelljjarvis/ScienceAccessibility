@@ -2,11 +2,8 @@
 
 Executing these files is not yet straight forward, as the execution environment is dependency heavy. Docker is used to solve non trivial software dependency issues where possible.
 
-If docker is installed on the base OS, git clone this repository, and assuming the file build.sh is chmod +x , run: `bash build.sh` to perform the dockerbuild. To run the jupyter notebook over docker:
-
-
-* Enter the docker enivornment interactively in one of two ways, via a bash shell, or via an ipython notebook or
-launch via BASH in Linux as follows:
+If docker is installed on the base OS, git clone this repository, and assuming the file build.sh is chmod +x , run: `bash build.sh` to perform the dockerbuild. To run the jupyter notebook over docker, enter the docker enivornment interactively in one of two ways, via a bash shell, or via an ipython notebook or
+and then launch python via BASH in Linux as follows:
 
 ```
 'cd this_path; sudo docker run -it -v this_path:/home/jovyan slc'
@@ -18,14 +15,13 @@ Maybe define a bash alias, if this command get's too big and old.
 alias drvt='cd this_path; sudo docker run -v this_path:/home/jovyan slc'
 ```
 
-And that is how I invoke it:
+To Run the project, you need navigaate to the Examples directory and then execute:
+`python use_scrape.py`, which scrapes search engines for parameters defined in that file.
+Once that is done an analysis program `use_analysis` is then called to run an analysis on the scraped text. This program generates some simple figures. The figures are very basic, and they act to function only as proof of concept.
 
-To Run the project, one needs to execute the files navigate to the Examples directory and execute:
-`python use_scrape.py`,
-scrapes search engines for parameters defined in that file.
-Afterw execute: `python use_analysis.py`. To analyse the scraped texts.
+Given pre-existing data (pickled files consisiting of raw text contents), the analysis file can also be run on it's own by executing: `python use_analysis.py`. To analyse the scraped texts. The jupyter notebook: `vstrl.ipynb` also contains idioms for plotting and analysis based on scrapped data, although it is not maintained. The package bokeh, facilitates pretty interactive plots with data point mouse over data metrics.
 
-The jupyter notebook: vstrl.ipynb contains idioms for plotting and analysis based on scrapped data, although it is not maintained.
+Another file 
 
 Note: a lot of complexity in the code base comes from the need to masquerade as a non bot web surfer.
 It's a bad idea to surf naked ie to only use: `urllib`, or `requests`, as these resource grabbers are sure fire bot give aways.

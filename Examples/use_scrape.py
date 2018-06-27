@@ -27,3 +27,4 @@ sw = SW(SENGINES,SEARCHLIST,nlinks=15)
 # This line is sufficient to execute the scrapper:
 sw.run()
 import use_analysis
+import use_code_complexity

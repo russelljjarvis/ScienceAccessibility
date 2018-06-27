@@ -126,7 +126,8 @@ def black_string(check_with):
 
 
 ###
-# Duplicate for complexity measures only
+# Duplicate for radon cognitive complexity measures only
+# Real method is found in SComplexity scrape Object
 ###
 
 def slat_(self,config):
@@ -152,8 +153,10 @@ def slat_(self,config):
         return None
     print('done scraping')
 
+
 ###
-# Duplicate for complexity measures only
+# Duplicate for radon cognitive complexity measures only
+# Real method is found in SComplexity scrape Object
 ###
 
 

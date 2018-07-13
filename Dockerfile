@@ -78,21 +78,16 @@ RUN sudo apt-get install --fix-missing
 RUN sudo /opt/conda/bin/pip install git+https://github.com/pdfminer/pdfminer.six.git
 
 # maybe faster and safer to use official version with more modest query sizes:
-RUN sudo /opt/conda/bin/pip install git+https://github.com/NikolaiT/GoogleScraper.igt
+# RUN sudo /opt/conda/bin/pip install git+https://github.com/NikolaiT/GoogleScraper.igt
 
 # The only difference to the official version, is download throttling. Self throttling actually speeds up execution,
 # as it prevents getting booted off by SE servers, which can mean restarting scrape. Thankfuly GoogleScraper has good awareness
 # of what it has already done.
-# RUN sudo /opt/conda/bin/pip install git+https://github.com/russelljjarvis/GoogleScraper.git
+RUN sudo /opt/conda/bin/pip install git+https://github.com/russelljjarvis/GoogleScraper.git
 
 WORKDIR $HOME
 RUN python -c "import nltk; nltk.download('punkt'); nltk.download('averaged_perceptron_tagger')"
 RUN sudo chown -R jovyan $HOME
-
-WORKDIR $HOME
-# Probably the reason doing this here is ineffective, is just a execution path problem.
-# If this doesn't work maybe do it post hoc in an interactive shell.
-# RUN python -c "import nltk; nltk.download('punkt'); nltk.download('averaged_perceptron_tagger')"
 
 RUN sudo /opt/conda/bin/pip install -U natsort
 RUN sudo /opt/conda/bin/pip install -U radon

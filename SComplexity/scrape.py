@@ -137,6 +137,8 @@ class SW(object):
             if len(links) > self.NUM_LINKS: links = links[0:self.NUM_LINKS]
             if len(links) > 0:
                 buffer = None
+                se_ = config['search_engines']
+                category = config['keyword']
                 get_links = ((se_,index,link,category,buffer) for index, link in enumerate(links) )
                 # map over the function in parallel since it's 2018
                 b = db.from_sequence(get_links,npartitions=8)
@@ -159,8 +161,8 @@ class SW(object):
         config['keyword'] = str(category)
 
         if str('scholar') in se_: config['keyword'] = '!scholar {0}'.format(category)
-        if str('wiki') in se_ : config['keyword'] = '!wiki {0}'.format(category)
-        if str('scholar') in se_ or str('wiki') in se_:
+        if str('wikipedia') in se_ : config['keyword'] = '!wiki {0}'.format(category)
+        if str('scholar') in se_ or str('wikipedia') in se_:
             config['search_engines'] = 'duckduckgo'
         else:
             config['search_engines'] = se_

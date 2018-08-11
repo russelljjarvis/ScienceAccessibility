@@ -45,7 +45,7 @@ def get_bmarks():
     the_science_of_writing = str('https://cseweb.ucsd.edu/~swanson/papers/science-of-writing.pdf')
     pmeg = str('http://www.elsewhere.org/pomo/') # Note this is so obfuscated, even the english language classifier rejects it.
     links = [xkcd_self_sufficient,high_standard,the_science_of_writing,pmeg ]
-
+    royal = '../BenchmarkCorpus/royal.txt'
     klpd = '../BenchmarkCorpus/planning_document.txt'
     klpdf = open(klpd)
     strText = klpdf.read()
@@ -57,6 +57,29 @@ def get_bmarks():
     urlDats.append(klpdfp)
     print(urlDats)
 
+    klpdr = open(royal)
+    strText = klpdr.read()
+    urlDat = {'link':'local_resource_royal'}
+
+    klpdfr = text_proc(strText,urlDat, WORD_LIM = 100)
+    print(klpdfr)
+    grid = db.from_sequence(links,npartitions=8)
+    urlDats = list(db.map(process,grid).compute())
+    urlDats.append(klpdfp)
+
+
     with open('benchmarks.p','wb') as f:
         pickle.dump(urlDats,f)
     return urlDats
+
+
+def check_self_contained(file_name):
+    royal = '../BenchmarkCorpus/' +str(file_name)
+    klpdr = open(royal)
+    strText = klpdr.read()
+    urlDat = {'link':'local_resource_royal'}
+    klpdfr = text_proc(strText,urlDat, WORD_LIM = 100)
+    return klpdfr
+
+urlDats = check_self_contained('royal.txt')
+#urlDats = get_bmarks()

@@ -19,78 +19,24 @@ import pandas as pd
 
 FILES = natsorted(glob.glob(str(os.getcwd())+'/results_dir/*.p'))
 A = Analysis(FILES, min_word_length = 200)
+reference = A.get_reference_web()
 urlDats = A.cas()
-print(urlDats)
+
+labels = [ w['link'] for w in reference ]
 
 scraped = list(filter(lambda url: str('query') in url.keys(), urlDats))
 sps = [ w['sp'] for w in scraped ]
 fogss = [ w['gf'] for w in scraped ]
 infos = [ w['scaled_info_density'] for w in scraped ]
 ranks = [ w['page_rank'] for w in scraped ]
-print(scraped)
 
 by_query = {}
-'''
-reference = A.get_reference_web()
-labels = [ w['link'] for w in reference ]
 by_query['reference'] = {}
 by_query['reference']['sp'] = [ w['sp'] for w in reference ]
-by_query['reference']['standard'] = [ w['standard'] for w in reference ]
-by_query['reference']['scaled_info_density'] = [ w['scaled_info_density'] for w in reference ]
-'''
+by_query['reference']['standard'] = [ w['standard'] for w in known ]
+by_query['reference']['scaled_info_density'] = [ w['scaled_info_density'] for w in known ]
+
 keys = list(set([ s['query'] for s in urlDats ]))
-science_keys = [ 'evolution', 'photosysnthesis' ,'Transgenic', 'GMO', 'climate change', 'cancer', 'Vaccines', 'Genetically Modified Organism']
-culture_keys = ['reality TV', 'prancercise philosophy',  'play dough delicious deserts', 'unicorn versus brumby', 'football soccer']
-
-by_query[str('science')] = {}
-by_query[str('science')]['urlDats'] = list(filter(lambda url: url['query'] in science_keys, scraped))
-
-by_query[str('culture')] = {}
-by_query[str('culture')]['urlDats'] = list(filter(lambda url: url['query'] in culture_keys, scraped))
-
-
-fogss_culture = [ w['gf'] for w in by_query[str('culture')]['urlDats'] ]
-ranks_culture = [ w['page_rank'] for w in by_query[str('culture')]['urlDats'] ]
-
-
-
-fogss_science = [ w['gf'] for w in by_query[str('science')]['urlDats'] ]
-ranks_science = [ w['page_rank'] for w in by_query[str('science')]['urlDats'] ]
-
-
-plt.clf()
-fig, ax = plt.subplots()
-
-
-
-plt.clf()
-plt.title('culture rank versus complexity')
-plt.xlabel('rank')
-plt.ylabel('standard')
-df0 = pd.DataFrame({'complexity':fogss_culture,'rank':ranks_culture})
-ax = sns.regplot(x="rank", y="complexity", data=df0, x_estimator=np.mean, x_jitter=.1)
-plt.legend(loc="upper left")
-plt.savefig('culture_rank_vs_complexity.png')
-plt.close()
-
-
-plt.clf()
-plt.title('science rank versus complexity')
-plt.xlabel('rank')
-plt.ylabel('standard')
-df1 = pd.DataFrame({'complexity':fogss_science,'rank':ranks_science})
-ax = sns.regplot(x="rank", y="complexity", data=df1, x_estimator=np.mean, x_jitter=.1)
-plt.legend(loc="upper left")
-plt.savefig('science_rank_vs_complexity.png')
-plt.close()
-
-
-wiki = [ url['link'] for url in scraped if str('scholar') in url['link'] ]
-ses = [ url['se'] for url in scraped ]
-
-import pdb; pdb.set_trace()
-
-#exit
 
 for key in keys:
     by_query[key] = {}

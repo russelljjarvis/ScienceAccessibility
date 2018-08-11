@@ -16,7 +16,7 @@ from SComplexity.scrape import SW
 
 LINKSTOGET= 10 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
 
-SENGINES = {0:"google",1:"yahoo",2:"duckduckgo",3:"wikipedia",4:"scholar",5:"bing"}
+SENGINES = {0:"wikipedia",1:"google",2:"yahoo",3:"duckduckgo",4:"scholar",5:"bing"}
 
 SEARCHLIST = ["evolution","cancer", "photosysnthesis",'climate change','Vaccines','Transgenic','GMO','Genetically Modified Organism','reality TV', 'unicorn versus brumby', 'football soccer', 'prancercise philosophy', 'play dough delicious deserts']
 # Use this variable to later reconcile file names with urls

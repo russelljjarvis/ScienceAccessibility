@@ -124,6 +124,7 @@ def process(item):
     buffer_to_pickle(text)
     return
 
+import duckduckgo
 
 class SW(object):
     def __init__(self,sengines,sterms,nlinks=10):
@@ -144,6 +145,10 @@ class SW(object):
                 links.extend([link.link for link in serp.links])
             # This code block jumps over gate two
             # The (possibly private, or hosted server as a gatekeeper).
+            if len(links) == 0:# and config['search_engines'] == 'duckduckgo':
+                for link in duckduckgo.search(config['keyword'], max_results=self.NUM_LINKS):
+                   print(link)
+                   links.extend(link)
             if len(links) > self.NUM_LINKS: links = links[0:self.NUM_LINKS]
             if len(links) > 0:
                 buffer = None
@@ -152,8 +157,7 @@ class SW(object):
                 get_links = ((se_,index,link,category,buffer) for index, link in enumerate(links) )
                 # map over the function in parallel since it's 2018
                 b = db.from_sequence(get_links,npartitions=8)
-                _ = list(db.map(process,b).compute())
-
+                _ = list(b.map(process).compute())
         except GoogleSearchError as e:
             print(e)
             return None
@@ -196,5 +200,6 @@ class SW(object):
 
     def run(self):
         print(self.iterable)
+        self.iterable.insert(0,("duckduckgo",str("!wiki arbitary test")))
         _ = list(map(self.scrapelandtext,self.iterable))
         return

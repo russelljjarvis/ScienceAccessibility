@@ -120,4 +120,5 @@ WORKDIR $HOME
 # RUN echo "esac" >> user_input.sh
 # RUN cat user_input.sh
 # ENTRYPOINT /bin/bash user_input.sh; /bin/bash
+RUN pip install git+https://github.com/thibauts/duckduckgo
 ENTRYPOINT /bin/bash

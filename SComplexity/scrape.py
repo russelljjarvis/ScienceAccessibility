@@ -102,9 +102,19 @@ def url_to_text(link_tuple):
     return link_tuple
 
 def buffer_to_pickle(link_tuple):
-    se_b, page_rank, link, category, buffer = link_tuple
+    se_b, page_rank, link, category, buff = link_tuple
+    if str('!wiki') in category:
+        se_b = 'wikipedia'
+    
+    if str('!scholar') in category:
+        se_b = 'scholar'
+
+    link_tuple = se_b, page_rank, link, category, buff
+
     fname = 'results_dir/{0}_{1}_{2}.p'.format(category,se_b,page_rank)
-    if type(buffer) is not None:
+    print(fname,se_b)
+    
+    if type(buff) is not None:
         with open(fname,'wb') as f:
             pickle.dump(link_tuple,f)
     return

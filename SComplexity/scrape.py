@@ -24,7 +24,12 @@ from SComplexity.crawl import print_best_text
 from delver import Crawler
 C = Crawler()
 import requests
-import duckduckgo
+#import duckduckgo
+
+import requests
+#import scholar_scrape
+from SComplexity.crawl import collect_pubs
+from SComplexity.scholar_scrape import scholar
 
 
 
@@ -125,22 +130,18 @@ def process(item):
     buffer_to_pickle(text)
     return
 
-import requests
-import scholar_scrape
-from SComplexity.crawl import collect_pubs
 
 NUM_LINKS = 10
 
 def wiki_get(get_links):
     se_,index,link,category,buffer = get_links
-    url_of_links = str('https://en.wikipedia.org/w/index.php?search='+str(category))
+    url_of_links = str('https://en.wikipedia.org/w/index.php?search=')+str(category)
     links = collect_pubs(url_of_links)
     if len(links) > NUM_LINKS: links = links[0:NUM_LINKS]
     [ process((se_,index,l,category,buffer)) for index,l in enumerate(links) ]
 
 def search_scholar(get_links):
-    # from
-    # https://github.com/ckreibich/scholar.py/issues/80
+    # from https://github.com/ckreibich/scholar.py/issues/80
     se_,index,link,category,buffer = get_links
 
     querier = scholar.ScholarQuerier()
@@ -153,8 +154,6 @@ def search_scholar(get_links):
     querier.send_query(query)
     if len(links) > NUM_LINKS: links = links[0:NUM_LINKS]
     [ process((se_,index,l,category,buffer)) for index,l in enumerate(links) ]
-
-    #[ process((se_,index,l,category,buffer)) for l in links ]
 
 class SW(object):
     def __init__(self,sengines,sterms,nlinks=10):
@@ -240,6 +239,6 @@ class SW(object):
 
     def run(self):
         print(self.iterable)
-        self.iterable.insert(0,("duckduckgo",str("!wiki arbitrary test")))
+        self.iterable.insert(0,("duckduckgo",str("!scholar arbitrary test")))
         _ = list(map(self.scrapelandtext,self.iterable))
         return

@@ -106,7 +106,7 @@ def buffer_to_pickle(link_tuple):
     se_b, page_rank, link, category, buff = link_tuple
     if str('wiki') in category:
         se_b = 'wikipedia'
-    
+
     if str('scholar') in category:
         se_b = 'scholar'
 
@@ -114,7 +114,7 @@ def buffer_to_pickle(link_tuple):
 
     fname = 'results_dir/{0}_{1}_{2}.p'.format(category,se_b,page_rank)
     print(fname,se_b)
-    
+
     if type(buff) is not None:
         with open(fname,'wb') as f:
             pickle.dump(link_tuple,f)
@@ -126,29 +126,36 @@ def process(item):
     return
 
 import requests
-import scholar
-   
-def wiki_get(category):
-    links = requests.get('https://en.wikipedia.org/w/index.php?search='+str(category))
-    [ process(l) for l in links ]
-    pdb.set_trace()
+import scholar_scrape
+from SComplexity.crawl import collect_pubs
 
+NUM_LINKS = 10
 
-def search_scholar(search_phrase):
-    # from 
+def wiki_get(get_links):
+    se_,index,link,category,buffer = get_links
+    url_of_links = str('https://en.wikipedia.org/w/index.php?search='+str(category))
+    links = collect_pubs(url_of_links)
+    if len(links) > NUM_LINKS: links = links[0:NUM_LINKS]
+    [ process((se_,index,l,category,buffer)) for index,l in enumerate(links) ]
+
+def search_scholar(get_links):
+    # from
     # https://github.com/ckreibich/scholar.py/issues/80
+    se_,index,link,category,buffer = get_links
+
     querier = scholar.ScholarQuerier()
     settings = scholar.ScholarSettings()
     querier.apply_settings(settings)
     query = scholar.SearchScholarQuery()
-    
-    query.set_words(searchphrase)
+
+    query.set_words(category)
     links = query.get_url()
     querier.send_query(query)
-    pdb.set_trace()
+    if len(links) > NUM_LINKS: links = links[0:NUM_LINKS]
+    [ process((se_,index,l,category,buffer)) for index,l in enumerate(links) ]
 
-    process(links)
-    
+    #[ process((se_,index,l,category,buffer)) for l in links ]
+
 class SW(object):
     def __init__(self,sengines,sterms,nlinks=10):
         self.NUM_LINKS = nlinks
@@ -163,38 +170,34 @@ class SW(object):
             if str('wiki') in config['keyword']:
                 st_ = config['keyword'].split('!wiki')
                 search_term = st_[1]
-                wiki_get(search_term)
-                #visit_page = "https://en.wikipedia.org/wiki/"+search_term
-                #return
+                get_links = (str('wikipedia'),0,None,search_term,None)
+                wiki_get(get_links)
+
             elif str('scholar') in config['keyword']:
-                search_scholar(search_phrase)
+                st_ = config['keyword'].split('!scholar')
+                search_term = st_[1]
+                get_links = (str('scholar'),0,None,search_term,None)
+                search_scholar(get_links)
             else:
                 search = scrape_with_config(config)
+                links = []
+                for serp in search.serps:
+                    print(serp)
+                    links.extend([link.link for link in serp.links])
 
-            links = []
-            
-            for serp in search.serps:
-                print(serp)
-                links.extend([link.link for link in serp.links])
-            # This code block jumps over gate two
-            # The (possibly private, or hosted server as a gatekeeper).
-            if len(links) == 0:# and config['search_engines'] == 'duckduckgo':
-                print('hit')i
-                print(config['keyword'])
-                for link in duckduckgo.search(config['keyword'], max_results=self.NUM_LINKS):
-                   print(link, config['keyword'])
-                   if str("https://duck.co/help/company/advertising-and-affiliates") not in link:
-                       links.extend(link)
-            if len(links) > self.NUM_LINKS: links = links[0:self.NUM_LINKS]
-            if len(links) > 0:
-                print(links)
-                buffer = None
-                se_ = config['search_engines']
-                category = config['keyword']
-                get_links = ((se_,index,link,category,buffer) for index, link in enumerate(links) )
-                # map over the function in parallel since it's 2018
-                b = db.from_sequence(get_links,npartitions=8)
-                _ = list(b.map(process).compute())
+                # This code block jumps over gate two
+                # The (possibly private, or hosted server as a gatekeeper).
+                if len(links) > self.NUM_LINKS: links = links[0:self.NUM_LINKS]
+                if len(links) > 0:
+                    print(links)
+                    buffer = None
+                    se_ = config['search_engines']
+                    category = config['keyword']
+                    get_links = ((se_,index,link,category,buffer) for index, link in enumerate(links) )
+
+                    # map over the function in parallel since it's 2018
+                    b = db.from_sequence(get_links,npartitions=8)
+                    _ = list(b.map(process).compute())
         except GoogleSearchError as e:
             print(e)
             return None
@@ -237,6 +240,6 @@ class SW(object):
 
     def run(self):
         print(self.iterable)
-        self.iterable.insert(0,("duckduckgo",str("!wiki arbitary test")))
+        self.iterable.insert(0,("duckduckgo",str("!wiki arbitrary test")))
         _ = list(map(self.scrapelandtext,self.iterable))
         return

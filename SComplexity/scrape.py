@@ -135,6 +135,8 @@ def wiki_get(category):
 
 
 def search_scholar(search_phrase):
+    # from 
+    # https://github.com/ckreibich/scholar.py/issues/80
     querier = scholar.ScholarQuerier()
     settings = scholar.ScholarSettings()
     querier.apply_settings(settings)

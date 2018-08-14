@@ -24,6 +24,7 @@ from SComplexity.crawl import print_best_text
 from delver import Crawler
 C = Crawler()
 import requests
+import duckduckgo
 
 
 
@@ -103,10 +104,10 @@ def url_to_text(link_tuple):
 
 def buffer_to_pickle(link_tuple):
     se_b, page_rank, link, category, buff = link_tuple
-    if str('!wiki') in category:
+    if str('wiki') in category:
         se_b = 'wikipedia'
     
-    if str('!scholar') in category:
+    if str('scholar') in category:
         se_b = 'scholar'
 
     link_tuple = se_b, page_rank, link, category, buff
@@ -124,8 +125,28 @@ def process(item):
     buffer_to_pickle(text)
     return
 
-import duckduckgo
+import requests
+import scholar
+   
+def wiki_get(category):
+    links = requests.get('https://en.wikipedia.org/w/index.php?search='+str(category))
+    [ process(l) for l in links ]
+    pdb.set_trace()
 
+
+def search_scholar(search_phrase):
+    querier = scholar.ScholarQuerier()
+    settings = scholar.ScholarSettings()
+    querier.apply_settings(settings)
+    query = scholar.SearchScholarQuery()
+    
+    query.set_words(searchphrase)
+    links = query.get_url()
+    querier.send_query(query)
+    pdb.set_trace()
+
+    process(links)
+    
 class SW(object):
     def __init__(self,sengines,sterms,nlinks=10):
         self.NUM_LINKS = nlinks
@@ -137,20 +158,34 @@ class SW(object):
 
     def slat_(self,config):
         try:
-            search = scrape_with_config(config)
+            if str('wiki') in config['keyword']:
+                st_ = config['keyword'].split('!wiki')
+                search_term = st_[1]
+                wiki_get(search_term)
+                #visit_page = "https://en.wikipedia.org/wiki/"+search_term
+                #return
+            elif str('scholar') in config['keyword']:
+                search_scholar(search_phrase)
+            else:
+                search = scrape_with_config(config)
 
             links = []
+            
             for serp in search.serps:
                 print(serp)
                 links.extend([link.link for link in serp.links])
             # This code block jumps over gate two
             # The (possibly private, or hosted server as a gatekeeper).
             if len(links) == 0:# and config['search_engines'] == 'duckduckgo':
+                print('hit')i
+                print(config['keyword'])
                 for link in duckduckgo.search(config['keyword'], max_results=self.NUM_LINKS):
-                   print(link)
-                   links.extend(link)
+                   print(link, config['keyword'])
+                   if str("https://duck.co/help/company/advertising-and-affiliates") not in link:
+                       links.extend(link)
             if len(links) > self.NUM_LINKS: links = links[0:self.NUM_LINKS]
             if len(links) > 0:
+                print(links)
                 buffer = None
                 se_ = config['search_engines']
                 category = config['keyword']

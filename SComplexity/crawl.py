@@ -104,12 +104,12 @@ def denver_to_text(url):
     return text
 
 
-def collect_pubs(scholar_url):
-    print(scholar_url)
+def collect_pubs(url):
+    print(url)
     try:
-        crude_html = denver_to_text(scholar_url)
+        crude_html = denver_to_text(url)
     except:
-        driver.get(self.scholar_url)
+        driver.get(url)
         crude_html = driver.page_source
     soup = BeautifulSoup(crude_html, 'html.parser')
     links = []

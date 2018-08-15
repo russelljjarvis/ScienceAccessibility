@@ -55,7 +55,7 @@ driver = rotate_profiles()
 def pdf_to_txt(content):
     pdf = io.BytesIO(content.content)
     parser = PDFParser(pdf)
-    document = PDFDocument(parser, password=None) # this fails
+    document = PDFDocument(parser, password=None) 
     write_text = ''
     for page in PDFPage.create_pages(document):
         interpreter.process_page(page)
@@ -94,17 +94,17 @@ def convert(content,link):
     return text
 
 def url_to_text(link_tuple):
-    se_b, page_rank, link, category, buffer = link_tuple
+    se_b, page_rank, link, category, buff = link_tuple
     try:
         if str('pdf') not in link:
             content = C.open(link).content
-            buffer = convert(content,link)
+            buff = convert(content,link)
         else:
             pdf_file = requests.get(link, stream=True)
-            buffer = pdf_to_txt(pdf_file)
+            buff = pdf_to_txt(pdf_file)
     except:
-        buffer = None
-    link_tuple = ( se_b, page_rank, link, category, buffer )
+        buff = None
+    link_tuple = ( se_b, page_rank, link, category, buff )
     return link_tuple
 
 def buffer_to_pickle(link_tuple):
@@ -134,26 +134,26 @@ def process(item):
 NUM_LINKS = 10
 
 def wiki_get(get_links):
-    se_,index,link,category,buffer = get_links
+    # wikipedia is robot friendly
+    # surfraw is fine.
+    se_,index,link,category,buff = get_links
     url_of_links = str('https://en.wikipedia.org/w/index.php?search=')+str(category)
     links = collect_pubs(url_of_links)
     if len(links) > NUM_LINKS: links = links[0:NUM_LINKS]
-    [ process((se_,index,l,category,buffer)) for index,l in enumerate(links) ]
+    [ process((se_,index,l,category,buff)) for index,l in enumerate(links) ]
 
 def search_scholar(get_links):
     # from https://github.com/ckreibich/scholar.py/issues/80
-    se_,index,link,category,buffer = get_links
-
+    se_,index,category,category,buff = get_links
     querier = scholar.ScholarQuerier()
     settings = scholar.ScholarSettings()
     querier.apply_settings(settings)
     query = scholar.SearchScholarQuery()
-
     query.set_words(category)
     links = query.get_url()
     querier.send_query(query)
     if len(links) > NUM_LINKS: links = links[0:NUM_LINKS]
-    [ process((se_,index,l,category,buffer)) for index,l in enumerate(links) ]
+    [ process((se_,index,l,category,buff)) for index,l in enumerate(links) ]
 
 class SW(object):
     def __init__(self,sengines,sterms,nlinks=10):
@@ -166,17 +166,14 @@ class SW(object):
 
     def slat_(self,config):
         try:
-            if str('wiki') in config['keyword']:
-                st_ = config['keyword'].split('!wiki')
-                search_term = st_[1]
-                get_links = (str('wikipedia'),0,None,search_term,None)
+            if str('wiki') in config['search_engines']:
+                get_links = (str('wikipedia'),0,None,config['keyword'],None)
                 wiki_get(get_links)
-
-            elif str('scholar') in config['keyword']:
-                st_ = config['keyword'].split('!scholar')
-                search_term = st_[1]
-                get_links = (str('scholar'),0,None,search_term,None)
+                
+            elif str('scholar') in config['search_engines']:
+                get_links = (str('scholar'),0,None,config['keyword'],None)
                 search_scholar(get_links)
+
             else:
                 search = scrape_with_config(config)
                 links = []
@@ -213,12 +210,8 @@ class SW(object):
 
         config['keyword'] = str(category)
 
-        if str('scholar') in se_: config['keyword'] = '!scholar {0}'.format(category)
-        if str('wikipedia') in se_ : config['keyword'] = '!wiki {0}'.format(category)
-        if str('scholar') in se_ or str('wikipedia') in se_:
-            config['search_engines'] = 'duckduckgo'
-        else:
-            config['search_engines'] = se_
+
+        config['search_engines'] = se_
 
         config['scrape_method'] = 'selenium'
         config['num_pages_for_keyword'] = 1
@@ -239,6 +232,8 @@ class SW(object):
 
     def run(self):
         print(self.iterable)
-        self.iterable.insert(0,("duckduckgo",str("!scholar arbitrary test")))
+        self.iterable.insert(0,("scholar"),str("arbitrary test")))
+        self.iterable.insert(0,("wiki"),str("arbitrary test")))
+
         _ = list(map(self.scrapelandtext,self.iterable))
         return

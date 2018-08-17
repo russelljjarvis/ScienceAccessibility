@@ -109,17 +109,9 @@ def url_to_text(link_tuple):
 
 def buffer_to_pickle(link_tuple):
     se_b, page_rank, link, category, buff = link_tuple
-    if str('wiki') in category:
-        se_b = 'wikipedia'
-
-    if str('scholar') in category:
-        se_b = 'scholar'
-
     link_tuple = se_b, page_rank, link, category, buff
-
     fname = 'results_dir/{0}_{1}_{2}.p'.format(category,se_b,page_rank)
     print(fname,se_b)
-
     if type(buff) is not None:
         with open(fname,'wb') as f:
             pickle.dump(link_tuple,f)
@@ -131,8 +123,10 @@ def process(item):
     return
 
 
+# this should not be hard coded, it should be set in the class init, but can't be bothered refactoring.
 NUM_LINKS = 10
 
+# this should be a class method with self and self.NUM_LINKS but can't be bothered refactoring.
 def wiki_get(get_links):
     # wikipedia is robot friendly
     # surfraw is fine.
@@ -142,6 +136,7 @@ def wiki_get(get_links):
     if len(links) > NUM_LINKS: links = links[0:NUM_LINKS]
     [ process((se_,index,l,category,buff)) for index,l in enumerate(links) ]
 
+# this should be a class method with self and self.NUM_LINKS but can't be bothered refactoring.
 def search_scholar(get_links):
     # from https://github.com/ckreibich/scholar.py/issues/80
     se_,index,category,category,buff = get_links
@@ -231,9 +226,11 @@ class SW(object):
         return
 
     def run(self):
-        print(self.iterable)
-        self.iterable.insert(0,("scholar"),str("arbitrary test")))
-        self.iterable.insert(0,("wiki"),str("arbitrary test")))
+        # someone should write a unit_test.
+        # one reason I have not, is I would want to use travis.cl, and scrapping probably violates policies.
+        # a unit test might begin like this:
+        # self.iterable.insert(0,("scholar"),str("arbitrary test")))
+        # self.iterable.insert(0,("wiki"),str("arbitrary test")))
 
         _ = list(map(self.scrapelandtext,self.iterable))
         return

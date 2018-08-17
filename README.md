@@ -21,11 +21,11 @@ Once that is done an analysis program `use_analysis` is then called to run an an
 
 Given pre-existing data (pickled files consisiting of raw text contents), the analysis file can also be run on it's own by executing: `python use_analysis.py`. To analyse the scraped texts, the jupyter notebook: `vstrl.ipynb` also contains idioms for plotting and analysis based on scrapped data, although it is not maintained. The package bokeh, facilitates pretty interactive plots with data point mouse over data metrics.
 
-Another file `Examples/use_code_complexity.py` reports back about the complexity of the code, used to analyse the complexity of language. This code complexity analysis is not thorough enough to include third party modules that were heavily utilized in the analysis, however, the principle of code complexity, with an application limited scope is generally applied in our approach, as it's obviously not desirable to use obfuscated code as a tool used to advocate for simple language.
+Another file `Examples/use_code_complexity.py` reports back about the complexity of the code base. This code complexity analysis is not thorough enough to include third party modules that were heavily utilized in the analysis, however, the principle of code complexity, with an application limited scope is generally applied in our approach, as it's obviously not desirable to use obfuscated code as a tool used to advocate for simple language.
 
 A lot of complexity in the code base comes from the need to masquerade as a non bot web surfer.
-It's a bad idea to surf naked ie to only use: `urllib`, or `requests`, as these resource grabbers are sure fire bot give aways.
-`Selenium`, `Google Scrape` (uses Selenium), and `delver Crawler`, are the surfing clothes I used; they work together to prolong a period feigned humanhood.
-The downloading of pdf's as opposed to html usually occurs in the nude, but this does not seem to cause any problems.
 
-Search Engine: 'who are you?' code: 'I am an honest human centric browser, and certainly not a robot surfing in the nude'. Search Engine: 'great, great, I'd love to get to know you, before I can share my resources, I need to make sure that you will store records of our interactions together, that I may reread on future dates'. Code: 'creepy, I mean, cool, yes, sure!' SE: 'great here are some pages'. Time elapses and reality is exposed just like in 'the Emperors New Clothes'.
+Excepting for the scraping the wikipedia (which has bot friendly policies), it's a bad idea to surf raw ie to only use: `urllib`, or `requests`, as these resource grabbers are sure fire bot give aways.
+`Selenium`, `Google Scrape` (uses Selenium), and `delver Crawler`, are the surfing clothes people use; they work together to prolong a period feigned humanhood. The downloading of pdf's as opposed to html usually is fine without a fake humancentric browser (that acts like it is storing cookies), but this does not seem to cause any problems.
+
+Search Engine: 'who are you?' code: 'I am an honest human centric browser, and certainly not a bot surfing raw'. Search Engine: 'great, great, here are some pages'. Time elapses and reality is exposed just like in 'the Emperors New Clothes'.

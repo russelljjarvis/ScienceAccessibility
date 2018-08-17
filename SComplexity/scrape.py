@@ -198,9 +198,13 @@ class SW(object):
         se_,category = fi
         config = {}
         driver = rotate_profiles()
-    	# This code block, jumps over gate one (the search engine as a gatekeeper)
+        # This code block, jumps over gate one (the search engine as a gatekeeper)
         # google scholar or wikipedia is not supported by google scraper
-        # duckduckgo bang expansion can be used as to access engines that GS does not support.
+        # duckduckgo bang expansion _cannot_ be used as to access engines that GS does not support
+        # without significant development. Redirection to the right search results does occur,
+        # but google scrape also has tools for reading links out of web pages, and it needs to know
+        # which brand of SE to expect in order to deal with idiosyncratic formatting.
+        # it's easier not to use bang expansion, for that reason.
         # for example twitter etc
 
         config['keyword'] = str(category)

@@ -50,8 +50,10 @@ from textstat.textstat import textstat
 from SComplexity.utils import black_string, english_check, comp_ratio, science_string
 
 DEBUG = False
+#from numba import jit
 
 # word limit smaller than 1000 gets product/merchandise sites.
+#@jit
 def text_proc(corpus, urlDat = {}, WORD_LIM = 100):
     #r emove unreadable characters
     corpus = corpus.replace("-", " ") #remove characters that nltk can't read

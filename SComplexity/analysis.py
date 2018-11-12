@@ -12,10 +12,11 @@ import pickle
 import numpy as np
 import os
 
+
 def print_best_text(f):
     link_tuple = pickle.load(open(f,'rb'))
-    se_b, page_rank, link, category, buffer = link_tuple
-    return buffer
+    se_b, page_rank, link, category, buff_ = link_tuple
+    return buff_
 
 
 
@@ -29,10 +30,10 @@ class Analysis(object):
         urlDat = {}
         b = os.path.getsize(f)
         link_tuple = pickle.load(open(f,'rb'))
-        se_b, page_rank, link, category, buffer = link_tuple
-        if type(buffer) is not type(None):
+        se_b, page_rank, link, category, buff_ = link_tuple
+        if type(buff_) is not type(None):
             urlDat = { 'link':link,'page_rank':page_rank,'se':se_b,'query':category,'file':f }
-            urlDat = text_proc(buffer,urlDat, WORD_LIM = self.mwl)
+            urlDat = text_proc(buff_,urlDat, WORD_LIM = self.mwl)
         return urlDat
 
     def cas(self):

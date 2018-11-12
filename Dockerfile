@@ -105,6 +105,10 @@ RUN pip install -e .
 RUN python -c "import SComplexity"
 RUN python -c "from SComplexity import t_analysis, utils"
 WORKDIR $HOME
+RUN pip install docx
+
+# detex -n full_path_to_tex_file.tex > output_text_file.txt
+# detex to convert tex to word.
 
 ## This probably breaks everything, as it's untested.
 # the idea is to give the docker user the choice of whether to develop and monkey patch in the 

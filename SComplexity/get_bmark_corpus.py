@@ -81,5 +81,32 @@ def check_self_contained(file_name):
     klpdfr = text_proc(strText,urlDat, WORD_LIM = 100)
     return klpdfr
 
-urlDats = check_self_contained('royal.txt')
+#urlDats = check_self_contained('royal.txt')
 #urlDats = get_bmarks()
+#import docx
+
+def getText(filename):
+    # convert docx files.
+    # https://stackoverflow.com/questions/44741226/converting-docx-to-pure-text
+    doc = docx.Document(filename)
+    fullText = []
+    for para in doc.paragraphs:
+        txt = para.text.encode('ascii', 'ignore')
+        fullText.append(txt)
+    return '\n'.join(fullText)
+
+
+#import comtypes.client
+
+def PPTtoPDF(inputFileName, outputFileName, formatType = 32):
+    powerpoint = comtypes.client.CreateObject("Powerpoint.Application")
+    powerpoint.Visible = 1
+
+    if outputFileName[-3:] != 'pdf':
+        outputFileName = outputFileName + ".pdf"
+        deck = powerpoint.Presentations.Open(inputFileName)
+        deck.SaveAs(outputFileName, formatType) # formatType = 32 for ppt to pdf
+        deck.Close()
+        powerpoint.Quit()
+
+        

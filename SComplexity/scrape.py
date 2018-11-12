@@ -25,8 +25,7 @@ from delver import Crawler
 C = Crawler()
 import requests
 #import duckduckgo
-
-import requests
+from numba import jit
 #import scholar_scrape
 from SComplexity.crawl import collect_pubs
 from SComplexity.scholar_scrape import scholar
@@ -41,6 +40,7 @@ useragent = UserAgent()
 # Rotate through random user profiles.
 profile = webdriver.FirefoxProfile()
 
+#@jit
 def rotate_profiles():
     # keep changing the header associated with browser requests to SE
     # Its hard to tell if its a convincing masquarade but it's low cost.
@@ -52,6 +52,7 @@ def rotate_profiles():
 driver = rotate_profiles()
 
 
+#@jit
 def pdf_to_txt(content):
     pdf = io.BytesIO(content.content)
     parser = PDFParser(pdf)
@@ -64,6 +65,7 @@ def pdf_to_txt(content):
     text = str(write_text)
     return text
 
+#@jit
 def html_to_txt(content):
     soup = BeautifulSoup(content, 'html.parser')
     #strip HTML
@@ -76,7 +78,7 @@ def html_to_txt(content):
     text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines
     str_text = str(text)
     return str_text
-
+#@jit
 def convert(content,link):
     # This is really ugly, but it's proven to be both fault tolerant and effective.
     try:
@@ -92,7 +94,7 @@ def convert(content,link):
     except:
         text = None
     return text
-
+#@jit
 def url_to_text(link_tuple):
     se_b, page_rank, link, category, buff = link_tuple
     try:
@@ -107,6 +109,7 @@ def url_to_text(link_tuple):
     link_tuple = ( se_b, page_rank, link, category, buff )
     return link_tuple
 
+#@jit
 def buffer_to_pickle(link_tuple):
     se_b, page_rank, link, category, buff = link_tuple
     link_tuple = se_b, page_rank, link, category, buff
@@ -194,6 +197,7 @@ class SW(object):
             return None
         print('done scraping')
 
+    #@jit
     def scrapelandtext(self,fi):
         se_,category = fi
         config = {}

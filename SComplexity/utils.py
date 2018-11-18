@@ -44,10 +44,11 @@ def search_params():
     return SEARCHLIST, WEB, LINKSTOGET
 
 def search_known_corpus():
-    SEARCHLIST = []
+    '''
+    hardcoded links to get. journal seek is a data base of known academic journals.
+    '''
     LINKSTOGET = []
-    SEARCHLIST = [str('rcgerkin'),str('smcrook'), str('s jarvis optogenetics'), str('Patrick mcgurrin ASU'), str('Melanie jarvis neonate')]
-    LINKSTOGET = []
+    PUBLISHERS = str('https://journalseek.net/publishers.htm')
     LINKSTOGET.append(str('https://academic.oup.com/beheco/article-abstract/29/1/264/4677340'))
     LINKSTOGET.append(str('http://splasho.com/upgoer5/library.php'))
     LINKSTOGET.append(str('https://elifesciences.org/download/aHR0cHM6Ly9jZG4uZWxpZmVzY2llbmNlcy5vcmcvYXJ0aWNsZXMvMjc3MjUvZWxpZmUtMjc3MjUtdjIucGRm/elife-27725-v2.pdf?_hash=WA%2Fey48HnQ4FpVd6bc0xCTZPXjE5ralhFP2TaMBMp1c%3D'))
@@ -59,7 +60,7 @@ def search_known_corpus():
     WEB = 1
     #WEB = len(ses) #how many search engines to include (many possible- google google scholar bing yahoo)
     LINKSTOGET= 10 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
-    return SEARCHLIST, WEB, LINKSTOGET
+    return PUBLISHERS, WEB, LINKSTOGET
 
 
 def convert_and_score(fileName):
@@ -85,16 +86,19 @@ def convert_and_score(fileName):
 
 
 
-def science_string(check_with):
+def clue_words(check_with):
     # check_with should be lower cse now
-    checks=[str("abstract"),str("methods"),str("results")]
-    assume_false = False
+    checks=[str("issn"),str("doi"),str("journal of"),str("abstract"),str("methods"),str("results"),str("discussion"),str("conflict of interest")]
+    assume_false = []
     for check in checks:
         if check in check_with:
-            assume_false = True
-        else:
-            return False
-    return assume_false
+            assume_false.append(check)
+    if len(assume_false) >= 3:
+        return True
+    else:
+        return False
+
+
 
 def black_string(check_with):
     if len(check_with) == 1145:
@@ -123,5 +127,3 @@ def black_string(check_with):
     if check in check_with:
         return True
     return False
-
-

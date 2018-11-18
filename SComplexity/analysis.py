@@ -31,7 +31,7 @@ class Analysis(object):
         b = os.path.getsize(f)
         link_tuple = pickle.load(open(f,'rb'))
         se_b, page_rank, link, category, buff_ = link_tuple
-        if type(buff_) is not type(None):
+        if buff_ is not None:
             urlDat = { 'link':link,'page_rank':page_rank,'se':se_b,'query':category,'file':f }
             urlDat = text_proc(buff_,urlDat, WORD_LIM = self.mwl)
         return urlDat
@@ -52,7 +52,7 @@ class Analysis(object):
         from SComplexity.get_bmark_corpus import get_bmarks
         return get_bmarks()
 
-    def get_reference_pickle(self):
-        known_corpus = []
-        from SComplexity.get_bmark_corpus import get_bmarks
-        return get_bmarks()
+    #def get_reference_pickle(self):
+    #    known_corpus = []
+    #    from SComplexity.get_bmark_corpus import get_bmarks
+    #    return get_bmarks()

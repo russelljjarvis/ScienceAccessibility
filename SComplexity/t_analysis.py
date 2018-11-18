@@ -47,7 +47,7 @@ from textstat.textstat import textstat
 
 
 
-from SComplexity.utils import black_string, english_check, comp_ratio, science_string
+from SComplexity.utils import black_string, english_check, comp_ratio, clue_words
 
 DEBUG = False
 #from numba import jit
@@ -70,10 +70,10 @@ def text_proc(corpus, urlDat = {}, WORD_LIM = 100):
 
     try:
         urlDat['english'] = english_check(corpus)
-        urlDat['science'] = science_string(sc)
+        urlDat['clue_words'] = clue_words(corpus)
     except:
         urlDat['english'] = True
-        urlDat['science'] = False
+        urlDat['clue_words'] = False
 
     # The post modern essay generator is so obfuscated, that ENGLISH classification fails, and this criteria needs to be relaxed.
     not_empty = bool(len(tokens) != 0)
@@ -100,8 +100,8 @@ def text_proc(corpus, urlDat = {}, WORD_LIM = 100):
 
         # Fudge factor:
         # The log should be moved to plotting.
-        scaled_density = -1.0 * abs(urlDat['info_density'] * (1.0/urlDat['wcount']))
-        urlDat['scaled_info_density'] = scaled_density
+        #scaled_density = -1.0 * abs(urlDat['info_density'] * (1.0/urlDat['wcount']))
+        #urlDat['scaled_info_density'] = scaled_density
 
         #Sentiment and Subjectivity analysis
         testimonial = TextBlob(corpus)

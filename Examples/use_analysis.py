@@ -12,18 +12,118 @@ import numpy as np
 import math as math
 from pylab import rcParams
 
+import numpy as np
+import matplotlib.pyplot as plt
+
+from mpl_toolkits.mplot3d import Axes3D
+from sklearn.cluster import KMeans
+from sklearn import datasets
+import seaborn as sns; sns.set()  # for plot styling
 
 import pickle
 from SComplexity.analysis import Analysis
 import pandas as pd
 
+
+
 FILES = natsorted(glob.glob(str(os.getcwd())+'/results_dir/*.p'))
-# This cannot properly handle wiki files
 A = Analysis(FILES, min_word_length = 200)
 urlDats = A.cas()
 print(urlDats)
 
 scraped = list(filter(lambda url: str('query') in url.keys(), urlDats))
+with open('scraped.p','wb') as f:
+    pickle.dump(scraped,f)
+
+dfs = pd.DataFrame(scraped)
+
+dfs = dfs[~dfs['link'].isin(['https://www.youtube.com/'])]
+dfs = dfs[~dfs['link'].isin(['https://www.walmart.com'])]
+#wikipedia = wikipedia[wikipedia['link']==str('https://foundation.wikimedia.org/wiki/Privacy_policy')]
+wikipedia = dfs[dfs['se']==str('wikipedia')]
+wikipedia = wikipedia[~wikipedia['link'].isin(['https://foundation.wikimedia.org/wiki/Privacy_policy'])]
+
+np.random.seed(5)
+
+
+# Use all information to create clusters,
+# but only interested in expressing the clusters in first 3 Dimensions.
+
+X = dfs[['standard','ss','sp','info_density','gf','standard','uniqueness','info_density']]
+X = X.as_matrix()
+
+
+est =  KMeans(n_clusters=2)
+fignum = 1
+titles = ['2 clusters']
+
+fig = plt.figure(fignum, figsize=(4, 3))
+ax = Axes3D(fig, rect=[0, 0, .95, 1], elev=48, azim=134)
+est.fit(X)
+y_kmeans = est.predict(X)
+centers = est.cluster_centers_
+
+fig = plt.figure(fignum, figsize=(4, 3))
+ax = Axes3D(fig, rect=[0, 0, .95, 1], elev=48, azim=134)
+ax.scatter(X[:, 0], X[:, 1], X[:, 2], c=y_kmeans, s=50)
+ax.scatter(centers[:, 0], centers[:, 1], centers[:, 2], c='black', s=200, alpha=0.5);
+ax.w_xaxis.set_ticklabels([])
+ax.w_yaxis.set_ticklabels([])
+ax.w_zaxis.set_ticklabels([])
+ax.set_xlabel('standard')
+ax.set_ylabel('subjectivity')
+ax.set_zlabel('sentiment polarity')
+ax.set_title(titles[fignum - 1])
+ax.dist = 12
+fignum = fignum + 1
+for x,i in enumerate(zip(y_kmeans,dfs['link'])):
+    print(i[0],i[1],dfs['clue_words'][x])
+import pdb
+pdb.set_trace()
+# Plot the ground truth
+fig.savefig('3dCluster.png')
+
+
+X = dfs[['standard','sp']]
+X = X.as_matrix()
+
+
+est =  KMeans(n_clusters=2)
+fignum = 1
+titles = ['2 clusters in only 2D']
+#for name, est in estimators:
+fig = plt.figure(fignum, figsize=(4, 3))
+#ax = Axes3D(fig, rect=[0, 0, .95, 1], elev=48, azim=134)
+est.fit(X)
+#labels = est.labels_
+plt.title('reading level versus sentiment subjectivity')
+print(X[:, 1], X[:, 0])
+
+
+plt.scatter(X[:, 1], X[:, 0], edgecolor='k')
+plt.savefig('reading_level_versus_sentiment_subjectivity.png')
+#plt.scatter(, edgecolor='k')
+#plt.savefig('reading_level_versus_sentiment_polarity.png')
+X = dfs[['standard','ss']]
+X = X.as_matrix()
+
+
+est =  KMeans(n_clusters=2)
+fignum = 1
+titles = ['2 clusters']
+#for name, est in estimators:
+fig = plt.figure(fignum, figsize=(4, 3))
+#ax = Axes3D(fig, rect=[0, 0, .95, 1], elev=48, azim=134)
+est.fit(X)
+#labels = est.labels_
+plt.title('reading level versus sentiment subjectivity')
+plt.scatter(X[:, 1], X[:, 0], edgecolor='k')
+plt.savefig('reading_level_versus_sentiment_subjectivity.png')
+
+
+
+
+
 
 sps = [ w['sp'] for w in scraped ]
 fogss = [ w['gf'] for w in scraped ]
@@ -33,6 +133,11 @@ print(scraped)
 
 by_query = {}
 by_engine = {}
+
+# These lines can be written more concisely using PD-frames.
+# example:
+# by_engine[str('wiki')] = dfs[dfs['se']==str('wikipedia')]
+
 
 by_engine[str('yahoo')] = list(filter(lambda url: str('yahoo') in url['se'], urlDats))
 by_engine[str('scholar')] = list(filter(lambda url: str('scholar') in url['se'], urlDats))
@@ -44,6 +149,9 @@ by_engine[str('wiki')] = list(filter(lambda url: str('wikipedia') in url['se'], 
 
 
 reference = A.get_reference_web()
+dfr = pd.DataFrame(reference)
+import pdb; pdb.set_trace()
+
 labels = [ w['link'] for w in reference ]
 by_query['reference'] = {}
 by_query['reference']['sp'] = [ w['sp'] for w in reference ]
@@ -101,7 +209,7 @@ plt.clf()
 plt.title('rank versus compression ratio'+str(' wikipedia'))
 plt.xlabel('rank')
 plt.ylabel('standard')
-df1 = pd.DataFrame({'compressiion_ratio':[ i['info_density'] for i in by_engine['wiki']],'rank':[    i['page_rank'] for i in by_engine['wiki']]})
+df1 = pd.DataFrame({'compressiion_ratio':[ i['info_density'] for i in by_engine['wiki']],'rank':[ i['page_rank'] for i in by_engine['wiki']]})
 ax = sns.regplot(x="rank", y="compressiion_ratio", data=df1, x_estimator=np.mean, x_jitter=.1)
 plt.legend(loc="upper left")
 plt.savefig('Trend rank versus compression ratio'+str(' wikipedia'))

@@ -24,7 +24,13 @@ import pickle
 from SComplexity.analysis import Analysis
 import pandas as pd
 
-
+##
+# This file can be used to show, that K-Means clustering
+# a type of unsupervised classifier, can predict if something is a wikipedia article
+# or not pretty well.
+# It's my opinion that, the classifier could probably predict mainstream science or psuedo science too,
+# given enough dimensions to seperate the clustered data points over.
+##
 
 FILES = natsorted(glob.glob(str(os.getcwd())+'/results_dir/*.p'))
 A = Analysis(FILES, min_word_length = 200)
@@ -36,7 +42,9 @@ with open('scraped.p','wb') as f:
     pickle.dump(scraped,f)
 
 dfs = pd.DataFrame(scraped)
-
+##
+#
+##
 dfs = dfs[~dfs['link'].isin(['https://www.youtube.com/'])]
 dfs = dfs[~dfs['link'].isin(['https://www.walmart.com'])]
 dfs = dfs[~dfs['link'].isin(['https://foundation.wikimedia.org/wiki/Privacy_policy'])]
@@ -143,16 +151,15 @@ by_engine = {}
 
 # These lines can be written more concisely using PD-frames.
 # example:
-# by_engine[str('wiki')] =
-
+# by_engine[str('wiki')] = list(dfs[dfs['se']==str('wikipedia')].as_matrix())
+##
 
 by_engine[str('yahoo')] = list(filter(lambda url: str('yahoo') in url['se'], urlDats))
 by_engine[str('scholar')] = list(filter(lambda url: str('scholar') in url['se'], urlDats))
 by_engine[str('bing')] = list(filter(lambda url: str('bing') in url['se'], urlDats))
 by_engine[str('google')] = list(filter(lambda url: str('google') in url['se'], urlDats))
 by_engine[str('duckduckgo')] = list(filter(lambda url: str('duckduckgo') in url['se'], urlDats))
-by_engine[str('wiki')] = list(dfs[dfs['se']==str('wikipedia')].as_matrix()) # list(filter(lambda url: str('wikipedia') in url['se'], urlDats))
-
+by_engine[str('wiki')] = list(filter(lambda url: str('wikipedia') in url['se'], urlDats))
 
 
 reference = A.get_reference_web()

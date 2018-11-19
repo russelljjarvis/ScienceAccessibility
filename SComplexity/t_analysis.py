@@ -71,9 +71,11 @@ def text_proc(corpus, urlDat = {}, WORD_LIM = 100):
     try:
         urlDat['english'] = english_check(corpus)
         urlDat['clue_words'] = clue_words(corpus)
+        urlDat['clue_links'] = clue_links(urlDat['link'])
     except:
         urlDat['english'] = True
-        urlDat['clue_words'] = False
+        urlDat['clue_words'] = (False,[])
+        urlDat['clue_links'] = (False,[])
 
     # The post modern essay generator is so obfuscated, that ENGLISH classification fails, and this criteria needs to be relaxed.
     not_empty = bool(len(tokens) != 0)

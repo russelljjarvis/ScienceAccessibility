@@ -39,17 +39,21 @@ dfs = pd.DataFrame(scraped)
 
 dfs = dfs[~dfs['link'].isin(['https://www.youtube.com/'])]
 dfs = dfs[~dfs['link'].isin(['https://www.walmart.com'])]
+dfs = dfs[~dfs['link'].isin(['https://foundation.wikimedia.org/wiki/Privacy_policy'])]
+
 #wikipedia = wikipedia[wikipedia['link']==str('https://foundation.wikimedia.org/wiki/Privacy_policy')]
 wikipedia = dfs[dfs['se']==str('wikipedia')]
-wikipedia = wikipedia[~wikipedia['link'].isin(['https://foundation.wikimedia.org/wiki/Privacy_policy'])]
+#wikipedia = wikipedia[~wikipedia['link'].isin(['https://foundation.wikimedia.org/wiki/Privacy_policy'])]
 
 np.random.seed(5)
 
 
 # Use all information to create clusters,
 # but only interested in expressing the clusters in first 3 Dimensions.
+#for row in dfs.:
+#    print(row['clue_words']) #= len(row['clue_words'])
 
-X = dfs[['standard','ss','sp','info_density','gf','standard','uniqueness','info_density']]
+X = dfs[['standard','ss','sp','info_density','gf','standard','uniqueness','info_density','wcount']]
 X = X.as_matrix()
 
 
@@ -76,11 +80,12 @@ ax.set_zlabel('sentiment polarity')
 ax.set_title(titles[fignum - 1])
 ax.dist = 12
 fignum = fignum + 1
-for x,i in enumerate(zip(y_kmeans,dfs['link'])):
-    print(i[0],i[1],dfs['clue_words'][x])
-import pdb
-pdb.set_trace()
-# Plot the ground truth
+for x,i in enumerate(zip(y_kmeans,dfs['clue_words'])):
+    try:
+        print(i[0],i[1],dfs['link'][x],dfs['wcount'][x])
+    except:
+        print(i)
+
 fig.savefig('3dCluster.png')
 
 
@@ -99,12 +104,12 @@ est.fit(X)
 plt.title('reading level versus sentiment subjectivity')
 print(X[:, 1], X[:, 0])
 
-
+plt.clf()
 plt.scatter(X[:, 1], X[:, 0], edgecolor='k')
 plt.savefig('reading_level_versus_sentiment_subjectivity.png')
 #plt.scatter(, edgecolor='k')
 #plt.savefig('reading_level_versus_sentiment_polarity.png')
-X = dfs[['standard','ss']]
+X = dfs[['standard','ss','sp']]
 X = X.as_matrix()
 
 
@@ -115,7 +120,9 @@ titles = ['2 clusters']
 fig = plt.figure(fignum, figsize=(4, 3))
 #ax = Axes3D(fig, rect=[0, 0, .95, 1], elev=48, azim=134)
 est.fit(X)
-#labels = est.labels_
+y_kmeans = est.predict(X)
+centers = est.cluster_centers_
+
 plt.title('reading level versus sentiment subjectivity')
 plt.scatter(X[:, 1], X[:, 0], edgecolor='k')
 plt.savefig('reading_level_versus_sentiment_subjectivity.png')
@@ -127,7 +134,7 @@ plt.savefig('reading_level_versus_sentiment_subjectivity.png')
 
 sps = [ w['sp'] for w in scraped ]
 fogss = [ w['gf'] for w in scraped ]
-infos = [ w['scaled_info_density'] for w in scraped ]
+infos = [ w['info_density'] for w in scraped ]
 ranks = [ w['page_rank'] for w in scraped ]
 print(scraped)
 
@@ -136,7 +143,7 @@ by_engine = {}
 
 # These lines can be written more concisely using PD-frames.
 # example:
-# by_engine[str('wiki')] = dfs[dfs['se']==str('wikipedia')]
+# by_engine[str('wiki')] =
 
 
 by_engine[str('yahoo')] = list(filter(lambda url: str('yahoo') in url['se'], urlDats))
@@ -144,17 +151,16 @@ by_engine[str('scholar')] = list(filter(lambda url: str('scholar') in url['se'],
 by_engine[str('bing')] = list(filter(lambda url: str('bing') in url['se'], urlDats))
 by_engine[str('google')] = list(filter(lambda url: str('google') in url['se'], urlDats))
 by_engine[str('duckduckgo')] = list(filter(lambda url: str('duckduckgo') in url['se'], urlDats))
-by_engine[str('wiki')] = list(filter(lambda url: str('wikipedia') in url['se'], urlDats))
+by_engine[str('wiki')] = list(dfs[dfs['se']==str('wikipedia')].as_matrix()) # list(filter(lambda url: str('wikipedia') in url['se'], urlDats))
 
 
 
 reference = A.get_reference_web()
 dfr = pd.DataFrame(reference)
-import pdb; pdb.set_trace()
 
 labels = [ w['link'] for w in reference ]
 by_query['reference'] = {}
-by_query['reference']['sp'] = [ w['sp'] for w in reference ]
+#by_query['reference']['sp'] = [ w['sp'] for w in reference ]
 by_query['reference']['standard'] = [ w['standard'] for w in reference ]
 by_query['reference']['info_density'] = [ w['info_density'] for w in reference ]
 

@@ -86,17 +86,56 @@ def convert_and_score(fileName):
 
 
 
-def clue_words(check_with):
-    # check_with should be lower cse now
-    checks=[str("issn"),str("doi"),str("journal of"),str("abstract"),str("methods"),str("results"),str("discussion"),str("conflict of interest")]
+def clue_links(check_with):
+    '''
+    The goal of this function/string comparison
+    is just to give a clue, about whether the text is
+    an official scientific publication, or a blog, or psuedo science publication
+    It is not meant to act as a definitive classifier.
+    '''
+    # TODO query with pyhthon crossref api
+
+    # https://pypi.org/project/crossrefapi/1.0.7/
+    checks=[str('.gov'),str('.org'),str('.nih'),str('.nasa')]
     assume_false = []
     for check in checks:
         if check in check_with:
             assume_false.append(check)
-    if len(assume_false) >= 3:
-        return True
+    if len(assume_false) == 1:
+        return (True, assume_false)
     else:
-        return False
+        return (False, assume_false)
+
+
+
+def clue_words(check_with):
+    '''
+    The goal of this function/string comparison
+    is just to give a clue, about whether the text is an official scientific publication, or a blog, or psuedo science publication
+    It is not meant to act as a definitive classifier.
+    To get ISSN (for any format) there is a national center in each country.
+    It may be National Library in some cases. List of National ISSN centers are listed in issn website.
+    For DOI, there are representatives in western countries, also you can apply to doi.org or crossref.org.
+    How are the e-ISSN Number, DOI and abbreviation provided for a new journal ?.
+    Available from: https://www.researchgate.net/post/How_are_the_e-ISSN_Number_DOI_and_abbreviation_provided_for_a_new_journal [accessed Apr 7, 2015].
+    '''
+    #TODO query with pyhthon crossref api
+    # https://pypi.org/project/crossrefapi/1.0.7/
+    # check_with should be lower cse now
+
+    checks=[str('isbn'),str("issn"),str("doi"),str('volume'),str('issue'), \
+    str("journal of"),str("abstract"),str("materials and methods"),str("nature"), \
+    str("conflict of interest"), str("objectives"), str("significance"), \
+    str("published"), str("references"), str("acknowledgements"), str("authors"), str("hypothesis"), \
+    str("nih"),str('article')]
+    assume_false = []
+    for check in checks:
+        if check in check_with:
+            assume_false.append(check)
+    if len(assume_false) >= 6:
+        return (True, assume_false)
+    else:
+        return (False, assume_false)
 
 
 

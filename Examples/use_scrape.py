@@ -17,13 +17,13 @@ from SComplexity.scrape import SW
 LINKSTOGET= 10 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
 
 SENGINES = {0:"wikipedia",1:"google",2:"yahoo",3:"duckduckgo",4:"scholar",5:"bing"}
+SEARCHLIST = ["evolution","cancer", "photosysnthesis",'climate change',"autosomes","respiration", "bacteriophage",'Neutron','Vaccine','Transgenic','GMO','Genetically Modified Organism','neuromorphic hardware','reality TV', 'mustang', 'unicorn', 'football soccer', 'prancercise']
 
-SEARCHLIST = ["evolution","cancer", "photosysnthesis",'climate change','Vaccines','Transgenic','GMO','Genetically Modified Organism','reality TV', 'unicorn versus brumby', 'football soccer', 'prancercise philosophy', 'play dough delicious deserts']
 # Use this variable to later reconcile file names with urls
 # As there was no, quick and dirty way to bind the two togethor here, without complicating things later.
 # traverse this list randomly as repititve query sequences eminating from simple incremental traversal may be a robot give away.
 # configure the scrapers with search terms and search indexs
-sw = SW(SENGINES,SEARCHLIST,nlinks=15)
+sw = SW(SENGINES,SEARCHLIST,nlinks=10)
 # This line is sufficient to execute the scrapper:
 sw.run()
 import use_analysis

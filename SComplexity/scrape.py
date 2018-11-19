@@ -140,6 +140,16 @@ def wiki_get(get_links):
     [ process((se_,index,l,category,buff)) for index,l in enumerate(links) ]
 
 # this should be a class method with self and self.NUM_LINKS but can't be bothered refactoring.
+def scholar_pedia_get(get_links):
+    # wikipedia is robot friendly
+    # surfraw is fine.
+    se_,index,link,category,buff = get_links
+    url_of_links = str('http://www.scholarpedia.org/w/index.php?search=')+str(category)+str('&title=Special%3ASearch')
+    links = collect_pubs(url_of_links)
+    if len(links) > NUM_LINKS: links = links[0:NUM_LINKS]
+    [ process((se_,index,l,category,buff)) for index,l in enumerate(links) ]
+
+# this should be a class method with self and self.NUM_LINKS but can't be bothered refactoring.
 def search_scholar(get_links):
     # from https://github.com/ckreibich/scholar.py/issues/80
     se_,index,category,category,buff = get_links

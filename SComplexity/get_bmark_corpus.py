@@ -45,17 +45,21 @@ def get_bmarks():
     the_science_of_writing = str('https://cseweb.ucsd.edu/~swanson/papers/science-of-writing.pdf')
     pmeg = str('http://www.elsewhere.org/pomo/') # Note this is so obfuscated, even the english language classifier rejects it.
     links = [xkcd_self_sufficient,high_standard,the_science_of_writing,pmeg ]
+    print(links)
+    #klpdfp = text_proc(strText,urlDat, WORD_LIM = 100)
+    grid = db.from_sequence(links,npartitions=8)
+    print(grid)
+    urlDats = list(db.map(process,grid).compute())
+    #urlDats.append(klpdfp)
+    print(urlDats)
+    '''
     royal = '../BenchmarkCorpus/royal.txt'
     klpd = '../BenchmarkCorpus/planning_document.txt'
     klpdf = open(klpd)
     strText = klpdf.read()
     urlDat = {'link':'local_resource'}
 
-    klpdfp = text_proc(strText,urlDat, WORD_LIM = 100)
-    grid = db.from_sequence(links,npartitions=8)
-    urlDats = list(db.map(process,grid).compute())
-    urlDats.append(klpdfp)
-    print(urlDats)
+
 
     klpdr = open(royal)
     strText = klpdr.read()
@@ -66,7 +70,7 @@ def get_bmarks():
     grid = db.from_sequence(links,npartitions=8)
     urlDats = list(db.map(process,grid).compute())
     urlDats.append(klpdfp)
-
+    '''
 
     with open('benchmarks.p','wb') as f:
         pickle.dump(urlDats,f)
@@ -108,5 +112,3 @@ def PPTtoPDF(inputFileName, outputFileName, formatType = 32):
         deck.SaveAs(outputFileName, formatType) # formatType = 32 for ppt to pdf
         deck.Close()
         powerpoint.Quit()
-
-        

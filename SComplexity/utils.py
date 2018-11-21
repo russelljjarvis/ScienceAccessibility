@@ -12,6 +12,31 @@ import os
 import pycld2 as cld2
 import lzma
 
+def convert_pdf_to_txt(content):
+    pdf = io.BytesIO(content.content)
+    parser = PDFParser(pdf)
+    document = PDFDocument(parser, password=None) # this fails                                                                                                                                                                                
+    write_text = ''
+    for page in PDFPage.create_pages(document):
+        interpreter.process_page(page)
+        write_text +=  retstr.getvalue()
+        #write_text = write_text.join(retstr.getvalue())                                                                                                                                                                                      
+    # Process all pages in the document                                                                                                                                                                                                       
+    text = str(write_text)
+    return text
+
+def html_to_txt(content):
+    soup = BeautifulSoup(content, 'html.parser')
+    #strip HTML                                                                                                                                                                                                                               
+    for script in soup(["script", "style"]):
+        script.extract()    # rip it out                                                                                                                                                                                                      
+    text = soup.get_text()
+    #organize text                                                                                                                                                                                                                            
+    lines = (line.strip() for line in text.splitlines())  # break into lines and remove leading and trailing space on each                                                                                                                    
+    chunks = (phrase.strip() for line in lines for phrase in line.split("  ")) # break multi-headlines into a line each                                                                                                                       
+    text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines                                                                                                                                                                   
+    str_text = str(text)
+    return str_text
 
 def comp_ratio(test_string):
     # If we are agnostic about what the symbols are, and we just observe the relative frequency of each symbol.
@@ -31,6 +56,26 @@ def english_check(corpus):
     _, _, details = cld2.detect(' '.join(corpus), bestEffort=True)
     detectedLangName, _ = details[0][:2]
     return bool(detectedLangName == 'ENGLISH')
+
+
+def publication_check(wt):
+    publication = {}
+    if 'issn' in wt:
+        publication['issn'] = wt.split("issn",1)[1]
+    if 'isbn' in wt:
+        publication['isbn'] = wt.split("isbn",1)[1]
+    if 'pmid' in wt:
+        publication['pmid'] = wt.split("pmid",1)[1]
+    for k,v in publication.items():
+        publication[k] = v[0:15]
+
+    if len(publication) == 1:
+        return (True, publication)
+    else:
+        return (False, publicaton)
+    
+
+    return publication
 
 def engine_dict_list():
     se = {0:"google",1:"yahoo",2:"duckduckgo",3:"wikipedia",4:"scholar",5:"bing"}
@@ -63,26 +108,6 @@ def search_known_corpus():
     return PUBLISHERS, WEB, LINKSTOGET
 
 
-def convert_and_score(fileName):
-    b = os.path.getsize(fileName)
-    text = None
-    try: # this is just to prevent reading in of incomplete data.
-        file = open(fileName)
-        print(file)
-        if str('.html') in fileName:
-            text = html_to_txt(file)
-        elif str('.pdf') in fileName:
-            text = convert_pdf_to_txt(file)
-        else:
-            print('other')
-        file.close()
-        urlDat = {'link':fileName}
-        urlDat = text_proc(text,urlDat)
-        print(urlDat)
-    except:
-        urlDat = {'link':fileName}
-    return urlDat
-
 
 
 
@@ -96,9 +121,9 @@ def clue_links(check_with):
     # TODO query with pyhthon crossref api
 
     # https://pypi.org/project/crossrefapi/1.0.7/
-    checks=[str('.gov'),str('.org'),str('.nih'),str('.nasa')]
+    CHECKS = [str('.gov'),str('.org'),str('.nih'),str('.nasa'),str('.pdf')]
     assume_false = []
-    for check in checks:
+    for check in CHECKS:
         if check in check_with:
             assume_false.append(check)
     if len(assume_false) == 1:
@@ -123,13 +148,13 @@ def clue_words(check_with):
     # https://pypi.org/project/crossrefapi/1.0.7/
     # check_with should be lower cse now
 
-    checks=[str('isbn'),str("issn"),str("doi"),str('volume'),str('issue'), \
+    CHECKS = [str('isbn'),str("issn"),str("doi"),str('volume'),str('issue'), \
     str("journal of"),str("abstract"),str("materials and methods"),str("nature"), \
     str("conflict of interest"), str("objectives"), str("significance"), \
     str("published"), str("references"), str("acknowledgements"), str("authors"), str("hypothesis"), \
     str("nih"),str('article')]
     assume_false = []
-    for check in checks:
+    for check in CHECKS:
         if check in check_with:
             assume_false.append(check)
     if len(assume_false) >= 6:

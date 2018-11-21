@@ -14,17 +14,33 @@ import selenium
 from pyvirtualdisplay import Display
 from selenium import webdriver
 
-from fake_useragent import UserAgent
+#from fake_useragent import UserAgent
 
-display = Display(visible=0, size=(1024, 768))
+#display = Display(visible=0, size=(1024, 768))
+#display.start()
+
+#from pyvirtualdisplay import Display
+#from selenium import webdriver
+
+display = Display(visible=0, size=(1024, 800))
 display.start()
 
-from fake_useragent import UserAgent
-useragent = UserAgent()
-profile = webdriver.FirefoxProfile()
-profile.set_preference("general.useragent.override", useragent.random)
-profile.set_preference("javascript.enabled", True)
-driver = webdriver.Firefox(firefox_profile=profile)
+#from fake_useragent import UserAgent
+#useragent = UserAgent()
+#profile = webdriver.FirefoxProfile()
+
+
+#profile.set_preference("general.useragent.override", useragent.random)
+#profile.set_preference("javascript.enabled", True)
+#driver = webdriver.Firefox(profile = profile)
+
+from selenium.webdriver.firefox.options import Options
+options = Options()
+options.headless = True
+#try:
+#    driver = webdriver.Firefox(firefox_profile=profile,options=options)
+#except:
+driver = webdriver.Firefox(options=options) 
 
 import pandas as pd
 import pycld2 as cld2

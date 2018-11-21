@@ -43,46 +43,40 @@ RUN sudo apt-get install -y software-properties-common
 # https://stackoverflow.com/questions/39451134/installing-phantomjs-with-node-in-docker
 ##
 
-# install xvfb
-RUN sudo apt-get install -yqq xvfb
 
 # set dbus env to avoid hanging
 ENV DISPLAY=:99
 ENV DBUS_SESSION_BUS_ADDRESS=/dev/null
-
+RUN sudo /opt/conda/bin/pip install --upgrade selenium
 
 ##
 # Programatic Firefox driver that can bind with selenium/gecko.
 ##
+RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.23.0/geckodriver-v0.23.0-linux64.tar.gz
+RUN sudo tar -xvzf geckodriver-v0.23.0-linux64.tar.gz
 
-RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.18.0/geckodriver-v0.18.0-linux64.tar.gz
-RUN sudo tar -xvzf geckodriver-v0.18.0-linux64.tar.gz
-# RUN tar -xvzf geckodriver*
-# RUN chmod +x geckodriver
 
 RUN sudo chown -R jovyan $HOME
 
-## Geckodriver
-RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.16.1/geckodriver-v0.16.1-linux64.tar.gz
-RUN sudo sh -c 'tar -x geckodriver -zf geckodriver-v0.16.1-linux64.tar.gz -O > /usr/bin/geckodriver'
+
+RUN sudo sh -c 'tar -x geckodriver -zf geckodriver-v0.23.0-linux64.tar.gz -O > /usr/bin/geckodriver'
 RUN sudo chmod +x /usr/bin/geckodriver
-RUN rm geckodriver-v0.16.1-linux64.tar.gz
+RUN rm geckodriver-v0.23.0-linux64.tar.gz
 RUN sudo apt-get update
 RUN sudo apt-get upgrade -y firefox
 RUN sudo chown -R jovyan /home/jovyan
+RUN sudo cp geckodriver /usr/local/bin/
+
+RUN sudo /opt/conda/bin/pip install -U selenium
+
 
 RUN sudo /opt/conda/bin/pip install pyvirtualdisplay
+
 RUN sudo apt-get update
 RUN sudo apt-get install --fix-missing
 # A lot of academic text is still in PDF, so better get some tools to deal with that.
 RUN sudo /opt/conda/bin/pip install git+https://github.com/pdfminer/pdfminer.six.git
 
-# maybe faster and safer to use official version with more modest query sizes:
-# RUN sudo /opt/conda/bin/pip install git+https://github.com/NikolaiT/GoogleScraper.igt
-
-# The only difference to the official version, is download throttling. Self throttling actually speeds up execution,
-# as it prevents getting booted off by SE servers, which can mean restarting scrape. Thankfuly GoogleScraper has good awareness
-# of what it has already done.
 RUN sudo /opt/conda/bin/pip install git+https://github.com/russelljjarvis/GoogleScraper.git
 
 WORKDIR $HOME
@@ -98,18 +92,39 @@ RUN sudo /opt/conda/bin/pip install -U git+https://github.com/nuncjo/Delver
 RUN python -c "import bs4"
 RUN python -c "import delver"
 RUN timeout 2s python
+RUN sudo apt-get update
+
+RUN sudo apt-get update \
+    && sudo apt-get install -y --no-install-recommends \
+        ca-certificates \
+        bzip2 \
+        libfontconfig \
+    && sudo apt-get clean 
+
+ENV MOZ_HEADLESS = 1
+RUN python - c "from selenium import webdriver;\ 
+from selenium.webdriver.firefox.options import Options; \
+options = Options(); \
+options.headless = True; \
+driver = webdriver.Firefox(options=options) ;\
+driver.get('http://google.com/') ;\
+print('Headless Firefox Initialized') ;\
+driver.quit();"
+RUN sudo apt-get install -y xvfb
+RUN /opt/conda/bin/pip install xvfbwrapper
 
 ADD . .
 RUN sudo chown -R jovyan .
 RUN pip install -e .
 RUN python -c "import SComplexity"
-RUN python -c "from SComplexity import t_analysis, utils"
+RUN python -c "from SComplexity import t_analysis, utils, scrape"
 WORKDIR $HOME
-# RUN pip install docx
-
-# detex -n full_path_to_tex_file.tex > output_text_file.txt
-# detex to convert tex to word.
 
 RUN pip install habanero
-RUN pip install crossref
+
+
+# set display port to avoid crash
+ENV DISPLAY=:99
+
+
 ENTRYPOINT /bin/bash

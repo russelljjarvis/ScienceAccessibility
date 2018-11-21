@@ -3,7 +3,7 @@ import glob
 import os
 import dask.bag as db
 
-from SComplexity.crawl import html_to_txt, convert_pdf_to_txt
+from SComplexity.utils import html_to_txt, convert_pdf_to_txt
 from SComplexity.t_analysis import text_proc
 
 from natsort import natsorted, ns
@@ -42,7 +42,7 @@ class Analysis(object):
         urlDats = list(db.map(self.convert_and_score,grid).compute())
         urlDats = list(filter(lambda url: len(list(url))>3, urlDats))
         urlDats = list(filter(lambda url: len(list(url.keys()))>3, urlDats))
-        urlDats = list(filter(lambda url: str('penalty') in url.keys(), urlDats))
+        # urlDats = list(filter(lambda url: str('penalty') in url.keys(), urlDats))
         if type(self.urlDats) is not type(None):
             urlDats.extend(self.urlDats)
         return urlDats

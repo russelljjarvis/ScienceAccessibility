@@ -10,7 +10,7 @@
 import selenium
 from pyvirtualdisplay import Display
 from selenium import webdriver
-from fake_useragent import UserAgent
+#from fake_useragent import UserAgent
 from numpy import random
 import os
 from bs4 import BeautifulSoup
@@ -36,32 +36,39 @@ display = Display(visible=0, size=(1024, 768))
 display.start()
 
 
-useragent = UserAgent()
+#useragent = UserAgent()
 # Rotate through random user profiles.
-profile = webdriver.FirefoxProfile()
+#profile = webdriver.FirefoxProfile()
+from selenium.webdriver.firefox.options import Options
 
-#@jit
+
+
 def rotate_profiles():
     # keep changing the header associated with browser requests to SE
     # Its hard to tell if its a convincing masquarade but it's low cost.
-    driver = None
-    profile.set_preference("general.useragent.override", useragent.random)
-    profile.set_preference("javascript.enabled", True)
-    driver = webdriver.Firefox(firefox_profile = profile)
+    #driver = None
+    #profile.set_preference("general.useragent.override", useragent.random)
+    #profile.set_preference("javascript.enabled", True)
+    #try:
+    #    driver = webdriver.Firefox(firefox_profile = profile,options=options)
+    #except:
+    options = Options()
+    options.headless = True
+    driver = webdriver.Firefox(options=options)
     return driver
+
 driver = rotate_profiles()
 
 
-#@jit
 def pdf_to_txt(content):
     pdf = io.BytesIO(content.content)
     parser = PDFParser(pdf)
-    document = PDFDocument(parser, password=None) 
+    document = PDFDocument(parser, password=None)
     write_text = ''
     for page in PDFPage.create_pages(document):
         interpreter.process_page(page)
         write_text = write_text.join(retstr.getvalue())
-    # Process all pages in the document
+
     text = str(write_text)
     return text
 
@@ -69,15 +76,20 @@ def pdf_to_txt(content):
 def html_to_txt(content):
     soup = BeautifulSoup(content, 'html.parser')
     #strip HTML
+
     for script in soup(["script", "style"]):
         script.extract()    # rip it out
     text = soup.get_text()
+    wt = copy.copy(text)
     #organize text
     lines = (line.strip() for line in text.splitlines())  # break into lines and remove leading and trailing space on each
     chunks = (phrase.strip() for line in lines for phrase in line.split("  ")) # break multi-headlines into a line each
     text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines
     str_text = str(text)
-    return str_text
+    #str_text.pub = None
+    #str_text.pub = publication
+
+    return str_text#,publication#, issn, doi
 #@jit
 def convert(content,link):
     # This is really ugly, but it's proven to be both fault tolerant and effective.
@@ -88,7 +100,7 @@ def convert(content,link):
             text = pdf_to_txt(content)
         else:
             try:
-                text = html_to_txt(content)
+                text,publication = html_to_txt(content)
             except:
                 text = None
     except:
@@ -177,7 +189,7 @@ class SW(object):
             if str('wiki') in config['search_engines']:
                 get_links = (str('wikipedia'),0,None,config['keyword'],None)
                 wiki_get(get_links)
-                
+
             elif str('scholar') in config['search_engines']:
                 get_links = (str('scholar'),0,None,config['keyword'],None)
                 search_scholar(get_links)

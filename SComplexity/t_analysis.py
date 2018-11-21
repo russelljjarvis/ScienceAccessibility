@@ -47,7 +47,7 @@ from textstat.textstat import textstat
 
 
 
-from SComplexity.utils import black_string, english_check, comp_ratio, clue_words
+from SComplexity.utils import black_string, english_check, comp_ratio, clue_words, clue_links, publication_check
 
 DEBUG = False
 #from numba import jit
@@ -55,27 +55,27 @@ DEBUG = False
 # word limit smaller than 1000 gets product/merchandise sites.
 #@jit
 def text_proc(corpus, urlDat = {}, WORD_LIM = 100):
+    #if type(corpus) is type((0,0)):
+    #    pub = corpus[0]
+    #    corpus = corpus[1]
+    #    urlDat['pub'] = pub
+    #print(type(corpus),corpus)
     #r emove unreadable characters
     corpus = corpus.replace("-", " ") #remove characters that nltk can't read
     textNum = re.findall(r'\d', corpus) #locate numbers that nltk cannot see to analyze
     tokens = word_tokenize(corpus)
     tokens = [w.lower() for w in tokens] #make everything lower case
     # the kind of change that might break everything
-
     urlDat['wcount'] = textstat.lexicon_count(str(tokens))
     word_lim = bool(urlDat['wcount']  > WORD_LIM)
 
     # Word limits can be used to filter out product merchandise websites, which otherwise dominate scraped results.
     # Search engine business model is revenue orientated, so most links will be for merchandise.
 
-    try:
-        urlDat['english'] = english_check(corpus)
-        urlDat['clue_words'] = clue_words(corpus)
-        urlDat['clue_links'] = clue_links(urlDat['link'])
-    except:
-        urlDat['english'] = True
-        urlDat['clue_words'] = (False,[])
-        urlDat['clue_links'] = (False,[])
+    urlDat['publication'] = publication_check(str(tokens))
+    urlDat['english'] = english_check(str(tokens))
+    urlDat['clue_words'] = clue_words(str(tokens))
+    urlDat['clue_links'] = clue_links(urlDat['link'])
 
     # The post modern essay generator is so obfuscated, that ENGLISH classification fails, and this criteria needs to be relaxed.
     not_empty = bool(len(tokens) != 0)
@@ -89,26 +89,15 @@ def text_proc(corpus, urlDat = {}, WORD_LIM = 100):
         # It's harder to have a good unique ratio in a long document, as 'and', 'the' and 'a', will dominate.
         # big deltas mean redudancy/sparse information/information/density
 
-        # Rationale this metric.
-        # Different papers and diffferent scientific concepts,
-        # incur very different degrees of irreducible complexity
-        # intrinsic to the complexity of the concepts they are tasked with communicating.
-
-        # Assumption 1: the stanford analysis is too basic to accomodate for differences in
-        # intrinsic complexity of concepts
-        # Assumption 2: Information theory may be sensitive to intrinsic irreducible complexity
 
         urlDat['info_density'] =  comp_ratio(corpus)
-
-        # Fudge factor:
-        # The log should be moved to plotting.
-        #scaled_density = -1.0 * abs(urlDat['info_density'] * (1.0/urlDat['wcount']))
-        #urlDat['scaled_info_density'] = scaled_density
 
         #Sentiment and Subjectivity analysis
         testimonial = TextBlob(corpus)
         urlDat['sp'] = testimonial.sentiment.polarity
         urlDat['ss'] = testimonial.sentiment.subjectivity
+        urlDat['sp_norm'] = np.abs(testimonial.sentiment.polarity)
+        urlDat['ss_norm'] = np.abs(testimonial.sentiment.subjectivity)
         urlDat['gf'] = textstat.gunning_fog(corpus)
 
         # explanation of metrics
@@ -127,7 +116,7 @@ def text_proc(corpus, urlDat = {}, WORD_LIM = 100):
         # many unique words, and does not yield high compression savings.
         # Good writing should not be obfucstated either. The reading level is a check for obfucstation.
         # The resulting metric is a balance of concision, low obfucstation, expression.
-        penalty = urlDat['standard']  + abs(urlDat['sp']) + abs(urlDat['ss']) # +float(scaled_density)
+        penalty = 1.0/urlDat['standard']  + abs(urlDat['sp']) + abs(urlDat['ss']) +1.0/urlDat['uniqueness']# +float(scaled_density)
         urlDat['penalty'] = penalty
     return urlDat
 

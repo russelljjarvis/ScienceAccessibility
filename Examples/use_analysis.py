@@ -24,7 +24,7 @@ import pickle
 from SComplexity.analysis import Analysis
 import pandas as pd
 
-from habanero import Crossref
+#from habanero import Crossref
 #cr = Crossref()from habanero import Crossref
 #[ z['DOI'] for z in x['message']['items'] ]
 #[ z['issn'] for z in x['message']['items'] ]
@@ -48,6 +48,24 @@ scraped = list(filter(lambda url: str('query') in url.keys(), urlDats))
 with open('scraped.p','wb') as f:
     pickle.dump(scraped,f)
 
+'''
+reference = A.get_reference_web()
+dfr = pd.DataFrame(reference)
+
+labels = [ w['link'] for w in reference ]
+by_query['reference'] = {}
+#by_query['reference']['sp'] = [ w['sp'] for w in reference ]
+by_query['reference']['standard'] = [ w['standard'] for w in reference ]
+by_query['reference']['info_density'] = [ w['info_density'] for w in reference ]
+
+low_standard = np.min(by_query['reference']['standard'])
+high_standard = np.max(by_query['reference']['standard'])
+
+low_info = np.min(by_query['reference']['info_density'])
+high_info = np.max(by_query['reference']['info_density'])
+print(low_info,high_info)
+#import pdb; pdb.set_trace()
+'''
 dfs = pd.DataFrame(scraped)
 ##
 #
@@ -68,20 +86,19 @@ np.random.seed(5)
 #for row in dfs.:
 #    print(row['clue_words']) #= len(row['clue_words'])
 
-X = dfs[['standard','ss','sp','info_density','gf','standard','uniqueness','info_density','wcount']]
+X = dfs[['standard','sp','ss','info_density','gf','standard','uniqueness','info_density']]#,'penalty']]
 X = X.as_matrix()
 
 
 est =  KMeans(n_clusters=2)
-fignum = 1
-titles = ['2 clusters']
 
-fig = plt.figure(fignum, figsize=(4, 3))
-ax = Axes3D(fig, rect=[0, 0, .95, 1], elev=48, azim=134)
 est.fit(X)
+
 y_kmeans = est.predict(X)
 centers = est.cluster_centers_
 
+
+fignum = 1
 fig = plt.figure(fignum, figsize=(4, 3))
 ax = Axes3D(fig, rect=[0, 0, .95, 1], elev=48, azim=134)
 ax.scatter(X[:, 0], X[:, 1], X[:, 2], c=y_kmeans, s=50)
@@ -92,12 +109,12 @@ ax.w_zaxis.set_ticklabels([])
 ax.set_xlabel('standard')
 ax.set_ylabel('subjectivity')
 ax.set_zlabel('sentiment polarity')
-ax.set_title(titles[fignum - 1])
-ax.dist = 12
+#ax.set_title(titles[fignum - 1])
+#ax.dist = 12
 fignum = fignum + 1
 for x,i in enumerate(zip(y_kmeans,dfs['clue_words'])):
     try:
-        print(i[0],i[1],dfs['link'][x],dfs['wcount'][x])
+        print(i[0],i[1],dfs['link'][x],dfs['publication'][x],dfs['clue_links'][x],dfs['sp_norm'][x],dfs['ss_norm'][x],dfs['uniqueness'][x])
     except:
         print(i)
 
@@ -143,8 +160,14 @@ plt.scatter(X[:, 1], X[:, 0], edgecolor='k')
 plt.savefig('reading_level_versus_sentiment_subjectivity.png')
 
 
-
-
+'''
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score
+model = RandomForestClassifier()
+model.fit(X_train, y_train)
+y_predict = model.predict(X_test)
+accuracy_score(y_test.values, y_predict)
+'''
 
 
 sps = [ w['sp'] for w in scraped ]
@@ -168,23 +191,6 @@ by_engine[str('google')] = list(filter(lambda url: str('google') in url['se'], u
 by_engine[str('duckduckgo')] = list(filter(lambda url: str('duckduckgo') in url['se'], urlDats))
 by_engine[str('wiki')] = list(filter(lambda url: str('wikipedia') in url['se'], urlDats))
 
-
-reference = A.get_reference_web()
-dfr = pd.DataFrame(reference)
-
-labels = [ w['link'] for w in reference ]
-by_query['reference'] = {}
-#by_query['reference']['sp'] = [ w['sp'] for w in reference ]
-by_query['reference']['standard'] = [ w['standard'] for w in reference ]
-by_query['reference']['info_density'] = [ w['info_density'] for w in reference ]
-
-low_standard = np.min(by_query['reference']['standard'])
-high_standard = np.max(by_query['reference']['standard'])
-
-low_info = np.min(by_query['reference']['info_density'])
-high_info = np.max(by_query['reference']['info_density'])
-print(low_info,high_info)
-#import pdb; pdb.set_trace()
 plt.clf()
 
 fig, ax = plt.subplots()

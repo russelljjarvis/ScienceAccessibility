@@ -132,7 +132,7 @@ def publication_check(wt):
     for k,v in publication.items():
         publication[k] = v[0:15]
 
-    if len(publication) == 1:
+    if len(publication) >= 1:
         return (True, publication)
     else:
         return (False, publication)

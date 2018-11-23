@@ -45,10 +45,14 @@ display = Display(visible=0, size=(1024, 768))
 display.start()
 
 
-#useragent = UserAgent()
-# Rotate through random user profiles.
-#profile = webdriver.FirefoxProfile()
 from selenium.webdriver.firefox.options import Options
+
+import re
+from bs4 import BeautifulSoup
+import bs4 as bs
+import urllib.request
+from io import StringIO
+import io
 
 
 options = Options()
@@ -56,16 +60,31 @@ options.headless = True
 driver = webdriver.Firefox(options=options)
 
 
-def pdf_to_txt(content):
-    pdf = io.BytesIO(content.content)
-    parser = PDFParser(pdf)
-    document = PDFDocument(parser, password=None)
-    write_text = ''
-    for page in PDFPage.create_pages(document):
-        interpreter.process_page(page)
-        write_text = write_text.join(retstr.getvalue())
+rsrcmgr = PDFResourceManager()
+retstr = StringIO()
+laparams = LAParams()
+codec = 'utf-8'
+device = TextConverter(rsrcmgr, retstr, codec = codec, laparams = laparams)
+interpreter = PDFPageInterpreter(rsrcmgr, device)
 
-    text = str(write_text)
+
+
+
+
+def pdf_to_txt(content):
+
+    if str(content) == str('<Response [404]>'):
+        return None
+    else:
+        pdf = io.BytesIO(content.content)
+        parser = PDFParser(pdf)
+        document = PDFDocument(parser, password=None)
+        write_text = ''
+        for page in PDFPage.create_pages(document):
+            interpreter.process_page(page)
+            write_text = write_text.join(retstr.getvalue())
+
+        text = str(write_text)
     return text
 
 #@jit
@@ -93,40 +112,31 @@ def convert(content,link):
         if str('.html') in link:
             text = html_to_txt(content)
         elif str('.pdf') in link:
-            print(content)
-            import pdb
-            pdb.set_trace()
             text = pdf_to_txt(content)
         else:
             try:
                 text = html_to_txt(content)
             except:
                 text = None
-
     except:
         text = None
     return text
-#@jit
 def url_to_text(link_tuple):
     se_b, page_rank, link, category, buff = link_tuple
-    #try:
     if str('pdf') not in link:
-        print(link)
         try:
             assert C.open(link) is not None
             content = C.open(link).content
-            print(content)
             buff = convert(content,link)
         except:
             pass
     else:
         pdf_file = requests.get(link, stream=True)
-        print(pdf_file)
-
-        buff = pdf_to_txt(pdf_file)
-
-    #except:
-    #buff = None
+        try:
+            buff = pdf_to_txt(pdf_file)
+        except:
+            print('probably a word document or something else')
+            buff = None
     link_tuple = ( se_b, page_rank, link, category, buff )
     return link_tuple
 
@@ -134,9 +144,7 @@ def url_to_text(link_tuple):
 def buffer_to_pickle(link_tuple):
     se_b, page_rank, link, category, buff = link_tuple
     link_tuple = se_b, page_rank, link, category, buff
-    print(buff)
     fname = 'results_dir/{0}_{1}_{2}.p'.format(category,se_b,page_rank)
-    print(fname,se_b)
     if type(buff) is not None:
         with open(fname,'wb') as f:
             pickle.dump(link_tuple,f)
@@ -158,8 +166,10 @@ def info_wars_get(get_links):
     # is info-wars is robot friendly?
     # surfraw is fine.
     se_,index,link,category,buff = get_links
-    url_of_links = str('https://www.infowars.com/search-page/')+str(category)
+    url_of_links = str('https://www.infowars.com/?s=')+str(category)
     links = collect_pubs(url_of_links)
+    import pdb
+    pdb.set_trace()
     if len(links) > NUM_LINKS: links = links[0:NUM_LINKS]
     [ process((se_,index,l,category,buff)) for index,l in enumerate(links) ]
 
@@ -192,10 +202,15 @@ def search_scholar(get_links):
     settings = scholar.ScholarSettings()
     querier.apply_settings(settings)
     query = scholar.SearchScholarQuery()
+
     query.set_words(category)
-    links = query.get_url()
     querier.send_query(query)
-    if len(links) > NUM_LINKS: links = links[0:NUM_LINKS]
+    links = [ a.attrs['url'][0] for a in querier.articles if a.attrs['url'][0] is not None ]
+    #links = query.get_url()
+    #print(links)
+    #if len(links) > NUM_LINKS: links = links[0:NUM_LINKS]
+    #import pdb
+    #pdb.set_trace()
     [ process((se_,index,l,category,buff)) for index,l in enumerate(links) ]
 
 class SW(object):

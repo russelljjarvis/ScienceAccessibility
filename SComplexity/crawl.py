@@ -107,7 +107,7 @@ def print_best_text(fileName):
     return text
 
 def denver_to_text(url):
-    fileName = C.download(local_path=CWD, url=url, name=url)
+    fileName = C.download(local_path=CWD, url=url, name='temp_file')
     file = open(fileName)
     if str('.html') in fileName:
         text = html_to_txt(file)

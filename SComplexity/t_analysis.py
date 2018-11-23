@@ -79,7 +79,12 @@ def text_proc(corpus, urlDat = {}, WORD_LIM = 100):
 
     # The post modern essay generator is so obfuscated, that ENGLISH classification fails, and this criteria needs to be relaxed.
     not_empty = bool(len(tokens) != 0)
-    if not_empty and urlDat['english'] and word_lim: #  and server_error:
+    print(not_empty,urlDat['english'],word_lim)
+    if urlDat['english']==False:
+        pass
+        #print(str(tokens))
+
+    if not_empty and word_lim: #  and server_error:
 
         tokens = [ w.lower() for w in tokens if w.isalpha() ]
         #fdist = FreqDist(tokens) #frequency distribution of words only

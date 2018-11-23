@@ -48,6 +48,12 @@ scraped = list(filter(lambda url: str('query') in url.keys(), urlDats))
 with open('scraped.p','wb') as f:
     pickle.dump(scraped,f)
 
+#by_query[str('science')]['urlDats'] = list(filter(lambda url: url['query'] in science_keys, scraped))
+for s in scraped:
+    print(s['query'])
+import pdb;
+pdb.set_trace()
+
 '''
 reference = A.get_reference_web()
 dfr = pd.DataFrame(reference)
@@ -70,6 +76,8 @@ dfs = pd.DataFrame(scraped)
 ##
 #
 ##
+
+
 dfs = dfs[~dfs['link'].isin(['https://www.youtube.com/'])]
 dfs = dfs[~dfs['link'].isin(['https://www.walmart.com'])]
 dfs = dfs[~dfs['link'].isin(['https://foundation.wikimedia.org/wiki/Privacy_policy'])]
@@ -86,11 +94,16 @@ np.random.seed(5)
 #for row in dfs.:
 #    print(row['clue_words']) #= len(row['clue_words'])
 
-X = dfs[['standard','sp','ss','info_density','gf','standard','uniqueness','info_density']]#,'penalty']]
+dfs.replace([np.inf, -np.inf], np.nan)
+dfs = dfs.dropna()
+
+#X = dfs[['standard','sp','ss','info_density','gf','standard','uniqueness','info_density','penalty']]
+X = dfs[['standard','sp','ss']]
+
 X = X.as_matrix()
+#import pdb; pdb.set_trace()
 
-
-est =  KMeans(n_clusters=2)
+est =  KMeans(n_clusters=3)
 
 est.fit(X)
 

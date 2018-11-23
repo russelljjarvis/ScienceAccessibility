@@ -37,9 +37,6 @@ display.start()
 from selenium.webdriver.firefox.options import Options
 options = Options()
 options.headless = True
-#try:
-#    driver = webdriver.Firefox(firefox_profile=profile,options=options)
-#except:
 driver = webdriver.Firefox(options=options) 
 
 import pandas as pd

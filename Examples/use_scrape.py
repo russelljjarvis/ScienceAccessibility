@@ -16,7 +16,7 @@ from SComplexity.scrape import SW
 
 LINKSTOGET= 10 #number of links to pull from each search engine (this can be any value, but more processing with higher number)
 
-SENGINES = {0:"wikipedia",1:"google",2:"yahoo",3:"duckduckgo",4:"scholar",5:"bing"}#,6:"scholarpedia"}
+SENGINES = {0:"wikipedia",1:"google",2:"yahoo",3:"duckduckgo",4:"scholar",5:"bing",6:"info_wars",7:"scholarpedia"}
 SEARCHLIST = [\
 "the singularity","skynet","differential equation","killer robot",\
 "franken-science","frankenstein","psycho-physics","the God Delusion",\

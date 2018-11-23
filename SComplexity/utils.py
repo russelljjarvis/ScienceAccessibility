@@ -15,26 +15,26 @@ import lzma
 def convert_pdf_to_txt(content):
     pdf = io.BytesIO(content.content)
     parser = PDFParser(pdf)
-    document = PDFDocument(parser, password=None) # this fails                                                                                                                                                                                
+    document = PDFDocument(parser, password=None) # this fails
     write_text = ''
     for page in PDFPage.create_pages(document):
         interpreter.process_page(page)
         write_text +=  retstr.getvalue()
-        #write_text = write_text.join(retstr.getvalue())                                                                                                                                                                                      
-    # Process all pages in the document                                                                                                                                                                                                       
+        #write_text = write_text.join(retstr.getvalue())
+    # Process all pages in the document
     text = str(write_text)
     return text
 
 def html_to_txt(content):
     soup = BeautifulSoup(content, 'html.parser')
-    #strip HTML                                                                                                                                                                                                                               
+    #strip HTML
     for script in soup(["script", "style"]):
-        script.extract()    # rip it out                                                                                                                                                                                                      
+        script.extract()    # rip it out
     text = soup.get_text()
-    #organize text                                                                                                                                                                                                                            
-    lines = (line.strip() for line in text.splitlines())  # break into lines and remove leading and trailing space on each                                                                                                                    
-    chunks = (phrase.strip() for line in lines for phrase in line.split("  ")) # break multi-headlines into a line each                                                                                                                       
-    text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines                                                                                                                                                                   
+    #organize text
+    lines = (line.strip() for line in text.splitlines())  # break into lines and remove leading and trailing space on each
+    chunks = (phrase.strip() for line in lines for phrase in line.split("  ")) # break multi-headlines into a line each
+    text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines
     str_text = str(text)
     return str_text
 
@@ -58,24 +58,7 @@ def english_check(corpus):
     return bool(detectedLangName == 'ENGLISH')
 
 
-def publication_check(wt):
-    publication = {}
-    if 'issn' in wt:
-        publication['issn'] = wt.split("issn",1)[1]
-    if 'isbn' in wt:
-        publication['isbn'] = wt.split("isbn",1)[1]
-    if 'pmid' in wt:
-        publication['pmid'] = wt.split("pmid",1)[1]
-    for k,v in publication.items():
-        publication[k] = v[0:15]
 
-    if len(publication) == 1:
-        return (True, publication)
-    else:
-        return (False, publicaton)
-    
-
-    return publication
 
 def engine_dict_list():
     se = {0:"google",1:"yahoo",2:"duckduckgo",3:"wikipedia",4:"scholar",5:"bing"}
@@ -121,7 +104,7 @@ def clue_links(check_with):
     # TODO query with pyhthon crossref api
 
     # https://pypi.org/project/crossrefapi/1.0.7/
-    CHECKS = [str('.gov'),str('.org'),str('.nih'),str('.nasa'),str('.pdf')]
+    CHECKS = [str('.fda'),str('.epa'),str('.gov'),str('.org'),str('.nih'),str('.nasa'),str('.pdf')]
     assume_false = []
     for check in CHECKS:
         if check in check_with:
@@ -131,6 +114,28 @@ def clue_links(check_with):
     else:
         return (False, assume_false)
 
+
+def publication_check(wt):
+    '''
+    The goal of this function/string comparison
+    is just to give a clue, about whether the text is
+    an official scientific publication, or a blog, or psuedo science publication
+    It is not meant to act as a definitive classifier.
+    '''
+    publication = {}
+    if 'issn' in wt:
+        publication['issn'] = wt.split("issn",1)[1]
+    if 'isbn' in wt:
+        publication['isbn'] = wt.split("isbn",1)[1]
+    if 'pmid' in wt:
+        publication['pmid'] = wt.split("pmid",1)[1]
+    for k,v in publication.items():
+        publication[k] = v[0:15]
+
+    if len(publication) == 1:
+        return (True, publication)
+    else:
+        return (False, publication)
 
 
 def clue_words(check_with):
@@ -152,7 +157,7 @@ def clue_words(check_with):
     str("journal of"),str("abstract"),str("materials and methods"),str("nature"), \
     str("conflict of interest"), str("objectives"), str("significance"), \
     str("published"), str("references"), str("acknowledgements"), str("authors"), str("hypothesis"), \
-    str("nih"),str('article')]
+    str("nih"),str('article'),str('affiliations')]
     assume_false = []
     for check in CHECKS:
         if check in check_with:

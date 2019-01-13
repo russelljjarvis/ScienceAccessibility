@@ -1,0 +1,20 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% alocal.sty
+% for Sandra Kuebler
+% 2011/05/29 02:20 CET
+% Klaus Lagally
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% patches for use with class CLV2
+% put this file into the working directory
+
+\gdef\n@tr@ce
+{\edef \dotr@ce {\nxp \tracingmacros \the \tracingmacros \relax }%
+	\tracingmacros 0\relax } 
+
+\gdef\notr@ce
+{\protect\n@tr@ce}
+
+\long\gdef \@gobble #1{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\endinput

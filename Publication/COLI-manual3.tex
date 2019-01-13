@@ -1,0 +1,460 @@
+\documentclass{clv3}
+
+\usepackage{hyperref}
+\usepackage{xcolor}
+\definecolor{darkblue}{rgb}{0, 0, 0.5}
+\hypersetup{colorlinks=true,citecolor=darkblue, linkcolor=darkblue, urlcolor=darkblue}
+
+\bibliographystyle{compling}
+
+% test compatibility with algorithmic.sty
+%\usepackage{algorithmic}
+
+\issue{1}{1}{2016}
+
+%Document Head
+\dochead{CLV3 Class File Manual}
+
+\runningtitle{How to Use CLV3 \LaTeX\ Class File}
+
+\runningauthor{Odi\'e N. Gementera}
+
+\begin{document}
+
+\title{How to Use CLV3 \LaTeX\ Class File}
+
+\author{Odi\'e N. Gementera\thanks{PITC Building, Pascor Drive, Sto. Ni\~no, Para\~naque City, 1700 Philippines. E-mail: o.gementera@spi-bpo.com.}}
+\affil{Publishing / SPi}
+
+\author{Another Author\thanks{PITC Building}}
+\affil{Publishing / SPi}
+
+\author{And Another Author}
+\affil{Publishing / SPi}
+
+\author{And Yet Another}
+\affil{Publishing / SPi}
+
+\maketitle
+
+\begin{abstract}
+This article describes how to use the ``CLV3'' class file, developed by {\sf SPi}, 
+to produce typeset papers based on Computer Linguistics typesetting specifications 
+for submission to MIT. This document was produced using ``{\tt clv3}'' class file 
+and will be modified whenever there is an update in the layout specifications.
+\end{abstract}
+
+\section{Introduction}
+
+This document applies to version 3 of CL class file. Prior style files such as 
+``{\tt cl.sty}'' and ``{\tt coli.sty}'' do not have all of the features 
+described here. It is assumed that the user has a basic knowledge of \LaTeX\ 
+typesetting commands.
+
+\section{Class File Options}
+
+There are several options that can be used to switch the mode of MIT2 from normal 
+article to manuscript style, or to different layout styles. This is specified in 
+the usual \LaTeX\ way by declaring:
+
+\verb|\documentclass[bookreview,manuscript]{clv3}|
+
+%\subsection{Default Option}
+
+\begin{deflist}
+\item[bookreview] Sets the article layout for Book Review.
+\item[brief] Sets the article layout for Briefly Noted.
+\item[discussion] Sets the article layout for Squibs and Discussions.
+\item[pubrec] Sets the article layout for Publication Received.
+\item[shortpaper] Sets the article layout for Short Paper.
+\item[manuscript] Sets the baseline spacing to double space. This 
+option can be used in combination with other options.
+\end{deflist}
+
+By not declaring any option in the \verb|\documentclass| command the class file
+will automatically set to standard article layout.
+
+\section{Title Page}
+
+The title page is created using the standard \LaTeX\ command \verb|\maketitle|. 
+Before this command is declared, the author must declare all the data which are 
+to appear in the title area.\footnote{$\backslash$maketitle is the command to execute all the title page information.}
+
+\subsection{Volume, Number and Year}
+
+The command \verb|\issue{vv}{nn}{yyyy}| is used in declaring the volume, number
+and year of the article. The first argument is for the volume, the second argument 
+is for the issue number. Volume and Issue number will appear on the even page 
+running head opposite the journal name. The third argument is for the Year which 
+will appear in the copyright line at the bottom of the title page.
+
+\subsection{Document Head}
+
+Document head is produced with the command \verb|\dochead{Document Head}|. Doc head 
+will output differently, or may not appear at all, depending on the option used in the 
+documentclass.
+
+\subsection{Paper Title}
+
+The paper title is declared like: \verb|\title{Computer Linguistic Article}|
+in the usual \LaTeX manner. Line breaks may be inserted with (\verb|\\|) to equalize 
+the length of the title lines.
+
+\subsection{Authors}
+The name and related information for authors is declared with the \verb|\author{}| command. 
+
+The \verb|\thanks{}| command produces the ``first footnotes.''. \LaTeX\ \verb|\thanks| 
+cannot accommodate multiple paragraphs, author will have to use a separate \verb|\thanks|
+for each paragraph.
+
+The \verb|\affil{}| command produces the author affiliations that appears right under 
+the author's name.
+
+\subsection{Running Headers}
+The running heads are declared with the \verb|\runningtitle{Running Title}| for the 
+journal name and \verb|\runningauthor{Author's Surname}| for author. These information 
+will appear on the odd pages. For {\tt bookreview} option, odd page running head is 
+automatically set to "Book Reviews". Even page running head is default to Computational 
+Linguistics opposite volume and issue number.
+
+\subsection{History Dates}
+
+History dates are declared with \verb|\historydates{Submission received:...}|. This data
+should contain Submission, Revised and Accepted date of the article. History dates appear
+at the footnote area of title age.
+
+
+\section{Abstract}
+
+Abstract is the first part of a paper after \verb|\maketitle|. Abstract text is 
+placed within the abstract environment:
+
+\begin{verbatim}
+\begin{abstract}
+This is the abstract text . . .
+\end{abstract}
+\end{verbatim}
+
+\section{Section Headings}
+
+Section headings are declared in the usual \LaTeX\ way via \verb|\section{}|, 
+\verb|\subsection{}|, \verb|\subsubsection{}|, and \verb|\paragraph{}|. The 
+first 3 levels of section head will have Arabic numbering separated 
+by period. The \verb|\paragraph{}| section will have the title head in Italics 
+and at the same line with the first line of succeeding paragraph.
+
+\section{Citations}
+Citations in parentheses are declared using the \verb|\cite{}|
+command, and appear in the text as follows: 
+This technique is widely used \cite{woods}.
+The command \verb|\citep{}| (cite parenthetical) is a synonym of \verb|\cite{}|.
+
+Citations used in the sentence are declared using the \verb|\namecite{}|
+commands, and appear in the text as follows: 
+\namecite{woods} first described this technique.
+The command \verb|\citet{}| (cite textual) is a synonym of \verb|\namecite{}|.
+
+This style file is designed to be used with the BibTeX
+style file \verb|compling.bst|.  Include the command
+\verb|\bibliographystyle{compling}| in your source file.
+
+Citation commands are based on the \verb|natbib| package;
+for details on options and further variants of the commands,
+see the \verb|natbib| documentation.  In particular, options 
+exist to add extra text and page numbers.  For example, 
+\verb|\cite[cf.][ch.\ 1]{winograd}| yields: \cite[cf.][ch.\ 1]{winograd}.
+
+The following examples illustrate how citations appear both in the text
+and in the references section at the end of this document.
+\begin{enumerate}
+\item Article in journal: 
+ \namecite{akmajian};
+ \namecite{woods}.
+\item Book: 
+  \namecite{altenberg};
+  \namecite{winograd}.
+\item Article in edited collection/Chapter in book: 
+  \namecite{cutler};
+  \namecite{sgall};
+  \namecite{jurafsky}.
+\item Technical report:
+  \namecite{appelt};
+  \namecite{robinson}.
+\item Thesis or dissertation: 
+  \namecite{baart};
+  \namecite{spaerckjones};
+  \namecite{cahn}.
+\item Unpublished item: 
+  \namecite{ayers}.
+\item Conference proceedings: 
+  \namecite{benoit}.
+\item Paper published in conference proceedings: 
+  \namecite{krahmer};
+  \namecite{Copestake2001}.
+\end{enumerate}
+
+
+\section{Definition with Head}
+
+Definition with head is declared by using the environment:
+\\
+\begin{verbatim}
+\begin{definition}
+Definition text. . .
+\end{definition}
+\end{verbatim}
+
+This environment will generate the word {\bf ``Definition 1''} in bold on separate
+line. The sequence number is generated for every definition environment. Definition 
+data will have no indention on the first line while succeeding lines will have hang 
+indention.
+
+\section{Lists}
+
+The usual \LaTeX\ itemize, enumerate and definition list environments are used 
+in CLV3 style. 
+
+To produce Numbered List use the environment:
+
+\begin{verbatim}
+\begin{enumerate}
+\item First numbered list item
+\item Second numbered list item
+\item Third numbered list item
+\end{enumerate}
+\end{verbatim}
+
+To produce Bulleted List use the environment:
+
+\begin{verbatim}
+\begin{itemize}
+\item First bulleted list item
+\item Second bulleted list item
+\item Third bulleted list item
+\end{itemize}
+\end{verbatim}
+
+To produce Definition List use the environment:
+
+\begin{verbatim}
+\begin{deflist}
+\item[First]  Definition list item. . .
+\item[Second] Definition list item. . .
+\item[Third]  Definition list item. . .
+\end{deflist}
+\end{verbatim}
+
+Additional list environment were also defined such as Unnumbered, Arabic and Alpha lists.
+
+Unnumbered List is the list where item labels are not generated. To produce Unnumbered List use the environment:
+
+\begin{verbatim}
+\begin{unenumerate}
+\item First list item
+\item Second list item
+\item Third list item
+\end{unenumerate}
+\end{verbatim}
+
+To produce Arabic List use the environment:
+
+\begin{verbatim}
+\begin{arabiclist}
+\item First arabic list item
+\item Second arabic list item
+\item Third arabic list item
+\end{arabiclist}
+\end{verbatim}
+
+To produce Alpha List use the environment:
+
+\begin{verbatim}
+\begin{alphalist}
+\item First alpha list item
+\item Second alpha list item
+\item Third alpha list item
+\end{alphalist}
+\end{verbatim}
+
+All the list environments mentioned above can be nested with each other.
+
+\subsection{Other List Types}
+
+\subsubsection{Outline List or Example List}
+
+\begin{verbatim}
+\begin{exlist}
+\item First outline list item. . .
+\item Second outline list item. . .
+\item Third outline list item. . .
+\end{exlist}
+\end{verbatim}
+
+\subsubsection{Output Formula or Algorithm}
+
+\begin{verbatim}
+\begin{algorithm}
+\item[Step 1] First item. . . 
+\item[Step 2] Second item. . .
+\end{algorithm}
+\end{verbatim}
+
+% test compatibility with algorithmic.sty
+%\begin{algorithmic}
+%\STATE i
+%\end{algorithmic}
+
+See sample on the {\tt COLI-template.pdf}.
+
+\section{Word Formula or Displayed Text}
+
+Word formula and displayed text are text that should be displayed in a 
+separate line without indention. This are achieved by using the environment:
+
+\begin{verbatim}
+\begin{displaytext}
+This is a sample of displayed text . . .
+\end{displaytext}
+\end{verbatim}
+
+\section{Dialogue}
+
+Dialogue text are presentation of people's conversation. These will be presented 
+on a separate line where each dialogue starts with the name of speaker, followed by 
+colon. Succeeding lines will be hang indented. To produce Dialogue use the environment:
+\\
+\begin{verbatim}
+\begin{dialogue}
+Speaker 1: dialogue. . .
+
+Speaker 2: dialogue. . .
+\end{dialogue}
+\end{verbatim}
+
+
+\noindent Please make sure to insert an empty line between dialogues.
+
+\section{Extracts}
+
+Extract text acts like quote, where left and right margins are indented.
+To produce Extract use the environment:
+
+\begin{verbatim}
+\begin{extract}
+This is an example of Extract text. . .
+\end{extract}
+\end{verbatim}
+
+\noindent See sample on the {\tt COLI-template.pdf}.
+
+\section{Theorem-like Environments}
+
+There are several theorem-like environments defined in CLV3 class file. Theorem-like
+environments generate the name of the theorem as label, and counter number in bold.
+
+\subsection{Example}
+
+To produce Example use the environment:
+
+\begin{verbatim}
+\begin{example}
+This is Example text. . .
+\end{example}
+\end{verbatim}
+
+\subsection{Lemma}
+
+To produce Lemma use the environment:
+
+\begin{verbatim}
+\begin{lemma}
+Lemma text. . .
+\end{lemma}
+\end{verbatim}
+
+This produces the following output:
+\begin{lemma}\label{lem}
+Lemma text.
+\end{lemma}
+A small vertical space separates the end of the lemma
+from the following text.
+
+\subsection{Theorem}
+
+To produce Theorem use the environment:
+
+\begin{verbatim}
+\begin{theorem}
+Theorem text. . .
+\end{theorem}
+\end{verbatim}
+
+This produces the following output:
+\begin{theorem}\label{thm}
+Theorem text.
+\end{theorem}
+\noindent
+A small vertical space separates the end of the theorem
+from the following text.
+
+\subsection{Proof}
+
+The proof environment produces a square at the end of the text. To produce Proof 
+use the environment:
+
+\begin{verbatim}
+\begin{proof}
+Proof text. . .
+\end{proof}
+\end{verbatim}
+
+This produces the following output:
+\begin{proof}\label{proof}
+Proof text.
+\end{proof}
+A small vertical space separates the end of the lemma
+from the following text.
+
+\subsection{Unnumbered Theorem-like Environments}
+
+There are also unnumbered version of some of the theorem-like environments. 
+These are declared by using its asterisked version. Here are the three 
+unnumbered version of theorem-like environments:
+
+\begin{verbatim}
+\begin{theorem*}
+Unnumbered theorem text. . .
+\end{theorem*}
+\end{verbatim}
+
+\section{Appendix}
+
+Appendix is declared by issuing the command \verb|\appendix|. This will set 
+the necessary labels to appendix's rule (i.e. (A.1) for equation number).
+
+Sections inside Appendix are declared using \verb|\appendixsection{}|, which 
+will produce {\bf Appendix A: Section Title} for first section.
+
+Equation numbers are automatically set to (A.1), (A.2) and (A.3). Where the letters 
+follow the current level of Appendix section. So equations on {\bf Appendix B} 
+will have equation numbers as follow: (B.1), (B.2) and (B.3).
+
+\section{Acknowledgments}
+
+Acknowledgments are produce by using the environment:
+\\
+\begin{verbatim}
+\begin{acknowledgments}
+Acknowledgments text. . .
+\end{acknowledgments}
+\end{verbatim}
+
+\section{Others}
+
+Other items such as Equations, Figures, Tables and References are produced in
+the standard \LaTeX\ typesetting.
+
+\starttwocolumn
+\bibliography{compling_style}
+
+\end{document}

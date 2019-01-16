@@ -38,9 +38,15 @@ class Analysis(object):
 
     def cas(self):
         # Do in parallel as it is 2018
-        grid = db.from_sequence(self.files,npartitions=8)
-        urlDats = list(db.map(self.convert_and_score,grid).compute())
+    
+        pgrid = db.from_sequence(self.files,npartitions=8)
+        urlDats = list(db.map(self.convert_and_score,pgrid).compute())
+        # just kidding need to do a serial debug often times, regardless of parallel speed up.
+        #urlDats = list(map(self.convert_and_score,self.files))
+        urlDats = [ url for url in urlDats if type(url) is not type(None) ]
+        #urlDats = list(filter(lambda url: type(url) != None, urlDats))
         urlDats = list(filter(lambda url: len(list(url))>3, urlDats))
+
         urlDats = list(filter(lambda url: len(list(url.keys()))>3, urlDats))
         # urlDats = list(filter(lambda url: str('penalty') in url.keys(), urlDats))
         if type(self.urlDats) is not type(None):

@@ -44,7 +44,7 @@ This article describes how we scrapped a wide variety of written word from the i
 
 \section{Introduction}
 
-Non-scientific writing typically exceeds genuine scientific writing in one important criteria: in contrast to genuine science non-science ideas are often expressed using a lower complexity and more engaging writing style.  However, multiple stake holders could benefit if science was more often communicated using a lower complexity expression of ideas. Knowledge would be more readily mobilized and transferred into public awareness, also, and machine readability and machine organization of factual information derived from journal articles should also occur more readily.
+Non-scientific writing typically exceeds genuine scientific writing in one important criteria: in contrast to genuine science non-science ideas are often expressed using a less complex more engaging writing style.  Yet, multiple stake holders could benefit if science was communicated using a less complex expression of ideas. Using less complicated science writing, knowledge could be more readily transferred into public awareness, also, and machine reading machine organization, and machine action on factual information derived from journal articles could occur more readily.
 
 We believe non-science writing occupies a style niche, that academic science writing should also occupy. We show that we can blindly predict the status of writing: popular culture writing, opinionative writing, and traditional science, by using machine learning to classify the different writing types. By predicting which of the several different writing types any writing piece occupies, we are able to characterize among different writing niches.
 
@@ -59,29 +59,30 @@ The scraping, and analysis work we performed, rested on top of a large hierarchy
 
 Reproducibility is burdened by the technical task of satisfying each software dependencies necessary to recreate a digital scientific experiment. Our position, of starting with from a cloned software environment, will mitigate, the burden of duplicating our digital research environment. That is why we have used a Docker file, and associated Docker container together, as they act as self-documenting and extremely portable software environment clone.
 
-Initially we created two different, unrelated and broad ranging lists of scientific queries. The first type of query was predominantly cultural in nature, or world view related. The second set of queries represented gains in knowledge about physical entities or physical processes in the world. We were interested in scientific, and pseudo-scientific writing.
+Initially we created two different, unrelated and broad ranging lists of scientific queries. The first type of query was predominantly cultural in nature, or world view related. The second set of queries represented gains in knowledge about physical entities or physical processes in the world. We were interested in scientific, and pseudo-scientific writing.\\
 
-There were two types of writing that we actively excluded from our analysis, those were websites expressed in a non-English language, and also websites, that were highly commercial in nature. These were websites advertisements, of consumer goods, and online shopping generally. These websites, utilizing wording, that significantly biases text stat metrics. Webpages of less than 400 words, were most often advertisements, and websites
+There were two types of writing that we actively excluded from our analysis, those were websites expressed in a non-English language, and also websites, that were highly commercial in nature. These were websites advertisements, of consumer goods, and online shopping generally. These websites, utilizing wording, that significantly biases text stat metrics. Webpages of less than 400 words, were most often advertisements, and websites of a comercial nature such as Amazon shopping.\\
+
 Non English, websites were excluded for the simple reason that they are not amenable to Textstat, and NLTK tools, however, even if this was not the case, it is also known, that there are  significant differences in per-word information entropy between different natural languages.
 
 \subsection{Search Engine Queries:}
 The first two lists of queries were chosen to be belong to an overt set of exclusively scientific or cultural search terms. A third list of terms was designed to be deliberately ambiguous.
 
-\subsection{Science Queries:}
+\subsubsection{Science Queries:}
 The three lists of search engine queries were as implemented as follows: science engine queries: 'evolution', 'photo-sysnthesis' ,'Transgenic', 'GMO', 'climate change', 'cancer', 'Vaccines', 'Genetically Modified Organism', ‘differential equation’,"psycho-physics","soma”
 
-Cultural queries were as follows: 'reality TV', 'prancercise philosophy', 'play dough delicious deserts', 'unicorn versus brumby', 'football soccer' , god fearing.
+\subsubsection{Cultural queries were as follows:} 'reality TV', 'prancercise philosophy', 'play dough delicious deserts', 'unicorn versus brumby', 'football soccer' , god fearing.
 
 As discussed we also designed ambiguous queries which were equally likely return content that was either scientific, or non scientific in nature. The reason for doing this was to provide a challenge for the classification algorithm.
 
-\subsection{Ambiguous Queries, were as follows:}
+\subsubsection{Ambiguous Queries, were as follows:}
 
 "the singularity","skynet","","killer robot","franken-science","Frankenstein,”the God Delusion","god does not play dice", "the selfish gene","political science", ", "requim for a spike"
 
 
 After scraping across the two different lists were performed, the resulting queries were filtered, according to specific sets of criteria. As stated previously, we discarded from our analysis, web pages that were not written in English, since we did not have the necessary tools, to analyze them.
 
-Text Metrics:
+\subsection{Text Metrics:}
 A list of metrics applied to downloaded corpus include: TextStat, which was used to measure word complexity (an average of several important word complexity metrics, such as the Gunning Fog measure of reading level), LZW compression-ratio, de-compression ratio, sentiment analysis, subjectivity analysis, and page rank.
 
 Compression ratios were used to investigate the notion, that well written scientific writing, might simply be lower in information entropy, and an information theoretic analysis, can be used to both to better characterize, and corroborate the findings of other reading word complexity metrics
@@ -113,6 +114,36 @@ By not declaring any option in the \verb|\documentclass| command the class file
 will automatically set to standard article layout.
 
 \section{Results}
+
+We created a total list all of the different queries obtained, from combining both the list of cultural queries, and scientific queries, and then applied such queries exclusively to the Wikipedia, search interface. We take the result of evaluating this pool of queries, and then plot the resulting pool of queries versus page rank. The Wikipedia, actually showed a small but consistant preference for web pages of higher complexity.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{screenshot001}
+	\caption{}
+	\label{fig:figure1}
+\end{figure}
+
+
+
+The plots below may appear to look a bit unprofessional, as not all data points have error bars. The reason for this, is pandas+seaborne allows you to plot on the same axis multiple sample data points, and single sampled data points. Only of the five mentioned search engines was made to sample beyond page rank 10, but all five sampled under page rank 10.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth, height=0.7\textheight]{figure2}
+	\caption{}
+	\label{fig:figure2}
+\end{figure}
+
+
+The same plot but with mean and std deviation plots when multiple samples per page rank are available. When we plotted the Wikipedia queries, where reading (text-stat standard) level is instead plotted against page rank, we again see that there is a slight trend towards increasing text complexity with decreasing page rank. 
+
+
+If instead we consider how resistant Wikipedia pages are to compression, we see that low page rank pages, are more resistant to compression. This finding recapitulates the same result as the above figure, where increasing Wikipedia page rank slightly decreases text complexity.
+
+When aggregated search results between all possible search engines, and then plotting page rank versus complexity, for particular types of search terms, there was a strong positive correlation between page rank, and reading level.
+
+In the case of GMO, and Genetically Modified Organism, positive increasing trends where observed
 
 The title page is created using the standard \LaTeX\ command \verb|\maketitle|.
 Before this command is declared, the author must declare all the data which are

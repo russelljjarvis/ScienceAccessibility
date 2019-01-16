@@ -7,10 +7,6 @@
 
 # Patrick McGurrin
 # patrick.mcgurrin@gmail.com
-import selenium
-from pyvirtualdisplay import Display
-from selenium import webdriver
-#from fake_useragent import UserAgent
 from numpy import random
 import os
 from bs4 import BeautifulSoup
@@ -30,16 +26,20 @@ from pdfminer.converter import  TextConverter
 
 from SComplexity.crawl import convert_pdf_to_txt
 from SComplexity.crawl import print_best_text
-from delver import Crawler
-C = Crawler()
-import requests
-#import duckduckgo
-#from numba import jit
-#import scholar_scrape
 from SComplexity.crawl import collect_pubs
 from SComplexity.scholar_scrape import scholar
 
+from delver import Crawler
+C = Crawler()
+import requests
+
+
 import io
+
+import selenium
+
+from selenium import webdriver
+from pyvirtualdisplay import Display
 
 display = Display(visible=0, size=(1024, 768))
 display.start()
@@ -55,9 +55,17 @@ from io import StringIO
 import io
 
 
-options = Options()
-options.headless = True
-driver = webdriver.Firefox(options=options)
+#options = Options()
+#options.headless = True
+chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument('--no-sandbox')
+chrome_options.add_argument('--headless')
+chrome_options.add_argument('--disable-gpu')
+driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver',chrome_options=chrome_options)
+#driver = webdriver.Chrome(chrome_options=chrome_options)
+driver.implicitly_wait(10)
+from selenium.common.exceptions import NoSuchElementException
+
 
 
 rsrcmgr = PDFResourceManager()
@@ -70,24 +78,82 @@ interpreter = PDFPageInterpreter(rsrcmgr, device)
 
 
 
+#from pyPdf import PdfFileReader
 
-def pdf_to_txt(content):
+#from StringIO import StringIO
+
+from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
+from pdfminer.converter import TextConverter
+from pdfminer.layout import LAParams
+from pdfminer.pdfpage import PDFPage
+import os
+import sys, getopt
+from io import StringIO
+
+#converts pdf, returns its text content as a string
+def pdf_to_txt_(infile):#, pages=None):
+    #if not pages:
+    pagenums = set()
+
+    output = StringIO()
+    manager = PDFResourceManager()
+    converter = TextConverter(manager, output, laparams=LAParams())
+    interpreter = PDFPageInterpreter(manager, converter)
+
+    #infile = file(fname, 'rb')
+    for page in PDFPage.get_pages(infile, pagenums):
+        interpreter.process_page(page)
+    infile.close()
+    converter.close()
+    text = output.getvalue()
+    output.close
+    return text
+
+
+import PyPDF2
+from PyPDF2 import PdfFileReader
+import textract
+
+#from nltk.tokenize import word_tokenize
+#from nltk.corpus import stopwords
+
+def pdf_to_txt(url):
 
     if str(content) == str('<Response [404]>'):
         return None
     else:
-        pdf = io.BytesIO(content.content)
-        parser = PDFParser(pdf)
-        document = PDFDocument(parser, password=None)
-        write_text = ''
-        for page in PDFPage.create_pages(document):
-            interpreter.process_page(page)
-            write_text = write_text.join(retstr.getvalue())
+        # from
+        # https://medium.com/@rqaiserr/how-to-convert-pdfs-into-searchable-key-words-with-python-85aab86c544f
+        try:
+            input_buffer = StringIO(content.content)
+            pdfReader = PyPDF2.PdfFileReader(input_buffer)
+        except:
+            pdfFileObj = io.BytesIO(content.content)
+            pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
 
-        text = str(write_text)
+        num_pages = pdfReader.numPages
+        count = 0
+        text = ""
+        while count < num_pages:
+            pageObj = pdfReader.getPage(count)
+            count +=1
+            text += pageObj.extractText()
+        if text != "":
+           text = text
+        else:
+           text = textract.process(fileurl, method='tesseract', language='eng')
     return text
+    '''
+    parser = PDFParser(pdf)
+    document = PDFDocument(parser, password=None)
+    write_text = ''
+    for page in PDFPage.create_pages(document):
+        interpreter.process_page(page)
+        write_text = write_text.join(retstr.getvalue())
 
-#@jit
+    text = str(write_text)
+    '''
+
 def html_to_txt(content):
     soup = BeautifulSoup(content, 'html.parser')
     #strip HTML
@@ -101,42 +167,45 @@ def html_to_txt(content):
     chunks = (phrase.strip() for line in lines for phrase in line.split("  ")) # break multi-headlines into a line each
     text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines
     str_text = str(text)
-    #str_text.pub = None
-    #str_text.pub = publication
 
-    return str_text#,publication#, issn, doi
-#@jit
+    return str_text
+
 def convert(content,link):
     # This is really ugly, but it's proven to be both fault tolerant and effective.
     try:
         if str('.html') in link:
             text = html_to_txt(content)
+            print(text)
+
         elif str('.pdf') in link:
             text = pdf_to_txt(content)
         else:
             try:
                 text = html_to_txt(content)
+                print(text)
             except:
                 text = None
     except:
         text = None
     return text
+
+
 def url_to_text(link_tuple):
     se_b, page_rank, link, category, buff = link_tuple
     if str('pdf') not in link:
-        try:
-            assert C.open(link) is not None
+        if C.open(link) is not None:
             content = C.open(link).content
             buff = convert(content,link)
-        except:
-            pass
+        else:
+            print('problem')
     else:
         pdf_file = requests.get(link, stream=True)
-        try:
-            buff = pdf_to_txt(pdf_file)
-        except:
-            print('probably a word document or something else')
-            buff = None
+        f = io.BytesIO(pdf_file.content)
+        reader = PdfFileReader(f)
+        buff = reader.getPage(0).extractText().split('\n')
+
+
+    print(buff)
     link_tuple = ( se_b, page_rank, link, category, buff )
     return link_tuple
 
@@ -168,8 +237,7 @@ def info_wars_get(get_links):
     se_,index,link,category,buff = get_links
     url_of_links = str('https://www.infowars.com/?s=')+str(category)
     links = collect_pubs(url_of_links)
-    import pdb
-    pdb.set_trace()
+
     if len(links) > NUM_LINKS: links = links[0:NUM_LINKS]
     [ process((se_,index,l,category,buff)) for index,l in enumerate(links) ]
 
@@ -185,6 +253,7 @@ def wiki_get(get_links):
     [ process((se_,index,l,category,buff)) for index,l in enumerate(links) ]
 
 # this should be a class method with self and self.NUM_LINKS but can't be bothered refactoring.
+'''
 def scholar_pedia_get(get_links):
     # wikipedia is robot friendly
     # surfraw is fine.
@@ -193,7 +262,7 @@ def scholar_pedia_get(get_links):
     links = collect_pubs(url_of_links)
     if len(links) > NUM_LINKS: links = links[0:NUM_LINKS]
     [ process((se_,index,l,category,buff)) for index,l in enumerate(links) ]
-
+'''
 # this should be a class method with self and self.NUM_LINKS but can't be bothered refactoring.
 def search_scholar(get_links):
     # from https://github.com/ckreibich/scholar.py/issues/80
@@ -209,8 +278,24 @@ def search_scholar(get_links):
     #links = query.get_url()
     #print(links)
     #if len(links) > NUM_LINKS: links = links[0:NUM_LINKS]
-    #import pdb
-    #pdb.set_trace()
+
+    [ process((se_,index,l,category,buff)) for index,l in enumerate(links) ]
+
+def search_author(get_links):
+    # from https://github.com/ckreibich/scholar.py/issues/80
+    se_,index,category,category,buff = get_links
+    querier = scholar.ScholarQuerier()
+    settings = scholar.ScholarSettings()
+    querier.apply_settings(settings)
+    query = scholar.SearchScholarQuery()
+
+    query.set_words(category)
+    querier.send_query(query)
+    links = [ a.attrs['url'][0] for a in querier.articles if a.attrs['url'][0] is not None ]
+    #links = query.get_url()
+    #print(links)
+    #if len(links) > NUM_LINKS: links = links[0:NUM_LINKS]
+
     [ process((se_,index,l,category,buff)) for index,l in enumerate(links) ]
 
 class SW(object):
@@ -284,11 +369,12 @@ class SW(object):
 
 
         config['search_engines'] = se_
+        #config['scrape_method'] = 'http'
 
         config['scrape_method'] = 'selenium'
         config['num_pages_for_keyword'] = 1
         config['use_own_ip'] = True
-        config['sel_browser'] = 'firefox'
+        config['sel_browser'] = 'chrome'
         config['do_caching'] = False # bloat warning.
 
         # Google scrap + selenium implements a lot of human centric browser masquarading tools.

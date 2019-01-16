@@ -153,24 +153,30 @@ driver.get('http://google.com/') ;\
 print('Headless Chrome Initialized') ;\
 driver.quit();"
 
-# ADD . .
 
-RUN sudo pip install PyPDF2 textract
-
+RUN sudo /opt/conda/bin/pip install PyPDF2 pdfminer3k
+RUN sudo apt-get install -y libpulse-dev
+RUN sudo apt-get install -y python-dev libxml2-dev libxslt1-dev antiword unrtf poppler-utils pstotext tesseract-ocr \
+flac ffmpeg lame libmad0 libsox-fmt-mp3 sox libjpeg-dev swig
 RUN sudo apt-get install -y xvfb
-RUN /opt/conda/bin/pip install xvfbwrapper
+RUN sudo /opt/conda/bin/pip install xvfbwrapper
+RUN sudo /opt/conda/bin/pip install textract
 
+ADD . .
 RUN sudo chown -R jovyan .
-RUN pip install -e .
 RUN python -c "import SComplexity"
 RUN python -c "from SComplexity import t_analysis, utils, scrape"
 WORKDIR $HOME
 
-RUN pip install habanero
+RUN sudo /opt/conda/bin/pip install habanero
+RUN sudo /opt/conda/bin/pip install -e .
 
 
 # set display port to avoid crash
 ENV DISPLAY=:99
+
+
+ENV PATH /usr/local/bin/chromedriver:$PATH
 
 
 ENTRYPOINT /bin/bash

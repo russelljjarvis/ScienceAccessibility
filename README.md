@@ -11,7 +11,7 @@ Objectively describing the different character of the different writing styles w
 
 
 
-* The Data counterpart of this code repository lives at:
+## The Data counterpart of this code repository lives at:
 https://osf.io/yng5u/wiki/home/
 
 

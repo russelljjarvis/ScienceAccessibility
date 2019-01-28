@@ -1,7 +1,4 @@
-##
-
 # Scientific Readability Project
-
 ## Motivation for the Scientific Readability Project
 Non-scientific writing typically exceeds genuine scientific writing in one important criteria: in contrast to genuine science non-science ideas are often expressed with a lower complexity and more engaging writing style.  However, multiple stake holders can benefit when science is communicated with lower complexity expression of ideas. With lower complexity science writing, knowledge would be more readily transferred into public awareness, additionally, organization of facts derived from journal articles would occur more readily, as successful machine readability and actionability of documented science experiments would probably occur with less human intervention.
 

@@ -1,8 +1,6 @@
 # Science Accessibility Project
 ## Motivation for the Science Accessibility Project
-Non-scientific writing typically exceeds genuine scientific writing in one important criteria: in contrast to genuine science non-science ideas are often expressed with a more accessible writing style. 
-
-We believe non-science writing occupies a more accessible style niche, that academic science writing should also occupy. We show that we can use machine learning to predict the status of writing: popular culture writing, opinionative writing, and traditional science, by first scrapping a large variety of web documents, and then classifying among the different writing types. By predicting which of the several different writing types any writing piece occupies, we are able to characterize among different writing niches.
+Non-scientific writing typically exceeds genuine scientific writing in one important criteria: in contrast to genuine science non-science ideas are often expressed with a more accessible writing style. We believe non-science writing occupies a more accessible style niche, that academic science writing should also occupy. We show that we can use machine learning to predict the status of writing: popular culture writing, opinionative writing, and traditional science, by first scrapping a large variety of web documents, and then classifying among the different writing types. By predicting which of the several different writing types any writing piece occupies, we are able to characterize among different writing niches.
 
 Multiple stake holders can benefit when science is communicated with lower complexity expression of ideas. With lower complexity science writing, knowledge would be more readily transferred into public awareness, additionally, digital organization of facts derived from journal articles would occur more readily, as successful machine comprehension of documented science would likely occur with less human intervention.
 

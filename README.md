@@ -1,15 +1,25 @@
-# Scientific Readability Project
+# Science Accessibility Project
+## Motivation for the Science Accessibility Project
+Non-scientific writing typically exceeds genuine scientific writing in one important criteria: in contrast to genuine science non-science ideas are often expressed with a more accessible writing style. The accessibility of written word can be approximated by a computer program that reads over the text, and guesses the mental difficulty, associated with comprehending a written document. The computer program maps reading difficult onto a quantity that represents the number of years of schooling needed to decode the language in the document. For convenience, we can refer to the difficulty associated with the text as the 'complexity' of the document. 
 
-## Motivation for the Scientific Readability Project
-Non-scientific writing typically exceeds genuine scientific writing in one important criteria: in contrast to genuine science non-science ideas are often expressed using a lower complexity and more engaging writing style.  However, multiple stake holders could benefit if science was more often communicated using a lower complexity expression of ideas. Knowledge would be more readily mobilized and transferred into public awareness, also, and machine readability and machine organization of factual information derived from journal articles should also occur more readily.
+We believe non-science writing occupies a more accessible style niche, that academic science writing should also occupy. We show that we can use machine learning to predict the status of writing: popular culture writing, opinionative writing, and traditional science, by first scrapping a large variety of web documents, and then classifying among the different writing types. By predicting which of the several different writing types any writing piece occupies, we are able to characterize among different writing niches.
 
-We believe non-science writing occupies a style niche, that academic science writing should also occupy. We show that we can blindly predict the status of writing: popular culture writing, opinionative writing, and traditional science, by using machine learning to classify the different writing types. By predicting which of the several different writing types any writing piece occupies, we are able to characterize among different writing niches.
+Multiple stake holders can benefit when science is communicated with lower complexity expression of ideas. With lower complexity science writing, knowledge would be more readily transferred into public awareness, additionally, digital organization of facts derived from journal articles would occur more readily, as successful machine comprehension of documented science would likely occur with less human intervention.
 
 Objectively describing the different character of the different writing styles will allow us to prescribe how, to shift academic science writing into a more accessible niche, where science can more aggressively compete with pseudo-science, and blogs, facilitating greater knowledge transference, at a moment in history when public awareness is critically at stake.
 
-## Building the project.
 
-Executing these files is not yet straight forward, as the execution environment is dependency heavy. Docker is used to solve non trivial software dependency issues where possible.
+
+## Open Data Counterpart of this Code Repository lives at:
+https://osf.io/yng5u/wiki/home/
+
+# Analysis of Text.
+Running the scrapper is not necessary for analysing the text documents, to analyse text only the python nltk frame work should be necessary
+
+## Building All of the Project.
+(including the scraper).
+
+The scraping, and crawling code for this is dependency heavy. Docker is used to solve non trivial software dependency issues where possible.
 
 If docker is installed on the base OS, git clone this repository, and assuming the file build.sh is chmod +x , run: `bash build.sh` to perform the dockerbuild. To run the jupyter notebook over docker, enter the docker enivornment interactively in one of two ways, via a bash shell, or via an ipython notebook or
 and then launch python via BASH in Linux as follows:

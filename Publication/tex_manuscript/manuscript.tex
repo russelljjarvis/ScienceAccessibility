@@ -16,15 +16,15 @@
 \dochead{Journal of Computational Linguistics}
 
 
-\runningtitle{Prediction of Legitimate Scientific Writing, and Imitation of Science Via Programmatic Characterization of Written Language}
+\runningtitle{Science Accessibility Project}
 
 \runningauthor{Russell J. Jarvis}
 
 \begin{document}
 
-\title{Prediction of Legitimate Scientific Writing, and Imitation of Science Via Programmatic Characterization of Written Language}
+\title{Science Accessibility Project}
 
-\author{Russell J. Jarvis\thanks{PITC Building, Pascor Drive, Sto. Ni\~no, Para\~naque City, 1700 Philippines. E-mail: rjjarvis@asu.edu.}}
+\author{Russell J. Jarvis\thanks{Tempe, ASU. E-mail: rjjarvis@asu.edu.}}
 \affil{School of Life Sciences ASU}
 
 \author{Another Author\thanks{PITC Building}}
@@ -42,7 +42,23 @@
 This article describes how we scrapped a wide variety of written word from the internet, and then analysed scrapped samples, in order to better charecterize the readability of scientific and non scientific writings.
 \end{abstract}
 
+\subsection{}keywords} 
+Bag of words analysis, naive Bayes.
+
 \section{Introduction}
+# Science Accessibility Project
+## Motivation for the Science Accessibility Project
+Non-scientific writing typically exceeds genuine scientific writing in one important criteria: in contrast to genuine science non-science ideas are often expressed with a more accessible writing style. We believe non-science writing occupies a more accessible style niche, that academic science writing should also occupy. We show that we can use machine learning to predict the status of writing: popular culture writing, opinionative writing, and traditional science, by first scrapping a large variety of web documents, and then classifying among the different writing types. By predicting which of the several different writing types any writing piece occupies, we are able to characterize among different writing niches.\\
+\\
+Multiple stake holders can benefit when science is communicated with lower complexity expression of ideas. With lower complexity science writing, knowledge would be more readily transferred into public awareness, additionally, digital organization of facts derived from journal articles would occur more readily, as successful machine comprehension of documented science would likely occur with less human intervention.\\
+\\
+Objectively describing the different character of the different writing styles will allow us to prescribe how, to shift academic science writing into a more accessible niche, where science can more aggressively compete with pseudo-science, and blogs, facilitating greater knowledge transference, at a moment in history when public awareness is critically at stake.
+
+## Machine Estimation of Writing Complexity.
+The accessibility of written word can be approximated by a computer program that reads over the text, and guesses the mental difficulty, associated with comprehending a written document. The computer program maps reading difficult onto a quantity that represents the number of years of schooling needed to decode the language in the document. For convenience, we can refer to the difficulty associated with the text as the 'complexity' of the document. 
+
+
+\section{Introduction Old}
 
 Non-scientific writing typically exceeds genuine scientific writing in one important criteria: in contrast to genuine science non-science ideas are often expressed using a less complex more engaging writing style.  Yet, multiple stake holders could benefit if science was communicated using a less complex expression of ideas. Using less complicated science writing, knowledge could be more readily transferred into public awareness, also, and machine reading machine organization, and machine action on factual information derived from journal articles could occur more readily.
 
@@ -117,24 +133,24 @@ will automatically set to standard article layout.
 
 We created a total list all of the different queries obtained, from combining both the list of cultural queries, and scientific queries, and then applied such queries exclusively to the Wikipedia, search interface. We take the result of evaluating this pool of queries, and then plot the resulting pool of queries versus page rank. The Wikipedia, actually showed a small but consistant preference for web pages of higher complexity.
 
-\begin{figure}
-	\centering
-	\includegraphics[width=0.7\linewidth]{screenshot001}
-	\caption{}
-	\label{fig:figure1}
-\end{figure}
+%\begin{figure}
+%	\centering
+%	\includegraphics[width=0.7\linewidth]{screenshot001}
+%	\caption{}
+%	\label{fig:figure1}
+%\end{figure}
 
-
+%
 
 The plots below may appear to look a bit unprofessional, as not all data points have error bars. The reason for this, is pandas+seaborne allows you to plot on the same axis multiple sample data points, and single sampled data points. Only of the five mentioned search engines was made to sample beyond page rank 10, but all five sampled under page rank 10.
 
-\begin{figure}
-	\centering
-	\includegraphics[width=0.7\linewidth, height=0.7\textheight]{figure2}
-	\caption{}
-	\label{fig:figure2}
-\end{figure}
-
+%\begin{figure}
+%	\centering
+%	\includegraphics[width=0.7\linewidth, height=0.7\textheight]{figure2}
+%	\caption{}
+%	\label{fig:figure2}
+%\end{figure}
+%
 
 The same plot but with mean and std deviation plots when multiple samples per page rank are available. When we plotted the Wikipedia queries, where reading (text-stat standard) level is instead plotted against page rank, we again see that there is a slight trend towards increasing text complexity with decreasing page rank. 
 

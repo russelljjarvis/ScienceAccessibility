@@ -1,6 +1,6 @@
 # Science Accessibility Project
 ## Motivation for the Science Accessibility Project
-Non-scientific writing typically exceeds genuine scientific writing in one important criteria: in contrast to genuine science non-science ideas are often expressed with a more accessible writing style. The accessibility of written word can be approximated by a computer program that reads over the text, and guesses the mental difficulty, associated with comprehending a written document. The computer program maps reading difficult onto a quantity that represents the number of years of schooling needed to decode the language in the document. For convenience, we can refer to the difficulty associated with the text as the 'complexity' of the document. 
+Non-scientific writing typically exceeds genuine scientific writing in one important criteria: in contrast to genuine science non-science ideas are often expressed with a more accessible writing style. 
 
 We believe non-science writing occupies a more accessible style niche, that academic science writing should also occupy. We show that we can use machine learning to predict the status of writing: popular culture writing, opinionative writing, and traditional science, by first scrapping a large variety of web documents, and then classifying among the different writing types. By predicting which of the several different writing types any writing piece occupies, we are able to characterize among different writing niches.
 
@@ -8,6 +8,9 @@ Multiple stake holders can benefit when science is communicated with lower compl
 
 Objectively describing the different character of the different writing styles will allow us to prescribe how, to shift academic science writing into a more accessible niche, where science can more aggressively compete with pseudo-science, and blogs, facilitating greater knowledge transference, at a moment in history when public awareness is critically at stake.
 
+
+## Machine Estimation of Writing Complexity:
+The accessibility of written word can be approximated by a computer program that reads over the text, and guesses the mental difficulty, associated with comprehending a written document. The computer program maps reading difficult onto a quantity that represents the number of years of schooling needed to decode the language in the document. For convenience, we can refer to the difficulty associated with the text as the 'complexity' of the document. 
 
 
 ## Open Data Counterpart of this Code Repository lives at:

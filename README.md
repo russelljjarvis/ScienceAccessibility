@@ -10,7 +10,7 @@ Objectively describing the different character of the different writing styles w
 
 
 
-## Data Counterpart of this Code Repository lives at:
+## Open Data Counterpart of this Code Repository lives at:
 https://osf.io/yng5u/wiki/home/
 
 

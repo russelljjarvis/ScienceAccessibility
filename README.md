@@ -1,6 +1,6 @@
 # Science Accessibility Project
-## Motivation for the Accessibility Project
-Non-scientific writing typically exceeds genuine scientific writing in one important criteria: in contrast to genuine science non-science ideas are often expressed with a more accessible writing style. Presently, the accessibility of written work can be approximated by computer programs that express the mental challenge, associated with comprehending a written document, in terms of years of schooling needed to decode the language, subjectivity, sentiment, and the overall language complexity of the document. 
+## Motivation for the Science Accessibility Project
+Non-scientific writing typically exceeds genuine scientific writing in one important criteria: in contrast to genuine science non-science ideas are often expressed with a more accessible writing style. Presently, the accessibility of written word can be approximated by computer programs that guess the mental challenge, associated with comprehending a written document. The computer program then maps the reading difficult onto a quantity that represents the number of years of schooling needed to decode the language in the document. 
 
 Multiple stake holders can benefit when science is communicated with lower complexity expression of ideas. With lower complexity science writing, knowledge would be more readily transferred into public awareness, additionally, organization of facts derived from journal articles would occur more readily, as successful machine comprehension of documented science would likely occur with less human intervention.
 

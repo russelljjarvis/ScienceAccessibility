@@ -13,10 +13,13 @@ Objectively describing the different character of the different writing styles w
 ## Open Data Counterpart of this Code Repository lives at:
 https://osf.io/yng5u/wiki/home/
 
+# Analysis of Text.
+Running the scrapper is not necessary for analysing the text documents, to analyse text only the python nltk frame work should be necessary
 
-## Building the project.
+## Building All of the Project.
+(including the scraper).
 
-Executing these files is not yet straight forward, as the execution environment is dependency heavy. Docker is used to solve non trivial software dependency issues where possible.
+The scraping, and crawling code for this is dependency heavy. Docker is used to solve non trivial software dependency issues where possible.
 
 If docker is installed on the base OS, git clone this repository, and assuming the file build.sh is chmod +x , run: `bash build.sh` to perform the dockerbuild. To run the jupyter notebook over docker, enter the docker enivornment interactively in one of two ways, via a bash shell, or via an ipython notebook or
 and then launch python via BASH in Linux as follows:

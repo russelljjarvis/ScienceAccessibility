@@ -15,7 +15,7 @@ The accessibility of written word can be approximated by a computer program that
 ## Open Data Counterpart of this Code Repository lives at:
 https://osf.io/yng5u/wiki/home/
 
-# Analysis of Text.
+## Analysis of Text.
 Running the scraper is not necessary for analysing the text documents.
 
 

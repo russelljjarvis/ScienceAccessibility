@@ -43,7 +43,11 @@ cr = Crossref()
 FILES = natsorted(glob.glob(str(os.getcwd())+'/results_dir/*.p'))
 
 A = Analysis(FILES, min_word_length = 200)
+references = A.get_reference_web()
+#import pdb
+#pdb.set_trace()
 urlDats = A.cas()
+
 print(urlDats)
 
 scraped_new = list(filter(lambda url: str('query') in url.keys(), urlDats))
@@ -53,8 +57,8 @@ with open('scraped_new.p','wb') as f:
 #by_query[str('science')]['urlDats'] = list(filter(lambda url: url['query'] in science_keys, scraped))
 for s in scraped_new:
     print(s['query'])
-import pdb;
-pdb.set_trace()
+#import pdb;
+#pdb.set_trace()
 
 '''
 reference = A.get_reference_web()

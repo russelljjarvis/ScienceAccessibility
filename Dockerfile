@@ -61,7 +61,7 @@ RUN python -c "import nltk; nltk.download('averaged_perceptron_tagger')"
 RUN /opt/conda/bin/pip install textstat
 RUN /opt/conda/bin/pip install tabulate
 RUN /opt/conda/bin/pip install textblob
-RUN /opt/conda/bin/pip install selenium
+RUN /opt/conda/bin/pip install selenium wordcloud
 # pycld2 seems to be the most accurate english text classifier of the python packages.
 RUN /opt/conda/bin/pip install fake_useragent bokeh natsort pycld2 pylzma
 

@@ -48,7 +48,8 @@ from textstat.textstat import textstat
 from nltk.corpus import stopwords
 
 
-from SComplexity.utils import black_string, english_check, comp_ratio, clue_words, clue_links, publication_check
+# english_check
+from SComplexity.utils import black_string, comp_ratio, clue_words, clue_links, publication_check
 
 DEBUG = False
 #from numba import jit
@@ -76,20 +77,20 @@ def text_proc(corpus, urlDat = {}, WORD_LIM = 100):
         # the kind of change that might break everything
         urlDat['wcount'] = textstat.lexicon_count(str(tokens))
         word_lim = bool(urlDat['wcount']  > WORD_LIM)
-
+        urlDat['tokens'] = tokens 
         # Word limits can be used to filter out product merchandise websites, which otherwise dominate scraped results.
         # Search engine business model is revenue orientated, so most links will be for merchandise.
 
         urlDat['publication'] = publication_check(str(tokens))
-        urlDat['english'] = english_check(str(tokens))
+        #urlDat['english'] = english_check(str(tokens))
         urlDat['clue_words'] = clue_words(str(tokens))
         urlDat['clue_links'] = clue_links(urlDat['link'])
-
+        
         # The post modern essay generator is so obfuscated, that ENGLISH classification fails, and this criteria needs to be relaxed.
         not_empty = bool(len(tokens) != 0)
-        print(not_empty,urlDat['english'],word_lim)
-        if urlDat['english']==False:
-            pass
+        #print(not_empty,urlDat['english'],word_lim)
+        #if urlDat['english']==False:
+        #    pass
         #print(str(tokens))
 
         if not_empty and word_lim: #  and server_error:

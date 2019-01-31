@@ -47,7 +47,7 @@ Another file `Examples/use_code_complexity.py` reports back about the complexity
 # Why is the Scraping Code So Complex?
 
 A lot of complexity in the code base comes from the need to masquerade as a non bot web surfer. An example of a TCP/IP dialogue might read like this:
-Search Engine: 'who are you?' code: 'I am an honest human centric browser, and certainly note a robot surfing in the nude'. Search Engine: 'good, here are some pages'.	 Time elapses and the truth is revealed just like in 'the Emperors New Clothes'.	Time elapses and reality is exposed just like in 'the Emperors New Clothes'.
+Search Engine: 'who are you?' code: 'I am an honest human centric browser, and certainly note a robot surfing in the nude'. Search Engine: 'good, here are some pages'.	 Time elapses and the truth is revealed just like in 'the Emperors New Clothes'.	
 
 Excepting for the scraping the wikipedia (which has bot friendly policies), it's a bad idea to surf raw ie to only use: `urllib`, or `requests`, as these resource grabbers are sure fire bot give aways.
 `Selenium`, `Google Scrape` (uses Selenium), and `delver Crawler`, are the surfing clothes people use; they work together to prolong a period feigned humanhood. The downloading of pdf's as opposed to html usually is fine without a fake humancentric browser (that acts like it is storing cookies), but this does not seem to cause any problems.

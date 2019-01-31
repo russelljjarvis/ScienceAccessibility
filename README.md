@@ -5,7 +5,7 @@ Non-scientific writing typically exceeds genuine scientific writing in one impor
 
 Multiple stake holders can benefit when science is communicated with lower complexity expression of ideas. With lower complexity science writing, knowledge would be more readily transferred into public awareness, additionally, digital organization of facts derived from journal articles would occur more readily, as successful machine comprehension of documented science would likely occur with less human intervention.
 
-Objectively describing the different character of the different writing styles will allow us to prescribe how, to shift academic science writing into a more accessible niche, where science can more aggressively compete with pseudo-science, and blogs, facilitating greater knowledge transference, at a moment in history when public awareness is critically at stake.
+Objectively describing the different character of the different writing styles will allow us to prescribe how, to shift academic science writing into a more accessible niche, where science can more aggressively compete with pseudo-science, and blogs, at a moment in history when public awareness is critically at stake.
 
 
 ## Machine Estimation of Writing Complexity:

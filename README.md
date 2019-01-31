@@ -17,6 +17,11 @@ https://osf.io/yng5u/wiki/home/
 ## Analysis of Text.
 Running the scraper is not necessary for analysing the text documents.
 
+# Word clouds:
+![image](https://user-images.githubusercontent.com/7786645/52091608-322fbe80-2572-11e9-8553-3e346a8b824e.png)
+
+![image](https://user-images.githubusercontent.com/7786645/52091615-352aaf00-2572-11e9-905a-0b75fe0005d7.png)
+
 
 ## Building All of the Project.
 (including the scraper).

@@ -25,10 +25,11 @@ Running the scraper is not necessary for analysing the text documents.
 ![image](https://user-images.githubusercontent.com/7786645/52091608-322fbe80-2572-11e9-8553-3e346a8b824e.png)
 #### Science
 ![image](https://user-images.githubusercontent.com/7786645/52091615-352aaf00-2572-11e9-905a-0b75fe0005d7.png)
-
+The observant reader will see, 'et al', occurs in published literature quite a lot, corroborating an obvious finding that science writing often refers to external evidence.
 
 ### How do some well known texts do?
-* [Pushing the limits of extremely readable science](http://splasho.com/upgoer5/library.php)
+
+* For some XKCD credidibility: [Pushing the limits of extremely readable science](http://splasho.com/upgoer5/library.php)
 
 * [The Readability of Science is Declining over time](https://elifesciences.org/download/aHR0cHM6Ly9jZG4uZWxpZmVzY2llbmNlcy5vcmcvYXJ0aWNsZXMvMjc3MjUvZWxpZmUtMjc3MjUtdjIucGRm/elife-27725-v2.pdf?_hash=WA%2Fey48HnQ4FpVd6bc0xCTZPXjE5ralhFP2TaMBMp1c%3D)
 

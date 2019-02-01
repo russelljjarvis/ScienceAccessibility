@@ -61,9 +61,7 @@ Running the scraper is not necessary for analysing the text documents.
 
 
 
-<p>
 ## Sentiment Versus Complexity
-<br/>
 ![image](https://user-images.githubusercontent.com/7786645/52097960-3ff13e00-258a-11e9-8a93-aea628526c1e.png)
 
 

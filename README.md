@@ -25,7 +25,9 @@ Running the scraper is not necessary for analysing the text documents.
 ![image](https://user-images.githubusercontent.com/7786645/52091608-322fbe80-2572-11e9-8553-3e346a8b824e.png)
 #### Science
 ![image](https://user-images.githubusercontent.com/7786645/52091615-352aaf00-2572-11e9-905a-0b75fe0005d7.png)
-The observant reader will see, 'et al', occurs in published literature quite a lot, corroborating an obvious finding that science writing often refers to external evidence.
+
+
+<p>The observant reader will see, 'et al', occurs in published literature quite a lot, corroborating an obvious finding that science writing often refers to external evidence.
 
 ### How do some well known texts do?
 
@@ -59,8 +61,8 @@ The observant reader will see, 'et al', occurs in published literature quite a l
 
 
 
-## Sentiment Versus Complexity
-![image](https://user-images.githubusercontent.com/7786645/52097960-3ff13e00-258a-11e9-8a93-aea628526c1e.png)
+<p>## Sentiment Versus Complexity
+<p>![image](https://user-images.githubusercontent.com/7786645/52097960-3ff13e00-258a-11e9-8a93-aea628526c1e.png)
 
 
 ## Building All of the Project.

@@ -43,7 +43,10 @@ cr = Crossref()
 FILES = natsorted(glob.glob(str(os.getcwd())+'/results_dir/*.p'))
 
 A = Analysis(FILES, min_word_length = 200)
-references = A.get_reference_web()
+try:
+    references = A.get_reference_web()
+except:
+    pass
 #import pdb
 #pdb.set_trace()
 urlDats = A.cas()
@@ -86,7 +89,7 @@ dfs = pd.DataFrame(scraped_new)
 
 dfs = dfs[~dfs['link'].isin(['https://www.youtube.com/'])]
 dfs = dfs[~dfs['link'].isin(['https://www.walmart.com'])]
-dfs = dfs[~dfs['link'].isin(['https://foundation.wikimedia.org/wiki/Privacy_policy'])]
+dfs = dfs[~dfs['link'].isin(['https://foundation.wikimedia.org/wiki/Privacy_policy'])] 
 
 #wikipedia = wikipedia[wikipedia['link']==str('https://foundation.wikimedia.org/wiki/Privacy_policy')]
 wikipedia = dfs[dfs['se']==str('wikipedia')]
@@ -189,7 +192,9 @@ accuracy_score(y_test.values, y_predict)
 '''
 
 #scraped = scraped_new
+scraped_new  = [ w['sp'] for w in scraped_new if str('sp') in w.keys() ]
 sps = [ w['sp'] for w in scraped_new ]
+
 fogss = [ w['gf'] for w in scraped_new ]
 infos = [ w['info_density'] for w in scraped_new ]
 ranks = [ w['page_rank'] for w in scraped_new ]

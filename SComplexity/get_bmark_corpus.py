@@ -18,14 +18,23 @@ import dask.bag as db
 
 
 
-
+from bs4 import BeautifulSoup
 def process(link):
     urlDat = {}
     urlDat['link'] = link
     urlDat['page_rank'] = 'benchmark'
     if str('pdf') not in link:
         content = C.open(link).content
-        buffer = convert(content,urlDat['link'])
+        soup = BeautifulSoup(content, 'html.parser')
+        for script in soup(["script", "style"]):
+            script.extract()    # rip it out
+        text = soup.get_text()
+        #wt = copy.copy(text)
+        #organize text
+        lines = (line.strip() for line in text.splitlines())  # break into lines and remove leading and trailing space on each
+        chunks = (phrase.strip() for line in lines for phrase in line.split("  ")) # break multi-headlines into a line each
+        text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines
+        buffer = str(text)
     else:
         pdf_file = requests.get(link, stream=True)
         buffer = convert_pdf_to_txt(pdf_file)
@@ -45,33 +54,7 @@ def get_bmarks():
     the_science_of_writing = str('https://cseweb.ucsd.edu/~swanson/papers/science-of-writing.pdf')
     pmeg = str('http://www.elsewhere.org/pomo/') # Note this is so obfuscated, even the english language classifier rejects it.
     links = [xkcd_self_sufficient,high_standard,the_science_of_writing,pmeg ]
-    print(links)
-    #klpdfp = text_proc(strText,urlDat, WORD_LIM = 100)
-    grid = db.from_sequence(links,npartitions=8)
-    print(grid)
-    urlDats = list(db.map(process,grid).compute())
-    #urlDats.append(klpdfp)
-    print(urlDats)
-    '''
-    royal = '../BenchmarkCorpus/royal.txt'
-    klpd = '../BenchmarkCorpus/planning_document.txt'
-    klpdf = open(klpd)
-    strText = klpdf.read()
-    urlDat = {'link':'local_resource'}
-
-
-
-    klpdr = open(royal)
-    strText = klpdr.read()
-    urlDat = {'link':'local_resource_royal'}
-
-    klpdfr = text_proc(strText,urlDat, WORD_LIM = 100)
-    print(klpdfr)
-    grid = db.from_sequence(links,npartitions=8)
-    urlDats = list(db.map(process,grid).compute())
-    urlDats.append(klpdfp)
-    '''
-
+    urlDats = list(map(process,links))
     with open('benchmarks.p','wb') as f:
         pickle.dump(urlDats,f)
     return urlDats
@@ -101,7 +84,7 @@ def getText(filename):
 
 
 #import comtypes.client
-
+'''
 def PPTtoPDF(inputFileName, outputFileName, formatType = 32):
     powerpoint = comtypes.client.CreateObject("Powerpoint.Application")
     powerpoint.Visible = 1
@@ -112,3 +95,4 @@ def PPTtoPDF(inputFileName, outputFileName, formatType = 32):
         deck.SaveAs(outputFileName, formatType) # formatType = 32 for ppt to pdf
         deck.Close()
         powerpoint.Quit()
+'''

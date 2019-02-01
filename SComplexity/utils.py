@@ -157,7 +157,7 @@ def clue_words(check_with):
     str("journal of"),str("abstract"),str("materials and methods"),str("nature"), \
     str("conflict of interest"), str("objectives"), str("significance"), \
     str("published"), str("references"), str("acknowledgements"), str("authors"), str("hypothesis"), \
-    str("nih"),str('article'),str('affiliations')]
+    str("nih"),str('article'),str('affiliations'),str('et al')]
     assume_false = []
     for check in CHECKS:
         if check in check_with:

@@ -63,29 +63,39 @@ def text_proc(corpus, urlDat = {}, WORD_LIM = 100):
     #    urlDat['pub'] = pub
     #print(type(corpus),corpus)
     #r emove unreadable characters
-    if type(corpus) is str:
+    if type(corpus) is str and str('privacy policy') not in corpus:
         corpus = corpus.replace("-", " ") #remove characters that nltk can't read
         textNum = re.findall(r'\d', corpus) #locate numbers that nltk cannot see to analyze
         tokens = word_tokenize(corpus)
 
         stop_words = stopwords.words('english')
         #We create a list comprehension which only returns a list of words #that are NOT IN stop_words and NOT IN punctuations.
-    
+
         tokens = [ word for word in tokens if not word in stop_words]
         tokens = [w.lower() for w in tokens] #make everything lower case
 
         # the kind of change that might break everything
         urlDat['wcount'] = textstat.lexicon_count(str(tokens))
         word_lim = bool(urlDat['wcount']  > WORD_LIM)
-        urlDat['tokens'] = tokens 
+        urlDat['tokens'] = tokens
         # Word limits can be used to filter out product merchandise websites, which otherwise dominate scraped results.
         # Search engine business model is revenue orientated, so most links will be for merchandise.
 
-        urlDat['publication'] = publication_check(str(tokens))
+        urlDat['publication'] = publication_check(str(tokens))[1]
         #urlDat['english'] = english_check(str(tokens))
-        urlDat['clue_words'] = clue_words(str(tokens))
-        urlDat['clue_links'] = clue_links(urlDat['link'])
-        
+        urlDat['clue_words'] = clue_words(str(tokens))[1]
+        urlDat['clue_links'] = clue_links(urlDat['link'])[1]
+
+        #print(urlDat   ['clue_words'],urlDat['publication'],urlDat['clue_links'])
+        temp = len(urlDat['clue_words'])+len(urlDat['publication'])+len(urlDat['clue_links'])
+        if temp  > 10 and str('wiki') not in urlDat['link']:
+            urlDat['science'] = True
+        else:
+            urlDat['science'] = False
+
+        if str('wiki') in urlDat['link']:
+            urlDat['wiki'] = True
+            #print(urlDat['science'],urlDat['link'])
         # The post modern essay generator is so obfuscated, that ENGLISH classification fails, and this criteria needs to be relaxed.
         not_empty = bool(len(tokens) != 0)
         #print(not_empty,urlDat['english'],word_lim)
@@ -94,7 +104,7 @@ def text_proc(corpus, urlDat = {}, WORD_LIM = 100):
         #print(str(tokens))
 
         if not_empty and word_lim: #  and server_error:
-            
+
             tokens = [ w.lower() for w in tokens if w.isalpha() ]
             #fdist = FreqDist(tokens) #frequency distribution of words only
             # The larger the ratio of unqiue words to repeated words the more colourful the language.

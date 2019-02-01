@@ -93,7 +93,7 @@ from io import StringIO
 #converts pdf, returns its text content as a string
 def pdf_to_txt_(infile):#, pages=None):
     #if not pages:
-    pagenums = set()
+    #pagenums = set()
 
     output = StringIO()
     manager = PDFResourceManager()

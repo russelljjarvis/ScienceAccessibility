@@ -1,5 +1,15 @@
 # Science Accessibility Project
 
+\\begin{tabular}{rl}\n\\toprule\n complexity &                             texts \\\\\n\\midrule\n        6.0 &                           upgoer5 \\\\\n        9.0 &  readability of science declining \\\\\n       14.0 &                science of writing \\\\\n       12.0 &             post modern essay gen \\\\\n\\bottomrule\n\\end{tabular}\n
+
+
+| complexity   |      texts      |
+|----------|:-------------:|
+| 6.0|  | upgoer5 |
+| 9.0 |    readability of science declining   |
+| 14.0 | science of writing |
+| 12.0 | post modern essay gen |
+
 ## Overview 
 Non-scientific writing typically exceeds genuine scientific writing in one important aspect: in contrast to genuine science, non-science is often expressed with a less complex, and more engaging writing style. We believe non-science writing occupies a more accessible niche, that academic science writing should also occupy. Unfortunately, writing styles intended for different audiences, are predictably different. We show that we can use machine learning to predict the status of writing styles: blog, wikipedia, opinion, and traditional science, by first sampling a large variety of web documents, and then classifying among the different writing types. By predicting which of the several different styles a document occupies, we are able to characterize among different writing niches, and to point to remedies.
 

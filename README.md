@@ -35,14 +35,12 @@ http://www.elsewhere.org/pomo/
 
 | complexity   |      texts      |
 |----------|:-------------:|
-| 6.0|  | upgoer5   |
+| 6.0   | upgoer5   |
 | 9.0 |    readability of science declining   |
 | 14.0 | science of writing |
 | 12.0 | post modern essay gen |
 
-
-### sentiment versus complexity everything.
-![image](https://user-images.githubusercontent.com/7786645/52097960-3ff13e00-258a-11e9-8a93-aea628526c1e.png)
+[comment]: (sentiment versus complexity everything.![image](https://user-images.githubusercontent.com/7786645/52097960-3ff13e00-258a-11e9-8a93-aea628526c1e.png)
 
 ## Building All of the Project.
 (including the scraper).

@@ -17,12 +17,15 @@ https://osf.io/yng5u/wiki/home/
 ## Analysis of Text.
 Running the scraper is not necessary for analysing the text documents.
 
-## Word clouds:
-### Not Science
+### Word frequencies as clouds::
+### Per category
+#### Not Science
 ![image](https://user-images.githubusercontent.com/7786645/52091608-322fbe80-2572-11e9-8553-3e346a8b824e.png)
-### Science
+#### Science
 ![image](https://user-images.githubusercontent.com/7786645/52091615-352aaf00-2572-11e9-905a-0b75fe0005d7.png)
 
+### sentiment versus complexity everything.
+![image](https://user-images.githubusercontent.com/7786645/52097960-3ff13e00-258a-11e9-8a93-aea628526c1e.png)
 
 ## Building All of the Project.
 (including the scraper).

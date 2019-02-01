@@ -1,14 +1,6 @@
 # Science Accessibility Project
 
-\\begin{tabular}{rl}\n\\toprule\n complexity &                             texts \\\\\n\\midrule\n        6.0 &                           upgoer5 \\\\\n        9.0 &  readability of science declining \\\\\n       14.0 &                science of writing \\\\\n       12.0 &             post modern essay gen \\\\\n\\bottomrule\n\\end{tabular}\n
 
-
-| complexity   |      texts      |
-|----------|:-------------:|
-| 6.0|  | upgoer5 |
-| 9.0 |    readability of science declining   |
-| 14.0 | science of writing |
-| 12.0 | post modern essay gen |
 
 ## Overview 
 Non-scientific writing typically exceeds genuine scientific writing in one important aspect: in contrast to genuine science, non-science is often expressed with a less complex, and more engaging writing style. We believe non-science writing occupies a more accessible niche, that academic science writing should also occupy. Unfortunately, writing styles intended for different audiences, are predictably different. We show that we can use machine learning to predict the status of writing styles: blog, wikipedia, opinion, and traditional science, by first sampling a large variety of web documents, and then classifying among the different writing types. By predicting which of the several different styles a document occupies, we are able to characterize among different writing niches, and to point to remedies.
@@ -33,6 +25,21 @@ Running the scraper is not necessary for analysing the text documents.
 ![image](https://user-images.githubusercontent.com/7786645/52091608-322fbe80-2572-11e9-8553-3e346a8b824e.png)
 #### Science
 ![image](https://user-images.githubusercontent.com/7786645/52091615-352aaf00-2572-11e9-905a-0b75fe0005d7.png)
+
+
+### How do some well known texts do?
+http://splasho.com/upgoer5/library.php
+https://elifesciences.org/download/aHR0cHM6Ly9jZG4uZWxpZmVzY2llbmNlcy5vcmcvYXJ0aWNsZXMvMjc3MjUvZWxpZmUtMjc3MjUtdjIucGRm/elife-27725-v2.pdf?_hash=WA%2Fey48HnQ4FpVd6bc0xCTZPXjE5ralhFP2TaMBMp1c%3Dhttps://cseweb.ucsd.edu/~swanson/papers/science-of-writing.pdf
+http://www.elsewhere.org/pomo/
+
+
+| complexity   |      texts      |
+|----------|:-------------:|
+| 6.0|  | upgoer5   |
+| 9.0 |    readability of science declining   |
+| 14.0 | science of writing |
+| 12.0 | post modern essay gen |
+
 
 ### sentiment versus complexity everything.
 ![image](https://user-images.githubusercontent.com/7786645/52097960-3ff13e00-258a-11e9-8a93-aea628526c1e.png)

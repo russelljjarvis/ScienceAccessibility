@@ -5,7 +5,7 @@
 ## Overview 
 Non-scientific writing typically exceeds genuine scientific writing in two important aspects: in contrast to genuine science, non-science is often expressed with a less complex, and more engaging writing style. We believe non-science writing occupies a more accessible niche, that academic science writing should also occupy. 
 
-Unfortunately, writing styles intended for different audiences, are predictably different. We show that we can use machine learning to predict the status of writing styles: blog, wikipedia, opinion, and traditional science, by first sampling a large variety of web documents, and then classifying among the different writing types. By predicting which of the several different styles a document occupies, we are able to characterize the different writing types, and to describe strategies to remedy writing complexity.
+Unfortunately, writing styles intended for different audiences, are predictably different. We show that we can use machine learning to predict the status of writing styles: blog, wikipedia, opinion, and traditional science, by first sampling a large variety of web documents, and then classifying among the different writing types. By predicting which of the several different niches a document occupies, we are able to characterize the different writing types, and to describe strategies to remedy writing complexity.
 
 Multiple stake holders can benefit when science is communicated with lower complexity expression of ideas. With lower complexity science writing, knowledge would be more readily transferred into public awareness, additionally, digital organization of facts derived from journal articles would occur more readily, as successful machine comprehension of documented science would likely occur with less human intervention.
 
@@ -25,6 +25,7 @@ The accessibility of written word can be approximated by a computer program that
 
 * [Machine generated post modern obfuscation:](http://www.elsewhere.org/pomo/)
 
+Higher is worse:
 
 | complexity   |      texts      |
 |----------|:-------------:|

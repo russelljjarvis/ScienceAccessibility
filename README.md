@@ -3,7 +3,9 @@
 
 
 ## Overview 
-Non-scientific writing typically exceeds genuine scientific writing in one important aspect: in contrast to genuine science, non-science is often expressed with a less complex, and more engaging writing style. We believe non-science writing occupies a more accessible niche, that academic science writing should also occupy. Unfortunately, writing styles intended for different audiences, are predictably different. We show that we can use machine learning to predict the status of writing styles: blog, wikipedia, opinion, and traditional science, by first sampling a large variety of web documents, and then classifying among the different writing types. By predicting which of the several different styles a document occupies, we are able to characterize among different writing niches, and to point to remedies.
+Non-scientific writing typically exceeds genuine scientific writing in two important aspects: in contrast to genuine science, non-science is often expressed with a less complex, and more engaging writing style. We believe non-science writing occupies a more accessible niche, that academic science writing should also occupy. 
+
+Unfortunately, writing styles intended for different audiences, are predictably different. We show that we can use machine learning to predict the status of writing styles: blog, wikipedia, opinion, and traditional science, by first sampling a large variety of web documents, and then classifying among the different writing types. By predicting which of the several different niches a document occupies, we are able to characterize the different writing types, and to describe strategies to remedy writing complexity.
 
 Multiple stake holders can benefit when science is communicated with lower complexity expression of ideas. With lower complexity science writing, knowledge would be more readily transferred into public awareness, additionally, digital organization of facts derived from journal articles would occur more readily, as successful machine comprehension of documented science would likely occur with less human intervention.
 
@@ -12,6 +14,32 @@ Objectively describing the character of the different writing styles will allow 
 ## Machine Estimation of Writing Complexity:
 The accessibility of written word can be approximated by a computer program that reads over the text, and guesses the mental difficulty, associated with comprehending a written document. The computer program maps reading difficult onto a quantity that represents the number of years of schooling needed to decode the language in the document. For convenience, we can refer to the difficulty associated with the text as the 'complexity' of the document. 
 
+
+### How do some well known texts do?
+
+* XKCD: [Pushing the limits of extremely readable science](http://splasho.com/upgoer5/library.php)
+
+* [The Readability of Science is Declining over time](https://elifesciences.org/download/aHR0cHM6Ly9jZG4uZWxpZmVzY2llbmNlcy5vcmcvYXJ0aWNsZXMvMjc3MjUvZWxpZmUtMjc3MjUtdjIucGRm/elife-27725-v2.pdf?_hash=WA%2Fey48HnQ4FpVd6bc0xCTZPXjE5ralhFP2TaMBMp1c%3D)
+
+* [The science of Writing](https://cseweb.ucsd.edu/~swanson/papers/science-of-writing.pdf)
+
+* [Machine generated post modern obfuscation:](http://www.elsewhere.org/pomo/)
+
+Higher is worse:
+
+| complexity   |      texts      |
+|----------|:-------------:|
+| 6.0   | upgoer5   |
+| 9.0 |    readability of science declining   |
+| 14.0 | science of writing |
+| 14.3 | mean post modern essay generator |
+| 14.9 | mean wikipedia |
+| 12.0 | this readme.md |
+
+
+## Sentiment Versus Complexity      
+   
+[Clicking on this plot of sentiment versus complexity takes you to the webpage that generated the data point](https://russelljjarvis.github.io/ScienceAccessibility/)
 
 ## Open Data Counterpart of this Code Repository lives at:
 https://osf.io/yng5u/wiki/home/
@@ -27,42 +55,10 @@ Running the scraper is not necessary for analysing the text documents.
 ![image](https://user-images.githubusercontent.com/7786645/52091615-352aaf00-2572-11e9-905a-0b75fe0005d7.png)
 
 
-<p>The observant reader will see, 'et al', occurs in published literature quite a lot, highlighting an obvious finding that science writing often refers to external evidence.
-
-### How do some well known texts do?
-
-* For some XKCD credidibility: [Pushing the limits of extremely readable science](http://splasho.com/upgoer5/library.php)
-
-* [The Readability of Science is Declining over time](https://elifesciences.org/download/aHR0cHM6Ly9jZG4uZWxpZmVzY2llbmNlcy5vcmcvYXJ0aWNsZXMvMjc3MjUvZWxpZmUtMjc3MjUtdjIucGRm/elife-27725-v2.pdf?_hash=WA%2Fey48HnQ4FpVd6bc0xCTZPXjE5ralhFP2TaMBMp1c%3D)
-
-* [The science of Writing](https://cseweb.ucsd.edu/~swanson/papers/science-of-writing.pdf)
-
-* [Machine generated post modern obfuscation:](http://www.elsewhere.org/pomo/)
+The observant reader will see, 'et al', occurs in published literature quite a lot, highlighting an obvious finding that science writing often refers to external evidence.
 
 
-| complexity   |      texts      |
-|----------|:-------------:|
-| 6.0   | upgoer5   |
-| 9.0 |    readability of science declining   |
-| 14.0 | science of writing |
-| 12.0 | post modern essay gen |
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Sentiment Versus Complexity
-![image](https://user-images.githubusercontent.com/7786645/52097960-3ff13e00-258a-11e9-8a93-aea628526c1e.png)
+[Similar projects](https://blog.machinebox.io/detect-fake-news-by-building-your-own-classifier-31e516418b1d).
 
 
 ## Building All of the Project.
@@ -97,7 +93,8 @@ A lot of complexity in the code base comes from the need to masquerade as a non 
 Search Engine: 'who are you?' code: 'I am an honest human centric browser, and certainly not a robot surfing in the nude'. Search Engine: 'good, here are some pages'.	 Time elapses and the truth is revealed just like in 'the Emperors New Clothes'.	
 
 Excepting for the scraping the wikipedia (which has bot friendly policies), it's a bad idea to surf raw ie to only use: `urllib`, or `requests`, as these resource grabbers are sure fire bot give aways.
-`Selenium`, `Google Scrape` (uses Selenium), and `delver Crawler`, are the surfing clothes people use; they work together to prolong a period feigned humanhood. The downloading of pdf's as opposed to html usually is fine without a fake humancentric browser (that acts like it is storing cookies), but this does not seem to cause any problems.
+`Selenium`, `Google Scrape` (uses Selenium), and `delver Crawler`, are the surfing clothes people use; they work together to prolong a period feigned humanhood. The downloading of pdf's as opposed to html usually is fine without a fake humancentric browser (that acts like it is storing cookies), but this does not seem to cause any problems. This project is a mashup of many popular FOS technologies, much of the code is just glue.
+
 
 ## What about Code Cognitive Complexity?
-The project takes measures to minimize that also. See the codeComplexity directory.
+The project takes measures to minimize that also. See the codeComplexity directory. 

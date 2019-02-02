@@ -13,22 +13,6 @@ Objectively describing the character of the different writing styles will allow 
 The accessibility of written word can be approximated by a computer program that reads over the text, and guesses the mental difficulty, associated with comprehending a written document. The computer program maps reading difficult onto a quantity that represents the number of years of schooling needed to decode the language in the document. For convenience, we can refer to the difficulty associated with the text as the 'complexity' of the document. 
 
 
-## Open Data Counterpart of this Code Repository lives at:
-https://osf.io/yng5u/wiki/home/
-
-## Analysis of Text.
-Running the scraper is not necessary for analysing the text documents.
-
-### Word frequencies as clouds::
-### Per category
-#### Not Science
-![image](https://user-images.githubusercontent.com/7786645/52091608-322fbe80-2572-11e9-8553-3e346a8b824e.png)
-#### Science
-![image](https://user-images.githubusercontent.com/7786645/52091615-352aaf00-2572-11e9-905a-0b75fe0005d7.png)
-
-
-<p>The observant reader will see, 'et al', occurs in published literature quite a lot, highlighting an obvious finding that science writing often refers to external evidence.
-
 ### How do some well known texts do?
 
 * For some XKCD credidibility: [Pushing the limits of extremely readable science](http://splasho.com/upgoer5/library.php)
@@ -47,6 +31,22 @@ Running the scraper is not necessary for analysing the text documents.
 | 14.0 | science of writing |
 | 14.3 | mean post modern essay gen |
 | 14.9 | mean wikipedia complexity|
+
+## Open Data Counterpart of this Code Repository lives at:
+https://osf.io/yng5u/wiki/home/
+
+## Analysis of Text.
+Running the scraper is not necessary for analysing the text documents.
+
+### Word frequencies as clouds::
+### Per category
+#### Not Science
+![image](https://user-images.githubusercontent.com/7786645/52091608-322fbe80-2572-11e9-8553-3e346a8b824e.png)
+#### Science
+![image](https://user-images.githubusercontent.com/7786645/52091615-352aaf00-2572-11e9-905a-0b75fe0005d7.png)
+
+
+<p>The observant reader will see, 'et al', occurs in published literature quite a lot, highlighting an obvious finding that science writing often refers to external evidence.
 
 
 [Similar projects](https://blog.machinebox.io/detect-fake-news-by-building-your-own-classifier-31e516418b1d).

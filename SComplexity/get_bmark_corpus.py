@@ -53,8 +53,18 @@ def get_bmarks():
     high_standard = str('https://elifesciences.org/download/aHR0cHM6Ly9jZG4uZWxpZmVzY2llbmNlcy5vcmcvYXJ0aWNsZXMvMjc3MjUvZWxpZmUtMjc3MjUtdjIucGRm/elife-27725-v2.pdf?_hash=WA%2Fey48HnQ4FpVd6bc0xCTZPXjE5ralhFP2TaMBMp1c%3D')
     the_science_of_writing = str('https://cseweb.ucsd.edu/~swanson/papers/science-of-writing.pdf')
     pmeg = str('http://www.elsewhere.org/pomo/') # Note this is so obfuscated, even the english language classifier rejects it.
-    links = [xkcd_self_sufficient,high_standard,the_science_of_writing,pmeg ]
+    this_manuscript = str('https://www.overleaf.com/read/dqkttvmqjvhn')
+    this_readme = str('https://github.com/russelljjarvis/ScienceAccessibility')
+    links = [xkcd_self_sufficient,high_standard,the_science_of_writing,this_manuscript,this_readme ]
     urlDats = list(map(process,links))
+    for i in range(0,9):
+        pmegs.append(process(pmeg)) # grab this constantly changing page 10 times to get the mean value.
+    urlDats.append(process(pmeg))
+    urlDats[-1]['standard'] = np.mean([p['standard'] for p in pmegs])
+    urlDats[-1]['sp'] = np.mean([p['sp'] for p in pmegs])
+    u#rlDats[-1]['subjectivity'] = np.mean([p['sp'] for p in pmegs])
+    urlDats[-1]['gf'] = np.mean([p['gf'] for p in pmegs])
+
     with open('benchmarks.p','wb') as f:
         pickle.dump(urlDats,f)
     return urlDats

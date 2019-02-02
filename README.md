@@ -92,7 +92,8 @@ A lot of complexity in the code base comes from the need to masquerade as a non 
 Search Engine: 'who are you?' code: 'I am an honest human centric browser, and certainly not a robot surfing in the nude'. Search Engine: 'good, here are some pages'.	 Time elapses and the truth is revealed just like in 'the Emperors New Clothes'.	
 
 Excepting for the scraping the wikipedia (which has bot friendly policies), it's a bad idea to surf raw ie to only use: `urllib`, or `requests`, as these resource grabbers are sure fire bot give aways.
-`Selenium`, `Google Scrape` (uses Selenium), and `delver Crawler`, are the surfing clothes people use; they work together to prolong a period feigned humanhood. The downloading of pdf's as opposed to html usually is fine without a fake humancentric browser (that acts like it is storing cookies), but this does not seem to cause any problems.
+`Selenium`, `Google Scrape` (uses Selenium), and `delver Crawler`, are the surfing clothes people use; they work together to prolong a period feigned humanhood. The downloading of pdf's as opposed to html usually is fine without a fake humancentric browser (that acts like it is storing cookies), but this does not seem to cause any problems. This project is a mashup of many popular FOS technologies, much of the code is just glue.
+
 
 ## What about Code Cognitive Complexity?
-The project takes measures to minimize that also. See the codeComplexity directory.
+The project takes measures to minimize that also. See the codeComplexity directory. 

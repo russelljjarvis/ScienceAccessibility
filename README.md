@@ -46,6 +46,7 @@ Running the scraper is not necessary for analysing the text documents.
 | 9.0 |    readability of science declining   |
 | 14.0 | science of writing |
 | 12.0 | post modern essay gen |
+| 14.9 | mean wikipedia complexity|
 
 
 
@@ -59,6 +60,13 @@ Running the scraper is not necessary for analysing the text documents.
 
 
 
+.
+.
+.
+Some white space to aid digestion.
+.
+.
+.
 
 
 ## Sentiment Versus Complexity

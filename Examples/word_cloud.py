@@ -5,7 +5,18 @@ from os import path
 from wordcloud import WordCloud
 import matplotlib
 matplotlib.use('Agg')
-
+import pdb
+import pandas as pd
+from pandas.tools.plotting import table
+#import bokeh
+from bokeh.plotting import figure, output_file, show, ColumnDataSource
+from bokeh.models import HoverTool
+from bokeh.plotting import figure, output_file, show
+#%matplotlib inline
+from bokeh.plotting import show, output_notebook, save
+from bokeh.models import ColumnDataSource, OpenURL, TapTool
+import os
+import numpy as np
 
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -16,23 +27,41 @@ from SComplexity import get_bmark_corpus as gbc
 
 import pickle
 texts = pickle.load(open('scraped_new.p','rb'))
-references = pickle.load(open('references.p','rb'))
+try:
+    references = pickle.load(open('references.p','rb'))
+    print(references[-1]['standard'])
+except:
+    references = gbc.get_bmarks()
+    pickle.dump(references,open('references.p','wb'))
+#import pdb; pdb.set_trace()
+
 
 pre_science = ''
 pre_not_science = ''
-wiki = ''
+wikis = ''
 
 for t in texts:
     if t['science'] == False:
-        for s in t['tokens']: pre_not_science+=str(' ')+s
+        for s in t['tokens']:
+            pre_not_science+=str(' ')+s
     elif t['science'] == True:
-        for s in t['tokens']: pre_science+=str(' ')+s
-    elif t['wiki'] == True:
-        for s in t['tokens']: wiki+=str(' ')+s
+        for s in t['tokens']:
+            pre_science+=str(' ')+s
+    if str('wiki') in t['link']:
+        for s in t['tokens']:
+            wikis+=str(' ')+s
 
+mean_wiki_pedia = []
+for t in texts:
+    if t['wiki'] == True:
+        if str('standard') in t.keys():
 
+            mean_wiki_pedia.append(t['standard'])
+mwp = np.mean(mean_wiki_pedia)
 
 def make_word_clouds(pre_science,pre_not_science,wikis):
+    import matplotlib.pyplot as plt
+
     with open('science.csv', 'w') as f:
         f.write(pre_science)
 
@@ -47,7 +76,7 @@ def make_word_clouds(pre_science,pre_not_science,wikis):
 
 
     wordcloud = WordCloud().generate(pre_not_science)
-    import matplotlib.pyplot as plt
+    #import matplotlib.pyplot as plt
     plt.imshow(wordcloud, interpolation='bilinear')
     plt.axis("off")
 
@@ -57,15 +86,24 @@ def make_word_clouds(pre_science,pre_not_science,wikis):
     plt.imshow(wordcloud, interpolation="bilinear")
     plt.axis("off")
     plt.savefig('not_science_cloud.png')
-make_word_clouds(pre_science,pre_not_science)
+
+    print(wikis)
+    wordcloud = WordCloud().generate(wikis)
+    #import matplotlib.pyplot as plt
+    plt.figure()
+
+    plt.imshow(wordcloud, interpolation='bilinear')
+    plt.axis("off")
+
+    # lower max_font_size
+    #wordcloud = WordCloud(max_font_size=40).generate(wikis)
+    #plt.imshow(wordcloud, interpolation="bilinear")
+    plt.axis("off")
+    plt.savefig('wikis_cloud.png')
+make_word_clouds(pre_science,pre_not_science,wikis)
 
 
 
-try:
-    references = pickle.load(open('references.p','rb'))
-except:
-    references = gbc.get_bmarks()
-    pickle.dump(references,open('references.p','wb'))
 
 
 plt.clf()
@@ -78,55 +116,13 @@ df = pd.DataFrame({
     'URL':[ f['link'] for f in references ],
 
 })
-#import pdb; pdb.set_trace()
-
-#df = pd.DataFrame({'complexity':,'links':[f['link'] for f in references ]})#,columns=[ f['link'] for f in references ])
-#import pdb; pdb.set_trace()
-#sns.heatmap(df, annot=True)
-
-
-#Index= ['aaa', 'bbb', 'ccc', 'ddd', 'eee']
 indexs = [ f['link'] for f in references ]
-labels = ['upgoer5','readability of science declining','science of writing','post modern essay gen']
-
-df = pd.DataFrame({'complexity':[ f['standard'] for f in references],'texts':labels})
+print(mwp,'mean wikipedia')
+df = pd.DataFrame({'complexity':[ f['standard'] for f in references],'texts':indexs})
 latex = df.to_latex(index=False)
-import pdb
-pdb.set_trace()
-import matplotlib.pyplot as plt
-import pandas as pd
-from pandas.tools.plotting import table
-
-#ax = plt.subplot(111, frame_on=False) # no visible frame
-#ax.xaxis.set_visible(False)  # hide the x axis
-#ax.yaxis.set_visible(False)  # hide the y axis
-
-#table(plt, df)  # where df is your data frame
-
-plt.savefig('mytable.png')
-#sns.heatmap(df, annot=True)
-#import pdb; pdb.set_trace()
-#groupedvalues = df.groupby('URL').sum().reset_index()
-#g = sns.barplot(x='URL',y='gunning_fog',data=df)
-plt.savefig('xkcd.png')
-
-#for index, row in groupedvalues.iterrows():
-#    g.text(row.name,row.tip, round(row.gf,2), color='black', ha="center")
 
 plt.savefig('xkcd.png')
 
-import pdb; pdb.set_trace()
-
-import pdb; pdb.set_trace()
-#import bokeh
-from bokeh.plotting import figure, output_file, show, ColumnDataSource
-from bokeh.models import HoverTool
-from bokeh.plotting import figure, output_file, show
-#%matplotlib inline
-from bokeh.plotting import show, output_notebook, save
-from bokeh.models import ColumnDataSource, OpenURL, TapTool
-import os
-print(texts[0].keys())
 texts = [ t for t in texts if str('gf') in t.keys() ]
 
 
@@ -155,22 +151,6 @@ def label_point(x, y, val, ax):
 
 #label_point(df.sentiment, df.gunning_fog, df.URL, plt.gca())
 plt.savefig('preliminary.png')
-
-'''
-ax = sns.lmplot('sentiment','gunning_fog', # Horizontal axis
-           data=df, # Data source
-           fit_reg=False, # Don't fix a regression line
-           size = 10,
-           aspect =2 ) # size and dimension
-
-
-def label_point(x, y, val, ax):
-    a = pd.concat({'x': x, 'y': y, 'val': val}, axis=1)
-    for i, point in a.iterrows():
-        ax.text(point['x']+.02, point['y'], str(point['val']))
-label_point(df.sentiment, df.gunning_fog, df.URL, plt.gca())
-'''
-
 
 
 source = ColumnDataSource(data=dict(

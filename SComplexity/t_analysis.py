@@ -77,6 +77,8 @@ def text_proc(corpus, urlDat = {}, WORD_LIM = 100):
         # the kind of change that might break everything
         urlDat['wcount'] = textstat.lexicon_count(str(tokens))
         word_lim = bool(urlDat['wcount']  > WORD_LIM)
+
+        ## Remove the search term from the tokens somehow.
         urlDat['tokens'] = tokens
         # Word limits can be used to filter out product merchandise websites, which otherwise dominate scraped results.
         # Search engine business model is revenue orientated, so most links will be for merchandise.
@@ -95,7 +97,9 @@ def text_proc(corpus, urlDat = {}, WORD_LIM = 100):
 
         if str('wiki') in urlDat['link']:
             urlDat['wiki'] = True
-            #print(urlDat['science'],urlDat['link'])
+        else:
+            urlDat['wiki'] = False
+        #print(urlDat['science'],urlDat['link'])
         # The post modern essay generator is so obfuscated, that ENGLISH classification fails, and this criteria needs to be relaxed.
         not_empty = bool(len(tokens) != 0)
         #print(not_empty,urlDat['english'],word_lim)

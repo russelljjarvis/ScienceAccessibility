@@ -60,11 +60,9 @@ Running the scraper is not necessary for analysing the text documents.
    
    
    
+      
    
-   
-   
-   
-![image](https://user-images.githubusercontent.com/7786645/52097960-3ff13e00-258a-11e9-8a93-aea628526c1e.png)
+![image](http://russelljjarvis.github.io/russelljjarvis/ScienceAccessibility/index.html)
 An interactive hyperlinked to URL version zof this plot is available at 
 Examples/interactive_complexity_urls.html
 

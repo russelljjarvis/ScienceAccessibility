@@ -29,7 +29,7 @@ The accessibility of written word can be approximated by a computer program that
 | 6.0   | upgoer5   |
 | 9.0 |    readability of science declining   |
 | 14.0 | science of writing |
-| 14.3 | mean post modern essay gen |
+| 14.3 | mean post modern essay generator |
 | 14.9 | mean wikipedia complexity|
 
 ## Open Data Counterpart of this Code Repository lives at:

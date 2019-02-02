@@ -45,7 +45,7 @@ Running the scraper is not necessary for analysing the text documents.
 | 6.0   | upgoer5   |
 | 9.0 |    readability of science declining   |
 | 14.0 | science of writing |
-| 12.0 | post modern essay gen |
+| 14.3 | mean post modern essay gen |
 | 14.9 | mean wikipedia complexity|
 
 

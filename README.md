@@ -62,7 +62,7 @@ Running the scraper is not necessary for analysing the text documents.
    
       
    
-[Interactive plot of sentiment versus complexity hyperlinked to a broad sample of URLs](https://russelljjarvis.github.io/ScienceAccessibility/)
+[Clicking on this plot of sentiment versus complexity takes you to the webpage that generated the data point](https://russelljjarvis.github.io/ScienceAccessibility/)
 
 
 

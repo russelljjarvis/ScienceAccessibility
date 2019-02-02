@@ -33,6 +33,11 @@ The accessibility of written word can be approximated by a computer program that
 | 14.9 | mean wikipedia complexity |
 | 12.0 | this readme.md |
 
+
+## Sentiment Versus Complexity      
+   
+[Clicking on this plot of sentiment versus complexity takes you to the webpage that generated the data point](https://russelljjarvis.github.io/ScienceAccessibility/)
+
 ## Open Data Counterpart of this Code Repository lives at:
 https://osf.io/yng5u/wiki/home/
 
@@ -47,24 +52,10 @@ Running the scraper is not necessary for analysing the text documents.
 ![image](https://user-images.githubusercontent.com/7786645/52091615-352aaf00-2572-11e9-905a-0b75fe0005d7.png)
 
 
-<p>The observant reader will see, 'et al', occurs in published literature quite a lot, highlighting an obvious finding that science writing often refers to external evidence.
+The observant reader will see, 'et al', occurs in published literature quite a lot, highlighting an obvious finding that science writing often refers to external evidence.
 
 
 [Similar projects](https://blog.machinebox.io/detect-fake-news-by-building-your-own-classifier-31e516418b1d).
-
-
-## Sentiment Versus Complexity
-   
-    
-   
-   
-   
-   
-   
-      
-   
-[Clicking on this plot of sentiment versus complexity takes you to the webpage that generated the data point](https://russelljjarvis.github.io/ScienceAccessibility/)
-
 
 
 ## Building All of the Project.

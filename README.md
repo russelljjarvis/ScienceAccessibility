@@ -49,27 +49,21 @@ Running the scraper is not necessary for analysing the text documents.
 | 14.9 | mean wikipedia complexity|
 
 
-
-
-
-
-
-
-
-
-
-
-
-.
-.
-.
-Some white space to aid digestion.
-.
-.
-.
+[Similar projects](https://blog.machinebox.io/detect-fake-news-by-building-your-own-classifier-31e516418b1d).
 
 
 ## Sentiment Versus Complexity
+   
+    
+   
+   
+   
+   
+   
+   
+   
+   
+   
 ![image](https://user-images.githubusercontent.com/7786645/52097960-3ff13e00-258a-11e9-8a93-aea628526c1e.png)
 An interactive hyperlinked to URL version zof this plot is available at 
 Examples/interactive_complexity_urls.html

@@ -3,7 +3,7 @@
 ## In Plain Language
 Understanding big words is hard, so when big hard ideas are written down with lots of hard words, the writing taken as a whole is also hard to understand. 
 
-We used a computer, to check writing to see how hard it is to understand lots of different writing, meant for different people. we want to stop an often happening thing, happening again. We want to stop people avoiding reading hard ideas, only because there were too many hard words.
+We used a computer, to check writing to see how hard it is to understand lots of different writing, meant for different people. We want to stop an often happening thing, happening again. We want to stop people avoiding reading hard ideas, only because there were too many hard words.
 
 We want most people understanding more big hard ideas, now, and on a later dates, so those people are not hurt because they did not understand important things.
 ## Overview 

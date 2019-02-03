@@ -1,12 +1,17 @@
 
-language: python
-R
-python:
-  - "3.4"
-cache: pip
-install:
-  - pip install -r requirements.txt
-script:
-  - R
-  
-  # py.test --cov-report term-missing --cov app -v
+matrix:
+  include:
+
+    language: 
+      R
+      - R -e 'devtools::install_deps(dep = remotes)'
+
+    script:
+    - R grab_data.R
+
+    - language: python
+      python: "3.4"
+      before_script:
+        - cd backend/tests
+      script:
+        - python -m unittest discover

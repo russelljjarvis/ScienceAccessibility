@@ -1,6 +1,9 @@
 # Science Accessibility Project
 
+## In Plain Language
+Understanding big words is hard, so when hard ideas are written down with a set of hard words, the writing taken as a whole is also hard to understand. 
 
+We used a computer, to check writing to see how hard it is to understand, we want to stop a often happening thing, happening again, were people avoid reading hard ideas, only because there were too many hard words.
 
 ## Overview 
 Non-scientific writing typically exceeds genuine scientific writing in two important aspects: in contrast to genuine science, non-science is often expressed with a less complex, and more engaging writing style. We believe non-science writing occupies a more accessible niche, that academic science writing should also occupy. 

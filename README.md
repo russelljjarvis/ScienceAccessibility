@@ -68,7 +68,7 @@ The observant reader will see, 'et al', occurs in published literature quite a l
 ## Building All of the Project.
 (including the scraper).
 
-The scraping, and crawling code for this is dependency heavy. Docker is used to solve non trivial software dependency issues where possible.
+The scraping, and crawling code for this is dependency heavy. Who wants to duplicate building of this whole environment from scratch? No-one? I thought so. [https://cloud.docker.com/repository/registry-1.docker.io/russelljarvis/science_accessibility](Docker is used to solve non trivial software dependency issues where possible), Docker is used to solve provide a universal build, and prevent duplicated effort.
 
 If docker is installed on the base OS, git clone this repository, and assuming the file build.sh is chmod +x , run: `bash build.sh` to perform the dockerbuild. To run the jupyter notebook over docker, enter the docker enivornment interactively in one of two ways, via a bash shell, or via an ipython notebook or
 and then launch python via BASH in Linux as follows:

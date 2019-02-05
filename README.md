@@ -1,11 +1,11 @@
 # Science Accessibility Project
 
-## Via [Upgoer 5](http://splasho.com/upgoer5/library.php)
+## [Upgoer 5](http://splasho.com/upgoer5/library.php) Overview
 Understanding big words is hard, so when big ideas are written down with lots of big words, the large pile of words is also hard to understand. 
 
 We used a computer programs on lots of different writing, meant for different people, to see how hard each piece of writing was to understand. We want to stop people avoiding learning hard ideas, only because there were too many hard words. We want most people understanding more big ideas, now, and in the future, so those people are not hurt because they did not understand important things.
 
-## Overview 
+## Developer Overview 
 Non-scientific writing typically exceeds genuine scientific writing in two important aspects: in contrast to genuine science, non-science is often expressed with a less complex, and more engaging writing style. We believe non-science writing occupies a more accessible niche, that academic science writing should also occupy. 
 
 Unfortunately, writing styles intended for different audiences, are predictably different. We show that we can use machine learning to predict the status of writing styles: blog, wikipedia, opinion, and traditional science, by first sampling a large variety of web documents, and then classifying among the different writing types. By predicting which of the several different niches a document occupies, we are able to characterize the different writing types, and to describe strategies to remedy writing complexity.

@@ -3,7 +3,7 @@
 ## [Upgoer 5](http://splasho.com/upgoer5/library.php) Overview
 Understanding big words is hard, so when big ideas are written down with lots of big words, the large pile of words is also hard to understand. 
 
-We used a computer programs on lots of different writing, meant for different people, to see how hard each piece of writing was to understand. We want to stop people avoiding learning hard ideas, only because there were too many hard words. We want most people understanding more hard ideas, now, and in the future, so those people are not hurt because they did not understand important things. We think we help by doing an explaining the situation, and creating helpful tools.
+We used a computer programs on lots of different writing, meant for different people, to see how hard each piece of writing was to understand. We want to stop people avoiding learning hard ideas, only because there were too many hard words. We want most people understanding more hard ideas, now, and in the future, so those people are not hurt because they did not understand important things. We think we can help by explaining the problem better, and by creating tools to address the problem.
 
 ## Developer Overview 
 Non-scientific writing typically exceeds genuine scientific writing in two important aspects: in contrast to genuine science, non-science is often expressed with a less complex, and more engaging writing style. We believe non-science writing occupies a more accessible niche, that academic science writing should also occupy. 

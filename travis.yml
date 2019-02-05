@@ -1,5 +1,17 @@
 
-- R -e 'devtools::install_deps(dep = remotes)'
+matrix:
+  include:
 
-script:
-- R grab_data.R
+    language: 
+      R
+      - R -e 'devtools::install_deps(dep = remotes)'
+
+    script:
+    - R grab_data.R
+
+    - language: python
+      python: "3.4"
+      before_script:
+        - cd backend/tests
+      script:
+        - python -m unittest discover

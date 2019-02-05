@@ -1,8 +1,11 @@
 # Science Accessibility Project
 
+## [Upgoer 5](http://splasho.com/upgoer5/library.php) Overview
+Understanding big words is hard, so when big ideas are written down with lots of big words, the large pile of words is also hard to understand. 
 
+We used a computer programs on lots of different writing, meant for different people, to see how hard each piece of writing was to understand. We want to stop people avoiding learning hard ideas, only because there were too many hard words. We want most people understanding more hard ideas, now, and in the future, so those people are not hurt because they did not understand important things.
 
-## Overview 
+## Developer Overview 
 Non-scientific writing typically exceeds genuine scientific writing in two important aspects: in contrast to genuine science, non-science is often expressed with a less complex, and more engaging writing style. We believe non-science writing occupies a more accessible niche, that academic science writing should also occupy. 
 
 Unfortunately, writing styles intended for different audiences, are predictably different. We show that we can use machine learning to predict the status of writing styles: blog, wikipedia, opinion, and traditional science, by first sampling a large variety of web documents, and then classifying among the different writing types. By predicting which of the several different niches a document occupies, we are able to characterize the different writing types, and to describe strategies to remedy writing complexity.
@@ -13,7 +16,6 @@ Objectively describing the character of the different writing styles will allow 
 
 ## Machine Estimation of Writing Complexity:
 The accessibility of written word can be approximated by a computer program that reads over the text, and guesses the mental difficulty, associated with comprehending a written document. The computer program maps reading difficult onto a quantity that represents the number of years of schooling needed to decode the language in the document. For convenience, we can refer to the difficulty associated with the text as the 'complexity' of the document. 
-
 
 ### How do some well known texts do?
 
@@ -64,7 +66,7 @@ The observant reader will see, 'et al', occurs in published literature quite a l
 ## Building All of the Project.
 (including the scraper).
 
-The scraping, and crawling code for this is dependency heavy. Docker is used to solve non trivial software dependency issues where possible.
+The scraping, and crawling code for this is dependency heavy. Who wants to duplicate building of this whole environment from scratch? No-one? I thought so. [Docker is used to solve non trivial software dependency issues where possible), Docker is used to solve provide a universal build, and prevent duplicated effort](https://cloud.docker.com/repository/registry-1.docker.io/russelljarvis/science_accessibility).
 
 If docker is installed on the base OS, git clone this repository, and assuming the file build.sh is chmod +x , run: `bash build.sh` to perform the dockerbuild. To run the jupyter notebook over docker, enter the docker enivornment interactively in one of two ways, via a bash shell, or via an ipython notebook or
 and then launch python via BASH in Linux as follows:

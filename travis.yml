@@ -1,9 +1,31 @@
-############################################################################
-# Get data.
-############################################################################
+sudo: true
+
+# Set the build language to Python
+language: python
+
+# Set the python version to 2.7
+python: "3.5"
+
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install -y wget
+
 before_install:     
   - DATA_URL="https://osf.io/xfzy6/download"
-  - mkdir data_dir && travis_retry wget --quiet -O - ${DATA_URL} | tar --strip-components=1 -xz -C boost
+  - mkdir data_dir && travis_retry wget --quiet -O - ${DATA_URL} | tar --strip-components=1 -xz -C data_dir
+  echo $pwd
+
+
+before_script:
+  - cd data_dir
+# Install the codecov pip dependency
+install:
+  - pip install textstat nltk dask bs4
+
+# Run the unit test
+script:
+
+  - python Examples/word_cloud.py
 
 
 include:

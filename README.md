@@ -1,11 +1,10 @@
 # Science Accessibility Project
 
-## In Plain Language
+## Via Upgoer 5
 Understanding big words is hard, so when big hard ideas are written down with lots of hard words, the large pile of words is also hard to understand. 
 
-We used a computer, to check writing to see how hard it is to understand lots of different writing, meant for different people. We want to stop an often happening thing, happening again. We want to stop people avoiding reading hard ideas, only because there were too many hard words.
+We used a computer programs on lots of different writing, meant for different people, to see how hard each piece of writing was to understand. We want to stop people not reading hard ideas, only because there were too many hard words. We want most people understanding more big ideas, now, and in the future, so those people are not hurt because they did not understand important things.
 
-We want most people understanding more big hard ideas, now, and on a later dates, so those people are not hurt because they did not understand important things.
 ## Overview 
 Non-scientific writing typically exceeds genuine scientific writing in two important aspects: in contrast to genuine science, non-science is often expressed with a less complex, and more engaging writing style. We believe non-science writing occupies a more accessible niche, that academic science writing should also occupy. 
 
@@ -17,7 +16,6 @@ Objectively describing the character of the different writing styles will allow 
 
 ## Machine Estimation of Writing Complexity:
 The accessibility of written word can be approximated by a computer program that reads over the text, and guesses the mental difficulty, associated with comprehending a written document. The computer program maps reading difficult onto a quantity that represents the number of years of schooling needed to decode the language in the document. For convenience, we can refer to the difficulty associated with the text as the 'complexity' of the document. 
-
 
 ### How do some well known texts do?
 

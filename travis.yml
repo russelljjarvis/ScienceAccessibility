@@ -1,24 +1,18 @@
 ############################################################################
 # Get data.
 ############################################################################
-- DATA_URL="https://osf.io/xfzy6/download"
-- mkdir data_dir && travis_retry wget --quiet -O - ${DATA_URL} | tar --strip-components=1 -xz -C boost
+before_install:     
+  - DATA_URL="https://osf.io/xfzy6/download"
+  - mkdir data_dir && travis_retry wget --quiet -O - ${DATA_URL} | tar --strip-components=1 -xz -C boost
 
 
-matrix:
-  include:
-     before_install:
-      
-    - language: R
-      - R -e 'devtools::install_deps(dep = remotes)'
+include:
+
+  - language: python
+    python: "3.4"
+    before_script:
+      - cd Examples
     script:
-    - R grab_data.R
+      - python word_cloud.py
 
-    - language: python
-      python: "3.4"
-      before_script:
-        - cd Examples
-      script:
-        - python word_cloud.py
-        
         

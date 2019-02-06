@@ -131,11 +131,7 @@ def text_proc(corpus, urlDat = {}, WORD_LIM = 100):
             # explanation of metrics
             # https://github.com/shivam5992/textstat
 
-            standard_  = textstat.text_standard(corpus)
-            try:
-                urlDat['standard']  = float(standard_[0:2])
-            except:
-                urlDat['standard']  = float(standard_[0:1])
+            urlDat['standard'] = textstat.text_standard(corpus, float_output=True)
 
             # special sauce
             # Good writing should be readable, objective, concise.

@@ -1,40 +1,28 @@
-sudo: true
 
 # Set the build language to Python
 language: python
 
 # Set the python version to 2.7
 python: "3.5"
-
+services:
+  - docker
+  
 before_install:
-  - sudo apt-get update
-  - sudo apt-get install -y wget
+- docker pull russelljarvis/science_accessibility  
 
 before_install:     
   - DATA_URL="https://osf.io/xfzy6/download"
-  - mkdir data_dir && travis_retry wget --quiet -O - ${DATA_URL} | tar --strip-components=1 -xz -C data_dir
-  echo $pwd
+  - mkdir data_dir && cd data_dir && wget -O - ${DATA_URL} 
+  - echo $pwd
 
 
 before_script:
   - cd data_dir
-# Install the codecov pip dependency
-install:
-  - pip install textstat nltk dask bs4
 
 # Run the unit test
 script:
+  - docker run -v data_dir:/home/jovyan/SComplexity/Examples russelljarvis/science_accessibility python SComplexity/Examples/word_cloud.py
 
-  - python Examples/word_cloud.py
 
-
-include:
-
-  - language: python
-    python: "3.4"
-    before_script:
-      - cd Examples
-    script:
-      - python word_cloud.py
 
         

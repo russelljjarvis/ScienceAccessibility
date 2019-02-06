@@ -7,6 +7,8 @@ python: "3.5"
 services:
   - docker
   
+# get data from open science frame work.
+# get a prebuilt docker environment that supports this work.
 before_install:     
   - docker pull russelljarvis/science_accessibility:slc  
   - DATA_URL="https://osf.io/xfzy6/download"
@@ -15,8 +17,10 @@ before_install:
 
 # Run the unit test
 script:
+# show that running the docker container at least works.
   - docker run -v data_dir:/home/jovyan/SComplexity/Examples russelljarvis/science_accessibility:slc python -c "gets here"
-#SComplexity/Examples/word_cloud.py
+  - docker run -v data_dir:/home/jovyan/SComplexity/Examples russelljarvis/science_accessibility:slc python -c "import os;os.system('pwd')"
+
 
 
 

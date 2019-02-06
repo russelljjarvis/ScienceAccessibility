@@ -8,7 +8,7 @@ services:
   - docker
   
 before_install:
-- docker pull russelljarvis/science_accessibility  
+- docker pull russelljarvis/science_accessibility:slc  
 
 before_install:     
   - DATA_URL="https://osf.io/xfzy6/download"

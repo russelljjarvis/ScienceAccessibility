@@ -1,6 +1,7 @@
 
 
-# Contributing to Open Source Science Accessibility Project
+# Contributing to Open Source Science Accessibility Project 
+(this draws heavily from https://github.com/github/opensource.guide)
 
 We're excited to hear and learn from you.
 

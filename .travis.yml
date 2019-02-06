@@ -13,14 +13,10 @@ before_install:
   - mkdir data_dir && cd data_dir && wget -O - ${DATA_URL} 
   - echo $pwd
 
-
-before_script:
-  - echo $pwd
-
-
 # Run the unit test
 script:
-  - docker run -v data_dir:/home/jovyan/SComplexity/Examples russelljarvis/science_accessibility:slc python SComplexity/Examples/word_cloud.py
+  - docker run -v data_dir:/home/jovyan/SComplexity/Examples russelljarvis/science_accessibility:slc python -c "gets here"
+#SComplexity/Examples/word_cloud.py
 
 
 

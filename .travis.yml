@@ -2,8 +2,8 @@
 # Set the build language to Python
 language: python
 
-# Set the python version to 2.7
-python: "3.4"
+# Set the python version 
+python: "3.5"
 services:
   - docker
   
@@ -18,12 +18,11 @@ before_install:
 
 before_script:
   - echo $pwd
-  - echo "gets here"
-  #- cd data_dir
+
 
 # Run the unit test
 script:
-  - docker run -v data_dir:/home/jovyan/SComplexity/Examples russelljarvis/science_accessibility python SComplexity/Examples/word_cloud.py
+  - docker run -v data_dir:/home/jovyan/SComplexity/Examples russelljarvis/science_accessibility:slc python SComplexity/Examples/word_cloud.py
 
 
 

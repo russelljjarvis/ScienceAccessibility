@@ -19,7 +19,6 @@ before_install:
 script:
 # show that running the docker container at least works.
   - docker run -v data_dir:/home/jovyan/SComplexity/Examples russelljarvis/science_accessibility:slc python -c "gets here"
-  - docker run -v data_dir:/home/jovyan/SComplexity/Examples russelljarvis/science_accessibility:slc python -c "import os;os.system('pwd')"
 
 
 

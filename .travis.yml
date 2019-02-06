@@ -7,10 +7,8 @@ python: "3.5"
 services:
   - docker
   
-before_install:
-- docker pull russelljarvis/science_accessibility:slc  
-
 before_install:     
+  - docker pull russelljarvis/science_accessibility:slc  
   - DATA_URL="https://osf.io/xfzy6/download"
   - mkdir data_dir && cd data_dir && wget -O - ${DATA_URL} 
   - echo $pwd

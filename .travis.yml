@@ -17,7 +17,9 @@ before_install:
 
 
 before_script:
-  - cd data_dir
+  - echo $pwd
+  - echo "gets here"
+  #- cd data_dir
 
 # Run the unit test
 script:

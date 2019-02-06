@@ -48,9 +48,9 @@ Higher is worse:
 https://osf.io/yng5u/wiki/home/
 
 ## Analysis of Text.
-Running the scraper is not necessary for analysing the text documents.
+Running the scraper is not necessary for analysing the text documents. 
 
-### Word frequencies as clouds::
+### Word frequencies as clouds:
 ### Per category
 #### Not Science
 ![image](https://user-images.githubusercontent.com/7786645/52091608-322fbe80-2572-11e9-8553-3e346a8b824e.png)

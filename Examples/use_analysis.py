@@ -118,7 +118,7 @@ est.fit(X)
 
 y_kmeans = est.predict(X)
 centers = est.cluster_centers_
-
+print(centers,'centers')
 
 fignum = 1
 fig = plt.figure(fignum, figsize=(4, 3))
@@ -192,7 +192,8 @@ accuracy_score(y_test.values, y_predict)
 '''
 
 #scraped = scraped_new
-scraped_new  = [ w['sp'] for w in scraped_new if str('sp') in w.keys() ]
+scraped_new  = [ w for w in scraped_new if str('sp') in w.keys() ]
+
 sps = [ w['sp'] for w in scraped_new ]
 
 fogss = [ w['gf'] for w in scraped_new ]
@@ -213,7 +214,7 @@ by_engine[str('scholar')] = list(filter(lambda url: str('scholar') in url['se'],
 by_engine[str('bing')] = list(filter(lambda url: str('bing') in url['se'], urlDats))
 by_engine[str('google')] = list(filter(lambda url: str('google') in url['se'], urlDats))
 by_engine[str('duckduckgo')] = list(filter(lambda url: str('duckduckgo') in url['se'], urlDats))
-by_engine[str('wiki')] = list(filter(lambda url: str('wikipedia') in url['se'], urlDats))
+by_engine[str('wiki')] = list(filter(lambda url: str('wiki') in url['se'], urlDats))
 
 plt.clf()
 
@@ -222,9 +223,12 @@ plt.title('rank versus standard reading level'+str(' wikipedia'))
 plt.xlabel('rank')
 plt.ylabel('standard')
 #print(by_engine['wiki']['ranks'],by_engine['wiki']['standard'])
+by_engine['wiki'] = [i for i in by_engine['wiki'] if 'standard' in i.keys()]
+#import pdb
+#pdb.set_trace()
 plt.scatter([i['page_rank'] for i in by_engine['wiki']],[i['standard'] for i in by_engine['wiki']])
-plt.plot([i for i in range(0,int(low_standard))],[low_standard for i in range(0,int(low_standard))])
-plt.plot([i for i in range(0,int(high_standard))],[high_standard for i in range(0,int(high_standard))])
+#plt.plot([i for i in range(0,int(low_standard))],[low_standard for i in range(0,int(low_standard))])
+#plt.plot([i for i in range(0,int(high_standard))],[high_standard for i in range(0,int(high_standard))])
 
 #print(by_engine[key]['standard'], by_engine[key]['ranks'])
 plt.savefig('standard_vs_rank'+str('wiki')+'.png')
@@ -248,8 +252,8 @@ plt.ylabel('compression ratio')
 #plt.scatter(by_engine['wiki']['ranks'],by_engine['wiki']['standard'])
 plt.scatter([i['page_rank'] for i in by_engine['wiki']],[i['info_density'] for i in by_engine['wiki']])
 
-plt.plot([i for i in range(0,int(low_info))],[low_standard for i in range(0,int(low_info))])
-plt.plot([i for i in range(0,int(high_info))],[high_standard for i in range(0,int(high_info))])
+#plt.plot([i for i in range(0,int(low_info))],[low_standard for i in range(0,int(low_info))])
+#plt.plot([i for i in range(0,int(high_info))],[high_standard for i in range(0,int(high_info))])
 
 #print(by_engine[key]['info_density'], by_engine[key]['ranks'])
 plt.savefig('compression_ratio'+str('wiki')+'.png')
@@ -271,6 +275,7 @@ fig, axes = plt.subplots()
 axes.set_title('reference versus reading level')
 plt.xlabel('reference source')
 plt.ylabel('reading level')
+'''
 #plt.scatter(sps,fogss,label="scrapped data points")
 axis = [i for i in range(0,len(labels))]
 plt.scatter(axis,by_query['reference']['standard'])#,label=labels)
@@ -303,7 +308,7 @@ for (label, x) in zip(labels,axis):
         #arrowprops=dict(arrowstyle = '->', connectionstyle='arc3,rad=0'))
 
 plt.savefig('reference_versus_compression_ratio.png')
-
+'''
 
 
 query_keys = list(set([ s['query'] for s in urlDats ]))
@@ -371,7 +376,7 @@ for key in query_keys:
     by_query[key]['s_mean'] = np.mean([ w['standard'] for w in by_query[key]['urlDats'] ])
     by_query[key]['s_std'] = np.std([ w['standard'] for w in by_query[key]['urlDats'] ])
 
-    by_query[key]['scaled_info_density'] = [ w['scaled_info_density'] for w in by_query[key]['urlDats'] ]
+    by_query[key]['info_density'] = [ w['info_density'] for w in by_query[key]['urlDats'] ]
     plt.clf()
     fig, ax = plt.subplots()
 
@@ -469,7 +474,7 @@ for key in engine_keys:
     plt.close()
     '''
 
-print(labels)
+#print(labels)
 '''
 plt.clf()
 fig, axes = plt.subplots()

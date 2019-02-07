@@ -34,10 +34,10 @@ Higher is worse:
 |----------|:-------------:|
 | 6.0   | upgoer5   |
 | 9.0 |    readability of science declining   |
+| 12.0 | this readme.md |
 | 14.0 | science of writing |
 | 14.3 | mean post modern essay generator |
 | 14.9 | mean wikipedia |
-| 12.0 | this readme.md |
 
 
 ## Sentiment Versus Complexity      

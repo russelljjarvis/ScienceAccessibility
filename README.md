@@ -39,13 +39,13 @@ Higher is worse:
 | 14.3 | mean post modern essay generator |
 | 14.9 | mean wikipedia |
 
-[comment]: <> ( 
-## Sentiment Versus Complexity      
+[//]: # ( 
+[//]: # ## Sentiment Versus Complexity      
    
-[Clicking on this plot of sentiment versus complexity takes you to the webpage that generated the data point](https://russelljjarvis.github.io/ScienceAccessibility/)
-)
-[comment]: <> ( Open Data Counterpart of this Code Repository lives at:
-https://osf.io/yng5u/wiki/home/ )
+[//]: # [Clicking on this plot of sentiment versus complexity takes you to the webpage that generated the data point][//]: #(https://russelljjarvis.github.io/ScienceAccessibility/)
+[//]: #)
+[//]: #[comment]: <> ( Open Data Counterpart of this Code Repository lives at:
+[//]: #https://osf.io/yng5u/wiki/home/ )
 
 ## Analysis of Text.
 Running the scraper is not necessary for analysing the text documents. 

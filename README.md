@@ -42,6 +42,10 @@ Higher is worse:
 ## Analysis of Text.
 Running the scraper is not necessary for analysing the text documents. 
 
+## Sentiment Versus Complexity
+
+ ![image](https://user-images.githubusercontent.com/7786645/52097960-3ff13e00-258a-11e9-8a93-aea628526c1e.png)		
+
 ### Word frequencies as clouds:
 ### Per category
 #### Not Science

@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/russelljjarvis/ScienceAccessibility.png)](https://travis-ci.com/russelljjarvis/ScienceAccessibility)
+[![Build Status](https://travis-ci.com/russelljjarvis/ScienceAccessibility.png)](https://travis-ci.com/russelljjarvis/ScienceAccessibility) <-works when public.
 # Science Accessibility Project
 
 ## [Upgoer 5](http://splasho.com/upgoer5/library.php) Overview
@@ -96,3 +96,8 @@ Another file `Examples/use_code_complexity.py` reports back about the complexity
 
 ## What about Code Cognitive Complexity?
 The project takes measures to minimize that also. See the codeComplexity directory. 
+
+
+## A Natural Extension 
+to this work, would be to create a framework where academic authors compete to write simpler text.
+https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/Incentivise_by_competing.ipynb

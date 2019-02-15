@@ -39,6 +39,20 @@ Higher is worse:
 | 14.3 | mean post modern essay generator |
 | 14.9 | mean wikipedia |
 
+
+
+## A Natural Extension 
+[to this work, would be to create a framework where academic authors compete to write simpler text.]
+(https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/Incentivise_by_competing.ipynb)
+
+## Competition
+
+| mean complexity   |      author      |
+|----------|:-------------:|
+| 28.85 | professor R Gerkin   |
+| 30.58 |     professor S Crook  |
+| 12.0 | this readme.md |
+
 ## Analysis of Text.
 Running the scraper is not necessary for analysing the text documents. 
 
@@ -95,7 +109,3 @@ Another file `Examples/use_code_complexity.py` reports back about the complexity
 ## What about Code Cognitive Complexity?
 The project takes measures to minimize that also. See the codeComplexity directory. 
 
-
-## A Natural Extension 
-to this work, would be to create a framework where academic authors compete to write simpler text.
-https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/Incentivise_by_competing.ipynb

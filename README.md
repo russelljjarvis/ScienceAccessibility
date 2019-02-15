@@ -41,8 +41,8 @@ Higher is worse:
 
 
 
-## I Mentioned Creating Tools. 
-One tool, that functions as a natural extension of this work, is to enable 'clear writing' tournaments and leader boards, for example:
+## Proposed Remedies:
+Previously I mentioned creating tools to remedy the situation. One tool, that functions as a natural extension of this work, is to enable 'clear writing' tournaments and leader boards, for example:
 
 | mean complexity   |      author      |
 |----------|:-------------:|

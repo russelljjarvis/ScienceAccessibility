@@ -41,17 +41,23 @@ Higher is worse:
 
 
 
-## A Natural Extension 
-[to this work, would be to create a framework where academic authors compete to write simpler text.]
-(https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/Incentivise_by_competing.ipynb)
+## I Mentioned Creating Tools. 
+One tool, that functions as a natural extension of this work, is to enable 'clear writing' tournaments and leader boards.
 
-## Competition
+## An Example Competition:
 
 | mean complexity   |      author      |
 |----------|:-------------:|
 | 28.85 | professor R Gerkin   |
 | 30.58 |     professor S Crook  |
 | 12.0 | this readme.md |
+
+
+[to this work, would be to create a framework where academic authors compete to write simpler text.]
+(https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/Incentivise_by_competing.ipynb)
+
+[A more recently maintained version of that file:]
+https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/compete.py)
 
 ## Analysis of Text.
 Running the scraper is not necessary for analysing the text documents. 

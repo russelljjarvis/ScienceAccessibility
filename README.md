@@ -1,14 +1,15 @@
+[![Build Status](https://travis-ci.com/russelljjarvis/ScienceAccessibility.png)](https://travis-ci.com/russelljjarvis/ScienceAccessibility) <-works when public.
 # Science Accessibility Project
 
 ## [Upgoer 5](http://splasho.com/upgoer5/library.php) Overview
 Understanding big words is hard, so when big ideas are written down with lots of big words, the large pile of words is also hard to understand. 
 
-We used a computer programs on lots of different writing, meant for different people, to see how hard each piece of writing was to understand. We want to stop people avoiding learning hard ideas, only because there were too many hard words. We want most people understanding more hard ideas, now, and in the future, so those people are not hurt because they did not understand important things.
+We used a computer programs on lots of different writing, meant for different people, to see how hard each piece of writing was to understand. We want to stop people avoiding learning hard ideas, only because there were too many hard words. We want most people understanding more hard ideas, now, and in the future, so those people are not hurt because they did not understand important things. We think we can help by explaining the problem better, and by creating tools to address the problem.
 
 ## Developer Overview 
 Non-scientific writing typically exceeds genuine scientific writing in two important aspects: in contrast to genuine science, non-science is often expressed with a less complex, and more engaging writing style. We believe non-science writing occupies a more accessible niche, that academic science writing should also occupy. 
 
-Unfortunately, writing styles intended for different audiences, are predictably different. We show that we can use machine learning to predict the status of writing styles: blog, wikipedia, opinion, and traditional science, by first sampling a large variety of web documents, and then classifying among the different writing types. By predicting which of the several different niches a document occupies, we are able to characterize the different writing types, and to describe strategies to remedy writing complexity.
+Unfortunately, writing styles intended for different audiences, are predictably different. We show that computers can learn to guess the type of a written document: blog, wikipedia, opinion, and traditional science, by first sampling a large variety of web documents, and then classifying using sentiment, complexity, and other variables. By predicting which of the several different niches a document occupies, we are able to characterize the different writing types, and to describe strategies to remedy writing complexity.
 
 Multiple stake holders can benefit when science is communicated with lower complexity expression of ideas. With lower complexity science writing, knowledge would be more readily transferred into public awareness, additionally, digital organization of facts derived from journal articles would occur more readily, as successful machine comprehension of documented science would likely occur with less human intervention.
 
@@ -33,23 +34,37 @@ Higher is worse:
 |----------|:-------------:|
 | 6.0   | upgoer5   |
 | 9.0 |    readability of science declining   |
+| 12.0 | this readme.md |
 | 14.0 | science of writing |
 | 14.3 | mean post modern essay generator |
 | 14.9 | mean wikipedia |
+
+
+
+## A Natural Extension 
+[to this work, would be to create a framework where academic authors compete to write simpler text.]
+(https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/Incentivise_by_competing.ipynb)
+
+## Competition
+
+| mean complexity   |      author      |
+|----------|:-------------:|
+| 28.85 | professor R Gerkin   |
+| 30.58 |     professor S Crook  |
 | 12.0 | this readme.md |
 
-
-## Sentiment Versus Complexity      
-   
-[Clicking on this plot of sentiment versus complexity takes you to the webpage that generated the data point](https://russelljjarvis.github.io/ScienceAccessibility/)
-
-## Open Data Counterpart of this Code Repository lives at:
-https://osf.io/yng5u/wiki/home/
-
 ## Analysis of Text.
-Running the scraper is not necessary for analysing the text documents.
+Running the scraper is not necessary for analysing the text documents. 
 
-### Word frequencies as clouds::
+## Sentiment Versus Complexity
+     		
+![image](https://user-images.githubusercontent.com/7786645/52097960-3ff13e00-258a-11e9-8a93-aea628526c1e.png)		
+
+[An interactive plot of the same thing, where clicking on a data point takes you to the webpage that generated the data point](https://russelljjarvis.github.io/ScienceAccessibility/)
+## Open Data:		
+[Open Data Counterpart of this Code Repository lives at:](https://osf.io/yng5u/wiki/home/)
+
+### Word frequencies as clouds:
 ### Per category
 #### Not Science
 ![image](https://user-images.githubusercontent.com/7786645/52091608-322fbe80-2572-11e9-8553-3e346a8b824e.png)
@@ -66,7 +81,9 @@ The observant reader will see, 'et al', occurs in published literature quite a l
 ## Building All of the Project.
 (including the scraper).
 
-The scraping, and crawling code for this is dependency heavy. Who wants to duplicate building of this whole environment from scratch? No-one? I thought so. [Docker is used to solve non trivial software dependency issues where possible), Docker is used to solve provide a universal build, and prevent duplicated effort](https://cloud.docker.com/repository/registry-1.docker.io/russelljarvis/science_accessibility).
+The internet in someways is like a big group of computers that are all friends with each. A scraper is A computer that visits many of the other computers on the internet. The scraper does not have to be friends with the computers it visits, it just needs to know the address at which each computer in the big friendship group can be reached.
+
+The scraping, and crawling code for this is dependency heavy. Who wants to duplicate building of this whole environment from scratch? No-one? I thought so. [Docker is used to provide a universal build, and prevent duplicated effort](https://cloud.docker.com/repository/registry-1.docker.io/russelljarvis/science_accessibility).
 
 If docker is installed on the base OS, git clone this repository, and assuming the file build.sh is chmod +x , run: `bash build.sh` to perform the dockerbuild. To run the jupyter notebook over docker, enter the docker enivornment interactively in one of two ways, via a bash shell, or via an ipython notebook or
 and then launch python via BASH in Linux as follows:
@@ -89,14 +106,6 @@ Given pre-existing data (pickled files consisiting of raw text contents), the an
 
 Another file `Examples/use_code_complexity.py` reports back about the complexity of the code base. This code complexity analysis is not thorough enough to include third party modules that were heavily utilized in the analysis, however, the principle of code complexity, with an application limited scope is generally applied in our approach, as it's obviously not desirable to use obfuscated code as a tool used to advocate for simple language.
 
-## Why is the Scraping Code So Complex?
-
-A lot of complexity in the code base comes from the need to masquerade as a non bot web surfer. An example of a TCP/IP dialogue might read like this:
-Search Engine: 'who are you?' code: 'I am an honest human centric browser, and certainly not a robot surfing in the nude'. Search Engine: 'good, here are some pages'.	 Time elapses and the truth is revealed just like in 'the Emperors New Clothes'.	
-
-Excepting for the scraping the wikipedia (which has bot friendly policies), it's a bad idea to surf raw ie to only use: `urllib`, or `requests`, as these resource grabbers are sure fire bot give aways.
-`Selenium`, `Google Scrape` (uses Selenium), and `delver Crawler`, are the surfing clothes people use; they work together to prolong a period feigned humanhood. The downloading of pdf's as opposed to html usually is fine without a fake humancentric browser (that acts like it is storing cookies), but this does not seem to cause any problems. This project is a mashup of many popular FOS technologies, much of the code is just glue.
-
-
 ## What about Code Cognitive Complexity?
 The project takes measures to minimize that also. See the codeComplexity directory. 
+

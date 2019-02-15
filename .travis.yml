@@ -1,0 +1,27 @@
+
+# Set the build language to Python
+language: python
+
+# Set the python version 
+python: "3.5"
+services:
+  - docker
+  
+# get data from open science frame work.
+# get a prebuilt docker environment that supports this work.
+before_install:     
+  - docker pull russelljarvis/science_accessibility:slc  
+  - DATA_URL="https://osf.io/xfzy6/download"
+  - mkdir data_dir && cd data_dir && wget -O - ${DATA_URL} 
+  - echo $pwd
+
+# Run the unit test
+script:
+# show that running the docker container at least works.
+  - docker run -v data_dir:/home/jovyan/SComplexity/Examples/results_dir russelljarvis/science_accessibility:slc python -c "gets here"
+  - docker run -v data_dir:/home/jovyan/SComplexity/Examples/results_dir russelljarvis/science_accessibility:slc python Examples/use_analysis.py
+
+
+
+
+        

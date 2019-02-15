@@ -47,9 +47,8 @@ Running the scraper is not necessary for analysing the text documents.
 ![image](https://user-images.githubusercontent.com/7786645/52097960-3ff13e00-258a-11e9-8a93-aea628526c1e.png)		
 
 [An interactive plot of the same thing, where clicking on a data point takes you to the webpage that generated the data point](https://russelljjarvis.github.io/ScienceAccessibility/)
-## Open Data:
-(https://russelljjarvis.github.io/ScienceAccessibility/)		
-[Open Data Counterpart of this Code Repository lives at:(https://osf.io/yng5u/wiki/home/]
+## Open Data:		
+[Open Data Counterpart of this Code Repository lives at:](https://osf.io/yng5u/wiki/home/)
 
 ### Word frequencies as clouds:
 ### Per category
@@ -70,7 +69,7 @@ The observant reader will see, 'et al', occurs in published literature quite a l
 
 The internet in someways is like a big group of computers that are all friends with each. A scraper is A computer that visits many of the other computers on the internet. The scraper does not have to be friends with the computers it visits, it just needs to know the address at which each computer in the big friendship group can be reached.
 
-The scraping, and crawling code for this is dependency heavy. Who wants to duplicate building of this whole environment from scratch? No-one? I thought so. [Docker is used to solve non trivial software dependency issues where possible), Docker is used to solve provide a universal build, and prevent duplicated effort](https://cloud.docker.com/repository/registry-1.docker.io/russelljarvis/science_accessibility).
+The scraping, and crawling code for this is dependency heavy. Who wants to duplicate building of this whole environment from scratch? No-one? I thought so. [Docker is used to provide a universal build, and prevent duplicated effort](https://cloud.docker.com/repository/registry-1.docker.io/russelljarvis/science_accessibility).
 
 If docker is installed on the base OS, git clone this repository, and assuming the file build.sh is chmod +x , run: `bash build.sh` to perform the dockerbuild. To run the jupyter notebook over docker, enter the docker enivornment interactively in one of two ways, via a bash shell, or via an ipython notebook or
 and then launch python via BASH in Linux as follows:

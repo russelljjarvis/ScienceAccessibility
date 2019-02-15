@@ -51,11 +51,9 @@ Previously I mentioned creating tools to remedy the situation. One tool, that fu
 | 12.0 | this readme.md |
 
 
-[to this work, would be to create a framework where academic authors compete to write simpler text.]
-(https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/Incentivise_by_competing.ipynb)
+[to this work, would be to create a framework where academic authors compete to write simpler text.](https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/Incentivise_by_competing.ipynb)
 
-[A more recently maintained version of that file:]
-https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/compete.py)
+[A more recently maintained version of that file:](https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/compete.py)
 
 ## Analysis of Text.
 Running the scraper is not necessary for analysing the text documents. 

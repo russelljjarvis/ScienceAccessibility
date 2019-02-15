@@ -4,9 +4,10 @@
 try:
     summary_data = pickle.load(open('competition_data.p','rb'))
 except:
-    peter = str('https://academic.oup.com/beheco/article-abstract/29/1/264/4677340')
+    # good standards:
     xkcd_self_sufficient = str('http://splasho.com/upgoer5/library.php')
     high_standard = str('https://elifesciences.org/download/aHR0cHM6Ly9jZG4uZWxpZmVzY2llbmNlcy5vcmcvYXJ0aWNsZXMvMjc3MjUvZWxpZmUtMjc3MjUtdjIucGRm/elife-27725-v2.pdf?_hash=WA%2Fey48HnQ4FpVd6bc0xCTZPXjE5ralhFP2TaMBMp1c%3D')
+# competitors (3):
 rgerkin = RGERKIN = str('https://scholar.google.com/citations?user=GzG5kRAAAAAJ&hl=en&oi=sra')
 scrook = SCROOK = str('https://scholar.google.com/citations?user=xnsDhO4AAAAJ&hl=en&oe=ASCII&oi=sra')
 GRAYDEN = str('https://scholar.google.com/citations?user=X7aP2LIAAAAJ&hl=en')

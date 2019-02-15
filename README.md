@@ -44,7 +44,11 @@ Running the scraper is not necessary for analysing the text documents.
 
 ## Sentiment Versus Complexity
 
+ ## Sentiment Versus Complexity      		
  ![image](https://user-images.githubusercontent.com/7786645/52097960-3ff13e00-258a-11e9-8a93-aea628526c1e.png)		
+
+[An interactive plot of the same thing, where clicking on a data point takes you to the webpage that generated the data point](https://russelljjarvis.github.io/ScienceAccessibility/)		
+[Open Data Counterpart of this Code Repository lives at:(https://osf.io/yng5u/wiki/home/ )
 
 ### Word frequencies as clouds:
 ### Per category

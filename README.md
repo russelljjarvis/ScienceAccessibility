@@ -20,23 +20,20 @@ The accessibility of written word can be approximated by a computer program that
 
 ### How do some well known texts do?
 
+First we sample some extremes in writing style:
+
 * XKCD: [Pushing the limits of extremely readable science](http://splasho.com/upgoer5/library.php)
-
-* [The Readability of Science is Declining over time](https://elifesciences.org/download/aHR0cHM6Ly9jZG4uZWxpZmVzY2llbmNlcy5vcmcvYXJ0aWNsZXMvMjc3MjUvZWxpZmUtMjc3MjUtdjIucGRm/elife-27725-v2.pdf?_hash=WA%2Fey48HnQ4FpVd6bc0xCTZPXjE5ralhFP2TaMBMp1c%3D)
-
-* [The science of Writing](https://cseweb.ucsd.edu/~swanson/papers/science-of-writing.pdf)
-
-* [Machine generated post modern obfuscation:](http://www.elsewhere.org/pomo/)
+* [Machine generated post modern nonesense:](http://www.elsewhere.org/pomo/)
 
 Higher is worse:
 
 | complexity   |      texts      |
 |----------|:-------------:|
-| 6.0   | upgoer5   |
-| 9.0 |    readability of science declining   |
+| 6.0   | [upgoer5](http://splasho.com/upgoer5/library.php)   |
+| 9.0 |    [readability of science declining](https://elifesciences.org/download/aHR0cHM6Ly9jZG4uZWxpZmVzY2llbmNlcy5vcmcvYXJ0aWNsZXMvMjc3MjUvZWxpZmUtMjc3MjUtdjIucGRm/elife-27725-v2.pdf?_hash=WA%2Fey48HnQ4FpVd6bc0xCTZPXjE5ralhFP2TaMBMp1c%3D)   |
 | 12.0 | this readme.md |
-| 14.0 | science of writing |
-| 14.3 | mean post modern essay generator |
+| 14.0 | [science of writing](https://cseweb.ucsd.edu/~swanson/papers/science-of-writing.pdf) |
+| 14.3 | [mean post modern essay generator](http://www.elsewhere.org/pomo/) |
 | 14.9 | mean wikipedia |
 
 

@@ -46,10 +46,9 @@ Previously I mentioned creating tools to remedy the situation. One tool, that fu
 
 | mean complexity   |      author      |
 |----------|:-------------:|
-| 28.85 | professor R Gerkin   |
-| 30.58 |     professor S Crook  |
+| 28.85 | [professor R Gerkin](https://scholar.google.com/citations?user=GzG5kRAAAAAJ&hl=en&oi=sra)   |
+| 30.58 |     [professor S Crook](https://scholar.google.com/citations?user=xnsDhO4AAAAJ&hl=en&oe=ASCII&oi=sra)  |
 | 12.0 | this readme.md |
-
 
 [to this work, would be to create a framework where academic authors compete to write simpler text.](https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/Incentivise_by_competing.ipynb)
 

@@ -45,13 +45,13 @@ Previously I mentioned creating tools to remedy the situation. One tool, that fu
 | mean complexity   |      author      |
 |----------|:-------------:|
 | 28.85 | [professor R Gerkin](https://scholar.google.com/citations?user=GzG5kRAAAAAJ&hl=en&oi=sra)   |
-| 29.8, | [professor D Grayden](https://scholar.google.com/citations?user=X7aP2LIAAAAJ&hl=en) |
+| 29.8 | [professor D Grayden](https://scholar.google.com/citations?user=X7aP2LIAAAAJ&hl=en) |
 | 30.58 |     [professor S Crook](https://scholar.google.com/citations?user=xnsDhO4AAAAJ&hl=en&oe=ASCII&oi=sra)  |
 | 12.0 | this readme.md |
 
 
 
-[to this work, would be to create a framework where academic authors compete to write simpler text.](https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/Incentivise_by_competing.ipynb)
+[I propose a tool that allows you to select academic authors on demand, and to utilize their writing contributions in the context of a tournament where, academic authors compete to write simpler text.](https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/Incentivise_by_competing.ipynb)
 
 [A more recently maintained version of that file:](https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/compete.py)
 

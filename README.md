@@ -51,9 +51,9 @@ Previously I mentioned creating tools to remedy the situation. One tool, that fu
 
 
 
-[I propose a tool that allows you to select academic authors on demand, and to utilize their writing contributions in the context of a tournament where, academic authors compete to write simpler text.](https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/Incentivise_by_competing.ipynb)
+I propose [a tool] ](https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/Incentivise_by_competing.ipynb) that allows you to select academic authors on demand, and to utilize their writing contributions in the context of a tournament where, academic authors compete to write simpler text.
 
-[A more recently maintained version of that file:](https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/compete.py)
+A more recently maintained version of that [file](https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/compete.py)
 
 ## Analysis of Text.
 Running the scraper is not necessary for analysing the text documents. 

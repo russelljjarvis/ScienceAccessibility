@@ -37,6 +37,7 @@ Higher is worse:
 
 
 ## Proposed Remedies:
+# 1
 Previously I mentioned creating tools to remedy the situation. One tool, that functions as a natural extension of this work, is to enable 'clear writing' tournaments and leader boards, for example:
 
 | mean complexity   |      author      |
@@ -45,6 +46,11 @@ Previously I mentioned creating tools to remedy the situation. One tool, that fu
 | 29.8 | [professor D Grayden](https://scholar.google.com/citations?user=X7aP2LIAAAAJ&hl=en) |
 | 30.58 |     [professor S Crook](https://scholar.google.com/citations?user=xnsDhO4AAAAJ&hl=en&oe=ASCII&oi=sra)  |
 | 12.0 | this readme.md |
+
+# 2
+Run text through [simplify](http://nlpprogress.com/english/simplification.html?fbclid=IwAR0B8G7zEmxVYbFWJMOyVTaHWkv4o9tTTFvVpsOcWrUQ777SXpM6KuM-8QI), evaluate complexity with simplify. 
+How different are the scores?
+
 
 
 

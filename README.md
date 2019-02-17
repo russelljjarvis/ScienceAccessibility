@@ -48,7 +48,7 @@ Previously I mentioned creating tools to remedy the situation. One tool, that fu
 | 12.0 | this readme.md |
 
 # 2
-Run text through [simplify](http://nlpprogress.com/english/simplification.html?fbclid=IwAR0B8G7zEmxVYbFWJMOyVTaHWkv4o9tTTFvVpsOcWrUQ777SXpM6KuM-8QI), evaluate complexity with simplify. 
+Run text through [simplify](http://nlpprogress.com/english/simplification.html?fbclid=IwAR0B8G7zEmxVYbFWJMOyVTaHWkv4o9tTTFvVpsOcWrUQ777SXpM6KuM-8QI), evaluate complexity after translating the document simplify. 
 How different are the scores?
 
 

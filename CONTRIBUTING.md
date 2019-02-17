@@ -1,4 +1,6 @@
+https://stackoverflow.com/questions/32429445/is-web-scraping-allowed?fbclid=IwAR1noACRESdM1zld2zKJZ019ZB5CUFj2Xw38hh4fsrJXwZINsE0I09uT2_A
 
+https://www.copyright.gov/fair-use/more-info.html
 
 # Contributing to Open Source Science Accessibility Project 
 (this draws heavily from https://github.com/github/opensource.guide)

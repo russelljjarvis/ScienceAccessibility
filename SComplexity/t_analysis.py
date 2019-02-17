@@ -7,49 +7,47 @@
 # patrick.mcgurrin@gmail.com
 
 
-#general python imports
-import os
-#import dask
-import matplotlib # Its not that this file is responsible for doing plotting, but it calls many modules that are, such that it needs to pre-empt
-# setting of an appropriate backend not an X11 one.
-matplotlib.use('Agg')
-import sys
-import numpy
+import base64
 import copy
 import math
+#general python imports
+import os
+import pickle
 import re
+import sys
 import time
+
+#import dask
+import matplotlib  # Its not that this file is responsible for doing plotting, but it calls many modules that are, such that it needs to pre-empt
+import numpy as np
+import pandas as pd
+from nltk import pos_tag, sent_tokenize, word_tokenize
+from nltk.classify import NaiveBayesClassifier
+from nltk.corpus import cmudict, stopwords, subjectivity
+from nltk.probability import FreqDist
+from nltk.sentiment import SentimentAnalyzer
+from nltk.tag.perceptron import PerceptronTagger
+
+# english_check
+from SComplexity.utils import (black_string, clue_links, clue_words,
+                               comp_ratio, publication_check)
 from tabulate import tabulate
 from textblob import TextBlob
-import pickle
+from textstat.textstat import textstat
+
+# setting of an appropriate backend not an X11 one.
+matplotlib.use('Agg')
 
 
-import base64
-import pandas as pd
-import pickle
-import os
-import numpy as np
 
 #text analysis imports
 
-from nltk.tag.perceptron import PerceptronTagger
 tagger = PerceptronTagger(load=False)
 
-from nltk import word_tokenize,sent_tokenize
-from nltk import sent_tokenize, word_tokenize, pos_tag
-from nltk.probability import FreqDist
-from nltk.classify import NaiveBayesClassifier
-from nltk.corpus import subjectivity
-from nltk.corpus import cmudict
-from nltk.sentiment import SentimentAnalyzer
-
-from textstat.textstat import textstat
-
-from nltk.corpus import stopwords
 
 
-# english_check
-from SComplexity.utils import black_string, comp_ratio, clue_words, clue_links, publication_check
+
+
 
 DEBUG = False
 #from numba import jit
@@ -86,19 +84,19 @@ def text_proc(corpus, urlDat = {}, WORD_LIM = 100):
         urlDat['publication'] = publication_check(str(tokens))[1]
         #urlDat['english'] = english_check(str(tokens))
         urlDat['clue_words'] = clue_words(str(tokens))[1]
-        urlDat['clue_links'] = clue_links(urlDat['link'])[1]
+        if str('link') in urlDat.keys():
+            urlDat['clue_links'] = clue_links(urlDat['link'])[1]
 
-        #print(urlDat   ['clue_words'],urlDat['publication'],urlDat['clue_links'])
-        temp = len(urlDat['clue_words'])+len(urlDat['publication'])+len(urlDat['clue_links'])
-        if temp  > 10 and str('wiki') not in urlDat['link']:
-            urlDat['science'] = True
-        else:
-            urlDat['science'] = False
+            temp = len(urlDat['clue_words'])+len(urlDat['publication'])+len(urlDat['clue_links'])
+            if temp  > 10 and str('wiki') not in urlDat['link']:
+                urlDat['science'] = True
+            else:
+                urlDat['science'] = False
 
-        if str('wiki') in urlDat['link']:
-            urlDat['wiki'] = True
-        else:
-            urlDat['wiki'] = False
+            if str('wiki') in urlDat['link']:
+                urlDat['wiki'] = True
+            else:
+                urlDat['wiki'] = False
         #print(urlDat['science'],urlDat['link'])
         # The post modern essay generator is so obfuscated, that ENGLISH classification fails, and this criteria needs to be relaxed.
         not_empty = bool(len(tokens) != 0)
@@ -140,8 +138,11 @@ def text_proc(corpus, urlDat = {}, WORD_LIM = 100):
             # many unique words, and does not yield high compression savings.
             # Good writing should not be obfucstated either. The reading level is a check for obfucstation.
             # The resulting metric is a balance of concision, low obfucstation, expression.
-            penalty = 1.0/urlDat['standard']  + abs(urlDat['sp']) + abs(urlDat['ss']) +1.0/urlDat['uniqueness']# +float(scaled_density)
-            urlDat['penalty'] = penalty
+
+            wc = float(urlDat['wcount'])
+            penalty = urlDat['standard'] + wc * (urlDat['uniqueness']+ urlDat['info_density'])
+            urlDat['russell_fog'] = penalty
+
         return urlDat
 
 

@@ -171,12 +171,12 @@ WORKDIR $HOME
 RUN sudo /opt/conda/bin/pip install habanero
 RUN sudo /opt/conda/bin/pip install -e .
 
-
 # set display port to avoid crash
 ENV DISPLAY=:99
 
 
 ENV PATH /usr/local/bin/chromedriver:$PATH
+RUN gitclone https://github.com/shashiongithub/Sentence-Simplification-ACL14
 
 
 ENTRYPOINT /bin/bash

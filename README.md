@@ -2,28 +2,17 @@
 # Science Accessibility Project
 
 ## [Upgoer 5](http://splasho.com/upgoer5/library.php) Overview
-Understanding big words is hard, so when big ideas are written down with lots of big words, the large pile of words is also hard to understand. 
+Understanding big words is hard, so when big ideas are written down with lots of big words, the large pile of big words is also hard to understand. 
 
 We used a computer programs on lots of different writing, meant for different people, to see how hard each piece of writing was to understand. We want to stop people avoiding learning hard ideas, only because there were too many hard words. We want most people understanding more hard ideas, so those people are not hurt because they did not understand important things. We think we can help by explaining the problem with small words, and by creating tools to address the problem.
 
-## Developer Overview 
-Non-scientific writing typically exceeds genuine scientific writing in two important aspects: in contrast to genuine science, non-science is often expressed with a less complex, and more engaging writing style. We believe non-science writing occupies a more accessible niche, that academic science writing should also occupy. 
-
-Unfortunately, writing styles intended for different audiences, are predictably different We show that computers can learn to guess the type of a written document: blog, wikipedia, opinion, and traditional science, by first sampling a large variety of web documents, and then classifying using sentiment, complexity, and other variables. By predicting which of the several different niches a document occupies, we are able to characterize the different writing types, and to describe strategies to remedy writing complexity.
-
-Multiple stake holders benefit when science is communicated with lower complexity expression of ideas. With lower complexity science writing, knowledge would be more readily transferred into public awareness, additionally, digital organization of facts derived from journal articles would occur more readily, as successful machine comprehension of documented science would likely occur with less human intervention. 
-
-The impact of science on society, is likely propotional to the accessibility of the written work. Objectively describing the character of the different writing styles will allow us to prescribe how, to shift academic science writing into a more accessible niche, where science can more aggressively compete with pseudo-science, and blogs, at a moment in history when public awareness is critically at stake.
 
 ## Machine Estimation of Writing Complexity:
 The accessibility of written word can be approximated by a computer program that reads over the text, and guesses the mental difficulty, associated with comprehending a written document. The computer program maps reading difficult onto a quantity that represents the number of years of schooling needed to decode the language in the document. For convenience, we can refer to the difficulty associated with the text as the 'complexity' of the document. 
 
 ### How do some well known texts do?
 
-First we sample some extremes in writing style, and then we will tabulate results, so we have some nice reference points to help us to make sense of other results:
-
-* XKCD: [Pushing the limits of extremely readable science](http://splasho.com/upgoer5/library.php)
-* [Machine generated post modern nonesense:](http://www.elsewhere.org/pomo/)
+First we sample some extremes in writing style, and then we will tabulate results, so we have some nice reference points to help us to make sense of other results. On the lower and upper limits we have: XKCD: [Pushing the limits of extremely readable science](http://splasho.com/upgoer5/library.php) and [Machine generated post modern nonesense:](http://www.elsewhere.org/pomo/)
 
 Higher is worse:
 
@@ -40,20 +29,33 @@ Higher is worse:
 
 
 ## Proposed Remedies:
-Previously I mentioned creating tools to remedy the situation. One tool, that functions as a natural extension of this work, is to enable 'clear writing' tournaments and leader boards, for example:
+# 1
+Previously I mentioned creating tools to remedy the situation, of academic research being written in incomprehensible, and audiance limited style. One tool, that functions as a natural extension of this work, is to enable 'clear writing' tournaments between prominent academic researchers, for example:
 
 | mean complexity   |      author      |
 |----------|:-------------:|
 | 28.85 | [professor R Gerkin](https://scholar.google.com/citations?user=GzG5kRAAAAAJ&hl=en&oi=sra)   |
-| 29.8, | [professor D Grayden](https://scholar.google.com/citations?user=X7aP2LIAAAAJ&hl=en) |
+| 29.8 | [professor D Grayden](https://scholar.google.com/citations?user=X7aP2LIAAAAJ&hl=en) |
 | 30.58 |     [professor S Crook](https://scholar.google.com/citations?user=xnsDhO4AAAAJ&hl=en&oe=ASCII&oi=sra)  |
 | 12.0 | this readme.md |
 
+I propose [a tool] (https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/Incentivise_by_competing.ipynb) that allows you to select academic authors who then play out a competition demand, and to utilize their writing contributions in the context of a tournament where, academic tournament members compete to write simpler text.
+
+A more recently maintained version of that [file](https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/compete.py)
+
+# 2
+Run text through [simplify](http://nlpprogress.com/english/simplification.html?fbclid=IwAR0B8G7zEmxVYbFWJMOyVTaHWkv4o9tTTFvVpsOcWrUQ777SXpM6KuM-8QI), evaluate complexity after translating the document simplify. 
+How different are the scores?
 
 
-[to this work, would be to create a framework where academic authors compete to write simpler text.](https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/Incentivise_by_competing.ipynb)
+## Developer Overview 
+Non-scientific writing typically exceeds genuine scientific writing in two important aspects: in contrast to genuine science, non-science is often expressed with a less complex, and more engaging writing style. We believe non-science writing occupies a more accessible niche, that academic science writing should also occupy. 
 
-[A more recently maintained version of that file:](https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/compete.py)
+Unfortunately, writing styles intended for different audiences, are predictably different We show that computers can learn to guess the type of a written document: blog, wikipedia, opinion, and traditional science, by first sampling a large variety of web documents, and then classifying using sentiment, complexity, and other variables. By predicting which of the several different niches a document occupies, we are able to characterize the different writing types, and to describe strategies to remedy writing complexity.
+
+Multiple stake holders benefit when science is communicated with lower complexity expression of ideas. With lower complexity science writing, knowledge would be more readily transferred into public awareness, additionally, digital organization of facts derived from journal articles would occur more readily, as successful machine comprehension of documented science would likely occur with less human intervention. 
+
+The impact of science on society, is likely propotional to the accessibility of the written work. Objectively describing the character of the different writing styles will allow us to prescribe how, to shift academic science writing into a more accessible niche, where science can more aggressively compete with pseudo-science, and blogs, at a moment in history when public awareness is critically at stake.
 
 ## Analysis of Text.
 Running the scraper is not necessary for analysing the text documents. 

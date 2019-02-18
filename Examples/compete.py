@@ -4,13 +4,8 @@ import os.path
 import pickle
 import numpy as np
 
-try:
-    from SComplexity.get_bmark_corpus import process
-    RICK_FAVORED = str('https://elifesciences.org/articles/08127')
-    RICK_FAVORED = process(RICK_FAVORED)
 
-except:
-    pass
+from SComplexity.get_bmark_corpus import process
 from SComplexity.t_analysis import text_proc
 
 
@@ -27,8 +22,10 @@ RGERKIN = str('https://scholar.google.com/citations?user=GzG5kRAAAAAJ&hl=en&oi=s
 SCROOK = str('https://scholar.google.com/citations?user=xnsDhO4AAAAJ&hl=en&oe=ASCII&oi=sra')
 GRAYDEN = str('https://scholar.google.com/citations?user=X7aP2LIAAAAJ&hl=en')
 SMBAER = str('https://scholar.google.com/scholar?hl=en&as_sdt=0%2C3&q=SM+baer+&btnG=')
-#ELI_JADE = str('Clones allow the consideration of algebras abstracted from signature. Despite the development of general algebra with the notion of type as a central concept, it is not the case that a variety uniquely determines the type; an equational class may be represented with different types. A classic example may be found in the variety of groups.')
-
+RICK_FAVORED = str('https://elifesciences.org/articles/08127')
+RICK_FAVORED = process(RICK_FAVORED)
+#import pdb
+#pdb.set_trace()
 
 try:
     assert os.path.isfile('authors.p')
@@ -97,7 +94,6 @@ pdb.set_trace()
 def metricss(rg):
     if type(rg) is type([]):
         pub_count = len(rg)
-        standard = np.mean([ r['standard'] for r in rg ])
         return standard
     else:
         return None
@@ -144,6 +140,31 @@ smbaer = metricsp(sb)
 print('penalties: rick,scrook,grayden,smbaer')
 print(rick,scrook,grayden,smbaer)
 
+# Put these results, in a data frame, then in Markdown, using RGerkin's code.
+# https://gist.github.com/rgerkin/af5b27a0e30531c30f2bf628aa41a553
+# !pip install --user tabulate # Install the tabulate package
+from tabulate import tabulate
+import numpy as np
+import pandas as pd
+import IPython.display as d
+# Some random data
+data = np.random.rand(10,4)
+# Columns A, B, C, D
+columns = [chr(x) for x in range(65,69)]
+# Create the dataframe
+df = pd.DataFrame(data=data, 
+columns=columns)
+# Optionally give the dataframe's index a name
+#df.index.name = "my_index"
+# Create the markdown string
+md = tabulate(df, headers='keys', tablefmt='pipe')
+# Fix the markdown string; it will not render with an empty first table cell, 
+# so if the dataframe's index has no name, just place an 'x' there.  
+md = md.replace('|    |','| %s |' % (df.index.name if df.index.name else 'x'))
+# Create the Markdown object
+result = d.Markdown(md)
+# Display the markdown object (in a Jupyter code cell)
+result
 #print('the scores are:',np.min(rick,sharon))
 '''
 bench = metrics(bench)

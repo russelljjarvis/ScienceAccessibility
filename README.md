@@ -39,7 +39,7 @@ Previously I mentioned creating tools to remedy the situation, of academic resea
 | 30.58 |     [professor S Crook](https://scholar.google.com/citations?user=xnsDhO4AAAAJ&hl=en&oe=ASCII&oi=sra)  |
 | 12.0 | this readme.md |
 
-I propose [a tool] (https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/Incentivise_by_competing.ipynb) that allows you to select academic authors who then play out a competition demand, and to utilize their writing contributions in the context of a tournament where, academic tournament members compete to write simpler text.
+Example code for the [proposed tool](https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/Incentivise_by_competing.ipynb) would allow you to select academic authors who then play out a competition demand, and to utilize their writing contributions in the context of a tournament where, academic tournament members compete to write simpler text.
 
 A more recently maintained version of that [file](https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/compete.py)
 

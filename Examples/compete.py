@@ -4,8 +4,13 @@ import os.path
 import pickle
 import numpy as np
 
+try:
+    from SComplexity.get_bmark_corpus import process
+    RICK_FAVORED = str('https://elifesciences.org/articles/08127')
+    RICK_FAVORED = process(RICK_FAVORED)
 
-from SComplexity.get_bmark_corpus import process
+except:
+    pass
 from SComplexity.t_analysis import text_proc
 
 
@@ -21,10 +26,9 @@ high_standard = str('https://elifesciences.org/download/aHR0cHM6Ly9jZG4uZWxpZmVz
 RGERKIN = str('https://scholar.google.com/citations?user=GzG5kRAAAAAJ&hl=en&oi=sra')
 SCROOK = str('https://scholar.google.com/citations?user=xnsDhO4AAAAJ&hl=en&oe=ASCII&oi=sra')
 GRAYDEN = str('https://scholar.google.com/citations?user=X7aP2LIAAAAJ&hl=en')
-RICK_FAVORED = str('https://elifesciences.org/articles/08127')
-RICK_FAVORED = process(RICK_FAVORED)
-#import pdb
-#pdb.set_trace()
+SMBAER = str('https://scholar.google.com/scholar?hl=en&as_sdt=0%2C3&q=SM+baer+&btnG=')
+#ELI_JADE = str('Clones allow the consideration of algebras abstracted from signature. Despite the development of general algebra with the notion of type as a central concept, it is not the case that a variety uniquely determines the type; an equational class may be represented with different types. A classic example may be found in the variety of groups.')
+
 
 try:
     assert os.path.isfile('authors.p')
@@ -42,11 +46,11 @@ except:
     with open('authors.p','wb') as f:
         pickle.dump(authors,f)
 
-#GRAYDEN = collect_pubs(GRAYDEN)
-#authors['grayden'] = GRAYDEN
+#SMBAER = collect_pubs(SMBAER)
+#authors['smbaer'] = SMBAER
 
-#with open('authors.p','wb') as f:
-#    pickle.dump(authors,f)
+with open('authors.p','wb') as f:
+    pickle.dump(authors,f)
 
 try:
     assert os.path.isfile('other_standards.p')
@@ -70,7 +74,7 @@ try:
     assert os.path.isfile('author_results.p')
     author_results = pickle.load(open('author_results.p','rb'))
 except:
-    author_results = {'rgerkin':{}, 'scrook':{}, 'grayden':{}}
+    author_results = {'rgerkin':{}, 'scrook':{}, 'grayden':{}, 'smbaer':{}}
     for author,links in authors.items():
         for r in links:
             urlDat = process(r)
@@ -81,22 +85,27 @@ except:
                 author_results[author][str(r)] = urlDat
         print(author_results)
     with open('author_results.p','wb') as f:
-        pickle.dump(author_results,f)
+       pickle.dump(author_results,f)
 
 rg = list(author_results['rgerkin'].values())
 sc = list(author_results['scrook'].values())
 gn = list(author_results['grayden'].values())
+sb = list(author_results['smbaer'].values())
+import pdb
+pdb.set_trace()
 
-def metrics(rg):
+def metricss(rg):
     if type(rg) is type([]):
         pub_count = len(rg)
         standard = np.mean([ r['standard'] for r in rg ])
-        unique = np.mean([ r['uniqueness'] for r in rg ])
-        density = np.mean([ r['info_density'] for r in rg ])
-        wcount = np.mean([ r['wcount'] for r in rg ])
-        scaled_density = density/wcount
-        obj = np.mean([ r['sp'] for r in rg ])
         return standard
+    else:
+        return None
+def metricsp(rg):
+    if type(rg) is type([]):
+        pub_count = len(rg)
+        penalty = np.mean([ r['penalty'] for r in rg ])
+        return penalty
     else:
         return None
 
@@ -107,20 +116,34 @@ def filter_empty(the_list):
 rg = filter_empty(rg)
 sc = filter_empty(sc)
 gn = filter_empty(gn)
+sb = filter_empty(sb)
 
 all_authors = []
 all_authors.extend(rg)
 all_authors.extend(sc)
 all_authors.extend(gn)
-pickle.dump([rg,sc,gn,all_authors],open('competition_data.p','wb'))
-rick = metrics(rg)
-scrook = metrics(sc)
-grayden = metrics(gn)
+all_authors.extend(sb)
 
-rank = [(rick,str('rick')),(scrook,str('sharon')),(grayden,str('grayden'))]
+pickle.dump([rg,sc,gn,sb,all_authors],open('competition_data.p','wb'))
+rick = metricss(rg)
+scrook = metricss(sc)
+grayden = metricss(gn)
+smbaer = metricss(sb)
+
+rank = [(rick,str('rick')),(scrook,str('sharon')),(grayden,str('grayden')),(smbaer,str('smbaer'))]
 print('the winner of the science clarity competition is: ', sorted(rank)[0])
+import pdb
+pdb.set_trace()
 print(rank)
-print(rick,scrook,grayden)
+print(rick,scrook,grayden,smbaer)
+rick = metricsp(rg)
+scrook = metricsp(sc)
+grayden = metricsp(gn)
+smbaer = metricsp(sb)
+
+print('penalties: rick,scrook,grayden,smbaer')
+print(rick,scrook,grayden,smbaer)
+
 #print('the scores are:',np.min(rick,sharon))
 '''
 bench = metrics(bench)

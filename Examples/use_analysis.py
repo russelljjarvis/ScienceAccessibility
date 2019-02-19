@@ -24,14 +24,7 @@ import pickle
 from SComplexity.analysis import Analysis
 import pandas as pd
 
-from habanero import Crossref
-cr = Crossref()
-#from habanero import Crossref
-#[ z['DOI'] for z in x['message']['items'] ]
-#[ z['issn'] for z in x['message']['items'] ]
 
-
-#cr = Crossref()
 ##
 # This file can be used to show, that K-Means clustering
 # a type of unsupervised classifier, can predict if something is a wikipedia article
@@ -47,8 +40,7 @@ try:
     references = A.get_reference_web()
 except:
     pass
-#import pdb
-#pdb.set_trace()
+
 urlDats = A.cas()
 
 print(urlDats)

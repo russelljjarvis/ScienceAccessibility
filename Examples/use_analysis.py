@@ -32,8 +32,11 @@ import pandas as pd
 # It's my opinion that, the classifier could probably predict mainstream science or psuedo science too,
 # given enough dimensions to seperate the clustered data points over.
 ##
-
-FILES = natsorted(glob.glob(str(os.getcwd())+'/results_dir/*.p'))
+local_pdf = False
+if local_pdf == True:
+    FILES = natsorted(glob.glob(str(os.getcwd())+'/results_dir/*.pdf'))
+else:
+    FILES = natsorted(glob.glob(str(os.getcwd())+'/results_dir/*.p'))
 
 A = Analysis(FILES, min_word_length = 200)
 try:

@@ -10,7 +10,7 @@ We used a computer programs on lots of different writing, meant for different pe
 ## Machine Estimation of Writing Complexity:
 The accessibility of written word can be approximated by a computer program that reads over the text, and guesses the mental difficulty, associated with comprehending a written document. The computer program maps reading difficult onto a quantity that represents the number of years of schooling needed to decode the language in the document. For convenience, we can refer to the difficulty associated with the text as the 'complexity' of the document. 
 
-# The Distribution of Complex Writing in Science the ART corpus:
+# The Distribution of Complex Writing the [ART Science corpus](https://www.aber.ac.uk/en/media/departmental/computerscience/cb/art/gz/ART_Corpus.tar.gz):
 ![complexity_distribution_art_corpus](https://user-images.githubusercontent.com/7786645/53114731-b20dd080-3501-11e9-8609-972d1172c8a2.png)
 
 ### How do some well known texts do?

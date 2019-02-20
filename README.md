@@ -25,7 +25,7 @@ Higher is worse:
 | 14.3 | [mean post modern essay generator](http://www.elsewhere.org/pomo/) |
 | 14.9 | mean wikipedia |
 | 17.0 | [The number of olfactory stimuli that humans can discriminate is still unknown](https://elifesciences.org/articles/08127)|
-| 37.0 | [maximum ART CORPUS](https://www.aber.ac.uk/en/cs/research/cb/projects/art/art-corpus/) |
+| 37.0 | [Phytochromobilin C15-Z,syn - C15-E,anti isomerization: concerted or stepwise?](https://www.researchgate.net/profile/Bo_Durbeej/publication/225093436_Phytochromobilin_C15-Zsyn_C15-Eanti_isomerization_Concerted_or_stepwise/links/0912f4fcd237e6701a000000.pdf) |
 
 
 
@@ -41,7 +41,6 @@ Previously I mentioned creating tools to remedy the situation, of academic resea
 | 12.0 | this readme.md |
 | 18.68 | [ART CORPUS](https://www.aber.ac.uk/en/cs/research/cb/projects/art/art-corpus/) |
 
-print(mean_sci,max_sci,min_sci)
 
 
 Example code for the [proposed tool](https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/Incentivise_by_competing.ipynb) would allow you to select academic authors who then play out a competition demand, and to utilize their writing contributions in the context of a tournament where, academic tournament members compete to write simpler text.

@@ -24,6 +24,10 @@ Higher is worse:
 | 14.0 | [science of writing](https://cseweb.ucsd.edu/~swanson/papers/science-of-writing.pdf) |
 | 14.3 | [mean post modern essay generator](http://www.elsewhere.org/pomo/) |
 | 14.9 | mean wikipedia |
+
+# Some particular cases:
+| complexity   |      texts      |
+|----------|:-------------:|
 | 17.0 | [The number of olfactory stimuli that humans can discriminate is still unknown](https://elifesciences.org/articles/08127)|
 | 37.0 | [Phytochromobilin C15-Z,syn - C15-E,anti isomerization: concerted or stepwise?](https://www.researchgate.net/profile/Bo_Durbeej/publication/225093436_Phytochromobilin_C15-Zsyn_C15-Eanti_isomerization_Concerted_or_stepwise/links/0912f4fcd237e6701a000000.pdf) |
 

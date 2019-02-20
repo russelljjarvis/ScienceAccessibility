@@ -144,14 +144,6 @@ driver.get('http://google.com/') ;\
 print('Headless Firefox Initialized') ;\
 driver.quit();"
 
-RUN python - c "from selenium import webdriver;\
-from selenium.webdriver.firefox.options import Options; \
-options = Options(); \
-options.headless = True; \
-driver = webdriver.Chrome(options=options) ;\
-driver.get('http://google.com/') ;\
-print('Headless Chrome Initialized') ;\
-driver.quit();"
 
 
 RUN sudo /opt/conda/bin/pip install PyPDF2 pdfminer3k

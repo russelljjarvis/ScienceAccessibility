@@ -24,15 +24,6 @@ import pickle
 from SComplexity.analysis import Analysis
 import pandas as pd
 
-#
-#from habanero import Crossref
-#cr = Crossref()
-#from habanero import Crossref
-#[ z['DOI'] for z in x['message']['items'] ]
-#[ z['issn'] for z in x['message']['items'] ]
-
-
-#cr = Crossref()
 ##
 # This file can be used to show, that K-Means clustering
 # a type of unsupervised classifier, can predict if something is a wikipedia article
@@ -40,16 +31,17 @@ import pandas as pd
 # It's my opinion that, the classifier could probably predict mainstream science or psuedo science too,
 # given enough dimensions to seperate the clustered data points over.
 ##
-
-FILES = natsorted(glob.glob(str(os.getcwd())+'/results_dir/*.p'))
+local_pdf = False
+if local_pdf == True:
+    FILES = natsorted(glob.glob(str(os.getcwd())+'/*/*.pdf'))
+else:
+    FILES = natsorted(glob.glob(str(os.getcwd())+'/results_dir/*.p'))
 
 A = Analysis(FILES, min_word_length = 200)
 try:
     references = A.get_reference_web()
 except:
     pass
-#import pdb
-#pdb.set_trace()
 urlDats = A.cas()
 
 print(urlDats)
@@ -166,8 +158,7 @@ plt.savefig('reading_level_versus_sentiment_subjectivity.png')
 #plt.savefig('reading_level_versus_sentiment_polarity.png')
 X = dfs[['standard','ss','sp']]
 X = X.as_matrix()
-import pdb
-pdb.set_trace()
+
 
 est =  KMeans(n_clusters=2)
 fignum = 1

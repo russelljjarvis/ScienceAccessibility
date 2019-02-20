@@ -43,7 +43,7 @@ Previously I mentioned creating tools to remedy the situation, of academic resea
 | 29.8 | [professor D Grayden](https://scholar.google.com/citations?user=X7aP2LIAAAAJ&hl=en) |
 | 30.58 |     [professor S Crook](https://scholar.google.com/citations?user=xnsDhO4AAAAJ&hl=en&oe=ASCII&oi=sra)  |
 | 12.0 | this readme.md |
-| 18.68 | [ART CORPUS](https://www.aber.ac.uk/en/cs/research/cb/projects/art/art-corpus/) |
+| 18.68 | [Intermittent dynamics and hyper-aging in dense colloidal gels](https://www.researchgate.net/publication/244552241_Intermittent_dynamics_and_hyper-aging_in_dense_colloidal_gelsThis_paper_was_originally_presented_as_a_poster_at_the_Faraday_Discussion_123_meeting) |
 
 
 

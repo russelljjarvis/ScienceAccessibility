@@ -25,7 +25,7 @@ Higher is worse:
 | 14.3 | [mean post modern essay generator](http://www.elsewhere.org/pomo/) |
 | 14.9 | mean wikipedia |
 | 17.0 | [The number of olfactory stimuli that humans can discriminate is still unknown](https://elifesciences.org/articles/08127)|
-|37.0 | [maximum ART CORPUS] (https://www.aber.ac.uk/en/cs/research/cb/projects/art/art-corpus/) |
+| 37.0 | [maximum ART CORPUS](https://www.aber.ac.uk/en/cs/research/cb/projects/art/art-corpus/) |
 
 
 
@@ -39,7 +39,7 @@ Previously I mentioned creating tools to remedy the situation, of academic resea
 | 29.8 | [professor D Grayden](https://scholar.google.com/citations?user=X7aP2LIAAAAJ&hl=en) |
 | 30.58 |     [professor S Crook](https://scholar.google.com/citations?user=xnsDhO4AAAAJ&hl=en&oe=ASCII&oi=sra)  |
 | 12.0 | this readme.md |
-| 18.68 | [ART CORPUS] (https://www.aber.ac.uk/en/cs/research/cb/projects/art/art-corpus/) |
+| 18.68 | [ART CORPUS](https://www.aber.ac.uk/en/cs/research/cb/projects/art/art-corpus/) |
 
 print(mean_sci,max_sci,min_sci)
 

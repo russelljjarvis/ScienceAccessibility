@@ -10,6 +10,9 @@ We used a computer programs on lots of different writing, meant for different pe
 ## Machine Estimation of Writing Complexity:
 The accessibility of written word can be approximated by a computer program that reads over the text, and guesses the mental difficulty, associated with comprehending a written document. The computer program maps reading difficult onto a quantity that represents the number of years of schooling needed to decode the language in the document. For convenience, we can refer to the difficulty associated with the text as the 'complexity' of the document. 
 
+# The Distribution of Complex Writing in Science the ART corpus:
+![complexity_distribution_art_corpus](https://user-images.githubusercontent.com/7786645/53114731-b20dd080-3501-11e9-8609-972d1172c8a2.png)
+
 ### How do some well known texts do?
 
 First we sample some extremes in writing style, and then we will tabulate results, so we have some nice reference points to help us to make sense of other results. On the lower and upper limits we have: XKCD: [Pushing the limits of extremely readable science](http://splasho.com/upgoer5/library.php) and [Machine generated post modern nonesense:](http://www.elsewhere.org/pomo/)
@@ -69,9 +72,6 @@ The impact of science on society, is likely propotional to the accessibility of 
 Running the scraper is not necessary for analysing the text documents. 
 
 ## Sentiment Versus Complexity
-
-# Distribution of the ART corpus:
-![complexity_distribution_art_corpus](https://user-images.githubusercontent.com/7786645/53114731-b20dd080-3501-11e9-8609-972d1172c8a2.png)
 
 [An interactive plot of the same thing, where clicking on a data point takes you to the webpage that generated the data point](https://russelljjarvis.github.io/ScienceAccessibility/)
 ## Open Data:		

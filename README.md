@@ -69,8 +69,9 @@ The impact of science on society, is likely propotional to the accessibility of 
 Running the scraper is not necessary for analysing the text documents. 
 
 ## Sentiment Versus Complexity
-     		
-![image](https://user-images.githubusercontent.com/7786645/52097960-3ff13e00-258a-11e9-8a93-aea628526c1e.png)		
+
+# Distribution of the ART corpus:
+![complexity_distribution_art_corpus](https://user-images.githubusercontent.com/7786645/53114731-b20dd080-3501-11e9-8609-972d1172c8a2.png)
 
 [An interactive plot of the same thing, where clicking on a data point takes you to the webpage that generated the data point](https://russelljjarvis.github.io/ScienceAccessibility/)
 ## Open Data:		

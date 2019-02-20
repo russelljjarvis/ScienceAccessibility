@@ -24,8 +24,9 @@ import pickle
 from SComplexity.analysis import Analysis
 import pandas as pd
 
-from habanero import Crossref
-cr = Crossref()
+#
+#from habanero import Crossref
+#cr = Crossref()
 #from habanero import Crossref
 #[ z['DOI'] for z in x['message']['items'] ]
 #[ z['issn'] for z in x['message']['items'] ]
@@ -165,7 +166,8 @@ plt.savefig('reading_level_versus_sentiment_subjectivity.png')
 #plt.savefig('reading_level_versus_sentiment_polarity.png')
 X = dfs[['standard','ss','sp']]
 X = X.as_matrix()
-
+import pdb
+pdb.set_trace()
 
 est =  KMeans(n_clusters=2)
 fignum = 1

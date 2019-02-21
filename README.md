@@ -15,7 +15,7 @@ The accessibility of written word can be approximated by a computer program that
 
 ### How do some well known texts do?
 
-First we sample some extremes in writing style, and then we will tabulate results, so we have some nice reference points to help us to make sense of other results. On the lower and upper limits we have: XKCD: [Pushing the limits of extremely readable science](http://splasho.com/upgoer5/library.php) and [Machine generated post modern nonesense:](http://www.elsewhere.org/pomo/)
+First we sample some extremes in writing style, and then we will tabulate results, so we have some nice reference points to help us to make sense of other results. On the lower and upper limits we have: XKCD: [Pushing the limits of extremely readable science](http://splasho.com/upgoer5/library.php) and for some comparison, we wanted to check some [Machine generated post modern nonesense](http://www.elsewhere.org/pomo/)
 
 Higher is worse:
 

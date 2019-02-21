@@ -36,7 +36,7 @@ Higher is worse:
 
 ## Proposed Remedies:
 # 1
-Previously I mentioned creating tools to remedy the situation, of academic research being written in incomprehensible, and audiance limited style. One tool, that functions as a natural extension of this work, is to enable 'clear writing' tournaments between prominent academic researchers, for example:
+Previously I mentioned creating tools to remedy inaccessible academic research> One tool, that functions as a natural extension of this work, is to enable 'clear writing' tournaments between prominent academic researchers, for example:
 
 | mean complexity   |      author      |
 |----------|:-------------:|

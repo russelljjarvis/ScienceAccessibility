@@ -54,7 +54,7 @@ A different remedy proposal is to run text through [simplify](http://nlpprogress
 How different are the scores?
 
 ### The Distribution of Complex Writing the [ART Science corpus](https://www.aber.ac.uk/en/media/departmental/computerscience/cb/art/gz/ART_Corpus.tar.gz):
-![complexity_distribution_art_corpus](https://user-images.githubusercontent.com/7786645/53114731-b20dd080-3501-11e9-8609-972d1172c8a2.png)
+![image](https://user-images.githubusercontent.com/7786645/53215155-96dbb780-360c-11e9-9280-d8592d31d2f9.png)
 
 
 

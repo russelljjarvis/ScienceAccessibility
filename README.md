@@ -45,9 +45,7 @@ Previously I mentioned creating tools to remedy inaccessible academic research> 
 | 30.58 |     [professor S Crook](https://scholar.google.com/citations?user=xnsDhO4AAAAJ&hl=en&oe=ASCII&oi=sra)  |
 
 
-Example code for the [proposed tool](https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/Incentivise_by_competing.ipynb) would allow you to select academic authors who then play out a competition demand, and to utilize their writing contributions in the context of a tournament where, academic tournament members compete to write simpler text.
-
-A more recently maintained version of that [file](https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/compete.py)
+Example code for the [proposed tool](https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/Incentivise_by_competing.ipynb) would allow you to select academic authors who then play out a competition demand, and to utilize their writing contributions in the context of a tournament where, academic tournament members compete to write simpler text. A more recently maintained version of that [file](https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/compete.py)
 
 # 2
 A different remedy proposal is to run text through [simplify](http://nlpprogress.com/english/simplification.html?fbclid=IwAR0B8G7zEmxVYbFWJMOyVTaHWkv4o9tTTFvVpsOcWrUQ777SXpM6KuM-8QI), evaluate complexity after translating the document simplify. 
@@ -63,7 +61,7 @@ How different are the scores?
 ![image](https://user-images.githubusercontent.com/7786645/53226893-d5d43200-3639-11e9-82fc-e848a2964606.png)
 
 
-The science writing niche is characterized, by having a mean reading grade level of 18, neutral, to negatively polarized sentiment type and close to almost complete absence of subjectivity. These statistical features, give quiete a lot to go on, with regards to using language style to predict the scientific status of a randomly selected web document. Science writing is more resistant to file compression.
+The science writing niche is characterized, by having a mean reading grade level of 18, neutral, to negatively polarized sentiment type and close to almost complete absence of subjectivity. Science writing is more resistant to file compression, meaning that information entropy is high, due to concise, coded language. These statistical features, give quiete a lot to go on, with regards to using language style to predict the scientific status of a randomly selected web document. 
 
 ## Developer Overview 
 Non-scientific writing typically exceeds genuine scientific writing in two important aspects: in contrast to genuine science, non-science is often expressed with a less complex, and more engaging writing style. We believe non-science writing occupies a more accessible niche, that academic science writing should also occupy. 

@@ -56,7 +56,7 @@ How different are the scores?
 ### The Distribution of Complex Writing the [ART Science corpus](https://www.aber.ac.uk/en/media/departmental/computerscience/cb/art/gz/ART_Corpus.tar.gz):
 ![image](https://user-images.githubusercontent.com/7786645/53215155-96dbb780-360c-11e9-9280-d8592d31d2f9.png)
 
-![image](https://user-images.githubusercontent.com/7786645/53215873-ce982e80-360f-11e9-95f4-2348cd7cd2d3.png)
+![image](https://user-images.githubusercontent.com/7786645/53215964-33538900-3610-11e9-959f-b52b8d42bf0d.png)
 
 
 

@@ -57,7 +57,10 @@ How different are the scores?
 ![image](https://user-images.githubusercontent.com/7786645/53215155-96dbb780-360c-11e9-9280-d8592d31d2f9.png)
 
 ![image](https://user-images.githubusercontent.com/7786645/53215964-33538900-3610-11e9-959f-b52b8d42bf0d.png)
-The science writing niche is characterized, by having a mean reading grade level of 18, and close to almost complete absence of subjectivity.
+
+![image](https://user-images.githubusercontent.com/7786645/53226156-7117d800-3637-11e9-9a80-421a97ec6b1c.png)
+
+The science writing niche is characterized, by having a mean reading grade level of 18, neutral, to negatively polarized sentiment type and close to almost complete absence of subjectivity. These statistical features, give quiete a lot to go on, with regards to using language style to predict the scientific status of a randomly selected web document.
 
 ## Developer Overview 
 Non-scientific writing typically exceeds genuine scientific writing in two important aspects: in contrast to genuine science, non-science is often expressed with a less complex, and more engaging writing style. We believe non-science writing occupies a more accessible niche, that academic science writing should also occupy. 

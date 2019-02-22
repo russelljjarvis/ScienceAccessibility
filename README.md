@@ -53,12 +53,11 @@ A more recently maintained version of that [file](https://github.com/russelljjar
 A different remedy proposal is to run text through [simplify](http://nlpprogress.com/english/simplification.html?fbclid=IwAR0B8G7zEmxVYbFWJMOyVTaHWkv4o9tTTFvVpsOcWrUQ777SXpM6KuM-8QI), evaluate complexity after translating the document simplify. 
 How different are the scores?
 
-### The Distribution of Complex Writing the [ART Science corpus](https://www.aber.ac.uk/en/media/departmental/computerscience/cb/art/gz/ART_Corpus.tar.gz):
+### The Following is a plot of the Distribution of Science Writing Versus non science writing the [ART Science corpus](https://www.aber.ac.uk/en/media/departmental/computerscience/cb/art/gz/ART_Corpus.tar.gz):
 ![image](https://user-images.githubusercontent.com/7786645/53215155-96dbb780-360c-11e9-9280-d8592d31d2f9.png)
 
 ![image](https://user-images.githubusercontent.com/7786645/53215964-33538900-3610-11e9-959f-b52b8d42bf0d.png)
-
-
+The science writing niche is characterized, by having a mean reading grade level of 18, and close to almost complete absence of subjectivity.
 
 ## Developer Overview 
 Non-scientific writing typically exceeds genuine scientific writing in two important aspects: in contrast to genuine science, non-science is often expressed with a less complex, and more engaging writing style. We believe non-science writing occupies a more accessible niche, that academic science writing should also occupy. 

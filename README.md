@@ -61,7 +61,10 @@ How different are the scores?
 ![image](https://user-images.githubusercontent.com/7786645/53226893-d5d43200-3639-11e9-82fc-e848a2964606.png)
 
 
-The science writing niche is characterized, by having a mean reading grade level of 18, neutral, to negatively polarized sentiment type and close to almost complete absence of subjectivity. Science writing is more resistant to file compression, meaning that information entropy is high, due to concise, coded language. These statistical features, give quiete a lot to go on, with regards to using language style to predict the scientific status of a randomly selected web document. 
+The science writing niche is characterized, by having a mean reading grade level of 18, neutral, to negatively polarized sentiment type and close to almost complete absence of subjectivity. Science writing is more resistant to file compression, meaning that information entropy is high, due to concise, coded language. These statistical features, give quiete a lot to go on, with regards to using language style to predict the scientific status of a randomly selected web document. The same notion of entropy being generally higher in science is corroborated with the perplexity measure, which measures how improbable the particular frequency distribution of words of observed in a document was.
+
+![image](https://user-images.githubusercontent.com/7786645/53291441-a411b700-3770-11e9-9138-d99a565f985e.png)
+
 
 ## Developer Overview 
 Non-scientific writing typically exceeds genuine scientific writing in two important aspects: in contrast to genuine science, non-science is often expressed with a less complex, and more engaging writing style. We believe non-science writing occupies a more accessible niche, that academic science writing should also occupy. 

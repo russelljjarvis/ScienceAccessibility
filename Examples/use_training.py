@@ -6,6 +6,7 @@ import pdb
 import pickle
 import pprint
 
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -18,14 +19,17 @@ from sklearn import datasets
 from sklearn.cluster import KMeans
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
-
+from nltk import pos_tag, sent_tokenize, word_tokenize
+from nltk.corpus import cmudict, stopwords, subjectivity
+import re
 from SComplexity.analysis import Analysis
-from SComplexity.t_analysis import text_proc
+from SComplexity.t_analysis import text_proc, perplexity, unigram
 
 #from SComplexity.get_bmark_corpus import Analysis
 
 #import seaborn as sns; sns.set()  # for plot styling
 
+#here you construct the unigram language model
 
 ##
 # This file can be used to show, that K-Means clustering
@@ -63,22 +67,111 @@ try:
 except:
 
     trainingDats = proc_xml(FILES)
+    with open('traingDats.p','wb') as f:
+        pickle.dump(trainingDats,f)
 
-x = [ t['standard'] for t in trainingDats ]
+FILES = natsorted(glob.glob(str(os.getcwd())+'/results_dir/*.p'))
+A = Analysis(FILES, min_word_length = 200)
+web_scrape = A.cas()
+
+
+not_science = [ url for url in web_scrape if url['science'] == False ]
+not_science = [ t for t in not_science if 'standard' in t.keys() ]
+not_science = [ t for t in not_science if t['standard'] < 300.0 ]
+
+
+
+#print(not_science)
+sci1 = pickle.load(open('author_results.p','rb'))
+sb_results = pickle.load(open('sb_results.p','rb'))
+
+#sci1 = [ t['standard'] for t in sci1 ]
+#x.extend(sci1)
+sci1 = [ v for v in sci1.values() ]
+sci1 = [ t for t in sci1 if 'standard' in t.keys() ]
+
+#sb = [v for v in sb_results.values()]
+#sb = [ t for t in sb_results if 'standard' in t.keys() ]
+
+trainingDats.extend(sci1)
+#strainingDats.extend(sb)
+
+terms = [ ws['tokens'] for ws in web_scrape ]
+other_terms = [ ws['tokens'] for ws in trainingDats ]
+terms.extend(other_terms)
+try:
+    big_model = pickle.load(open('big_model.p','rb'))
+except:
+    big_model = unigram(terms)
+    pickle.dump(big_model,open('big_model.p','wb'))
+for t in not_science:
+    t['perplexity'] = perplexity(t['tokens'], big_model)
+for t in trainingDats:
+    t['perplexity'] = perplexity(t['tokens'], big_model)
+
+
+perp_sci = [ t['perplexity'] for t in trainingDats ]
+perp_ns = [ t['perplexity'] for t in not_science if 'standard' in t.keys() ]
+
 plt.clf()
-plt.title('complexity distribution ART corpus')
-ax = sns.distplot(x, bins=20, kde=False, rug=True);
+plt.title('perplexity')
 
+import pdb; pdb.set_trace()
+sns.distplot( perp_sci , color="skyblue", label="science")
+sns.distplot( perp_ns, color="red", label="not science")
 plt.legend(loc="upper left")
-plt.savefig('complexity_distribution_ART_corpus.png')
+plt.savefig('perplexity.png')
+
+standard_sci = [ t['standard'] for t in trainingDats ]
+standard_ns = [ t['standard'] for t in not_science if 'standard' in t.keys() ]
+
+
+subjectivity_sci = [ t['ss'] for t in trainingDats ]
+subjectivity_ns = [ t['ss'] for t in not_science if 'standard' in t.keys() ]
+
+
+polarity_sci = [ t['sp'] for t in trainingDats ]
+polarity_ns = [ t['sp'] for t in not_science if 'standard' in t.keys() ]
+
+
+
+info_sci = [ t['info_density'] for t in trainingDats ]
+info_ns = [ t['info_density'] for t in not_science if 'standard' in t.keys() ]
+#y = [ t['standard'] for t in not_science ]
 plt.clf()
-plt.title('complexity distribution ART corpus')
+plt.title('info density')
 
-plt.title('rank versus standard reading level'+str(' wikipedia'))
-plt.ylabel('standard')
-ax = sns.distplot(x, hist=False, rug=True);
+sns.distplot( info_sci , color="skyblue", label="science")
+sns.distplot( info_ns, color="red", label="not science")
 plt.legend(loc="upper left")
-plt.savefig('complexity_distribution_ART_corpus2.png')
+plt.savefig('info_distribution_sci_vs_non_sci.png')
+
+plt.clf()
+plt.title('text-stat standard, reading grade level')
+
+sns.distplot( standard_sci , color="skyblue", label="science")
+sns.distplot( standard_ns, color="red", label="not science")
+plt.legend(loc="upper left")
+plt.savefig('complexity_distribution_sci_vs_non_sci.png')
+
+plt.clf()
+plt.title('sentiment subjectivity')
+
+sns.distplot( subjectivity_sci , color="skyblue", label="science")
+sns.distplot( standard_ns, color="red", label="not science")
+plt.legend(loc="upper left")
+plt.savefig('sentiment_distribution_sci_vs_non_sci.png')
+
+
+
+plt.clf()
+plt.title('sentiment polarity')
+
+sns.distplot( polarity_sci , color="skyblue", label="science")
+sns.distplot( polarity_ns, color="red", label="not science")
+plt.legend(loc="upper left")
+plt.savefig('negativity_distribution_sci_vs_non_sci.png')
+
 file_names = sorted([(t['standard'],t['file_name']) for t in trainingDats ])
 worset_file = file_names[-1]
 best_file = file_names[0]

@@ -1,4 +1,10 @@
-
+##
+# This file can be used to show, that K-Means clustering
+# a type of unsupervised classifier, can predict if something is a wikipedia article
+# or not pretty well.
+# It's my opinion that, the classifier could probably predict mainstream science or psuedo science too,
+# given enough dimensions to seperate the clustered data points over.
+##
 import glob
 from natsort import natsorted, ns
 import pprint
@@ -24,13 +30,7 @@ import pickle
 from SComplexity.analysis import Analysis
 import pandas as pd
 
-##
-# This file can be used to show, that K-Means clustering
-# a type of unsupervised classifier, can predict if something is a wikipedia article
-# or not pretty well.
-# It's my opinion that, the classifier could probably predict mainstream science or psuedo science too,
-# given enough dimensions to seperate the clustered data points over.
-##
+
 local_pdf = False
 if local_pdf == True:
     FILES = natsorted(glob.glob(str(os.getcwd())+'/*/*.pdf'))
@@ -38,51 +38,29 @@ else:
     FILES = natsorted(glob.glob(str(os.getcwd())+'/results_dir/*.p'))
 
 A = Analysis(FILES, min_word_length = 200)
-try:
-    references = A.get_reference_web()
-except:
-    pass
 urlDats = A.cas()
 
-print(urlDats)
+#scraped_new = list(filter(lambda url: str('query') in url.keys(), urlDats))
 
 scraped_new = list(filter(lambda url: str('query') in url.keys(), urlDats))
+web_scrape = [ url for url in scraped_new if url['rank'] <= 10 ]
+
+not_science = [ url for url in web_scrape if url['science'] == False ]
+science = [ url for url in web_scrape if url['science'] == True ]
+
 with open('scraped_new.p','wb') as f:
     pickle.dump(scraped_new,f)
 
 #by_query[str('science')]['urlDats'] = list(filter(lambda url: url['query'] in science_keys, scraped))
 for s in scraped_new:
     print(s['query'])
-#import pdb;
-#pdb.set_trace()
 
-'''
-reference = A.get_reference_web()
-dfr = pd.DataFrame(reference)
-
-labels = [ w['link'] for w in reference ]
-by_query['reference'] = {}
-#by_query['reference']['sp'] = [ w['sp'] for w in reference ]
-by_query['reference']['standard'] = [ w['standard'] for w in reference ]
-by_query['reference']['info_density'] = [ w['info_density'] for w in reference ]
-
-low_standard = np.min(by_query['reference']['standard'])
-high_standard = np.max(by_query['reference']['standard'])
-
-low_info = np.min(by_query['reference']['info_density'])
-high_info = np.max(by_query['reference']['info_density'])
-print(low_info,high_info)
-#import pdb; pdb.set_trace()
-'''
 dfs = pd.DataFrame(scraped_new)
-##
-#
-##
 
 
 dfs = dfs[~dfs['link'].isin(['https://www.youtube.com/'])]
 dfs = dfs[~dfs['link'].isin(['https://www.walmart.com'])]
-dfs = dfs[~dfs['link'].isin(['https://foundation.wikimedia.org/wiki/Privacy_policy'])] 
+dfs = dfs[~dfs['link'].isin(['https://foundation.wikimedia.org/wiki/Privacy_policy'])]
 
 #wikipedia = wikipedia[wikipedia['link']==str('https://foundation.wikimedia.org/wiki/Privacy_policy')]
 wikipedia = dfs[dfs['se']==str('wikipedia')]
@@ -148,12 +126,12 @@ fig = plt.figure(fignum, figsize=(4, 3))
 #ax = Axes3D(fig, rect=[0, 0, .95, 1], elev=48, azim=134)
 est.fit(X)
 #labels = est.labels_
-plt.title('reading level versus sentiment subjectivity')
+plt.title('labeled cluster')
 print(X[:, 1], X[:, 0])
 
 plt.clf()
 plt.scatter(X[:, 1], X[:, 0], edgecolor='k')
-plt.savefig('reading_level_versus_sentiment_subjectivity.png')
+plt.savefig('labeled cluster.png')
 #plt.scatter(, edgecolor='k')
 #plt.savefig('reading_level_versus_sentiment_polarity.png')
 X = dfs[['standard','ss','sp']]
@@ -170,9 +148,9 @@ est.fit(X)
 y_kmeans = est.predict(X)
 centers = est.cluster_centers_
 
-plt.title('reading level versus sentiment subjectivity')
+plt.title('labeled cluster')
 plt.scatter(X[:, 1], X[:, 0], edgecolor='k')
-plt.savefig('reading_level_versus_sentiment_subjectivity.png')
+plt.savefig('labeled cluster.png')
 
 
 '''
@@ -268,40 +246,6 @@ fig, axes = plt.subplots()
 axes.set_title('reference versus reading level')
 plt.xlabel('reference source')
 plt.ylabel('reading level')
-'''
-#plt.scatter(sps,fogss,label="scrapped data points")
-axis = [i for i in range(0,len(labels))]
-plt.scatter(axis,by_query['reference']['standard'])#,label=labels)
-for (label, x) in zip(labels,axis):
-    plt.annotate(
-        label,
-        xy=(x, x), xytext=(40, 40),
-        textcoords='offset points', ha='left', va='top',
-        bbox=dict(boxstyle='round,pad=0.5', fc='yellow', alpha=0.5))
-        #arrowprops=dict(arrowstyle = '->', connectionstyle='arc3,rad=0'))
-
-plt.legend(loc="upper left")
-fig.tight_layout()
-
-plt.savefig('reference_versus_reading_level.png')
-
-plt.clf()
-fig, axes = plt.subplots()
-axes.set_title('reference versus compression ratio')
-plt.xlabel('reference source')
-plt.ylabel('compression ratio')
-
-plt.scatter([i for i in range(0,len(labels))],by_query['reference']['info_density'],label=labels)
-for (label, x) in zip(labels,axis):
-    plt.annotate(
-        label,
-        xy=(x, x), xytext=(40, 40),
-        textcoords='offset points', ha='left', va='top',
-        bbox=dict(boxstyle='round,pad=0.5', fc='yellow', alpha=0.5))
-        #arrowprops=dict(arrowstyle = '->', connectionstyle='arc3,rad=0'))
-
-plt.savefig('reference_versus_compression_ratio.png')
-'''
 
 
 query_keys = list(set([ s['query'] for s in urlDats ]))
@@ -359,6 +303,9 @@ ses = [ url['se'] for url in scraped_new ]
 
 #exit
 
+plt.clf()
+fig, ax = plt.subplots()
+
 for key in query_keys:
     by_query[key] = {}
     by_query[key]['urlDats'] = list(filter(lambda url: str(key) == url['query'], scraped_new))
@@ -370,13 +317,11 @@ for key in query_keys:
     by_query[key]['s_std'] = np.std([ w['standard'] for w in by_query[key]['urlDats'] ])
 
     by_query[key]['info_density'] = [ w['info_density'] for w in by_query[key]['urlDats'] ]
-    plt.clf()
-    fig, ax = plt.subplots()
 
     plt.title('sent versus complexity'+ str(key))
     plt.xlabel('sentiment')
     plt.ylabel('standard')
-    df = pd.DataFrame({'complexity': by_query[key]['standards'],'sentiment': by_query[key]['sp']})
+    df = pd.DataFrame({'sentiment': by_query[key]['sp'],'complexity': by_query[key]['standards']})
     ##
     # Uncomment to compare to reference data points.
     ##
@@ -384,27 +329,33 @@ for key in query_keys:
     # ref = pd.DataFrame({'complexity': [ w['standard'] for w in reference ],'sentiment': [ w['sp'] for w in reference ]})
     # ax = sns.regplot(x="complexity",y="sentiment", data=ref, ax=ax)
 
-    ax = sns.regplot(x="complexity",y="sentiment", data=df, ax=ax)
+    ax = sns.regplot(x="sentiment",y="complexity", data=df, ax=ax)
 
     legend = ax.legend(loc='upper center', shadow=True)
     plt.legend(loc="upper left")
 
-    plt.savefig('sentiment_vs_complexity_{0}.png'.format(key))
-    plt.close()
+plt.savefig('sentiment_vs_complexity_{0}.png'.format(key))
+plt.close()
 
 
-    plt.clf()
+#    plt.clf()
+plt.clf()
+fig, ax = plt.subplots()
+
+for key in query_keys:
     plt.title('rank versus complexity '+ str(key))
     plt.xlabel('rank')
     plt.ylabel('standard')
     df = pd.DataFrame({'complexity':by_query[key]['standards'],'rank':by_query[key]['ranks']})
     ax = sns.regplot(x="complexity",y="rank", data=df)
-    plt.legend(loc="upper left")
-    plt.savefig('rank_vs_complexity{0}.png'.format(key))
-    plt.close()
+plt.legend(loc="upper left")
+plt.savefig('rank_vs_complexity{0}.png'.format(key))
+plt.close()
 
 
+plt.clf()
 
+fig, ax = plt.subplots()
 for key in engine_keys:
     by_engine[key] = {}
 
@@ -417,24 +368,23 @@ for key in engine_keys:
     by_engine[key]['s_std'] = np.std([ w['standard'] for w in by_engine[key]['urlDats'] ])
 
     by_engine[key]['info_density'] = [ w['info_density'] for w in by_engine[key]['urlDats'] ]
-    plt.clf()
 
-    fig, ax = plt.subplots()
     plt.title('rank versus standard reading level: '+str(key))
     plt.xlabel('rank')
     plt.ylabel('standard')
-    plt.scatter(by_engine[key]['ranks'],by_engine[key]['standard'])
-    #print(by_engine[key]['standard'], by_engine[key]['ranks'])
-    plt.savefig('standard_vs_rank'+str(key)+'.png')
+    #plt.scatter(by_engine[key]['ranks'],by_engine[key]['standard'])
+    plt.scatter(by_engine[key]['standard'],by_engine[key]['ranks'])
 
-    plt.clf()
-    fig, ax = plt.subplots()
-    plt.title('compression ratio versus rank: '+str(key))
-    plt.xlabel('rank')
-    plt.ylabel('compression ratio')
-    plt.scatter(by_engine[key]['ranks'],by_engine[key]['standard'])
+    #print(by_engine[key]['standard'], by_engine[key]['ranks'])
+plt.savefig('standard_vs_rank'+str(key)+'.png')
+
+    #plt.clf()
+    #fig, ax = plt.subplots()
+    #plt.title('compression ratio versus rank: '+str(key))
+    #plt.xlabel('rank')
+    #plt.ylabel('compression ratio')
     #print(by_engine[key]['info_density'], by_engine[key]['ranks'])
-    plt.savefig('compression_ratio'+str(key)+'.png')
+#plt.savefig('compression_ratio'+str(key)+'.png')
 
     #df = pd.DataFrame({'complexity': by_engine[key]['standards'],'ranks':by_engine[key]['ranks']})
     ##

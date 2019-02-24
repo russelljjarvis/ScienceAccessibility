@@ -28,6 +28,7 @@ from SComplexity import get_bmark_corpus as gbc
 import pickle
 texts = pickle.load(open('scraped_new.p','rb'))
 try:
+    assert 1==2
     references = pickle.load(open('references.p','rb'))
     print(references[-1]['standard'])
 except:
@@ -109,9 +110,13 @@ make_word_clouds(pre_science,pre_not_science,wikis)
 plt.clf()
 plt.title('Sentiment versus Complexity')
 ## Set x-axis label
+references = [ t for t in references if t is not None ]
+
+references = [ t for t in references if str('russell_fog') in t.keys() ]
+#references = [ t for t in references if str('russell_fog') in t.keys() ]
 
 df = pd.DataFrame({
-    'gunning_fog':[ f['gf'] for f in references],
+    'russell_fog':[ f['russell_fog'] for f in references],
         'sentiment':[ f['sp'] for f in references ],
     'URL':[ f['link'] for f in references ],
 
@@ -123,7 +128,10 @@ latex = df.to_latex(index=False)
 
 plt.savefig('xkcd.png')
 
+
+
 texts = [ t for t in texts if str('gf') in t.keys() ]
+
 
 
 # Create dataframe

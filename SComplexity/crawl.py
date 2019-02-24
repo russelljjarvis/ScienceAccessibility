@@ -14,30 +14,11 @@ import selenium
 from pyvirtualdisplay import Display
 from selenium import webdriver
 
-#from fake_useragent import UserAgent
-
-#display = Display(visible=0, size=(1024, 768))
-#display.start()
-
-#from pyvirtualdisplay import Display
-#from selenium import webdriver
 
 display = Display(visible=0, size=(1024, 800))
 display.start()
 
-#from fake_useragent import UserAgent
-#useragent = UserAgent()
-#profile = webdriver.FirefoxProfile()
 
-
-#profile.set_preference("general.useragent.override", useragent.random)
-#profile.set_preference("javascript.enabled", True)
-#driver = webdriver.Firefox(profile = profile)
-
-#from selenium.webdriver.firefox.options import Options
-#options = Options()
-#options.headless = True
-#driver = webdriver.Firefox(options=options)
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--headless')
@@ -128,6 +109,9 @@ def denver_to_text(url):
 
 
 def collect_pubs(url):
+    '''
+    Used for scholar
+    '''
     print(url)
     try:
         crude_html = denver_to_text(url)

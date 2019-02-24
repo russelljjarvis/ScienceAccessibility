@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/russelljjarvis/ScienceAccessibility.png)](https://travis-ci.com/russelljjarvis/ScienceAccessibility) <-works when public.
+[![Build Status](https://travis-ci.com/russelljjarvis/ScienceAccessibility.png)](https://travis-ci.com/russelljjarvis/ScienceAccessibility) 
 # Science Accessibility Project
 
 ## [Upgoer 5](http://splasho.com/upgoer5/library.php) Overview

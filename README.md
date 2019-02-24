@@ -41,8 +41,8 @@ Previously I mentioned creating tools to remedy inaccessible academic research> 
 | mean complexity   |      author      |
 |----------|:-------------:|
 | 28.85 | [professor R Gerkin](https://scholar.google.com/citations?user=GzG5kRAAAAAJ&hl=en&oi=sra)   |
-| 29.8 | [ other_author](https://scholar.google.com/citations?user=X7aP2LIAAAAJ&hl=en) |
-| 30.58 |     [other_author](https://scholar.google.com/citations?user=xnsDhO4AAAAJ&hl=en&oe=ASCII&oi=sra)  |
+| 29.8 | [ other_author] |
+| 30.58 |     [other_author]  |
 
 
 Example code for the [proposed tool](https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/Incentivise_by_competing.ipynb) would allow you to select academic authors who then play out a competition demand, and to utilize their writing contributions in the context of a tournament where, academic tournament members compete to write simpler text. A more recently maintained version of that [file](https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/compete.py)

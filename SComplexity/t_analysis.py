@@ -1,4 +1,4 @@
-    # Scientific readability project
+# Scientific readability project
 # authors ...,
 # Russell Jarvis
 # https://github.com/russelljjarvis/
@@ -96,12 +96,6 @@ def perplexity(testset, model):
     for word in testset:
         N += 1
         perplexity = perplexity + (1.0/model[word])
-        print(perplexity)
-        #import pdb; pdb.set_trace()
-    #try:
-    #    perplexity = pow(perplexity, 1.0/float(N))
-    #except:
-    #    perplexity = 0.0
     return perplexity
 
 

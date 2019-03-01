@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.com/russelljjarvis/ScienceAccessibility.png)](https://travis-ci.com/russelljjarvis/ScienceAccessibility) 
 
-Overview
+## Overview
 Understanding big words is hard, so when big ideas are written down with lots of big words, the large pile of big words is also hard to understand. 
 
 We used a computer to read lots of different writing, meant for different people, to see how hard each piece of writing was to understand. We want to stop people avoiding learning hard ideas, only because there were too many hard words. We want most people understanding more hard ideas, so those people are not hurt because they did not understand important things. We think we can help by explaining the problem with small words, and by creating tools to address the problem.

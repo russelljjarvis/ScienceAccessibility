@@ -53,26 +53,7 @@ GRAYDEN = str('https://scholar.google.com/citations?user=X7aP2LIAAAAJ&hl=en')
 SMBAER = str('https://scholar.google.com/scholar?hl=en&as_sdt=0%2C3&q=SM+baer+&btnG=')
 RICK_FAVORED = str('https://elifesciences.org/articles/08127')
 MARKRAM = str('https://scholar.google.com/citations?user=W3lyJF8AAAAJ&hl=en&oi=sra')
-SMBAER = ['https://accounts.google.com/Login?hl=en&continue=https://scholar.google.com/scholar%3Fhl%3Den%26as_sdt%3D0%252C3%26q%3DSM%2Bbaer%2B%26btnG%3D', 'https://accounts.google.com/Login?hl=en&continue=https://scholar.google.com/scholar%3Fhl%3Den%26as_sdt%3D0%252C3%26q%3DSM%2Bbaer%2B%26btnG%3D', 'https://epubs.siam.org/doi/pdf/10.1137/0149003', \
-'https://epubs.siam.org/doi/abs/10.1137/0149003', \
-'http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=GSSearch&SrcAuth=Scholar&DestApp=WOS_CPL&DestLinkType=CitingArticles&UT=A1989T025000003&SrcURL=https://scholar.google.com/&SrcDesc=Back+to+Google+Scholar&GSPage=TC', 'https://epubs.siam.org/doi/pdf/10.1137/0146047',\
-'https://epubs.siam.org/doi/abs/10.1137/0146047',\
-'http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=GSSearch&SrcAuth=Scholar&DestApp=WOS_CPL&DestLinkType=CitingArticles&UT=A1986E294500001&SrcURL=https://scholar.google.com/&SrcDesc=Back+to+Google+Scholar&GSPage=TC', 'https://pdfs.semanticscholar.org/da88/b2a5d0a8d3d912e7222f2ae561e0c53bd33f.pdf',\
-'https://www.physiology.org/doi/abs/10.1152/jn.1991.65.4.874', \
-'http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=GSSearch&SrcAuth=Scholar&DestApp=WOS_CPL&DestLinkType=CitingArticles&UT=A1991FF97300010&SrcURL=https://scholar.google.com/&SrcDesc=Back+to+Google+Scholar&GSPage=TC', 'http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=GSSearch&SrcAuth=Scholar&DestApp=WOS_CPL&DestLinkType=CitingArticles&UT=000306193900009&SrcURL=https://scholar.google.com/&SrcDesc=Back+to+Google+Scholar&GSPage=TC', \
-'https://epubs.siam.org/doi/pdf/10.1137/0152095', \
-'https://epubs.siam.org/doi/abs/10.1137/0152095',\
-'http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=GSSearch&SrcAuth=Scholar&DestApp=WOS_CPL&DestLinkType=CitingArticles&UT=A1992KA76600009&SrcURL=https://scholar.google.com/&SrcDesc=Back+to+Google+Scholar&GSPage=TC',\
-'https://link.aps.org/pdf/10.1103/PhysRevA.35.1165', \
-'https://journals.aps.org/pra/abstract/10.1103/PhysRevA.35.1165',\
-'http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=GSSearch&SrcAuth=Scholar&DestApp=WOS_CPL&DestLinkType=CitingArticles&UT=A1987F987200026&SrcURL=https://scholar.google.com/&SrcDesc=Back+to+Google+Scholar&GSPage=TC',\
-'https://www.sciencedirect.com/science/article/pii/S0006349588829886/pdf?md5=e6618131f15a16225a4099d17db76d4a&pid=1-s2.0-S0006349588829886-main.pdf&_valck=1', 'https://www.sciencedirect.com/science/article/pii/S0006349588829886', \
-'http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=GSSearch&SrcAuth=Scholar&DestApp=WOS_CPL&DestLinkType=CitingArticles&UT=A1988P969000019&SrcURL=https://scholar.google.com/&SrcDesc=Back+to+Google+Scholar&GSPage=TC',\
-'https://link.aps.org/pdf/10.1103/PhysRevE.78.036205', \
-'https://journals.aps.org/pre/abstract/10.1103/PhysRevE.78.036205', 'http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=GSSearch&SrcAuth=Scholar&DestApp=WOS_CPL&DestLinkType=CitingArticles&UT=000259683100028&SrcURL=https://scholar.google.com/&SrcDesc=Back+to+Google+Scholar&GSPage=TC', 'https://epubs.siam.org/doi/pdf/10.1137/050627757', \
-'https://epubs.siam.org/doi/abs/10.1137/050627757', 'http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=GSSearch&SrcAuth=Scholar&DestApp=WOS_CPL&DestLinkType=CitingArticles&UT=000238324300012&SrcURL=https://scholar.google.com/&SrcDesc=Back+to+Google+Scholar&GSPage=TC', 'https://www.physiology.org/doi/abs/10.1152/jn.1990.64.2.326', \
-'http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=GSSearch&SrcAuth=Scholar&DestApp=WOS_CPL&DestLinkType=CitingArticles&UT=A1990DV59900002&SrcURL=https://scholar.google.com/&SrcDesc=Back+to+Google+Scholar&GSPage=TC'
-]
+BHENDERSON = str('https://scholar.google.com/citations?user=o_aMfnoAAAAJ&hl=en&oi=ao')
 
 
 try:
@@ -85,6 +66,8 @@ except:
     GRAYDEN = collect_pubs(GRAYDEN)
     MARKRAM = collect_pubs(MARKRAM)
     EMARDER = collect_pubs(EMARDER)
+    BHENDERSON = collect_pubs(BHENDERSON)
+
     authors = {}
     authors['rgerkin'] = RGERKIN
     authors['scrook'] = SCROOK
@@ -92,14 +75,17 @@ except:
     authors['smbaer'] = SMBAER
     authors['markram'] = MARKRAM
     authors['emarder'] = EMARDER
+    authors['bhen'] = BHENDERSON
 
 
     with open('authors.p','wb') as f:
         pickle.dump(authors,f)
 
+BHENDERSON = collect_pubs(BHENDERSON)
 
-authors['markram'] = MARKRAM
-authors['emarder'] = EMARDER
+#authors['markram'] = MARKRAM
+#authors['emarder'] = EMARDER
+authors['bhen'] = BHENDERSON
 
 
 with open('authors.p','wb') as f:
@@ -121,26 +107,15 @@ except:
     other_s = pickle.dump([hss,benchmark,bench],open('other_standards.p','wb'))
 
 
+def get_ind_author():
+    more = [author_results['markram'],author_results['emarder'],authors['bhen']]
+    names = [str('markram'),str('emarder'),str('bhen')]
 
-try:
-    assert os.path.isfile('author_results.p')
-    author_results = pickle.load(open('author_results.p','rb'))
-    #import pdb
-    #pdb.set_trace()
-    sb_results = pickle.load(open('sb_results.p','rb'))
-    new = pickle.load(open('new.p','rb'))
-    author_results['sbaer'] = sb_results
-    author_results['markram'] = new['markram']
-    author_results['emarder'] = new['emarder']
-
-except:
-    more = [author_results['markram'],author_results['emarder']]
-    names = [str('markram'),str('emarder')]
-
-    for i,s in enumerate(more):
+    for i,s in enumerate(authors['bhen']):
         follow_links = collect_pubs(s)
+        #names[i] = str('bhen')
         #import pdb; pdb.set_trace()
-        for r in follow_links:
+        for r in follow_links[0:13]:
            urlDat = process(r)
            if not isinstance(urlDat,type(None)):
                if str(r) not in author_results.keys():
@@ -151,10 +126,42 @@ except:
            print(author_results)
     with open('new.p','wb') as f:
         pickle.dump(author_results,f)
+try:
+    assert os.path.isfile('author_results.p')
+    author_results = pickle.load(open('author_results.p','rb'))
+    #import pdb
+    #pdb.set_trace()
+    #sb_results = pickle.load(open('sb_results.p','rb'))
+    new = pickle.load(open('new.p','rb'))
+    #author_results['sbaer'] = sb_results
+    author_results['markram'] = new['markram']
+    author_results['emarder'] = new['emarder']
+    author_results['bhen'] = new['bhen']
+
+except:
+    author_results['bhen'] = authors['bhen']
+    more = [author_results['markram'],author_results['emarder'],author_results['bhen']]
+    names = [ str('bhen')]
+
+    for i,s in enumerate(authors['bhen'][0:13]):
+        follow_links = collect_pubs(s)
+        #names[i] = str('bhen')
+        #import pdb; pdb.set_trace()
+        for r in follow_links:
+           urlDat = process(r)
+           if not isinstance(urlDat,type(None)):
+               if str(r) not in author_results.keys():
+                   author_results[str('bhen')] = {}
+                   author_results[str('bhen')][str(r)] = urlDat
+               else:
+                   author_results[str('bhen')][str(r)] = urlDat
+           print(author_results)
+    with open('new.p','wb') as f:
+        pickle.dump(author_results,f)
     # with open('new.p','wb') as f:
     #     pickle.dump(author_results,f)
 
-    author_results = {'rgerkin':{}, 'scrook':{}, 'grayden':{}, 'smbaer':{}}
+    author_results = {'rgerkin':{}, 'scrook':{}, 'grayden':{}, 'emarder':{}, 'markram':{},'bhen':{}}
     for author,links in authors.items():
         for r in links:
             urlDat = process(r)
@@ -216,24 +223,24 @@ for k,v in author_results.items():
 
 
 
+bh = list(author_results['bhen'].values())
 
 
 rg = list(author_results['rgerkin'].values())
 sc = list(author_results['scrook'].values())
 gn = list(author_results['grayden'].values())
-sb = list(author_results['smbaer'].values())
 em = list(author_results['emarder'].values())
 mk = list(author_results['markram'].values())
 
-sb = sb[0:12]
 import pdb
 pdb.set_trace()
 
+bh = filter_empty(bh)
 
 rg = filter_empty(rg)
 sc = filter_empty(sc)
 gn = filter_empty(gn)
-sb = filter_empty(sb)
+#sb = filter_empty(sb)
 mk = filter_empty(mk)
 em = filter_empty(em)
 
@@ -241,20 +248,19 @@ all_authors = []
 all_authors.extend(rg)
 all_authors.extend(sc)
 all_authors.extend(gn)
-all_authors.extend(sb)
+#all_authors.extend(sb)
 all_authors.extend(em)
 all_authors.extend(markram)
 pickle.dump([rg,sc,gn,sb,all_authors],open('competition_data.p','wb'))
 rick = metricss(rg)
 scrook = metricss(sc)
 grayden = metricss(gn)
-smbaer = metricss(sb)
+bhenderson = metricss(bh)
 emarder = metricss(em)
 markram = metricss(mk)
 
-rank = [(rick,str('rick')),(scrook,str('sharon')),
-(grayden,str('grayden')),(smbaer,str('smbaer')),
-(emarder,str('emarder')),(markram,str('markram'))]
+rank = [(rick,str('rick')),(scrook,str('sharon')),(bhenderson,str('bryan henderson'))
+(grayden,str('grayden')),(emarder,str('emarder')),(markram,str('markram'))]
 print('the winner of the science clarity competition is: ', sorted(rank)[0])
 pdb.set_trace()
 print(rank)
@@ -265,8 +271,8 @@ scrook = metricsp(gn)
 smbaer = metricsp(sb)
 emarder = metricsp(em)
 markram = metricsp(mk)
-print('penalties: rick,scrook,grayden,smbaer,emarder,markram')
-print(rick,scrook,grayden,smbaer,emarder,markram)
+print('penalties: rick,scrook,grayden,bryan hen,emarder,markram')
+print(rick,scrook,grayden,bhen,emarder,markram)
 
 # Some random data
 #data = np.random.rand(10,4)

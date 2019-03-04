@@ -47,6 +47,52 @@ def isPassive(sentence):
 
 
 
+
+def argument_density(sentence0,sentence1):
+    # https://github.com/flycrane01/nltk-passive-voice-detector-for-English/blob/master/Passive-voice.py
+    CLAIMS = ['I think that', 'I believe that']               # all forms of "be"
+    CAUSAL = ['because','so','thus','therefore','since']                                  # NLTK tags "do" and "have" as verbs, which can be misleading in the following section.
+    terms = nltk.word_tokenize(sentence1)
+    #tokens = nltk.pos_tag(terms)
+    befores = []
+    for t in terms:
+        if t in CAUSAL:
+            befores.append(sentence0)
+    return befores
+
+
+
+        #for C in CAUSAL:
+        #    if
+
+    '''
+    tags = [i[1] for i in tokens]
+    if tags.count('VBN') == 0:                                                            # no PP, no passive voice.
+        return False
+    elif tags.count('VBN') == 1:                                    # one PP "been", still no passive voice.
+        return False
+    else:
+        pos = [i for i in range(len(tags)) if tags[i] == 'VBN' and words[i] != 'been']  # gather all the PPs that are not "been".
+        for end in pos:
+            chunk = tags[:end]
+            start = 0
+            for i in range(len(chunk), 0, -1):
+                last = chunk.pop()
+                if last == 'NN' or last == 'PRP':
+                    start = i                                                             # get the chunk between PP and the previous NN or PRP (which in most cases are subjects)
+                    break
+            sentchunk = words[start:end]
+            tagschunk = tags[start:end]
+            verbspos = [i for i in range(len(tagschunk)) if tagschunk[i].startswith('V')] # get all the verbs in between
+            if verbspos != []:                                                            # if there are no verbs in between, it's not passive
+                for i in verbspos:
+                    if sentchunk[i].lower() not in beforms and sentchunk[i].lower() not in aux:  # check if they are all forms of "be" or auxiliaries such as "do" or "have".
+                        break
+                else:
+                    return True
+    return False
+    '''
+
 def convert_pdf_to_txt(content):
     pdf = io.BytesIO(content.content)
     parser = PDFParser(pdf)
@@ -203,10 +249,27 @@ def clue_words(check_with):
         return (False, assume_false)
 
 
+def argument_density(check_with):
+    density_histogram = {}
+    # https://github.com/flycrane01/nltk-passive-voice-detector-for-English/blob/master/Passive-voice.py
+    CLAIMS = ['I think that', 'I believe that']               # all forms of "be"
+    CAUSAL = ['because','so','thus','therefore','since']                                  # NLTK tags "do" and "have" as verbs, which can be misleading in the following section.
+    for c in CLAIMS:
+        if c in check_with
+            density_histogram[c] += 1
+    for c in CAUSAL:
+        if c in check_with
+            density_histogram[c] += 1
+    return density_histogram
+
+
 
 def black_string(check_with):
     if len(check_with) == 1145:
         return True
+    #check="Privacy_policy"
+    #if check in check_with:
+    #    return True
     check="Our systems have detected unusual traffic from your computer network.\\nThis page checks to see if it\'s really you sending the requests, and not a robot.\\nWhy did this happen?\\nThis page appears when Google automatically detects requests coming from your computer network which appear to be in violation of the Terms of Service. The block will expire shortly after those requests stop.\\nIn the meantime, solving the above CAPTCHA will let you continue to use our services.This traffic may have been sent by malicious software, a browser plug in, or a script that sends automated requests.\\nIf you share your network connection, ask your administrator for help  a different computer using the same IP address may be responsible.\\nLearn moreSometimes you may be asked to solve the CAPTCHA if you are using advanced terms that robots are known to use, or sending requests very quickly."
     if check in check_with:
         return True

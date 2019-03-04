@@ -59,6 +59,12 @@ def perplexity(testset, model):
         perplexity = perplexity + (1.0/model[word])
     return perplexity
 
+def bi_log_value(value):
+    # Bi-symmetric log-like transformation, from:
+    # http://iopscience.iop.org/article/10.1088/0957-0233/24/2/027001/pdf
+    trans = np.sign(value)*np.log(1+np.abs(value*2.302585))
+    return trans
+    #df[col] = trans
 
 
 DEBUG = False
@@ -150,16 +156,17 @@ def text_proc(corpus, urlDat = {}, WORD_LIM = 100):
             urlDat['scaled'] = wc * urlDat['standard']
             urlDat['conciseness'] = urlDat['wcount']*(urlDat['uniqueness']) + \
             urlDat['wcount']*(urlDat['info_density'])
+
+            urlDat['conciseness'] = bi_log_value(urlDat['conciseness'])
             if urlDat['perplexity'] is not None:
+                urlDat['perplexity'] = bi_log_value(urlDat['perplexity'])
+
                 penalty = (urlDat['standard'] + urlDat['conciseness']+\
                 urlDat['scaled'] + urlDat['perplexity'])/4.0
             else:
                 penalty = (urlDat['standard'] + urlDat['conciseness']+urlDat['scaled'] )/3.0
 
             #computes perplexity of the unigram model on a testset
-
-            #urlDat['standard'] = textstat.text_standard(corpus, float_output=True)
-
             urlDat['penalty'] = penalty
 
         return urlDat

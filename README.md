@@ -3,11 +3,11 @@
 ## Overview
 Understanding big words is hard, so when big ideas are written down with lots of big words, the large pile of big words is also hard to understand. 
 
-We used a computer to read lots of different writing, meant for different people, to see how hard each piece of writing was to understand. We want to stop people avoiding learning hard ideas, only because there were too many hard words. We want most people understanding more hard ideas, so those people are not hurt because they did not understand important things. We think we can help by explaining the problem with small words, and by creating tools to address the problem.
+We used a computer to read lots of different writing, meant for different people, to see how hard each piece of writing was to understand. There is a tendency where people people avoiding learning hard ideas, only because there were too many hard words.  We think we can help by explaining the problem with small words, and by creating tools to address the problem.
 
 
 ## Machine Estimation of Writing Complexity:
-The accessibility of written word can be approximated by a computer program that reads over the text, and guesses the mental difficulty, associated with comprehending a written document. The computer program maps reading difficult onto a quantity that represents the number of years of schooling needed to decode the language in the document. For convenience, we can refer to the difficulty associated with the text as the 'complexity' of the document. 
+The accessibility of written word can be approximated by a computer program that reads over the text, and guesses the mental difficulty, associated with comprehending a written document. The computer program maps reading difficult onto a quantity that is informed by cognitive complexity of the writing, and the number of years of schooling needed to decode the language in the document. For convenience, we can refer to the difficulty associated with the text as the 'complexity' of the document. 
 
 ### How do some well known texts do?
 

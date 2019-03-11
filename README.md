@@ -63,7 +63,7 @@ How different are the scores?
 
 The science writing niche is characterized, by having a mean reading grade level of 18, neutral, to negatively polarized sentiment type and close to almost complete absence of subjectivity. Science writing is more resistant to file compression, meaning that information entropy is high, due to concise, coded language. These statistical features, give quiete a lot to go on, with regards to using language style to predict the scientific status of a randomly selected web document. The same notion of entropy being generally higher in science is corroborated with the perplexity measure, which measures how improbable the particular frequency distribution of words of observed in a document was.
 
-![image](https://user-images.githubusercontent.com/7786645/53291441-a411b700-3770-11e9-9138-d99a565f985e.png)
+![image](https://user-images.githubusercontent.com/7786645/53291441-a411b700-3770-11e9-![Uploading image.png…]()9138-d99a565f985e.png)
 
 
 ## Developer Overview 

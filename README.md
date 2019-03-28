@@ -5,6 +5,7 @@ Understanding big words is hard, so when big ideas are written down with lots of
 
 We used a computer to read lots of different writing, meant for different people, to see how hard each piece of writing was to understand. There may be a tendency for people to avoid learning hard ideas, only because too many hard words encountered in the process.  We think we can help by explaining the problem with smaller words, and by creating tools to address the problem.
 
+![image](https://user-images.githubusercontent.com/7786645/55136162-e9683200-50ea-11e9-9438-ef454212010b.png)
 
 ## Machine Estimation of Writing Complexity:
 The accessibility of written word can be approximated by a computer program that reads over the text, and guesses the mental difficulty, associated with comprehending a written document. The computer program maps reading difficult onto a quantity that is informed by cognitive load of the writing, and the number of years of schooling needed to decode the language in the document. For convenience, we can refer to the difficulty associated with the text as the 'complexity' of the document. 

@@ -54,7 +54,7 @@ SMBAER = str('https://scholar.google.com/scholar?hl=en&as_sdt=0%2C3&q=SM+baer+&b
 RICK_FAVORED = str('https://elifesciences.org/articles/08127')
 MARKRAM = str('https://scholar.google.com/citations?user=W3lyJF8AAAAJ&hl=en&oi=sra')
 BHENDERSON = str('https://scholar.google.com/citations?user=o_aMfnoAAAAJ&hl=en&oi=ao')
-
+PMCGURRIN = str('https://www.pmcgurrin.com/publications')
 
 try:
     assert os.path.isfile('authors.p')
@@ -81,11 +81,14 @@ except:
     with open('authors.p','wb') as f:
         pickle.dump(authors,f)
 
+PMCGURRIN = collect_pubs(PMCGURRIN)
+        
 BHENDERSON = collect_pubs(BHENDERSON)
 
 #authors['markram'] = MARKRAM
 #authors['emarder'] = EMARDER
 authors['bhen'] = BHENDERSON
+authors['pg'] = PMCGURRIN
 
 
 with open('authors.p','wb') as f:
@@ -107,15 +110,17 @@ except:
     other_s = pickle.dump([hss,benchmark,bench],open('other_standards.p','wb'))
 
 
-def get_ind_author():
+def get_ind_author(author_link_scholar_link_list):
     more = [author_results['markram'],author_results['emarder'],authors['bhen']]
-    names = [str('markram'),str('emarder'),str('bhen')]
-
-    for i,s in enumerate(authors['bhen']):
+    names = [str('bhen'),str('pg')]
+    latest = []
+    latest.extend(authors['bhen'])
+    latest.extend(authors['pg'])
+    for i,s in enumerate(latest):
         follow_links = collect_pubs(s)
         #names[i] = str('bhen')
         #import pdb; pdb.set_trace()
-        for r in follow_links[0:13]:
+        for r in follow_links[0:10]:
            urlDat = process(r)
            if not isinstance(urlDat,type(None)):
                if str(r) not in author_results.keys():
@@ -124,8 +129,8 @@ def get_ind_author():
                else:
                    author_results[names[i]][str(r)] = urlDat
            print(author_results)
-    with open('new.p','wb') as f:
-        pickle.dump(author_results,f)
+           with open('new.p','wb') as f:
+               pickle.dump(author_results,f)
 try:
     assert os.path.isfile('author_results.p')
     author_results = pickle.load(open('author_results.p','rb'))
@@ -142,12 +147,17 @@ except:
     author_results['bhen'] = authors['bhen']
     more = [author_results['markram'],author_results['emarder'],author_results['bhen']]
     names = [ str('bhen')]
+    local = []
+    
+    local.extend(authors['bhen'][0:10])
+    local.extend(authors['pg'][0:10])
 
-    for i,s in enumerate(authors['bhen'][0:13]):
+    
+    for i,s in enumerate(local):
         follow_links = collect_pubs(s)
         #names[i] = str('bhen')
         #import pdb; pdb.set_trace()
-        for r in follow_links:
+        for r in follow_links[0:15]:
            urlDat = process(r)
            if not isinstance(urlDat,type(None)):
                if str(r) not in author_results.keys():
@@ -156,8 +166,8 @@ except:
                else:
                    author_results[str('bhen')][str(r)] = urlDat
            print(author_results)
-    with open('new.p','wb') as f:
-        pickle.dump(author_results,f)
+           with open('new.p','wb') as f:
+               pickle.dump(author_results,f)
     # with open('new.p','wb') as f:
     #     pickle.dump(author_results,f)
 
@@ -216,7 +226,7 @@ for k,v in author_results.items():
     except:
         pass
 
-    compete_results[k] = np.mean(per_author)
+    compete_results[k] = np.mean(per_doc)
 
     author_results['rgerkin']['perplexity'] = compete_results[k]
 

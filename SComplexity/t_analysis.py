@@ -37,18 +37,48 @@ from textblob import TextBlob
 from textstat.textstat import textstat
 tagger = PerceptronTagger(load=False)
 
-def unigram(tokens):
+def unigram_zipf(tokens):
+    '''
+    Get the zipf slope histogram for a corpus
+    '''
     model = collections.defaultdict(lambda: 0.01)
     tokens = [ term for t in tokens for term in t ]
-    for f in tokens:
-        try:
-            model[f] += 1
-        except KeyError:
-            model[f] = 1
-            continue
+    model = {}
+
+    for word in tokens:
+        count = model.get(word,0)
+        model[word] = count + 1
+    '''
+    normalize observations relative to number of words in the model
+    '''
     for word in model:
         model[word] = model[word]/float(sum(model.values()))
     return model
+    
+    
+    
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import re
+import seaborn as sns
+
+def zipf_plot(tokens):
+    # https://www.kaggle.com/kaitlyn/zipf-s-law
+    df = pd.DataFrame(tokens,columns='text')
+    df['clean_text'] = df.text.apply(lambda x: re.sub('[^A-Za-z\']', ' ', x.lower()))
+    # Create a word count dataframe
+    word_list = ' '.join(df.clean_text.values).split(' ')
+    words = pd.DataFrame(word_list, columns=['word'])
+    word_counts = words.word.value_counts().reset_index()
+    word_counts.columns = ['word', 'n']
+    word_counts['word_rank'] = word_counts.n.rank(ascending=False)    
+    f, ax = plt.subplots(figsize=(7, 7))
+    ax.set(xscale="log", yscale="log")
+    sns.regplot("n", "word_rank", word_counts, ax=ax, scatter_kws={"s": 100})
+    return
+
 
 def perplexity(testset, model):
     # https://stackoverflow.com/questions/33266956/nltk-package-to-estimate-the-unigram-perplexity

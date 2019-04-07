@@ -36,6 +36,11 @@ from tabulate import tabulate
 from textblob import TextBlob
 from textstat.textstat import textstat
 tagger = PerceptronTagger(load=False)
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import re
+import seaborn as sns
 
 def unigram_zipf(tokens):
     '''
@@ -56,13 +61,37 @@ def unigram_zipf(tokens):
     return model
     
     
-    
+#    https://github.com/nltk/nltk/blob/model/nltk/model/ngram.py
 
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-import re
-import seaborn as sns
+def entropy(self, text):
+    """
+    https://github.com/nltk/nltk/blob/model/nltk/model/ngram.py
+    Calculate the approximate cross-entropy of the n-gram model for a
+    given evaluation text.
+    This is the average log probability of each word in the text.
+    :param text: words to use for evaluation
+    :type text: Iterable[str]
+    """
+
+    normed_text = (self._check_against_vocab(word) for word in text)
+    H = 0.0     # entropy is conventionally denoted by "H"
+    processed_ngrams = 0
+    for ngram in self.ngram_counter.to_ngrams(normed_text):
+        context, word = tuple(ngram[:-1]), ngram[-1]
+        H += self.logscore(word, context)
+        processed_ngrams += 1
+    return - (H / processed_ngrams)
+
+def perplexity(self, text):
+    """
+    Calculates the perplexity of the given text.
+    This is simply 2 ** cross-entropy for the text.
+    :param text: words to calculate perplexity of
+    :type text: Iterable[str]
+    """
+
+    return pow(2.0, self.entropy(text))   
+
 
 def zipf_plot(tokens):
     # https://www.kaggle.com/kaitlyn/zipf-s-law

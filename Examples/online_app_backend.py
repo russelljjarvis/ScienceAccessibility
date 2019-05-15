@@ -47,13 +47,6 @@ def filter_empty(the_list):
     return [ tl for tl in the_list if 'standard' in tl.keys() ]
 
 
-'''
-PMCGURRIN = collect_pubs(PMCGURRIN)
-BHENDERSON = collect_pubs(BHENDERSON)
-'''
-
-#def take_url_from_gui(url):
-
 
 def take_url_from_gui(author_link_scholar_link_list):
     '''
@@ -61,7 +54,7 @@ def take_url_from_gui(author_link_scholar_link_list):
     authors scholar page.
     '''
     author_results = []
-    follow_links = collect_pubs(author_link_scholar_link_list)
+    follow_links = collect_pubs(author_link_scholar_link_list)[0:15]
     for r in follow_links:
        urlDat = process(r)
        if not isinstance(urlDat,type(None)):
@@ -127,32 +120,34 @@ def update_web_form(url,name):
 #df.index.name = "my_index"
 # Create the markdown string
 
-BHENDERSON = str('https://scholar.google.com/citations?user=o_aMfnoAAAAJ&hl=en&oi=ao')
-PMCGURRIN = str('https://www.pmcgurrin.com/publications')
-RGERKIN = str('https://scholar.google.com/citations?user=GzG5kRAAAAAJ&hl=en&oi=ao')
+#BHENDERSON = str('https://scholar.google.com/citations?user=o_aMfnoAAAAJ&hl=en&oi=ao')
+#PMCGURRIN = str('https://www.pmcgurrin.com/publications')
+#RGERKIN = str('https://scholar.google.com/citations?user=GzG5kRAAAAAJ&hl=en&oi=ao')
 #try:
-test_values = [PMCGURRIN,BHENDERSON]
-names = [str('PMCGURRIN'),str('BHENDERSON')]
+#test_values = [PMCGURRIN,BHENDERSON]
+#names = [str('PMCGURRIN'),str('BHENDERSON')]
 
 #for t,name in zip(test_values,names):
 def enter_name_here(scholar_page,name):
     df, datay, author_results = update_web_form(scholar_page,name)
 #author_results
+    '''
     md = tabulate(df, headers='keys', tablefmt='pipe')
     # Fix the markdown string; it will not render with an empty first table cell,
     # so if the dataframe's index has no name, just place an 'x' there.
     md = md.replace('|    |','| %s |' % (df.index.name if df.index.name else 'x'))
     # Create the Markdown object
     result = d.Markdown(md)
-
+    '''
     return df, datay, author_results
 
 def find_nearest(array, value):
     array = np.asarray(array)
     idx = (np.abs(array - value)).argmin()
     return idx
-
-df, datay, ar  = enter_name_here(BHENDERSON,'ben')
+PHATAK = str('https://scholar.google.com/citations?user=6U9-af4AAAAJ&hl=en&oi=sra')
+NAME = 'Sayali S Phatak'
+df, datay, ar  = enter_name_here(PHATAK,NAME)
 
 ar = [ tl for tl in ar if tl is not None ]
 ar = [ tl for tl in ar if type(tl) is not type(str('')) ]
@@ -168,40 +163,8 @@ with open('traingDats.p','rb') as f:
 standard_sci = [ t['standard'] for t in trainingDats ]
 temp = [ t['standard'] for t in ar ]
 standard_sci.extend(temp)
+trainingDats.extend(ar)
+with open('traingDats.p','wb') as f:
+    pickle.dump(trainingDats,f)
 
-sns.distplot(standard_sci).patches
-#You can access the bar's height via the function patches.get_height():
-
-[ h.get_height() for h in sns.distplot(standard_sci).patches ]
-xys = [ (h.get_x(),h.get_height()) for h in sns.distplot(standard_sci).patches ]
-
-
-sns.distplot(standard_sci)
-index = find_nearest([x[0] for x in xys], author_results)
-plt.scatter(x=author_results, y=xys[index][1], color='b')
-plt.show()
-#'all_before.png'
-
-#except:
-#    print('tried and failed!')
-# Display the markdown object (in a Jupyter code cell)
-#result
-#print('the scores are:',np.min(rick,sharon))
-'''
-bench = metrics(bench)
-pm = metrics(pm)
-hss = metrics(hss)
-winners = [('rgerkin',rick),('scrook',scrook),('upgoer5_corpus',bench),('the readability of science decr over time', hss), ('peter',pm)]
-with open('results.p','wb') as f:
-    pickle.dump(winners,f)
-
-winners = sorted([(w[1],w[0]) for w in winners])
-print(winners)
-
-try:
-    win = pickle.load(open('winners.p','rb'))
-
-    winners = sorted([(w['standard'],list(w.items())) for w in both_authors])
-except:
-    pass
-'''
+import plotting_versus_distribution

@@ -14,14 +14,33 @@ def find_nearest(array, value):
     return idx
 
 ar = pickle.load(open('more_authors_results.p','rb'))
-NAME = str('Sayali S Phatak')
+
 
 with open('traingDats.p','rb') as f:
     trainingDats = pickle.load(f)
 
-#For the bars, information is stored in:
+def other_files():
+    NAME = str('J. Bryan Henderson')
+
+    brian = pickle.load(open('ben_results.p','rb'))
+    ar1 = brian.T.to_dict().values()
+
+    arp = pickle.load(open('author_results_processed.p','rb'))
+    arp.pop('rgerkin',None)
+
+    #import pdb; pdb.set_trace()
+    for NAME in arp.keys():
+        ar = []
+        for i in range(0,len(arp[NAME].values())):
+            ar.append(list(arp[NAME].values())[i])
+            extend()
+#others = [];
+
 standard_sci = [ t['standard'] for t in trainingDats ]
-temp = [ t['standard'] for t in ar ]
+ar = [ t for t in ar if type(t) is type({})]
+ar = [ t for t in ar if 'standard' in t.keys()]
+temp = [ t['standard'] for t in ar if 'standard' in t.keys()]
+print(temp)
 standard_sci.extend(temp)
 xys = [ (h.get_x(),h.get_height()) for h in sns.distplot(standard_sci).patches ]
 # this plot not used yet.
@@ -99,8 +118,8 @@ legendSide0=ax.legend(labels=[NAME],prop=legend_properties,loc='center right')
 legendSide1=ax.legend(labels=[str('Number of Documents: '+str(len(ar)))],prop=legend_properties,loc='upper left')
 print(len(ar))
 
-legendMain=ax.legend(labels=[str("Readability Index")], prop=legend_properties,loc='upper right')
+legendMain=ax.legend(labels=[str("ART Corpus+ other scholar authors")], prop=legend_properties,loc='upper right')
 ax.add_artist(legendMain)
 ax.add_artist(legendSide0)
 ax.add_artist(legendSide1)
-plt.savefig('author_readability.png')
+plt.savefig(str(NAME)+'author_readability.png')

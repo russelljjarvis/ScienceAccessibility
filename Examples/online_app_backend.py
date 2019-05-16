@@ -145,26 +145,23 @@ def find_nearest(array, value):
     array = np.asarray(array)
     idx = (np.abs(array - value)).argmin()
     return idx
-PHATAK = str('https://scholar.google.com/citations?user=6U9-af4AAAAJ&hl=en&oi=sra')
-NAME = 'Sayali S Phatak'
-df, datay, ar  = enter_name_here(PHATAK,NAME)
 
-ar = [ tl for tl in ar if tl is not None ]
-ar = [ tl for tl in ar if type(tl) is not type(str('')) ]
-ar = [ tl for tl in ar if 'standard' in tl.keys() ]
+def call_from_front_end(NAME):
+    scholar_link=str('https://scholar.google.com/scholar?hl=en&as_sdt=0%2C3&q=')+str(NAME)
+    df, datay, ar  = enter_name_here(scholar_link,NAME)
 
-with open(str('more_authors_results.p'),'wb') as f:
-    pickle.dump(ar,f)
+    ar = [ tl for tl in ar if tl is not None ]
+    ar = [ tl for tl in ar if type(tl) is not type(str('')) ]
+    ar = [ tl for tl in ar if 'standard' in tl.keys() ]
 
-with open('traingDats.p','rb') as f:
-    trainingDats = pickle.load(f)
+    with open(str('more_authors_results.p'),'wb') as f:
+        pickle.dump([NAME,ar],f)
 
-#For the bars, information is stored in:
-standard_sci = [ t['standard'] for t in trainingDats ]
-temp = [ t['standard'] for t in ar ]
-standard_sci.extend(temp)
-trainingDats.extend(ar)
-with open('traingDats.p','wb') as f:
-    pickle.dump(trainingDats,f)
+    with open('traingDats.p','rb') as f:
+        trainingDats = pickle.load(f)
 
-import plotting_versus_distribution
+    trainingDats.extend(ar)
+
+    with open('traingDats.p','wb') as f:
+        pickle.dump(trainingDats,f)
+    import plotting_versus_distribution

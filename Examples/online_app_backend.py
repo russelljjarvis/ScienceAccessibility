@@ -12,7 +12,7 @@ import numpy as np
 import pandas as pd
 from bs4 import BeautifulSoup
 
-from SComplexity.crawl import collect_pubs
+from SComplexity.crawl import collect_pubs, collect_hosted_files
 from SComplexity.get_bmark_corpus import process
 from SComplexity.t_analysis import text_proc
 # Put these results, in a data frame, then in Markdown, using RGerkin's code.
@@ -20,6 +20,15 @@ from SComplexity.t_analysis import text_proc
 # !pip install --user tabulate # Install the tabulate package
 from tabulate import tabulate
 from SComplexity.t_analysis import text_proc, perplexity, unigram_zipf
+
+import argparse
+
+parser = argparse.ArgumentParser(description='Process some authors.')
+parser.add_argument('author', metavar='N', type=str, nargs='+',
+                   help='authors first name')
+
+args = parser.parse_args()
+
 
 def metricss(rg):
     if isinstance(rg,list):
@@ -47,22 +56,80 @@ def filter_empty(the_list):
     return [ tl for tl in the_list if 'standard' in tl.keys() ]
 
 
+'''
+def download_course(url="http://www.rob-mcculloch.org/2019_ml/webpage/index.html"):
+    import requests
+    from delver import Crawler
+    C = Crawler()
+    import re
+    from bs4 import BeautifulSoup
+    from pyvirtualdisplay import Display
+    from selenium import webdriver
+    display = Display(visible=0, size=(1024, 800))
+    display.start()
+    chrome_options = webdriver.ChromeOptions()
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--headless')
+    chrome_options.add_argument('--disable-gpu')
+    driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver',chrome_options=chrome_options)
+    driver.implicitly_wait(10)
+    driver.get(url)
+    crude_html = driver.page_source
 
+    soup = BeautifulSoup(crude_html, 'lxml')
+    #follow_links = collect_hosted_files("http://www.rob-mcculloch.org/2019_ml/webpage/index.html")
+    for link in soup.findAll('a'):
+        check_out = link.get('href');
+        links.append(check_out)
+    #print(follow_links)
+    for i,l in enumerate(links):
+        link = str("http://www.rob-mcculloch.org/2019_ml/webpage/")+str(l)
+        print(link)
+        import   pdb; pdb.set_trace()
+
+        if str('pdf') in link:
+            content = requests.get(link, stream=True)
+            try:
+                f = open(str(l),'w+')
+            except:
+                f = open(str(i),'w+')
+
+        if str('html') in link:
+            content = requests.get(link, stream=True)
+            f = open(str(l),'w+')
+        if str('.R') in link or str('.Rmd') in link :
+            content = requests.get(link, stream=True)
+            f = open(str(l),'w+')
+        else:
+            content = requests.get(link, stream=True)
+            f = open(str(l),'w+')
+
+        f.write(content.text)
+        f.close()
+    return follow_links
+'''
 def take_url_from_gui(author_link_scholar_link_list):
     '''
     inputs a URL that's full of publication orientated links, preferably the
     authors scholar page.
     '''
     author_results = []
-    follow_links = collect_pubs(author_link_scholar_link_list)[0:15]
+    follow_links = collect_pubs(author_link_scholar_link_list)[0:25]
     for r in follow_links:
-       urlDat = process(r)
+       try:
+           urlDat = process(r)
+       except:
+           follow_more_links = collect_pubs(r)
+           for r in follow_more_links:
+               urlDat = process(r)
+       print(urlDat)
+        
        if not isinstance(urlDat,type(None)):
            author_results.append(urlDat)
 
-       print(author_results[-1])
-       with open('new.p','wb') as f:
-           pickle.dump(author_results,f)
+       # print(author_results[-1])
+       #with open('new.p','wb') as f:
+       #    pickle.dump(author_results,f)
     return author_results
 
 def unigram_model(author_results):
@@ -104,7 +171,8 @@ def info_models(author_results):
 
 
 
-def update_web_form(url,name):
+def update_web_form(url):
+    print(url)
     #data = author_results = {}
     author_results = take_url_from_gui(url)
     ar =  copy.copy(author_results)
@@ -128,8 +196,8 @@ def update_web_form(url,name):
 #names = [str('PMCGURRIN'),str('BHENDERSON')]
 
 #for t,name in zip(test_values,names):
-def enter_name_here(scholar_page,name):
-    df, datay, author_results = update_web_form(scholar_page,name)
+def enter_name_here(scholar_page, name):
+    df, datay, author_results = update_web_form(scholar_page)
 #author_results
     '''
     md = tabulate(df, headers='keys', tablefmt='pipe')
@@ -145,6 +213,20 @@ def find_nearest(array, value):
     array = np.asarray(array)
     idx = (np.abs(array - value)).argmin()
     return idx
+
+
+'''
+Bradley G Lusk (Me!)
+Bruce E Rittmann
+Sudhir Kumar
+Jordan B Peterson
+Rob Knight
+Perry McCarty
+Thomas R. Cech
+I've decided that, rather than come up with names, to suggest using this list:
+http://www.webometrics.info/en/hlargerthan100
+'''
+
 
 def call_from_front_end(NAME):
     scholar_link=str('https://scholar.google.com/scholar?hl=en&as_sdt=0%2C3&q=')+str(NAME)
@@ -165,3 +247,6 @@ def call_from_front_end(NAME):
     with open('traingDats.p','wb') as f:
         pickle.dump(trainingDats,f)
     import plotting_versus_distribution
+
+NAME = args.author
+call_from_front_end(NAME)

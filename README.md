@@ -103,14 +103,17 @@ The scraping and crawling code for this is dependency heavy. Who wants to duplic
 If Docker is installed on the base OS, git clone this repository, and assuming the file build.sh is chmod +x , run: `bash build.sh` to perform the dockerbuild. To run the jupyter notebook over docker, enter the docker environment interactively in one of two ways, via a bash shell, or via an ipython notebook or
 and then launch python via BASH in Linux as follows:
 
+
 ```BASH
 docker login your_user_name@dockerhub.com
 docker pull russelljarvis/science_accessibility
-docker run -it russelljarvis/science_accessibility
+mkdir $HOME/data_words
+docker run -it -v $HOME/data_words russelljarvis/science_accessibility
 ```
 ```BASH
-python enter_author_name.py "R Gerkin"
-```
+cd Examples
+ipython -i enter_author_name.py "R Gerkin"
+``` 
 
 To Run the project, you need to navigate to the Examples directory and then execute:
 `python use_scrape.py`, which scrapes search engines for parameters defined in that file.

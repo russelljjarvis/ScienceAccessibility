@@ -25,6 +25,6 @@ setup(name='scomplexity',
       description='heavily applied scraping, crawling and language analysis, tightly coupled with the goal of analysing scientific discourse',
       author='various',
       author_email='don_t_email_we_are_on_github@gmail.com',
-      url='https://github.com/russelljjarvis/WordComplexityPython',
+      url='https://github.com/russelljjarvis/ScienceAccessibility',
       packages = setuptools.find_packages()
       )

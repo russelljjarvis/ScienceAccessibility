@@ -103,6 +103,7 @@ The scraping and crawling code for this is dependency heavy. Who wants to duplic
 If Docker is installed on the base OS, git clone this repository, and assuming the file build.sh is chmod +x , run: `bash build.sh` to perform the dockerbuild. To run the jupyter notebook over docker, enter the docker environment interactively in one of two ways, via a bash shell, or via an ipython notebook or
 and then launch python via BASH in Linux as follows:
 
+Warning: This Docker environment is currently 11.5GB, however it contains some non trivial scraping tools.
 
 ```BASH
 docker login your_user_name@dockerhub.com

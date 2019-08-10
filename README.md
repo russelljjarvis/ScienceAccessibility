@@ -98,20 +98,23 @@ The observant reader will see, 'et al', occurs in published literature quite a l
 
 The internet in some ways is like a big group of computers that are all friends with each. A scraper is A computer that visits many of the other computers on the internet. The scraper does not have to be friends with the computers it visits, it just needs to know the address at which each computer in the big friendship group can be reached.
 
-The scraping and crawling code for this is dependency heavy. Who wants to duplicate the building of this whole environment from scratch? No-one? I thought so. [Docker is used to providing a universal build, and prevent duplicated effort](https://cloud.docker.com/repository/registry-1.docker.io/russelljarvis/science_accessibility).
+The scraping and crawling code for this is dependency heavy. Who wants to duplicate the building of this whole environment from scratch? No-one? I thought so. [Docker is used to providing a universal build, and prevent duplicated effort](https://hub.docker.com/r/russelljarvis/science_accessibility).
 
 If Docker is installed on the base OS, git clone this repository, and assuming the file build.sh is chmod +x , run: `bash build.sh` to perform the dockerbuild. To run the jupyter notebook over docker, enter the docker environment interactively in one of two ways, via a bash shell, or via an ipython notebook or
 and then launch python via BASH in Linux as follows:
 
-```
-'cd this_path; sudo docker run -it -v this_path:/home/jovyan slc'
-```
+Warning: This Docker environment is currently 11.5GB, however it contains some non trivial scraping tools.
 
-Maybe define a bash alias, if this command gets too big and old.
-
+```BASH
+docker login your_user_name@dockerhub.com
+docker pull russelljarvis/science_accessibility
+mkdir $HOME/data_words
+docker run -it -v $HOME/data_words russelljarvis/science_accessibility
 ```
-alias drvt='cd this_path; sudo docker run -v this_path:/home/jovyan slc'
-```
+```BASH
+cd Examples
+ipython -i enter_author_name.py "R Gerkin"
+``` 
 
 To Run the project, you need to navigate to the Examples directory and then execute:
 `python use_scrape.py`, which scrapes search engines for parameters defined in that file.

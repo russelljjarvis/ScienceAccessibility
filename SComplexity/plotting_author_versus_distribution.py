@@ -13,9 +13,10 @@ def find_nearest(array, value):
     idx = (np.abs(array - value)).argmin()
     return idx
 
+bmark = pickle.load(open('benchmarks.p','rb'))
 NAME,ar = pickle.load(open('more_authors_results.p','rb'))
-print(ar)
-
+#print(ar)
+#import pdb; pdb.set_trace()
 with open('traingDats.p','rb') as f:
     trainingDats = pickle.load(f)
 
@@ -38,13 +39,13 @@ def other_files():
 standard_sci = [ t['standard'] for t in trainingDats ]
 ar = [ t for t in ar if type(t) is type({})]
 ar = [ t for t in ar if 'standard' in t.keys()]
-print(ar)
+#print(ar)
 xys = [ (h.get_x(),h.get_height()) for h in sns.distplot(standard_sci).patches ]
 # this plot not used yet.
 
 fig = plt.figure()
 ax1 = fig.add_subplot(111)
-print(ar)
+#print(ar)
 mean_ = np.mean([a['standard'] for a in ar])
 min_ = np.min([a['standard'] for a in ar])
 max_ = np.max([a['standard'] for a in ar])
@@ -71,16 +72,23 @@ sub_set = sub_set[0].tolist()
 assert len(sub_set) < len(histogram_content)
 
 #vertical_postions = map()
-vertical_postions_indexs = []
-for i in stats_items:
-    vertical_postions_indexs.append(find_nearest(histogram_content, i))
-bin_width_offset = (xys[1][0] - xys[0][0])/2.0
-x_sub_set = [ i+bin_width_offset for i in x_sub_set ]
+def get_heights(stats_items,histogram_content,x_sub_set):
+    vertical_postions_indexs = []
+    for i in stats_items:
+        vertical_postions_indexs.append(find_nearest(histogram_content, i))
+    bin_width_offset = (xys[1][0] - xys[0][0])/2.0
+    x_sub_set = [ i+bin_width_offset for i in x_sub_set ]
 
 
-heights = []
-for i in vertical_postions_indexs:
-    heights.append(xys[i][1])
+    heights = []
+    for i in vertical_postions_indexs:
+        heights.append(xys[i][1])
+    return heights
+
+bmark_stats_items = [ b['standard'] for b in bmark ]
+bmark_heights = get_heights(bmark_stats_items,histogram_content,x_sub_set)
+heights = get_heights(stats_items,histogram_content,x_sub_set)
+
 print(heights)
 mean_a = mean_# + bin_width_offset
 min_a = min_ #+ bin_width_offset
@@ -92,6 +100,18 @@ index = find_nearest(histogram_content, min_)
 #min_link = histogram_content[index]['link']
 index = find_nearest(histogram_content, max_)
 #max_link = histogram_content[index]['link']
+
+#print(bmarks)
+#import pdb; pdb.set_trace()
+
+#bmark_stats_items = [ b['standard'] for b in bmark ]
+#bmark_heights = get_heights(bmark_stats_items,histogram_content,x_sub_set)
+
+
+benchmarks = pd.DataFrame({
+'benchmarks': bmark_stats_items,
+    'CDF': bmark_heights
+    })
 
 
 data0 = pd.DataFrame({
@@ -113,6 +133,7 @@ data1 = pd.DataFrame({
 
 legend_properties = {'weight':'bold','size':8}
 
+ax = sns.regplot(data=benchmarks, x="benchmarks", y="CDF", fit_reg=False, marker="o", color="green")
 
 ax = sns.regplot(data=data0, x="mean, min, maximum", y="CDF", fit_reg=False, marker="o", color="blue")
 
@@ -123,7 +144,7 @@ legendMain=ax.legend(labels=[str("std deviation")], prop=legend_properties,loc='
 
 legendSide0=ax.legend(labels=[NAME],prop=legend_properties,loc='center right')
 legendSide1=ax.legend(labels=[str('Number of Documents: '+str(len(ar)))],prop=legend_properties,loc='upper left')
-print(len(ar))
+#print(len(ar))
 
 
 legendMain=ax.legend(labels=[str("ART Corpus+ other scholar authors")], prop=legend_properties,loc='upper right')
@@ -142,4 +163,7 @@ rotation = 90
 
 locs, labels = plt.xticks()
 plt.setp(labels, rotation=45)
-plt.savefig(str(NAME[9:15])+'author_readability.png')
+#print(NAME)
+#import pdb; pdb.set_trace()
+plt.savefig(str(NAME)+'_author_readability.png')
+plt.show()

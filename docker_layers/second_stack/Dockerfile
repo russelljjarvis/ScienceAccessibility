@@ -31,7 +31,8 @@ RUN python -c "from SComplexity import t_analysis, utils, scrape"
 # WORKDIR SComplexity/Examples
 RUN ls -ltr
 RUN ls online_app_backend.py
+ENTRYPOINT /bin/bash
 #RUN python -c "import online_app_backend"
 # RUN python
-RUN python enter_author_name.py "R Gerkin"
+#RUN python enter_author_name.py "R Gerkin"
 #ENTRYPOINT python enter_author_name.py 

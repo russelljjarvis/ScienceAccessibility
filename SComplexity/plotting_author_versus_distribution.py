@@ -17,8 +17,15 @@ bmark = pickle.load(open('benchmarks.p','rb'))
 NAME,ar = pickle.load(open('more_authors_results.p','rb'))
 #print(ar)
 #import pdb; pdb.set_trace()
-with open('traingDats.p','rb') as f:
-    trainingDats = pickle.load(f)
+import os
+
+if os.path.exists('traingDats.p'):
+    with open('traingDats.p','rb') as f:
+        trainingDats = pickle.load(f)
+else:
+    from ..Examples import use_training
+    with open('traingDats.p','rb') as f:
+        trainingDats = pickle.load(f)
 
 def other_files():
     NAME = str('J. Bryan Henderson')
@@ -83,12 +90,15 @@ def get_heights(stats_items,histogram_content,x_sub_set):
     heights = []
     for i in vertical_postions_indexs:
         heights.append(xys[i][1])
-    return heights
+    return heights, bin_width_offset
 
 bmark_stats_items = [ b['standard'] for b in bmark ]
-bmark_heights = get_heights(bmark_stats_items,histogram_content,x_sub_set)
-heights = get_heights(stats_items,histogram_content,x_sub_set)
-
+categories = [ "upgoer 5", "Readibility Declining Over Time","Science of Writing","Post Modern Essay Generator"]
+#categories = [b['link'] for b in bmark]
+bmark_heights, bwo = get_heights(bmark_stats_items,histogram_content,x_sub_set)
+heights, bwo = get_heights(stats_items,histogram_content,x_sub_set)
+bmark_stats_items = [i+bwo for i in bmark_stats_items]
+sub_set = [i+bwo for i in sub_set]
 print(heights)
 mean_a = mean_# + bin_width_offset
 min_a = min_ #+ bin_width_offset
@@ -113,15 +123,15 @@ benchmarks = pd.DataFrame({
     'CDF': bmark_heights
     })
 
-
+author_stats =[i+bwo for i in [mean_,min_,max_]]
 data0 = pd.DataFrame({
-'mean, min, maximum': [mean_,min_,max_],
+'mean, min, maximum': author_stats,
     'CDF': heights
     })
 
 
 data2 = pd.DataFrame({
-'Standard Reading Level': [mean_a],
+'Standard Reading Level': [mean_a+bwo],
     'CDF': [heights[0]]
     })
 
@@ -135,8 +145,43 @@ legend_properties = {'weight':'bold','size':8}
 
 ax = sns.regplot(data=benchmarks, x="benchmarks", y="CDF", fit_reg=False, marker="o", color="green")
 
-ax = sns.regplot(data=data0, x="mean, min, maximum", y="CDF", fit_reg=False, marker="o", color="blue")
 
+#bbox_props = dict(boxstyle="rarrow", fc=(0.8,0.9,0.9), ec="b", lw=2)
+
+#t = ax.text(0, 0, "Direction", ha="center", va="center", rotation=90,
+#            size=15,
+#            bbox=bbox_props)
+#import pdb; pdb.set_trace()
+#bmark_heights.reverse()
+for i in bmark_heights:
+    print(i)
+#import pdb
+#pdb.set_trace()
+cnt=0
+for i,j,k in zip(bmark_stats_items[0:-1],bmark_heights[0:-1],categories):
+    print(i,j,k)
+    if cnt==1:
+        j=j+0.02
+        ax.text(i+bwo,j,k, rotation=0)
+
+    else:
+        #j=j+0.1
+        print(j)
+        ax.text(i,j,k, rotation=0)
+    cnt +=1
+cnt = 0
+for i,j,k in zip(author_stats,heights,[str(NAME)+' mean',str(NAME)+' min',str(NAME)+' max']):
+    print(i,j,k)
+    #if cnt==3:
+    #    ax.text(i+bwo,j,k)
+
+    #else:
+    #j=j+0.15
+    print(j)
+    ax.text(i,j,k, rotation=0)
+    cnt +=1
+
+ax = sns.regplot(data=data0, x="mean, min, maximum", y="CDF", fit_reg=False, marker="o", color="blue")
 #ax = sns.regplot(x='Standard Reading Level', y='CDF',data=data1, fit_reg=False, marker="o", color="green")#, data=fmri)
 ax = sns.regplot(data=data2, x="Standard Reading Level", y="CDF", fit_reg=False, marker="o", color="red")
 

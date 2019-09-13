@@ -12,7 +12,7 @@ import numpy as np
 import pandas as pd
 from bs4 import BeautifulSoup
 
-from SComplexity.crawl import collect_pubs, collect_hosted_files
+from SComplexity.crawl import collect_pubs#, collect_hosted_files
 from SComplexity.get_bmark_corpus import process
 from SComplexity.t_analysis import text_proc
 # Put these results, in a data frame, then in Markdown, using RGerkin's code.

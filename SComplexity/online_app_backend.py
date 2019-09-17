@@ -49,58 +49,6 @@ def filter_empty(the_list):
     return [ tl for tl in the_list if 'standard' in tl.keys() ]
 
 
-'''
-def download_course(url="http://www.rob-mcculloch.org/2019_ml/webpage/index.html"):
-    import requests
-    from delver import Crawler
-    C = Crawler()
-    import re
-    from bs4 import BeautifulSoup
-    from pyvirtualdisplay import Display
-    from selenium import webdriver
-    display = Display(visible=0, size=(1024, 800))
-    display.start()
-    chrome_options = webdriver.ChromeOptions()
-    chrome_options.add_argument('--no-sandbox')
-    chrome_options.add_argument('--headless')
-    chrome_options.add_argument('--disable-gpu')
-    driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver',chrome_options=chrome_options)
-    driver.implicitly_wait(10)
-    driver.get(url)
-    crude_html = driver.page_source
-
-    soup = BeautifulSoup(crude_html, 'lxml')
-    #follow_links = collect_hosted_files("http://www.rob-mcculloch.org/2019_ml/webpage/index.html")
-    for link in soup.findAll('a'):
-        check_out = link.get('href');
-        links.append(check_out)
-    #print(follow_links)
-    for i,l in enumerate(links):
-        link = str("http://www.rob-mcculloch.org/2019_ml/webpage/")+str(l)
-        print(link)
-        import   pdb; pdb.set_trace()
-
-        if str('pdf') in link:
-            content = requests.get(link, stream=True)
-            try:
-                f = open(str(l),'w+')
-            except:
-                f = open(str(i),'w+')
-
-        if str('html') in link:
-            content = requests.get(link, stream=True)
-            f = open(str(l),'w+')
-        if str('.R') in link or str('.Rmd') in link :
-            content = requests.get(link, stream=True)
-            f = open(str(l),'w+')
-        else:
-            content = requests.get(link, stream=True)
-            f = open(str(l),'w+')
-
-        f.write(content.text)
-        f.close()
-    return follow_links
-'''
 def take_url_from_gui(author_link_scholar_link_list):
     '''
     inputs a URL that's full of publication orientated links, preferably the
@@ -181,17 +129,9 @@ def update_web_form(url):
 #df.index.name = "my_index"
 # Create the markdown string
 
-#BHENDERSON = str('https://scholar.google.com/citations?user=o_aMfnoAAAAJ&hl=en&oi=ao')
-#PMCGURRIN = str('https://www.pmcgurrin.com/publications')
-#RGERKIN = str('https://scholar.google.com/citations?user=GzG5kRAAAAAJ&hl=en&oi=ao')
-#try:
-#test_values = [PMCGURRIN,BHENDERSON]
-#names = [str('PMCGURRIN'),str('BHENDERSON')]
-
-#for t,name in zip(test_values,names):
 def enter_name_here(scholar_page, name):
     df, datay, author_results = update_web_form(scholar_page)
-#author_results
+    #author_results
     '''
     md = tabulate(df, headers='keys', tablefmt='pipe')
     # Fix the markdown string; it will not render with an empty first table cell,
@@ -207,18 +147,6 @@ def find_nearest(array, value):
     idx = (np.abs(array - value)).argmin()
     return idx
 
-
-'''
-Bradley G Lusk (Me!)
-Bruce E Rittmann
-Sudhir Kumar
-Jordan B Peterson
-Rob Knight
-Perry McCarty
-Thomas R. Cech
-I've decided that, rather than come up with names, to suggest using this list:
-http://www.webometrics.info/en/hlargerthan100
-'''
 
 
 def call_from_front_end(NAME):
@@ -239,7 +167,5 @@ def call_from_front_end(NAME):
 
     with open('traingDats.p','wb') as f:
         pickle.dump(trainingDats,f)
-    import plotting_versus_distribution
+    import plotting_author_versus_distribution
 
-# NAME = args.author
-# call_from_front_end(NAME)

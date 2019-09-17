@@ -255,10 +255,10 @@ def argument_density(check_with):
     CLAIMS = ['I think that', 'I believe that']               # all forms of "be"
     CAUSAL = ['because','so','thus','therefore','since']                                  # NLTK tags "do" and "have" as verbs, which can be misleading in the following section.
     for c in CLAIMS:
-        if c in check_with
+        if c in check_with:
             density_histogram[c] += 1
     for c in CAUSAL:
-        if c in check_with
+        if c in check_with:
             density_histogram[c] += 1
     return density_histogram
 

@@ -5,45 +5,23 @@
 # Comparing the Written Language of Scientific and Non-scientific Sources
 
 ### Authors
-insert names here
-*equal contribution
+Russell Jarvis, Patrick McGurrin
 
-## Summary
-To ensure that text is accessible to a general population, writers must keep in mind the length of written text, as well as sentence structure, vocabulary, and other related language features [11].  Popular magazines, newspapers, and other online outlets purposefully cater language for a wide audience. On the other hand, there is a tendency for academic writing to use more complex, jargon-heavy language. This likely stems from the inherent complexity of topics, as well as the expectation to share ideas predominantly with other scientists in the form of academic journal articles.
+
+### Summary
+To ensure that text is accessible to a general population, writers must keep in mind the length of written text, as well as sentence structure, vocabulary, and other related language features [11].  Popular magazines, newspapers, and other online outlets purposefully cater language for a wide audience. On the other hand, there is a tendency for academic writing to use more complex, jargon-heavy language [12]. This likely stems from the inherent complexity of topics, as well as the expectation to share ideas predominantly with other scientists in the form of academic journal articles.
 
 In the age of growing science communication, this tendency for scientists to use more complex language can carry over when writing in more mainstream media, such as blogs, websites, and social media. This can make this public-facing material difficult to read and understand, undermining efforts to communicate scientific topics more broadly to the general public.
 
 To address this, we created a tool to analyze complexity of a given scientist’s work relative to other writing sources.  The tool first quantifies and contextualizes the readability of online written material, including currently existing text repositories like the Upgoer5 and results from web searches with varying topics and complexity. These data are then used as a reference to compare user-selected written work. The user enters an author’'s name, which begins a web-scraping process to collect text written by that author from google scholar. The software then computes the readability of this information and compares it to the reference sources mentioned above.
 
-We believe this tool uses a data-driven approach to provide insightful,  statistical insights to the user about their writing. We hope it will help scientists interested in science communication to better shape the readability of their published work. This will make written content more accessible to a broad audience, and with hope lead to an improved global understanding of complex topics, such as those in science and technology.
+We believe this tool uses a data-driven approach to provide insightful,  statistical insights to the user about their writing. We hope it will help scientists interested in science communication to better shape the readability of their published work. This will make written content more accessible to a broad audience, and with hope lead to an improved global communication and understanding of complex topics, such as those in science and technology.
 
-## Methods
+### Methods
 We built a web-scraping and written text analysis infrastructure by extending many existing Free and Open Source (FOS) tools, including  Google Scrape (reference), Beautiful Soup (reference), and Selenium (reference).
 
-### Search Engine Queries
-We included three different, unrelated, and broad-ranging lists of search terms. The first ten search results were used for analysis.
 
- 1.  Science Queries
-
-Gains in knowledge about physical entities or physical processes
-'evolution', 'photosynthesis' ,'Transgenic', 'GMO', 'climate change', 'cancer', 'Vaccines', 'Genetically Modified Organism', 'differential equation','psychophysics','soma.'
-
- 2.  Cultural queries
-
-Predominantly cultural in nature, or worldview related
-'reality TV', 'prancercise philosophy', 'play dough delicious desserts', 'unicorn versus brumby', 'football soccer' , 'god fearing'.
-
-3.  Ambiguous Queries
-
-Deliberately ambiguous queries, equally likely return content either scientific or non-scientific in nature, to challenge the classification algorithm, and also to serve as a control
-'the singularity','franken-science','Frankenstein,'the God Delusion','god does not play dice', 'the selfish gene','political science', 'Requiem for a spikem', 'skynet','killer robot', 'neural ensemble.'
-
-After scraping across each list, we excluded text from 3 types of websites that seemed to significantly bias results:
-1.  non-English pages
-2.  ad pages    
-3.  privacy policy pages
-
-### Text Metrics to Assess Language Complexity
+## Text Metrics to Assess Language Complexity
 1.  Text-stat - measures text reading level (complexity)
 
 2.  The Natural Language Processing Tool Kit (NLTK) - measures text subjectivity and sentiment
@@ -54,23 +32,35 @@ After scraping across each list, we excluded text from 3 types of websites that 
 
 5.  Cluster centers - measures clustering of data when organized using complexity, sentiment, word length and compression ratios
 
-### Reference Texts used for Analysis
+These metrics are combined (?) to formulate a single readability score for each scraped item. The results of each item are then combined and used to generate a plot. 
+
+## Reference Texts used for Analysis
 We include a number of available reference texts with a-priori assumptions about how complex the text should be.
 
 1.  Upgoer5 - a library using only the 10,000 most commonly occurring English words[2].
 
-2.  Wikipedia - a free, popular, crowdsourced encyclopedia that is generated from self-nominating volunteers.
+2.  Readability Declining Over Time - 
 
-3.  Postmodern Essay Generator (PMEG) - generates output consisting of sentences that obey the rules of written English, but without restraints on the semantic conceptual references [5].
+3. Science of Writing - 
 
-4.  ART Corpus - a library of scientific papers published in The Royal Society of Chemistry (RSC) [1].
+4.  Postmodern Essay Generator (PMEG) - generates output consisting of sentences that obey the rules of written English, but without restraints on the semantic conceptual references [5].
+
+5.  ART Corpus - a library of scientific papers published in The Royal Society of Chemistry (RSC) [1].
+
 
 | Text Source | Mean Complexity | Unique Words |
 |----------|----------|:-------------:|
-| Upgoer 5                                     | 7                               | 35,103 |
-| Wikipedia                                    | 14.9                         | -  |
+| Upgoer 5                                     | 6                               | 35,103 |
+| Readability Declining Over Time                                    | 9.0                         | -  |
+| Science of Writing                                    | 14.0                         | -  |
 | Post-Modern Essay Generator | 16.5                          | -  |
 | Art Corpus                                  | 18.68                        | 2,594 |
+
+## Plot Information 
+The results of this tool generate a histogram binned by readability score (y-axis), which is initially populated exclusively by the ART corpus. We use the ART corpus because it is a pre-established library of scientific papers. Upgoer5. Readability Declining Over Time, Science of Writing, and PMEG are analyzed, with their mean readability scores also being applied to the histogram plot.
+
+Each time a new author is entered into the tool by the user, it is scraped from google scholar and the minimum (min), maximum (max), and mean readability of that author's work are extracted and calculated. 
+
 
 ## Reproducibility
  We used a Docker file and associated container together as a self-documenting and extremely portable software environment clone to ensure reproducibility given the hierarchy of software dependencies.
@@ -97,13 +87,28 @@ docker pull russelljarvis/science_accessibility_user:latest
 
 ```BASH
 mkdir $HOME/data_words
-docker run -v $HOME/data_words russelljarvis/science_accessibility_user "B Lusk"
+docker run -v $HOME/data_words russelljarvis/science_accessibility_user "R Gerkin"
 ```
 This generates a graph displaying the mean writing complexity of author Bradley Lusk against a distribution of content from ART corpus.
 
 To date, we have created a command line interface (CLI) to achieve this goal. Moving forward, we aim to expand this to a web application that will be more user friendly and allow additional utility.
 
 ![Specific Author Relative to Distribution](for_markdown_repository.png)
+
+
+## Conclusions
+
+
+## Future Directions
+
+We'd like to add in wikipedia - a free, popular, crowdsourced encyclopedia that is generated from self-nominating volunteers. This language is specifically shaped by editors to be accessible for a general audience and would be a useful iaddition to the results. 
+
+In addition, we're interested in general readability of the web. An additional future step is to apply search engine queries
+of different, unrelated, and broad-ranging lists of search terms that apply scientific, cultural, and other more random queries to assess readability. The first ten search results were used for analysis.
+
+
+
+
 
 ## References
 [1] Soldatova, Larisa, and Maria Liakata. "An ontology methodology and cisp-the proposed core information about scientific papers." JISC Project Report (2007).
@@ -127,3 +132,5 @@ To date, we have created a command line interface (CLI) to achieve this goal. Mo
 [10]  High, Rob. "The era of cognitive systems: An inside look at IBM Watson and how it works." IBM Corporation, Redbooks (2012).
 
 [11] Kutner, Mark, Elizabeth Greenberg, and Justin Baer. "A First Look at the Literacy of America's Adults in the 21st Century. NCES 2006-470." _National Center for Education Statistics_(2006).
+
+[12] Plavén-Sigray, Pontus, Granville James Matheson, Björn Christian Schiffler, and William Hedley Thompson. "The readability of scientific texts is decreasing over time." Elife 6 (2017): e27725.

@@ -9,7 +9,7 @@ Russell Jarvis, Patrick McGurrin
 
 
 ### Summary
-To ensure that text is accessible to a general population, writers must keep in mind the length of written text, as well as sentence structure, vocabulary, and other related language features [11].  Popular magazines, newspapers, and other online outlets purposefully cater language for a wide audience. On the other hand, there is a tendency for academic writing to use more complex, jargon-heavy language [12]. This likely stems from the inherent complexity of topics, as well as the expectation to share ideas predominantly with other scientists in the form of academic journal articles.
+To ensure that text is accessible to a general population, writers must keep in mind the length of written text, as well as sentence structure, vocabulary, and other related language features [1].  Popular magazines, newspapers, and other online outlets purposefully cater language for a wide audience. On the other hand, there is a tendency for academic writing to use more complex, jargon-heavy language [2]. This likely stems from the inherent complexity of topics, as well as the expectation to share ideas predominantly with other scientists in the form of academic journal articles.
 
 In the age of growing science communication, this tendency for scientists to use more complex language can carry over when writing in more mainstream media, such as blogs, websites, and social media. This can make this public-facing material difficult to read and understand, undermining efforts to communicate scientific topics more broadly to the general public.
 
@@ -18,8 +18,7 @@ To address this, we created a tool to analyze complexity of a given scientist’
 We believe this tool uses a data-driven approach to provide insightful,  statistical insights to the user about their writing. We hope it will help scientists interested in science communication to better shape the readability of their published work. This will make written content more accessible to a broad audience, and with hope lead to an improved global communication and understanding of complex topics, such as those in science and technology.
 
 ### Methods
-We built a web-scraping and written text analysis infrastructure by extending many existing Free and Open Source (FOS) tools, including  Google Scrape (reference), Beautiful Soup (reference), and Selenium (reference).
-
+We built a web-scraping and written text analysis infrastructure by extending many existing Free and Open Source (FOS) tools, including Google Scrape, Beautiful Soup, and Selenium.
 
 ## Text Metrics to Assess Language Complexity
 1.  Text-stat - measures text reading level (complexity)
@@ -30,40 +29,34 @@ We built a web-scraping and written text analysis infrastructure by extending ma
 
 4.  LZW (de-)compression-ratio - measures information entropy
 
-5.  Cluster centers - measures clustering of data when organized using complexity, sentiment, word length and compression ratios
+5.  Cluster centers - measures clustering of data when organized using complexity, sentiment, word length and compression  ratios
 
-These metrics are combined (?) to formulate a single readability score for each scraped item. The results of each item are then combined and used to generate a plot. 
+These metrics are combined to formulate a single readability score for each scraped item. The results of each item are then combined and used to generate a plot. 
 
 ## Reference Texts used for Analysis
-We include a number of available reference texts with a-priori assumptions about how complex the text should be.
+We include a number of available reference texts with varying complexity. 
 
-1.  Upgoer5 - a library using only the 10,000 most commonly occurring English words[2].
+1.  Upgoer5 - a library using only the 10,000 most commonly occurring English words[3].
 
-2.  Readability Declining Over Time - 
+2.  Postmodern Essay Generator (PMEG) - generates output consisting of sentences that obey the rules of written English, but without restraints on the semantic conceptual references [4].
 
-3. Science of Writing - 
-
-4.  Postmodern Essay Generator (PMEG) - generates output consisting of sentences that obey the rules of written English, but without restraints on the semantic conceptual references [5].
-
-5.  ART Corpus - a library of scientific papers published in The Royal Society of Chemistry (RSC) [1].
+3.  ART Corpus - a library of scientific papers published in The Royal Society of Chemistry (RSC) [5].
 
 
 | Text Source | Mean Complexity | Unique Words |
 |----------|----------|:-------------:|
 | Upgoer 5                                     | 6                               | 35,103 |
-| Readability Declining Over Time                                    | 9.0                         | -  |
-| Science of Writing                                    | 14.0                         | -  |
-| Post-Modern Essay Generator | 16.5                          | -  |
-| Art Corpus                                  | 18.68                        | 2,594 |
+| Post-Modern Essay Generator                  | 16.5                            | -  |
+| Art Corpus                                   | 18.68                           | 2,594 |
 
 ## Plot Information 
-The results of this tool generate a histogram binned by readability score (y-axis), which is initially populated exclusively by the ART corpus. We use the ART corpus because it is a pre-established library of scientific papers. Upgoer5. Readability Declining Over Time, Science of Writing, and PMEG are analyzed, with their mean readability scores also being applied to the histogram plot.
+The results of this tool generate a histogram binned by readability score (y-axis), which is initially populated exclusively by the ART corpus. We use the ART corpus because it is a pre-established library of scientific papers. Upgoer5 and PMEG libraries are also scraped and analyzed, with their mean readability scores also being applied to the histogram plot. 
 
 Each time a new author is entered into the tool by the user, it is scraped from google scholar and the minimum (min), maximum (max), and mean readability of that author's work are extracted and calculated. 
 
 
 ## Reproducibility
- We used a Docker file and associated container together as a self-documenting and extremely portable software environment clone to ensure reproducibility given the hierarchy of software dependencies.
+We used a Docker file and associated container together as a self-documenting and extremely portable software environment clone to ensure reproducibility given the hierarchy of software dependencies.
 
 ## Results
 Data is available in our [Open Science Framework data repository](https://osf.io/dashboard).
@@ -97,40 +90,20 @@ To date, we have created a command line interface (CLI) to achieve this goal. Mo
 
 
 ## Conclusions
+In this document, we have described a tool for exploring the readability of a scientist's published work with regard to other web-based repositories. While other readability tools currently exist to report the complexity of a single document, our work expands upon these tools by better contextualzing the complexity of a written document’s text by comparing it to a variety of other text types. 
 
+We do not intend to compete with these well-established tools. By contrast, the goal of this work is to apply a more data-driven approach to provide established academic authors with statistical insights into their body of published science work. We believe this will allow authors to better monitor the complexity of their writing with regard to other available text types, leading to the creation of more accessible online material.
 
 ## Future Directions
-
-We'd like to add in wikipedia - a free, popular, crowdsourced encyclopedia that is generated from self-nominating volunteers. This language is specifically shaped by editors to be accessible for a general audience and would be a useful iaddition to the results. 
-
-In addition, we're interested in general readability of the web. An additional future step is to apply search engine queries
-of different, unrelated, and broad-ranging lists of search terms that apply scientific, cultural, and other more random queries to assess readability. The first ten search results were used for analysis.
-
-
-
-
+Future work will aim to add in other text repositories well known to the public, such as wikipedia, that have been shown to be accessible and commonly used by a general audience. In addition, we're interested in general readability of the web, and aim to apply search engine queries of different, unrelated, and broad-ranging lists of search terms that apply scientific, cultural, and other more random queries to assess readability of an eclectic range of text. These two goals would further contextualize the readability of published scientific work with regard to that engaged by the public on a more daily basis.
 
 ## References
-[1] Soldatova, Larisa, and Maria Liakata. "An ontology methodology and cisp-the proposed core information about scientific papers." JISC Project Report (2007).
+[1] Kutner, Mark, Elizabeth Greenberg, and Justin Baer. "A First Look at the Literacy of America's Adults in the 21st Century. NCES 2006-470." _National Center for Education Statistics_(2006).
 
-[2] Kuhn, Tobias. "The controlled natural language of randall munroe’s thing explainer." International Workshop on Controlled Natural Language. Springer, Cham, 2016.
+[2] Plavén-Sigray, Pontus, Granville James Matheson, Björn Christian Schiffler, and William Hedley Thompson. "The readability of scientific texts is decreasing over time." Elife 6 (2017): e27725.
 
-[3] Japos, Genaro V. "Effectiveness of coaching interventions using grammarly software and plagiarism detection software in reducing grammatical errors and plagiarism of undergraduate researches." JPAIR Institutional Research 1.1 (2013): 97-109.
+[3] Kuhn, Tobias. "The controlled natural language of randall munroe’s thing explainer." International Workshop on Controlled Natural Language. Springer, Cham, 2016.
 
-[4] Kincaid, J. Peter, et al. "Derivation of new readability formulas (automated readability index, fog count and flesch reading ease formula) for navy enlisted personnel." (1975).  
+[4] Bulhak, Andrew C. "On the simulation of postmodernism and mental debility using recursive transition networks." Monash University Department of Computer Science (1996).  
 
-[5] Bulhak, Andrew C. "On the simulation of postmodernism and mental debility using recursive transition networks." Monash University Department of Computer Science (1996).  
-
-[6] V. Clayton, “The Needless Complexity of Academic Writing,” The Atlantic, 26-Oct-2015.
-
-[7] Cannon, Robert C., et al. "LEMS: a language for expressing complex biological models in concise and hierarchical form and its use in underpinning NeuroML 2." Frontiers in neuroinformatics 8 (2014): 79.
-
-[8] Gerkin, Richard C., and Cyrus Omar. "Collaboratively testing the validity of neuroscientific models." Frontiers in Neuroinformatics 1 (2014).
-
-[9] Oppenheimer, Daniel M. "Consequences of erudite vernacular utilized irrespective of necessity: Problems with using long words needlessly." Applied Cognitive Psychology: The Official Journal of the Society for Applied Research in Memory and Cognition 20.2 (2006): 139-156.
-
-[10]  High, Rob. "The era of cognitive systems: An inside look at IBM Watson and how it works." IBM Corporation, Redbooks (2012).
-
-[11] Kutner, Mark, Elizabeth Greenberg, and Justin Baer. "A First Look at the Literacy of America's Adults in the 21st Century. NCES 2006-470." _National Center for Education Statistics_(2006).
-
-[12] Plavén-Sigray, Pontus, Granville James Matheson, Björn Christian Schiffler, and William Hedley Thompson. "The readability of scientific texts is decreasing over time." Elife 6 (2017): e27725.
+[5] Soldatova, Larisa, and Maria Liakata. "An ontology methodology and cisp-the proposed core information about scientific papers." JISC Project Report (2007).

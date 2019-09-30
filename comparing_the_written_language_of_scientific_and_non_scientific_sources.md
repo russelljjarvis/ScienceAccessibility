@@ -31,10 +31,14 @@ These metrics are combined to formulate a single readability score for each scra
 ### Reference Texts used for Analysis
 We include a number of available reference texts with varying complexity. 
 
-1. Upgoer5 - a library using only the 10,000 most commonly occurring English words[3].
-2. Wikipedia - a free, popular, crowdsourced encyclopedia that is generated from self-nominating volunteers.
-3. Postmodern Essay Generator (PMEG) - generates output consisting of sentences that obey the rules of written English, but without restraints on the semantic conceptual references [4].
-4. ART Corpus - a library of scientific papers published in The Royal Society of Chemistry (RSC) [5].
+| Text Source | Mean Complexity | Description |
+|----------|----------|:-------------:|
+| Upgoer 5 [3]                                     | 6  | a library using only the 10,000 most    commonly occurring English words |
+
+| Wikipedia                               | 14.9                            | a free, popular, crowdsourced encyclopedia that is generated from self-nominating volunteers  |
+| Post-Modern Essay Generator (PMEG) [4]  | 16.5                            | generates output consisting of sentences that obey the rules of written English, but without restraints on the semantic conceptual references   |
+| Art Corpus [5]                                | 18.68                           | a library of scientific papers published in The Royal Society of Chemistry |
+
 
 
 | Text Source | Mean Complexity | Unique Words |

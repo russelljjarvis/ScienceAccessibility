@@ -31,23 +31,23 @@ These metrics are combined to formulate a single readability score for each scra
 ### Reference Texts used for Analysis
 We include a number of available reference texts with varying complexity. 
 
-1.  Upgoer5 - a library using only the 10,000 most commonly occurring English words[3].
-
-2.  Postmodern Essay Generator (PMEG) - generates output consisting of sentences that obey the rules of written English, but without restraints on the semantic conceptual references [4].
-
-3.  ART Corpus - a library of scientific papers published in The Royal Society of Chemistry (RSC) [5].
+1. Upgoer5 - a library using only the 10,000 most commonly occurring English words[3].
+2. Wikipedia - a free, popular, crowdsourced encyclopedia that is generated from self-nominating volunteers.
+3. Postmodern Essay Generator (PMEG) - generates output consisting of sentences that obey the rules of written English, but without restraints on the semantic conceptual references [4].
+4. ART Corpus - a library of scientific papers published in The Royal Society of Chemistry (RSC) [5].
 
 
 | Text Source | Mean Complexity | Unique Words |
 |----------|----------|:-------------:|
 | Upgoer 5                                     | 6                               | 35,103 |
+| Wikipedia                                    | 14.9                            | -  |
 | Post-Modern Essay Generator                  | 16.5                            | -  |
 | Art Corpus                                   | 18.68                           | 2,594 |
 
 ### Plot Information 
 The results of this tool generate a histogram binned by readability score, which is initially populated exclusively by the ART corpus. We use the ART corpus because it is a pre-established library of scientific papers. After entering an author's name, a graph displays the mean writing complexity of this author against a distribution of content from ART corpus.
 
-Upgoer5 and PMEG libraries are also scraped and analyzed, with their mean readability scores also being applied to the histogram plot. 
+Upgoer5, Wikipedia, and PMEG libraries are also scraped and analyzed, with their mean readability scores applied to the histogram plot. 
 
 ### Reproducibility
 A Docker file and associated container together serve as a self-documenting and extremely portable software environment clone to ensure reproducibility given the hierarchy of software dependencies.

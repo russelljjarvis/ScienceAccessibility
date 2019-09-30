@@ -17,16 +17,16 @@ To address this, we created a tool to analyze complexity of a given scientist’
 We believe this tool uses a data-driven approach to provide insightful, statistical insights to the user about their writing. We hope it will help scientists interested in science communication to make their published work more accessible to a broad audience, and with hope lead to an improved global communication and understanding of complex topics.
 
 ## Methods
-We built a web-scraping and written text analysis infrastructure by extending many existing Free and Open Source (FOS) tools, including Google Scrape, Beautiful Soup, and Selenium.
+We built a web-scraping and text analysis infrastructure by extending many existing Free and Open Source (FOS) tools, including Google Scrape, Beautiful Soup, and Selenium.
 
 ### Text Metrics to Assess Language Complexity
-| Text Metric |   Description |
+| Text Metric |   Description of Measurement |
 |----------|----------|
-| Text-stat                                        | measures text reading level (complexity) |
-| The Natural Language Processing Tool Kit (NLTK)  | measures text subjectivity and sentiment |
-| Search Engine Factors      |  records page rank  |
-| LZW (de-)compression-ratio | measures information entropy |
-| Cluster centers            | measures clustering of data when organized using complexity, sentiment, word length and compression  ratios   |
+| Text-stat                                        | text reading level (complexity) |
+| The Natural Language Processing Tool Kit (NLTK)  | text subjectivity and sentiment |
+| Search Engine Factors      | records page rank  |
+| LZW (de-)compression-ratio | information entropy |
+| Cluster centers            | clustering of data when organized using complexity, sentiment, word length and compression  ratios   |
 
 These metrics are combined to formulate a single readability score for each scraped item. 
 
@@ -35,8 +35,8 @@ We include a number of available reference texts with varying complexity.
 
 | Text Source | Mean Complexity | Description |
 |----------|----------|:-------------:|
-| Upgoer 5 [3]                             | 6   | a library using only the 10,000 most    commonly occurring English words |
-| Wikipedia                               | 14.9 | a free, popular, crowdsourced encyclopedia that is generated from self-nominating volunteers  |
+| Upgoer 5 [3]                             | 6   | a library using only the 10,000 most commonly occurring English words |
+| Wikipedia                               | 14.9 | a free, popular, crowdsourced encyclopedia   |
 | Post-Modern Essay Generator (PMEG) [4]  | 16.5 | generates output consisting of sentences that obey the rules of written English, but without restraints on the semantic conceptual references   |
 | Art Corpus [5]                                 | 18.68                           | a library of scientific papers published in The Royal Society of Chemistry |
 

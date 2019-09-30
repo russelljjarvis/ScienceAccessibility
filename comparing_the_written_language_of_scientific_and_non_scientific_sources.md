@@ -20,11 +20,13 @@ We believe this tool uses a data-driven approach to provide insightful, statisti
 We built a web-scraping and written text analysis infrastructure by extending many existing Free and Open Source (FOS) tools, including Google Scrape, Beautiful Soup, and Selenium.
 
 ### Text Metrics to Assess Language Complexity
-1.  Text-stat - measures text reading level (complexity)
-2.  The Natural Language Processing Tool Kit (NLTK) - measures text subjectivity and sentiment
-3.  Search Engine Factors - records page rank
-4.  LZW (de-)compression-ratio - measures information entropy
-5.  Cluster centers - measures clustering of data when organized using complexity, sentiment, word length and compression  ratios
+| Text Metric |   Description |
+|----------|----------|:-------------:|
+| Text-stat                                        | measures text reading level (complexity) |
+| The Natural Language Processing Tool Kit (NLTK)  | measures text subjectivity and sentiment |
+| Search Engine Factors      |  records page rank  |
+| LZW (de-)compression-ratio | measures information entropy |
+| Cluster centers            | measures clustering of data when organized using complexity, sentiment, word length and compression  ratios   |
 
 These metrics are combined to formulate a single readability score for each scraped item. 
 

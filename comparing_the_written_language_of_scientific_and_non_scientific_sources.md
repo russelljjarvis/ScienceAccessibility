@@ -33,20 +33,10 @@ We include a number of available reference texts with varying complexity.
 
 | Text Source | Mean Complexity | Description |
 |----------|----------|:-------------:|
-| Upgoer 5 [3]                                     | 6  | a library using only the 10,000 most    commonly occurring English words |
-
-| Wikipedia                               | 14.9                            | a free, popular, crowdsourced encyclopedia that is generated from self-nominating volunteers  |
-| Post-Modern Essay Generator (PMEG) [4]  | 16.5                            | generates output consisting of sentences that obey the rules of written English, but without restraints on the semantic conceptual references   |
-| Art Corpus [5]                                | 18.68                           | a library of scientific papers published in The Royal Society of Chemistry |
-
-
-
-| Text Source | Mean Complexity | Unique Words |
-|----------|----------|:-------------:|
-| Upgoer 5                                     | 6                               | 35,103 |
-| Wikipedia                                    | 14.9                            | -  |
-| Post-Modern Essay Generator                  | 16.5                            | -  |
-| Art Corpus                                   | 18.68                           | 2,594 |
+| Upgoer 5 [3]                             | 6   | a library using only the 10,000 most    commonly occurring English words |
+| Wikipedia                               | 14.9 | a free, popular, crowdsourced encyclopedia that is generated from self-nominating volunteers  |
+| Post-Modern Essay Generator (PMEG) [4]  | 16.5 | generates output consisting of sentences that obey the rules of written English, but without restraints on the semantic conceptual references   |
+| Art Corpus [5]                                 | 18.68                           | a library of scientific papers published in The Royal Society of Chemistry |
 
 ### Plot Information 
 The results of this tool generate a histogram binned by readability score, which is initially populated exclusively by the ART corpus. We use the ART corpus because it is a pre-established library of scientific papers. After entering an author's name, a graph displays the mean writing complexity of this author against a distribution of content from ART corpus.
@@ -81,9 +71,9 @@ docker run -v $HOME/data_words russelljarvis/science_accessibility_user "R Gerki
 ![Specific Author Relative to Distribution](for_markdown_repository.png)
 
 ## Future Work
-We have created a command line interface (CLI) for using this tool. However, we aim to expand this to a web application that will be more user friendly. 
+We have created a command line interface (CLI) for using this tool. However, we aim to expand this to a web application is user friendly to those less familiar with coding. 
 
-Additionally, we aim to add in other text repositories well-known to the public, such as wikipedia, that have been shown to be accessible and commonly used by a general audience. In addition, we're interested in general readability of the web, and aim to add search engine queries of different and broad-ranging lists of search terms to assess readability of an eclectic range of text. These two goals would further contextualize the readability of published scientific work with regard to that engaged by the public on a more daily basis.
+In addition, we're interested in general readability of the web, and aim to add search engine queries of different and broad-ranging lists of search terms to assess readability of an eclectic range of text. This would further contextualize the readability of published scientific work with regard to that engaged by the public on a more daily basis.
 
 ## Conclusions
 In this document, we introduce a tool for exploring the readability of a scientist's published work with regard to other web-based repositories. While other readability tools currently exist to report the complexity of a single document, our work expands upon these tools by contextualizing the complexity of the author's work by comparing it to a variety of other text types. 

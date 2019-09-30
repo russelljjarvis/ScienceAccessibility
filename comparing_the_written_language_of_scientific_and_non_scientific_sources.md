@@ -21,7 +21,7 @@ We built a web-scraping and written text analysis infrastructure by extending ma
 
 ### Text Metrics to Assess Language Complexity
 | Text Metric |   Description |
-|----------|----------|:-------------:|
+|----------|----------|
 | Text-stat                                        | measures text reading level (complexity) |
 | The Natural Language Processing Tool Kit (NLTK)  | measures text subjectivity and sentiment |
 | Search Engine Factors      |  records page rank  |

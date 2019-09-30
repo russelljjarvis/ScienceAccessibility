@@ -45,7 +45,7 @@ The results of this tool generate a histogram binned by readability score, which
 
 Upgoer5, Wikipedia, and PMEG libraries are also scraped and analyzed, with their mean readability scores applied to the histogram plot. 
 
-We also include two scholarly reference papers, Science Declining Over Time [1] and Science of Writing [6], that discuss writing to a broad audience in an academic context. We use these to demonstrate the possibility of discussing complex content using more accessible language.
+We also include mean readability scores from two scholarly reference papers, Science Declining Over Time [1] and Science of Writing [6],that discuss writing to a broad audience in an academic context. We use these to demonstrate the feasability of discussing complex content using more accessible language.
 
 ### Reproducibility
 A Docker file and associated container together serve as a self-documenting and extremely portable software environment clone to ensure reproducibility given the hierarchy of software dependencies.
@@ -82,7 +82,7 @@ In addition, we're interested in general readability of the web, and aim to add 
 ## Conclusions
 In this document, we introduce a tool for exploring the readability of a scientist's published work with regard to other web-based repositories. While other readability tools currently exist to report the complexity of a single document, our work expands upon these tools by contextualizing the complexity of the author's work by comparing it to a variety of other text types. 
 
-We do not intend to compete with these well-established tools. In contrast, the goal is to apply a more data-driven approach to provide established academic authors with statistical insights into their body of published science work. This will allow authors to better monitor the complexity of their writing with regard to other available text types, leading to the creation of more accessible online material.
+We do not intend to compete with these well-established tools. Rather, we aim to apply a more data-driven approach to provide academic authors with statistical insights into their body of published science work, enabling them to monitor the complexity of their writing with regard to other available text types.
 
 ## References
 [1] Kutner, Mark, Elizabeth Greenberg, and Justin Baer. "A First Look at the Literacy of America's Adults in the 21st Century. NCES 2006-470." _National Center for Education Statistics_(2006).

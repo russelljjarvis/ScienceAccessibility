@@ -43,6 +43,8 @@ The results of this tool generate a histogram binned by readability score, which
 
 Upgoer5, Wikipedia, and PMEG libraries are also scraped and analyzed, with their mean readability scores applied to the histogram plot. 
 
+We also include two scholarly reference papers, Science Declining Over Time [1] and Science of Writing [6], that discuss writing to a broad audience in an academic context. We use these to demonstrate the possibility of discussing complex content using more accessible language.
+
 ### Reproducibility
 A Docker file and associated container together serve as a self-documenting and extremely portable software environment clone to ensure reproducibility given the hierarchy of software dependencies.
 
@@ -90,3 +92,5 @@ We do not intend to compete with these well-established tools. In contrast, the 
 [4] Bulhak, Andrew C. "On the simulation of postmodernism and mental debility using recursive transition networks." Monash University Department of Computer Science (1996).  
 
 [5] Soldatova, Larisa, and Maria Liakata. "An ontology methodology and cisp-the proposed core information about scientific papers." JISC Project Report (2007).
+
+[6] Gopen, George D., and Judith A. Swan. "The science of scientific writing." American Scientist 78, no. 6 (1990): 550-558.

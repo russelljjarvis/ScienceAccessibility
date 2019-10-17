@@ -2,11 +2,7 @@
 import os
 
 from os import path
-try:
-    from wordcloud import WordCloud
-except:
-    print('simply pip install wordcloud from inside this dockerbuild')
-    
+from wordcloud import WordCloud
 import matplotlib
 matplotlib.use('Agg')
 import pdb
@@ -31,6 +27,17 @@ from SComplexity import get_bmark_corpus as gbc
 
 import pickle
 texts = pickle.load(open('pickles/scraped_new.p','rb'))
+mean_wiki_pedia = []
+for t in texts:
+    if t['wiki'] == True:
+        if str('standard') in t.keys():
+
+            mean_wiki_pedia.append(t['standard'])
+mwp = np.mean(mean_wiki_pedia)
+print(mwp)
+import pdb
+pdb.set_trace()
+
 ARTCORPUS = pickle.load(open('traingDats.p','rb'))
 acorpus = ''
 for t in ARTCORPUS:
@@ -40,7 +47,6 @@ for t in ARTCORPUS:
             acorpus+=str(' ')+s
 import matplotlib.pyplot as plt
 
-#import pdb; pdb.set_trace()
 
 def art_cloud(acorpus):
 
@@ -49,7 +55,7 @@ def art_cloud(acorpus):
     plt.imshow(wordcloud, interpolation='bilinear')
     plt.axis("off")
     plt.savefig('acorpus.png')# Generate a word cloud image
-art_cloud(acorpus)
+#art_cloud(acorpus)
 try:
     references = pickle.load(open('../SComplexity/benchmark_bu.p','rb'))
     print(references[-1]['standard'])
@@ -76,16 +82,6 @@ for t in texts:
         for s in t['tokens']:
             wikis+=str(' ')+s
 
-mean_wiki_pedia = []
-for t in texts:
-    if t['wiki'] == True:
-        if str('standard') in t.keys():
-
-            mean_wiki_pedia.append(t['standard'])
-mwp = np.mean(mean_wiki_pedia)
-print(mwp)
-import pdb
-pdb.set_trace()
 
 def make_word_clouds(pre_science,pre_not_science,wikis):
     with open('science.csv', 'w') as f:

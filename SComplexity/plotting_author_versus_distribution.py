@@ -16,7 +16,8 @@ def find_nearest(array, value):
 bmark = pickle.load(open('benchmarks.p','rb'))
 NAME,ar = pickle.load(open('more_authors_results.p','rb'))
 #print(ar)
-#import pdb; pdb.set_trace()
+print(bmark)
+import pdb; pdb.set_trace()
 import os
 
 if os.path.exists('traingDats.p'):
@@ -93,7 +94,7 @@ def get_heights(stats_items,histogram_content,x_sub_set):
     return heights, bin_width_offset
 
 bmark_stats_items = [ b['standard'] for b in bmark ]
-categories = [ "upgoer 5", "Readibility Declining Over Time","Science of Writing","Post Modern Essay Generator"]
+categories = [ "upgoer 5", "Readibility Declining Over Time","Science of Writing","Post Modern Essay Generator","G Nicholas"]
 #categories = [b['link'] for b in bmark]
 bmark_heights, bwo = get_heights(bmark_stats_items,histogram_content,x_sub_set)
 heights, bwo = get_heights(stats_items,histogram_content,x_sub_set)

@@ -44,17 +44,19 @@ from pdfminer.layout import LAParams
 from pdfminer.converter import  TextConverter
 
 import re
+import numpy as np
+
 
 from bs4 import BeautifulSoup
 import bs4 as bs
 import urllib.request
 
-from io import StringIO
-import io
-
 from delver import Crawler
 C = Crawler()
 CWD = os.getcwd()
+
+from io import StringIO
+import io
 
 
 rsrcmgr = PDFResourceManager()
@@ -107,6 +109,33 @@ def denver_to_text(url):
     file.close()
     return text
 
+def collect_hosted_files(url):
+    '''
+    Used for scholar
+    '''
+    print(url)
+    try:
+        crude_html = denver_to_text(url)
+    except:
+        driver.get(url)
+        crude_html = driver.page_source
+    #soup0 = BeautifulSoup(crude_html, 'html.parser')
+    soup = BeautifulSoup(crude_html, 'lxml')
+    links = []
+    print(soup)
+    for link in soup.findAll('a'):check_out = link.get('href');links.append(check_out)
+        #print(link)
+    for link in soup.findAll('a', attrs={'href': re.compile("https://")}):
+        check_out = link.get('href')
+        #if '/citations?' in check_out:
+        links.append(check_out)
+    for link in soup.findAll('a', attrs={'href': re.compile("http://")}):
+        check_out = link.get('href')
+        #if '/citations?' in check_out:
+        links.append(check_out)
+    #import pdb; pdb.set_trace()
+
+    return links
 
 def collect_pubs(url):
     '''
@@ -124,4 +153,9 @@ def collect_pubs(url):
         check_out = link.get('href')
         #if '/citations?' in check_out:
         links.append(check_out)
+    for link in soup.findAll('a', attrs={'href': re.compile("http://")}):
+        check_out = link.get('href')
+        #if '/citations?' in check_out:
+        links.append(check_out)
+
     return links

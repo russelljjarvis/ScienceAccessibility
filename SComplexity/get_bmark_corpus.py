@@ -7,22 +7,23 @@ import numpy as np
 import requests
 from bs4 import BeautifulSoup
 
-from delver import Crawler
 from SComplexity.crawl import collect_pubs, convert_pdf_to_txt#,process
 from SComplexity.scrape import convert
 from SComplexity.t_analysis import text_proc
 from SComplexity.utils import black_string
 
+from delver import Crawler
 C = Crawler()
 
 def process(link):
     urlDat = {}
     urlDat['link'] = link
     urlDat['page_rank'] = 'benchmark'
+
     try:
         if str('pdf') not in link:
             content = C.open(link).content
-            
+
             soup = BeautifulSoup(content, 'html.parser')
             for script in soup(["script", "style"]):
                 script.extract()    # rip it out
@@ -32,16 +33,17 @@ def process(link):
             lines = (line.strip() for line in text.splitlines())  # break into lines and remove leading and trailing space on each
             chunks = (phrase.strip() for line in lines for phrase in line.split("  ")) # break multi-headlines into a line each
             text = '\n'.join(chunk for chunk in chunks if chunk) # drop blank lines
-            buffer = str(text)
+            bufferd = str(text)
         else:
             pdf_file = requests.get(link, stream=True)
-            buffer = convert_pdf_to_txt(pdf_file)
+            bufferd = convert_pdf_to_txt(pdf_file)
 
-        urlDat = text_proc(buffer,urlDat)
+        urlDat = text_proc(bufferd,urlDat)
+
     except:
         print('bummer dude')
         #content = C.open(link).content
-        #print(content)    
+        #print(content)
         urlDat = None
     return urlDat
 
@@ -51,12 +53,36 @@ def process(link):
 #        urlDats = pickle.load(f)
 #except:
 
-def mess_length(word_length):
+def mess_length(word_length,bcm):
     with open('bcm.p','rb') as f:
-        pickle.load(big_complex_mess,f)
+        big_complex_mess = pickle.load(big_complex_mess,f)
     reduced = big_complex_mess[0:word_length]
-    pmegmess = text_proc(reduced)
-    return mess_length
+    urlDat = {}
+    pmegmess = text_proc(reduced,urlDat)
+    return mess_length, pmegmess
+
+def get_greg_nicholas():
+    urlDat = {}
+    urlDat['link'] = "nicholas"
+    urlDat['page_rank'] = 'nicholas'
+    #pdf_file = requests.get(link, stream=True)
+    #bufferd = convert_pdf_to_txt(pdf_file)
+    #File_object = open(r"local_text.txt","Access_Mode")
+    file1 = open("local_text.txt","r") 
+    txt = file1.readlines()
+    new_str = ''
+    for i in txt:
+        new_str+=str(i)
+    urlDat = text_proc(new_str,urlDat)
+    print(urlDat)
+    #add to benchmarks
+    with open('benchmarks.p','rb') as f:
+        urlDats = pickle.load(f)
+    urlDats.append(urlDat)
+    with open('benchmarks.p','wb') as f:
+        pickle.dump(urlDats,f)
+
+    return urlDat
 
 
 def get_bmarks():
@@ -68,6 +94,7 @@ def get_bmarks():
     this_readme = str('https://github.com/russelljjarvis/ScienceAccessibility')
     links = [xkcd_self_sufficient,high_standard,the_science_of_writing,this_manuscript,this_readme ]
     urlDats = list(map(process,links))
+
     pmegs = []
     for i in range(0,9):
        p = process(pmeg)
@@ -81,17 +108,25 @@ def get_bmarks():
         if p is not None:
             for s in p['tokens']:
                 big_complex_mess += s+str(' ')
-    pmegmess = text_proc(big_complex_mess,urlDat)
-    import pdb; pdb.set_trace()
+    bcm = ''
+    for p in pmegs[0:2]:
+        if p is not None:
+            for s in p['tokens']:
+                bcm += s+str(' ')
+
+    pmegmess_2 = text_proc(bcm,urlDat)
+    #import pdb; pdb.set_trace()
     with open('bcm.p','wb') as f:
         pickle.dump(big_complex_mess,f)
 
     urlDats[-1]['standard'] = np.mean([p['standard'] for p in pmegs])
+    #import pdb
+    #pdb.set_trace()
     urlDats[-1]['sp'] = np.mean([p['sp'] for p in pmegs])
     urlDats[-1]['gf'] = np.mean([p['gf'] for p in pmegs])
-
     with open('benchmarks.p','wb') as f:
         pickle.dump(urlDats,f)
+
     return urlDats
 
 

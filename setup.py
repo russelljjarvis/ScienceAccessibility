@@ -1,8 +1,8 @@
 
 #!/usr/bin/env python
 # old functional:
-from distutils.core import setup
-import setuptools
+#from distutils.core import setup
+#import setuptools
 
 # new dysfunctional.
 try:
@@ -10,14 +10,13 @@ try:
 except ImportError:
     from distutils.core import setup, find_packages
 
-from setuptools import setup#, find_packages
 
 def read_requirements():
     '''parses requirements from requirements.txt'''
     reqs_path = os.path.join('.', 'requirements.txt')
     install_reqs = parse_requirements(reqs_path, session=PipSession())
     reqs = [str(ir.req) for ir in install_reqs]
-return reqs
+    return reqs
 
 
 setup(name='scomplexity',

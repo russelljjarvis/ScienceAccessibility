@@ -23,9 +23,35 @@ from nltk import pos_tag, sent_tokenize, word_tokenize
 from nltk.corpus import cmudict, stopwords, subjectivity
 import re
 from SComplexity.analysis import Analysis
-from SComplexity.t_analysis import text_proc, perplexity, unigram
+from SComplexity.t_analysis import text_proc, perplexity, unigram_zipf
 
 #from SComplexity.get_bmark_corpus import Analysis
+
+from sklearn.neural_network import MLPClassifier, MLPRegressor
+from sklearn import preprocessing
+from sklearn.model_selection import train_test_split
+import itertools
+#from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import SGDRegressor
+from sklearn.metrics import mean_squared_error, r2_score
+from sklearn import preprocessing
+from sklearn import linear_model
+from sklearn.metrics import confusion_matrix
+import pylab as pl
+
+
+from sklearn import preprocessing
+#from sklearn.model_selection import train_test_split
+#from sklearn.preprocessing import StandardScaler
+#from sklearn.linear_model import SGDRegressor
+from sklearn.linear_model import SGDClassifier
+from sklearn.metrics import mean_squared_error, r2_score
+from sklearn import preprocessing
+import sklearn
+
+#from neuronunit.optimisation.optimisation_management import stochastic_gradient_descent
+import seaborn as sns
 
 #import seaborn as sns; sns.set()  # for plot styling
 
@@ -61,14 +87,20 @@ def proc_xml(FILES):
         urlDats.append(urlDat)
     return urlDats
 
+#import online_app_backend
+#files = online_app_backend.download_course()
+#import pdb; pdb.set_trace()
 try:
     with open('traingDats.p','rb') as f:
         trainingDats = pickle.load(f)
+
 except:
 
     trainingDats = proc_xml(FILES)
     with open('traingDats.p','wb') as f:
         pickle.dump(trainingDats,f)
+
+
 
 FILES = natsorted(glob.glob(str(os.getcwd())+'/results_dir/*.p'))
 A = Analysis(FILES, min_word_length = 200)
@@ -80,6 +112,31 @@ not_science = [ t for t in not_science if 'standard' in t.keys() ]
 not_science = [ t for t in not_science if t['standard'] < 300.0 ]
 
 
+bag_of_words = []
+bag_of_words.extend(web_scrape)
+bag_of_words.extend(trainingDats)
+'''
+X_scaler = StandardScaler()
+X0_ = X_scaler.fit_transform(X0_)
+X = X_scaler.transform(X0_)
+Y = X_scaler.fit_transform(Y_)
+Y = X_scaler.transform(Y)
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.3)
+sgd = SGDRegressor(penalty='l2', max_iter=1000, learning_rate='constant' , eta0=0.001  )
+
+mlp = MLPRegressor(activation='relu', alpha=0.0001, batch_size='auto', beta_1=0.9,
+       beta_2=0.999, early_stopping=False, epsilon=1e-08,
+       hidden_layer_sizes=(13, 13, 13), learning_rate='constant',
+       learning_rate_init=0.001, max_iter=500, momentum=0.9,
+       nesterovs_momentum=True, power_t=0.5, random_state=None,
+       shuffle=True, solver='adam', tol=0.0001, validation_fraction=0.1,
+       verbose=False, warm_start=False)
+
+#sgd.fit(X_train, Y_train)
+mlp.fit(X_train, Y_train)
+hyperplane = mlp.coef_#+sgd.intercept_
+
+'''
 
 #print(not_science)
 sci1 = pickle.load(open('author_results.p','rb'))

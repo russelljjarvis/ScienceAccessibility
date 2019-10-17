@@ -2,6 +2,9 @@
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/russelljjarvis/ScienceAccessibility/dev)
 
+[Also see this short publication document](
+https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/comparing_the_written_language_of_scientific_and_non_scientific_sources.md)
+
 ## Overview
 Understanding a big word is hard, so when big ideas are written down with lots of big words, the large pile of big words is also hard to understand. 
 

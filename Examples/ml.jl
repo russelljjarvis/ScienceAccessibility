@@ -12,9 +12,6 @@ function trypy()
 
         Pkg.test("PyCall")
         plt = pyimport("matplotlib.pyplot")
-        x = range(0;stop=2*pi,length=1000); y = sin.(3*x + 4*cos.(2*x));
-        plt.plot(x, y, color="red", linewidth=2.0, linestyle="--")
-        plt.show()
 
 		#return unreliable_connect()
 	catch ex
@@ -22,10 +19,8 @@ function trypy()
         Pkg.test("PyCall")
         math = pyimport("math")
         math.sin(math.pi / 4) # returns ≈ 1/√2 = 0.70710678...
-	   end
+   end
 end
-#trypy()
-#try
 try
 	using Knet
 	using PyCall
@@ -43,23 +38,53 @@ catch
 	#Pkg.rm("StatPlots")
 	Pkg.add("StatsPlots")
 	#Pkg.add("Gallium")
-	Pkg.add(“GR”)
-    Pkg.add("IJulia");
-    Pkg.add("Plots");
-    Pkg.add("StatsPlots"); #to install the StatPlots package.
-    Pkg.add("DataFrames");
+	Pkg.add("GR")
+    Pkg.add("IJulia")
+    Pkg.add("Plots")
+    Pkg.add("StatsPlots") #to install the StatPlots package.
+    Pkg.add("DataFrames")
 	Pkg.add("Seaborn")
 	Pkg.add("PyPlot")
+
     using DataFrames
     using IJulia
-	#using Gallium
 	using Knet
-
     using Plots;
     using StatsPlots;
     using PyCall
 end
 
+@pyimport pickle
+f = pybuiltin("open")("scraped_new.p","rb")
+p = pickle.Unpickler(f)
+scraped_new = p[:load]()
+f[:close]()
+scraped_new[1]["wcount"]
+wc = [ sn["wcount"] for sn in scraped_new ]
+sp = [ sn["sp"] for sn in scraped_new ]
+#subjectivity = [ sn["ss"] for sn in scraped_new ]
+features = {}
+features = Dict()
+subjectivity = [ sn["ss"] for sn in scraped_new if haskey(sn,"ss") ]
+features["ss"] = subjectivity
+features["ss"] = wc
+features["sp"] = sp
+
+#var	info(sn)
+gr()
+histogram(sn)
+#using PyPlot
+#h = PyPlot.plt.hist(sn)
+png("document_length_distribution.png")
+varinfo()
+f = pybuiltin("open")("big_model_science.p","rb")
+p = pickle.Unpickler(f)
+bms = p[:load]()
+f[:close]()
+
+# ArtCorpus
+with open('traingDats.p','rb') as f:
+	trainingDats = pickle.load(f)
 
 
 #=
@@ -109,19 +134,5 @@ end
 	print(errdf)
 
 =#
-
-@pyimport pickle
-f = pybuiltin("open")("scraped_new.p","rb")
-p = pickle.Unpickler(f)
-scraped_new = p[:load]()
-f[:close]()
-scraped_new[1]["wcount"]
-sn = [ sn["wcount"] for sn in scraped_new ]
-#varinfo(sn)
-histogram(sn)
-#using PyPlot
-#h = PyPlot.plt.hist(sn)
-savefig("document_length_distribution.png")
-varinfo()
 
 #exit();

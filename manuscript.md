@@ -45,7 +45,7 @@ We include a number of available reference texts with varying complexity.
 | Art Corpus                       | 18.68  | a library of scientific papers published in The Royal Society of Chemistry |
 
 ### Plot Information 
-Entering an author name into the tool generates a histogram binned by readability score, which is initially populated exclusively by the ART [@Soldatova:2007] corpus data. We use this data because it is a pre-established library of scientific papers. The resulting graph displays the mean writing complexity of the entered author against a distribution of ART corpus content.
+Entering an author name into the tool generates a histogram binned by readability score, which is initially populated exclusively by the ART corpus [@Soldatova:2007] data. We use this data because it is a pre-established library of scientific papers. The resulting graph displays the mean writing complexity of the entered author against a distribution of ART corpus content.
 
 Upgoer5 [@Kuhn:2016], Wikipedia, and PMEG [@Bulhak:1996] libraries are also scraped and analyzed, with their mean readability scores applied to the histogram plot to contextualize the complexity of the ART corpus data with other text repositories of known complexity. 
 

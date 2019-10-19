@@ -1,7 +1,3 @@
-﻿
-
-### [Journal of Open Source Software](https://joss.readthedocs.io/en/latest/submitting.html)
-
 title: 'Comparing the Readability of Scientific and Non-scientific Sources'
 
 tags:
@@ -19,6 +15,9 @@ authors
   - name: Bradley G Lusk
     affiliation: Science The Earth; Mesa, AZ 85201, USA
     
+date: 18 October 2019
+bibliography: paper.bib
+
 ## Summary
 To ensure writing is accessible to a general population, writers must consider the length of written text, as well as sentence structure, vocabulary, and other language features [1]. While popular magazines, newspapers, and other outlets purposefully cater language for a wide audience, there is a tendency for academic writing to use complex, jargon-heavy language [2]. 
 
@@ -104,3 +103,15 @@ One final goal is to incorporate other readability metrics, including informatio
 [7] Gopen, George D., and Judith A. Swan. "The science of scientific writing." American Scientist 78, no. 6 (1990): 550-558.
 
 
+@article{Pearson:2017,
+  	Adsnote = {Provided by the SAO/NASA Astrophysics Data System},
+  	Adsurl = {http://adsabs.harvard.edu/abs/2017arXiv170304627P},
+  	Archiveprefix = {arXiv},
+  	Author = {{Pearson}, S. and {Price-Whelan}, A.~M. and {Johnston}, K.~V.},
+  	Eprint = {1703.04627},
+  	Journal = {ArXiv e-prints},
+  	Keywords = {Astrophysics - Astrophysics of Galaxies},
+  	Month = mar,
+  	Title = {{Gaps in Globular Cluster Streams: Pal 5 and the Galactic Bar}},
+  	Year = 2017
+}

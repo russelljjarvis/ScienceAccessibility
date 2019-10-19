@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.com/russelljjarvis/ScienceAccessibility.png)](https://travis-ci.com/russelljjarvis/ScienceAccessibility) 
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/russelljjarvis/ScienceAccessibility/dev)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/russelljjarvis/simple_science_access.git/master)
 
 [Also see this short publication document](
 https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/comparing_the_written_language_of_scientific_and_non_scientific_sources.md)

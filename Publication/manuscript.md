@@ -71,7 +71,7 @@ Here is a python example to search for results from academic author Richard Gerk
 mkdir $HOME/data_words
 docker run -v $HOME/data_words russelljarvis/science_accessibility_user "R Gerkin"
 ```
-![Specific Author Relative to Distribution](../Examples/figure_joss2.png)
+![Specific Author Relative to Distribution](../Examples/for_joss_standard_dev.png)
 
 
 ## Future Work

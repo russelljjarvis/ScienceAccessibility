@@ -87,5 +87,5 @@ While the readability of ART Corpus is comparable to that of other scientific jo
 
 One final goal is to incorporate other readability metrics, including information entropy, word length and compression rations, subjectivity, and reading ease scores. While the Flesch-Kincaid readability score is the most common readability metric, including other metrics will serve to provide more feedback to the user with regard to the complexity and structure of their written text.
 
-
+## References
 

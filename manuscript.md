@@ -20,7 +20,7 @@ date: 18 October 2019
 bibliography: paper.bib
 
 ## Summary
-To ensure writing is accessible to a general population, writers must consider the length of written text, as well as sentence structure, vocabulary, and other language features [1]. While popular magazines, newspapers, and other outlets purposefully cater language for a wide audience, there is a tendency for academic writing to use complex, jargon-heavy language [2]. 
+To ensure writing is accessible to a general population, writers must consider the length of written text, as well as sentence structure, vocabulary, and other language features [@Kutner:2006]. While popular magazines, newspapers, and other outlets purposefully cater language for a wide audience, there is a tendency for academic writing to use complex, jargon-heavy language [@Plavén-Sigray:2017]. 
 
 In the age of growing science communication, this tendency for scientists to use more complex language can carry over when writing in more mainstream media, such as blogs and social media. This can make public-facing material difficult to comprehend, undermining efforts to communicate scientific topics to the general public.
 
@@ -32,24 +32,24 @@ While other readability tools currently exist to report the complexity of a sing
 We built a web-scraping and text analysis infrastructure by extending many existing Free and Open Source (FOS) tools, including Google Scrape, Beautiful Soup, and Selenium.
 
 ### Text Metrics to Assess Readability
-The Flesch-Kincaid readability score [3] is the most commonly used metric to assess readability, and was used here to quantify the complexity of each text item.
+The Flesch-Kincaid readability score [@Kincaid:1975] is the most commonly used metric to assess readability, and was used here to quantify the complexity of each text item.
 
 ### Reference Texts used for Analysis
 We include a number of available reference texts with varying complexity. 
 
 | Text Source | Mean Complexity | Description |
 |----------|----------|:-------------:|
-| Upgoer 5 [4]                             | 6   | a library using only the 10,000 most commonly occurring English words |
+| Upgoer 5                            | 6   | a library using only the 10,000 most commonly occurring English words |
 | Wikipedia                               | 14.9 | a free, popular, crowdsourced encyclopedia   |
-| Post-Modern Essay Generator (PMEG) [5] | 16.5 | generates output consisting of sentences that obey the rules of written English, but without restraints on the semantic conceptual references   |
-| Art Corpus [6]                       | 18.68  | a library of scientific papers published in The Royal Society of Chemistry |
+| Post-Modern Essay Generator (PMEG)  | 16.5 | generates output consisting of sentences that obey the rules of written English, but without restraints on the semantic conceptual references   |
+| Art Corpus                       | 18.68  | a library of scientific papers published in The Royal Society of Chemistry |
 
 ### Plot Information 
-Entering an author name into the tool generates a histogram binned by readability score, which is initially populated exclusively by the ART corpus data. We use this data because it is a pre-established library of scientific papers. The resulting graph displays the mean writing complexity of the entered author against a distribution of ART corpus content.
+Entering an author name into the tool generates a histogram binned by readability score, which is initially populated exclusively by the ART [@Soldatova:2007] corpus data. We use this data because it is a pre-established library of scientific papers. The resulting graph displays the mean writing complexity of the entered author against a distribution of ART corpus content.
 
-Upgoer5, Wikipedia, and PMEG libraries are also scraped and analyzed, with their mean readability scores applied to the histogram plot to contextualize the complexity of the ART corpus data with other text repositories of known complexity. 
+Upgoer5 [@Kuhn:2016], Wikipedia, and PMEG [@Bulhak:1996] libraries are also scraped and analyzed, with their mean readability scores applied to the histogram plot to contextualize the complexity of the ART corpus data with other text repositories of known complexity. 
 
-We also include mean readability scores from two scholarly reference papers, Science Declining Over Time [1] and Science of Writing [7], which discuss writing to a broad audience in an academic context. We use these to demonstrate the feasability of discussing complex content using more accessible language.
+We also include mean readability scores from two scholarly reference papers, Science Declining Over Time [@Kutner:2006] and Science of Writing [@Gopen:1990], which discuss writing to a broad audience in an academic context. We use these to demonstrate the feasability of discussing complex content using more accessible language.
 
 Lastly, the mean reading level of the entered author's work, as well as the maximum and minimum scores, are displayed in the context of the above reference data. 
 

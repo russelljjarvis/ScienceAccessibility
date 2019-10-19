@@ -2,11 +2,23 @@
 
 ### [Journal of Open Source Software](https://joss.readthedocs.io/en/latest/submitting.html)
 
-# Comparing the Readability of Scientific and Non-scientific Sources
+title: 'Comparing the Readability of Scientific and Non-scientific Sources'
 
-## Authors
-Russell Jarvis, Patrick McGurrin
+tags:
+  readability
+  science communication
+  science writing
 
+authors
+  - name: Russell Jarvis
+    affiliation: Arizona State University
+  - name: Patrick McGurrin
+    affiliation: National Institute of Neurological Disorders and Stroke, National Institutes of Health
+  - name: Shivam Bansal
+    affiliation: Senior Data Scientist, H2O.ai
+  - name: Bradley G Lusk
+    affiliation: Science The Earth; Mesa, AZ 85201, USA
+    
 ## Summary
 To ensure writing is accessible to a general population, writers must consider the length of written text, as well as sentence structure, vocabulary, and other language features [1]. While popular magazines, newspapers, and other outlets purposefully cater language for a wide audience, there is a tendency for academic writing to use complex, jargon-heavy language [2]. 
 
@@ -14,38 +26,32 @@ In the age of growing science communication, this tendency for scientists to use
 
 To address this, we created a tool to analyze complexity of a given scientist’s work relative to other writing sources. The tool first quantifies existing text repositories with varying complexity, and subsequently uses this output as a reference to contextualize the readability of user-selected written work. 
 
-While other readability tools currently exist to report the complexity of a single document, this took uses a more data-driven approach to provide authors with insights into the readability of their published work with regard to other text repositories. This enables them to monitor the complexity of their writing with regard to other available text types, and with hope will lead to the creation of more accessible online material.
+While other readability tools currently exist to report the complexity of a single document, this tool uses a more data-driven approach to provide authors with insights into the readability of their published work with regard to other text repositories. This enables them to monitor the complexity of their writing with regard to other available text types, and with hope will lead to the creation of more accessible online material.
 
 ## Methods
 We built a web-scraping and text analysis infrastructure by extending many existing Free and Open Source (FOS) tools, including Google Scrape, Beautiful Soup, and Selenium.
 
 ### Text Metrics to Assess Readability
-| Text Metric |   Description of Measurement |
-|----------|----------|
-| Text-stat                                        | text reading level (complexity) |
-| The Natural Language Processing Tool Kit (NLTK)  | text subjectivity and sentiment |
-| Search Engine Factors      | page rank  |
-| LZW (de-)compression-ratio | information entropy of text |
-| Cluster centers            | clustering of text when organized using complexity, sentiment, word length and compression  ratios   |
-
-These metrics are combined to formulate a single readability score for each scraped item. 
+The Flesch-Kincaid readability score [3] is the most commonly used metric to assess readability, and was used here to quantify the complexity of each text item.
 
 ### Reference Texts used for Analysis
 We include a number of available reference texts with varying complexity. 
 
 | Text Source | Mean Complexity | Description |
 |----------|----------|:-------------:|
-| Upgoer 5 [3]                             | 6   | a library using only the 10,000 most commonly occurring English words |
+| Upgoer 5 [4]                             | 6   | a library using only the 10,000 most commonly occurring English words |
 | Wikipedia                               | 14.9 | a free, popular, crowdsourced encyclopedia   |
-| Post-Modern Essay Generator (PMEG) [4] | 16.5 | generates output consisting of sentences that obey the rules of written English, but without restraints on the semantic conceptual references   |
-| Art Corpus [5]                       | 18.68  | a library of scientific papers published in The Royal Society of Chemistry |
+| Post-Modern Essay Generator (PMEG) [5] | 16.5 | generates output consisting of sentences that obey the rules of written English, but without restraints on the semantic conceptual references   |
+| Art Corpus [6]                       | 18.68  | a library of scientific papers published in The Royal Society of Chemistry |
 
 ### Plot Information 
 Entering an author name into the tool generates a histogram binned by readability score, which is initially populated exclusively by the ART corpus data. We use this data because it is a pre-established library of scientific papers. The resulting graph displays the mean writing complexity of the entered author against a distribution of ART corpus content.
 
-Upgoer5, Wikipedia, and PMEG libraries are also scraped and analyzed, with their mean readability scores applied to the histogram plot to inform the user of the level of complexity of the entered author's work. 
+Upgoer5, Wikipedia, and PMEG libraries are also scraped and analyzed, with their mean readability scores applied to the histogram plot to contextualize the complexity of the ART corpus data with other text repositories of known complexity. 
 
-We also include mean readability scores from two scholarly reference papers, Science Declining Over Time [1] and Science of Writing [6], which discuss writing to a broad audience in an academic context. We use these to demonstrate the feasability of discussing complex content using more accessible language.
+We also include mean readability scores from two scholarly reference papers, Science Declining Over Time [1] and Science of Writing [7], which discuss writing to a broad audience in an academic context. We use these to demonstrate the feasability of discussing complex content using more accessible language.
+
+Lastly, the mean reading level of the entered author's work, as well as the maximum and minimum scores, are displayed in the context of the above reference data. 
 
 ### Reproducibility
 A Docker file and associated container together serve as a self-documenting and portable software environment clone to ensure reproducibility given the hierarchy of software dependencies.
@@ -79,15 +85,22 @@ We have created a command line interface (CLI) for using this tool. However, we 
 
 While the readability of ART Corpus is comparable to that of other scientific journals [2], a future goal is also to incoporate a larger repository of journal articles to compute the distribution of readability. In addition, we're interested in general readability of the web, and aim to add search engine queries of different and broad-ranging lists of search terms to assess readability of an eclectic range of text. This would further contextualize the readability of published scientific work with regard to topics engaged by the public on a more daily basis.
 
+One final goal is to incorporate other readability metrics, including information entropy, word length and compression rations, subjectivity, and reading ease scores. While the Flesch-Kincaid readability score is the most common readability metric, including other metrics will serve to provide more feedback to the user with regard to the complexity and structure of their written text.
+
+
 ## References
-[1] Kutner, Mark, Elizabeth Greenberg, and Justin Baer. "A First Look at the Literacy of America's Adults in the 21st Century. NCES 2006-470." _National Center for Education Statistics_(2006).
+[1] Kutner, Mark, Elizabeth Greenberg, and Justin Baer. "A First Look at the Literacy of America's Adults in the 21st Century. NCES 2006-470." The National Center for Education Statistics. (2006).
 
-[2] Plavén-Sigray, Pontus, Granville James Matheson, Björn Christian Schiffler, and William Hedley Thompson. "The readability of scientific texts is decreasing over time." Elife 6 (2017).
+[2] Plavén-Sigray, Pontus, Granville James Matheson, Björn Christian Schiffler, and William Hedley Thompson. "The readability of scientific texts is decreasing over time." Elife. (2017).
 
-[3] Kuhn, Tobias. "The controlled natural language of randall munroe’s thing explainer." International Workshop on Controlled Natural Language. Springer, Cham, (2016).
+[3] Kincaid JP, Fishburne RP Jr, Rogers RL, Chissom BS. "Derivationof new readability formulas (Automated Readability Index, FogCount and Flesch Reading Ease Formula) for Navy enlistedpersonnel".The Institue for Simulation and Training, (1975): 8–75.
 
-[4] Bulhak, Andrew C. "On the simulation of postmodernism and mental debility using recursive transition networks." Monash University Department of Computer Science (1996).  
+[4] Kuhn, Tobias. "The controlled natural language of randall munroe’s thing explainer." International Workshop on Controlled Natural Language. Springer, Cham, (2016).
 
-[5] Soldatova, Larisa, and Maria Liakata. "An ontology methodology and cisp-the proposed core information about scientific papers." JISC Project Report (2007).
+[5] Bulhak, Andrew C. "On the simulation of postmodernism and mental debility using recursive transition networks." Monash University Department of Computer Science (1996).  
 
-[6] Gopen, George D., and Judith A. Swan. "The science of scientific writing." American Scientist 78, no. 6 (1990): 550-558.
+[6] Soldatova, Larisa, and Maria Liakata. "An ontology methodology and cisp-the proposed core information about scientific papers." JISC Project Report (2007).
+
+[7] Gopen, George D., and Judith A. Swan. "The science of scientific writing." American Scientist 78, no. 6 (1990): 550-558.
+
+

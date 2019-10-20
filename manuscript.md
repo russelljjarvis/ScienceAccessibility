@@ -44,7 +44,7 @@ Before analysis of the user input, we query a number of available text repositor
 
 The author's name entered by the user is then queried through Google Scholar, returning the results from articles containing the author's name. 
 
-For all items, the Flesch-Kincaid readability score [@Kincaid:1975] - the most commonly used metric to assess readability - is used to quantify the complexity of all items.
+The Flesch-Kincaid readability score [@Kincaid:1975] - the most commonly used metric to assess readability - is then used to quantify the complexity of all items.
 
 ### Plot Information 
 The entered author name generates a histogram binned by readability score, which is initially populated exclusively by the ART corpus [@Soldatova:2007] data. We use this data because it is a pre-established library of scientific papers. The resulting graph displays the mean writing complexity of the entered author against a distribution of ART corpus content.

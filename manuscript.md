@@ -39,10 +39,10 @@ Before analysis of the user input, we query and analyze a number of available te
 
 | Text Source | Mean Complexity | Description |
 |----------|----------|:-------------:|
-| Upgoer 5                            | 6   | a library using only the 10,000 most commonly occurring English words |
-| Wikipedia                               | 14.9 | a free, popular, crowdsourced encyclopedia   |
+| Upgoer 5                            | 6   | library using only the 10,000 most commonly occurring English words |
+| Wikipedia                               | 14.9 | free, popular, crowdsourced encyclopedia   |
 | Post-Modern Essay Generator (PMEG)  | 16.5 | generates output consisting of sentences that obey the rules of written English, but without restraints on the semantic conceptual references   |
-| Art Corpus                       | 18.68  | a library of scientific papers published in The Royal Society of Chemistry |
+| Art Corpus                       | 18.68  | library of scientific papers published in The Royal Society of Chemistry |
 
 The author's name entered by the user is queried through Google Scholar, returning the results from articles containing the author's name. The Flesch-Kincaid readability score is then calculated for each of these articles.
 

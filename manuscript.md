@@ -29,6 +29,8 @@ To address this, we created a tool to analyze complexity of a given scientist’
 While other readability tools currently exist to report the complexity of a single document, this tool uses a more data-driven approach to provide authors with insights into the readability of their published work with regard to other text repositories. This will enable them to monitor the complexity of their writing with regard to other available text types, and lead to the creation of more accessible online material. We hope it will help scientists interested in science communication to make their published work more accessible to a broad audience, and lead to an improved global communication and understanding of complex topics.
 
 ## Methods
+
+### Text Analysis Metrics
 We built a web-scraping and text analysis infrastructure by extending many existing Free and Open Source (FOS) tools, including Google Scrape, Beautiful Soup, and Selenium.
 
 The Flesch-Kincaid readability score [@Kincaid:1975] is the most commonly used metric to assess readability, and was used here to quantify the complexity of each text item.

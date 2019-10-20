@@ -80,7 +80,7 @@ docker run -v $HOME/data_words russelljarvis/science_accessibility_user "R Gerki
 ![Specific Author Relative to Distribution](for_joss_standard_dev.png)
 
 This tool also allows academic authors in the same field to compete with each other for the lowest average reading grade level. Public competitions and leader boards often incentivise good practices.
-See for example in the figure below, two authors who publish i9n computational neuroscience will usually have a different mean reading grade level:
+See for example in the figure below, two authors who publish in the field: "Computational Neuroscience" will likely have a different mean reading grade levels:
 ![Specific Author Relative to Distribution](compete.png)
 
 

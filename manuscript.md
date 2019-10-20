@@ -1,8 +1,8 @@
 title: 'Exploring the Readability of Scientific and Non-scientific Sources'
 		
 tags:
-  readability
-  science communication
+  readability;
+  science communication;
   science writing
 
 authors

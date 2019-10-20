@@ -1,4 +1,4 @@
-title: 'Comparing the Readability of Scientific and Non-scientific Sources'
+title: 'Exploring the Readability of Scientific and Non-scientific Sources'
 		
 tags:
   readability

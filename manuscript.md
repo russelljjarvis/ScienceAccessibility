@@ -20,7 +20,7 @@ date: 20 October 2019
 bibliography: paper.bib
 
 ## Summary
-To ensure writing is accessible to a general population, writers must consider the length of written text, as well as sentence structure, vocabulary, and other language features [@Kutner:2006]. While popular magazines, newspapers, and other outlets purposefully cater language for a wide audience, there is a tendency for academic writing to use complex, jargon-heavy language [@Plavén-Sigray:2017]. 
+To ensure writing is accessible to the general population, writers must consider the length of written text, as well as sentence structure, vocabulary, and other language features [@Kutner:2006]. While popular magazines, newspapers, and other outlets purposefully cater language for a wide audience, there is a tendency for academic writing to use complex, jargon-heavy language [@Plavén-Sigray:2017]. 
 
 In the age of growing science communication, this tendency for scientists to use more complex language can carry over when writing in more mainstream media, such as blogs and social media. This can make public-facing material difficult to comprehend, undermining efforts to communicate scientific topics to the general public.
 
@@ -35,7 +35,7 @@ We built a web-scraping and text analysis infrastructure by extending many exist
 
 The Flesch-Kincaid readability score [@Kincaid:1975] is the most commonly used metric to assess readability, and was used here to quantify the complexity of each text item.
 
-Before analysis of the user input, we query and analyze a number of available text repositories with varying complexity. The Flesch-Kincaid readability score was caluclated for each time in the repository.
+Before analysis of the user input, we query and analyze a number of available text repositories with varying complexity. The Flesch-Kincaid readability score was calculated for each time in the repository.
 
 | Text Source | Mean Complexity | Description |
 |----------|----------|:-------------:|
@@ -44,14 +44,14 @@ Before analysis of the user input, we query and analyze a number of available te
 | Post-Modern Essay Generator (PMEG)  | 16.5 | generates output consisting of sentences that obey the rules of written English, but without restraints on the semantic conceptual references   |
 | Art Corpus                       | 18.68  | a library of scientific papers published in The Royal Society of Chemistry |
 
-The author's name entered by the user is queried through Google Scholar, returning the results from articles containing the author's name. The Flesch-Kincaid readability score is then caluclated for each of these articles.
+The author's name entered by the user is queried through Google Scholar, returning the results from articles containing the author's name. The Flesch-Kincaid readability score is then calculated for each of these articles.
 
 ### Plot Information 
 The entered author name generates a histogram binned by readability score, which is initially populated exclusively by the ART corpus [@Soldatova:2007] data. We use this data because it is a pre-established library of scientific papers. The resulting graph displays the mean writing complexity of the entered author against a distribution of ART corpus content.
 
 The mean readability scores of Upgoer5 [@Kuhn:2016], Wikipedia, and PMEG [@Bulhak:1996] libraries are also applied to the histogram plot to contextualize the complexity of the ART corpus data with other text repositories of known complexity. 
 
-We also include mean readability scores from two scholarly reference papers, Science Declining Over Time [@Kutner:2006] and Science of Writing [@Gopen:1990], which discuss writing to a broad audience in an academic context. We use these to demonstrate the feasability of discussing complex content using more accessible language.
+We also include mean readability scores from two scholarly reference papers, Science Declining Over Time [@Kutner:2006] and Science of Writing [@Gopen:1990], which discuss writing to a broad audience in an academic context. We use these to demonstrate the feasibility of discussing complex content using more accessible language.
 
 Lastly, the mean reading level of the entered author's work, as well as the maximum and minimum scores, are displayed in the context of the above reference data. 
 
@@ -89,9 +89,8 @@ This tool also allows the entry of two author names to view whose text has the l
 ## Future Work
 We have created a command line interface (CLI) for using this tool. However, we aim to expand this to a web application that is more user friendly to those less familiar with coding. 
 
-While the readability of ART Corpus is comparable to that of other scientific journals [2], a future goal is also to incoporate a larger repository of journal articles to compute the distribution of readability. In addition, we're interested in general readability of the web, and aim to add search engine queries of different and broad-ranging lists of search terms to assess readability of an eclectic range of text. This would further contextualize the readability of published scientific work with regard to topics engaged by the public on a more daily basis.
+The readability of ART Corpus is comparable to that of other scientific journals [2], but incorporating a larger repository of journal articles of various topics, and perhaps even overlaying them on the plot, would nonetheless be beneficial. In addition, adding search engine queries of different, broad-ranging lists of search would also help to further contextualize the readability of published scientific work with regard to topics engaged by the public on a more daily basis.
 
-A final goal is to incorporate other readability metrics, including information entropy, word length, and compression rations, subjectivity, and reading ease scores. While the Flesch-Kincaid readability score is the most common readability metric, including other metrics will serve to provide more robust feedback to the user with regard to the complexity and structure of their written text.
+While the Flesch-Kincaid readability score is the most common readability metric, including other metrics, such as information entropy, word length, and compression ratios, subjectivity, and reading ease scores, will serve to provide more robust feedback to the user with regard to the complexity and structure of their written text.
 
-
-
+Finally, we believe that the idea public competition could be a fun and interactive way for scientists to improve their science communication skills, and believe there is room for expansion here as well.

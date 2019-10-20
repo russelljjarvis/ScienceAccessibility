@@ -1,11 +1,11 @@
 title: 'Exploring the Readability of Scientific and Non-scientific Sources'
 		
 tags:
-  -readability;
-  -science communication;
-  -science writing
+  - readability
+  - science communication
+  - science writing
 
-authors
+authors:
   - name: Russell Jarvis
     affiliation: PhD Candidate Neuroscience, Arizona State University
   - name: Patrick McGurrin
@@ -94,3 +94,5 @@ The readability of ART Corpus is comparable to that of other scientific journals
 While the Flesch-Kincaid readability score is the most common readability metric, including other metrics, such as information entropy, word length, and compression ratios, subjectivity, and reading ease scores, will serve to provide more robust feedback to the user with regard to the complexity and structure of their written text.
 
 Finally, we believe that the idea public competition could be a fun and interactive way for scientists to improve their science communication skills, and believe there is room for expansion here as well.
+
+## References

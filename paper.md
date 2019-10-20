@@ -1,9 +1,9 @@
 title: 'Exploring the Readability of Scientific and Non-scientific Sources'
 		
 tags:
-  readability;
-  science communication;
-  science writing
+  -readability;
+  -science communication;
+  -science writing
 
 authors
   - name: Russell Jarvis

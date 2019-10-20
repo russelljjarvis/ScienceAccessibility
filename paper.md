@@ -16,7 +16,6 @@ authors:
     affiliation: Science The Earth; Mesa, AZ 85201, USA
     
 date: 20 October 2019
-
 bibliography: paper.bib
 
 ## Summary

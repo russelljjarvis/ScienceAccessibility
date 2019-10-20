@@ -1,5 +1,5 @@
 title: 'Comparing the Readability of Scientific and Non-scientific Sources'
-
+		
 tags:
   readability
   science communication
@@ -77,7 +77,7 @@ Here is a python example to search for results from academic author Richard Gerk
 mkdir $HOME/data_words
 docker run -v $HOME/data_words russelljarvis/science_accessibility_user "R Gerkin"
 ```
-![Specific Author Relative to Distribution](Examples/figure_joss.png)
+![Specific Author Relative to Distribution](for_joss_standard_dev.png)
 
 
 ## Future Work
@@ -87,5 +87,5 @@ While the readability of ART Corpus is comparable to that of other scientific jo
 
 One final goal is to incorporate other readability metrics, including information entropy, word length and compression rations, subjectivity, and reading ease scores. While the Flesch-Kincaid readability score is the most common readability metric, including other metrics will serve to provide more feedback to the user with regard to the complexity and structure of their written text.
 
-## References
+
 

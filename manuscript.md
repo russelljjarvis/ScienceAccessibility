@@ -7,7 +7,7 @@ tags:
 
 authors
   - name: Russell Jarvis
-    affiliation: Arizona State University
+    affiliation: PhD Candidate Neuroscience, Arizona State University
   - name: Patrick McGurrin
     affiliation: National Institute of Neurological Disorders and Stroke, National Institutes of Health
   - name: Shivam Bansal

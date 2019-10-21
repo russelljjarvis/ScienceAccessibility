@@ -77,7 +77,7 @@ Here is a python example to search for results from academic author Richard Gerk
 mkdir $HOME/data_words
 docker run -v $HOME/data_words russelljarvis/science_accessibility_user "R Gerkin"
 ```
-![Specific Author Relative to Distribution](for_joss_standard_dev.png)
+![Specific Author Relative to Distribution](competition_author_joss.png)
 
 This tool also allows academic authors in the same field to compete with each other for the lowest average reading grade level. Public competitions and leader boards often incentivise good practices.
 See for example in the figure below, two authors who publish i9n computational neuroscience will usually have a different mean reading grade level:

@@ -3,12 +3,15 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/russelljjarvis/simple_science_access.git/master)
 
 [Also see this short publication document](
-https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/comparing_the_written_language_of_scientific_and_non_scientific_sources.md)
+https://github.com/russelljjarvis/ScienceAccessibility/blob/master/paper.md)
 
 ## Overview
 Understanding a big word is hard, so when big ideas are written down with lots of big words, the large pile of big words is also hard to understand. 
 
 We used a computer to read lots of different writing, meant for different people, to see how hard each piece of writing was to understand. People may avoid learning hard ideas, only because too many hard words encountered in the process.  We think we can help by explaining the problem with smaller words, and by creating tools to address the problem.
+
+## Rationale
+![image](https://user-images.githubusercontent.com/7786645/54105665-f23dd180-4390-11e9-885b-ee0ed591bf63.png)
 
 
 ## Machine Estimation of Writing Complexity:

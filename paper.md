@@ -53,7 +53,7 @@ The mean readability scores of Upgoer5 [@Kuhn:2016], Wikipedia, and PMEG [@Bulha
 
 We also include mean readability scores from two scholarly reference papers, Science Declining Over Time [@Kutner:2006] and Science of Writing [@Gopen:1990], which discuss writing to a broad audience in an academic context. We use these to demonstrate the feasibility of discussing complex content using more accessible language.
 
-Lastly, the mean reading level of the entered author's work, as well as the maximum and minimum scores, are displayed on the plot. Thus, the resulting graph displays the mean writing complexity of the entered author against a distribution of ART corpus content as these other text repositories of known complexity.
+Lastly, the mean reading level of the entered author's work, as well as the maximum and minimum scores, are displayed on the plot. Thus, the resulting graph displays the mean writing complexity of the entered author against a distribution of ART corpus content as well as these other text repositories of known complexity.
 
 ### Reproducibility
 A Docker file and associated container together serve as a self-documenting and portable software environment clone to ensure reproducibility given the hierarchy of software dependencies.

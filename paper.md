@@ -61,7 +61,7 @@ A Docker file and associated container together serve as a self-documenting and 
 ## Results
 Data are available here: [Open Science Framework data repository](https://osf.io/dashboard).
 
-![Specific Author Relative to Distribution](figures/for_joss_std_dev.png)
+![Specific Author Relative to Distribution](figures/for_joss_standard_dev.png)
 
 This tool also allows the entry of two author names to view whose text has the lowest average reading grade level. Public competitions and leader boards often incentivize good practices, and may also help to improve readability scores over time.
 

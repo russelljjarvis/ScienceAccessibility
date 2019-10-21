@@ -2,8 +2,6 @@
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/russelljjarvis/simple_science_access.git/master)
 
-[Also see this short publication document](https://github.com/russelljjarvis/ScienceAccessibility/blob/master/manuscript.md)
-
 ## Overview
 Understanding a big word is hard, so when big ideas are written down with lots of big words, the large pile of big words is also hard to understand. 
 

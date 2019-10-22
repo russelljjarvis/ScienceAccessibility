@@ -49,11 +49,11 @@ The Flesch-Kincaid readability score [@Kincaid:1975] - the most commonly used me
 ### Plot Information 
 The resulting plot is a histogram binned by readability score, initially populated exclusively by the ART corpus [@Soldatova:2007] data. We use this data because it is a pre-established library of scientific papers. 
 
-The mean readability scores of Upgoer5 [@Kuhn:2016], Wikipedia, and PMEG [@Bulhak:1996] libraries are labeled on the plot to contextualize the complexity of the ART corpus data with other text repositories of known complexity. 
+The mean readability scores of Upgoer5 [@Kuhn:2016], Wikipedia, and PMEG [@Bulhak:1996] libraries are labeled on the plot as sngle data points to contextualize the complexity of the ART corpus data with other text repositories of known complexity. 
 
 We also include mean readability scores from two scholarly reference papers, Science Declining Over Time [@Kutner:2006] and Science of Writing [@Gopen:1990], which discuss writing to a broad audience in an academic context. We use these to demonstrate the feasibility of discussing complex content using more accessible language.
 
-Lastly, the mean reading level of the entered author's work, as well as the maximum and minimum scores, are displayed on the plot. Thus, the resulting graph displays the mean writing complexity of the entered author against a distribution of ART corpus content as well as these other text repositories of known complexity.
+Lastly, the mean reading level of the entered author's work is displayed as a single data point, and a red-shaded region to represent the standard deviation. We also display single data points for the maximum and minimum scores. Thus, the resulting graph displays the mean writing complexity of the entered author against a distribution of ART corpus content as well as these other text repositories of known complexity.
 
 ### Reproducibility
 A Docker file and associated container together serve as a self-documenting and portable software environment clone to ensure reproducibility given the hierarchy of software dependencies.
@@ -61,7 +61,7 @@ A Docker file and associated container together serve as a self-documenting and 
 ## Results
 Data are available here: [Open Science Framework data repository](https://osf.io/dashboard).
 
-![Specific Author Relative to Distribution](Examples/figure_joss.png)
+![Specific Author Relative to Distribution](figures/for_joss_standard_dev.png)
 
 This tool also allows the entry of two author names to view whose text has the lowest average reading grade level. Public competitions and leader boards often incentivize good practices, and may also help to improve readability scores over time.
 

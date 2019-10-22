@@ -24,11 +24,11 @@ To ensure that writing is accessible to the general population, authors must con
 
 In the age of growing science communication, this tendency for scientists to use more complex language can carry over when writing in more mainstream media, such as blogs and social media. This can make public-facing material difficult to comprehend, undermining efforts to communicate scientific topics to the general public.
 
-While readability tools, such as Readable (https://www.webfx.com/tools/read-able/) and Upgoer5 (https://splasho.com/upgoer5/) currently exist to report the complexity of a single document, these tools are unable to provide more context to this metric beyond a single numerical value (e.g. grade level, number of complex words). 
+While readability tools, such as Readable (https://www.webfx.com/tools/read-able/) and Upgoer5 (https://splasho.com/upgoer5/) currently exist to report the complexity of a single document, these tools are unable to provide more context to this metric beyond a single numerical value (e.g. grade level, number of complex words). In addition, these tools do not address complexity in a more academic-type setting.
 
 To address this, we created a tool that uses a data-driven approach to provide authors with insights into the readability of their published work with regard to other text repositories. The tool first quantifies existing text repositories with varying complexity, and subsequently uses this output as a reference to contextualize the readability of user-selected written work. 
 
-This tool also introduces one additional feature for readability comparison and improvement. It allows the entry of two author names to enable a compeitition to view whose text has the lowest average reading grade level. Public competitions can often incentivize good practices, and may be a fun and interactive tool to help improve readability scores over time.
+This tool also introduces one additional feature for readability comparison and improvement. It allows the entry of two author names to enable a compeitition as to whose text has the lowest average readability score. Public competitions can often incentivize good practices, and may be a fun and interactive tool to help improve readability scores over time.
 
 Ultimately, this tool will expand upon current readability metrics by computing a more detailed and comparative look at the complexity of written text. We hope that this will allow scientists and other experts to better monitor the complexity of their writing relative to other text types, leading to the creation of more accessible online material. And with hope, an improved global communication and understanding of complex topics.
 

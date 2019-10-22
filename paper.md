@@ -53,9 +53,10 @@ The Flesch-Kincaid readability score [@Kincaid:1975] - the most commonly used me
 ### Reproducibility
 A Docker file and associated container together serve as a self-documenting and portable software environment clone to ensure reproducibility given the hierarchy of software dependencies.
 
-## Results
+## Output
 Data are available here: [Open Science Framework data repository](https://osf.io/dashboard).
 
+### Contextualized Readability Output
 The generated plot for contextualized readability information is a histogram binned by readability score, initially populated exclusively by the ART corpus [@Soldatova:2007] data. We use this data because it is a pre-established library of scientific papers. 
 
 The mean readability scores of Upgoer5 [@Kuhn:2016], Wikipedia, and PMEG [@Bulhak:1996] libraries are labeled on the plot as sngle data points to contextualize the complexity of the ART corpus data with other text repositories of known complexity. 
@@ -67,6 +68,7 @@ Lastly, the mean reading level of the entered author's work is displayed as a si
 ![Specific Author Relative to Distribution](figures/for_joss_standard_dev.png)
 
 
+### Competition Output
 The two-author competition plot displays two distributions which display the readability distribution of only the author's written work, as scraped and analyzed from Google Scholar. Vertical lines are used to plot the mean readability value for each author. 
 
 ![Specific Author Relative to Distribution](figures/competition_figure_joss.png)

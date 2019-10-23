@@ -26,9 +26,9 @@ In the age of growing science communication, this tendency for scientists to use
 
 While readability tools, such as Readable (https://www.webfx.com/tools/read-able/) and Upgoer5 (https://splasho.com/upgoer5/) currently exist to report on readability of text, they report the complexity of only a single document. In addition, these tools do not address complexity in a more academic-type setting.
 
-To address this, we created a tool that uses a data-driven approach to provide authors with insights into the readability of the entirety of their published scholarly work with regard to other text repositories. The tool first quantifies existing text repositories with varying complexity, and subsequently uses this output as a reference to contextualize the readability of user-selected written work. 
+To address this, we created a tool that uses a data-driven approach to provide authors with insights into the readability of the entirety of their published scholarly work with regard to other text repositories. The tool first quantifies existing text repositories with varying complexity, and subsequently uses this output as a reference to show how the readability of user-selected written work compares to these other known resources. 
 
-This tool also introduces one additional feature for readability comparison and improvement. It allows the entry of two author names to enable a compeitition as to whose text has the lowest average readability score. Public competitions can often incentivize good practices, and may be a fun and interactive tool to help improve readability scores over time.
+This tool also introduces one additional feature for readability comparison and improvement. It allows the entry of two author names to enable a competition as to whose text has the lowest average readability score. Public competitions can often incentivize good practices, and this may be a fun and interactive tool to help improve readability scores over time.
 
 Ultimately, this tool will expand upon current readability metrics by computing a more detailed and comparative look at the complexity of written text. We hope that this will allow scientists and other experts to better monitor the complexity of their writing relative to other text types, leading to the creation of more accessible online material. And with hope, an improved global communication and understanding of complex topics.
 
@@ -57,9 +57,9 @@ A Docker file and associated container together serve as a self-documenting and 
 Data are available here: [Open Science Framework data repository](https://osf.io/dashboard).
 
 ### Contextualized Readability Output
-The generated plot for contextualized readability information is a histogram binned by readability score, initially populated exclusively by the ART corpus [@Soldatova:2007] data. We use this data because it is a pre-established library of scientific papers. 
+The generated plot for contextualized readability information is a histogram binned by readability score, initially populated exclusively by the ART corpus [@Soldatova:2007] data. We use this data because it is a pre-established library of scientific papers. The readability of ART Corpus has also been shown to be comparable to that of other scientific journals [2].
 
-The mean readability scores of Upgoer5 [@Kuhn:2016], Wikipedia, and PMEG [@Bulhak:1996] libraries are labeled on the plot as sngle data points to contextualize the complexity of the ART corpus data with other text repositories of known complexity. 
+The mean readability scores of Upgoer5 [@Kuhn:2016], Wikipedia, and PMEG [@Bulhak:1996] libraries are labeled on the plot as single data points to contextualize the complexity of the ART corpus data with other text repositories of known complexity. 
 
 We also include mean readability scores from two scholarly reference papers, Science Declining Over Time [@Kutner:2006] and Science of Writing [@Gopen:1990], which discuss writing to a broad audience in an academic context. We use these to demonstrate the feasibility of discussing complex content using more accessible language.
 
@@ -72,13 +72,5 @@ Lastly, the mean reading level of the entered author's work is displayed as a si
 The two-author competition plot displays two distributions which display the readability distribution of only the author's written work, as scraped and analyzed from Google Scholar. Vertical lines are used to plot the mean readability value for each author. 
 
 ![Specific Author Relative to Distribution](figures/competition_figure_joss.png)
-
-
-## Future Work
-We have created a command line interface (CLI) for using this tool. However, we aim to expand this to a web application that is more user friendly to those less familiar with coding. 
-
-The readability of ART Corpus is comparable to that of other scientific journals [2], but incorporating a larger repository of journal articles of various topics, and perhaps even overlaying them on the plot, would nonetheless be beneficial. In addition, adding search engine queries of different, broad-ranging lists of search would also help to further contextualize the readability of published scientific work with regard to topics engaged by the public on a more daily basis.
-
-While the Flesch-Kincaid readability score is the most common readability metric, including other metrics, such as information entropy, word length, and compression ratios, subjectivity, and reading ease scores, will serve to provide more robust feedback to the user with regard to the complexity and structure of their written text.
 
 ## References

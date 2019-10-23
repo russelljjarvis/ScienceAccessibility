@@ -19,7 +19,7 @@ date: 20 October 2019
 
 bibliography: paper.bib
 
-## Summary
+# Summary
 To ensure that writing is accessible to the general population, authors must consider the length of written text, as well as sentence structure, vocabulary, and other language features [@Kutner:2006]. While popular magazines, newspapers, and other outlets purposefully cater language for a wide audience, there is a tendency for academic writing to use more complex, jargon-heavy language [@Plavén-Sigray:2017]. 
 
 In the age of growing science communication, this tendency for scientists to use more complex language can carry over when writing in more mainstream media, such as blogs and social media. This can make public-facing material difficult to comprehend, undermining efforts to communicate scientific topics to the general public.
@@ -32,7 +32,7 @@ This tool also introduces one additional feature for readability comparison and 
 
 Ultimately, this tool will expand upon current readability metrics by computing a more detailed and comparative look at the complexity of written text. We hope that this will allow scientists and other experts to better monitor the complexity of their writing relative to other text types, leading to the creation of more accessible online material. And with hope, an improved global communication and understanding of complex topics.
 
-## Methods
+# Methods
 
 ### Text Analysis Metrics
 We built a web-scraping and text analysis infrastructure by extending many existing Free and Open Source (FOS) tools, including Google Scrape, Beautiful Soup, and Selenium.
@@ -53,10 +53,10 @@ The Flesch-Kincaid readability score [@Kincaid:1975] - the most commonly used me
 ### Reproducibility
 A Docker file and associated container together serve as a self-documenting and portable software environment clone to ensure reproducibility given the hierarchy of software dependencies.
 
-## Output
+# Output
 Data are available here: [Open Science Framework data repository](https://osf.io/dashboard).
 
-### Contextualized Readability Output
+## Contextualized Readability Output
 The generated plot for contextualized readability information is a histogram binned by readability score, initially populated exclusively by the ART corpus [@Soldatova:2007] data. We use this data because it is a pre-established library of scientific papers. The readability of ART Corpus has also been shown to be comparable to that of other scientific journals [2].
 
 The mean readability scores of Upgoer5 [@Kuhn:2016], Wikipedia, and PMEG [@Bulhak:1996] libraries are labeled on the plot as single data points to contextualize the complexity of the ART corpus data with other text repositories of known complexity. 
@@ -68,9 +68,9 @@ Lastly, the mean reading level of the entered author's work is displayed as a si
 ![Specific Author Relative to Distribution](figures/for_joss_standard_dev.png)
 
 
-### Competition Output
+## Competition Output
 The two-author competition plot displays two distributions which display the readability distribution of only the author's written work, as scraped and analyzed from Google Scholar. Vertical lines are used to plot the mean readability value for each author. 
 
 ![Specific Author Relative to Distribution](figures/competition_figure_joss.png)
 
-## References
+# References

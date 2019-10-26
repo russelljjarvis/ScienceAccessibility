@@ -71,6 +71,6 @@ Lastly, the mean reading level of the entered author's work is displayed as a si
 ## Competition Output
 The three-author competition plot displays two distributions which display the readability distribution of only the author's written work, as scraped and analyzed from Google Scholar. Vertical lines are used to plot the mean readability value for each author. 
 
-![Specific Author Relative to Distribution](figures/(figures/tournament.png)
+![Specific Author Relative to Distribution](figures/tournament.png)
 
 # References

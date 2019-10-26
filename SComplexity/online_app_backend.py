@@ -147,12 +147,7 @@ def find_nearest(array, value):
     idx = (np.abs(array - value)).argmin()
     return idx
 
-
-
-def call_from_front_end(NAME):
-    scholar_link=str('https://scholar.google.com/scholar?hl=en&as_sdt=0%2C3&q=')+str(NAME)
-    df, datay, ar  = enter_name_here(scholar_link,NAME)
-
+def ar_manipuluation(ar):
     ar = [ tl for tl in ar if tl is not None ]
     ar = [ tl for tl in ar if type(tl) is not type(str('')) ]
     ar = [ tl for tl in ar if 'standard' in tl.keys() ]
@@ -162,10 +157,25 @@ def call_from_front_end(NAME):
 
     with open('traingDats.p','rb') as f:
         trainingDats = pickle.load(f)
-
+        
     trainingDats.extend(ar)
+    return (ar, trainingDats)
 
-    with open('traingDats.p','wb') as f:
-        pickle.dump(trainingDats,f)
-    import plotting_author_versus_distribution
+def call_from_front_end(NAME,tour=None,NAME1=None):
+    if type(tour) is type(None):
+        scholar_link=str('https://scholar.google.com/scholar?hl=en&as_sdt=0%2C3&q=')+str(NAME)
+        df, datay, ar  = enter_name_here(scholar_link,NAME)
+        (ar, trainingDats) = ar_manipulation(ar)
 
+        with open('traingDats.p','wb') as f:
+            pickle.dump(trainingDats,f)
+        import plotting_author_versus_distribution
+    else:
+        scholar_link=str('https://scholar.google.com/scholar?hl=en&as_sdt=0%2C3&q=')+str(NAME)
+        df, datay, ar  = enter_name_here(scholar_link,NAME)
+        (ar0, trainingDats) = ar_manipulation(ar)
+        scholar_link=str('https://scholar.google.com/scholar?hl=en&as_sdt=0%2C3&q=')+str(NAME1)
+        df, datay, ar  = enter_name_here(scholar_link,NAME1)
+        (ar1, trainingDats) = ar_manipulation(ar)
+        import plotting_author_versus_distribution
+        

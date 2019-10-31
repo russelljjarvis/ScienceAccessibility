@@ -60,12 +60,6 @@ How different are the scores?
 ### The Following is a plot of the Distribution of Science Writing Versus non-science writing the [ART Science corpus](https://www.aber.ac.uk/en/media/departmental/computerscience/cb/art/gz/ART_Corpus.tar.gz):
 ![image](https://user-images.githubusercontent.com/7786645/53215155-96dbb780-360c-11e9-9280-d8592d31d2f9.png)
 
-![image](https://user-images.githubusercontent.com/7786645/53215964-33538900-3610-11e9-959f-b52b8d42bf0d.png)
-
-![image](https://user-images.githubusercontent.com/7786645/53226156-7117d800-3637-11e9-9a80-421a97ec6b1c.png)
-
-![image](https://user-images.githubusercontent.com/7786645/53226893-d5d43200-3639-11e9-82fc-e848a2964606.png)
-
 
 The science writing niche is characterized, by having a mean reading grade level of 18, neutral, to negatively polarized sentiment type and close to an almost complete absence of subjectivity. Science writing is more resistant to file compression, meaning that information entropy is high, due to concise, coded language. These statistical features, give quite a lot to go on, with regards to using language style to predict the scientific status of a randomly selected web document. The same notion of entropy being generally higher in science is corroborated with the perplexity measure, which measures how improbable the particular frequency distribution of words of observed in a document was.
 

@@ -2,11 +2,17 @@
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/russelljjarvis/simple_science_access.git/master)
 
-## Overview
+# Overview
+
 Understanding a big word is hard, so when big ideas are written down with lots of big words, the large pile of big words is also hard to understand. 
 
 We used a computer to quickly visit and read many different websites to see how hard each piece of writing was to understand. People may avoid learning hard ideas, only because too many hard words encountered in the process.  We think we can help by explaining the problem with smaller words, and by creating tools to address the problem.
 
+## Why
+We want to promote clearer and simpler writing in science, by encorouging scientists in the same field to compete with each other over writing more clearly.
+
+# How
+[A guide explains how to use this tool](Documentation/Documentation_Quick_Start.md)
 
 ## Machine Estimation of Writing Complexity:
 The accessibility of written word can be approximated by a computer program that reads over the text and guesses the mental difficulty, associated with comprehending a written document. The computer program maps reading difficult onto a quantity that is informed by the cognitive load of the writing, and the number of years of schooling needed to decode the language in the document. For convenience, we can refer to the difficulty associated with the text as the 'complexity' of the document. 

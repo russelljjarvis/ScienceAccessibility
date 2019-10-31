@@ -11,7 +11,7 @@ We used a computer to quickly visit and read many different websites to see how 
 ## Why Are We Doing This?
 We want to promote clearer and simpler writing in science, by encorouging scientists in the same field to compete with each other over writing more clearly.
 
-# How Are we Doing This?
+## How Are we Doing This?
 [A guide explains how to use this tool](Documentation/Documentation_Quick_Start.md)
 
 ## Machine Estimation of Writing Complexity:

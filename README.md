@@ -8,10 +8,10 @@ Understanding a big word is hard, so when big ideas are written down with lots o
 
 We used a computer to quickly visit and read many different websites to see how hard each piece of writing was to understand. People may avoid learning hard ideas, only because too many hard words encountered in the process.  We think we can help by explaining the problem with smaller words, and by creating tools to address the problem.
 
-## Why
+## Why Are We Doing This?
 We want to promote clearer and simpler writing in science, by encorouging scientists in the same field to compete with each other over writing more clearly.
 
-# How
+# How Are we Doing This?
 [A guide explains how to use this tool](Documentation/Documentation_Quick_Start.md)
 
 ## Machine Estimation of Writing Complexity:

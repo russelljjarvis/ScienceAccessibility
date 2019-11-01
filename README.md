@@ -1,3 +1,10 @@
+**[Installation](Documentation/Documentation_Quick_Start.md)** |
+**[Documentation](#documentation)** |
+**[Contributing](contributing.md)** |
+**[Testing](#testing)** |
+**[License](license.md)** |
+
+
 [![Build Status](https://travis-ci.com/russelljjarvis/ScienceAccessibility.png)](https://travis-ci.com/russelljjarvis/ScienceAccessibility) 
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/russelljjarvis/simple_science_access.git/master)

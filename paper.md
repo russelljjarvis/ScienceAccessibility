@@ -1,4 +1,4 @@
-title: 'Exploring the Readability of Scientific and Non-scientific Sources'
+title: 'A Tool for Exploring the Readability of Scientific Publications'
 		
 tags:
   - readability

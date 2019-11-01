@@ -1,7 +1,7 @@
 
 
 # Contributing to Open Source Science Accessibility Project 
-[this content draws from a standard](https://github.com/github/opensource.guide)
+[This content is based upon a pre-established standard that developers in this project adhere to](https://github.com/github/opensource.guide)
 
 
 We're excited to hear and learn from you.

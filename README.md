@@ -19,9 +19,8 @@ We used a computer to quickly visit and read many different websites to see how 
 We want to promote clearer and simpler writing in science, by encorouging scientists in the same field to compete with each other over writing more clearly.
 
 ## How Are we Doing This?
-[A guide explains how to use this tool](Documentation/Documentation_Quick_Start.md)
 
-## Machine Estimation of Writing Complexity:
+### Machine Estimation of Writing Complexity:
 The accessibility of written word can be approximated by a computer program that reads over the text and guesses the mental difficulty, associated with comprehending a written document. The computer program maps reading difficult onto a quantity that is informed by the cognitive load of the writing, and the number of years of schooling needed to decode the language in the document. For convenience, we can refer to the difficulty associated with the text as the 'complexity' of the document. 
 
 ### How do some well-known texts do?

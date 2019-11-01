@@ -3,6 +3,8 @@
 **[Contributing](contributing.md)** |
 **[Testing](#testing)** |
 **[License](license.md)** |
+**[Manuscript](manuscript.md)** |
+
 
 
 [![Build Status](https://travis-ci.com/russelljjarvis/ScienceAccessibility.png)](https://travis-ci.com/russelljjarvis/ScienceAccessibility) 

@@ -1,4 +1,4 @@
-title: 'A Tool for Exploring the Readability of Scientific Publications'
+title: 'A Tool for Assesing the Readability of Scientific Publications on Mass'
 		
 tags:
   - readability

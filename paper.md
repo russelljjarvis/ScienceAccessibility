@@ -1,4 +1,4 @@
-title: 'Exploring the Readability of Scientific and Non-scientific Sources'
+title: 'A Tool for Assesing the Readability of Scientific Publications on Mass'
 		
 tags:
   - readability
@@ -63,14 +63,14 @@ The mean readability scores of Upgoer5 [@Kuhn:2016], Wikipedia, and PMEG [@Bulha
 
 We also include mean readability scores from two scholarly reference papers, Science Declining Over Time [@Kutner:2006] and Science of Writing [@Gopen:1990], which discuss writing to a broad audience in an academic context. We use these to demonstrate the feasibility of discussing complex content using more accessible language.
 
-Lastly, the mean reading level of the entered author's work is displayed as a single data point, and a red-shaded region to represent the standard deviation. We also display single data points for the maximum and minimum scores. Thus, the resulting graph displays the mean writing complexity of the entered author against a distribution of ART corpus content as well as these other text repositories of known complexity.
+Lastly, the mean reading level of the entered author's work is displayed as a boxplot that has is shares an x-axis with the ART-corpus distribution data. The boxplot depicts mean, and the first and third quartiles of the authors specific works. The box plot enables the viewer of the report to get a sense of underlying variance in the specific authors work, relative to variance in the ART-corpus. We also display single data points for the maximum and minimum scores. Thus, the resulting graph displays the mean writing complexity of the entered author against a distribution of ART corpus content as well as these other text repositories of known complexity.
 
 ![Specific Author Relative to Distribution](figures/boxplot.png)
 
 
 ## Competition Output
-The three-author competition plot displays two distributions which display the readability distribution of only the author's written work, as scraped and analyzed from Google Scholar. Vertical lines are used to plot the mean readability value for each author. 
+The three-author competition plot displays two distributions which display the readability distribution of only the author's written work, as scraped and analyzed from Google Scholar. Vertical lines are used to plot the mean readability value for each author. Anonymous authors A and B, are co-authors that publish in the same field, thus their readability scores should be closely matched, as their score will be derived from some mutual documents. Anonymous author C, publishes in an unrelated field and does not co-author with authors A and B.
 
-![Specific Author Relative to Distribution](figures/(figures/tournament.png)
+![Specific Author Relative to Distribution](figures/tournament.png)
 
 # References

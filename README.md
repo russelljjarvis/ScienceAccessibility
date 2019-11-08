@@ -1,14 +1,28 @@
+**[Installation](Documentation/Documentation_Quick_Start.md)** |
+**[Documentation](#documentation)** |
+**[Contributing](contributing.md)** |
+**[Testing](#testing)** |
+**[License](license.md)** |
+**[Manuscript](manuscript.md)** |
+
+
+
 [![Build Status](https://travis-ci.com/russelljjarvis/ScienceAccessibility.png)](https://travis-ci.com/russelljjarvis/ScienceAccessibility) 
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/russelljjarvis/simple_science_access.git/master)
 
-## Overview
+# Overview
+
 Understanding a big word is hard, so when big ideas are written down with lots of big words, the large pile of big words is also hard to understand. 
 
-We used a computer to read lots of different writing, meant for different people, to see how hard each piece of writing was to understand. People may avoid learning hard ideas, only because too many hard words encountered in the process.  We think we can help by explaining the problem with smaller words, and by creating tools to address the problem.
+We used a computer to quickly visit and read many different websites to see how hard each piece of writing was to understand. People may avoid learning hard ideas, only because too many hard words encountered in the process.  We think we can help by explaining the problem with smaller words, and by creating tools to address the problem.
 
+## Why Are We Doing This?
+We want to promote clearer and simpler writing in science, by encorouging scientists in the same field to compete with each other over writing more clearly.
 
-## Machine Estimation of Writing Complexity:
+## How Are we Doing This?
+
+### Machine Estimation of Writing Complexity:
 The accessibility of written word can be approximated by a computer program that reads over the text and guesses the mental difficulty, associated with comprehending a written document. The computer program maps reading difficult onto a quantity that is informed by the cognitive load of the writing, and the number of years of schooling needed to decode the language in the document. For convenience, we can refer to the difficulty associated with the text as the 'complexity' of the document. 
 
 ### How do some well-known texts do?
@@ -53,12 +67,6 @@ How different are the scores?
 
 ### The Following is a plot of the Distribution of Science Writing Versus non-science writing the [ART Science corpus](https://www.aber.ac.uk/en/media/departmental/computerscience/cb/art/gz/ART_Corpus.tar.gz):
 ![image](https://user-images.githubusercontent.com/7786645/53215155-96dbb780-360c-11e9-9280-d8592d31d2f9.png)
-
-![image](https://user-images.githubusercontent.com/7786645/53215964-33538900-3610-11e9-959f-b52b8d42bf0d.png)
-
-![image](https://user-images.githubusercontent.com/7786645/53226156-7117d800-3637-11e9-9a80-421a97ec6b1c.png)
-
-![image](https://user-images.githubusercontent.com/7786645/53226893-d5d43200-3639-11e9-82fc-e848a2964606.png)
 
 
 The science writing niche is characterized, by having a mean reading grade level of 18, neutral, to negatively polarized sentiment type and close to an almost complete absence of subjectivity. Science writing is more resistant to file compression, meaning that information entropy is high, due to concise, coded language. These statistical features, give quite a lot to go on, with regards to using language style to predict the scientific status of a randomly selected web document. The same notion of entropy being generally higher in science is corroborated with the perplexity measure, which measures how improbable the particular frequency distribution of words of observed in a document was.

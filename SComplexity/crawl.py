@@ -145,7 +145,10 @@ def collect_pubs(url):
     try:
         crude_html = denver_to_text(url)
     except:
-        driver.get(url)
+        if type(url) is type(str()):
+            driver.get(url)
+        else:
+            return None
         crude_html = driver.page_source
     soup = BeautifulSoup(crude_html, 'html.parser')
     links = []

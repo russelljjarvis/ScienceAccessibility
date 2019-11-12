@@ -1,0 +1,14 @@
+### Text Metrics to Assess Readability
+| Text Metric |   Description of Measurement |
+|----------|----------|
+| Text-stat                                        | text reading level (complexity) |
+| The Natural Language Processing Tool Kit (NLTK)  | text subjectivity and sentiment |
+| Search Engine Factors      | page rank  |
+| LZW (de-)compression-ratio | information entropy of text |
+| Cluster centers            | clustering of text when organized using complexity, sentiment, word length and compression  ratios   |
+
+
+
+
+While the readability of ART Corpus is comparable to that of other scientific journals [2], a future goal is also to incoporate a larger repository of journal articles to compute the distribution of readability. In addition, we're interested in general readability of the web, and aim to add search engine queries of different and broad-ranging lists of search terms to assess readability of an eclectic range of text. This would further contextualize the readability of published scientific work with regard to topics engaged by the public on a more daily basis.
+

@@ -1,4 +1,9 @@
-### Text Metrics to Assess Readability
+
+### Additional Text Analysis Tools
+The current tool uses the Flesch-Kincaid readability score - the most commonly used metric to assess readability - to quantify the complexity of all scraped scientific text. However, we understand that other features of text can be incoporated to provide even more context into a text's depth and complexity. 
+
+The current code has these additional measurement metrics built in for future work. However, we felt that the main tool would be more straightforward to a user if the readability score was kept simple, so as to be used intuitively to improve readability. 
+
 | Text Metric |   Description of Measurement |
 |----------|----------|
 | Text-stat                                        | text reading level (complexity) |
@@ -7,8 +12,13 @@
 | LZW (de-)compression-ratio | information entropy of text |
 | Cluster centers            | clustering of text when organized using complexity, sentiment, word length and compression  ratios   |
 
+These other metrics can be used for future work. 
 
 
+### Additional web scraping tools
+For this tool we include one metric of the broader internet - wikipedia.
 
-While the readability of ART Corpus is comparable to that of other scientific journals [2], a future goal is also to incoporate a larger repository of journal articles to compute the distribution of readability. In addition, we're interested in general readability of the web, and aim to add search engine queries of different and broad-ranging lists of search terms to assess readability of an eclectic range of text. This would further contextualize the readability of published scientific work with regard to topics engaged by the public on a more daily basis.
+However, we also believe it could be useful to include a more broad quantification of the general readability of the web. To address this, the code is also equipped for search engine queries of different and broad-ranging lists of search terms to assess readability of an eclectic range of text. This would further contextualize the readability of published scientific work with regard to topics engaged by the public on a more daily basis.
+
+Again, we believe that this is outside the scope of the current tool, but could be useful for future iterations of this project. 
 

@@ -1,0 +1,22 @@
+
+### Additional Text Analysis Tools
+The current tool uses the Flesch-Kincaid readability score - the most commonly used metric to assess readability - to quantify the complexity of all scraped scientific text. We used this single metric intentionally, with the idea that  the main tool would be more straightforward to a user if the readability score was kept simple, so as to be used intuitively to improve readability. 
+
+However, we understand that other features of text can be incoporated to provide even more context into a text's depth and complexity. Related, scientists may be interested in accessing these additional features for more hypothesis-driven questions. With that in mind, the current code has additional measurement metrics built in for future work. 
+
+| Text Metric |   Description of Measurement |
+|----------|----------|
+| Text-stat                                        | text reading level (complexity) |
+| The Natural Language Processing Tool Kit (NLTK)  | text subjectivity and sentiment |
+| Search Engine Factors      | page rank  |
+| LZW (de-)compression-ratio | information entropy of text |
+| Cluster centers            | clustering of text when organized using complexity, sentiment, word length and compression  ratios   |
+
+
+### Additional web scraping tools
+For this tool we include one metric of the broader internet - wikipedia - to represent a common reference text that people use for educational purposes.
+
+However, we also believe it could be useful to include a more broad quantification of the general readability of the web. To address this, the code is also equipped for search engine queries of different and broad-ranging lists of search terms to assess readability of an eclectic range of text. This would further contextualize the readability of published scientific work with regard to topics engaged by the public on a more daily basis.
+
+Again, we believe that this is outside the scope of the current tool, but could be useful for future iterations of this project. Thus, we mention it here. 
+

@@ -63,12 +63,20 @@ def take_url_from_gui(author_link_scholar_link_list):
 
         try:
             urlDat = process(r)
+            if not isinstance(urlDat,type(None)):
+                author_results.append(urlDat)
+
         except:
+            cnt2=0
             follow_more_links = collect_pubs(r)
             for r in follow_more_links:
-                urlDat = process(r)        
-        if not isinstance(urlDat,type(None)):
-            author_results.append(urlDat)
+                urlDat = process(r)
+                cnt2+=1
+                print(cnt2,urlDat)
+                if not isinstance(urlDat,type(None)):
+                    author_results.append(urlDat)
+                if len(author_results)>4:
+                    return author_results
         print(urlDat)
         cnt+=1
         print(cnt)

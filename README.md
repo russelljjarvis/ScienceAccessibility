@@ -137,6 +137,7 @@ Another file `Examples/use_code_complexity.py` reports back about the complexity
 
 
 
-## What about Code Cognitive Complexity?
+* What about Code Cognitive Complexity?
+That is an issue too. Many modern text editors feature cyclomatic complexity plugins
 The project takes measures to minimize that also. See the code-complexity directory. 
 

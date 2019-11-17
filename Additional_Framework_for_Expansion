@@ -1,6 +1,7 @@
 
 ### Additional Text Analysis Tools
-The current tool uses the Flesch-Kincaid readability score - the most commonly used metric to assess readability - to quantify the complexity of all scraped text. We used this single metric intentionally, with the idea that  the main tool would be more straightforward to a user if the readability score was kept simple, so as to be used intuitively to improve readability. 
+The current tool uses text-stat "Standard" metric. The standard metric evaluates the corpus using a variety of writing complexity algorithms (Gunning Fog, Flesch-Kincaid etc), and finds the average measurement using this list of metrics. The text-standard complexity metric tends to be more robust than any one metric, and it is less easily biased by smaller and longer text lengths.
+The Flesch-Kincaid readability score - the most commonly used metric to assess readability - to quantify the complexity of all scraped text. We used this single metric intentionally, with the idea that  the main tool would be more straightforward to a user if the readability score was kept simple, so as to be used intuitively to improve readability. 
 
 However, we understand that other features of text can (and perhaps should) be incoporated to provide even more context into a text's depth and complexity. Related, scientists may be interested in accessing these additional features for more hypothesis-driven questions about the complexity of scientific text. With that in mind, the current code has additional measurement metrics built in for these future endeavors. These include: 
 

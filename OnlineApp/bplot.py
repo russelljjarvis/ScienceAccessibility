@@ -58,29 +58,37 @@ import matplotlib.pyplot as plt
 
 def plot_author(ar,NAME):
     print('makes it to plotting routine')
-    if os.path.exists('traingDats.p?dl=0'):
+    if os.path.exists('traingDats.p'):
         pass
 
     else:
         os.system('wget https://www.dropbox.com/s/3h12l5y2pn49c80/traingDats.p?dl=0')
+        os.system('mv traingDats.p?dl=0 trainingDats.p')
+    if os.path.exists('benchmarks.p'):
+        pass
+    else:
+
         os.system('wget https://www.dropbox.com/s/x66zf52himmp5ox/benchmarks.p?dl=0')
+        os.system('mv benchmarks.p?dl=0 benchmarks.p')
+        
     with open('traingDats.p?dl=0','rb') as f:
             trainingDats = pickle.load(f)
-    with open('benchmarks.p?dl=0','rb') as f:
+    with open('benchmarks.p','rb') as f:
         bmark = pickle.load(f)
 
     df = pd.DataFrame(ar)
-    #np.mean(df['standard'])
     
     trainingDats.extend(bmark)
 
     # add in some wikipedia stats
     try:
-        with open('scraped_new.p?dl=0','rb') as f:
+        with open('scraped_new.p','rb') as f:
             texts = pickle.load(f)
     except:
         os.system('wget https://www.dropbox.com/s/1kc7alp79h701hx/scraped_new.p?dl=0')
-        with open('scraped_new.p?dl=0','rb') as f:
+        os.system('mv scraped_new.p?dl=0 scraped_new.p')
+
+        with open('scraped_new.p','rb') as f:
             texts = pickle.load(f)
     
     queries = set([t['query'] for t in texts ])

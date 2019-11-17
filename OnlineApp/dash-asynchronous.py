@@ -26,17 +26,24 @@ from io import BytesIO
 import base64
 
 
+
 def long_process(NAME):
+    if semaphore.is_locked():
+        raise Exception('Resource is locked')
+    semaphore.lock()
+    time.sleep(7)
+    semaphore.unlock()
+    #return
     print('enters long process')
     #NAME = "S S Phatak"
     verbose = True
-    
+
     ar = online_app_backend.call_from_front_end(NAME,verbose=verbose)
     print(ar)
-    
+
     axes,fig = bplot.plot_author(ar,NAME)
 
-    #semaphore.unlock()
+    semaphore.unlock()
     return axes,fig
 
 
@@ -44,18 +51,8 @@ app = dash.Dash()
 server = app.server
 
 
-def layout():
-    return html.Div([
-        html.Button('Run Process', id='button'),
-        dcc.Interval(id='interval', interval=500),
-        html.Div(id='lock'),
-        html.Div(id='output'),
-    ])
-
-
-
 # app.layout = layout
-
+'''
 app.layout = html.Div(children=[
     html.H1(children='Hello Dash'),
     html.Div([
@@ -64,9 +61,9 @@ app.layout = html.Div(children=[
         html.Div(id='lock'),
         html.Div(id='output'),
     ]),
-    html.Div(children='''
+    html.Div(children=
         Dash: A web application framework for Python.
-    '''),
+    ),
 
 
     dcc.Graph(
@@ -82,7 +79,7 @@ app.layout = html.Div(children=[
         }
     )])
 
-'''
+
 def fig_to_uri(in_fig, close_all=True, **save_args):
     # type: (plt.Figure) -> str
     """
@@ -131,15 +128,48 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 
 app.layout = html.Div([
-    dcc.Input(id='my-id', value='Enter Author Name here, with the name formated as you would a google scholar search', type='text'),
-    html.Div(id='my-div')
+    html.Div(id='target'),
+    dcc.Input(id='input', type='text', value='Enter Author Name here, with the name formated as you would a google scholar search'),
+    html.Button(id='submit', type='submit', children='ok'),
+    dcc.Interval(id='interval', interval=500),
+    html.Div(id='output'),
 ])
 
 
 @app.callback(
-    Output(component_id='my-div', component_property='children'),
-    [Input(component_id='my-id', component_property='value')]
+    Output('lock', 'children'),
+    events=[Event('interval', 'interval')])
+def display_status():
+    return 'Running long job in background please wait {0}'.format(datetime.datetime.now()) if semaphore.is_locked() else 'Free'
+
+
+#def layout():
+#    return html.Div([
+#        html.Button('Run Process', id='button'),
+#    ])
+
+
+
+
+#app.layout = html.Div([
+#    dcc.Input(id='my-id', value='Enter Author Name here, with the name formated as you would a google scholar search', type='text'),
+#    html.Button(id='submit', type='submit', children='ok'),
+#    html.Div(id='my-div')
+#])
+
+
+#@app.callback(
+    #Output(component_id='my-div', component_property='children'),
+    #[Input(component_id='my-id', component_property='value')]
+#)
+
+@app.callback(
+    Output('target', 'children'), [], [State('input', 'value')], [Event('submit', 'click')]
 )
+def callback(state):
+    return "callback received value: {}".format(state)
+
+
 #import time
 def update_output_div(input_value):
     print('main loop')
@@ -156,12 +186,12 @@ def update_output_div(input_value):
     )
     ])
     return plot_div
-    
+
 #plot_url = py.plot_mpl(fig)
 #Would I then call the “plot_url” object in my dash app? For example:
 
-#app.layout = 
-    
+#app.layout =
+
     return
 
 

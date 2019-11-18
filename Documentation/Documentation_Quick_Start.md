@@ -12,7 +12,7 @@ After Docker installation on your Operating System, run the following commands i
 ```BASH
 docker pull russelljarvis/science_accessibility_user:latest
 ```
-Here is a python example to search for results from academic author Richard Gerkin. When inside the docker container, issue the command:
+Here is a python example to search for results from academic author Sayali S Phatak. When inside the docker container, issue the command:
 ```BASH
 mkdir $HOME/data_words
 docker run -v $HOME/data_words russelljarvis/science_accessibility_user "Sayali S Phatak"

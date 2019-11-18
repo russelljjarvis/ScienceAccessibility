@@ -1,4 +1,4 @@
-How to finish the tool as a dash web-app:
+### How to finish the tool as a dash web-app:
 
 Move contents from website to your computer hard-drive.
 ```
@@ -21,6 +21,8 @@ Tweak [this file](https://github.com/russelljjarvis/ScienceAccessibility/blob/ma
 ```
 atom ScienceAccessibility/OnlineApp/dash-asynchronous.py
 ```
+The link was not provided as an indication that you should edit the online file, it's provided as a navigation aid, as it's the file contents as they exist on your computer that we now care about.
+
 Rebuild
 ```
 sudo docker build . -t dash_mode
@@ -31,12 +33,7 @@ docker run -p 8050:8050 dash_mode
 ```
 Test for desired output and if not desired output keep tweaking file.
 
-Recommended, any easy to replicate minimal working example, that is a good foundation to build from.
-https://arthought.com/dash-simple-deployment-with-docker/
-
-
-Tweak the file:
-https://github.com/russelljjarvis/ScienceAccessibility/blob/master/Dockerfile
+Recommended, any easy to replicate [minimal working example](https://arthought.com/dash-simple-deployment-with-docker/), that is a good foundation to build from.
 
 
 You may also feel the need to tweak the last lines of [this file](https://github.com/russelljjarvis/ScienceAccessibility/blob/master/Dockerfile) as it exists on your local hard drive remember the directory structure has been mapped faithfuly to your hard drive:

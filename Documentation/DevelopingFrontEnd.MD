@@ -17,7 +17,7 @@ Run what you buit:
 docker run -p 8050:8050 dash_mode
 ```
 
-Tweak [this file](https://github.com/russelljjarvis/ScienceAccessibility/OnlineApp/dash-asynchronous.py) as it exists on your local hard drive remember the directory structure has been mapped faithfuly to your hard drive:
+Tweak [this file](https://github.com/russelljjarvis/ScienceAccessibility/blob/master/OnlineApp/dash-asynchronous.py) as it exists on your local hard drive remember the directory structure has been mapped faithfuly to your hard drive:
 ```
 atom ScienceAccessibility/OnlineApp/dash-asynchronous.py
 ```
@@ -39,4 +39,4 @@ Tweak the file:
 https://github.com/russelljjarvis/ScienceAccessibility/blob/master/Dockerfile
 
 
-You may also feel the need to tweak the last lines of [this file](https://github.com/russelljjarvis/ScienceAccessibility/Dockerfile) as it exists on your local hard drive remember the directory structure has been mapped faithfuly to your hard drive:
+You may also feel the need to tweak the last lines of [this file](https://github.com/russelljjarvis/ScienceAccessibility/blob/master/Dockerfile) as it exists on your local hard drive remember the directory structure has been mapped faithfuly to your hard drive:

@@ -12,7 +12,7 @@ Build the docker image instead of pulling it from a remote.
 ```
 sudo docker build . -t dash_mode
 ```
-Run what you buit:
+Run what you built:
 ```
 docker run -p 8050:8050 dash_mode
 ```
@@ -27,7 +27,7 @@ Rebuild
 ```
 sudo docker build . -t dash_mode
 ```
-Run what you buit:
+Run what you built:
 ```
 docker run -p 8050:8050 dash_mode
 ```

@@ -1,13 +1,26 @@
+
+
 ### How to finish the tool as a dash web-app:
 
 Move contents from website to your computer hard-drive.
 ```
 git clone https://github.com/russelljjarvis/ScienceAccessibility.git
 ```
+
 Navigate to the root directory of the Project:
 ```
 cd ScienceAccessibility
 ```
+
+# * ***1***: If I Change something on GitHub.
+From inside ScienceAccessibility. Run ``` git pull origin master ``` This synchronize the website with your hard drive.
+
+* caveat, if you have changed some file contents in the intervening time, Git wants to help you not to over write changes. 
+
+Gits behavior assumes you never want to lose changes, but the messages it gives can be cryptic. To keep your changes and mine. Run `git add filename_you_changed_locall.py`, `git commit -m "message", `git pull origin master`, `git push origin master`
+
+Over time you may want to sync your local code, with your own fork on Github, there are guides to help with this. Also there are Git GUIs that do all this command line busy work for you.
+
 Build the docker image instead of pulling it from a remote.
 ```
 sudo docker build . -t dash_mode

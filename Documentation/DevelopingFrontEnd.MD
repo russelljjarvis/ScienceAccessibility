@@ -13,7 +13,7 @@ cd ScienceAccessibility
 ```
 
 # * ***1***: If I Change something on GitHub.
-From inside ScienceAccessibility. Run ``` git pull origin master ``` This synchronize the website with your hard drive.
+From inside the ScienceAccessibility directory you navigated to in the last step. Run ``` git pull origin master ``` This synchronize the website with your hard drive.
 
 * caveat, if you have changed some file contents in the intervening time, Git wants to help you not to over write changes. 
 

@@ -28,12 +28,10 @@ from SComplexity.crawl import convert_pdf_to_txt
 from SComplexity.crawl import print_best_text
 from SComplexity.crawl import collect_pubs
 try:
-    from SComplexity.scholar_scrape import scholar
-except:
     from SComplexity import scholar_scrape
     scholar = scholar_scrape.scholar
-
-    #from .scholar_scrape import scholar
+except:
+    from SComplexity.scholar_scrape import scholar
 
 from delver import Crawler
 C = Crawler()

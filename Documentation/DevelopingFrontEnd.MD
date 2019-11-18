@@ -41,5 +41,5 @@ You may also feel the need to tweak the last lines of [this file](https://github
 When the app works move your changes back onto the website with:
 
 ```git add filename.py```
-```git commit -m 'work-done'"
+```git commit -m 'work-done'"```
 ```git push origin master```

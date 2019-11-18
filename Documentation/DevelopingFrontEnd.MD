@@ -37,3 +37,9 @@ Recommended, any easy to replicate [minimal working example](https://arthought.c
 
 
 You may also feel the need to tweak the last lines of [this file](https://github.com/russelljjarvis/ScienceAccessibility/blob/master/Dockerfile) as it exists on your local hard drive remember the directory structure has been mapped faithfuly to your hard drive:
+
+When the app works move your changes back onto the website with:
+
+```git add filename.py```
+```git commit -m 'work-done'"
+```git push origin master```

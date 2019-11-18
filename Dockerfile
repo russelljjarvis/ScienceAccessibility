@@ -37,6 +37,7 @@ RUN git clone https://github.com/hfwittmann/dash.git
 RUN sudo /opt/conda/bin/pip install -r dash/dash-simple/requirements-simple.txt
 WORKDIR $HOME
 EXPOSE 80
+RUN echo "pat this is example of forced re-evaluation"
 ADD . .
 RUN sudo chown -R jovyan .
 

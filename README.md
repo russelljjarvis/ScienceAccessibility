@@ -3,7 +3,7 @@
 **[Contributing](contributing.md)** |
 **[Testing](#testing)** |
 **[License](license.md)** |
-**[Manuscript](manuscript.md)** |
+**[Manuscript](Documentation/manuscript.md)** |
 
 
 

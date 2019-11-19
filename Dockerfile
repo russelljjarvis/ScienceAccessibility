@@ -48,6 +48,7 @@ RUN ls -ltr
 RUN ls SComplexity/online_app_backend.py
 RUN ls OnlineApp/enter_author_name.py
 RUN cp OnlineApp/enter_author_name.py .
-ENTRYPOINT /bin/bash
-ENTRYPOINT ["python", "OnlineApp/dash-asynchronous.py"]
+# ENTRYPOINT /bin/bash
+# ENTRYPOINT ["python", "OnlineApp/dash-asynchronous.py"]
+ENTRYPOINT ["python", "OnlineApp/app.py"]
 

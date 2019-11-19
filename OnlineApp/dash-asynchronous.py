@@ -33,7 +33,6 @@ def long_process(NAME):
     ar = online_app_backend.call_from_front_end(NAME,verbose=verbose)
     print(ar)
     axes,fig = bplot.plot_author(ar,NAME)
-    semaphore.unlock()
     return axes,fig
 
 

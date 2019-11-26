@@ -22,11 +22,11 @@ We want to promote clearer and simpler writing in science, by encorouging scient
 
 ## How Are we Doing This?
 
-* Machine Estimation of Writing Complexity:
+### Machine Estimation of Writing Complexity:
 
 The accessibility of written word can be approximated by a computer program that reads over the text and guesses the mental difficulty, associated with comprehending a written document. The computer program maps reading difficult onto a quantity that is informed by the cognitive load of the writing, and the number of years of schooling needed to decode the language in the document. For convenience, we can refer to the difficulty associated with the text as the 'complexity' of the document. 
 
-* How do some well-known texts do?
+### How do some well-known texts do?
 
 First, we sample some extremes in writing style, and then we will tabulate results, so we have some nice reference points to help us to make sense of other results. On the lower and upper limits we have: XKCD: [Pushing the limits of extremely readable science](http://splasho.com/upgoer5/library.php) and for some comparison, we wanted to check some [Machine generated postmodern nonesense](http://www.elsewhere.org/pomo/)
 

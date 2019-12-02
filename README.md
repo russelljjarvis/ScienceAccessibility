@@ -3,7 +3,7 @@
 **[Contributing](contributing.md)** |
 **[Testing](#testing)** |
 **[License](license.md)** |
-**[Manuscript](manuscript.md)** |
+**[Manuscript](Documentation/manuscript.md)** |
 
 
 
@@ -22,11 +22,11 @@ We want to promote clearer and simpler writing in science, by encorouging scient
 
 ## How Are we Doing This?
 
-* Machine Estimation of Writing Complexity:
+### Machine Estimation of Writing Complexity:
 
 The accessibility of written word can be approximated by a computer program that reads over the text and guesses the mental difficulty, associated with comprehending a written document. The computer program maps reading difficult onto a quantity that is informed by the cognitive load of the writing, and the number of years of schooling needed to decode the language in the document. For convenience, we can refer to the difficulty associated with the text as the 'complexity' of the document. 
 
-* How do some well-known texts do?
+### How do some well-known texts do?
 
 First, we sample some extremes in writing style, and then we will tabulate results, so we have some nice reference points to help us to make sense of other results. On the lower and upper limits we have: XKCD: [Pushing the limits of extremely readable science](http://splasho.com/upgoer5/library.php) and for some comparison, we wanted to check some [Machine generated postmodern nonesense](http://www.elsewhere.org/pomo/)
 
@@ -49,8 +49,8 @@ Higher is worse:
 | 37.0 | [Phytochromobilin C15-Z,syn - C15-E,anti isomerization: concerted or stepwise?](https://www.researchgate.net/profile/Bo_Durbeej/publication/225093436_Phytochromobilin_C15-Zsyn_C15-Eanti_isomerization_Concerted_or_stepwise/links/0912f4fcd237e6701a000000.pdf) |
 
 
-## Proposed Remedies:
-# 1
+### Proposed Remedies:
+* 1
 Previously I mentioned creating tools to remedy inaccessible academic research> One tool, that functions as a natural extension of this work, is to enable 'clear writing' tournaments between prominent academic researchers, for example:
 
 | mean complexity   |      author      |
@@ -62,7 +62,7 @@ Previously I mentioned creating tools to remedy inaccessible academic research> 
 
 Example code for the [proposed tool](https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/Incentivise_by_competing.ipynb) would allow you to select academic authors who then play out a competition demand, and to utilize their writing contributions in the context of a tournament where academic tournament members compete to write simpler text. A more recently maintained version of that [file](https://github.com/russelljjarvis/ScienceAccessibility/blob/dev/Examples/compete.py)
 
-# 2
+* 2
 A different remedy proposal is to run the text through [simplify](http://nlpprogress.com/english/simplification.html?fbclid=IwAR0B8G7zEmxVYbFWJMOyVTaHWkv4o9tTTFvVpsOcWrUQ777SXpM6KuM-8QI), evaluate complexity after translating the document simplify. 
 How different are the scores?
 
@@ -137,7 +137,5 @@ Another file `Examples/use_code_complexity.py` reports back about the complexity
 
 
 
-* What about Code Cognitive Complexity?
-That is an issue too. Many modern text editors feature cyclomatic complexity plugins
-The project takes measures to minimize that also. See the code-complexity directory. 
-
+### What about Code Cognitive Complexity?
+That is an issue too. The project takes measures to minimize that also. Many modern text editors feature cyclomatic complexity plugins.

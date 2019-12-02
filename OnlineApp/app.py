@@ -9,6 +9,7 @@ server = flask.Flask(__name__)
 app = dash.Dash(__name__, server=server,external_stylesheets=external_stylesheets)
 app.config.suppress_callback_exceptions = True
 
+import base64
 
 image_filename = "figures/boxplot.png" # replace with your own image
 test_base64 = base64.b64encode(open(image_filename, 'rb').read())

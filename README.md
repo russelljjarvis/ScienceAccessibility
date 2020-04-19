@@ -5,7 +5,7 @@
 **[License](license.md)** |
 **[Manuscript](Documentation/manuscript.md)** |
 
-
+[![Open Source Helpers](https://www.codetriage.com/russelljjarvis/scienceaccessibility/badges/users.svg)](https://www.codetriage.com/russelljjarvis/scienceaccessibility)
 
 [![Build Status](https://travis-ci.com/russelljjarvis/ScienceAccessibility.png)](https://travis-ci.com/russelljjarvis/ScienceAccessibility) 
 

@@ -14,6 +14,9 @@ authors
     affiliation: Senior Data Scientist, H2O.ai
   - name: Bradley G Lusk
     affiliation: Science The Earth; Mesa, AZ 85201, USA
+  - name: Elise King
+    affiliation: University of Melbourne; Parkville, VIC, Australia
+   
 
 date: 18 October 2019
 

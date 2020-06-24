@@ -15,21 +15,6 @@ import selenium
 from selenium import webdriver
 
 
-#display = Display(visible=0, size=(1024, 800))
-#display.start()
-
-
-chrome_options = webdriver.ChromeOptions()
-chrome_options.add_argument('--no-sandbox')
-chrome_options.add_argument('--headless')
-chrome_options.add_argument('--disable-gpu')
-#driver = webdriver.Chrome(chrome_options=chrome_options)
-driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver',chrome_options=chrome_options)
-
-driver.implicitly_wait(20)
-
-from selenium.common.exceptions import NoSuchElementException
-
 
 import pandas as pd
 import pycld2 as cld2
@@ -117,7 +102,7 @@ def collect_hosted_files(url):
     '''
     Used for scholar
     '''
-    print(url)
+    #print(url)
     try:
         crude_html = denver_to_text(url)
     except:
@@ -139,26 +124,19 @@ def collect_hosted_files(url):
         links.append(check_out)
 
     return links
+
+
+
 def collect_pubs(url):
     '''
     Used for scholar
     '''
-    driver = webdriver.Firefox()
+    from scrape import get_driver
+    driver = get_driver()
+
     driver.get(url)
     crude_html = driver.page_source
-    """
-    #print(url)
-    try:
-        crude_html = denver_to_text(url)
-    except:
-        if type(url) is type(str()):
-            print(url)
-            driver.get(url)
-        else:
-            return None
-        
-        print(crude_html)
-    """
+
     soup = BeautifulSoup(crude_html, 'html.parser')
     links = []
     for link in soup.findAll('a', attrs={'href': re.compile("https://")}):

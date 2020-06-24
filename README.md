@@ -1,15 +1,39 @@
-**[Installation](Documentation/Documentation_Quick_Start.md)** |
-**[Documentation](#documentation)** |
-**[Contributing](contributing.md)** |
-**[Testing](#testing)** |
-**[License](license.md)** |
-**[Manuscript](Documentation/manuscript.md)** |
-
-
 
 [![Build Status](https://travis-ci.com/russelljjarvis/ScienceAccessibility.png)](https://travis-ci.com/russelljjarvis/ScienceAccessibility) 
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/russelljjarvis/simple_science_access.git/master)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/russelljjarvis/ScienceAccess/master)
+
+
+
+**![Example Screen Shot](https://russelljjarvis.github.io/ScienceAccess/data/example_app.png)**
+
+**First Step**
+```
+git clone https://github.com/russelljjarvis/ScienceAccess.git
+cd ScienceAccess
+
+```
+
+**If you don't have python3:**
+```
+sudo bash install_python3.sh
+```
+
+**Installation Apple** 
+```
+sudo bash apple_setup.sh
+```
+
+**Installation Linux** 
+```
+sudo bash setup.sh
+```
+**Run**
+```
+streamlit run app.py
+```
+
+**[Manuscript](https://github.com/russelljjarvis/ScienceAccessibility/blob/remaster/Documentation/manuscript.md)** 
 
 # Overview
 
@@ -82,60 +106,5 @@ Multiple stakeholders benefit when science is communicated with lower complexity
 
 The impact of science on society is likely proportional to the accessibility of written work. Objectively describing the character of the different writing styles will allow us to prescribe how, to shift academic science writing into a more accessible niche, where science can more aggressively compete with pseudo-science, and blogs.
 
-## Analysis of Text.
-Running the scraper is not necessary for analysing the text documents. 
-
-## Sentiment Versus Complexity
-
-[An interactive plot of the same thing, where clicking on a data point takes you to the webpage that generated the data point](https://russelljjarvis.github.io/ScienceAccessibility/)
-
-
-### Word frequencies as clouds:
-### Per category
-#### Not Science
-![image](https://user-images.githubusercontent.com/7786645/52091608-322fbe80-2572-11e9-8553-3e346a8b824e.png)
-#### Science
-![image](https://user-images.githubusercontent.com/7786645/52091615-352aaf00-2572-11e9-905a-0b75fe0005d7.png)
-
-
-The observant reader will see, 'et al', occurs in published literature quite a lot, highlighting an obvious finding that science writing often refers to external evidence.
-
-
 [Similar projects](https://blog.machinebox.io/detect-fake-news-by-building-your-own-classifier-31e516418b1d).
 
-
-## Building All of the Project.
-(including the scraper).
-
-The internet in some ways is like a big group of computers that are all friends with each. A scraper is A computer that visits many of the other computers on the internet. The scraper does not have to be friends with the computers it visits, it just needs to know the address at which each computer in the big friendship group can be reached.
-
-The scraping and crawling code for this is dependency heavy. Who wants to duplicate the building of this whole environment from scratch? No-one? I thought so. [Docker is used to providing a universal build, and prevent duplicated effort](https://hub.docker.com/r/russelljarvis/science_accessibility).
-
-If Docker is installed on the base OS, git clone this repository, and assuming the file build.sh is chmod +x , run: `bash build.sh` to perform the dockerbuild. To run the jupyter notebook over docker, enter the docker environment interactively in one of two ways, via a bash shell, or via an ipython notebook or
-and then launch python via BASH in Linux as follows:
-
-Warning: This Docker environment is currently 11.5GB, however it contains some non trivial scraping tools.
-
-```BASH
-docker login your_user_name@dockerhub.com
-docker pull russelljarvis/science_accessibility
-mkdir $HOME/data_words
-docker run -it -v $HOME/data_words russelljarvis/science_accessibility
-```
-```BASH
-cd Examples
-ipython -i enter_author_name.py "R Gerkin"
-``` 
-
-To Run the project, you need to navigate to the Examples directory and then execute:
-`python use_scrape.py`, which scrapes search engines for parameters defined in that file.
-Once that is done an analysis program `use_analysis` is then called to run an analysis on the scraped text. This program generates some simple figures. The figures are very basic, and they act to function only as proof of concept.
-
-Given pre-existing data (pickled files consisting of raw text contents), the analysis file can also be run on its own by executing: `python use_analysis.py`. To analyse the scraped texts, the Jupyter notebook: `vstrl.ipynb` also contains idioms for plotting and analysis based on scrapped data, although it is not maintained. The package Bokeh facilitates pretty interactive plots with data point mouse over data metrics.
-
-Another file `Examples/use_code_complexity.py` reports back about the complexity of the code base. This code complexity analysis is not thorough enough to include third-party modules that were heavily utilized in the analysis, however, the principle of code complexity, with an application limited scope is generally applied in our approach, as it's obviously not desirable to use obfuscated code as a tool used to advocate for a simple language.
-
-
-
-### What about Code Cognitive Complexity?
-That is an issue too. The project takes measures to minimize that also. Many modern text editors feature cyclomatic complexity plugins.

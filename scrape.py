@@ -24,14 +24,18 @@ from pdfminer.pdfdevice import PDFDevice
 from pdfminer.layout import LAParams
 from pdfminer.converter import  TextConverter
 
+import os
+import sys, getopt
+from io import StringIO
+
+
 from crawl import convert_pdf_to_txt
 from crawl import print_best_text
 from crawl import collect_pubs
-import scholar_scrape.scholar as scholar
-#scholar = scholar_scrape.scholar
+import scholar
 
-from delver import Crawler
-C = Crawler()
+#from delver import Crawler
+#C = Crawler()
 import requests
 
 
@@ -39,14 +43,9 @@ import io
 
 import selenium
 
-from selenium import webdriver
-#from pyvirtualdisplay import Display
-
-#display = Display(visible=0, size=(1024, 768))
-#display.start()
 
 
-from selenium.webdriver.firefox.options import Options
+#from selenium.webdriver.firefox.options import Options
 
 import re
 from bs4 import BeautifulSoup
@@ -54,19 +53,48 @@ import bs4 as bs
 import urllib.request
 from io import StringIO
 import io
-
-
-#options = Options()
-#options.headless = True
-chrome_options = webdriver.ChromeOptions()
-chrome_options.add_argument('--no-sandbox')
-chrome_options.add_argument('--headless')
-chrome_options.add_argument('--disable-gpu')
-driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver',chrome_options=chrome_options)
-#driver = webdriver.Chrome(chrome_options=chrome_options)
-driver.implicitly_wait(10)
+from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
 from selenium.common.exceptions import NoSuchElementException
+import os
+def get_driver():
+    options = Options()
+    options.add_argument("--headless")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--no-sandbox")
+    try:
+        driver = webdriver.Firefox(options=options)
+    except:
+        try:
+            options.binary_location = "/app/vendor/firefox/firefox"
+            driver = webdriver.Firefox(options=options)
+            GECKODRIVER_PATH=str(os.getcwd())+str("/geckodriver")
+            driver = webdriver.Firefox(options=options,executable_path=GECKODRIVER_PATH)
+        except:
+            try:
+                chrome_options = webdriver.ChromeOptions()
+                chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+                chrome_options.add_argument("--headless")
+                chrome_options.add_argument("--disable-dev-shm-usage")
+                chrome_options.add_argument("--no-sandbox")
+                driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
+            except:
+                try:
+                    GECKODRIVER_PATH=str(os.getcwd())+str("/geckodriver")
+                    options.binary_location = str('./firefox')
+                    driver = webdriver.Firefox(options=options,executable_path=GECKODRIVER_PATH)
+                except:
+                    os.system("wget wget https://ftp.mozilla.org/pub/firefox/releases/45.0.2/linux-x86_64/en-GB/firefox-45.0.2.tar.bz2")
+                    os.system("wget https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-linux64.tar.gz")
+                    os.system("tar -xf geckodriver-v0.26.0-linux64.tar.gz")
+                    os.system("tar xvf firefox-45.0.2.tar.bz2")
+                    GECKODRIVER_PATH=str(os.getcwd())+str("/geckodriver")
+                    options.binary_location = str('./firefox')
+                    driver = webdriver.Firefox(options=options,executable_path=GECKODRIVER_PATH)
+    return driver
 
+
+driver = get_driver()
 
 
 rsrcmgr = PDFResourceManager()
@@ -77,31 +105,13 @@ device = TextConverter(rsrcmgr, retstr, laparams = laparams)
 interpreter = PDFPageInterpreter(rsrcmgr, device)
 
 
-
-
-#from pyPdf import PdfFileReader
-
-#from StringIO import StringIO
-
-from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
-from pdfminer.converter import TextConverter
-from pdfminer.layout import LAParams
-from pdfminer.pdfpage import PDFPage
-import os
-import sys, getopt
-from io import StringIO
-
 #converts pdf, returns its text content as a string
 def pdf_to_txt_(infile):#, pages=None):
-    #if not pages:
-    #pagenums = set()
-
     output = StringIO()
     manager = PDFResourceManager()
     converter = TextConverter(manager, output, laparams=LAParams())
     interpreter = PDFPageInterpreter(manager, converter)
 
-    #infile = file(fname, 'rb')
     for page in PDFPage.get_pages(infile, pagenums):
         interpreter.process_page(page)
     infile.close()
@@ -114,10 +124,6 @@ def pdf_to_txt_(infile):#, pages=None):
 import PyPDF2
 from PyPDF2 import PdfFileReader
 
-#mport textract
-
-#from nltk.tokenize import word_tokenize
-#from nltk.corpus import stopwords
 
 def pdf_to_txt(url):
 
@@ -145,16 +151,6 @@ def pdf_to_txt(url):
         else:
            text = textract.process(fileurl, method='tesseract', language='eng')
     return text
-    '''
-    parser = PDFParser(pdf)
-    document = PDFDocument(parser, password=None)
-    write_text = ''
-    for page in PDFPage.create_pages(document):
-        interpreter.process_page(page)
-        write_text = write_text.join(retstr.getvalue())
-
-    text = str(write_text)
-    '''
 
 def html_to_txt(content):
     soup = BeautifulSoup(content, 'html.parser')

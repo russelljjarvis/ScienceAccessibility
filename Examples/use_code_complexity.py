@@ -1,3 +1,0 @@
-import SComplexity
-from SComplexity.CodeComplexity import test_complexity
-test_complexity.rank_all_sub_module_functions(SComplexity)

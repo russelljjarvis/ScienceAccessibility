@@ -1,14 +1,14 @@
 
 #!/usr/bin/env python
 # old functional:
-#from distutils.core import setup
-#import setuptools
+from distutils.core import setup
+import setuptools
 
-# new dysfunctional.
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup, find_packages
+import os
+#try:
+from setuptools import setup
+#except ImportError:
+    #from distutils.core import setup, find_packages
 
 
 def read_requirements():
@@ -26,4 +26,8 @@ setup(name='scomplexity',
       author_email='don_t_email_we_are_on_github@gmail.com',
       url='https://github.com/russelljjarvis/ScienceAccessibility',
       packages = setuptools.find_packages()
-      )
+      ) 
+import nltk
+import nltk; nltk.download('punkt')
+import nltk; nltk.download('stopwords')
+os.system('bash install/user_install.sh')

@@ -1,27 +1,25 @@
-
-# Set the build language to Python
+sudo: required
+os:
+  - linux
+  dist: Xenial
+  - osx
+   osx_image: xcode7.2
 language: python
+python:
+  - "3.6"
+  - "3.5"
+  - "3.7"
 
-# Set the python version 
-python: "3.5"
-services:
-  - docker
-  
-# get data from open science frame work.
-# get a prebuilt docker environment that supports this work.
-before_install:     
-  - docker pull russelljarvis/science_accessibility:slc  
-  - DATA_URL="https://osf.io/xfzy6/download"
-  - mkdir data_dir && cd data_dir && wget -O - ${DATA_URL} 
-  - echo $pwd
+before_install:
+  - if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew update          ; fi
 
-# Run the unit test
-script:
-# show that running the docker container at least works.
-  - docker run -v data_dir:/home/jovyan/SComplexity/Examples/results_dir russelljarvis/science_accessibility:slc python -c "gets here"
-  - docker run -v data_dir:/home/jovyan/SComplexity/Examples/results_dir russelljarvis/science_accessibility:slc python Examples/use_analysis.py
-
-
-
-
-        
+install:
+  - pip install -r requirements.txt
+  - python setup.py install 
+  - bash install/user_install.sh
+  - python install/align_data_sources.py
+  script: 
+  - python3 unit_test/scrape_test.py
+  - streamlit run app.py
+after_success:
+  - coveralls
